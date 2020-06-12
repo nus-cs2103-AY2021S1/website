@@ -18,7 +18,8 @@ In this tutorial, we would like to smoke-test the CATcher app **to ensure it can
 
 1. **Download the latest version** of the CATcher executable from [https://github.com/CATcher-org/CATcher/releases](https://github.com/CATcher-org/CATcher/releases).
 1. **Launch the app.** Allow the app to run if there are security warnings %%(e.g., for Win 10, click the `More Info` link in the security warning and choose `Run anyway`)%%.<br>
-   {{ icon_tip }} If the app is blocked by your virus scanner, put it in a new folder and add the folder to the _exclusions_ list of the virus scanner.
+   {{ icon_tip }} If the app is blocked by your virus scanner, put it in a new folder and add the folder to the _exclusions_ list of the virus scanner.<br>
+   {{ icon_info }} If you encounter other problems at the app launch, refer to the [Notes on using the CATcher Desktop App](https://github.com/CATcher-org/CATcher/blob/master/usage-notes.md).
 1. **Login**: Choose the _session_ `{{ module }}/T Alpha Test`, and submit.
    <img src="../../admin/images/catcherLogin.png" />
 1. In the next screen, submit your GitHub credentials directly or choose to the `Use GitHub login interface` to login to CATcher using your GitHub account.<br>
@@ -30,6 +31,7 @@ In this tutorial, we would like to smoke-test the CATcher app **to ensure it can
   {{ icon_info }} The `severity` and `type` labels are compulsory.
 1. **Report any problems you encounter** at the [CATcher issue tracker](https://github.com/CATcher-org/CATcher/issues).
 
+<!-- {{ icon_tip }} If you have 2FA enabled for GitHub, you can [create a personal access token with `repo` permissions](https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line) and use that as the password.<br> -->
 
 </panel>
 <p/>
@@ -42,11 +44,11 @@ In this tutorial, we would like to smoke-test the CATcher app **to ensure it can
 #### {{ thumb(1) }} Review the <tooltip content="Developer Guide">DG</tooltip> of a Peer Team
 
 * **Divide into two sub-teams**, ensuring that each team has at least one member who is good with UML.
-* **Find the team your sub-team have been allocated to discuss** in the panel below and click on the link to locate their team PR.
+* **Find the team your sub-team has been allocated to discuss** in the panel below. Search for the PR using the team ID among the list of [PRs](https://github.com/nus-{{ module | lower}}-{{ semester }}/addressbook-level3/pulls); you can open the DG by clicking on the link given.
 
 {% macro get_review_allocation_for_team(reviewing_team) -%}
 {%- set reviewed_team = "" -%}
-{% for allocation in team_review_allocation  -%}
+{% for allocation in team_review_allocation  -%}
 {% if allocation[0] == reviewing_team %}{% set reviewed_team %}{{ allocation[1] }}{% endset %}{% endif %}
 {%- endfor %}{{ reviewed_team }}
 {%- endmacro %}
@@ -59,8 +61,14 @@ In this tutorial, we would like to smoke-test the CATcher app **to ensure it can
 [DG](https://{{ semester }}-{{ team_id | lower}}.github.io/main/DeveloperGuide.html)
 {%- endmacro  %}
 
+<!--
 {% macro get_links(team_id, backup_team_id) -%}
 {{ team_id }}: {{ get_pr_link(team_id) }} {{ get_dg_link(team_id) }} <small>%%({{ backup_team_id }}: {{ get_pr_link(backup_team_id) }} {{ get_dg_link(backup_team_id) }})%%</small>
+{%- endmacro  %}
+-->
+
+{% macro get_links(team_id, backup_team_id) -%}
+{{ team_id }}: {{ get_dg_link(team_id) }} <small>%%({{ backup_team_id }}: {{ get_dg_link(backup_team_id) }})%%</small>
 {%- endmacro  %}
 
 <div class="indented-level2">
@@ -69,7 +77,7 @@ In this tutorial, we would like to smoke-test the CATcher app **to ensure it can
 
 Your Team ID  | Sub-team A Reviews <small>%%(backup)%%</small> | Sub-team B Reviews <small>%%(backup)%%</small>
 --------------|------------------------------------------------|---------------------------------------
-{% for team in team_review_allocation  %}
+{% for team in team_review_allocation  %}
 {%- set backup_team1 %}{{ get_review_allocation_for_team(team[1]) }}{% endset -%}
 {%- set backup_team2 %}{{ get_review_allocation_for_team(team[2]) }}{% endset -%}
 {{ team[0] }} | {{ get_links(team[1], backup_team1) }} | {{ get_links(team[2], backup_team2) }} 

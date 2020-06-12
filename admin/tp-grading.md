@@ -6,7 +6,7 @@
 
 Note that project grading is ==not competitive (not bell curved)==. {{ module }}T projects will be assessed separately from {{ module }} projects. Given below is the marking scheme.
 
-**Total**: 45 marks ({{ icon_individual }} 35 individual marks + {{ icon_team }} 10 team marks)
+**Total**: 65 marks ({{ icon_individual }} 55 individual marks + {{ icon_team }} 10 team marks)
 
 See the sections below for details of how we assess each aspect.
 
@@ -32,7 +32,7 @@ In addition, feature flaws reported in the PE will be considered when grading th
 
 <!-- -------------------------------------------------------------------------------------------------------------- -->
 
-#### <div class="bg-warning p-1">2. Project Grading: Implementation %%[{{ icon_individual }} 10 marks]%%</div>
+#### <div class="bg-warning p-1">2. Project Grading: Implementation %%[{{ icon_individual }} ~~10~~ 15 marks]%%</div>
 
 **<big>2A. Code quality</big>**
 
@@ -76,7 +76,7 @@ In addition, feature flaws reported in the PE will be considered when grading th
 
 <!-- -------------------------------------------------------------------------------------------------------------- -->
 
-#### <div class="bg-warning p-1">3. Project Grading: QA %%[{{ icon_individual }} 10 marks]%%</div>
+#### <div class="bg-warning p-1">3. Project Grading: QA %%[{{ icon_individual }} ~~10~~ 15 marks]%%</div>
 
 
 <big>**3A. Developer Testing:**</big>
@@ -109,7 +109,7 @@ In addition, feature flaws reported in the PE will be considered when grading th
 <!-- -------------------------------------------------------------------------------------------------------------- -->
 <div id="criteria-documentation">
 
-#### <div class="bg-warning p-1">4. Project Grading: Documentation %%[{{ icon_individual }} 10 marks]%%</div>
+#### <div class="bg-warning p-1">4. Project Grading: Documentation %%[{{ icon_individual }} ~~10~~ 20 marks]%%</div>
 
 **Evaluates:** your contribution to project documents
 

@@ -47,7 +47,7 @@ pageNav: 1
 14: site no longer used, lands in the module intro page
 1..13: site is active, lands in the week's schedule page
 #}
-{% set current_week = "-1" %}
+{% set current_week = "13" %}
 
 
 {% set all_topics = [

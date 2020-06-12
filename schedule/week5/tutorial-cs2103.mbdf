@@ -15,13 +15,16 @@ Quickly update the tutor about your iP progress:
 {{ icon_team }} This activity is to be done as a team. One team member needs to be connected to the TV.
 </div>
 
-1. **Find the team you are allocated to discuss** (given below).
+1. **Updated instructions:** Review PRs of the other team. You can find the team information from [here]({{pr_review_mapping}}).
 
    <panel header="Team allocation for the code quality discussion" minimized >
-   
+
    Team          | Discuss PRs of
-   --------------|--------------{% for team in team_review_allocation  %}
-   {{ team[0] }} | {{ team[1] }}{% endfor %}
+   --------------|----------------
+   Team 1        | Team 2
+   Team 2        | Team 1
+   Team 3        | Team 4
+   Team 4        | Team 3
    </panel>
    <p/>
 
@@ -32,7 +35,7 @@ Quickly update the tutor about your iP progress:
    {{ icon_tip }} To identify long methods or deep nesting, zoom out and scroll through the entire PR code to do a visual inspection (no need to read the code line-by-line). After visually locating a method that looks too long/deep, have a closer look to see it can be improved by using better abstraction.If you are unsure about a case, you can also rope the tutor in to the discussion.
 1. **Add comments**: If the team agrees that the abstraction aspect of specific piece of code should be improved some way, add a comment (team members can take turns on adding comments).<br/>
    e.g., `This method looks rather long; perhaps it can be shortened using SLAP?`
-1. **Repeat for remaining PRs**: Continue to review PRs until the 30 minutes mark.
+1. **Repeat for remaining PRs**: Continue to review PRs until the 20 minutes mark.
 
 <div class="indented">
 

@@ -59,7 +59,7 @@ Precondition: ...<br>
 
 <div class="indented-level2">
 
-<panel header="Team allocation for PR discussion" minimized >
+<!-- panel header="Team allocation for PR discussion" minimized >
 
 Team          | Discuss PR of | Backup team to discuss
 --------------|---------------|-----------------------
@@ -67,6 +67,18 @@ Team          | Discuss PR of | Backup team to discuss
 {%- set backup_team %}{{ get_review_allocation_for_team(team[1]) }}{% endset -%}
 {{ team[0] }} | {{ team[1] }}: {{ get_pr_link(team[1]) }} {{ get_dg_link(team[1]) }} | {{ backup_team }}: {{ get_pr_link(backup_team) }} {{ get_dg_link(backup_team) }}
 {% endfor %}
+</panel -->
+
+<panel header="Team allocation for PR discussion" minimized >
+
+In each tutorial:
+
+Team          | Discuss PR of | Backup team to discuss
+--------------|---------------|-----------------------
+1             | 2             | 3
+2             | 1             | 4
+3             | 4             | 1
+4             | 3             | 2
 </panel>
 </div>
 

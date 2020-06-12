@@ -12,6 +12,7 @@ pageNav: 2
 
 {% macro get_team_start(team_id, team_org, team_repo, team_website) %}
 <div class="container">
+
 <div class="row">
 <div class="col border">
 
@@ -39,7 +40,7 @@ pageNav: 2
 {% endmacro %}
 
 
-{% set current_semester = "AY1920S1" %}
+{% set current_semester = "AY1920S2" %}
 {% set panel_contents = "" %}
 {% set team_contents = "" %}
 {% set current_team = "" %}

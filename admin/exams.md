@@ -5,6 +5,13 @@
 
 There is no midterm.
 
+<box type="important">
+The final exam will be an e-exam, and will count for 20 marks. It will be scheduled during the normal exam period.<br>
+
+* The exam will be conducted as a LumiNUS quiz, and mostly contain MCQs with a few short answer questions.<br>
+* The exact structure will be announced closer to the exam.
+</box>
+
 The final exam has two parts: 
 * Part 1: MCQ questions (1 hour, 20 marks) 
 * Part 2: Essay questions (1 hour, 20 marks)

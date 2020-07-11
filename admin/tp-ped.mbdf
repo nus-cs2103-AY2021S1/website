@@ -1,0 +1,179 @@
+{% from "common/macros.njk" import embed_topic with context %}
+
+#### <span class="badge badge-primary">PE-D</span> <span class="text-primary">Overview</span>
+
+**What**: The {{ version_penultimate }} is subjected to a round of peer _acceptance/system testing_, also called the _Practical Exam (PE) Dry Run_ as this round of testing will be similar to the graded <trigger trigger="click" for="modal:projectDeliverablesPeDryRun-pe">Practical Exam that will be done at {{ version_final }}</trigger>.
+
+**When, where**: uses a 40 minute slot at the start of week 11 lecture slot (to be done online).
+
+<modal large header="Admin {{ icon_embedding }} tP → Practical Exam" id="modal:projectDeliverablesPeDryRun-pe">
+  <include src="tp-pe.md#tp-practicalexam"/>
+</modal>
+
+{{ icon_important_big_red }} **Grading**: The PE dry run ==affects your grade in the following ways==.
+* If you scored low in the PE, we will consider your performance in PE dry run as well when calculating the PE marks.
+* PE dry run is a way for you to practice for the actual PE.
+* Taking part in the PE dry run will earn you participation points.
+* There is ==no penalty for bugs reported== in your product. Every bug you find is a win-win for you and the team whose product you are testing.
+
+**Why**:
+* **To train you** to do manual testing, bug reporting, bug <tooltip content="assigning of priority order">triaging,</tooltip> bug fixing, communicating with users/testers/developers, evaluating products etc.
+* **To help you improve your product** before the final submission.
+
+#### <span class="badge badge-primary">PE-D</span> <span class="text-primary">Preparation</span>
+
+<include src="tp-testing.mbdf#testingPreparations" var-pe_active_tab="0"/>
+
+#### <span class="badge badge-primary">PE-D</span> <span class="text-primary">During the session</span>
+
+**Test the product and report bugs** as described below.
+
+<variable name="pe_active_tab">0</variable>
+
+<div id="tp-pe-testing-instructions">
+
+<box>
+
+##### <div class="text-white bg-secondary p-1">**Testing instructions for PE and PE-D**</div>
+
+###### <div class="text-white bg-secondary p-1">a) Launching the JAR file</div>
+
+* Get the jar file to be tested:
+
+<tabs active="{{ pe_active_tab }}">
+<tab header="PE Dry Run (at **{{ version_penultimate }}**)">
+
+* Download the jar file from the team's releases page, if you haven't done this already.
+
+</tab>
+<tab header="PE (at **{{ version_final }}**)">
+
+* Download the zip file from the given location, if you haven't done that already.
+* Unzip the downloaded zip file with the password (to be given to you at the start of the PE, via LumiNUS gradebook). This will give you another zip file with the name suffix `_inner.zip`.
+* Unzip the inner zip file. This will give you the jar file and other PDF files needed for the PE. ==Warning: do not run the jar file while it is still inside the zip file==.
+
+</tab>
+</tabs>
+<p/>
+
+* Put the downloaded jar file ==in an empty folder==.
+* Open a command window. Run the `java -version` command to ensure you are using Java 11.
+* Launch the jar file ==using the `java -jar` command== (do not use double-clicking).
+* **If the product doesn't work at all:** If the product fails catastrophically %%e.g., cannot even launch, or even the basic commands crash the app%%, contact the invigilator (via Gitter or Zoom chat) to receive a _fallback_ team to test.
+
+
+###### <div class="text-white bg-secondary p-1">b) What to test</div>
+
+<tabs active="{{ pe_active_tab }}">
+<tab header="PE Dry Run (at **{{ version_penultimate }}**)">
+
+* Test the product ==based on the User Guide== available from their GitHub website `https://{team-id}.github.io/tp/UserGuide.html`.
+* Do ==_system_ testing first== %%i.e., does the product work as specified by the documentation?%%. If there is time left, you can ==do _acceptance_ testing as well== %%i.e., does the product solve the problem it claims to solve?%%.
+
+</tab>
+<tab header="PE (at **{{ version_final }}**)">
+
+* Test ==based on the Developer Guide== (Appendix named _Instructions for Manual Testing_) ==and the User Guide==. The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.
+* As before, do both ==system testing and acceptance testing== but give priority to system testing as system-testing bugs can earn you more credit.
+
+</tab>
+</tabs>
+<p/>
+
+###### <div class="text-white bg-secondary p-1">c) What bugs to report?</div>
+
+<tabs active="{{ pe_active_tab }}">
+<tab header="PE Dry Run (at **{{ version_penultimate }}**)">
+
+* You may report functionality bugs, UG bugs, and feature flaws.
+<div class="indented-level2">
+
+{{ embed_topic("tp-grading-bugs.mbdf#functionalityBugs", "Admin " + icon_embedding + " tP Grading → **Functionality Bugs**", "3") }}
+{{ embed_topic("tp-grading-bugs.mbdf#featureFlaws", "Admin " + icon_embedding + " tP Grading → **Feature Flaws**", "3") }}
+{{ embed_topic("tp-grading-bugs.mbdf#ugBugs", "Admin " + icon_embedding + " tP Grading → **Possible UG Bugs**", "3") }}
+</div><p/>
+
+* You can also post suggestions on how to improve the product.<br>
+  {{ icon_tip }} Be diplomatic when reporting bugs or suggesting improvements. For example, instead of criticising the current behavior, simply suggest alternatives to consider.
+
+</tab>
+<tab header="PE (at **{{ version_final }}**)">
+
+* Report functionality bugs:
+
+{{ embed_topic("tp-grading-bugs.mbdf#functionalityBugs", "Admin " + icon_embedding + " tP Grading → **Functionality Bugs**", "3", indent="2") }}
+
+
+* Do not post suggestions but if a feature is missing a critical functionality that makes the feature less useful to the intended user, it can be reported as a bug of type `Type.FeatureFlaw`.
+{{ embed_topic("tp-grading-bugs.mbdf#featureFlaws", "Admin " + icon_embedding + " tP Grading → **Feature Flaws**", "3", indent="2") }}
+
+* You may also report UG bugs.
+{{ embed_topic("tp-grading-bugs.mbdf#ugBugs", "Admin " + icon_embedding + " tP Grading → **Possible UG Bugs**", "3", indent="2") }}
+
+
+</tab>
+</tabs>
+<p/>
+
+
+###### <div class="text-white bg-secondary p-1">d) How to report bugs</div>
+
+* {{ icon_important_big_red }} **Post bugs as you find them** %%(i.e., do not wait to post all bugs at the end)%% because <span class="text-danger">bug reports created/modified after the allocated time will not count.</span>
+<div class="indented-level2">
+
+<tabs>
+<tab header="Using CATcher">
+
+* Launch CATcher, and login to the correct profile:
+  * PE Dry Run: `{{ module }}/T PE Dry run`
+  * PE: `{{ module }}/T PE`
+* Post bugs using CATcher.
+</tab>
+<tab header="Not using CATcher">
+<div class="indented-less">
+
+<include src="tp-testing.mbdf#not-using-catcher-warning" />
+
+<markdown>
+* Post bug reports in the following repo you created earlier:
+  * PE Dry Run: `ped`
+  * PE: `pe`
+* The whole description of the bug should be in the issue description i.e., ==do not add comments to the issue==.
+</markdown>
+</div>
+</tab>
+</tabs>
+</div>
+
+###### <div class="text-white bg-secondary p-1">e) Bug report format</div>
+
+* Each bug should be a separate issue.
+* Write good quality bug reports; ==poor quality or incorrect bug reports will not earn credit==.
+* Use a descriptive title.
+* Give a good description of the bug with ==steps to reproduce and screenshots==. If the receiving team cannot reproduce the bug, you will not be able to get credit for it.
+* Assign exactly one `severity.*` label to the bug report. Bug report without a severity label are considered `severity.Low` (lower severity bugs earn lower credit)<br>
+
+<div class="indented-level2">
+<include src="appendixE-gitHub.md#bug-severity" />
+</div>
+
+* Assign exactly one `type.*` label to the issue.
+<div class="indented-level2">
+<include src="tp-pe.mbdf#type-labels" />
+</div>
+
+</box>
+</div>
+
+<modal large header="Admin {{ icon_embedding }} Project →" id="modal:v1.3-ppp">
+  <include src="tp-deliverables.md#tp-deliverables-ppp"/>
+</modal>
+
+<span id="after-ped">
+
+#### <span class="badge badge-primary">PE-D</span> <span class="text-primary">After the session</span>
+* We'll transfer the relevant bug reports to your repo within a day after the session is over. Once you have received the bug reports for your product, you can decide whether you will act on reported issues before the final submission {{ version_final }}. For some issues, the correct decision could be to reject or postpone to a version beyond {{ version_final }}.
+* If you have received bug reports that don't seem to be about your project, do let us know ASAP (email the prof).
+* You can navigate to the original bug report (via the back-link provided in the bug report given to you) and post in that issue thread to communicate with the tester who reported the bug %%e.g. to ask for more info%%, etc. However, the tester is not obliged to respond. Note that simply replying to the bug report in your own repo will not notify the tester.
+  * {{ icon_tip }} Do not argue with the tester to try to convince that person that your way is correct/better. If at all, you can gently explain the rationale for the current behavior but do not waste time getting involved in long arguments. If you think the suggestion/bug is unreasonable, just thank the tester for their view and discontinue to discussion.
+</span>

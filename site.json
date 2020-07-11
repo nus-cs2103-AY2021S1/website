@@ -1,0 +1,59 @@
+{
+  "baseUrl": "/website",
+  "titlePrefix": "TIC4001",
+  "timeZone": "Asia/Singapore",
+  "ignore": [
+    "_site/*",
+    ".idea/*",
+    ".gitignore",
+    "README.md",
+    "schedule/admin/*",
+    "*.md",
+    "diagrams/*",
+    "book/diagrams/*",
+    ".git/*"
+  ],
+  "pages": [
+    {"src": "index.md",
+      "searchable": "no"},
+    {"glob": "admin/*.md"},
+    {"glob": "schedule/index.md",
+      "searchable": "no"},
+    {"glob": "schedule/timeline.md",
+      "searchable": "no"},
+    {"glob": "schedule/**/admin.md",
+      "searchable": "no"},
+    {"glob": "schedule/**/index.md",
+      "searchable": "no"},
+    {"glob": "schedule/**/project.md",
+      "searchable": "no"},
+    {"glob": "schedule/**/topics.md",
+      "searchable": "no"},
+    {"glob": "schedule/**/tutorial.md",
+      "searchable": "no"},
+    {"glob": "coding-standards/**/*.mbd"},
+    {"glob": "book/about/acknowledgements.md"},
+    {"glob": "se-book-adapted/index.md"},
+    {"glob": "se-book-adapted/chapters/*.md"},
+    {"glob": "se-book-adapted/chapters-printable/*.md",
+      "searchable": "no"
+    },
+    {"glob": "se-book-adapted/common/*.md"},
+    {"glob": "se-book-adapted/projectDuke/*.md"},
+    {"glob": "book/combined/exercises.md"},
+    {"src": "se-book-adapted/print.md",
+      "searchable": "no"
+    },
+    {"glob": "book/**/index.md",
+      "searchable": "no"
+    }
+  ],
+  "enableSearch": true,
+  "headingIndexingLevel": 5,
+  "plugins": ["filterTags"],
+  "pluginsContext": {
+   "filterTags" : {
+      "tags": ["m--tic4001"]
+   }
+ }
+}

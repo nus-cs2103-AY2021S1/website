@@ -1,0 +1,181 @@
+{% from "common/macros.njk" import show_stars with context %}
+{% from "_module-" + module + "/weeklyTpTasks.mbdf" import weekly_tp_themes with context %}
+
+{% macro show_admin_pagetop_for_topic(topics, topic) %}
+<frontmatter>
+title: "Admin: {{ topic.title }}"
+header: header.md
+footer: footer.md
+siteNav: adminSiteNav.md
+head: adminHead.md
+pageNav: 4
+</frontmatter>
+
+
+<div class="website-content">
+
+{{ show_next_previous(topics, topic.id) }}
+<br>
+{% endmacro %}
+
+
+{% macro show_admin_pagetop(topics, current_topic_id) %}
+{% for topic in topics %}
+{% if topic.id == current_topic_id %}
+  {{ show_admin_pagetop_for_topic(topics, topic) }}
+{% endif %}
+{% endfor %}
+{% endmacro %}
+
+
+{% macro show_previous(topic)-%}
+<span class="float-left algolia-no-index"><b-btn variant="light" href="{{ baseUrl }}/admin/{{ topic.link }}"><md>:far-arrow-alt-circle-left: {{ topic.title }}</md></b-btn></span>
+{%- endmacro %}
+
+
+{% macro show_next(topic)-%}
+<span class="float-right algolia-no-index"><b-btn variant="light" href="{{ baseUrl }}/admin/{{ topic.link }}"><md>{{ topic.title }} :far-arrow-alt-circle-right:</md></b-btn></span>
+{%- endmacro %}
+
+
+{# this macro has extra complications in order to avoid a line break between the two spans. Assumes at least two topics. #}
+{% macro show_next_previous(topics, current_topic_id) -%}
+
+{% set linked_topics = [] %}
+{% for topic in topics %}
+{% if topic.level in [1,2] %}
+{% set linked_topics = (linked_topics.push(topic), linked_topics) %}
+{% endif %}
+{% endfor %}
+
+{% for topic in linked_topics %}
+{% if topic.id == current_topic_id %}
+  {% if not loop.first %}
+    {% set  previous_topic = linked_topics[loop.index0 - 1] %}
+  {% endif %}
+  {% if not loop.last %}
+    {% set  next_topic = linked_topics[loop.index0 + 1] %}
+  {% endif %}
+{% if loop.first %}
+{{ show_next(next_topic) }}
+{% elseif loop.last %}
+{{ show_previous(previous_topic) }}
+{% else %}
+{{ show_previous(previous_topic) }}{{ show_next(next_topic) }}
+{% endif %}
+{% endif %}
+{% endfor %}
+{%- endmacro %}
+
+{% macro show_admin_pagebottom(topics, current_topic_id)%}
+<br>
+{{ show_next_previous(topics, current_topic_id) }}
+
+</div>
+{% endmacro %}
+
+{% set topics = [
+  {level: 1, id: "moduleOverview", title: module_pair + " " + module_name, link: "moduleOverview.html", priority: 4},
+  {level: 1, id: "usingThisWebsite", title: "Using this Website", link: "usingThisWebsite.html", highlight: "true", priority: 1},
+  {level: 1, id: "moduleExpectations", title: "Module Expectations", link: "moduleExpectations.html", priority: 2},
+  {level: 0, id: "moduleStructure", title: "Module Structure"},
+    {level: 2, id: "weeklySchedule", title: "Weekly Schedule", link: "weeklySchedule.html", priority: 3},
+    {level: 2, id: "lectures", title: "Lectures/Tutorials", link: "lectures.html", priority: 3},
+  {level: 1, id: "instructors", title: "Instructors", link: "instructors.html", priority: 4},
+  {level: 1, id: "textbooks", title: "Textbooks", link: "textbooks.html", priority: 2},
+  {level: 1, id: "programmingLanguages", title: "Programming Language", link: "programmingLanguages.html", priority: 2},
+  {level: 1, id: "standardsAndConventions", title: "Standards/Conventions", link: "standardsAndConventions.html", priority: 2},
+  {level: -1, id: "ip", title: "Individual Project (iP)"},
+    {level: 2, id: "ip-overview", title: "iP (Individual Project): Overview", link: "ip-overview.html", priority: 2},
+    {level: 2, id: "ip-w2", title: "iP: Week 2", link: "ip-w2.html", priority: 2},
+    {level: 2, id: "ip-w3", title: "iP: Week 3", link: "ip-w3.html", priority: 2},
+    {level: 2, id: "ip-w4", title: "iP: Week 4", link: "ip-w4.html", priority: 2},
+    {level: 2, id: "ip-w5", title: "iP: Week 5", link: "ip-w5.html", priority: 2},
+    {level: 2, id: "ip-w6", title: "iP: Week 6", link: "ip-w6.html", priority: 1},
+    {level: 2, id: "ip-w7", title: "iP: Week 7", link: "ip-w7.html", priority: (4 if module == "CS2103" else 1)},
+    {level: 2, id: "ip-w8", title: "iP: Week 8", link: "ip-w8.html", priority: 1},
+    {level: 2, id: "ip-grading", title: "iP: Grading", link: "ip-grading.html", priority: 2},
+  {level: -1, id: "project", title: "Team Project (tP)"},
+    {level: 2, id: "tp-expectations", title: "tP (team project): Expectations", link: "tp-expectations.html", priority: 2},
+    {level: 2, id: "tp-timeline", title: "tP: Timeline", link: "tp-timeline.html", priority: 3},
+    {level: 2, id: "tp-constraints", title: "tP: Constraints", link: "tp-constraints.html", priority: 2},
+    {level: 2, id: "tp-teams", title: "tP: Forming Teams", link: "tp-teams.html", priority: 2},
+    {level: 2, id: "tp-w3", title: "tP week 3: " + weekly_tp_themes.w3.name, link: "tp-w3.html", priority: 2},
+    {level: 2, id: "tp-w4", title: "tP week 4: " + weekly_tp_themes.w4.name, link: "tp-w4.html", priority: 3},
+    {level: 2, id: "tp-w5", title: "tP week 5: " + weekly_tp_themes.w5.name, link: "tp-w5.html", priority: 2},
+    {level: 2, id: "tp-w6", title: "tP week 6: " + weekly_tp_themes.w6.name, link: "tp-w6.html", priority: 2},
+    {level: 2, id: "tp-w7", title: "tP week 7: " + weekly_tp_themes.w7.name, link: "tp-w7.html", priority: 2},
+    {level: 2, id: "tp-w8", title: "tP week 8: " + weekly_tp_themes.w8.name, link: "tp-w8.html", priority: 3},
+    {level: 2, id: "tp-w9", title: "tP week 9: " + weekly_tp_themes.w9.name, link: "tp-w9.html", priority: 2},
+    {level: 2, id: "tp-w10", title: "tP week 10: " + weekly_tp_themes.w10.name, link: "tp-w10.html", priority: 2},
+    {level: 2, id: "tp-w11", title: "tP week 11: " + weekly_tp_themes.w11.name, link: "tp-w11.html", priority: 2},
+    {level: 2, id: "tp-w12", title: "tP week 12: " + weekly_tp_themes.w12.name, link: "tp-w12.html", priority: 3},
+    {level: 2, id: "tp-w13", title: "tP week 13: " + weekly_tp_themes.w13.name, link: "tp-w13.html", priority: 2},
+    {level: 2, id: "tp-deliverables", title: "tP: Deliverables", link: "tp-deliverables.html", priority: 2},
+    {level: 2, id: "tp-pe", title: "tP: Practical Exam", link: "tp-pe.html", priority: 2},
+    {level: 2, id: "tp-grading", title: "tP: Grading", link: "tp-grading.html", priority: 2},
+    {level: 2, id: "tp-supervision", title: "tP: Supervision", link: "tp-supervision.html", priority: 2},
+  {level: 1, id: "peerEvaluations", title: "Peer Evaluations", link: "peerEvaluations.html", priority: 2},
+  {level: 1, id: "tools", title: "Tools", link: "tools.html", priority: 3},
+  {level: 1, id: "participation", title: "Participation Marks", link: "participation.html", priority: 2},
+  {level: 1, id: "gradeBreakdown", title: "Grade Breakdown", link: "gradeBreakdown.html", priority: 2},
+  {level: 0, id: "appendices", title: "Appendices"},
+    {level: 2, id: "appendixA-principles", title: "Apdx A: Module Principles", link: "appendixA-principles.html", priority: 4},
+    {level: 2, id: "appendixB-policies", title: "Apdx B: Module Policies", link: "appendixB-policies.html", priority: 1},
+    {level: 2, id: "appendixC-faq", title: "Apdx C: FAQ", link: "appendixC-faq.html", priority: 1},
+    {level: 2, id: "appendixD-help", title: "Apdx D: Getting Help", link: "appendixD-help.html", priority: 2},
+    {level: 2, id: "appendixE-gitHub", title: "Apdx E: Using GitHub", link: "appendixE-gitHub.html", priority: 1},
+    {level: 2, id: "appendixF-teamworkIssues", title: "Apdx F: Handling Team Issues", link: "appendixF-teamworkIssues.html", priority: 4}
+]%}
+
+{% set faqs = [
+  {id: "admin-faq-whereIsEverything", title: "Where is everything?", priority: 1},
+  {id: "admin-faq-selfStudy", title: "Why so much self-study?", priority: 4},
+  {id: "admin-faq-narrowScope", title: "Why very narrow project scope?", priority: 4},
+  {id: "admin-faq-manySubmissions", title: "Why so many submissions?", priority: 4}
+]%}
+
+{% set policies = [
+  {id: "policy-followingInstructions", title: "Policy on following instructions", priority: 2},
+  {id: "policy-teamSize", title: "Policy on grading smaller/larger teams", priority: 4},
+  {id: "policy-workDistribution", title: "Policy on project work distribution", priority: 3},
+  {id: "policy-validAbsences", title: "Policy on absence due to valid reasons (e.g. MC, LOA, University events)", priority: 4},
+  {id: "policy-responseTime", title: "Policy on email response time", priority: 3},
+  {id: "policy-techHelp", title: "Policy on tech help", priority: 2},
+  {id: "policy-publishingSubmissions", title: "Policy on publishing submissions", priority: 4},
+  {id: "policy-plagiarism", title: "Policy on plagiarism", priority: 1},
+  {id: "policy-reuse", title: "Policy on reuse", priority: 2},
+  {id: "policy-outsiderHelp", title: "Policy on help from outsiders", priority: 2},
+  {id: "policy-deadlineExtensions", title: "Policy on deadline extensions", priority: 4}
+]%}
+
+
+{% macro show_title(current_topic_id, topics) -%}
+{% for topic in topics  %}
+{% if topic.id == current_topic_id %}
+{% set hashes = "#" %}
+<markdown>{{ hashes }} {{ topic.title }} <span style="font-size:15px" class="text-muted text-light">{{ show_stars(topic.priority) }} {% for tag in topic.tags %}<span class="badge badge-pill badge-light ">#{{ tag }}</span> {% endfor %}</span></markdown>
+{% endif %}
+{% endfor %}
+{%- endmacro %}
+
+{% macro show_admin_page(current_topic_id)%}
+{{ show_admin_pagetop(topics, current_topic_id) }}
+{{ show_title(current_topic_id, topics) | trim }}
+{{ caller() }}
+{{ show_admin_pagebottom(topics, current_topic_id) }}
+{% endmacro %}
+
+{% macro show_admin_summary()%}
+<div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple;">
+
+{{ caller() }}
+</div>
+{% endmacro %}
+
+{% macro show_project_summary_lead()%}
+<div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
+
+{{ caller() }}
+</div>
+{% endmacro %}

@@ -1,0 +1,81 @@
+{% from "_module-" + module + "/textbookTopics.mbdf" import textbook_topics with context %}
+
+{% set chapters = textbook_topics %}
+
+{% set topics = [
+  {heading: "Programming Paradigms", chapters: [chapters.oop]},
+  {heading: "Requirements", chapters: [chapters.requirements, chapters.gatheringRequirements, chapters.specifyingRequirements]},
+  {heading: "Design", chapters: [chapters.design, chapters.designFundamentals, chapters.modeling, chapters.architecture, chapters.designApproaches]},
+  {heading: "Implementation", chapters: [chapters.ides, chapters.codeQuality, chapters.refactoring, chapters.documentation, chapters.errorHandling, chapters.integration, chapters.reuse]},
+  {heading: "Quality Assurance", chapters: [chapters.qualityAssurance, chapters.testing, chapters.testCaseDesign]},
+  {heading: "Project Management", chapters: [chapters.revisionControl, chapters.projectPlanning, chapters.teamwork, chapters.processModels]},
+  {heading: "Principles", chapters: [chapters.principles]},
+  {heading: "Tools", chapters: [chapters.uml, chapters.intellij, chapters.gitAndGithub]}
+  ]
+%}
+
+{% set definitions = [
+  {letter : "A", defs: ["def-abstraction", "def-actor", "def-architecture"]},
+  {letter : "B", defs: ["def-brainstorming", "def-brooks-law"]},
+  {letter : "C", defs: ["def-client-code", "def-cli", "def-commit", "def-coupling"  ]},
+  {letter : "D", defs: ["def-dependency-inversion-principle", "def-design-pattern", "def-domain-expert", "def-dry-principle", "def-dynamic-binding" ]},
+  {letter : "E", defs: ["def-enterprise-application", "def-exception", "def-equivalence-partition"  ]},
+  {letter : "F", defs: ["def-feature-list", "def-focus-group"]},
+  {letter : "G", defs: ["def-glossary"]},
+  {letter : "I", defs: ["def-interface-segregation-principle"]},
+  {letter : "L", defs: ["def-law-of-demeter", "def-liskov-substitution-principle"]},
+  {letter : "O", defs: ["def-open-closed-principle"  ]},
+  {letter : "P", defs: ["def-pair-programming", "def-prototyping", "def-polymorphism"]},
+  {letter : "R", defs: ["def-rcs", "def-repo"  ]},
+  {letter : "S", defs: ["def-separation-concerns-principle", "def-single-responsibility-principle", "def-se", "def-stage", "def-stakeholder", "def-static-analysis", "def-static-binding", "def-stub", "def-sut"]},
+  {letter : "T", defs: ["def-testing", "def-type-signature"]},
+  {letter : "U", defs: ["def-uml", "def-use-case", "def-user-story", "def-user-story-format"]},
+  {letter : "W", defs: ["def-working-directory"]},
+  {letter : "Y", defs: ["def-yagni-principle"]}
+] %}
+
+{% set combinedExercises = [
+  "chooseCorrectStatementAboutRequirements",
+  "correctStatementAboutClassObjectSequenceDiagrams",
+  "usefulModelToDescribeWorkflow",
+  "oddStatementOnProjMgtTools",
+  "correctStatementAboutPrinciplesAndPatterns"
+] %}
+
+
+{% macro find_level_three(topics, path) -%}
+{% for topic in topics %}
+  {% if topic.name == path[2] %}
+  {{ topic.priority }}
+  {% endif %}
+{% endfor %}
+{%- endmacro %}
+
+{% macro find_level_two(topics, path) -%}
+{% for topic in topics %}
+  {% if topic.name == path[1] %}
+    {{ find_level_three(topic.level_three_topics, path) }}
+  {% endif %}
+{% endfor %}
+{%- endmacro %}
+
+{% macro find_level_one(topics, path) -%}
+{% for topic in topics %}
+  {% if topic.name == path[0] %}
+    {{find_level_two(topic.level_two_topics, path)}}
+  {% endif %}
+{% endfor %}
+{%- endmacro %}
+
+{# path should be without chapter #}
+{% macro find_priority(chapter_name, path) -%}
+{% if (path | length) == 3 %}
+  {{find_level_one(chapters[chapter_name].level_one_topics, path)}}
+{% elseif (path | length) == 2 %}
+  {{find_level_one(chapters[chapter_name].level_one_topics, [path[0], "", path[1]])}}
+{% elseif (path | length) == 1 %}
+  {{find_level_one(chapters[chapter_name].level_one_topics, ["", "", path[0]])}}
+{% endif %}
+{%- endmacro %}
+
+{% macro get_priority(chapter_name, path)%}{{find_priority(chapter_name, path) | trim }}{% endmacro %}

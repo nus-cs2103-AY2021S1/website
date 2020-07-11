@@ -1,0 +1,50 @@
+{% from "common/macros.njk" import embed_topic, show_as_tab, thumb, timing_badge with context %}
+{% from "_module-" + module + "/studentData.mbdf" import ip_pr_slap_review_allocation as allocations with context %}
+
+#### {{ thumb(1) }} Discuss iP progress
+
+Quickly update the tutor about your iP progress:
+* Who has managed to set up CI?
+* Has everyone completed `Level-10` (i.e., the GUI) and `A-Gradle`? Any GUIs that went beyond the JavaFx tutorial?
+* Anyone has iP increments overdue more than one week?
+
+#### {{ thumb(2) }} Discuss the code quality of iP PRs
+
+<!--div class="indented">
+
+{{ icon_team }} This activity is to be done as a team. One team member needs to be connected to the TV.
+</div -->
+
+1. **Find the PR you have been allocated to discuss** (given below). If the allocated PR is not available or suitable, you can choose the fallback option, and failing that, any random PR.
+
+   <panel header="PR allocation">
+
+   {% macro get_links(username) -%}
+   [{{ username }}'s PR](https://github.com/{{ module_org }}/{{ ip_repo_name }}/pulls/{{ username }})
+   {%- endmacro  %}
+
+   Your username | PR to review       | Fallback PR to review
+   --------------|--------------------|------------------
+   {% for allocation in allocations  -%}
+   {{ allocation[0] }} | {{ get_links(allocation[1]) }} | {{ get_links(allocation[2]) }}
+   {% endfor %}
+   </panel>
+   <p/>
+
+1. {{ timing_badge("10 minutes", "info") }} **Find potential _abstraction_ problems**: Go through the code in the dif view (i.e., the <span class="tab">:octicon-diff: Files changed</span> tab), and and find potential ==abstraction problems (weak SLAP, arrow-head style code, too-long methods, too-deep nesting)== <br/>
+   {{ icon_tip }} To identify long methods or deep nesting, zoom out and scroll through the entire PR code to do a visual inspection (no need to read the code line-by-line). After visually locating a method that looks too long/deep, have a closer look to see it can be improved by using better abstraction.If you are unsure about a case, you can also rope the tutor in to the discussion.
+   * If you can't find at least one example, you can try the fallback option provided, and failing that, another random iP PR.
+   * You can also select borderline cases.
+   * **Paste screenshots of problematic code** in the shared online document provided (in the section of the document allocated to you).
+
+1. {{ timing_badge("10 minutes", "info") }} **Discussion**: The tutor will lead a short discussion to go through the problematic code you found.
+
+1. {{ icon_tip }} **After the tutorial**, you can apply the insights gained from this activity to **improve the code quality of your own iP**, if necessary.
+
+
+#### {{ thumb(3) }} Prioritize tP user stories
+
+* Show your list of tP user stories to the tutor %%(for progress tracking)%%.
+* If you haven't done so already, prioritize tP user stories as explained in the [{{ show_as_tab('Project', icon_project) }}](project.html#2-prioritize-the-user-stories-before-or-during-the-tutorial).
+
+{{ embed_topic("../../admin/tp-tasks.mbdf#desc_prioritize_user_stories", "Admin " + icon_embedding + " tP → Week 5 → **Choose user stories for " + version_first + "**", "2", indent="2") }}

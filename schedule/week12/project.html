@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Week 12 - Project</title>
+  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+  <link rel="stylesheet" href="../../markbind/css/page-nav.css">
+  <link rel="stylesheet" href="/website/book/css/textbook.css">
+  <link rel="stylesheet" href="/website/css/main.css">
+  <link rel="stylesheet" href="/website/css/schedule.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header fixed>
+      <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+      <navbar placement="top" type="dark" class="temp-navbar">
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
+        </dropdown>
+        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+        <div class="nav-link temp-dropdown-placeholder">**Links**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
+          <li><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+
+          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+          <li><a href="/website/admin/forum-activities-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+          <li><a href="/website/schedule/week12/www.comp.nus.edu.sg/~cs2103" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+          <hr>
+          <span><strong> Individual Project (iP):</strong></span>
+          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+          <hr>
+          <span><strong> Team Project (tP):</strong></span>
+          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+
+          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
+        </dropdown>
+        <li slot="right" class="nav-link">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+
+      <div id="content-wrapper">
+        <nav>
+          <ul class="pagination mt-2">
+            <li class="page-item"><a class="page-link" href="/website/schedule/week11"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+            <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week12/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week12/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week12/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week12/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+            <li class="page-item active"><a class="page-link" href="/website/schedule/week12/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+            <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week13"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
+          </ul>
+        </nav>
+        <p></p>
+        <h1 id="week-12-fri-oct-30th-project">Week 12 <small><small><span class="dimmed">[Fri, Oct 30th]</span> - Project</small></small><span id="week-12-fri-oct-30th-project" class="anchor"></span><a class="fa fa-anchor" href="#week-12-fri-oct-30th-project" onclick="event.stopPropagation()"></a></h1>
+        <div id="summary" class="lead border-left ml-3 mb-3 pl-2" style="color: purple;">
+          <p><strong>tP:</strong></p>
+          <div>
+            <ol>
+              <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Tweak the product as per peer-testing results</span></li>
+              <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Draft the PPP</span></li>
+              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Double-check RepoSense compatibility</span></li>
+            </ol>
+          </div>
+        </div>
+        <h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="tp-mid-v2-1">tP: mid-v2.1<span id="tp-mid-v2-1" class="anchor"></span><a class="fa fa-anchor" href="#tp-mid-v2-1" onclick="event.stopPropagation()"></a></h2>
+        <div>
+          <div></div>
+          <p></p>
+          <h4 id="1-tweak-the-product-as-per-peer-testing-results"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Tweak the product as per peer-testing results</span><span id="1-tweak-the-product-as-per-peer-testing-results" class="anchor"></span><a class="fa fa-anchor" href="#1-tweak-the-product-as-per-peer-testing-results" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <ul>
+              <li>Follow the procedure for dealing with PED bugs you received:</li>
+            </ul>
+            <div class="indented-level2">
+              <panel type class="embedding" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Deliverables → <strong>After the PED</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <h4 id="pe-d-after-the-session"><span class="badge badge-primary">PE-D</span> <span class="text-primary">After the session</span><span id="pe-d-after-the-session" class="anchor"></span><a class="fa fa-anchor" href="#pe-d-after-the-session" onclick="event.stopPropagation()"></a></h4>
+                  <ul>
+                    <li>We'll transfer the relevant bug reports to your repo within a day after the session is over. Once you have received the bug reports for your product, you can decide whether you will act on reported issues before the final submission v2.1. For some issues, the correct decision could be to reject or postpone to a version beyond v2.1.</li>
+                    <li>If you have received bug reports that don't seem to be about your project, do let us know ASAP (email the prof).</li>
+                    <li>You can navigate to the original bug report (via the back-link provided in the bug report given to you) and post in that issue thread to communicate with the tester who reported the bug <span class="dimmed">e.g. to ask for more info</span>, etc. However, the tester is not obliged to respond. Note that simply replying to the bug report in your own repo will not notify the tester.
+                      <ul>
+                        <li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Do not argue with the tester to try to convince that person that your way is correct/better. If at all, you can gently explain the rationale for the current behavior but do not waste time getting involved in long arguments. If you think the suggestion/bug is unreasonable, just thank the tester for their view and discontinue to discussion.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </panel>
+            </div>
+            <p></p>
+            <ul>
+              <li><strong>Freeze features</strong> around this time. Ensure the current product have all the features you intend to release at v2.1. Doing major changes after this point is risky. The remaining time is better spent fixing problems discovered late or on fine-tuning the product.</li>
+              <li><strong>Update documentation</strong> to match the product.</li>
+              <li><strong>Consider increasing test coverage</strong> by adding more tests if it is lower than the level you would like it to be. Take note of our expectation on test code (given in the panel below).</li>
+            </ul>
+            <div class="indented-level2">
+              <panel type class="embedding" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Grading → Expectation on testing <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <ul>
+                    <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Write <em>some</em> automated tests</strong></span> so that we can evaluate your ability to write tests.</li>
+                  </ul>
+                  <div class="indented">
+                    <box>
+                      <p><strong>🤔 How much testings is enough?</strong> We expect you to decide. You learned different types of testing and what they try to achieve. Based on that, you should decide how much of each type is required. Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the effort required.<br>
+                        There is no requirement for a minimum coverage level. Note that in a production environment you are often required to have at least 90% of the code covered by tests. In this project, it can be less. <mark>The weaker your tests are, the higher the risk of bugs, which will cost marks if not fixed before the final submission.</mark></p>
+                    </box>
+                    <p></p>
+                  </div>
+                </div>
+              </panel>
+            </div>
+            <p></p>
+            <ul>
+              <li><strong>After you have sufficient code coverage, fix remaining code quality problems</strong> and bring up the quality to your target level.</li>
+            </ul>
+            <div class="indented-level2">
+              <panel type class="embedding" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Grading → Code Quality Tips <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <ul>
+                    <li>
+                      <p>At least some evidence of these (see <a href="/website/se-book-adapted/chapters/errorHandling.html">here</a> for more info)</p>
+                      <ul>
+                        <li>logging</li>
+                        <li>exceptions</li>
+                        <li>assertions</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <p>No <a href="https://se-education.org/guides/conventions/java/intermediate.html">coding standard</a> violations <span class="dimmed">e.g. all boolean variables/methods sounds like booleans</span>. Checkstyle can prevent only <em>some</em> coding standard violations; others need to be checked manually.</p>
+                    </li>
+                    <li>
+                      <p><a href="/website/se-book-adapted/chapters/codeQuality.html#slap-hard">SLAP</a> is applied at a reasonable level. Long methods or deeply-nested code are symptoms of low-SLAP.</p>
+                    </li>
+                    <li>
+                      <p>No noticeable code duplications <span class="dimmed">i.e. if there multiple blocks of code that vary only in minor ways, try to extract out similarities into one place</span>, especially in test code.</p>
+                    </li>
+                    <li>
+                      <p>Evidence of applying <a href="/website/book/codeQuality">code quality guidelines covered in the module</a>.</p>
+                    </li>
+                  </ul>
+                </div>
+              </panel>
+            </div>
+            <p></p>
+          </div>
+          <p></p>
+          <h4 id="2-draft-the-ppp"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Draft the PPP</span><span id="2-draft-the-ppp" class="anchor"></span><a class="fa fa-anchor" href="#2-draft-the-ppp" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <ul>
+              <li><strong>Create the first version of your <em>Project Portfolio Page (PPP)</em></strong>.<br>
+                Reason: <mark>Each member needs to create a PPP</mark> to describe your contribution to the project.</li>
+            </ul>
+            <div class="indented-level2">
+              <panel type class="embedding" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Deliverables → Project Portfolio Page <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <div>
+                    <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
+                    <h4 id="ppp-objectives"><span class="badge badge-info">PPP</span> <span class="text-info">Objectives</span><span id="ppp-objectives" class="anchor"></span><a class="fa fa-anchor" href="#ppp-objectives" onclick="event.stopPropagation()"></a></h4>
+                    <ul>
+                      <li>For you to use <span class="dimmed">(e.g. in your resume)</span> as a well-documented data point of your SE experience</li>
+                      <li>For evaluators to use as a data point for evaluating your project contributions</li>
+                    </ul>
+                    <h4 id="ppp-sections-to-include"><span class="badge badge-info">PPP</span> <span class="text-info">Sections to include</span><span id="ppp-sections-to-include" class="anchor"></span><a class="fa fa-anchor" href="#ppp-sections-to-include" onclick="event.stopPropagation()"></a></h4>
+                    <ul>
+                      <li><strong>Overview</strong>: A short overview of your product to provide some context to the reader. The opening 1-2 sentences may be reused by all team members. If your product overview extends beyond 1-2 sentences, the remainder should be written by yourself.</li>
+                      <li><strong>Summary of Contributions</strong> --Suggested items to include:
+                        <ul>
+                          <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
+                          <li><strong>Enhancements implemented:</strong> A summary of the enhancements you implemented.</li>
+                          <li><strong>Contributions to documentation:</strong> Which sections did you contribute to the UG?</li>
+                          <li><strong>Contributions to the DG:</strong> Which sections did you contribute to the DG? Which UML diagrams did you add/updated?</li>
+                          <li><strong>Contributions to <span trigger="click" for="modal:deliverablesPPP-teamTasks" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:deliverablesPPP-teamTasks'].show()" class="trigger-click">team-based tasks </span>:</strong></li>
+                          <li><strong>Review/mentoring contributions:</strong> Links to PRs reviewed, instances of helping team members in other ways</li>
+                          <li><strong>Contributions beyond the project team:</strong>
+                            <ul>
+                              <li>Evidence of helping others <span class="dimmed">e.g. responses you posted in our forum, bugs you reported in other team's products</span>,</li>
+                              <li>Evidence of technical leadership <span class="dimmed">e.g. sharing useful information in the forum</span></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks"><template slot="modal-title">Team-Based Tasks</template>
+                      <div>
+                        <box>
+                          <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
+                          <panel type="seamless"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
+                            </template>
+                            <span id="example-team-tasks">
+                              <p>Here is a non-exhaustive list of team-tasks:</p>
+                              <ol>
+                                <li>Setting up the GitHub team org/repo</li>
+                                <li>Necessary general code enhancements</li>
+                                <li>Setting up tools e.g., GitHub, Gradle</li>
+                                <li>Maintaining the issue tracker</li>
+                                <li>Release management</li>
+                                <li>Updating user/developer docs that are not specific to a feature <span class="dimmed">e.g. documenting the target user profile</span></li>
+                                <li>Incorporating more useful tools/libraries/frameworks into the product or the project workflow <span class="dimmed">(e.g. automate more aspects of the project workflow using a GitHub plugin)</span></li>
+                              </ol>
+                            </span></panel>
+                          <p></p>
+                        </box>
+                      </div>
+                    </b-modal>
+                    <div class="indented-level2">
+                      <box border-left-color="darkcyan">
+                        <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
+                        </p>
+                      </box>
+                      <p></p>
+                    </div>
+                    <ul>
+                      <li><strong>[Optional] Contributions to the User Guide (Extracts)</strong>: Reproduce the parts in the User Guide that you wrote. This can include features you implemented as well as features you propose to implement.<br>
+                        <span class="dimmed">The purpose of allowing you to include <em>proposed</em> features is to provide you more flexibility to show your documentation skills. e.g. you can bring in a proposed feature just to give you an opportunity to use a UML diagram type not used by the actual features.</span></li>
+                      <li><strong>[Optional] Contributions to the Developer Guide (Extracts)</strong>: Reproduce the parts in the Developer Guide that you wrote. Ensure there is enough content to evaluate your technical documentation skills and UML modelling skills. You can include descriptions of your design/implementations, possible alternatives, pros and cons of alternatives, etc.</li>
+                    </ul>
+                    <h4 id="ppp-format"><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><span id="ppp-format" class="anchor"></span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
+                    <ul>
+                      <li>File name (i.e., in the repo): <code v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code v-pre>docs/team/goodcoder123.md</code></li>
+                      <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-tic4001-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
+                    </ul>
+                    <div class="indented-level2">
+                      <div>
+                        <box type="important" light>
+                          <p><strong>To convert the UG/DG/PPP into PDF format</strong>, go to the generated page in your project's <a href="http://github.io">github.io</a> site and use <a href="https://se-education.org/guides/tutorials/savingPdf.html">this technique</a> to save as a pdf file. <mark>Using other techniques can result in poor quality resolution (will be considered a bug) and unnecessarily large files.</mark></p>
+                          <p><strong>Ensure hyperlinks in the pdf files work</strong>. Your UG/DG/PPP will be evaluated using PDF files during the PE. <mark>Broken/non-working hyperlinks in the PDF files will be reported as bugs</mark> and will count against your project score. Again, use the conversion technique given above to ensure links in the PDF files work.
+                          </p>
+                        </box>
+                        <p></p>
+                      </div>
+                    </div>
+                    <h4 id="ppp-page-limit"><span class="badge badge-info">PPP</span> <span class="text-info">Page Limit</span><span id="ppp-page-limit" class="anchor"></span><a class="fa fa-anchor" href="#ppp-page-limit" onclick="event.stopPropagation()"></a></h4>
+                    <div class="indented-level2">
+                      <div class="table-responsive">
+                        <table class="markbind-table table table-bordered table-striped">
+                          <thead>
+                            <tr>
+                              <th>Content</th>
+                              <th>Recommended</th>
+                              <th>Hard Limit</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Overview + Summary of contributions</td>
+                              <td>0.5-1</td>
+                              <td>2</td>
+                            </tr>
+                            <tr>
+                              <td>[Optional] Contributions to the User Guide</td>
+                              <td>1-3</td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>[Optional] Contributions to the Developer Guide</td>
+                              <td>3-6</td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <ul>
+                      <li>The <mark>page limits given above are <em>after</em> converting to PDF format</mark>. The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a lot of spacing around content.</li>
+                    </ul>
+                  </div>
+                </div>
+              </panel>
+            </div>
+            <p></p>
+          </div>
+          <p></p>
+          <h4 id="3-double-check-reposense-compatibility"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Double-check RepoSense compatibility</span><span id="3-double-check-reposense-compatibility" class="anchor"></span><a class="fa fa-anchor" href="#3-double-check-reposense-compatibility" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <ul>
+              <li>
+                <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Once again, double-check to ensure the code attributed to you by RepoSense is correct.
+              </li>
+            </ul>
+            <div class="indented-level2">
+              <panel type class="embedding" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → mid-v2.1 → Making the Code RepoSense-Compatible <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <ul>
+                    <li>
+                      <p><strong>Ensure your code is <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., RepoSense can detect your code as yours</span>RepoSense-compatible</span></strong> and the <strong>code it attributes to you is indeed the code written by you</strong>, as explained below:</p>
+                      <ul>
+                        <li>Go to the <a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true">tp Code Dashboard</a>. Click on the <code v-pre>&lt;/&gt;</code> icon against your name and verify that the <mark>lines attributed to you (i.e., lines marked as green)</mark> reflects your code contribution correctly. This is important because some aspects of your project grade (e.g., code quality) will be graded based on those lines.<br>
+                              <img src="/website/admin/images/greenLines.png" width="600"></li>
+                      </ul>
+                      <p></p>
+                      <ul>
+                        <li>More info on how to make the code RepoSense compatible:</li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div class="indented-level4">
+                    <panel type class="embedding" minimized><template slot="_header">
+                        <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Tools → RepoSense <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                      </template>
+                      <div>
+                        <h4 id="tool-reposense-for-analyzing-code-authorship">
+                          <div class="text-white bg-dark p-1">Tool: RepoSense (for Analyzing Code Authorship)</div><span id="tool-reposense-for-analyzing-code-authorship" class="anchor"></span><a class="fa fa-anchor" href="#tool-reposense-for-analyzing-code-authorship" onclick="event.stopPropagation()"></a>
+                        </h4>
+                        <div>
+                          <p>
+                            <pic src="https://reposense.org/images/reposenseOverview.png"></pic>
+                          </p>
+                          <p>We will be using a tool called <a href="http://reposense.org">RepoSense</a> to make it <strong>easier for you to see (and learn from) code written by others</strong>, and to help us see who wrote which part of the code.</p>
+                          <pic src="https://reposense.org/images/report-features.png" alt="RepoSense report screenshot">
+                            <sub>Figure: RepoSense Report Features</sub></pic>
+                          <p><strong>Viewing the current status of code authorship data:</strong></p>
+                          <ul>
+                            <li>The reports generated by the tool for the individual and team projects will be made available in the module website at some point in the semester. The feature that is most relevant to you is the <em>Code Panel</em> (shown on the right side of the screenshot above). It shows the code attributed to a given author.</li>
+                            <li>Click on your name to load the code attributed to you (based on Git blame/log data) onto the code panel on the right.</li>
+                            <li>If the code shown roughly matches the code you wrote, all is fine and there is nothing for you to do.</li>
+                          </ul>
+                          <p><strong>2. If the code does not match the actual authorship:</strong></p>
+                          <ul>
+                            <li>
+                              <p>Here are the possible reasons for the code shown not to match the code you wrote:</p>
+                              <ul>
+                                <li>the git username in some of your commits does not match your GitHub username.</li>
+                                <li>the actual authorship does not match the authorship determined by git blame/log e.g., another student touched your code after you wrote it, and Git log attributed the code to that student instead</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <p>For cases such as the following, you can create a PR to update our config files <a href="https://github.com/nus-tic4001-AY2021S1/tp-dashboard/tree/master/configs">here</a>. The meaning of the config files are given in the [<a href="https://reposense.org/RepoSense/ug/configFiles.html">https://reposense.org/RepoSense/ug/configFiles.html</a>).</p>
+                              <ul>
+                                <li>missing some commits due to using multiple git <code v-pre>user.name</code>s</li>
+                                <li>some commits/files need to be omitted from the analysis</li>
+                              </ul>
+                            </li>
+                            <li>
+                              <p>If some lines of code are being attributed to the wrong person, you can add <code v-pre>@@author</code> annotations as explained in the panel below:</p>
+                            </li>
+                          </ul>
+                          <div class="indented-level2">
+                            <panel><template slot="_header">
+                                <p>Adding <code v-pre>@@author</code> tags to indicate authorship</p>
+                              </template>
+                              <div>
+                                <h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
+                                <ul>
+                                  <li>
+                                    <p>Mark your code with a <code v-pre>//@@author {yourGithubUsername}</code>. Note the double <code v-pre>@</code>.<br>
+                                      The <code v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
+                                      Here is a sample code file:</p>
+                                    <pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author sarahkhoo<br></span><span>method 3 ...<br></span><span>//@@author johndoe<br></span><span>method 4 ...<br></span></code></pre>
+                                  </li>
+                                  <li>
+                                    <p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
+                                      Here is a sample code with an empty <code v-pre>author</code> tag:</p>
+                                    <pre><code class="hljs" v-pre><span>method 0 ...<br></span><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author<br></span><span>method 3 ...<br></span><span>method 4 ...<br></span></code></pre>
+                                  </li>
+                                  <li>
+                                    <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br>
+                                      Here is an example code from an xml/fxml file.</p>
+                                    <pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;<br></span><span>&lt;textbox&gt;<br></span><span>  &lt;label&gt;...&lt;/label&gt;<br></span><span>  &lt;input&gt;...&lt;/input&gt;<br></span><span>&lt;/textbox&gt;<br></span><span>...<br></span></code></pre>
+                                  </li>
+                                  <li>
+                                    <p><strong>Do not put the <code v-pre>//@@author</code> inside java header comments</strong>.<br>
+                                      👎<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                                    <pre><code class="hljs" v-pre><span>/**<br></span><span>  * Returns true if ...<br></span><span>  * @@author johndoe<br></span><span>  */<br></span></code></pre>
+                                    <p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                                    <pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>/**<br></span><span>  * Returns true if ...<br></span><span>  */<br></span></code></pre>
+                                  </li>
+                                </ul>
+                                <h4 id="what-to-and-what-not-to-annotate">What to and what not to annotate<span id="what-to-and-what-not-to-annotate" class="anchor"></span><a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
+                                <ul>
+                                  <li>
+                                    <p><strong>Annotate both functional and test code</strong> There is no need to annotate documentation files.</p>
+                                  </li>
+                                  <li>
+                                    <p><strong>Annotate only significant size code blocks that can be reviewed on its own</strong> <span class="dimmed">e.g., a class, a sequence of methods, a method.</span> <br> <strong>Claiming credit for code blocks smaller than a method is discouraged</strong> but allowed. If you do, do it sparingly and only claim meaningful blocks of code such as a block of statements, a loop, or an if-else statement.</p>
+                                    <ul>
+                                      <li>If an enhancement required you to do tiny changes in many places, there is no need to annotate all those tiny changes; you can describe those changes in the Project Portfolio page instead.</li>
+                                      <li>If a code block was touched by more than one person, either let the person who wrote most of it (e.g. more than 80%) take credit for the entire block, or leave it as 'unclaimed' (i.e., no author tags).</li>
+                                      <li>Related to the above point, <mark>if you claim a code block as your own, more than 80% of the code in that block should have been written by yourself</mark>. For example, no more than 20% of it can be code you reused from somewhere.</li>
+                                      <li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> GitHub has a <a href="https://help.github.com/articles/tracing-changes-in-a-file/"><em>blame</em> feature and a <em>history</em></a> feature that can help you determine who wrote a piece of code.</li>
+                                    </ul>
+                                  </li>
+                                  <li>
+                                    <p><strong>Do not try to boost the quantity of your contribution using unethical means</strong> such as duplicating the same code in multiple places. In particular, do not copy-paste test cases to create redundant tests. Even repetitive code blocks within test methods should be extracted out as utility methods to reduce code duplication.
+                                      Individual members are responsible for making sure code attributed to them are correct.
+                                      If you notice a team member claiming credit for code that he/she did not write or use other questionable tactics, you can email us (after the final submission) to let us know.</p>
+                                  </li>
+                                  <li>
+                                    <p><strong>If you wrote a significant amount of code that was not used in the final product</strong>,</p>
+                                    <ul>
+                                      <li>Create a folder called <code v-pre>{project root}/unused</code></li>
+                                      <li>Move unused files (or copies of files containing unused code) to that folder</li>
+                                      <li>use <code v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code v-pre>unused</code>)
+                                        e.g.</li>
+                                    </ul>
+                                    <pre><code class="hljs" v-pre><span>//@@author johndoe-unused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre>
+                                    <p>Please put a comment in the code to explain why it was not used.</p>
+                                  </li>
+                                  <li>
+                                    <p><strong>If you reused code from elsewhere,</strong> mark such code as <code v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code v-pre>reused</code>)
+                                      e.g.</p>
+                                    <pre><code class="hljs" v-pre><span>//@@author johndoe-reused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre>
+                                  </li>
+                                  <li>
+                                    <p><strong>You can use empty <code v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
+                                    <ul>
+                                      <li>
+                                        <p><strong>Code generated by the IDE/framework,</strong> should not be annotated as your own.</p>
+                                      </li>
+                                      <li>
+                                        <p><strong>Code you modified in minor ways</strong> e.g. adding a parameter. These should not be claimed as yours but you can mention these additional contributions in the Project Portfolio page if you want to claim credit for them.</p>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </div>
+                            </panel>
+                          </div>
+                          <ul>
+                            <li>For neither of the above two works, please please post in the <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">forum</a> or concat us via <code v-pre>tic4001@comp.nus.edu.sg</code> so that we can advise you what to do.</li>
+                          </ul>
+                          <p><mark><strong>We recommend you ensure your code is RepoSense-compatible by v2.0</strong></mark></p>
+                        </div>
+                      </div>
+                    </panel>
+                  </div>
+                  <p></p>
+                </div>
+              </panel>
+            </div>
+            <p></p>
+          </div>
+          <p></p>
+        </div>
+      </div>
+
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#week-12-fri-oct-30th-project">Week 12 [Fri, Oct 30th] - Project&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#tp-mid-v2-1">tP: mid-v2.1&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#1-tweak-the-product-as-per-peer-testing-results">1 Tweak the product as per peer-testing results&#x200E;</a>
+                <a class="nav-link py-1" href="#2-draft-the-ppp">2 Draft the PPP&#x200E;</a>
+                <a class="nav-link py-1" href="#3-double-check-reposense-compatibility">3 Double-check RepoSense compatibility&#x200E;</a>
+              </nav>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+    </footer>
+  </div>
+</body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
+
+</html>

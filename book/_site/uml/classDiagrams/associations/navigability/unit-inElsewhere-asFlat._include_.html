@@ -1,0 +1,62 @@
+<div></div>
+<p></p>
+<p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams → Associations →
+      </span></strong></span></p>
+<div id="title-and-body">
+  <div>
+    <h4 id="navigability"><span>Navigability</span><a class="fa fa-anchor" href="#navigability" onclick="event.stopPropagation()"></a></h4>
+  </div>
+  <div id="main">
+    <div>
+      <p><strong>You should use arrow heads to indicate the navigability of an association.</strong></p>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Logic</code> is aware of <code v-pre>Minefield</code>, but <code v-pre>Minefield</code> is not aware of <code v-pre>Logic</code></p>
+        <img src="/website/book/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40">
+        <div>
+          <div class="alt-java">
+            <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{<br></span><span>    Minefield minefield;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{<br></span><span>    ...<br></span><span>}<br></span></code></pre>
+          </div>
+          <div class="alt-python">
+            <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span><br></span><span>    self.minefield = minefield<br></span><span>    <br></span><span>  <span class="hljs-comment"># ...</span><br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span><br></span><span>  <span class="hljs-comment"># ...</span><br></span></code></pre>
+          </div>
+        </div>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a bidirectional navigability; each class is aware of the other.</p>
+        <p></p>
+        <img src="/website/book/uml/classDiagrams/associations/navigability/images/manDog.png" height="40">
+        <p></p>
+      </box>
+      <p><strong>Navigability can be shown in class diagrams as well as object diagrams</strong>.</p>
+      <box>
+        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> According to this object diagram the given <code v-pre>Logic</code> object is associated with and aware of two <code v-pre>MineField</code> objects.</p>
+        <img src="/website/book/uml/classDiagrams/associations/navigability/images/logicMinefieldObjects.png" height="80">
+      </box>
+    </div>
+    <div>
+      <div>
+        <panel expandable><template slot="_header">
+            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+          </template>
+          <div>
+            <panel><template slot="_header">
+                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What does the navigability given by this diagram mean?</p>
+              </template>
+              <question>
+                <img src="/website/book/uml/classDiagrams/associations/navigability/images/unitItem.png" height="100">
+                <p></p>
+                <ul radio-group="0b41c" class="radio-list">
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="0b41c" type="radio"> a. A <code v-pre>Unit</code> object knows about the <code v-pre>Item</code> object it is linked to</label></li>
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="0b41c" type="radio"> b. An <code v-pre>Item</code> object knows about the <code v-pre>Unit</code> object it is linked to</label></li>
+                  <li class="radio-list-item"><label><input class="radio-list-input" name="0b41c" type="radio"> c. Depends on the programming language</label></li>
+                </ul>
+                <div slot="answer">
+                  <p>(a)</p>
+                  <p>Explanation: The diagram indicates that <code v-pre>Unit</code> object should know about the <code v-pre>Item</code> object. In the implementation, the <code v-pre>Unit</code> object will hold an <code v-pre>Item</code> object in one of its variables.</p>
+                </div>
+              </question>
+            </panel>
+          </div>
+        </panel>
+      </div>
+    </div>
+  </div>
+</div>

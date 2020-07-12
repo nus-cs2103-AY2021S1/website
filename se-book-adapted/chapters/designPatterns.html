@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Textbook Chapter : Software Design Patterns</title>
+  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+  <link rel="stylesheet" href="../../markbind/css/site-nav.css">
+  <link rel="stylesheet" href="../../markbind/css/page-nav.css">
+  <link rel="stylesheet" href="/website/book/css/textbook.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header fixed>
+      <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+      <navbar placement="top" type="dark" class="temp-navbar">
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
+        </dropdown>
+        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+        <div class="nav-link temp-dropdown-placeholder">**Links**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
+          <li><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+
+          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+          <li><a href="/website/admin/forum-activities-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+          <li><a href="/website/se-book-adapted/chapters/www.comp.nus.edu.sg/~cs2103" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+          <hr>
+          <span><strong> Individual Project (iP):</strong></span>
+          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+          <hr>
+          <span><strong> Team Project (tP):</strong></span>
+          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+
+          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
+        </dropdown>
+        <li slot="right" class="nav-link">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/index.html">Home <span aria-hidden="true" class="glyphicon glyphicon-home"></span>, printable versions <span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Programming Paradigms</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/oop.html">Object-Oriented Programming</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Requirements</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/requirements.html">Requirements</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/gatheringRequirements.html">Gathering Requirements</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/specifyingRequirements.html">Specifying Requirements</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Design</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/design.html">Software Design</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designFundamentals.html">Design Fundamentals</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/modeling.html">Modeling</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/architecture.html">Software Architecture</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designApproaches.html">Design Approaches</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Implementation</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/ides.html">IDEs</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/codeQuality.html">Code Quality</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/refactoring.html">Refactoring</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/documentation.html">Documentation</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/errorHandling.html">Error Handling</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/integration.html">Integration</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/reuse.html">Reuse</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Quality Assurance</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/qualityAssurance.html">Quality Assurance</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/testing.html">Testing</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/testCaseDesign.html">Test Case Design</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Project Management</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/revisionControl.html">Revision Control</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/projectPlanning.html">Project Planning</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/teamwork.html">Teamwork</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/processModels.html">SDLC Process Models</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Principles</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/principles.html">Principles</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Tools</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/uml.html">UML</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/intellij.html">Intellij IDEA</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/gitAndGithub.html">Git and Github</a></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Supplementary
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/cppToJava.html">C++ to Java</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/projectDuke/index.html">Project Duke</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/definitions.html">List of Definitions</a></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="content-wrapper">
+        <link rel="stylesheet" href="/website/book/css/textbook.css">
+        <div class="website-content">
+          <p><span class="dimmed"><strong><span></span></strong></span></p>
+          <div id="title">
+            <div>
+              <h1 id="software-design-patterns"><span>Software design patterns</span><span id="software-design-patterns" class="anchor"></span><a class="fa fa-anchor" href="#software-design-patterns" onclick="event.stopPropagation()"></a></h1>
+            </div>
+          </div>
+          <panel type="seamless" expanded id="introduction">
+            <span slot="header" class="card-title">
+              <div>
+                <h2 id="introduction"><span>Introduction</span><span id="introduction" class="anchor"></span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h2>
+              </div>
+            </span>
+            <panel type="seamless" expanded id="what"><template slot="_header">
+                <h4 id="what">What<span id="what" class="anchor"></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+              </template>
+              <div class="indented">
+                <span class="badge badge-light">
+                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain design patterns</span></span></span></span>
+                <p></p>
+                <div>
+                  <box type="definition">
+                    <div>
+                      <p><strong>Design pattern</strong> : An <em>elegant reusable solution</em> to a <em>commonly recurring problem</em> within a <em>given context</em> in software design.</p>
+                    </div>
+                  </box>
+                  <p>In software development, there are certain problems that recur in a certain context.</p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of recurring design problems:</p>
+                    <div class="table-responsive">
+                      <table class="markbind-table table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Design Context</th>
+                            <th>Recurring Problem</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Assembling a system that makes use of other existing systems implemented using different technologies</td>
+                            <td>What is the best architecture?</td>
+                          </tr>
+                          <tr>
+                            <td>UI needs to be updated when the data in application backend changes</td>
+                            <td>How to initiate an update to the UI when data changes without coupling the backend to the UI?</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </box>
+                  <p>After repeated attempts at solving such problems, better solutions are discovered and refined over time. These solutions are known as design patterns, <strong>a term popularized by the seminal book</strong> <a href="https://en.wikipedia.org/wiki/Design_Patterns"><strong><em>Design Patterns: Elements of Reusable Object-Oriented Software</em> by the so-called &quot;Gang of Four&quot; (GoF)</strong></a> written by Eric Gamma, Richard Helm, Ralph Johnson,and John Vlissides.</p>
+                </div>
+                <div>
+                  <div>
+                    <panel expandable><template slot="_header">
+                        <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                      </template>
+                      <div>
+                        <panel><template slot="_header">
+                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Definition of design patterns</p>
+                          </template>
+                          <question>
+                            <p>Which one of these describes the ‘software design patterns’ concept best?</p>
+                            <ul radio-group="a7255" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="a7255" type="radio"> a. Designs that appear repetitively in software.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="a7255" type="radio"> b. Elegant solutions to recurring problems in software design.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="a7255" type="radio"> c. Architectural styles used in applications.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="a7255" type="radio"> d. Some good design techniques proposed by the Gang of Four</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(b)</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded id="format"><template slot="_header">
+                <h4 id="format">Format<span id="format" class="anchor"></span><a class="fa fa-anchor" href="#format" onclick="event.stopPropagation()"></a></h4>
+              </template>
+              <div class="indented">
+                <span class="badge badge-light">
+                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain design patterns format</span></span></span></span>
+                <p></p>
+                <div>
+                  <p>The common format to describe a pattern consists of the following components:</p>
+                  <ul>
+                    <li><strong>Context</strong>: The situation or scenario where the design problem is encountered.</li>
+                    <li><strong>Problem</strong>: The main difficulty to be resolved.</li>
+                    <li><strong>Solution</strong>: The core of the solution. It is important to note that the solution presented only includes the most general details, which may need further refinement for a specific context.</li>
+                    <li><strong>Anti-patterns</strong> (optional): Commonly used solutions, which are usually incorrect and/or inferior to the Design Pattern.</li>
+                    <li><strong>Consequences</strong> (optional): Identifying the pros and cons of applying the pattern.</li>
+                    <li><strong>Other useful information</strong> (optional): Code examples, known uses, other related patterns, etc.</li>
+                  </ul>
+                </div>
+                <div>
+                  <div>
+                    <panel expandable><template slot="_header">
+                        <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                      </template>
+                      <div>
+                        <panel><template slot="_header">
+                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Anti-patterns required?</p>
+                          </template>
+                          <question>
+                            <p>When we describe a pattern, we must also specify anti-patterns.</p>
+                            <ul radio-group="2350f" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="2350f" type="radio"> True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="2350f" type="radio"> False</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>False.</p>
+                              <p>Explanation: Anti-patterns are related to patterns, but they are not a ‘must have’ component of a pattern description.</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </panel>
+          </panel>
+          <panel type="seamless" expanded id="singleton-pattern">
+            <span slot="header" class="card-title">
+              <div>
+                <h2 id="singleton-pattern"><span>Singleton pattern</span><span id="singleton-pattern" class="anchor"></span><a class="fa fa-anchor" href="#singleton-pattern" onclick="event.stopPropagation()"></a></h2>
+              </div>
+            </span>
+            <panel type="seamless" expanded id="what-2"><template slot="_header">
+                <h4 id="what-2">What<span id="what-2" class="anchor"></span><a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4>
+              </template>
+              <div class="indented">
+                <span class="badge badge-light">
+                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Singleton design pattern</span></span></span></span>
+                <p></p>
+                <div>
+                  <p><strong>Context</strong></p>
+                  <p>A certain classes should have no more than just one instance (e.g. the main controller class of the system). These single instances are commonly known as <em>singletons</em>.</p>
+                  <p><strong>Problem</strong></p>
+                  <p>A normal class can be instantiated multiple times by invoking the constructor.</p>
+                  <p><strong>Solution</strong></p>
+                  <p>Make the constructor of the singleton class <code v-pre>private</code>, <span class="dimmed">because a <code v-pre>public</code> constructor will allow others to instantiate the class at will</span>. Provide a <code v-pre>public</code> class-level method to access the <em>single instance</em>.</p>
+                  <box>
+                    <p>Example:</p>
+                    <p>
+                      <pic src="/website/book/designPatterns/singleton/what/images/singleton.png"></pic>
+                    </p>
+                    <p></p>
+                  </box>
+                </div>
+                <div>
+                  <div>
+                    <panel expandable><template slot="_header">
+                        <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                      </template>
+                      <div>
+                        <panel><template slot="_header">
+                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about the Singleton pattern</p>
+                          </template>
+                          <question>
+                            <p>You use the Singleton pattern when</p>
+                            <ul radio-group="f547d" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="f547d" type="radio"> a. You want an a class with a private constructor.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="f547d" type="radio"> b. You want a single class to hold all functionality of the system.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="f547d" type="radio"> c. You want a class with no more than one instance.</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="f547d" type="radio"> d. You want to hide internal structure of a component from its clients.</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>(c)</p>
+                            </div>
+                          </question>
+                        </panel>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded id="implementation"><template slot="_header">
+                <h4 id="implementation">Implementation<span id="implementation" class="anchor"></span><a class="fa fa-anchor" href="#implementation" onclick="event.stopPropagation()"></a></h4>
+              </template>
+              <div class="indented">
+                <span class="badge badge-light">
+                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can apply the Singleton design pattern</span></span></span></span>
+                <p></p>
+                <div>
+                  <p>Here is the typical implementation of how the Singleton pattern is applied to a class:</p>
+                  <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logic theOne = <span class="hljs-keyword">null</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Logic <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (theOne == <span class="hljs-keyword">null</span>) {<br></span><span>            theOne = <span class="hljs-keyword">new</span> Logic();<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> theOne;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                  <p>Notes:</p>
+                  <ul>
+                    <li>The constructor is <code v-pre>private</code>, which prevents instantiation from outside the class.</li>
+                    <li>The single instance of the singleton class is maintained by a <code v-pre>private</code> class-level variable.</li>
+                    <li>Access to this object is provided by a <code v-pre>public</code> class-level operation <code v-pre>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single instance of the class.</li>
+                  </ul>
+                  <p>If <code v-pre>Logic</code> was not a Singleton class, an object is created like this:</p>
+                  <pre><code class="hljs java" v-pre><span>Logic m = <span class="hljs-keyword">new</span> Logic();<br></span></code></pre>
+                  <p>But now, the <code v-pre>Logic</code> object needs to be accessed like this:</p>
+                  <pre><code class="hljs java" v-pre><span>Logic m = Logic.getInstance();<br></span></code></pre>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded id="evaluation"><template slot="_header">
+                <h4 id="evaluation">Evaluation<span id="evaluation" class="anchor"></span><a class="fa fa-anchor" href="#evaluation" onclick="event.stopPropagation()"></a></h4>
+              </template>
+              <div class="indented">
+                <span class="badge badge-light">
+                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can decide when to apply Singleton design pattern</span></span></span></span>
+                <p></p>
+                <div>
+                  <p><strong>Pros:</strong></p>
+                  <ul>
+                    <li>easy to apply</li>
+                    <li>effective in achieving its goal with minimal extra work</li>
+                    <li>provides an easy way to access the singleton object from anywhere in the code base</li>
+                  </ul>
+                  <p><strong>Cons:</strong></p>
+                  <ul>
+                    <li>The singleton object acts like a global variable that increases coupling across the code base.</li>
+                    <li>In testing, it is difficult to replace Singleton objects with stubs (static methods cannot be overridden)</li>
+                    <li>In testing, singleton objects carry data from one test to another even when you want each test to be independent of the others.</li>
+                  </ul>
+                  <p>Given there are some significant cons, it is recommended that you apply the Singleton pattern when, in addition to requiring only one instance of a class, there is a risk of creating multiple objects by mistake, and creating such multiple objects has real negative consequences.</p>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+          </panel>
+          <panel type="seamless" expanded id="facade-pattern">
+            <span slot="header" class="card-title">
+              <div>
+                <h2 id="facade-pattern"><span>Facade pattern</span><span id="facade-pattern" class="anchor"></span><a class="fa fa-anchor" href="#facade-pattern" onclick="event.stopPropagation()"></a></h2>
+              </div>
+            </span>
+            <panel type="seamless" expanded id="what-3"><template slot="_header">
+                <h4 id="what-3">What<span id="what-3" class="anchor"></span><a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4>
+              </template>
+              <div class="indented">
+                <span class="badge badge-light">
+                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Facade design pattern</span></span></span></span>
+                <p></p>
+                <div>
+                  <p><strong>Context</strong></p>
+                  <p>Components need to access functionality deep inside other components.</p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>UI</code> component of a <code v-pre>Library</code> system might want to access functionality of the <code v-pre>Book</code> class contained inside the <code v-pre>Logic</code> component.</p>
+                    <img src="/website/book/designPatterns/facade/what/images/textBook.png" height="120">
+                    <p></p>
+                  </box>
+                  <p><strong>Problem</strong></p>
+                  <p>Access to the component should be allowed without exposing its internal details. <span class="dimmed">e.g. the <code v-pre>UI</code> component should access the functionality of the <code v-pre>Logic</code> component without knowing that it contained a <code v-pre>Book</code> class within it.</span></p>
+                  <p><strong>Solution</strong></p>
+                  <p>Include a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">a French word that means 'front of a building'</span>Façade</span> class that sits between the component internals and users of the component such that all access to the component happens through the Facade class.</p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following class diagram applies the Façade pattern to the <code v-pre>Library System</code> example. The <code v-pre>LibraryLogic</code> class is the Facade class.</p>
+                    <img src="/website/book/designPatterns/facade/what/images/textLibraryBook.png" height="120">
+                    <p></p>
+                  </box>
+                </div>
+                <div>
+                  <div>
+                    <panel expandable><template slot="_header">
+                        <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                      </template>
+                      <div>
+                        <panel><template slot="_header">
+                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this Facade?</p>
+                          </template>
+                          <question>
+                            <p>Does the design below likely to use the Facade pattern?</p>
+                            <img src="/website/book/designPatterns/facade/what/images/textStorage.png" height="150">
+                            <p></p>
+                            <ul radio-group="cdd35" class="radio-list">
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="cdd35" type="radio"> True</label></li>
+                              <li class="radio-list-item"><label><input class="radio-list-input" name="cdd35" type="radio"> False</label></li>
+                            </ul>
+                            <div slot="answer">
+                              <p>True.</p>
+                              <p>Facade is clearly visible (Storage is the &lt;<facade>&gt; class).</facade>
+                              </p>
+                              <p></p>
+                            </div>
+                          </question>
+                        </panel>
+                        <p></p>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+            </panel>
+          </panel>
+        </div>
+      </div>
+
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#software-design-patterns">Software design patterns&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#introduction">Introduction&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#what">What&#x200E;</a>
+                <a class="nav-link py-1" href="#format">Format&#x200E;</a>
+              </nav>
+              <a class="nav-link py-1" href="#singleton-pattern">Singleton pattern&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#what-2">What&#x200E;</a>
+                <a class="nav-link py-1" href="#implementation">Implementation&#x200E;</a>
+                <a class="nav-link py-1" href="#evaluation">Evaluation&#x200E;</a>
+              </nav>
+              <a class="nav-link py-1" href="#facade-pattern">Facade pattern&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#what-3">What&#x200E;</a>
+              </nav>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+    </footer>
+  </div>
+</body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
+
+</html>

@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Admin: tP week 6: Conceptualize the product</title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+  <link rel="stylesheet" href="../markbind/css/site-nav.css">
+  <link rel="stylesheet" href="../markbind/css/page-nav.css">
+  <link rel="stylesheet" href="/website/css/main.css">
+  <link rel="stylesheet" href="/website/css/admin.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header fixed>
+      <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+      <navbar placement="top" type="dark" class="temp-navbar">
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
+        </dropdown>
+        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+        <div class="nav-link temp-dropdown-placeholder">**Links**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
+          <li><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+
+          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+          <li><a href="/website/admin/forum-activities-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+          <li><a href="/website/admin/www.comp.nus.edu.sg/~cs2103" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+          <hr>
+          <span><strong> Individual Project (iP):</strong></span>
+          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+          <hr>
+          <span><strong> Team Project (tP):</strong></span>
+          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+
+          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
+        </dropdown>
+        <li slot="right" class="nav-link">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">TIC4001 Software Engineering Practicum I</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleExpectations.html">Module Expectations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Module Structure
+                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/weeklySchedule.html"><small>Weekly Schedule</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures/Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/instructors.html">Instructors</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/textbooks.html">Textbooks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/programmingLanguages.html">Programming Language</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/standardsAndConventions.html">Standards/Conventions</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Individual Project (iP)
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-overview.html"><small>iP (Individual Project): Overview</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w2.html"><small>iP: Week 2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w3.html"><small>iP: Week 3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w4.html"><small>iP: Week 4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w5.html"><small>iP: Week 5</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w6.html"><small>iP: Week 6</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w8.html"><small>iP: Week 8</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-grading.html"><small>iP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Team Project (tP)
+                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-expectations.html"><small>tP (team project): Expectations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-timeline.html"><small>tP: Timeline</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-constraints.html"><small>tP: Constraints</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-teams.html"><small>tP: Forming Teams</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w3.html"><small>tP week 3: Kickoff</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w4.html"><small>tP week 4: Set direction</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w5.html"><small>tP week 5: Gather requirements</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w6.html" class="current"><small>tP week 6: Conceptualize the product</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w7.html"><small>tP week 7: Get ready for iterations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v2.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v2.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v2.1</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v2.1</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-deliverables.html"><small>tP: Deliverables</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-pe.html"><small>tP: Practical Exam</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-grading.html"><small>tP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-supervision.html"><small>tP: Supervision</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/peerEvaluations.html">Peer Evaluations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/gradeBreakdown.html">Grade Breakdown</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Appendices
+                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixA-principles.html"><small>Apdx A: Module Principles</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixB-policies.html"><small>Apdx B: Module Policies</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixC-faq.html"><small>Apdx C: FAQ</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixD-help.html"><small>Apdx D: Getting Help</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="content-wrapper">
+        <div class="website-content">
+          <p><span class="float-left algolia-no-index">
+              <b-btn variant="light" href="/website/admin/tp-w5.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> tP week 5: Gather requirements</span></b-btn>
+            </span><span class="float-right algolia-no-index">
+              <b-btn variant="light" href="/website/admin/tp-w7.html"><span>tP week 7: Get ready for iterations <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn>
+            </span></p>
+          <br>
+          <p>
+          <div>
+            <h1 id="tp-week-6-conceptualize-the-product">tP week 6: Conceptualize the product <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="tp-week-6-conceptualize-the-product" class="anchor"></span><a class="fa fa-anchor" href="#tp-week-6-conceptualize-the-product" onclick="event.stopPropagation()"></a></h1>
+          </div>
+          </p>
+          <div id="main">
+            <div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
+              <ol>
+                <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Choose user stories for v1.0</span> <span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during the lecture</span></span></li>
+                <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Conceptualize v1.0</span></li>
+                <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Draft the UG</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span></li>
+                <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Refine the product design</span></li>
+              </ol>
+            </div>
+            <div id="body">
+              <div></div>
+              <p></p>
+              <h4 id="1-choose-user-stories-for-v1-0-during-the-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Choose user stories for v1.0</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during the lecture</span></span><span id="1-choose-user-stories-for-v1-0-during-the-lecture" class="anchor"></span><a class="fa fa-anchor" href="#1-choose-user-stories-for-v1-0-during-the-lecture" onclick="event.stopPropagation()"></a></h4>
+              <div>
+                <p><strong>The goal of this activity is to come up with the <em>smallest possible product that is still usable</em></strong> so that it can be implemented as v1.0. We try to make it small because you will have only two weeks to implement v1.0 and coding as a team is a lot harder than writing code alone.</p>
+                <ul>
+                  <li>If the product <em>can</em> be of some use without a given user story, that user story should be left out of v1.0, even if the omission makes the product hard to use, as long as the product is not <em>impossible</em> to use <span class="dimmed">e.g., in most cases a product can be used without an 'edit item' feature because the user can always delete an item and add a new item instead of editing an existing an item</span>.</li>
+                  <li>Don't worry about v2.0. You can design v2.0 after v1.0 done.</li>
+                  <li>Don't worry about v1.0 being 'too small'. You can always add more features to v1.0 if you finish it ahead of schedule.</li>
+                  <li>If possible, narrow the scope of v1.0 further e.g., narrower target user, a smaller value proposition.</li>
+                </ul>
+                <p>Suggested workflow:</p>
+                <ul>
+                  <li><strong>First stage</strong> [10 minutes]:
+                    <ul>
+                      <li>Divide the user stories among team members.</li>
+                      <li>Each member will go through their user stories to discard (e.g., cross out, or move to a different location, but not delete) which are <em>definitely not needed for v1.0</em>.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Second stage</strong> [10 minutes]:
+                    <ul>
+                      <li>All members discuss the remaining user stories (i.e., the ones not discarded in the first stage), and try to trim the list further.</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <p></p>
+              <h4 id="2-conceptualize-v1-0"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Conceptualize v1.0</span><span id="2-conceptualize-v1-0" class="anchor"></span><a class="fa fa-anchor" href="#2-conceptualize-v1-0" onclick="event.stopPropagation()"></a></h4>
+              <div>
+                <ul>
+                  <li>Based on your user story selected previously, conceptualize the product in terms of how it will look like at v1.0. Suggestion: this can be in the form of a <span trigger="click" for="modal:v10-featureLists" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v10-featureLists'].show()" class="trigger-click">feature list</span>.</li>
+                </ul>
+                <b-modal id="modal:v10-featureLists" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-featureLists"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                    <div>
+                    <div></div>
+                    <p></p>
+                    <p><span class="dimmed"><strong><span>Requirements → Specifying Requirements → Feature Lists →
+                          </span></strong></span></p>
+                    <div id="title-and-body">
+                      <div>
+                        <h4 id="what"><span>What</span><span id="what" class="anchor"></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                      <div id="main">
+                        <div>
+                          <box type="definition">
+                            <div>
+                              <p><strong>Feature list</strong>: A list of features of a product <em>grouped according to some criteria</em> such as aspect, priority, order of delivery, etc.</p>
+                            </div>
+                          </box>
+                          <box>
+                            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A sample feature list from a simple Minesweeper game <span class="dimmed">(only a brief description has been provided to save space)</span>:</p>
+                            <ol>
+                              <li>Basic play – Single player play.</li>
+                              <li>Difficulty levels
+                                <ul>
+                                  <li>Medium-levels</li>
+                                  <li>Advanced levels</li>
+                                </ul>
+                              </li>
+                              <li>Versus play – Two players can play against each other.</li>
+                              <li>Timer – Additional fixed time restriction on the player.</li>
+                              <li>...</li>
+                            </ol>
+                          </box>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                  </div>
+                </b-modal>
+              </div>
+              <p></p>
+              <h4 id="3-draft-the-ug-before-next-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Draft the UG</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span><span id="3-draft-the-ug-before-next-lecture" class="anchor"></span><a class="fa fa-anchor" href="#3-draft-the-ug-before-next-lecture" onclick="event.stopPropagation()"></a></h4>
+              <div>
+                <ul>
+                  <li>Draft a user guide in a convenient medium (e.g., a GoogleDoc) to describe what the product would be like when it is at v1.0.
+                    <ul>
+                      <li>We recommend that you follow the <a href="https://nus-tic4001-ay2021s1.github.io/tp/UserGuide.html">AB3 User Guide</a> in terms of structure and format.</li>
+                      <li>As this is a very rough draft and the final version will be in a different format altogether <span class="dimmed">(i.e., in markdown format)</span>, don't waste time in formatting, copy editing etc. It is fine as long as the tutor can get a rough idea of the features from this draft. You can also do just the 'Features' section and omit the other parts.</li>
+                      <li>Do try to come up with concrete command syntax for the CLI commands that you will deliver at v1.0.</li>
+                      <li>Include only features that will be delivered in v1.0.</li>
+                      <li>Consider including some UI mock-ups too <span class="dimmed">(they can be hand-drawn or created using a tool such as PowerPoint, PlantUML or <a href="https://balsamiq.com/">Balsamiq</a>)</span>.</li>
+                      <li>
+                        <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Submission</strong>: Save the draft UG as a PDF file, name it <code v-pre>{team-id}.pdf</code> e.g., <code v-pre>TIC4001T-W09-1.pdf</code>, and upload to LumiNUS.<br><br>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <div id="divideDocs" class="indented">
+                  <box>
+                    <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Recommended: <strong>Divide documentation work (in the User Guide and the Developer Guide) among team members equally; preferably based on enhancements/features each person would be adding</strong> <span class="dimmed">e.g., If you are the person planing to add a feature X, you should be the person to describe the feature X in the User Guide and in the Developer Guide</span>.</p>
+                    <p><span class="dimmed">Reason: In the final project evaluation your documentation skills will be graded based on sections of the User/Developer Guide you have written.</span></p>
+                    <panel type class="embedding" minimized><template slot="_header">
+                        <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Grading → <mark>Documentation</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                      </template>
+                      <div>
+                        <h4 id="4-project-grading-documentation-10-marks">
+                          <div class="bg-warning p-1">4. Project Grading: Documentation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><span id="4-project-grading-documentation-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#4-project-grading-documentation-10-marks" onclick="event.stopPropagation()"></a>
+                        </h4>
+                        <p><strong>Evaluates:</strong> your contribution to project documents</p>
+                        <p><strong>Method:</strong> Evaluated in two steps.</p>
+                        <ul>
+                          <li>Step 1: Evaluate the whole UG and DG. This is evaluated by peers who tested your product, and tutors.</li>
+                        </ul>
+                        <div class="indented-level2">
+                          <panel type class="embedding" minimized><template slot="_header">
+                              <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for User Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                            </template>
+                            <div>
+                              <p>
+                                <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Compared to AddressBoook-Level3 (AB3), the overall quality of the UG you evaluated is,</strong><br>
+                                Evaluate based on fit-for-purpose, from the perspective of a target user.
+                                For reference, the AB3 UG is <a href="https://se-education.org/addressbook-level3/UserGuide.html">here</a>.<br>
+                              </p>
+                              <ul radio-group="7acba" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio"> Significantly lower</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio"> Slightly lower</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio"> Similar</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio"> Higher</label></li>
+                              </ul>
+                            </div>
+                          </panel>
+                        </div>
+                        <p></p>
+                        <div class="indented-level2">
+                          <panel type class="embedding" minimized><template slot="_header">
+                              <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Developer Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                            </template>
+                            <div>
+                              <p>
+                                <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Compared to AB3, the overall quality of the DG you evaluated is,</strong><br>
+                                Evaluate based on fit-for-purpose from the perspective of a new team member trying to understand the product's internal design by reading the DG.
+                                For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level3/DeveloperGuide.html">here</a>.<br>
+                              </p>
+                              <ul radio-group="068c5" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="068c5" type="radio"> Significantly lower</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="068c5" type="radio"> Slightly lower</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="068c5" type="radio"> Similar</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="068c5" type="radio"> Higher</label></li>
+                              </ul>
+                            </div>
+                          </panel>
+                        </div>
+                        <p></p>
+                        <ul>
+                          <li>Step 2: Evaluate how much of that effort can be attributed to you. This is evaluated by team members, and tutors.</li>
+                        </ul>
+                        <div class="indented-level2">
+                          <panel type class="embedding" minimized><template slot="_header">
+                              <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the UG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                            </template>
+                            <div>
+                              <p>
+                                <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the User Guide is,</strong>
+                              </p>
+                              <span id="equalShareScale">
+                                <panel type="seamless"><template slot="_header">
+                                    <p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p>
+                                  </template>
+                                  <ul radio-group="186a5" class="radio-list">
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> ...</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li>
+                                  </ul>
+                                </panel>
+                              </span>
+                            </div>
+                          </panel>
+                        </div>
+                        <p></p>
+                        <div class="indented-level2">
+                          <panel type class="embedding" minimized><template slot="_header">
+                              <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the DG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                            </template>
+                            <div>
+                              <p>
+                                <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the Developer Guide is,</strong>
+                              </p>
+                              <div>
+                                <panel type="seamless"><template slot="_header">
+                                    <p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p>
+                                  </template>
+                                  <ul radio-group="2ef43" class="radio-list">
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> ...</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li>
+                                  </ul>
+                                </panel>
+                              </div>
+                            </div>
+                          </panel>
+                        </div>
+                        <p></p>
+                        <ul>
+                          <li>In addition, UG and DG bugs you received in the PE will be considered for grading this component.</li>
+                        </ul>
+                        <div class="indented-level2">
+                          <box>
+                            <div>
+                              <p><strong>These are considered UG bugs (if they hinder the reader):</strong><br></p>
+                              <div>
+                                <span id="visualsBugs">
+                                  <p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
+                                  <ul>
+                                    <li>Not enough visuals e.g., screenshots/diagrams</li>
+                                    <li>The visuals are not well integrated to the explanation</li>
+                                    <li>The visuals are unnecessarily repetitive e.g., same visual repeated with minor changes
+                                    </li>
+                                  </ul>
+                                </span>
+                                <span id="examplesBugs">
+
+                                  <p><span aria-hidden="true" class="fas fa-bug"></span> Use of examples:</p>
+                                  <ul>
+                                    <li>Not enough or too many examples e.g., sample inputs/outputs
+                                    </li>
+                                  </ul>
+                                </span>
+                                <span id="explanationBugs">
+
+                                  <p><span aria-hidden="true" class="fas fa-bug"></span> Explanations:</p>
+                                  <ul>
+                                    <li>The explanation is too brief or unnecessarily long.</li>
+                                    <li>The information is hard to understand for the target audience. e.g., using terms the reader might not know
+                                    </li>
+                                  </ul>
+                                </span>
+                                <span id="neatnessBugs">
+
+                                  <p><span aria-hidden="true" class="fas fa-bug"></span> Neatness/correctness:</p>
+                                  <ul>
+                                    <li>looks messy</li>
+                                    <li>not well-formatted</li>
+                                    <li>broken links, other inaccuracies, typos, etc.
+                                    </li>
+                                  </ul>
+                                </span></div>
+                            </div>
+                          </box>
+                          <box>
+                            <div>
+                              <p><strong>These are considered DG bugs (if they hinder the reader):</strong></p>
+                              <panel type="seamless"><template slot="_header">
+                                  <p>Those given as possible UG bugs ...</p>
+                                </template>
+                                <div>
+                                  <p><strong>These are considered UG bugs (if they hinder the reader):</strong><br></p>
+                                  <div>
+                                    <span id="visualsBugs">
+                                      <p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
+                                      <ul>
+                                        <li>Not enough visuals e.g., screenshots/diagrams</li>
+                                        <li>The visuals are not well integrated to the explanation</li>
+                                        <li>The visuals are unnecessarily repetitive e.g., same visual repeated with minor changes
+                                        </li>
+                                      </ul>
+                                    </span>
+                                    <span id="examplesBugs">
+
+                                      <p><span aria-hidden="true" class="fas fa-bug"></span> Use of examples:</p>
+                                      <ul>
+                                        <li>Not enough or too many examples e.g., sample inputs/outputs
+                                        </li>
+                                      </ul>
+                                    </span>
+                                    <span id="explanationBugs">
+
+                                      <p><span aria-hidden="true" class="fas fa-bug"></span> Explanations:</p>
+                                      <ul>
+                                        <li>The explanation is too brief or unnecessarily long.</li>
+                                        <li>The information is hard to understand for the target audience. e.g., using terms the reader might not know
+                                        </li>
+                                      </ul>
+                                    </span>
+                                    <span id="neatnessBugs">
+
+                                      <p><span aria-hidden="true" class="fas fa-bug"></span> Neatness/correctness:</p>
+                                      <ul>
+                                        <li>looks messy</li>
+                                        <li>not well-formatted</li>
+                                        <li>broken links, other inaccuracies, typos, etc.
+                                        </li>
+                                      </ul>
+                                    </span></div>
+                                </div>
+                              </panel>
+
+                              <span id="umlDiagramBugs">
+
+                                <p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
+                                <ul>
+                                  <li>Notation incorrect or not compliant with the notation covered in the module.</li>
+                                  <li>Some other type of diagram used when a UML diagram would have worked just as well.</li>
+                                  <li>The diagram used is not suitable for the purpose it is used.</li>
+                                  <li>The diagram is too complicated.
+                                  </li>
+                                </ul>
+                              </span>
+                              <span id="codeSnippetBugs">
+
+                                <p><span aria-hidden="true" class="fas fa-bug"></span> Code snippets:</p>
+                                <ul>
+                                  <li>Excessive use of code e.g., a large chunk of code is cited when a smaller extract of would have sufficed.
+                                  </li>
+                                </ul>
+                              </span>
+                              <span id="userStoryBugs">
+
+                                <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in User Stories. Examples:</p>
+                                <ul>
+                                  <li>Incorrect format</li>
+                                  <li>All three parts are not present</li>
+                                  <li>Benefit does not match the function</li>
+                                  <li>Important user stories missing
+                                  </li>
+                                </ul>
+                              </span>
+
+                              <span id="nfrBugs">
+
+                                <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in NFRs. Examples:</p>
+                                <ul>
+                                  <li>Not really a <em>Non-Functional</em> Requirement</li>
+                                  <li>Not well-defined (i.e., hard to decide when it has been met)</li>
+                                  <li>Not reasonably achievable</li>
+                                  <li>Highly relevant NFRs missing
+                                  </li>
+                                </ul>
+                              </span>
+                              <span id="glossaryBugs">
+
+                                <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in Glossary. Examples:</p>
+                                <ul>
+                                  <li>Unnecessary terms included</li>
+                                  <li>Important terms missing
+                                  </li>
+                                </ul>
+                              </span>
+                            </div>
+                          </box>
+                        </div>
+                      </div>
+                    </panel>
+                    <p></p>
+                  </box>
+                  <p></p>
+                </div>
+              </div>
+              <p></p>
+              <h4 id="4-refine-the-product-design"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Refine the product design</span><span id="4-refine-the-product-design" class="anchor"></span><a class="fa fa-anchor" href="#4-refine-the-product-design" onclick="event.stopPropagation()"></a></h4>
+              <div>
+                <ul>
+                  <li>Review the UG to ensure the features written by each member fit together to form a cohesive product. Note that cohesiveness of the product can affect the grading of the <em>product design</em> aspect.</li>
+                </ul>
+                <div class="indented-level2">
+                  <panel type class="embedding" minimized><template slot="_header">
+                      <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Grading → <mark>Product Design</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                    </template>
+                    <div>
+                      <h4 id="1-project-grading-product-design-5-marks">
+                        <div class="bg-warning p-1">1. Project Grading: Product Design <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-users"></span></span>/<span><span aria-hidden="true" class="fas fa-user"></span></span> 5 marks]</span></div><span id="1-project-grading-product-design-5-marks" class="anchor"></span><a class="fa fa-anchor" href="#1-project-grading-product-design-5-marks" onclick="event.stopPropagation()"></a>
+                      </h4>
+                      <p><strong>Evaluates:</strong> how well your features fit together to form a cohesive product (not how many features or how big the features are) and how well does it match the target user</p>
+                      <p><strong>Evaluated by:</strong></p>
+                      <ul>
+                        <li>tutors (based on product demo and user guide)</li>
+                        <li>peers from other teams (based on peer testing and user guide)</li>
+                      </ul>
+                      <panel type class="embedding" minimized><template slot="_header">
+                          <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                        </template>
+                        <div>
+                          <p>
+                            <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Quality of the product design,</strong><br>
+                            Evaluate based on the User Guide and the actual product behavior.
+                          </p>
+                          <div class="table-responsive">
+                            <table class="markbind-table table table-bordered table-striped">
+                              <thead>
+                                <tr>
+                                  <th>Criterion</th>
+                                  <th>Unable to judge</th>
+                                  <th>Low</th>
+                                  <th>Medium</th>
+                                  <th>High</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td><code v-pre>target user</code></td>
+                                  <td>Not specified</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Clearly specified and narrowed down appropriately</td>
+                                </tr>
+                                <tr>
+                                  <td><code v-pre>value proposition</code></td>
+                                  <td>Not specified</td>
+                                  <td>The value to target user is low. App is not worth using</td>
+                                  <td>Some small group of target users might find the app worth using</td>
+                                  <td>Most of the target users are likely to find the app worth using</td>
+                                </tr>
+                                <tr>
+                                  <td><code v-pre>optimized for target user</code></td>
+                                  <td></td>
+                                  <td>Not enough focus for CLI users</td>
+                                  <td>Mostly CLI-based, but cumbersome to use most of the time</td>
+                                  <td>Feels like a fast typist can be more productive with the app, compared to an equivalent GUI app without a CLI</td>
+                                </tr>
+                                <tr>
+                                  <td><code v-pre>feature-fit</code></td>
+                                  <td></td>
+                                  <td>Many of the features don't fit with others</td>
+                                  <td>Most features fit together but a few may be possible misfits</td>
+                                  <td>All features fit together to for a cohesive whole</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </panel>
+                      <p>In addition, feature flaws reported in the PE will be considered when grading this aspect.</p>
+                      <box tags="m--cs2113 m--tic4001" type="tip">
+                        <p>Note that 'product design' or 'functionality' are not critical learning outcomes of the tP. Therefore, <mark>the bar you need to reach to get full 5 marks will be quite low</mark>. For example, the <code v-pre>Medium</code> level in the rubric given in the panel above should be enough to achieve full marks. Similarly, only cases of <em>excessive</em> 'feature flaw' bugs will affect the score.
+                        </p>
+                      </box>
+                      <p></p>
+                      <box>
+                        <div>
+                          <p>These are considered <em>feature flaws</em>:<br>
+                            <span aria-hidden="true" class="fas fa-bug"></span> The feature does not solve the stated problem of the intended user i.e., the feature is 'incomplete'<br>
+                            <span aria-hidden="true" class="fas fa-bug"></span> Hard-to-test features<br>
+                            <span aria-hidden="true" class="fas fa-bug"></span> Features that don't fit well with the product<br>
+                            <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p>
+                        </div>
+                      </box>
+                    </div>
+                  </panel>
+                </div>
+                <p></p>
+              </div>
+              <p></p>
+            </div>
+          </div>
+          <br>
+          <p><span class="float-left algolia-no-index">
+              <b-btn variant="light" href="/website/admin/tp-w5.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> tP week 5: Gather requirements</span></b-btn>
+            </span><span class="float-right algolia-no-index">
+              <b-btn variant="light" href="/website/admin/tp-w7.html"><span>tP week 7: Get ready for iterations <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn>
+            </span></p>
+        </div>
+      </div>
+
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#tp-week-6-conceptualize-the-product">tP week 6: Conceptualize the product &#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#1-choose-user-stories-for-v1-0-during-the-lecture">1 Choose user stories for v1.0 during the lecture&#x200E;</a>
+              <a class="nav-link py-1" href="#2-conceptualize-v1-0">2 Conceptualize v1.0&#x200E;</a>
+              <a class="nav-link py-1" href="#3-draft-the-ug-before-next-lecture">3 Draft the UG before next lecture&#x200E;</a>
+              <a class="nav-link py-1" href="#4-refine-the-product-design">4 Refine the product design&#x200E;</a>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+    </footer>
+  </div>
+</body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../markbind/js/setup.js"></script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+
+</html>

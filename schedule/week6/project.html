@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Week 6 - Project</title>
+  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+  <link rel="stylesheet" href="../../markbind/css/page-nav.css">
+  <link rel="stylesheet" href="/website/book/css/textbook.css">
+  <link rel="stylesheet" href="/website/css/main.css">
+  <link rel="stylesheet" href="/website/css/schedule.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header fixed>
+      <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+      <navbar placement="top" type="dark" class="temp-navbar">
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
+        </dropdown>
+        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+        <div class="nav-link temp-dropdown-placeholder">**Links**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
+          <li><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+
+          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+          <li><a href="/website/admin/forum-activities-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+          <li><a href="/website/schedule/week6/www.comp.nus.edu.sg/~cs2103" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+          <hr>
+          <span><strong> Individual Project (iP):</strong></span>
+          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+          <hr>
+          <span><strong> Team Project (tP):</strong></span>
+          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+
+          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
+        </dropdown>
+        <li slot="right" class="nav-link">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+
+      <div id="content-wrapper">
+        <nav>
+          <ul class="pagination mt-2">
+            <li class="page-item"><a class="page-link" href="/website/schedule/week5"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+            <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week6/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week6/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week6/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week6/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+            <li class="page-item active"><a class="page-link" href="/website/schedule/week6/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+            <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week7"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
+          </ul>
+        </nav>
+        <p></p>
+        <h1 id="week-6-fri-sep-11th-project">Week 6 <small><small><span class="dimmed">[Fri, Sep 11th]</span> - Project</small></small><span id="week-6-fri-sep-11th-project" class="anchor"></span><a class="fa fa-anchor" href="#week-6-fri-sep-11th-project" onclick="event.stopPropagation()"></a></h1>
+        <div id="summary" class="lead border-left ml-3 mb-3 pl-2" style="color: purple;">
+          <p><strong>iP:</strong></p>
+          <div>
+            <ol>
+              <li>Add Increment: <code v-pre>A-MoreOOP</code></li>
+              <li>Add Increments as PRs: <code v-pre>Level-8</code>, <code v-pre>Level-9</code>, <code v-pre>A-JUnit</code></li>
+            </ol>
+          </div>
+          <p><strong>tP:</strong></p>
+          <div>
+            <ol>
+              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Choose user stories for v1.0</span> <span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during the lecture</span></span></li>
+              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Conceptualize v1.0</span></li>
+              <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Draft the UG</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span></li>
+              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Refine the product design</span></li>
+            </ol>
+          </div>
+        </div>
+        <h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="ip">iP<span id="ip" class="anchor"></span><a class="fa fa-anchor" href="#ip" onclick="event.stopPropagation()"></a></h2>
+        <div>
+          <div></div>
+          <p></p>
+          <h4 id="1-add-increment-a-moreoop"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Add Increment: <code v-pre>A-MoreOOP</code><span id="1-add-increment-a-moreoop" class="anchor"></span><a class="fa fa-anchor" href="#1-add-increment-a-moreoop" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <ul>
+              <li>As in the previous week, commit, tag, and push, as you do the following increments in the <code v-pre>master</code> branch (no need to use separate branches).</li>
+              <li>From this point onward, commit code at important points. <mark>Minimally, commit after completing each increment</mark>.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-MoreOOP</code>: Use More OOP</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div></div>
+                  <div>
+                    <div>
+                      <div></div>
+                      <h3 id="a-moreoop"><span class="badge badge-pill badge-primary">A-MoreOOP</span><span id="a-moreoop" class="anchor"></span><a class="fa fa-anchor" href="#a-moreoop" onclick="event.stopPropagation()"></a></h3>
+                      <p>     <big>↳</big> <strong>Make the code more OOP</strong></p>
+                    </div>
+                    <p>Refactor the code to extract out closely related code as classes.</p>
+                    <ul>
+                      <li><strong>Minimal</strong>: Extract the following classes:
+                        <ul>
+                          <li><code v-pre>Ui</code>: deals with interactions with the user</li>
+                          <li><code v-pre>Storage</code>: deals with loading tasks from the file and saving tasks in the file</li>
+                          <li><code v-pre>Parser</code>: deals with making sense of the user command</li>
+                          <li><code v-pre>TaskList</code>: contains the task list <span class="dimmed">e.g., it has operations to add/delete tasks in the list</span></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="indented-level2">
+                      <p>For example, the code of the main class could look like this:</p>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Duke</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> Storage storage;<br></span><span>    <span class="hljs-keyword">private</span> TaskList tasks;<br></span><span>    <span class="hljs-keyword">private</span> Ui ui;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Duke</span><span class="hljs-params">(String filePath)</span> </span>{<br></span><span>        ui = <span class="hljs-keyword">new</span> Ui();<br></span><span>        storage = <span class="hljs-keyword">new</span> Storage(filePath);<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            tasks = <span class="hljs-keyword">new</span> TaskList(storage.load());<br></span><span>        } <span class="hljs-keyword">catch</span> (DukeException e) {<br></span><span>            ui.showLoadingError();<br></span><span>            tasks = <span class="hljs-keyword">new</span> TaskList();<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">new</span> Duke(<span class="hljs-string">"data/tasks.txt"</span>).run();<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                    </div>
+                    <ul>
+                      <li><strong>Stretch Goal</strong>: Consider extracting more classes. e.g., <code v-pre>*Command</code> classes (i.e., <code v-pre>AddCommand</code>, <code v-pre>DeleteCommand</code>, <code v-pre>ExitCommand</code> etc.) that inherits from an abstract <code v-pre>Command</code> class, so that you can write the main logic of the App as follows:
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{<br></span><span>    ui.showWelcome();<br></span><span>    <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;<br></span><span>    <span class="hljs-keyword">while</span> (!isExit) {<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            String fullCommand = ui.readCommand();<br></span><span>            ui.showLine(); <span class="hljs-comment">// show the divider line ("_______")</span><br></span><span>            Command c = Parser.parse(fullCommand);<br></span><span>            c.execute(tasks, ui, storage);<br></span><span>            isExit = c.isExit();<br></span><span>        } <span class="hljs-keyword">catch</span> (DukeException e) {<br></span><span>            ui.showError(e.getMessage());<br></span><span>        } <span class="hljs-keyword">finally</span> {<br></span><span>            ui.showLine();<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can get some inspiration from how the code of the <a href="https://github.com/se-edu/addressbook-level2">addressbook-level2</a> is organized.</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <p></p>
+          <h4 id="2-add-increments-as-prs-level-8-level-9-a-junit"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Add Increments as PRs: <code v-pre>Level-8</code>, <code v-pre>Level-9</code>, <code v-pre>A-JUnit</code><span id="2-add-increments-as-prs-level-8-level-9-a-junit" class="anchor"></span><a class="fa fa-anchor" href="#2-add-increments-as-prs-level-8-level-9-a-junit" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <span tags="m--cs2113 m--tic4001" id="as-parallel-prs">
+              <ul>
+                <li>Note how to merge PRs:</li>
+              </ul>
+              <div class="indented-level2">
+                <panel type class="embedding" minimized><template slot="_header">
+                    <p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Merging PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                  </template>
+                  <div>
+                    <p>Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.</p>
+                    <p>Preparation: If you would like to try merging a PR yourself, you can create a dummy PR in the following manner.</p>
+                    <ol>
+                      <li>Fork any repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>).</li>
+                      <li>Clone in to your computer.</li>
+                      <li>Create a new branch e.g., (<code v-pre>feature1</code>) and add some commits to it.</li>
+                      <li>Push the new branch to the fork.</li>
+                      <li>Create a PR from that branch to the <code v-pre>master</code> branch in your fork. Yes, it is possible to create a PR within the same repo.</li>
+                    </ol>
+                    <p><strong>1. Locate the PR</strong> to be merged in your repo's GitHub page.</p>
+                    <p><strong>2. Click on the <span class="tab"><span aria-hidden="true" class="far fa-comments"></span> Conversation</span> tab</strong> and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
+                      <img src="/website/book/gitAndGithub/managePRs/images/mergePr.png" width="800"></p>
+                    <p><strong>3. If the PR is not merge-able in the current state</strong>, the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Merge pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                          <path d="M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z" /></svg></span> will not be green. Here are the possible reasons and remedies:</p>
+                    <ul>
+                      <li><strong>Problem: The PR code is out-of-date</strong>, indicated by the message <strong><span class="dimmed">This branch is out-of-date with the base branch</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated.
+                        <ul>
+                          <li>If the PR author has allowed you to update the PR and you have sufficient permissions, GitHub will allow you to update the PR simply by clicking the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Update branch</span> on the right side of the 'out-of-date' error message.
+                            If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Problem: There are merge conflicts</strong>, indicated by the message <strong><span class="dimmed">This branch has conflicts that must be resolved</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current <code v-pre>master</code> branch. Those <span trigger="click" for="modal:managePRs-mergeConflics" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:managePRs-mergeConflics'].show()" class="trigger-click">conflicts must be resolved</span> before the PR can be merged.
+                        <ul>
+                          <li>If the conflicts are simple, GitHub might allow you to resolve them using the Web interface.</li>
+                          <li>If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <b-modal id="modal:managePRs-mergeConflics" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePRs-mergeConflics"><template slot="modal-title">Tools → Git &amp; GitHub → Merge Conflicts</template>
+                      <div>
+                        <div></div>
+                        <p></p>
+                        <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                              </span></strong></span></p>
+                        <div id="title-and-body">
+                          <div>
+                            <h4 id="dealing-with-merge-conflicts"><span>Dealing with merge conflicts</span><span id="dealing-with-merge-conflicts" class="anchor"></span><a class="fa fa-anchor" href="#dealing-with-merge-conflicts" onclick="event.stopPropagation()"></a></h4>
+                          </div>
+                          <div id="main">
+                            <div>
+                              <p><strong>Merge conflicts happen when you try to combine two incompatible versions</strong> (e.g., merging a branch to another but each branch changed the same part of the code in a different way).</p>
+                              <p>Here are the steps to simulate a merge conflict and use it to learn how to resolve merge conflicts.</p>
+                              <p><strong>0. Create an empty repo or clone an existing repo</strong>, to be used for this activity.</p>
+                              <p><strong>1. Start a branch named <code v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+                              <p><strong>2. Switch back to <code v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+                              <img src="/website/book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
+                              <p></p>
+                              <p><strong>3. Try to merge the <code v-pre>fix1</code> branch onto the <code v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+                              <pre><code class="hljs" v-pre><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span class="highlighted">=======<br></span><span>green<br></span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span><span>white<br></span></code></pre>
+                              <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code v-pre>=======</code>.</p>
+                              <p>Highlighted below is the conflicting part that is coming from the <code v-pre>master</code> branch:</p>
+                              <pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span class="highlighted">black<br></span><span>=======<br></span><span>green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre>
+                              <p>This is the conflicting part that is coming from the <code v-pre>fix1</code> branch:</p>
+                              <pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span>=======<br></span><span class="highlighted">green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre>
+                              <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+                              <pre><code class="hljs" v-pre><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">black<br></span><span class="highlighted">green<br></span><span>red<br></span><span>white<br></span></code></pre>
+                              <p><strong>6. Stage the changes, and commit.</strong></p>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </b-modal>
+                    <p><strong>3. Merge the PR</strong> by clicking on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                          <path d="M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z" /></svg></span> button, followed by the <code v-pre>Confirm merge</code> button. You should see a <code v-pre>Pull request successfully merged and closed</code> message after the PR is merged.<br></p>
+                    <ul>
+                      <li>You can choose between three merging options by clicking on the down-arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                            <path d="M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z" /></svg></span> button. If you are new to Git and GitHub, the <code v-pre>Create merge commit</code> options are recommended.</li>
+                    </ul>
+                    <p><strong>Next, sync your local repos (and forks).</strong> Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to syn the fork with the upstream repo.</p>
+                  </div>
+                </panel>
+              </div>
+              <p></p>
+              <ul>
+                <li>Practice using parallel git branches <em>and</em> PRs, as explained below:</li>
+              </ul>
+              <ol>
+                <li>First, do each increment as a parallel branch (follow the branch naming convention you followed earlier <code v-pre>branch-Level-8</code> etc.), but do not merge any.</li>
+                <li>Then, push each branch to your fork, and create a PR within your fork (i.e., from the increment branch to the <code v-pre>master</code> branch).</li>
+                <li>Now, let's merge one of the PRs and update the remaining PRs accordingly, as given below:
+                  <ol>
+                    <li>Merge one of the PRs on GitHub e.g., Level-8. Remember to choose the <code v-pre>Create merge commit</code> option when merging.</li>
+                    <li>Pull the updated <code v-pre>master</code> branch from your fork to your Computer.</li>
+                    <li>Note how the remaining un-merged branches are no longer in sync with the latest <code v-pre>master</code>. To rectify, merge the <code v-pre>master</code> branch to each of them. Resolve merge conflicts, if any.</li>
+                    <li>Push the updated branches to your fork. The PRs will update automatically to reflect the updated branch.</li>
+                    <li>As before, tag the merge commit in the master branch and push the tag to your fork.</li>
+                  </ol>
+                </li>
+                <li>Merge the remaining PRs using a procedure similar to the above.
+                </li>
+              </ol>
+            </span></div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-8</code>: Dates and Times</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
+                  <div></div>
+                  <div>
+                    <p><span>
+                        <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-clock"></span></thumbnail>
+                      </span></p>
+                    <h3 id="level-8-dates-and-times">Level 8. Dates and Times<span id="level-8-dates-and-times" class="anchor"></span><a class="fa fa-anchor" href="#level-8-dates-and-times" onclick="event.stopPropagation()"></a></h3>
+                    <p>Teach Duke how to understand dates and times. For example, if the command is <code v-pre>deadline return book /by 2/12/2019 1800</code>, Duke should understand <code v-pre>2/12/2019 1800</code> as <em>2nd of December 2019, 6pm</em>, instead of treating it as just a String.</p>
+                    <ul>
+                      <li><strong>Minimal</strong>: Store deadline dates as a <code v-pre>java.time.LocalDate</code> in your task objects. Accept dates in a format such as <code v-pre>yyyy-mm-dd</code> format (e.g., <code v-pre>2019-10-15</code>) and print in a different format such as <code v-pre>MMM dd yyyy</code> e.g., (<code v-pre>Oct 15 2019</code>).</li>
+                      <li><strong>Stretch goal</strong>: Use dates and times in more meaningful ways. e.g., add a command to print deadlines/events occurring on a specific date.</li>
+                    </ul>
+                    <panel minimized><template slot="_header">
+                        <p>Using dates/times in Java</p>
+                      </template>
+                      <p>A code snippet using the <code v-pre>LocalDate</code> class:</p>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.time.LocalDate;<br></span><span><span class="hljs-keyword">import</span> java.time.format.DateTimeFormatter;<br></span><span><span class="hljs-keyword">import</span> java.time.temporal.ChronoUnit;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-comment">//create dates from strings</span><br></span><span>        LocalDate d1 = LocalDate.parse(<span class="hljs-string">"2019-12-01"</span>);<br></span><span>        LocalDate d2 = LocalDate.parse(<span class="hljs-string">"2019-12-02"</span>);<br></span><span>        LocalDate d3 = LocalDate.parse(<span class="hljs-string">"2019-12-02"</span>);<br></span><span>        <br></span><span>        <span class="hljs-comment">//compare dates</span><br></span><span>        System.out.println(d1.isBefore(d2)); <span class="hljs-comment">// -&gt; true</span><br></span><span>        System.out.println(d1.isAfter(d2)); <span class="hljs-comment">// -&gt; false</span><br></span><span>        System.out.println(d2.equals(d3)); <span class="hljs-comment">// -&gt; true</span><br></span><span>        <br></span><span>        <span class="hljs-comment">//work with dates</span><br></span><span>        System.out.println(d1.getDayOfWeek()); <span class="hljs-comment">// -&gt; SUNDAY</span><br></span><span>        System.out.println(d1.getMonth()); <span class="hljs-comment">// -&gt; DECEMBER</span><br></span><span>        System.out.println(d1.plus(<span class="hljs-number">1</span>, ChronoUnit.YEARS));  <span class="hljs-comment">// -&gt; 2020-12-01</span><br></span><span>        <br></span><span>        <span class="hljs-comment">// get today's date and print it in a specific format</span><br></span><span>        LocalDate d4 = LocalDate.now();<br></span><span>        System.out.println(d4); <span class="hljs-comment">// -&gt; 2019-10-15</span><br></span><span>        System.out.println(d4.format(DateTimeFormatter.ofPattern(<span class="hljs-string">"MMM d yyyy"</span>))); <span class="hljs-comment">// -&gt; Oct 15 2019</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      <ul>
+                        <li><a href="https://www.baeldung.com/java-8-date-time-intro">A tutorial from https://www.baeldung.com/</a></li>
+                      </ul>
+                    </panel>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-9</code>: Find</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div></div>
+                  <div>
+                    <p><span>
+                        <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-search"></span></thumbnail>
+                      </span></p>
+                    <h3 id="level-9-find">Level 9. Find<span id="level-9-find" class="anchor"></span><a class="fa fa-anchor" href="#level-9-find" onclick="event.stopPropagation()"></a></h3>
+                    <p>Give users a way to find a task by searching for a keyword.
+                      <br>
+                      <br></p>
+                    <p>Example:</p>
+                    <pre><code class="no-line-numbers hljs" v-pre><span>find book<br></span><span>    ____________________________________________________________<br></span><span>     Here are the matching tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✓] return book (by: June 6th)<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-JUnit</code>: Add JUnit Tests</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div></div>
+                  <div>
+                    <div>
+                      <div></div>
+                      <h3 id="a-junit"><span class="badge badge-pill badge-primary">A-JUnit</span><span id="a-junit" class="anchor"></span><a class="fa fa-anchor" href="#a-junit" onclick="event.stopPropagation()"></a></h3>
+                      <p>     <big>↳</big> <strong>Add JUnit tests</strong></p>
+                    </div>
+                    <p>Add JUnit tests to test the behavior of the code.</p>
+                    <p><strong>Requirements</strong>:</p>
+                    <ul>
+                      <li>Minimum: More than two test methods, preferably targeting more than one class (if you have multiple classes)</li>
+                      <li>Stretch goal: test methods to target all public methods of all classes</li>
+                    </ul>
+                    <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Refer to the <a href="https://se-education.org/guides/tutorials/junit.html"><em>JUnit tutorial</em> @se-edu/guides</a> to find how to use JUnit.</p>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <p></p>
+        </div>
+        <h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="tp-conceptualize-the-product">tP: Conceptualize the product<span id="tp-conceptualize-the-product" class="anchor"></span><a class="fa fa-anchor" href="#tp-conceptualize-the-product" onclick="event.stopPropagation()"></a></h2>
+        <div>
+          <div></div>
+          <p></p>
+          <h4 id="1-choose-user-stories-for-v1-0-during-the-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Choose user stories for v1.0</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during the lecture</span></span><span id="1-choose-user-stories-for-v1-0-during-the-lecture" class="anchor"></span><a class="fa fa-anchor" href="#1-choose-user-stories-for-v1-0-during-the-lecture" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <p><strong>The goal of this activity is to come up with the <em>smallest possible product that is still usable</em></strong> so that it can be implemented as v1.0. We try to make it small because you will have only two weeks to implement v1.0 and coding as a team is a lot harder than writing code alone.</p>
+            <ul>
+              <li>If the product <em>can</em> be of some use without a given user story, that user story should be left out of v1.0, even if the omission makes the product hard to use, as long as the product is not <em>impossible</em> to use <span class="dimmed">e.g., in most cases a product can be used without an 'edit item' feature because the user can always delete an item and add a new item instead of editing an existing an item</span>.</li>
+              <li>Don't worry about v2.0. You can design v2.0 after v1.0 done.</li>
+              <li>Don't worry about v1.0 being 'too small'. You can always add more features to v1.0 if you finish it ahead of schedule.</li>
+              <li>If possible, narrow the scope of v1.0 further e.g., narrower target user, a smaller value proposition.</li>
+            </ul>
+            <p>Suggested workflow:</p>
+            <ul>
+              <li><strong>First stage</strong> [10 minutes]:
+                <ul>
+                  <li>Divide the user stories among team members.</li>
+                  <li>Each member will go through their user stories to discard (e.g., cross out, or move to a different location, but not delete) which are <em>definitely not needed for v1.0</em>.</li>
+                </ul>
+              </li>
+              <li><strong>Second stage</strong> [10 minutes]:
+                <ul>
+                  <li>All members discuss the remaining user stories (i.e., the ones not discarded in the first stage), and try to trim the list further.</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <p></p>
+          <h4 id="2-conceptualize-v1-0"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Conceptualize v1.0</span><span id="2-conceptualize-v1-0" class="anchor"></span><a class="fa fa-anchor" href="#2-conceptualize-v1-0" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <ul>
+              <li>Based on your user story selected previously, conceptualize the product in terms of how it will look like at v1.0. Suggestion: this can be in the form of a <span trigger="click" for="modal:v10-featureLists" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v10-featureLists'].show()" class="trigger-click">feature list</span>.</li>
+            </ul>
+            <b-modal id="modal:v10-featureLists" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-featureLists"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                <div>
+                <div></div>
+                <p></p>
+                <p><span class="dimmed"><strong><span>Requirements → Specifying Requirements → Feature Lists →
+                      </span></strong></span></p>
+                <div id="title-and-body">
+                  <div>
+                    <h4 id="what"><span>What</span><span id="what" class="anchor"></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                  </div>
+                  <div id="main">
+                    <div>
+                      <box type="definition">
+                        <div>
+                          <p><strong>Feature list</strong>: A list of features of a product <em>grouped according to some criteria</em> such as aspect, priority, order of delivery, etc.</p>
+                        </div>
+                      </box>
+                      <box>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A sample feature list from a simple Minesweeper game <span class="dimmed">(only a brief description has been provided to save space)</span>:</p>
+                        <ol>
+                          <li>Basic play – Single player play.</li>
+                          <li>Difficulty levels
+                            <ul>
+                              <li>Medium-levels</li>
+                              <li>Advanced levels</li>
+                            </ul>
+                          </li>
+                          <li>Versus play – Two players can play against each other.</li>
+                          <li>Timer – Additional fixed time restriction on the player.</li>
+                          <li>...</li>
+                        </ol>
+                      </box>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </b-modal>
+          </div>
+          <p></p>
+          <h4 id="3-draft-the-ug-before-next-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Draft the UG</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span><span id="3-draft-the-ug-before-next-lecture" class="anchor"></span><a class="fa fa-anchor" href="#3-draft-the-ug-before-next-lecture" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <ul>
+              <li>Draft a user guide in a convenient medium (e.g., a GoogleDoc) to describe what the product would be like when it is at v1.0.
+                <ul>
+                  <li>We recommend that you follow the <a href="https://nus-tic4001-ay2021s1.github.io/tp/UserGuide.html">AB3 User Guide</a> in terms of structure and format.</li>
+                  <li>As this is a very rough draft and the final version will be in a different format altogether <span class="dimmed">(i.e., in markdown format)</span>, don't waste time in formatting, copy editing etc. It is fine as long as the tutor can get a rough idea of the features from this draft. You can also do just the 'Features' section and omit the other parts.</li>
+                  <li>Do try to come up with concrete command syntax for the CLI commands that you will deliver at v1.0.</li>
+                  <li>Include only features that will be delivered in v1.0.</li>
+                  <li>Consider including some UI mock-ups too <span class="dimmed">(they can be hand-drawn or created using a tool such as PowerPoint, PlantUML or <a href="https://balsamiq.com/">Balsamiq</a>)</span>.</li>
+                  <li>
+                    <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Submission</strong>: Save the draft UG as a PDF file, name it <code v-pre>{team-id}.pdf</code> e.g., <code v-pre>TIC4001T-W09-1.pdf</code>, and upload to LumiNUS.<br><br>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div id="divideDocs" class="indented">
+              <box>
+                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Recommended: <strong>Divide documentation work (in the User Guide and the Developer Guide) among team members equally; preferably based on enhancements/features each person would be adding</strong> <span class="dimmed">e.g., If you are the person planing to add a feature X, you should be the person to describe the feature X in the User Guide and in the Developer Guide</span>.</p>
+                <p><span class="dimmed">Reason: In the final project evaluation your documentation skills will be graded based on sections of the User/Developer Guide you have written.</span></p>
+                <panel type class="embedding" minimized><template slot="_header">
+                    <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Grading → <mark>Documentation</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                  </template>
+                  <div>
+                    <h4 id="4-project-grading-documentation-10-marks">
+                      <div class="bg-warning p-1">4. Project Grading: Documentation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><span id="4-project-grading-documentation-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#4-project-grading-documentation-10-marks" onclick="event.stopPropagation()"></a>
+                    </h4>
+                    <p><strong>Evaluates:</strong> your contribution to project documents</p>
+                    <p><strong>Method:</strong> Evaluated in two steps.</p>
+                    <ul>
+                      <li>Step 1: Evaluate the whole UG and DG. This is evaluated by peers who tested your product, and tutors.</li>
+                    </ul>
+                    <div class="indented-level2">
+                      <panel type class="embedding" minimized><template slot="_header">
+                          <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for User Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                        </template>
+                        <div>
+                          <p>
+                            <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Compared to AddressBoook-Level3 (AB3), the overall quality of the UG you evaluated is,</strong><br>
+                            Evaluate based on fit-for-purpose, from the perspective of a target user.
+                            For reference, the AB3 UG is <a href="https://se-education.org/addressbook-level3/UserGuide.html">here</a>.<br>
+                          </p>
+                          <ul radio-group="7acba" class="radio-list">
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio"> Significantly lower</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio"> Slightly lower</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio"> Similar</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio"> Higher</label></li>
+                          </ul>
+                        </div>
+                      </panel>
+                    </div>
+                    <p></p>
+                    <div class="indented-level2">
+                      <panel type class="embedding" minimized><template slot="_header">
+                          <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Developer Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                        </template>
+                        <div>
+                          <p>
+                            <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Compared to AB3, the overall quality of the DG you evaluated is,</strong><br>
+                            Evaluate based on fit-for-purpose from the perspective of a new team member trying to understand the product's internal design by reading the DG.
+                            For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level3/DeveloperGuide.html">here</a>.<br>
+                          </p>
+                          <ul radio-group="068c5" class="radio-list">
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="068c5" type="radio"> Significantly lower</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="068c5" type="radio"> Slightly lower</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="068c5" type="radio"> Similar</label></li>
+                            <li class="radio-list-item"><label><input class="radio-list-input" name="068c5" type="radio"> Higher</label></li>
+                          </ul>
+                        </div>
+                      </panel>
+                    </div>
+                    <p></p>
+                    <ul>
+                      <li>Step 2: Evaluate how much of that effort can be attributed to you. This is evaluated by team members, and tutors.</li>
+                    </ul>
+                    <div class="indented-level2">
+                      <panel type class="embedding" minimized><template slot="_header">
+                          <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the UG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                        </template>
+                        <div>
+                          <p>
+                            <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the User Guide is,</strong>
+                          </p>
+                          <span id="equalShareScale">
+                            <panel type="seamless"><template slot="_header">
+                                <p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p>
+                              </template>
+                              <ul radio-group="186a5" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> ...</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li>
+                              </ul>
+                            </panel>
+                          </span>
+                        </div>
+                      </panel>
+                    </div>
+                    <p></p>
+                    <div class="indented-level2">
+                      <panel type class="embedding" minimized><template slot="_header">
+                          <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the DG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                        </template>
+                        <div>
+                          <p>
+                            <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the Developer Guide is,</strong>
+                          </p>
+                          <div>
+                            <panel type="seamless"><template slot="_header">
+                                <p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p>
+                              </template>
+                              <ul radio-group="2ef43" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> ...</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li>
+                              </ul>
+                            </panel>
+                          </div>
+                        </div>
+                      </panel>
+                    </div>
+                    <p></p>
+                    <ul>
+                      <li>In addition, UG and DG bugs you received in the PE will be considered for grading this component.</li>
+                    </ul>
+                    <div class="indented-level2">
+                      <box>
+                        <div>
+                          <p><strong>These are considered UG bugs (if they hinder the reader):</strong><br></p>
+                          <div>
+                            <span id="visualsBugs">
+                              <p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
+                              <ul>
+                                <li>Not enough visuals e.g., screenshots/diagrams</li>
+                                <li>The visuals are not well integrated to the explanation</li>
+                                <li>The visuals are unnecessarily repetitive e.g., same visual repeated with minor changes
+                                </li>
+                              </ul>
+                            </span>
+                            <span id="examplesBugs">
+
+                              <p><span aria-hidden="true" class="fas fa-bug"></span> Use of examples:</p>
+                              <ul>
+                                <li>Not enough or too many examples e.g., sample inputs/outputs
+                                </li>
+                              </ul>
+                            </span>
+                            <span id="explanationBugs">
+
+                              <p><span aria-hidden="true" class="fas fa-bug"></span> Explanations:</p>
+                              <ul>
+                                <li>The explanation is too brief or unnecessarily long.</li>
+                                <li>The information is hard to understand for the target audience. e.g., using terms the reader might not know
+                                </li>
+                              </ul>
+                            </span>
+                            <span id="neatnessBugs">
+
+                              <p><span aria-hidden="true" class="fas fa-bug"></span> Neatness/correctness:</p>
+                              <ul>
+                                <li>looks messy</li>
+                                <li>not well-formatted</li>
+                                <li>broken links, other inaccuracies, typos, etc.
+                                </li>
+                              </ul>
+                            </span></div>
+                        </div>
+                      </box>
+                      <box>
+                        <div>
+                          <p><strong>These are considered DG bugs (if they hinder the reader):</strong></p>
+                          <panel type="seamless"><template slot="_header">
+                              <p>Those given as possible UG bugs ...</p>
+                            </template>
+                            <div>
+                              <p><strong>These are considered UG bugs (if they hinder the reader):</strong><br></p>
+                              <div>
+                                <span id="visualsBugs">
+                                  <p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
+                                  <ul>
+                                    <li>Not enough visuals e.g., screenshots/diagrams</li>
+                                    <li>The visuals are not well integrated to the explanation</li>
+                                    <li>The visuals are unnecessarily repetitive e.g., same visual repeated with minor changes
+                                    </li>
+                                  </ul>
+                                </span>
+                                <span id="examplesBugs">
+
+                                  <p><span aria-hidden="true" class="fas fa-bug"></span> Use of examples:</p>
+                                  <ul>
+                                    <li>Not enough or too many examples e.g., sample inputs/outputs
+                                    </li>
+                                  </ul>
+                                </span>
+                                <span id="explanationBugs">
+
+                                  <p><span aria-hidden="true" class="fas fa-bug"></span> Explanations:</p>
+                                  <ul>
+                                    <li>The explanation is too brief or unnecessarily long.</li>
+                                    <li>The information is hard to understand for the target audience. e.g., using terms the reader might not know
+                                    </li>
+                                  </ul>
+                                </span>
+                                <span id="neatnessBugs">
+
+                                  <p><span aria-hidden="true" class="fas fa-bug"></span> Neatness/correctness:</p>
+                                  <ul>
+                                    <li>looks messy</li>
+                                    <li>not well-formatted</li>
+                                    <li>broken links, other inaccuracies, typos, etc.
+                                    </li>
+                                  </ul>
+                                </span></div>
+                            </div>
+                          </panel>
+
+                          <span id="umlDiagramBugs">
+
+                            <p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
+                            <ul>
+                              <li>Notation incorrect or not compliant with the notation covered in the module.</li>
+                              <li>Some other type of diagram used when a UML diagram would have worked just as well.</li>
+                              <li>The diagram used is not suitable for the purpose it is used.</li>
+                              <li>The diagram is too complicated.
+                              </li>
+                            </ul>
+                          </span>
+                          <span id="codeSnippetBugs">
+
+                            <p><span aria-hidden="true" class="fas fa-bug"></span> Code snippets:</p>
+                            <ul>
+                              <li>Excessive use of code e.g., a large chunk of code is cited when a smaller extract of would have sufficed.
+                              </li>
+                            </ul>
+                          </span>
+                          <span id="userStoryBugs">
+
+                            <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in User Stories. Examples:</p>
+                            <ul>
+                              <li>Incorrect format</li>
+                              <li>All three parts are not present</li>
+                              <li>Benefit does not match the function</li>
+                              <li>Important user stories missing
+                              </li>
+                            </ul>
+                          </span>
+
+                          <span id="nfrBugs">
+
+                            <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in NFRs. Examples:</p>
+                            <ul>
+                              <li>Not really a <em>Non-Functional</em> Requirement</li>
+                              <li>Not well-defined (i.e., hard to decide when it has been met)</li>
+                              <li>Not reasonably achievable</li>
+                              <li>Highly relevant NFRs missing
+                              </li>
+                            </ul>
+                          </span>
+                          <span id="glossaryBugs">
+
+                            <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in Glossary. Examples:</p>
+                            <ul>
+                              <li>Unnecessary terms included</li>
+                              <li>Important terms missing
+                              </li>
+                            </ul>
+                          </span>
+                        </div>
+                      </box>
+                    </div>
+                  </div>
+                </panel>
+                <p></p>
+              </box>
+              <p></p>
+            </div>
+          </div>
+          <p></p>
+          <h4 id="4-refine-the-product-design"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Refine the product design</span><span id="4-refine-the-product-design" class="anchor"></span><a class="fa fa-anchor" href="#4-refine-the-product-design" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <ul>
+              <li>Review the UG to ensure the features written by each member fit together to form a cohesive product. Note that cohesiveness of the product can affect the grading of the <em>product design</em> aspect.</li>
+            </ul>
+            <div class="indented-level2">
+              <panel type class="embedding" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Grading → <mark>Product Design</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <h4 id="1-project-grading-product-design-5-marks">
+                    <div class="bg-warning p-1">1. Project Grading: Product Design <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-users"></span></span>/<span><span aria-hidden="true" class="fas fa-user"></span></span> 5 marks]</span></div><span id="1-project-grading-product-design-5-marks" class="anchor"></span><a class="fa fa-anchor" href="#1-project-grading-product-design-5-marks" onclick="event.stopPropagation()"></a>
+                  </h4>
+                  <p><strong>Evaluates:</strong> how well your features fit together to form a cohesive product (not how many features or how big the features are) and how well does it match the target user</p>
+                  <p><strong>Evaluated by:</strong></p>
+                  <ul>
+                    <li>tutors (based on product demo and user guide)</li>
+                    <li>peers from other teams (based on peer testing and user guide)</li>
+                  </ul>
+                  <panel type class="embedding" minimized><template slot="_header">
+                      <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                    </template>
+                    <div>
+                      <p>
+                        <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Quality of the product design,</strong><br>
+                        Evaluate based on the User Guide and the actual product behavior.
+                      </p>
+                      <div class="table-responsive">
+                        <table class="markbind-table table table-bordered table-striped">
+                          <thead>
+                            <tr>
+                              <th>Criterion</th>
+                              <th>Unable to judge</th>
+                              <th>Low</th>
+                              <th>Medium</th>
+                              <th>High</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><code v-pre>target user</code></td>
+                              <td>Not specified</td>
+                              <td></td>
+                              <td></td>
+                              <td>Clearly specified and narrowed down appropriately</td>
+                            </tr>
+                            <tr>
+                              <td><code v-pre>value proposition</code></td>
+                              <td>Not specified</td>
+                              <td>The value to target user is low. App is not worth using</td>
+                              <td>Some small group of target users might find the app worth using</td>
+                              <td>Most of the target users are likely to find the app worth using</td>
+                            </tr>
+                            <tr>
+                              <td><code v-pre>optimized for target user</code></td>
+                              <td></td>
+                              <td>Not enough focus for CLI users</td>
+                              <td>Mostly CLI-based, but cumbersome to use most of the time</td>
+                              <td>Feels like a fast typist can be more productive with the app, compared to an equivalent GUI app without a CLI</td>
+                            </tr>
+                            <tr>
+                              <td><code v-pre>feature-fit</code></td>
+                              <td></td>
+                              <td>Many of the features don't fit with others</td>
+                              <td>Most features fit together but a few may be possible misfits</td>
+                              <td>All features fit together to for a cohesive whole</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </panel>
+                  <p>In addition, feature flaws reported in the PE will be considered when grading this aspect.</p>
+                  <box tags="m--cs2113 m--tic4001" type="tip">
+                    <p>Note that 'product design' or 'functionality' are not critical learning outcomes of the tP. Therefore, <mark>the bar you need to reach to get full 5 marks will be quite low</mark>. For example, the <code v-pre>Medium</code> level in the rubric given in the panel above should be enough to achieve full marks. Similarly, only cases of <em>excessive</em> 'feature flaw' bugs will affect the score.
+                    </p>
+                  </box>
+                  <p></p>
+                  <box>
+                    <div>
+                      <p>These are considered <em>feature flaws</em>:<br>
+                        <span aria-hidden="true" class="fas fa-bug"></span> The feature does not solve the stated problem of the intended user i.e., the feature is 'incomplete'<br>
+                        <span aria-hidden="true" class="fas fa-bug"></span> Hard-to-test features<br>
+                        <span aria-hidden="true" class="fas fa-bug"></span> Features that don't fit well with the product<br>
+                        <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p>
+                    </div>
+                  </box>
+                </div>
+              </panel>
+            </div>
+            <p></p>
+          </div>
+          <p></p>
+        </div>
+      </div>
+
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#week-6-fri-sep-11th-project">Week 6 [Fri, Sep 11th] - Project&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#ip">iP&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#1-add-increment-a-moreoop">1 Add Increment: A-MoreOOP&#x200E;</a>
+                <a class="nav-link py-1" href="#2-add-increments-as-prs-level-8-level-9-a-junit">2 Add Increments as PRs: Level-8, Level-9, A-JUnit&#x200E;</a>
+              </nav>
+              <a class="nav-link py-1" href="#tp-conceptualize-the-product">tP: Conceptualize the product&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#1-choose-user-stories-for-v1-0-during-the-lecture">1 Choose user stories for v1.0 during the lecture&#x200E;</a>
+                <a class="nav-link py-1" href="#2-conceptualize-v1-0">2 Conceptualize v1.0&#x200E;</a>
+                <a class="nav-link py-1" href="#3-draft-the-ug-before-next-lecture">3 Draft the UG before next lecture&#x200E;</a>
+                <a class="nav-link py-1" href="#4-refine-the-product-design">4 Refine the product design&#x200E;</a>
+              </nav>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+    </footer>
+  </div>
+</body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
+
+</html>

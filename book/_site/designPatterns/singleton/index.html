@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Software Design Patterns: Singleton</title>
+  <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body>
+  <div id="app">
+    <div id="flex-body">
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/website/book/css/textbook.css">
+          <div class="website-content" id="all">
+            <p><span class="dimmed"><strong><span>Design → Design Patterns →
+                  </span></strong></span></p>
+            <div id="title">
+              <h1 id="singleton-pattern"><span>Singleton pattern</span><a class="fa fa-anchor" href="#singleton-pattern" onclick="event.stopPropagation()"></a></h1>
+            </div>
+            <div id="main">
+              <div>
+                <div>
+                  <panel type="seamless" expanded id="what">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Singleton design pattern</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>Context</strong></p>
+                        <p>A certain classes should have no more than just one instance (e.g. the main controller class of the system). These single instances are commonly known as <em>singletons</em>.</p>
+                        <p><strong>Problem</strong></p>
+                        <p>A normal class can be instantiated multiple times by invoking the constructor.</p>
+                        <p><strong>Solution</strong></p>
+                        <p>Make the constructor of the singleton class <code v-pre>private</code>, <span class="dimmed">because a <code v-pre>public</code> constructor will allow others to instantiate the class at will</span>. Provide a <code v-pre>public</code> class-level method to access the <em>single instance</em>.</p>
+                        <box>
+                          <p>Example:</p>
+                          <p></p>
+                        </box>
+                      </div>
+                      <div>
+                        <div>
+                          <panel expandable><template slot="_header">
+                              <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                            </template>
+                            <div>
+                              <panel><template slot="_header">
+                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about the Singleton pattern</p>
+                                </template>
+                                <question>
+                                  <p>You use the Singleton pattern when</p>
+                                  <ul radio-group="f547d" class="radio-list">
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="f547d" type="radio"> a. You want an a class with a private constructor.</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="f547d" type="radio"> b. You want a single class to hold all functionality of the system.</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="f547d" type="radio"> c. You want a class with no more than one instance.</label></li>
+                                    <li class="radio-list-item"><label><input class="radio-list-input" name="f547d" type="radio"> d. You want to hide internal structure of a component from its clients.</label></li>
+                                  </ul>
+                                  <div slot="answer">
+                                    <p>(c)</p>
+                                  </div>
+                                </question>
+                              </panel>
+                            </div>
+                          </panel>
+                        </div>
+                      </div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="implementation">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="implementation"><span>Implementation</span><a class="fa fa-anchor" href="#implementation" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can apply the Singleton design pattern</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Here is the typical implementation of how the Singleton pattern is applied to a class:</p>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logic theOne = <span class="hljs-keyword">null</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-title">Logic</span><span class="hljs-params">()</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Logic <span class="hljs-title">getInstance</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (theOne == <span class="hljs-keyword">null</span>) {<br></span><span>            theOne = <span class="hljs-keyword">new</span> Logic();<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> theOne;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <p>Notes:</p>
+                        <ul>
+                          <li>The constructor is <code v-pre>private</code>, which prevents instantiation from outside the class.</li>
+                          <li>The single instance of the singleton class is maintained by a <code v-pre>private</code> class-level variable.</li>
+                          <li>Access to this object is provided by a <code v-pre>public</code> class-level operation <code v-pre>getInstance()</code> which instantiates a single copy of the singleton class when it is executed for the first time. Subsequent calls to this operation return the single instance of the class.</li>
+                        </ul>
+                        <p>If <code v-pre>Logic</code> was not a Singleton class, an object is created like this:</p>
+                        <pre><code class="hljs java" v-pre><span>Logic m = <span class="hljs-keyword">new</span> Logic();<br></span></code></pre>
+                        <p>But now, the <code v-pre>Logic</code> object needs to be accessed like this:</p>
+                        <pre><code class="hljs java" v-pre><span>Logic m = Logic.getInstance();<br></span></code></pre>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="evaluation">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="evaluation"><span>Evaluation</span><a class="fa fa-anchor" href="#evaluation" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can decide when to apply Singleton design pattern</span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p><strong>Pros:</strong></p>
+                        <ul>
+                          <li>easy to apply</li>
+                          <li>effective in achieving its goal with minimal extra work</li>
+                          <li>provides an easy way to access the singleton object from anywhere in the code base</li>
+                        </ul>
+                        <p><strong>Cons:</strong></p>
+                        <ul>
+                          <li>The singleton object acts like a global variable that increases coupling across the code base.</li>
+                          <li>In testing, it is difficult to replace Singleton objects with stubs (static methods cannot be overridden)</li>
+                          <li>In testing, singleton objects carry data from one test to another even when you want each test to be independent of the others.</li>
+                        </ul>
+                        <p>Given there are some significant cons, it is recommended that you apply the Singleton pattern when, in addition to requiring only one instance of a class, there is a risk of creating multiple objects by mistake, and creating such multiple objects has real negative consequences.</p>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../markbind/js/components.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../../../markbind/js/setup.js"></script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script>
+
+</html>

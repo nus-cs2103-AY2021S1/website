@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001</title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body>
+  <div id="app">
+    <div id="flex-body">
+      <div id="content-wrapper">
+        <div id="main">
+          <panel type="seamless" expanded id="tutorial-timetable">
+            <span slot="header" class="card-title">
+              <div>
+                <h3 id="tutorial-timetable">Tutorial Timetable<a class="fa fa-anchor" href="#tutorial-timetable" onclick="event.stopPropagation()"></a></h3>
+              </div>
+            </span>
+            <div id="tutorialTimetable">
+              <box>
+                <p>
+                  <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Our tutorial IDs are different from LumiNUS. Format: <code v-pre>TIC4001T-W09</code> means a tutorial of <code v-pre>TIC4001T</code> module, held on <code v-pre>Wednesday</code> at <code v-pre>0900</code>, and so on.
+                </p>
+              </box>
+              <div class="table-responsive">
+                <table class="markbind-table table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Module</th>
+                      <th>Venue</th>
+                      <th>Time</th>
+                      <th><s><span class="dimmed">Tutorial ID<br>in LumiNUS</span></s><br><mark>(don't use this!)</mark></th>
+                      <th><strong>Our Tutorial ID</strong><br><mark>(use this!)</mark></th>
+                      <th>Tutors<br>(<a href="/website/admin/instructors.html">contact details</a>)</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+              <p><span></span></p>
+            </div>
+          </panel>
+          <panel type="seamless" expanded id="tutorial-structure"><template slot="_header">
+              <h3 id="tutorial-structure">Tutorial Structure<a class="fa fa-anchor" href="#tutorial-structure" onclick="event.stopPropagation()"></a></h3>
+            </template>
+            <div id="tutorialStructure">
+              <p><strong>The mode</strong></p>
+              <p>Tutorials will be conducted using Zoom. More info coming soon.</p>
+              <p><strong>What happens during the tutorial</strong>:</p>
+              <ul>
+                <li>A tutorial group is handled by two tutors. Each tutor will work with two teams.</li>
+                <li>The tutor will <em>facilitate</em> tutorial activities, observe your progress, and give feedback. If you are facing difficulties with a weekly activity, the tutor can direct you to get help from another student in the tutorial.</li>
+              </ul>
+
+              <br>
+              <p><strong>The role of our tutors</strong> is different from tutors in other modules.</p>
+              <ul>
+                <li>
+                  <p><strong>Not a source of admin information</strong>: Given the humongous amount of admin info contained in this module and the fact that it is constantly evolving, tutors may not be aware of the recent subtle changes to the admin information. To safeguard you from receiving incorrect admin info, tutors are prohibited from answering admin queries. If you have an admin query, please post in the <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">forum</a> (or email the prof at <code v-pre>tic4001@comp.nus.edu.sg</code> but only if the question is not appropriate for the forum).</p>
+                </li>
+                <li>
+                  <p><strong>No direct tech help</strong>: Tutors are prohibited from giving direct technical help, other than to give you some general direction to finding a solution. <span class="dimmed">Rationale: We want you to learn the vital survival skill of troubleshooting technical problems.</span></p>
+                </li>
+              </ul>
+              <div class="indented-level2">
+                <panel type class="embedding" minimized><template slot="_header">
+                    <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix D: How to get Help in TIC4001 <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                  </template>
+                  <div>
+                    <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> This guide is mostly about getting tech help, but it also applies to getting clarifications on module topics too. e.g. what is the difference between <em>refactoring</em> and <em>rewriting</em>?</span></p>
+                    <span class="float-right">
+                      <p><img src="/website/admin/images/the good reasons to get home early.png" width="300"><br></p>
+                    </span>
+                    <p></p>
+                    <p><strong>Keep in mind that instructors don't have ready solutions to all technical problems</strong>. Unlike tutorial questions for which instructors have model solutions, given the complexity of industry tools we use (Gradle, GitHub, Git, ...) and the rapid pace they are updated, instructors don't have ready solutions to most technical problems you face in this module. The only realistic way to solve those problems at a large scale is crowd-sourcing i.e., someone else who faced a similar problem might know how to fix it.</p>
+                    <p><span class="text-danger"><big><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> <strong>What not to do:</strong></big></span></p>
+                    <ul>
+                      <li><span class="text-danger"><strong>Send a help request to an instructor</strong>:</span> When faced with a technical problem or a doubt about a concept, don't fire off an email lecturer/tutor immediately, unless it is something only the lecturer/tutor is supposed to know.<br></li>
+                      <li><span class="text-danger"><strong>Request to meet the instructor to solve the problem</strong>:</span> That can only work if the person is supposed to know how to solve all technical problems, which is almost never the case.</li>
+                    </ul>
+                    <p><span class="text-success"><big><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> <strong>What to do:</strong></big></span></p>
+                    <ul>
+                      <li>
+                        <p><strong>Double-check the given instructions</strong>: Often, technical problems arise due to deviations in how you perform a step or a difference in your environment.<br></p>
+                      </li>
+                      <li>
+                        <p><strong>Get your team to meet for a weekly work-together session</strong>. When you do module tasks together, it is easy to compare with each other and figure out what deviation is causing the problem. That is, crowd-source your team first.</p>
+                      </li>
+                      <li>
+                        <p><strong>Search</strong>: It is very likely the answer already exists somewhere in the cyberspace. Almost every programming-related question has been answered in places like <a href="http://stackoverflow.com/">stackoverflow</a>. Don't give an opportunity for someone to ask you to <a href="http://www.jibble.org/stfw/">STFW</a>.<br>
+                          Pay attention to the error message you encounter. Sometimes it also contains hints as to how to fix the problem. Even if not, a web search on the error message is a good starting point.  <br>
+                          <img src="/website/admin/images/how to google it.png" width="690"></p>
+                      </li>
+                      <li>
+                        <p><strong>Ask in the <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">module forum</a></strong>:</p>
+                        <ul>
+                          <li>
+                            <p><strong>Give full details of the problem</strong> Conversations via online forums take time. If you post everything that is relevant to your problem, your chances of getting an answer in the first try is higher. If others have to ask you more questions before they can help you, it will take longer. But this doesn't mean you dump too much information into the thread either.</p>
+                            <ul>
+                              <li>Include full error message, screenshots, code snippets, stack traces, etc.<br></li>
+                              <li>If the problem is code-related, share the code if possible (e.g., push the current state of the code to a branch in your fork and give the link to the branch). That gives a chance for someone to reproduce the state of your project in their computer.</li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Avoid addressing the question to one person</strong> (e.g., the prof), unless really necessary. Doing so will discourage others from answering that question.</p>
+                          </li>
+                          <li>
+                            <p><strong>Isolate the problem.</strong> &quot;My code doesn't work&quot; isn't going to help even if you post the whole code. Others don't have time to go through all of your code. Isolate the part that doesn't work and strip it down to the bare minimum that is enough reproduce the error. Sometimes, this process actually helps you to figure out the problem yourself (have you heard about <span trigger="click" for="modal:appendixHelp-rubberDuckDebugging" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:appendixHelp-rubberDuckDebugging'].show()" class="trigger-click">Rubber Duck Debugging</span>?).</p>
+                            <box>
+                              <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> How to isolate problematic code? Delete code (one bit at a time) that is confirmed as not related to the problem. Do that until you can still reproduce the problem with the least amount of code remaining.
+                              </p>
+                            </box>
+                            <p></p>
+                          </li>
+                          <li>
+                            <p><strong>Generalize the problem.</strong> &quot;How to write tasks to a text file using Java&quot; is too specific to what you are working on. You are more likely to find help if you post a thread called (or search for) &quot;How to write to a file using Java&quot;.</p>
+                          </li>
+                          <li>
+                            <p><strong>Remember to thank those you try to help, and close the issue</strong> after the issue has been resolved.</p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <b-modal id="modal:appendixHelp-rubberDuckDebugging" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appendixHelp-rubberDuckDebugging"><template slot="modal-title">Rubber Duck Debugging</template>
+                      <p><img src="/website/admin/images/Rubber_duck_assisting_with_debugging.jpg" width="220"><br></p>
+                      <p><em>Rubber duck debugging</em> is an informal term used in software engineering to refer to a method of debugging code. The name is a reference to a story in the book <em>The Pragmatic Programmer</em> in which a programmer would carry around a rubber duck and debug his code by forcing himself to explain it, line-by-line, to the duck.</p>
+                      <p>[for more, see <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">wikipedia entry</a>]<br></p>
+                    </b-modal>
+                    <p></p>
+                    <ul>
+                      <li><strong>Ask the world</strong> using programming forums such as stackoverflow.
+                        <ul>
+                          <li>
+                            <p>PLEASE search for existing answers before you post your question in those public forums; You don't want to appear as a 'clueless' or 'too lazy to do your research' person in a public forum.</p>
+                            <box>
+                              <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Know what these stand for: <strong>RTFM</strong>, <strong>STFW</strong>, <strong>GIYF</strong>, <strong>LMGTFY</strong></p>
+                            </box>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <span id="questions-for-tutros">
+                      <ul>
+                        <li><strong>Raise your question during a tutorial</strong>. Some questions can be discussed with the tutor and tutorial-mates.
+                          What kind of questions are suitable to discuss with the tutor? Consider these two questions you might want to ask a tutor:
+                          <ul>
+                            <li>
+                              <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> <em>This is how I understood/applied coupling. Is that correct?</em> - Such questions are welcome. <span class="dimmed"><strong>Reason</strong>:This question shows you have put in some effort to learn the topic and seeking further clarification from the tutor.</span>
+                            </li>
+                            <li>
+                              <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <em>What is coupling?</em> - Such questions are discouraged. <span class="dimmed"><strong>Reason</strong>: This question implies you haven’t done what you could to learn the topic in concern.</span>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </span>
+                    <ul>
+                      <li><strong>Ask the lecturer</strong>: Failing all above, you can talk to the lecturer before/after the lecture, or email the lecturer.</li>
+                    </ul>
+                    <box type="warning">
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Some technical problems can take a long time to resolve.</strong> Therefore, plan ahead and schedule your work much earlier than the deadline.</p>
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Some problems might not get resolved at all</strong>; while waiting for a solution, explore alternatives and workarounds.
+                      </p>
+                    </box>
+                    <p></p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
+                      <ul>
+                        <li>[lifehacker article]  <a href="http://lifehacker.com/google-tips-and-tricks-every-student-should-know-1508121671">Google Tips and Tricks Every Student Should Know</a></li>
+                        <li>[Article] <a href="http://catb.org/esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a> by Eric Steven Raymond
+                        </li>
+                      </ul>
+                    </box>
+                  </div>
+                </panel>
+              </div>
+              <br>
+              <ul>
+                <li><strong>No ‘mini-lectures’</strong>: Tutors are prohibited from 'teaching' on concepts that are covered in lectures or other learning resources given to you as self-learning is a vital part of the module. For example, <mark>the tutor will not do a mini-lecture at the start of the tutorial</mark>. Of course tutors can help you clarify doubts under the right circumstances.</li>
+              </ul>
+              <div class="indented-level2">
+                <panel type class="embedding" minimized><template slot="_header">
+                    <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix D (extract): Questions suitable for tutor <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                  </template>
+                  <div>
+                    <ul>
+                      <li><strong>Raise your question during a tutorial</strong>. Some questions can be discussed with the tutor and tutorial-mates.
+                        What kind of questions are suitable to discuss with the tutor? Consider these two questions you might want to ask a tutor:
+                        <ul>
+                          <li>
+                            <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> <em>This is how I understood/applied coupling. Is that correct?</em> - Such questions are welcome. <span class="dimmed"><strong>Reason</strong>:This question shows you have put in some effort to learn the topic and seeking further clarification from the tutor.</span>
+                          </li>
+                          <li>
+                            <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <em>What is coupling?</em> - Such questions are discouraged. <span class="dimmed"><strong>Reason</strong>: This question implies you haven’t done what you could to learn the topic in concern.</span>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+              <br>
+              <ul>
+                <li><strong>No leading from the front</strong>: Tutors are not expected to lead your project effort. They will not tell you how or when to do project tasks. You have to figure those out yourselves. But tutors will give you feedback on how you are doing project tasks so that you can improve further.</li>
+              </ul>
+              <p><strong>Timing/venue:</strong></p>
+              <ul>
+                <li>Please refer to the <span><a href="/website/schedule/index.html">Schedule page</a></span> for further details on each tutorial.</li>
+                <li>You are expected to be present on time. <mark>Punctuality is considered for participation marks.</mark></li>
+              </ul>
+
+              <ul>
+                <li>In the past, many students have requested to increase the tutorial duration because a mere hour is barely enough to get through all the tutorial tasks. Increasing the tutorial time is not possible due to lack of venues and tutors. Instead, let's try to make the best of the one hour available by coming well prepared and starting on time. Note that <mark>the better prepared you are, the higher the chance of completing e all activities allocated to a tutorial</mark> within time.</li>
+              </ul>
+              <p><strong>Grading:</strong></p>
+              <ul>
+                <li>Your conduct in tutorials will be evaluated by team members and the tutor which can affect your participation marks.</li>
+              </ul>
+            </div>
+          </panel>
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../markbind/js/setup.js"></script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+
+</html>

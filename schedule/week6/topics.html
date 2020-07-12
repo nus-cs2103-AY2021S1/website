@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Week 6 - Topics</title>
+  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
+  <link rel="stylesheet" href="../../markbind/css/page-nav.css">
+  <link rel="stylesheet" href="/website/book/css/textbook.css">
+  <link rel="stylesheet" href="/website/css/main.css">
+  <link rel="stylesheet" href="/website/css/schedule.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header fixed>
+      <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
+      <navbar placement="top" type="dark" class="temp-navbar">
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
+        </dropdown>
+        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+        <div class="nav-link temp-dropdown-placeholder">**Links**</div>
+        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
+          <li><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+
+          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+          <li><a href="/website/admin/forum-activities-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+          <li><a href="/website/schedule/week6/www.comp.nus.edu.sg/~cs2103" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
+          <hr>
+          <span><strong> Individual Project (iP):</strong></span>
+          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+          <hr>
+          <span><strong> Team Project (tP):</strong></span>
+          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+
+          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
+        </dropdown>
+        <li slot="right" class="nav-link">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+
+      <div id="content-wrapper">
+        <div class="website-content">
+          <nav>
+            <ul class="pagination mt-2">
+              <li class="page-item"><a class="page-link" href="/website/schedule/week5"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+              <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week6/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week6/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
+              <li class="page-item active"><a class="page-link" href="/website/schedule/week6/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week6/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week6/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+              <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week7"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
+            </ul>
+          </nav>
+          <p></p>
+          <h1 id="week-6-fri-sep-11th-topics">Week 6 <small><small><span class="dimmed">[Fri, Sep 11th]</span> - Topics</small></small><span id="week-6-fri-sep-11th-topics" class="anchor"></span><a class="fa fa-anchor" href="#week-6-fri-sep-11th-topics" onclick="event.stopPropagation()"></a></h1>
+          <panel type="seamless"><template slot="_header">
+              <p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p>
+            </template>
+            <span id="toc">
+              <ul>
+                <li>[<a href="/website/schedule/week6/topics.html#W6-1">W6.1</a>] <strong>IDEs: Intermediate Features</strong> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span></span></li>
+              </ul>
+              <div class="indented-level2">
+                <small>
+                  <ul>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1a">W6.1a</a>] <span>Implementation → IDEs → Debugging →
+                          </span></span> <span>What</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1b">W6.1b</a>] <span>Tools → Intellij IDEA →
+                          </span></span> <span>Debugging: Basic</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1c">W6.1c</a>] <span>Tools → Intellij IDEA →
+                          </span></span> <span>Productivity shortcuts</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                  </ul>
+                </small></div>
+              <ul>
+                <li>[<a href="/website/schedule/week6/topics.html#W6-2">W6.2</a>] <strong>Code Quality: Unsafe Practices</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
+              </ul>
+              <div class="indented-level2">
+                <small>
+                  <ul>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2a">W6.2a</a>] <span>Implementation → Code Quality → Error-Prone Practices →
+                          </span></span> <span>Introduction</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2b">W6.2b</a>] <span>Implementation → Code Quality → Error-Prone Practices → Basic →
+                          </span></span> <span>Use the default branch</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2c">W6.2c</a>] <span>Implementation → Code Quality → Error-Prone Practices → Basic →
+                          </span></span> <span>Don't recycle variables or parameters</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2d">W6.2d</a>] <span>Implementation → Code Quality → Error-Prone Practices → Basic →
+                          </span></span> <span>Avoid empty catch blocks</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2e">W6.2e</a>] <span>Implementation → Code Quality → Error-Prone Practices → Basic →
+                          </span></span> <span>Delete dead code</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2f">W6.2f</a>] <span>Implementation → Code Quality → Error-Prone Practices → Intermediate →
+                          </span></span> <span>Minimize scope of variables</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2g">W6.2g</a>] <span>Implementation → Code Quality → Error-Prone Practices → Intermediate →
+                          </span></span> <span>Minimize code duplication</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                  </ul>
+                </small></div>
+              <p></p>
+              <ul>
+                <li>[<a href="/website/schedule/week6/topics.html#W6-3">W6.3</a>] <strong>Developer Testing</strong> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span></span></li>
+              </ul>
+              <div class="indented-level2">
+                <small>
+                  <ul>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3a">W6.3a</a>] <span>Quality Assurance → Testing → Developer Testing →
+                          </span></span> <span>What</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3b">W6.3b</a>] <span>Quality Assurance → Testing → Developer Testing →
+                          </span></span> <span>Why</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3c">W6.3c</a>] <span>Quality Assurance → Testing → Test Automation →
+                          </span></span> <span>Test automation using test drivers</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3d">W6.3d</a>] <span>Quality Assurance → Testing → Test Automation →
+                          </span></span> <span>Test automation tools</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                    <li>
+                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3e">W6.3e</a>] <span>C++ to Java → JUnit →
+                          </span></span> <span>JUnit: Basic</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
+                    </li>
+                  </ul>
+                </small></div>
+              <p></p>
+            </span></panel>
+          <hr style="border: 1px dotted #cccccc;">
+          <p><span id="W6-1"></span></p>
+          <div></div>
+          <panel type="seamless" no-close expandable="true" expanded id="w6-1-ides-intermediate-features">
+            <span slot="header" class="card-title">
+              <div>
+                <h2 id="w6-1-ides-intermediate-features"><span class="dimmed">[W6.1]</span> <strong>IDEs: Intermediate Features</strong> <small><small><span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span></span></small></small><span id="w6-1-ides-intermediate-features" class="anchor"></span><a class="fa fa-anchor" href="#w6-1-ides-intermediate-features" onclick="event.stopPropagation()"></a></h2>
+              </div>
+            </span>
+            <div class="indented-level1">
+              <p><span id="W6-1a"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/ides/debugging/what" id="implementation-ides-debugging-what">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.1a</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="implementation-ides-debugging-what"><small><span class="font-weight-bold text-muted"><span>Implementation → IDEs → Debugging →</span></span></small> <strong><span>What</span></strong><span id="implementation-ides-debugging-what" class="anchor"></span><a class="fa fa-anchor" href="#implementation-ides-debugging-what" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain debugging</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong><em>Debugging</em> is the process of discovering defects in the program.</strong> Here are some approaches to debugging:</p>
+                      <ul>
+                        <li>
+                          <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. <code v-pre>Exiting process() method, x is 5.347</code>. This approach is not recommended due to these reasons.
+                          <ul>
+                            <li>Incurs extra effort when inserting and removing the print statements.</li>
+                            <li>These extraneous program modifications increases the risk of introducing errors into the program.</li>
+                            <li>These print statements, if not removed promptly after the debugging, may even appear unexpectedly in the production version.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach doesn't have the cons of the previous approach, but it too is not recommended (other than as a 'quick try') due to these reasons:
+                          <ul>
+                            <li>It is difficult, time consuming, and error-prone technique.</li>
+                            <li>If you didn't spot the error while writing code, you might not spot the error when reading code too.</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> -- <strong>Using a debugger</strong>: A debugger tool allows you to pause the execution, then step through one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. <strong>This is the recommended approach for debugging</strong>.
+                        </li>
+                      </ul>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-1b"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/intellij/debuggingBasic" id="tools-intellij-idea-debugging-basic">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.1b</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="tools-intellij-idea-debugging-basic"><small><span class="font-weight-bold text-muted"><span>Tools → Intellij IDEA →</span></span></small> <strong><span>Debugging: Basic</span></strong><span id="tools-intellij-idea-debugging-basic" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-debugging-basic" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can step through a program using a debugger</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <div v-closeable alt="video: debugging in Intellij">
+                        <p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
+                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                      </div>
+                      <ul>
+                        <li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li>
+                      </ul>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-1c"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/intellij/productivityShortcuts" id="tools-intellij-idea-productivity-shortcuts">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.1c</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="tools-intellij-idea-productivity-shortcuts"><small><span class="font-weight-bold text-muted"><span>Tools → Intellij IDEA →</span></span></small> <strong><span>Productivity shortcuts</span></strong><span id="tools-intellij-idea-productivity-shortcuts" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-productivity-shortcuts" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use some useful IDE productivity shortcuts</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <div v-closeable alt="video: Intellij shortcuts">
+                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KsVWdGOnHZU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/EvXpgL2iho4" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                      </div>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+            </div>
+          </panel>
+          <p></p>
+          <div class="indented">
+            <div></div>
+          </div>
+          <p><span id="W6-2"></span></p>
+          <div></div>
+          <panel type="seamless" no-close expandable="true" expanded id="w6-2-code-quality-unsafe-practices">
+            <span slot="header" class="card-title">
+              <div>
+                <h2 id="w6-2-code-quality-unsafe-practices"><span class="dimmed">[W6.2]</span> <strong>Code Quality: Unsafe Practices</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-2-code-quality-unsafe-practices" class="anchor"></span><a class="fa fa-anchor" href="#w6-2-code-quality-unsafe-practices" onclick="event.stopPropagation()"></a></h2>
+              </div>
+            </span>
+            <div class="indented-level1">
+              <p><span id="W6-2a"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/codeQuality/avoidShortcuts/introduction" id="implementation-code-quality-error-prone-practices-introduction">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.2a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="implementation-code-quality-error-prone-practices-introduction"><small><span class="font-weight-bold text-muted"><span>Implementation → Code Quality → Error-Prone Practices →</span></span></small> <strong><span>Introduction</span></strong><span id="implementation-code-quality-error-prone-practices-introduction" class="anchor"></span><a class="fa fa-anchor" href="#implementation-code-quality-error-prone-practices-introduction" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for avoiding error-prone shortcuts</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>It is safer to use language constructs in the way they are meant to be used, even if the language allows shortcuts. Some such coding practices are common sources of bugs. Know them and avoid them.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-2b"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/codeQuality/avoidShortcuts/basic/useDefaultBranch" id="implementation-code-quality-error-prone-practices-basic-use-the-default-branch">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.2b</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="implementation-code-quality-error-prone-practices-basic-use-the-default-branch"><small><span class="font-weight-bold text-muted"><span>Implementation → Code Quality → Error-Prone Practices → Basic →</span></span></small> <strong><span>Use the default branch</span></strong><span id="implementation-code-quality-error-prone-practices-basic-use-the-default-branch" class="anchor"></span><a class="fa fa-anchor" href="#implementation-code-quality-error-prone-practices-basic-use-the-default-branch" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: use the default branch </span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>Always include a default branch in <code v-pre>case</code> statements.</p>
+                      <p>Furthermore, use it for the intended default action and not just to execute the last option. If there is no default action, you can use the 'default' branch to detect errors (i.e. if execution reached the <code v-pre>default</code> branch, throw an exception). This also applies to the final <code v-pre>else</code> of an <code v-pre>if-else</code> construct. That is, the final <code v-pre>else</code> should mean 'everything else', and not the final option. Do not use <code v-pre>else</code> when an <code v-pre>if</code> condition can be explicitly specified, unless there is absolutely no other possibility.</p>
+                      <box>
+                        <p>
+                          <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                        </p>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;<br></span><span><span class="hljs-keyword">else</span> print <span class="hljs-string">"blue"</span>;<br></span></code></pre>
+                        <p>
+                          <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                        </p>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (red) print <span class="hljs-string">"red"</span>;<br></span><span><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (blue) print <span class="hljs-string">"blue"</span>;<br></span><span><span class="hljs-keyword">else</span> error(<span class="hljs-string">"incorrect input"</span>);<br></span></code></pre>
+                      </box>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-2c"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/codeQuality/avoidShortcuts/basic/dontRecycleVarsOrParams" id="implementation-code-quality-error-prone-practices-basic-don-t-recycle-variables-or-parameters">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.2c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="implementation-code-quality-error-prone-practices-basic-don-t-recycle-variables-or-parameters"><small><span class="font-weight-bold text-muted"><span>Implementation → Code Quality → Error-Prone Practices → Basic →</span></span></small> <strong><span>Don't recycle variables or parameters</span></strong><span id="implementation-code-quality-error-prone-practices-basic-don-t-recycle-variables-or-parameters" class="anchor"></span><a class="fa fa-anchor" href="#implementation-code-quality-error-prone-practices-basic-don-t-recycle-variables-or-parameters" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: don't recycle variables or parameters </span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <ul>
+                        <li>Use one variable for one purpose. Do not reuse a variable for a different purpose other than its intended one, just because the data type is the same.</li>
+                        <li>Do not reuse formal parameters as local variables inside the method.</li>
+                      </ul>
+                      <box>
+                        <p>
+                          <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                        </p>
+                        <div class="alt-java">
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{<br></span><span>    length = length * width;<br></span><span>    <span class="hljs-keyword">return</span> length;<br></span><span>}<br></span></code></pre>
+                        </div>
+                        <div class="alt-python">
+                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compute_rectangle_area</span><span class="hljs-params">(length, width)</span>:</span><br></span><span>    length = length * width<br></span><span>    <span class="hljs-keyword">return</span> length<br></span></code></pre>
+                        </div>
+                        <p>
+                          <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                        </p>
+                        <div class="alt-java">
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">double</span> <span class="hljs-title">computeRectangleArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> length, <span class="hljs-keyword">double</span> width)</span> </span>{<br></span><span>    <span class="hljs-keyword">double</span> area;<br></span><span>    area = length * width;<br></span><span>    <span class="hljs-keyword">return</span> area;<br></span><span>}<br></span></code></pre>
+                        </div>
+                        <div class="alt-python">
+                          <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">compute_rectangle_area</span><span class="hljs-params">(length, width)</span>:</span><br></span><span>    area = length * width<br></span><span>    <span class="hljs-keyword">return</span> area<br></span><span>}<br></span></code></pre>
+                        </div>
+                      </box>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-2d"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/codeQuality/avoidShortcuts/basic/avoidEmptyCatchBlocks" id="implementation-code-quality-error-prone-practices-basic-avoid-empty-catch-blocks">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.2d</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="implementation-code-quality-error-prone-practices-basic-avoid-empty-catch-blocks"><small><span class="font-weight-bold text-muted"><span>Implementation → Code Quality → Error-Prone Practices → Basic →</span></span></small> <strong><span>Avoid empty catch blocks</span></strong><span id="implementation-code-quality-error-prone-practices-basic-avoid-empty-catch-blocks" class="anchor"></span><a class="fa fa-anchor" href="#implementation-code-quality-error-prone-practices-basic-avoid-empty-catch-blocks" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: avoid empty catch blocks </span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>Never write an empty <code v-pre>catch</code> statement. At least give a comment to explain why the <code v-pre>catch</code> block is left empty.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-2e"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/codeQuality/avoidShortcuts/basic/deleteDeadCode" id="implementation-code-quality-error-prone-practices-basic-delete-dead-code">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.2e</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="implementation-code-quality-error-prone-practices-basic-delete-dead-code"><small><span class="font-weight-bold text-muted"><span>Implementation → Code Quality → Error-Prone Practices → Basic →</span></span></small> <strong><span>Delete dead code</span></strong><span id="implementation-code-quality-error-prone-practices-basic-delete-dead-code" class="anchor"></span><a class="fa fa-anchor" href="#implementation-code-quality-error-prone-practices-basic-delete-dead-code" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: delete dead code </span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>You might feel reluctant to delete code you have painstakingly written, even if you have no use for that code any more (&quot;I spent a lot of time writing that code; what if I need it again?&quot;). Consider all code as baggage you have to carry; get rid of unused code the moment it becomes redundant. If you need that code again, simply recover it from the revision control tool you are using. Deleting code you wrote previously is a sign that you are improving.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-2f"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/codeQuality/avoidShortcuts/intermediate/minimiseVariableScope" id="implementation-code-quality-error-prone-practices-intermediate-minimize-scope-of-variables">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.2f</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="implementation-code-quality-error-prone-practices-intermediate-minimize-scope-of-variables"><small><span class="font-weight-bold text-muted"><span>Implementation → Code Quality → Error-Prone Practices → Intermediate →</span></span></small> <strong><span>Minimize scope of variables</span></strong><span id="implementation-code-quality-error-prone-practices-intermediate-minimize-scope-of-variables" class="anchor"></span><a class="fa fa-anchor" href="#implementation-code-quality-error-prone-practices-intermediate-minimize-scope-of-variables" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: minimise scope of variables </span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>Minimize global variables</strong>. Global variables may be the most convenient way to pass information around, but they do create implicit links between code segments that use the global variable. Avoid them as much as possible.</p>
+                      <p><strong>Define variables in the least possible scope</strong>. For example, if the variable is used only within the <code v-pre>if</code> block of the conditional statement, it should be declared inside that <code v-pre>if</code> block.</p>
+                      <blockquote>
+                        <p><strong>The most powerful technique for minimizing the scope of a local variable is to declare it where it is first used.</strong> <sub>-- <em>Effective Java</em>, by Joshua Bloch</sub></p>
+                      </blockquote>
+                      <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources:</p>
+                      <ul>
+                        <li><a href="https://refactoring.com/catalog/reduceScopeOfVariable.html">Refactoring: Reduce Scope of Variable</a></li>
+                      </ul>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-2g"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/codeQuality/avoidShortcuts/intermediate/minimiseCodeDuplication" id="implementation-code-quality-error-prone-practices-intermediate-minimize-code-duplication">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.2g</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="implementation-code-quality-error-prone-practices-intermediate-minimize-code-duplication"><small><span class="font-weight-bold text-muted"><span>Implementation → Code Quality → Error-Prone Practices → Intermediate →</span></span></small> <strong><span>Minimize code duplication</span></strong><span id="implementation-code-quality-error-prone-practices-intermediate-minimize-code-duplication" class="anchor"></span><a class="fa fa-anchor" href="#implementation-code-quality-error-prone-practices-intermediate-minimize-code-duplication" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: minimize code duplication </span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation.</strong> While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.</p>
+                      <p>This guideline is closely related to the <span for="modal:duplication-dry" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:duplication-dry'].show()" class="trigger-click">DRY Principle<span v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['undefined'].show()" class="trigger">.</span></span></p>
+                      <b-modal id="modal:duplication-dry" hide-footer size modal-class="mb-zoom" ref="modal:duplication-dry"><template slot="modal-title"><strong><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span> DRY Principle</strong></template>
+                        <div>
+                          <div></div>
+                          <p></p>
+                          <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
+                          <div id="title-and-body">
+                            <div>
+                              <h4 id="dry-principle"><span>DRY principle</span><span id="dry-principle" class="anchor"></span><a class="fa fa-anchor" href="#dry-principle" onclick="event.stopPropagation()"></a></h4>
+                            </div>
+                            <div id="main">
+                              <div>
+                                <box type="definition">
+                                  <div>
+                                    <p><strong>DRY (Don't Repeat Yourself) principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p>
+                                  </div>
+                                </box>
+                                <p>This principle guards against duplication of information.</p>
+                                <box>
+                                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The functionality implemented twice is a violation of the DRY principle even if the two implementations are different.</p>
+                                  <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The value a system-wide timeout being defined in multiple places is a violation of DRY.</p>
+                                </box>
+                              </div>
+                              <div></div>
+                            </div>
+                          </div>
+                        </div>
+                      </b-modal>
+                      <p></p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+            </div>
+          </panel>
+          <p></p>
+          <div class="indented">
+            <div></div>
+          </div>
+          <p></p>
+          <p><span id="W6-3"></span></p>
+          <div></div>
+          <panel type="seamless" no-close expandable="true" expanded id="w6-3-developer-testing">
+            <span slot="header" class="card-title">
+              <div>
+                <h2 id="w6-3-developer-testing"><span class="dimmed">[W6.3]</span> <strong>Developer Testing</strong> <small><small><span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span></span></small></small><span id="w6-3-developer-testing" class="anchor"></span><a class="fa fa-anchor" href="#w6-3-developer-testing" onclick="event.stopPropagation()"></a></h2>
+              </div>
+            </span>
+            <div class="indented-level1">
+              <p><span id="W6-3a"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/testing/testingTypes/developerTesting/what" id="quality-assurance-testing-developer-testing-what">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.3a</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="quality-assurance-testing-developer-testing-what"><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Developer Testing →</span></span></small> <strong><span>What</span></strong><span id="quality-assurance-testing-developer-testing-what" class="anchor"></span><a class="fa fa-anchor" href="#quality-assurance-testing-developer-testing-what" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain developer testing</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-3b"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/testing/testingTypes/developerTesting/why" id="quality-assurance-testing-developer-testing-why">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.3b</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="quality-assurance-testing-developer-testing-why"><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Developer Testing →</span></span></small> <strong><span>Why</span></strong><span id="quality-assurance-testing-developer-testing-why" class="anchor"></span><a class="fa fa-anchor" href="#quality-assurance-testing-developer-testing-why" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for early developer testing</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
+                      <ul>
+                        <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.</li>
+                        <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
+                        <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
+                        <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
+                      </ul>
+                      <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
+                      <blockquote>
+                        <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
+                      </blockquote>
+                      <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+                      <p></p>
+                      <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
+                    </div>
+                    <div>
+                      <div>
+                        <panel expandable><template slot="_header">
+                            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                          </template>
+                          <div>
+                            <panel><template slot="_header">
+                                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> implications of developers testing their own code</p>
+                              </template>
+                              <question has-input="true">
+                                <p>Discuss pros and cons of developers testing their own code.</p>
+                                <div slot="answer">
+                                  <p>Pros:</p>
+                                  <ul>
+                                    <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
+                                    <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
+                                    <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
+                                    <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li>
+                                  </ul>
+                                  <p>Cons:</p>
+                                  <ul>
+                                    <li>A developer may subconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
+                                    <li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
+                                    <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
+                                    <li>A developer may lack the testing expertise.</li>
+                                  </ul>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel><template slot="_header">
+                                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Cost of bug fixing over time</p>
+                              </template>
+                              <question>
+                                <p>The cost of fixing a bug goes down as we reach the product release.</p>
+                                <ul radio-group="37242" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>False. The cost goes up over time.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel><template slot="_header">
+                                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Why early testing?</p>
+                              </template>
+                              <question has-input="true">
+                                <p>Explain why early testing by developers is important.</p>
+                              </question>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-3c"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/testing/testAutomation/usingTestDrivers" id="quality-assurance-testing-test-automation-test-automation-using-test-drivers">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.3c</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="quality-assurance-testing-test-automation-test-automation-using-test-drivers"><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Test Automation →</span></span></small> <strong><span>Test automation using test drivers</span></strong><span id="quality-assurance-testing-test-automation-test-automation-using-test-drivers" class="anchor"></span><a class="fa fa-anchor" href="#quality-assurance-testing-test-automation-test-automation-using-test-drivers" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test drivers</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>A test driver is the code that ‘drives’ the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> for the purpose of testing</strong> i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
+                      <box>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>PayrollTest</code> ‘drives’ the <code v-pre>Payroll</code> class by sending it test inputs and verifies if the output is as expected.</p>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PayrollTestDriver</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span><br></span><span>        <span class="hljs-comment">//test setup</span><br></span><span>        Payroll p = <span class="hljs-keyword">new</span> Payroll();<br></span><span><br></span><span>        <span class="hljs-comment">//test case 1</span><br></span><span>        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});<br></span><span>        <span class="hljs-comment">// automatically verify the response</span><br></span><span>        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">6400</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 1 failed "</span>);<br></span><span>        }<br></span><span><br></span><span>        <span class="hljs-comment">//test case 2</span><br></span><span>        p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});<br></span><span>        <span class="hljs-keyword">if</span> (p.totalSalary() != <span class="hljs-number">2300</span>) {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Error(<span class="hljs-string">"case 2 failed "</span>);<br></span><span>        }<br></span><span><br></span><span>        <span class="hljs-comment">//more tests...</span><br></span><span><br></span><span>        System.out.println(<span class="hljs-string">"All tests passed"</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      </box>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-3d"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/testing/testAutomation/tools" id="quality-assurance-testing-test-automation-test-automation-tools">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.3d</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="quality-assurance-testing-test-automation-test-automation-tools"><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Test Automation →</span></span></small> <strong><span>Test automation tools</span></strong><span id="quality-assurance-testing-test-automation-test-automation-tools" class="anchor"></span><a class="fa fa-anchor" href="#quality-assurance-testing-test-automation-test-automation-tools" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test automation tools</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p><strong>JUnit is a tool for automated testing of Java programs.</strong> Similar tools are available for other languages and for automating different types of testing.</p>
+                      <box>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This an automated test for a <code v-pre>Payroll</code> class, written using JUnit libraries.</p>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-meta">@Test</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testTotalSalary</span><span class="hljs-params">()</span></span>{<br></span><span>    Payroll p = <span class="hljs-keyword">new</span> Payroll();<br></span><span><br></span><span>    <span class="hljs-comment">//test case 1</span><br></span><span>    p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>, <span class="hljs-string">"E002"</span>});<br></span><span>    assertEquals(<span class="hljs-number">6400</span>, p.totalSalary());<br></span><span><br></span><span>    <span class="hljs-comment">//test case 2</span><br></span><span>    p.setEmployees(<span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"E001"</span>});<br></span><span>    assertEquals(<span class="hljs-number">2300</span>, p.totalSalary());<br></span><span><br></span><span>    <span class="hljs-comment">//more tests...</span><br></span><span>}<br></span></code></pre>
+                      </box>
+                      <p>Most modern IDEs has integrated support for testing tools. The figure below shows the JUnit output when running some JUnit tests using the Eclipse IDE.</p>
+                      <img src="/website/book/testing/testAutomation/tools/images/junit.png" height="190">
+                      <p></p>
+                    </div>
+                    <div></div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+              <p><span id="W6-3e"></span></p>
+              <div></div>
+              <panel type="seamless" expanded popup-url="/website/book/cppToJava/junit/basic" id="c-to-java-junit-junit-basic">
+                <span slot="header" class="card-title">
+                  <span class="badge badge-pill badge-light text-mute">W6.3e</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+                  <h4 id="c-to-java-junit-junit-basic"><small><span class="font-weight-bold text-muted"><span>C++ to Java → JUnit →</span></span></small> <strong><span>JUnit: Basic</span></strong><span id="c-to-java-junit-junit-basic" class="anchor"></span><a class="fa fa-anchor" href="#c-to-java-junit-junit-basic" onclick="event.stopPropagation()"></a></h4>
+                </span>
+                <div>
+                  <div class="indented">
+                    <div></div>
+                    <p></p>
+                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use simple JUnit tests</span></span></span></span></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <div>
+                      <p>When writing JUnit tests for a class <code v-pre>Foo</code>, the common practice is to create a <code v-pre>FooTest</code> class, which will contain various test methods.</p>
+                      <box>
+                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose we want to write tests for the <code v-pre>IntPair</code> class below.</p>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPair</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> first;<br></span><span>    <span class="hljs-keyword">int</span> second;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">IntPair</span><span class="hljs-params">(<span class="hljs-keyword">int</span> first, <span class="hljs-keyword">int</span> second)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.first = first;<br></span><span>        <span class="hljs-keyword">this</span>.second = second;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">intDivision</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span> (second == <span class="hljs-number">0</span>){<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"Divisor is zero"</span>);<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> first/second;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> first + <span class="hljs-string">","</span> + second;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                        <p>Here's a <code v-pre>IntPairTest</code> class to match (using JUnit 5).</p>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> org.junit.jupiter.api.Test;<br></span><span><br></span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.assertEquals;<br></span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.fail;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPairTest</span> </span>{<br></span><span><br></span><span><br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testStringConversion</span><span class="hljs-params">()</span> </span>{<br></span><span>        assertEquals(<span class="hljs-string">"4,7"</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">7</span>).toString());<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">intDivision_nonZeroDivisor_success</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        assertEquals(<span class="hljs-number">2</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>).intDivision());<br></span><span>        assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>).intDivision());<br></span><span>        assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>).intDivision());<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">intDivision_zeroDivisor_exceptionThrown</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>).intDivision());<br></span><span>            fail(); <span class="hljs-comment">// the test should not reach this line</span><br></span><span>        } <span class="hljs-keyword">catch</span> (Exception e) {<br></span><span>            assertEquals(<span class="hljs-string">"Divisor is zero"</span>, e.getMessage());<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                      </box>
+                      <p>Notes:</p>
+                      <ul>
+                        <li>Each test method is marked with a <code v-pre>@Test</code> annotation.</li>
+                        <li>Tests use <code v-pre>Assert.assertEquals(expected, actual)</code> methods to compare the expected output with the actual output. If they do not match, the test will fail. JUnit comes with other similar methods such as <code v-pre>Assert.assertNull</code> and <code v-pre>Assert.assertTrue</code>.</li>
+                        <li>Java code normally use camelCase for method names e.g., <code v-pre>testStringConversion</code> but when writing test methods, sometimes another convention is used: <code v-pre>whatIsBeingTested_descriptionOfTestInputs_expectedOutcome</code> e.g., <code v-pre>intDivision_zeroDivisor_exceptionThrown</code></li>
+                        <li>There are <a href="https://howtodoinjava.com/junit5/expected-exception-example/">several ways to verify the code throws the correct exception</a>. The third test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the <code v-pre>catch</code> block. But if it is not thrown as expected, the test will reach <code v-pre>Assert.fail()</code> line and will fail as a result.</li>
+                        <li>The easiest way to run JUnit tests is to do it via the IDE. For example, in Intellij you can right-click the folder containing test classes and choose 'Run all tests...'</li>
+                      </ul>
+                      <div v-closeable alt="Junit tutorial video" class="non-printable">
+                        <box>
+                          <p><strong><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Adding JUnit 5 to your IntelliJ Project</strong> <sub>-- by Kevintroko@YouTube</sub></p>
+                          <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Z8V7rnvDeB4" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+                        </box>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <panel expanded><template slot="_header">
+                            <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
+                          </template>
+                          <ul>
+                            <li><a href="https://junit.org/junit5/docs/current/user-guide/">JUnit Official User Guide</a></li>
+                            <li><a href="https://www.testingexcellence.com/junit-5-annotations/">JUnit 5 Tutorial – Common Annotations With Examples</a> - a short tutorial</li>
+                            <li>How to test private methods in Java?
+                              [ <a href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a> ]
+                              [ <a href="http://www.artima.com/suiterunner/private.html">long answer</a> ]</li>
+                          </ul>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <div class="indented">
+                <div></div>
+              </div>
+            </div>
+          </panel>
+          <p></p>
+          <div class="indented">
+            <div></div>
+          </div>
+          <p></p>
+        </div>
+      </div>
+
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#week-6-fri-sep-11th-topics">Week 6 [Fri, Sep 11th] - Topics&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#w6-1-ides-intermediate-features">[W6.1] IDEs: Intermediate Features &#x200E;</a>
+              <a class="nav-link py-1" href="#w6-2-code-quality-unsafe-practices">[W6.2] Code Quality: Unsafe Practices &#x200E;</a>
+              <a class="nav-link py-1" href="#w6-3-developer-testing">[W6.3] Developer Testing &#x200E;</a>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+    </footer>
+  </div>
+</body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
+<script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../markbind/js/setup.js"></script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
+
+</html>

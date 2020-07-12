@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Reuse: Frameworks: Frameworks vs Libraries</title>
+  <link rel="stylesheet" href="../../../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body>
+  <div id="app">
+    <div id="flex-body">
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/website/book/css/textbook.css">
+          <div class="website-content">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can differentiate between frameworks and libraries</span></span></span></span></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Reuse → Frameworks →
+                    </span></strong></span></p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="frameworks-versus-libraries"><span>Frameworks versus libraries</span><a class="fa fa-anchor" href="#frameworks-versus-libraries" onclick="event.stopPropagation()"></a></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>Although both frameworks and libraries are reuse mechanisms, there are notable differences:</p>
+                    <ul>
+                      <li>
+                        <p><strong>Libraries are meant to be used ‘as is’ while frameworks are meant to be customized/extended.</strong>
+                          <span class="dimmed">e.g., writing plugins for Eclipse so that it can be used as an IDE for different languages (C++, PHP, etc.), adding modules and themes to Drupal, and adding test cases to JUnit</span>.</p>
+                      </li>
+                      <li>
+                        <p><strong>Your code calls the library code while the framework code calls your code.</strong>
+                          <strong>Frameworks use a technique called <em>inversion of control</em>, aka the “Hollywood principle”</strong> (i.e. don’t call us, we’ll call you!). That is, you write code that will be called by the framework, <span class="dimmed">e.g. writing test methods that will be called by the JUnit framework.</span> In the case of libraries, your code calls libraries.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <panel><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statement about software frameworks</p>
+                            </template>
+                            <question>
+                              <p>Choose correct statements about software frameworks.</p>
+                              <ul class="contains-task-list">
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the hollywood principle, otherwise known as ‘inversion of control’</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementation.</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. They are more concrete than patterns or principles.</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. They are often configurable.</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. They are similar to reusable libraries but bigger.</li>
+                              </ul>
+                              <div slot="answer">
+                                <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
+                                <p>Explanation: While both libraries and frameworks are reuse mechanisms, and both more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are frameworks?</p>
+                            </template>
+                            <question>
+                              <p>Which one of these are frameworks ?</p>
+                              <ul class="contains-task-list">
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. JUnit</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Eclipse</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Drupal</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Ruby on Rails</li>
+                              </ul>
+                              <div slot="answer">
+                                <p>(a)(b)(c)(d)</p>
+                                <p>Explanation: These are frameworks.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../../markbind/js/components.min.js"></script>
+<script src="../../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../../../../markbind/js/setup.js"></script>
+<script src="../../../../../markbind/layouts/default/scripts.js"></script>
+
+</html>

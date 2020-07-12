@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Object Oriented Programming: Associations: Association Classes</title>
+  <link rel="stylesheet" href="../../../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body>
+  <div id="app">
+    <div id="flex-body">
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/website/book/css/textbook.css">
+          <div class="website-content">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the meaning of association classes</span></span></span></span></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Paradigms → OOP → Associations →
+                    </span></strong></span></p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="association-classes"><span>Association classes</span><a class="fa fa-anchor" href="#association-classes" onclick="event.stopPropagation()"></a></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code v-pre>Man</code> class and a <code v-pre>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association rather than specifically owned by either the <code v-pre>Man</code> object or the <code v-pre>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code v-pre>Marriage</code> class, to store such information.</p>
+                    </box>
+                    <p>
+                      <panel type="seamless" src="/website/book/_site/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Association Classes → What</p>
+                        </template><template slot="_alt">
+                          <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AssociationClasses</p>
+                        </template></panel>
+                    </p>
+                    <h5 id="implementing-association-classes">Implementing association classes<a class="fa fa-anchor" href="#implementing-association-classes" onclick="event.stopPropagation()"></a></h5>
+                    <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code v-pre>Transaction</code> class is an association class that represent a transaction between a <code v-pre>Person</code> who is the seller and another <code v-pre>Person</code> who is the buyer.</p>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{<br></span><span>    <br></span><span>    <span class="hljs-comment">//all fields are compulsory</span><br></span><span>    Person seller;<br></span><span>    Person buyer;<br></span><span>    Date date;<br></span><span>    String receiptNumber;<br></span><span>    <br></span><span>    Transaction (Person seller, Person buyer, Date date, String receiptNumber){<br></span><span>        <span class="hljs-comment">//set fields</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                    </box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <panel><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are suitable as an Association Class?</p>
+                            </template>
+                            <question>
+                              <p>Which one of these is the suitable as an Association Class?</p>
+                              <img src="/website/book/oop/associations/associationClasses/images/exerciseDiagram.png" width="500">
+                              <p></p>
+                              <ul class="contains-task-list">
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
+                              </ul>
+                              <div slot="answer">
+                                <p>(a)(b)<s>(c)</s>(d)</p>
+                                <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would be suitable as an association class.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../../markbind/js/components.min.js"></script>
+<script src="../../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../../../../markbind/js/setup.js"></script>
+<script src="../../../../../markbind/layouts/default/scripts.js"></script>
+
+</html>

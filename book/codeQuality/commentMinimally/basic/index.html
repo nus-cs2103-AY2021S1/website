@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Code Quality: [Guideline] Comment Minimally, but Sufficiently: Basic</title>
+  <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body>
+  <div id="app">
+    <div id="flex-body">
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/website/book/css/textbook.css">
+          <div class="website-content" id="all">
+            <p><span class="dimmed"><strong><span>Implementation → Code Quality → Comments →
+                  </span></strong></span></p>
+            <div id="title">
+              <h1 id="basic"><span>Basic</span><a class="fa fa-anchor" href="#basic" onclick="event.stopPropagation()"></a></h1>
+            </div>
+            <div id="main">
+              <div>
+                <div>
+                  <panel type="seamless" expanded id="do-not-repeat-the-obvious">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="do-not-repeat-the-obvious"><span>Do not repeat the obvious</span><a class="fa fa-anchor" href="#do-not-repeat-the-obvious" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: do not repeat the obvious </span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>If the code is self-explanatory, refrain from repeating the description in a comment just for the sake of 'good documentation'.</p>
+                        <div class="alt-java">
+                          <p>
+                            <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                          </p>
+                          <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//increment x</span><br></span><span>x++;<br></span><span><br></span><span><span class="hljs-comment">//trim the input</span><br></span><span>trimInput();<br></span></code></pre>
+                        </div>
+                        <div class="alt-python">
+                          <p>
+                            <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font>
+                          </p>
+                          <pre><code class="hljs python" v-pre><span><span class="hljs-comment"># increment x</span><br></span><span>x = x + <span class="hljs-number">1</span><br></span><span><br></span><span><span class="hljs-comment"># trim the input</span><br></span><span>trim_input()<br></span></code></pre>
+                        </div>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+                <div>
+                  <panel type="seamless" expanded id="write-to-the-reader">
+                    <span slot="header" class="card-title">
+                      <div>
+                        <h4 id="write-to-the-reader"><span>Write to the reader</span><a class="fa fa-anchor" href="#write-to-the-reader" onclick="event.stopPropagation()"></a></h4>
+                      </div>
+                    </span>
+                    <div class="indented">
+                      <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can improve code quality using technique: write to the reader </span></span></span></span></p>
+                      <p></p>
+                      <p></p>
+                      <p></p>
+                      <div>
+                        <p>Do not write comments as if they are private notes to yourself. Instead, write them well enough to be understood by another programmer. One type of comments that is almost always useful is the <em>header comment</em> that you write for a class or an operation to explain its purpose.</p>
+                        <box>
+                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples:</p>
+                          <div class="alt-java">
+                            <div>
+                              <p>
+                                <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span>
+                              </p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// a quick trim function used to fix bug I detected overnight</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{<br></span><span>    ....<br></span><span>}<br></span></code></pre>
+                              <p>
+                                <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                              </p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">/** Trims the input of leading and trailing spaces */</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">trimInput</span><span class="hljs-params">()</span></span>{<br></span><span>    ....<br></span><span>}<br></span></code></pre>
+                            </div>
+                          </div>
+                          <div class="alt-python">
+                            <div>
+                              <p>
+                                <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <span class="dimmed">Reason: this comment will only make sense to the person who wrote it</span>
+                              </p>
+                              <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span><br></span><span><span class="hljs-string">"""a quick trim function used to fix bug I detected overnight"""</span><br></span><span>    ...<br></span></code></pre>
+                              <p>
+                                <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font>
+                              </p>
+                              <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">trim_input</span><span class="hljs-params">()</span>:</span><br></span><span><span class="hljs-string">"""Trim the input of leading and trailing spaces"""</span><br></span><span>    ...<br></span></code></pre>
+                            </div>
+                          </div>
+                        </box>
+                      </div>
+                      <div></div>
+                    </div>
+                  </panel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../markbind/js/components.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../../../markbind/js/setup.js"></script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script>
+
+</html>

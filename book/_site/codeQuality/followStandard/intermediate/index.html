@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TIC4001 - Code Quality: [Guideline] Follow a Standard: Intermediate</title>
+  <link rel="stylesheet" href="../../../../../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/github.min.css">
+  <link rel="stylesheet" href="../../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css">
+  <link rel="icon" href="/website/favicon.ico">
+</head>
+
+<body>
+  <div id="app">
+    <div id="flex-body">
+      <div id="content-wrapper">
+        <div>
+          <link rel="stylesheet" href="/website/book/css/textbook.css">
+          <div class="website-content">
+            <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can follow intermediate style rules</span></span></span></span></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <div>
+              <div></div>
+              <p></p>
+              <p><span class="dimmed"><strong><span>Implementation → Code Quality → Style →
+                    </span></strong></span></p>
+              <div id="title-and-body">
+                <div>
+                  <h4 id="intermediate"><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4>
+                </div>
+                <div id="main">
+                  <div>
+                    <p>Go through the <a href>provided Java coding standard</a> and learn the <em>intermediate</em> style rules.</p>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expanded><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <div>
+                            <panel><template slot="_header">
+                                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Unsuitable variable name</p>
+                              </template>
+                              <question>
+                                <p>According to the given Java coding standard, which one of these is not a good name?</p>
+                                <ul radio-group="d008b" class="radio-list">
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code v-pre>totalPeople</code></label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code v-pre>checkWeight</code></label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code v-pre>getPeopleCount</code></label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code v-pre>isValidAddress</code></label></li>
+                                  <li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code v-pre>description</code></label></li>
+                                </ul>
+                                <div slot="answer">
+                                  <p>b</p>
+                                  <p>Explanation: <code v-pre>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code v-pre>isWeightValid</code> may be a better name.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                          <div>
+                            <panel><template slot="_header">
+                                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find intermediate coding standard violations</p>
+                              </template>
+                              <question>
+                                <p>Repeat the exercise in the panel below but also find violations of <em>intermediate</em> level guidelines.</p>
+                                <div>
+                                  <panel><template slot="_header">
+                                      <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p>
+                                    </template>
+                                    <question>
+                                      <p>Consider the code given below:</p>
+                                      <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;<br></span><span>    <span class="hljs-keyword">private</span> String description;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;<br></span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{<br></span><span>      <span class="hljs-keyword">this</span>.description = d;<br></span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())<br></span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }<br></span><span><br></span><span>    <span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment">     * Print the description as a string.</span><br></span><span><span class="hljs-comment">     */</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }<br></span><span>}<br></span></code></pre>
+                                      <p>In what ways the code violate the coding standard you are expected to follow?</p>
+                                      <div slot="hint">
+                                        <p>Here are three:</p>
+                                        <ul>
+                                          <li><code v-pre>descriptionPrefix</code> is a constant and should be named <code v-pre>DESCRIPTION_PREFIX</code></li>
+                                          <li>method name <code v-pre>printingDescription()</code> should be named as <code v-pre>printDescription()</code></li>
+                                          <li>boolean variable <code v-pre>important</code> should be named to sound boolean e.g., <code v-pre>isImportant</code></li>
+                                        </ul>
+                                        <p>There are many more.</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                                <div slot="hint">
+                                  <p>Here's one you are more likely to miss:</p>
+                                  <ul>
+                                    <li><code v-pre>* Print the description as a string.</code> → <code v-pre>* Prints the description as a string.</code></li>
+                                  </ul>
+                                  <p>There are more.</p>
+                                </div>
+                              </question>
+                            </panel>
+                          </div>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../../markbind/js/components.min.js"></script>
+<script src="../../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../../markbind/js/bootstrap-vue.min.js"></script>
+<script>
+  const baseUrl = '/website'
+  const enableSearch = true
+</script>
+<script src="../../../../../markbind/js/setup.js"></script>
+<script src="../../../../../markbind/layouts/default/scripts.js"></script>
+
+</html>

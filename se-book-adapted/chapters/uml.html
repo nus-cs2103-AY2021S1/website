@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Textbook Chapter : UML</title>
+  <title>CS2103/T - Textbook Chapter : UML</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/site-nav.css">
@@ -28,9 +29,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -38,7 +39,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -49,10 +50,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -65,20 +66,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -89,6 +90,16 @@
           <ul class="site-nav-list site-nav-list-root">
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/index.html">Home <span aria-hidden="true" class="glyphicon glyphicon-home"></span>, printable versions <span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software Engineering</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/softwareEngineering.html">Software Engineering</a></div>
+                </li>
+              </ul>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Programming Paradigms</strong>
@@ -132,6 +143,9 @@
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/architecture.html">Software Architecture</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designPatterns.html">Software Design Patterns</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designApproaches.html">Design Approaches</a></div>
@@ -233,12 +247,6 @@
                   <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
               <ul class="site-nav-dropdown-container site-nav-list">
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/cppToJava.html">C++ to Java</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/projectDuke/index.html">Project Duke</a></div>
-                </li>
-                <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div>
                 </li>
                 <li>
@@ -276,7 +284,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/identify class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -301,7 +311,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw UML classes</span></span></span></span>
                   <p></p>
                   <div>
@@ -316,7 +328,7 @@
                         <pic src="/website/book/uml/classDiagrams/classes/what/7955b802860949dbd1c562a5b8913660.png"></pic>
                       </div>
                       <p></p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p>The equivalent code</p>
                         </template>
                         <div class="alt-java">
@@ -337,7 +349,7 @@
                       <li><code v-pre>#</code> : protected</li>
                       <li><code v-pre>~</code> : package private</li>
                     </ul>
-                    <panel type="seamless"><template slot="_header">
+                    <panel type="seamless" class="algolia-no-index"><template slot="_header">
                         <p>How visibilities map to programming language features</p>
                       </template>
                       <div class="table-responsive">
@@ -385,7 +397,7 @@
                         <pic src="/website/book/uml/classDiagrams/classes/what/a1fc57ed7b16ae0837fcdb38fa9d5653.png"></pic>
                       </div>
                       <p></p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p>The equivalent code</p>
                         </template>
                         <div class="alt-java">
@@ -399,11 +411,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which classes are correct?</p>
                             </template>
                             <question>
@@ -417,7 +429,7 @@
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 4</li>
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 5</li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <ol>
                                   <li>Incorrect : <em>Attributes</em> compartment should be above the <em>Methods</em> compartment.</li>
                                   <li>Incorrect : All attributes should be inside the same compartment.</li>
@@ -430,7 +442,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Car class</p>
                             </template>
                             <question>
@@ -462,7 +474,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret simple associations in a class diagram</span></span></span></span>
                   <p></p>
                   <div>
@@ -482,7 +496,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret association navigabilities in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -511,11 +527,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What does the navigability given by this diagram mean?</p>
                             </template>
                             <question>
@@ -526,7 +542,7 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="29fa9" type="radio"> b. An <code v-pre>Item</code> object knows about the <code v-pre>Unit</code> object it is linked to</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="29fa9" type="radio"> c. Depends on the programming language</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(a)</p>
                                 <p>Explanation: The diagram indicates that <code v-pre>Unit</code> object should know about the <code v-pre>Item</code> object. In the implementation, the <code v-pre>Unit</code> object will hold an <code v-pre>Item</code> object in one of its variables.</p>
                               </div>
@@ -543,7 +559,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/use association roles in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -581,7 +599,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/use association labels in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -605,7 +625,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain what is the multiplicity of an association</span></span></span></span>
                   <p></p>
                   <div>
@@ -635,11 +657,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statement agrees with the multiplicity shown in this diagram?</p>
                             </template>
                             <question>
@@ -651,7 +673,7 @@
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A <code v-pre>Unit</code> object must be linked 1,2,3, or 4 <code v-pre>Item</code> objects</li>
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. A <code v-pre>Item</code> object can be 0 or more <code v-pre>Unit</code> objects.</li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(c)(d)</p>
                               </div>
                             </question>
@@ -674,7 +696,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use dependencies in a class diagram</span></span></span></span>
                   <p></p>
                   <div>
@@ -701,7 +725,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can show an association as an attribute</span></span></span></span>
                   <p></p>
                   <div>
@@ -736,7 +762,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret enumerations in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -755,7 +783,7 @@
                         </template>
                         <div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Define WeekDay Enum</p>
                               </template>
                               <question has-input="true">
@@ -781,7 +809,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret class-level members in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -796,10 +826,10 @@
                 </div>
               </panel>
             </panel>
-            <panel type="seamless" expanded id="composition">
+            <panel type="seamless" expanded id="association-classes">
               <span slot="header" class="card-title">
                 <div>
-                  <h3 id="composition"><span>Composition</span><span id="composition" class="anchor"></span><a class="fa fa-anchor" href="#composition" onclick="event.stopPropagation()"></a></h3>
+                  <h3 id="association-classes"><span>Association classes</span><span id="association-classes" class="anchor"></span><a class="fa fa-anchor" href="#association-classes" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
               <panel type="seamless" expanded id="what-8"><template slot="_header">
@@ -807,7 +837,38 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret association classes in class diagrams</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p>Association classes are denoted as a connection to an association link using a dashed line as shown below.</p>
+                    <img src="/website/book/uml/classDiagrams/associationClasses/what/images/notation.png" height="100">
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example <code v-pre>Loan</code> is an association class because it stores information about the <code v-pre>borrows</code> association between the <code v-pre>User</code> and the <code v-pre>Book</code>.</p>
+                      <img src="/website/book/uml/classDiagrams/associationClasses/what/images/bookLoan.png" height="150">
+                      <p></p>
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="composition">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="composition"><span>Composition</span><span id="composition" class="anchor"></span><a class="fa fa-anchor" href="#composition" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-9"><template slot="_header">
+                  <h4 id="what-9">What<span id="what-9" class="anchor"></span><a class="fa fa-anchor" href="#what-9" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret composition in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -831,12 +892,14 @@
                   <h3 id="aggregation"><span>Aggregation</span><span id="aggregation" class="anchor"></span><a class="fa fa-anchor" href="#aggregation" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-9"><template slot="_header">
-                  <h4 id="what-9">What<span id="what-9" class="anchor"></span><a class="fa fa-anchor" href="#what-9" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-10"><template slot="_header">
+                  <h4 id="what-10">What<span id="what-10" class="anchor"></span><a class="fa fa-anchor" href="#what-10" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret aggregation in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -855,11 +918,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which one is not recommended to use?</p>
                             </template>
                             <question>
@@ -868,7 +931,7 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="29b56" type="radio"> a. Composition symbol</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="29b56" type="radio"> b. Aggregation symbol</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(b)</p>
                               </div>
                             </question>
@@ -886,12 +949,14 @@
                   <h3 id="class-inheritance"><span>Class inheritance</span><span id="class-inheritance" class="anchor"></span><a class="fa fa-anchor" href="#class-inheritance" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-10"><template slot="_header">
-                  <h4 id="what-10">What<span id="what-10" class="anchor"></span><a class="fa fa-anchor" href="#what-10" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-11"><template slot="_header">
+                  <h4 id="what-11">What<span id="what-11" class="anchor"></span><a class="fa fa-anchor" href="#what-11" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret class inheritance in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -915,12 +980,14 @@
                   <h3 id="interfaces"><span>Interfaces</span><span id="interfaces" class="anchor"></span><a class="fa fa-anchor" href="#interfaces" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-11"><template slot="_header">
-                  <h4 id="what-11">What<span id="what-11" class="anchor"></span><a class="fa fa-anchor" href="#what-11" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-12"><template slot="_header">
+                  <h4 id="what-12">What<span id="what-12" class="anchor"></span><a class="fa fa-anchor" href="#what-12" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret interfaces in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -941,12 +1008,14 @@
                   <h3 id="abstract-classes"><span>Abstract classes</span><span id="abstract-classes" class="anchor"></span><a class="fa fa-anchor" href="#abstract-classes" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-12"><template slot="_header">
-                  <h4 id="what-12">What<span id="what-12" class="anchor"></span><a class="fa fa-anchor" href="#what-12" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-13"><template slot="_header">
+                  <h4 id="what-13">What<span id="what-13" class="anchor"></span><a class="fa fa-anchor" href="#what-13" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret abstract classes in class diagrams</span></span></span></span>
                   <p></p>
                   <div>
@@ -974,17 +1043,19 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can combine different basic aspects of class diagrams</span></span></span></span>
                   <p></p>
                   <div></div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Class Diagram for code</p>
                             </template>
                             <question>
@@ -1000,13 +1071,13 @@
                                 <p>Draw a class diagram for the code below. Also draw an object diagram that will represent the object structure after running the code. Make the multiplicities as strict as possible without contradicting the code.</p>
                                 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>:</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, item)</span>:</span><br></span><span>    self.__item = item <span class="hljs-comment"># type: Item</span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span>:</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.__previous_boxes = [] <span class="hljs-comment"># type: list of Box objects</span><br></span><span>    self.__main_card = <span class="hljs-literal">None</span>    <span class="hljs-comment"># type: Car</span><br></span><span>    self.__sub_card = <span class="hljs-literal">None</span>     <span class="hljs-comment"># type: Card</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_main_card</span><span class="hljs-params">(self, card)</span>:</span><br></span><span>    self.__main_card = card <span class="hljs-comment"># type: Card</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_sub_card</span><span class="hljs-params">(self, card)</span>:</span><br></span><span>    self.__sub_card = card <span class="hljs-comment"># type: Card</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_previous_box</span><span class="hljs-params">(self, previous_box)</span>:</span><br></span><span>    self.__previous_boxes.append(previous_box)<br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Card</span>:</span><br></span><span>  <span class="hljs-keyword">pass</span><br></span><span><br></span><span><br></span><span>item1 = Item();<br></span><span>item2 = Item();<br></span><span>box1 = Box(item1);<br></span><span>box2 = Box(item2);<br></span><span>item2.set_main_card(Card());<br></span><span>item2.add_previous_box(box1);<br></span><span>item2.add_previous_box(box2);<br></span></code></pre>
                               </div>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <img src="/website/book/uml/classDiagrams/combine/basic/images/classDiagramForCodeAnswer.png" width="600"></div>
                             </question>
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Implement Class Diagram</p>
                             </template>
                             <question>
@@ -1017,7 +1088,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw an Object Diagrams for the Class Diagram (Person-Guardian)</p>
                             </template>
                             <question>
@@ -1043,7 +1114,7 @@
                                   <p><code v-pre>Alfred</code> has a an office address at <code v-pre>Wayne Industries</code> building which is different from his home address (i.e. <code v-pre>Bat Cave</code>).</p>
                                 </li>
                               </ol>
-                              <div slot="hint">
+                              <div slot="hint" class="algolia-no-index">
                                 <p>After step 2, the diagram should be like this:</p>
                                 <img src="/website/book/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600">
                               </div>
@@ -1068,7 +1139,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/identify sequence diagrams</span></span></span></span>
                 <p></p>
                 <div>
@@ -1089,7 +1162,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with basic notation</span></span></span></span>
                 <p></p>
                 <div>
@@ -1120,7 +1195,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with object creation</span></span></span></span>
                 <p></p>
                 <div>
@@ -1145,7 +1222,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with object deletion</span></span></span></span>
                 <p></p>
                 <div>
@@ -1170,7 +1249,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with loops</span></span></span></span>
                 <p></p>
                 <div>
@@ -1191,7 +1272,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with self invocation</span></span></span></span>
                 <p></p>
                 <div>
@@ -1216,7 +1299,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with alternative paths</span></span></span></span>
                 <p></p>
                 <div>
@@ -1238,7 +1323,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with optional paths</span></span></span></span>
                 <p></p>
                 <div>
@@ -1260,7 +1347,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with parallel paths</span></span></span></span>
                 <p></p>
                 <div>
@@ -1285,7 +1374,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with reference frames</span></span></span></span>
                 <p></p>
                 <div>
@@ -1310,7 +1401,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can show calls to static methods</span></span></span></span>
                 <p></p>
                 <div>
@@ -1335,7 +1428,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with minimal notation</span></span></span></span>
                 <p></p>
                 <div>
@@ -1362,7 +1457,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/identify object diagrams</span></span></span></span>
                 <p></p>
                 <div>
@@ -1380,7 +1477,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw UML objects</span></span></span></span>
                 <p></p>
                 <div>
@@ -1403,11 +1502,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Car object</p>
                           </template>
                           <question>
@@ -1431,7 +1530,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret simple associations among objects</span></span></span></span>
                 <p></p>
                 <div>
@@ -1446,6 +1547,275 @@
               </div>
             </panel>
           </panel>
+          <panel type="seamless" expanded id="activity-diagrams">
+            <span slot="header" class="card-title">
+              <div>
+                <h2 id="activity-diagrams"><span>Activity diagrams</span><span id="activity-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#activity-diagrams" onclick="event.stopPropagation()"></a></h2>
+              </div>
+            </span>
+            <panel type="seamless" expanded id="introduction-4">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="introduction-4"><span>Introduction</span><span id="introduction-4" class="anchor"></span><a class="fa fa-anchor" href="#introduction-4" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-14"><template slot="_header">
+                  <h4 id="what-14">What<span id="what-14" class="anchor"></span><a class="fa fa-anchor" href="#what-14" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain activity diagrams</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong><span trigger="click" for="modal:modelingAd-uml" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:modelingAd-uml'].show()" class="trigger-click">UML</span> <em> activity diagrams</em> (AD) can model workflows. </strong> <span class="dimmed"><em>Flow charts</em> is another type of diagrams that can model workflows. Activity diagrams are the UML equivalent of flow charts.</span></p>
+                    <b-modal id="modal:modelingAd-uml" hide-footer size modal-class="mb-zoom" ref="modal:modelingAd-uml" class="algolia-no-index"><template slot="modal-title"><strong>Unified Modeling Language (UML)</strong></template>
+                      <div>
+                        <p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p>
+                      </div>
+                    </b-modal>
+                    <div v-closeable alt>
+                      <p>An example activity diagram:<br>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
+                        <sub>[<a href="https://en.wikipedia.org/wiki/Activity_diagram">source:wikipeida</a>]</sub></p>
+                    </div>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="basic-notations">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="basic-notations"><span>Basic notations</span><span id="basic-notations" class="anchor"></span><a class="fa fa-anchor" href="#basic-notations" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="linear-paths"><template slot="_header">
+                  <h4 id="linear-paths">Linear Paths<span id="linear-paths" class="anchor"></span><a class="fa fa-anchor" href="#linear-paths" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret linear paths in activity diagrams</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p>An activity diagram (AD) captures an <em>activity</em> of <em>actions</em> and <em>control flows</em> that makes up the activity.</p>
+                    <ul>
+                      <li>An <em>action</em> is a single step in an activity. It is shown as a rectangle with <mark>rounded corners</mark>.</li>
+                      <li>A <em>control flow</em> shows the flow of control from one action to the next. It is shown by drawing a line with an arrow-head to show the direction of the flow.</li>
+                    </ul>
+                    <img src="/website/book/uml/activityDiagrams/basicNotations/linearPaths/images/notation.png" height="180">
+                    <p>Note the slight difference between the <em>start node</em> and the <em>end node</em> which represent the start and the end of the activity, respectively.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This activity diagram shows the action sequence of the activity <em>a passenger rides the bus</em>:</p>
+                      <img src="/website/book/uml/activityDiagrams/basicNotations/linearPaths/images/example.png" width="450">
+                    </box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable class="algolia-no-index"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which activity diagrams are correct?</p>
+                            </template>
+                            <question>
+                              <p>Which of these activity diagrams use the correct UML notation?</p>
+                              <ul class="contains-task-list">
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> i</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> ii</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> iii</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> iv</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> v</li>
+                              </ul>
+                              <img src="/website/book/uml/activityDiagrams/basicNotations/linearPaths/images/q-correctNotation.png" width="500">
+                              <p></p>
+                              <div slot="answer" class="algolia-no-index">
+                                <ul>
+                                  <li>i : 👍 Correct. The arrow-head type does not matter.</li>
+                                  <li>ii : Incorrect. The start and end node notation is swapped.</li>
+                                  <li>iii : Incorrect. Action boxes should have rounded corners.</li>
+                                  <li>iv : 👍 Correct. An activity can have only one action.</li>
+                                  <li>v : Incorrect. There cannot be any double-headed arrows.</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded id="alternate-paths"><template slot="_header">
+                  <h4 id="alternate-paths">Alternate Paths<span id="alternate-paths" class="anchor"></span><a class="fa fa-anchor" href="#alternate-paths" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret alternate paths in activity diagrams</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>A <em>branch node</em> shows the start of alternate paths.</strong> Each control flow exiting a branch node has a <em>guard condition</em> : a boolean condition that should be true for execution to take that path. Only one of the guard condition can be true at any time.</p>
+                    <p><strong>A <em>merge node</em> shows the end of alternate paths.</strong></p>
+                    <p>Both branch nodes and merge nodes are <mark>diamond shapes</mark>. Guard conditions must be in <mark>square brackets</mark>.</p>
+                    <img src="/website/book/uml/activityDiagrams/basicNotations/alternatePaths/images/notation.png" height="180">
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The AD below shows alternate paths involved in the workflow of the activity <em>shop for product</em>:</p>
+                      <img src="/website/book/uml/activityDiagrams/basicNotations/alternatePaths/images/example.png" height="240">
+                      <p></p>
+                    </box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable class="algolia-no-index"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which activity diagrams are correct?</p>
+                            </template>
+                            <question>
+                              <p>Which of these activity diagrams use the correct UML notation?</p>
+                              <ul class="contains-task-list">
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> i</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> ii</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> iii</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> iv</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> v</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> vi</li>
+                              </ul>
+                              <img src="/website/book/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation1.png" width="500">
+                              <img src="/website/book/uml/activityDiagrams/basicNotations/alternatePaths/images/q-correctNotation2.png" width="500">
+                              <p></p>
+                              <div slot="answer" class="algolia-no-index">
+                                <ul>
+                                  <li>i : 👍 Correct. There can be more than two alternate paths.</li>
+                                  <li>ii : 👍 Correct. An alternate path can divide into more branches.</li>
+                                  <li>iii : 👍 Correct. A branch can join other branches.</li>
+                                  <li>iv : Incorrect. At <code v-pre>x=5</code> both guard conditions become true.</li>
+                                  <li>v : 👍 Correct. It is fine for a branch to form a loop by going back to the original branch node.</li>
+                                  <li>iv : Incorrect. Guard conditions should be given in square brackets.</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded id="parallel-paths-2"><template slot="_header">
+                  <h4 id="parallel-paths-2">Parallel Paths<span id="parallel-paths-2" class="anchor"></span><a class="fa fa-anchor" href="#parallel-paths-2" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret parallel paths in activity diagrams</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong><em>Fork</em> nodes indicate the start of <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">parallel</span>concurrent</span> flows of control.</strong></p>
+                    <p><strong><em>Join</em> nodes indicate the end of parallel paths.</strong></p>
+                    <p>Both have the same notation: a bar.</p>
+                    <p>In a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">paths within a matching fork-join pair</span>set of parallel paths</span>, execution along <strong>all parallel paths should be complete before the execution can start on the outgoing control flow of the <em>join</em>.</strong></p>
+                    <img src="/website/book/uml/activityDiagrams/basicNotations/parallelPaths/images/notation.png" height="130">
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this activity diagram (from an online shop website) the actions <em>User browsers products</em> and <em>System records browsing data</em> happen in parallel. Both of them need to finish before the <em>log out</em> action can take place.</p>
+                      <img src="/website/book/uml/activityDiagrams/basicNotations/parallelPaths/images/example.png" width="260">
+                    </box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable class="algolia-no-index"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which activity diagrams are correct?</p>
+                            </template>
+                            <question>
+                              <p>Which of these activity diagrams use the correct UML notation?</p>
+                              <ul class="contains-task-list">
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> i</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> ii</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> iii</li>
+                                <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> iv</li>
+                              </ul>
+                              <img src="/website/book/uml/activityDiagrams/basicNotations/parallelPaths/images/q-correctNotation.png" width="500">
+                              <p></p>
+                              <div slot="answer" class="algolia-no-index">
+                                <ul>
+                                  <li>i : 👍 Correct. There can be more than two parallel paths.</li>
+                                  <li>ii : Incorrect. All parallel paths that started from a fork should end in the same join node.</li>
+                                  <li>iii : Incorrect. Parallel paths must end with a join node.</li>
+                                  <li>iv : 👍 Correct. A parallel path can have multiple actions.</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded id="rakes"><template slot="_header">
+                  <h4 id="rakes">Rakes<span id="rakes" class="anchor"></span><a class="fa fa-anchor" href="#rakes" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use rakes in activity diagrams</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>The rake notation is used to indicate that a part of the activity is given as a separate diagram.</strong></p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is the AD for a game of ‘Snakes and Ladders’.</p>
+                      <img src="/website/book/uml/activityDiagrams/basicNotations/rakes/images/snakesAndLadders.png" height="230">
+                      <p></p>
+                      <p>The <em>rake</em> symbol (in the <code v-pre>Move piece</code> action above) is used to show that the action is described in another subsidiary activity diagram elsewhere. That diagram is given below.</p>
+                      <img src="/website/book/uml/activityDiagrams/basicNotations/rakes/images/movePiece.png" height="230">
+                      <p></p>
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded id="swimlanes"><template slot="_header">
+                  <h4 id="swimlanes">Swimlanes<span id="swimlanes" class="anchor"></span><a class="fa fa-anchor" href="#swimlanes" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain swimlanes in activity diagrams</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>It is possible to <em>partition</em> an activity diagram to show who is doing which action. Such partitioned activity diagrams are sometime called <em>swimlane diagrams</em>.</strong></p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A simple example of a swimlane diagram:</p>
+                      <img src="/website/book/uml/activityDiagrams/basicNotations/swimlanes/images/diagram.png" height="220">
+                      <p></p>
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+          </panel>
           <panel type="seamless" expanded id="notes">
             <span slot="header" class="card-title">
               <div>
@@ -1457,7 +1827,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use UML notes</span></span></span></span>
                 <p></p>
                 <div>
@@ -1465,6 +1837,27 @@
                   <box>
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
                     <img src="/website/book/uml/notes/notes/images/adminProfessor.png" height="120">
+                    <p></p>
+                  </box>
+                </div>
+                <div></div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded id="constraints"><template slot="_header">
+                <h4 id="constraints">Constraints<span id="constraints" class="anchor"></span><a class="fa fa-anchor" href="#constraints" onclick="event.stopPropagation()"></a></h4>
+              </template>
+              <div class="indented">
+                <span class="badge badge-light">
+                  <span><span class="dimmed">
+                      <font color="ForestGreen"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font>
+                    </span></span></span>
+                <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can specify constraints in UML diagrams</span></span></span></span>
+                <p></p>
+                <div>
+                  <p><strong>A <em>constraint</em> can be given inside a note, within curly braces</strong>. Natural language or a formal notation such as <em>OCL (Object Constraint Language)</em> may be used to specify constraints.</p>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
+                    <img src="/website/book/uml/notes/constraints/images/playerTurn.png" height="120">
                     <p></p>
                   </box>
                 </div>
@@ -1483,7 +1876,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can distinguish between class diagrams and object diagrams</span></span></span></span>
                 <p></p>
                 <div>
@@ -1510,11 +1905,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which class diagrams match object diagram?</p>
                           </template>
                           <question>
@@ -1525,7 +1920,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 1</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 2</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>(1) (2)</p>
                               <p>Explanation: Both class diagrams allow one <code v-pre>Unit</code> object to be linked to one <code v-pre>Item</code> object.</p>
                             </div>
@@ -1581,25 +1976,29 @@
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                   <a class="nav-link py-1" href="#what-7">What&#x200E;</a>
                 </nav>
-                <a class="nav-link py-1" href="#composition">Composition&#x200E;</a>
+                <a class="nav-link py-1" href="#association-classes">Association classes&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                   <a class="nav-link py-1" href="#what-8">What&#x200E;</a>
                 </nav>
-                <a class="nav-link py-1" href="#aggregation">Aggregation&#x200E;</a>
+                <a class="nav-link py-1" href="#composition">Composition&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                   <a class="nav-link py-1" href="#what-9">What&#x200E;</a>
                 </nav>
-                <a class="nav-link py-1" href="#class-inheritance">Class inheritance&#x200E;</a>
+                <a class="nav-link py-1" href="#aggregation">Aggregation&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                   <a class="nav-link py-1" href="#what-10">What&#x200E;</a>
                 </nav>
-                <a class="nav-link py-1" href="#interfaces">Interfaces&#x200E;</a>
+                <a class="nav-link py-1" href="#class-inheritance">Class inheritance&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                   <a class="nav-link py-1" href="#what-11">What&#x200E;</a>
                 </nav>
-                <a class="nav-link py-1" href="#abstract-classes">Abstract classes&#x200E;</a>
+                <a class="nav-link py-1" href="#interfaces">Interfaces&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                   <a class="nav-link py-1" href="#what-12">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#abstract-classes">Abstract classes&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-13">What&#x200E;</a>
                 </nav>
                 <a class="nav-link py-1" href="#combine">Combine&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
@@ -1627,9 +2026,25 @@
                 <a class="nav-link py-1" href="#objects">Objects&#x200E;</a>
                 <a class="nav-link py-1" href="#associations-2">Associations&#x200E;</a>
               </nav>
+              <a class="nav-link py-1" href="#activity-diagrams">Activity diagrams&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#introduction-4">Introduction&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-14">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#basic-notations">Basic notations&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#linear-paths">Linear Paths&#x200E;</a>
+                  <a class="nav-link py-1" href="#alternate-paths">Alternate Paths&#x200E;</a>
+                  <a class="nav-link py-1" href="#parallel-paths-2">Parallel Paths&#x200E;</a>
+                  <a class="nav-link py-1" href="#rakes">Rakes&#x200E;</a>
+                  <a class="nav-link py-1" href="#swimlanes">Swimlanes&#x200E;</a>
+                </nav>
+              </nav>
               <a class="nav-link py-1" href="#notes">Notes&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                 <a class="nav-link py-1" href="#notes-2">Notes&#x200E;</a>
+                <a class="nav-link py-1" href="#constraints">Constraints&#x200E;</a>
               </nav>
               <a class="nav-link py-1" href="#miscellaneous">Miscellaneous&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
@@ -1644,7 +2059,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -1655,9 +2070,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

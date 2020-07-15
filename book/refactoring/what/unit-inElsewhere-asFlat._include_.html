@@ -21,7 +21,7 @@
         </ul>
       </box>
       <p>Given below are two common refactorings (<span trigger="click" for="modal:refactoring-catalog-what" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:refactoring-catalog-what'].show()" class="trigger-click">more</span>).</p>
-      <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
+      <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
         <div>
           <ul>
             <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
@@ -92,11 +92,11 @@
     </div>
     <div>
       <div>
-        <panel expandable><template slot="_header">
+        <panel expandable class="algolia-no-index"><template slot="_header">
             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
           </template>
           <div>
-            <panel><template slot="_header">
+            <panel class="algolia-no-index"><template slot="_header">
                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Results of Refactoring</p>
               </template>
               <question>
@@ -107,7 +107,7 @@
                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Refactoring can result in better performance</li>
                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Refactoring can change the number of methods/classes</li>
                 </ul>
-                <div slot="answer">
+                <div slot="answer" class="algolia-no-index">
                   <p>a, b, c, d</p>
                   <p>Explanation:</p>
                   <ul>
@@ -119,16 +119,16 @@
             </panel>
           </div>
           <div>
-            <panel><template slot="_header">
+            <panel class="algolia-no-index"><template slot="_header">
                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Do you agree with the following statement? Refactoring and regression testing</p>
               </template>
               <question has-input="true">
                 <p>Do you agree with the following statement? Justify your answer.</p>
                 <p>Statement: <code v-pre>Whenever you refactor code to fix bugs, you need not do regression testing if the bug fix was minor.</code></p>
-                <div slot="hint">
+                <div slot="hint" class="algolia-no-index">
                   <p>There are two flaws in the given statement.</p>
                 </div>
-                <div slot="answer">
+                <div slot="answer" class="algolia-no-index">
                   <p>DISAGREE.</p>
                   <ol>
                     <li>Even a minor change can have major repercussions on the system. You MUST do regression testing after each change, no matter how minor it is.</li>
@@ -139,7 +139,7 @@
             </panel>
           </div>
           <div>
-            <panel><template slot="_header">
+            <panel class="algolia-no-index"><template slot="_header">
                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Refactoring</p>
               </template>
               <question has-input>

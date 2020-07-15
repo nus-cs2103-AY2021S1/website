@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Error Handling: Defensive Programming: Enforcing Referential Integrity</title>
+  <title>CS2103/T - Error Handling: Defensive Programming: Enforcing Referential Integrity</title>
   <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -34,7 +35,7 @@
             <div>
               <div>
                 <p>
-                  <panel src="/website/book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/errorHandling/defensiveProgramming/what"><template slot="_header">
+                  <panel src="/website/book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/errorHandling/defensiveProgramming/what" class="algolia-no-index"><template slot="_header">
                       <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Implementation → Error Handling → Defensive Programming → What</span></p>
                     </template></panel>
                 </p>
@@ -67,11 +68,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Implement <code v-pre>Player</code> and <code v-pre>Region</code></p>
                             </template>
                             <question has-input="true">
@@ -87,7 +88,7 @@
                               <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Player</span></span>{<br></span><span>    Region region;<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setRegion</span><span class="hljs-params">(Region r)</span> </span>{<br></span><span>        region = r;<br></span><span>    }<br></span><span>    <span class="hljs-function">Region <span class="hljs-title">getRegion</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> region;<br></span><span>    }<br></span><span>} <br></span><span><br></span><span><span class="hljs-comment">// Region class is similar</span><br></span></code></pre>
                               <p>However, this is not very defensive. For example, a user of this class can pass a <code v-pre>null</code> to either of the methods, thus violating the multiplicity of the relationship.</p>
                               <p>Implement the two classes using a more defensive approach. Take note of the bidirectional link which requires us to preserve referential integrity at all times.</p>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>In this solution, assume <code v-pre>Regions</code> can be created without <code v-pre>Players</code> (note that you cannot be 100% defensive all the time). The usage will be something like this:</p>
                                 <pre><code class="hljs java" v-pre><span>Region r1 = <span class="hljs-keyword">new</span> Region();<br></span><span>Player p1 = <span class="hljs-keyword">new</span> Player(r1);<br></span><span>Region r2 = <span class="hljs-keyword">new</span> Region();<br></span><span>Player p2 = <span class="hljs-keyword">new</span> Player(r2);<br></span><span>p1.setRegion(r2);<br></span><span>r1.setPlayer(p2);<br></span></code></pre>
                                 <p>Here are the two classes. Get methods are omitted as they are simple. Note how much extra effort you need to be defensive.</p>
@@ -99,14 +100,14 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Bidirectional association between <code v-pre>Bank</code> and <code v-pre>Account</code></p>
                             </template>
                             <question has-input="true">
                               <p>Implement this bidirectional association. Note that the <code v-pre>Bank</code> uses <code v-pre>accNumber</code> attribute to uniquely identify an <code v-pre>Account</code> object. Assume the <code v-pre>Bank</code> class is responsible for maintaining the links between objects.</p>
                               <img src="/website/book/errorHandling/defensiveProgramming/referentialIntegrity/images/bankAccount.jpg" height="60">
                               <p></p>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>The code below contains a method in the <code v-pre>Bank</code> class to create an account; the bank field in the new account is thereby filled by the bank creating it.</p>
                                 <p>Assume that once an <code v-pre>Account</code> has been assigned to one <code v-pre>Bank</code>, it cannot be assigned to a different <code v-pre>Bank</code>. Once the <code v-pre>Account</code> is removed from the <code v-pre>Bank</code>, it will not be used any more (hence, no need to remove the link from <code v-pre>Account</code> to <code v-pre>Bank</code>).</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Account</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> accNumber ;<br></span><span>    <span class="hljs-keyword">private</span> Bank theBank ;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Account</span><span class="hljs-params">(<span class="hljs-keyword">int</span> n, Bank b)</span> </span>{<br></span><span>        accno = n ;<br></span><span>        theBank = b ;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> accNumber;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Bank <span class="hljs-title">getBank</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> theBank ;<br></span><span>    }<br></span><span>}<br></span></code></pre>
@@ -116,7 +117,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is the code defensive? <code v-pre>Teacher</code> and <code v-pre>Student</code></p>
                             </template>
                             <question has-input="true">
@@ -132,7 +133,7 @@
                               <p>(c) Show a defensive implementation of the <code v-pre>remove(Member m)</code> of the <code v-pre>Club</code> class given below.</p>
                               <img src="/website/book/errorHandling/defensiveProgramming/referentialIntegrity/images/clubMember.png" height="60">
                               <p></p>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(a) Yes. Each links is mutable and unidirectional. A simple reference variable is suitable to hold the link.</p>
                                 <p><code v-pre>Teacher</code> class can be made even more defensive by introducing a <code v-pre>resetFavoriteStudent()</code> method to unlink the current favorite student from a teacher. In that case, <code v-pre>setFavoriteStudent(Student)</code> method should not accept null. This approach is more defensive because it prevents a null value being passed to <code v-pre>setFavoriteStudent(Student)</code> by mistake and being interpreted as a request to de-link the current favorite student from the <code v-pre>Teacher</code> object.</p>
                                 <p>(b) First diagram has unidirectional links. Second has a bidirectional link. RI is only applicable to the second.</p>
@@ -143,7 +144,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> True or False?</p>
                             </template>
                             <question>
@@ -152,7 +153,7 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="719bb" type="radio"> True</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="719bb" type="radio"> False</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>True</p>
                                 <p>Explanation: Bidirectional associations require two objects to link to each other. When one of these links is not consistent with the other, you have a referential integrity violation.</p>
                               </div>
@@ -178,9 +179,37 @@
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../../../markbind/layouts/default/scripts.js"></script>
 
 </html>

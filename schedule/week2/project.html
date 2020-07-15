@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Week 2 - Project</title>
+  <title>CS2103/T - Week 2 - Project</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -92,10 +93,10 @@
             <li class="page-item"><a class="page-link" href="/website/schedule/week1"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
             <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
             <li class="page-item"><a class="page-link" href="/website/schedule/week2/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week2/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week2/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
             <li class="page-item"><a class="page-link" href="/website/schedule/week2/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week2/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
             <li class="page-item active"><a class="page-link" href="/website/schedule/week2/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week2/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
             <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
             <li class="page-item"><a class="page-link" href="/website/schedule/week3"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
           </ul>
@@ -109,13 +110,56 @@
               <li><span>Learn about the project</span></li>
               <li><span>Set up prerequisites</span></li>
               <li><span>Set up the project in your computer</span></li>
-              <li>Add Increments (+ commit, tag, push): <code v-pre>Level-0</code>, <code v-pre>Level-1</code>, <code v-pre>Level-2</code>, <code v-pre>Level-3</code> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span></li>
+              <li>Add Increments while committing frequently: <code v-pre>Level-1</code>, <code v-pre>Level-2</code>, <code v-pre>Level-3</code>, <code v-pre>Level-4</code>, <code v-pre>A-TextUiTesting</code>, <code v-pre>Level-5</code>, <code v-pre>Level-6</code>, <code v-pre>A-Enums</code> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Aug 20th 2359</span></span></li>
             </ol>
           </div>
         </div>
         <h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="ip">iP<span id="ip" class="anchor"></span><a class="fa fa-anchor" href="#ip" onclick="event.stopPropagation()"></a></h2>
         <div>
-          <div></div>
+          <div>
+            <div>
+              <box type="info" dismissible>
+                <p>The iP (and the tP) undergoes changes after each semester. As such, teething issues are a possibility. If you encounter any problem while doing the iP/tP, please post in the <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a> so that we can take necessary actions.
+                </p>
+              </box>
+              <p></p>
+            </div>
+            <div>
+              <box dismissible>
+                <p>
+                  <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> We discourage you from doing project tasks allocated to future weeks. Reasons: In order to help you gain <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">the ability to apply knowledge or do tasks effortlessly as if you have been doing them for a long time</span><em>fluency</em></span> (and also to better simulate real projects), <strong>we want the project work to be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">done at multiple times with time gaps in between</span><em>spaced</em></span> and spread over a longer period</strong>, rather than to be done as a short burst.
+                </p>
+                <p>Reminder: as per iP grading criteria, <em>some</em> increments need to to be done in each week for you to get full marks.
+                </p>
+              </box>
+              <p></p>
+            </div>
+            <div>
+              <box dismissible>
+                <p>
+                  <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Please follow instructions carefully. Any deviations can cause our grading scripts to miss your work (and result in you not getting credit for the work).
+                </p>
+              </box>
+            </div>
+            <box dismissible>
+              <p><strong><span aria-hidden="true" class="fas fa-clock"></span> Deadline:</strong></p>
+              <p>Note the typical deadline weekly project tasks:</p>
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Weekly schedule → <strong>Deadline for weekly tasks</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <h3 id="deadline-for-weekly-tasks">Deadline for weekly tasks<span id="deadline-for-weekly-tasks" class="anchor"></span><a class="fa fa-anchor" href="#deadline-for-weekly-tasks" onclick="event.stopPropagation()"></a></h3>
+                  <div tags="m--cs2103 m--cs2113">
+                    <p><strong>The deadline to complete tasks allocated to the week</strong> is the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., if your tutorial is on Thursday, the deadline is Wednesday 23.59</span>midnight before your tutorial day</span>, unless stated otherwise. Our grading scripts that detect your work run at midnight and only the work that's done by midnight will be eligible for marks (for cases where the task is graded).</p>
+                  </div>
+                </div>
+              </panel>
+              <p></p>
+              <p>But <mark>as there are no tutorials this week, you have until Thu, Aug 20th 2359</mark> to finish this week's iP tasks.
+              </p>
+            </box>
+            <p></p>
+          </div>
           <p></p>
           <h4 id="1-learn-about-the-project"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Learn about the project</span><span id="1-learn-about-the-project" class="anchor"></span><a class="fa fa-anchor" href="#1-learn-about-the-project" onclick="event.stopPropagation()"></a></h4>
           <div>
@@ -123,13 +167,13 @@
               <li><strong>Read the following two sections</strong>, if you haven't done so already:</li>
             </ul>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>iP - Overview</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
                   <div id="title"></div>
                   <div id="body">
-                    <p>The objectives of the individual project (iP) is to learn/refresh the basics of,</p>
+                    <p><strong>The objectives of the individual project (iP)</strong> is to learn/refresh the basics of,</p>
                     <ul>
                       <li>Java</li>
                       <li>OOP</li>
@@ -138,12 +182,14 @@
                       <li>Project automation tools</li>
                       <li>Code quality</li>
                     </ul>
-                    <p>All skills you will learn in the iP will be useful in the team project (tP). Furthermore, some of the iP code can be adapted for the tP.</p>
-                    <p>The iP is based on the generic project called <a href="/website/se-book-adapted/projectDuke/index.html"><em>Project Duke</em></a>, the overview of which is given below.</p>
+
+                    <p><strong>All skills you will learn in the iP will be useful in the team project (tP)</strong>. Furthermore, some of the iP code can be adapted for the tP.<br>
+                      <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> The more you do in the iP and farther you push beyond the minimal expectations, the easier it will be in your tP.</p>
+                    <p><strong>The iP is based on the generic project called <a href="/website/se-book-adapted/projectDuke/index.html"><em>Project Duke</em></a></strong>, the overview of which is given below.</p>
                     <div>
                       <div class="indented">
                         <div class="indented border">
-                          <panel type="seamless">
+                          <panel type="seamless" class="algolia-no-index">
                             <div></div>
                             <div slot="header"><span><span class="dimmed"><strong>Duke - Overview</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
                             <div></div>
@@ -179,7 +225,7 @@
                       </div>
                     </div>
                     <br>
-                    <p>The project is to be <strong>done over the first half of the semester</strong>.</p>
+                    <p><strong>The iP is to be done over the first half of the semester</strong>.</p>
                     <box type="warning">
                       <ul>
                         <li><strong>Volatile requirements ahead!</strong>: Some requirements will only be released later (or could be changed along the way), to simulate how requirements of a project may not be available at the start or stay the same during the project.</li>
@@ -193,21 +239,22 @@
             </div>
             <p></p>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>iP - Grading</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
                   <div id="title"></div>
                   <div id="body">
-                    <p><strong>Implementation [<code v-pre>10</code> marks]</strong>: To get full marks, you should achieve,</p>
+                    <p><strong><strong>Total: <code v-pre>30</code> marks</strong></strong></p>
+                    <p><strong>Implementation [<code v-pre>15</code> marks]</strong>: To get full marks, you should achieve,</p>
                     <ul>
                       <li>Achieve <strong>more than 90% of all deliverables</strong> by the end.</li>
                       <li>Requirements marked as <span class="badge badge-pill badge-secondary">optional</span> or <span class="badge badge-pill badge-secondary">if-applicable</span> are not counted when calculating the percentage of deliverables.</li>
                       <li>When a requirement specifies a <code v-pre>minimal</code> version of it, simply reaching that minimal version of the requirement is enough for it to be counted for grading -- however, we recommend you to go beyond the minimal; the farther you go, the more practice you will get.</li>
                     </ul>
-                    <p><strong>Project Management [<code v-pre>5</code> marks]</strong>: To get full marks, you should achieve,</p>
+                    <p><strong>Project Management [<code v-pre>10</code> marks]</strong>: To get full marks, you should achieve,</p>
                     <ul>
-                      <li>Submit <em>some</em> deliverables in at least 4 out of the 6 iP weeks (i.e., week 2- week 7)</li>
+                      <li>Submit <em>some</em> deliverables in at least 4 out of the 6 iP weeks (i.e., week 2 - week 8)</li>
                       <li>Follow other requirements specified (e.g., how to use Git/Github for each increment, do peer reviews) in at least 4 weeks</li>
                     </ul>
                     <p><strong>Documentation [<code v-pre>5</code> marks]</strong>: To get full marks, you should achieve,</p>
@@ -232,7 +279,7 @@
               <li><strong>Ensure you have followed the <span class="pr-1 pl-1" style="color:purple; border: 0.5px solid lightgrey"><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation</span> sections of the following module tools:</strong></li>
             </ul>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Programming Language</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
@@ -243,6 +290,12 @@
                       <td>
                         <p><mark><strong>The main language</strong> used in this module is Java</mark>. You should use
                           Java for all programming activities, the project, and exam answers.</p>
+                        <span tags="m--cs2103">
+                          <p>The module doesn’t “teach” Java. We assume you already know Java basics.
+                            We expect you to learn on your own any Java constructs not covered in your previous modules.
+                            The exam expects you to know Java to the extent that you should be familiar with it as a result of using it in the module exercises/projects.
+                          </p>
+                        </span>
                         <p></p>
                       </td>
                     </tr>
@@ -255,15 +308,16 @@
                   <p></p>
                   <h4 id="java-coding-standard">Java coding standard<span id="java-coding-standard" class="anchor"></span><a class="fa fa-anchor" href="#java-coding-standard" onclick="event.stopPropagation()"></a></h4>
                   <p>Some module activities will require you to follow <a href="https://se-education.org/guides/conventions/java/intermediate.html">this Java coding standard</a>.</p>
-                  <div tags="m--cs2113 m--tic4001">
-                    <p><strong>Follow <mark>basic</mark> guidelines</strong> (those marked as ⭐️) in those cases; intermediate and advanced guidelines are optional.</p>
+
+                  <div tags="m--cs2103">
+                    <p><strong>Follow <mark>basic and intermediate</mark> guidelines</strong> (those marked as ⭐️ and ⭐️⭐️) in those cases; advanced guidelines are optional.</p>
                   </div>
                 </div>
               </panel>
             </div>
             <p></p>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools → Git</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
@@ -291,7 +345,7 @@
             </div>
             <p></p>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Tools → <strong>GitHub</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
@@ -302,7 +356,7 @@
                   <box>
                     <p><span style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation</strong>:</span></p>
                     <p>Create a GitHub account (if you don't have one yet), as explained in the panel below.</p>
-                    <panel type class="embedding" minimized><template slot="_header">
+                    <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                         <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Appendix E - GitHub: Creating an Account</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                       </template>
                       <div>
@@ -317,7 +371,7 @@
                               <li>Specify your full name.</li>
                               <li>Upload a profile photo that matches <span trigger="click" for="modal:creatingGitHubAccount-photoCriteria" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:creatingGitHubAccount-photoCriteria'].show()" class="trigger-click">our requirements</span>.</li>
                             </ul>
-                            <panel type="seamless"><template slot="_header">
+                            <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                 <p><span class="dimmed">Why am I being encouraged to complete my GitHub profile?</span></p>
                               </template>
                               <p>The GitHub profile is useful for the tutors and classmates to identify you. If you are reluctant to share your info in your long-term GitHub account, you can remove those details after the module is over or create a separate GitHub account just for the module.</p>
@@ -327,7 +381,7 @@
                             <p><mark>You are discouraged from changing your GitHub username during the semester/exam/grading period</mark> as it can cause our auto-grading scripts to miss your GitHub activities. If you do change your GitHub username during that period, please let us know immediately.</p>
                           </li>
                         </ol>
-                        <b-modal id="modal:creatingGitHubAccount-photoCriteria" hide-footer size="lg" modal-class="mb-zoom" ref="modal:creatingGitHubAccount-photoCriteria"><template slot="modal-title">Our requirements for the profile photo</template>
+                        <b-modal id="modal:creatingGitHubAccount-photoCriteria" hide-footer size="lg" modal-class="mb-zoom" ref="modal:creatingGitHubAccount-photoCriteria" class="algolia-no-index"><template slot="modal-title">Our requirements for the profile photo</template>
                             <div>
                             <p>The purpose of the profile photo is for the reader to identify you. Therefore, choose a <mark>recent individual photo showing your face clearly</mark> (i.e., not too small) -- somewhat similar to a passport photo. Given below are some examples of good and bad profile photos.<br>
                               <img src="/website/admin/images/profilephotos.png" style="width: 365.33px"></p>
@@ -343,7 +397,7 @@
             </div>
             <p></p>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Tools → <strong>Intellij IDEA</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
@@ -371,50 +425,41 @@
               <li>Read through this week's topics before starting the project.</li>
             </ul>
             <ol>
-              <li>Fork <a href="https://github.com/nus-tic4001-AY2021S1/ip">https://github.com/nus-tic4001-AY2021S1/ip</a>.</li>
+              <li>Fork <a href="https://github.com/nus-cs2103-AY2021S1/ip">https://github.com/nus-cs2103-AY2021S1/ip</a>.</li>
               <li><mark>Enable the issue tracker of your fork</mark> (Go to <code v-pre>Settings</code> of your fork, scroll to the <code v-pre>Features</code> section, and tick the <code v-pre>Issues</code> checkbox). <span class="dimmed">Reason: at times we post feedback on your issue tracker.</span><br>
                 <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If the issue tracker is enabled, you should be able to visit the following URL <code v-pre>https://github.com/{your_user_name}/ip/issues</code> e.g., <code v-pre>https://github.com/johnDoe/ip/issues</code></li>
               <li>Clone the fork onto your computer.</li>
-              <li>Set up the project in your IDE as explained in <a href="https://github.com/nus-tic4001-AY2021S1/ip/blob/master/README.md">the README file</a>.<br></li>
+              <li>Set up the project in your IDE as explained in <a href="https://github.com/nus-cs2103-AY2021S1/ip/blob/master/README.md">the README file</a>.<br></li>
             </ol>
           </div>
           <p></p>
-          <h4 id="4-add-increments-commit-tag-push-level-0-level-1-level-2-level-3-before-next-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> Add Increments (+ commit, tag, push): <code v-pre>Level-0</code>, <code v-pre>Level-1</code>, <code v-pre>Level-2</code>, <code v-pre>Level-3</code> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span><span id="4-add-increments-commit-tag-push-level-0-level-1-level-2-level-3-before-next-lecture" class="anchor"></span><a class="fa fa-anchor" href="#4-add-increments-commit-tag-push-level-0-level-1-level-2-level-3-before-next-lecture" onclick="event.stopPropagation()"></a></h4>
+          <h4 id="4-add-increments-while-committing-frequently-level-1-level-2-level-3-level-4-a-textuitesting-level-5-level-6-a-enums-thu-aug-20th-2359"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> Add Increments while committing frequently: <code v-pre>Level-1</code>, <code v-pre>Level-2</code>, <code v-pre>Level-3</code>, <code v-pre>Level-4</code>, <code v-pre>A-TextUiTesting</code>, <code v-pre>Level-5</code>, <code v-pre>Level-6</code>, <code v-pre>A-Enums</code> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Aug 20th 2359</span></span><span id="4-add-increments-while-committing-frequently-level-1-level-2-level-3-level-4-a-textuitesting-level-5-level-6-a-enums-thu-aug-20th-2359" class="anchor"></span><a class="fa fa-anchor" href="#4-add-increments-while-committing-frequently-level-1-level-2-level-3-level-4-a-textuitesting-level-5-level-6-a-enums-thu-aug-20th-2359" onclick="event.stopPropagation()"></a></h4>
           <div>
             <div>
               <ul>
+                <li>Implement the following <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">in this context, an <em>increment</em> is a Duke <em>level</em> or a Duke <em>extension</em></span>increments</span> <mark>in the given order</mark>.</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
                 <li>From this point onward, commit code at important points. <mark>Minimally, commit after completing each increment</mark>.</li>
+              </ul>
+            </div>
+            <div>
+              <ul>
+                <li>From this point onward, after completing each increment,
+                  <ul>
+                    <li><strong><code v-pre>git tag</code></strong> the commit with the exact increment ID e.g., <code v-pre>Level-2</code>, <code v-pre>A-TextUiTesting</code></li>
+                    <li><strong><code v-pre>git push</code></strong> the code to your fork (<span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> git doesn't push tags unless you specifically ask it to)</li>
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
           <div>
             <div class="indented">
               <div class="indented border">
-                <panel type="seamless">
-                  <div></div>
-                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-0</code>: Greet</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
-                  <div></div>
-                  <div>
-                    <p><span>
-                        <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-grin-hearts"></span></thumbnail>
-                      </span></p>
-                    <h3 id="level-0-greet">Level 0. Greet<span id="level-0-greet" class="anchor"></span><a class="fa fa-anchor" href="#level-0-greet" onclick="event.stopPropagation()"></a></h3>
-                    <p>Implement an initial <em>skeletal</em> version of the Duke that simply greets the user and exits.
-                      <br>
-                      Example:</p>
-                    <pre><code class="no-line-numbers hljs" v-pre><span>____________________________________________________________<br></span><span> Hello! I'm Duke<br></span><span> What can I do for you?<br></span><span>____________________________________________________________<br></span><span> Bye. Hope to see you again soon!<br></span><span>____________________________________________________________<br></span></code></pre>
-                    <ul>
-                      <li>The indentation and horizontal lines are optional.</li>
-                    </ul>
-                  </div>
-                </panel>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="indented">
-              <div class="indented border">
-                <panel type="seamless">
+                <panel type="seamless" class="algolia-no-index">
                   <div></div>
                   <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-1</code>: Greet, Echo, Exit</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
                   <div></div>
@@ -443,7 +488,7 @@
           <div>
             <div class="indented">
               <div class="indented border">
-                <panel type="seamless">
+                <panel type="seamless" class="algolia-no-index">
                   <div></div>
                   <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-2</code>: Add, List</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
                   <div></div>
@@ -467,7 +512,7 @@
           <div>
             <div class="indented">
               <div class="indented border">
-                <panel type="seamless">
+                <panel type="seamless" class="algolia-no-index">
                   <div></div>
                   <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-3</code>: Mark as Done</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
                   <div></div>
@@ -481,7 +526,7 @@
                     <div>
                       <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
                       <div class="indented">
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><strong>Extension: <code v-pre>A-Classes</code></strong></p>
                           </template>
                           <div>
@@ -491,7 +536,7 @@
                               <p>     <big>↳</big> <strong>Use a class to represent tasks</strong></p>
                             </div>
                             <p>While it is possible to represent a task list as a multi-dimensional array containing <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><code v-pre>String</code>, <code v-pre>int</code>, <code v-pre>boolean</code> etc.</span>primitive values</span>, the more natural approach is to use a <code v-pre>Task</code> class to represent tasks.</p>
-                            <panel type="seamless" minimized><template slot="_header">
+                            <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
                                 <p>Partial solution</p>
                               </template>
                               <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">protected</span> String description;<br></span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String description)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.description = description;<br></span><span>        <span class="hljs-keyword">this</span>.isDone = <span class="hljs-keyword">false</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getStatusIcon</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> (isDone ? <span class="hljs-string">"\u2713"</span> : <span class="hljs-string">"\u2718"</span>); <span class="hljs-comment">//return tick or X symbols</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span></code></pre>
@@ -501,6 +546,185 @@
                         </panel>
                       </div>
                     </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless" class="algolia-no-index">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-4</code>: ToDo, Event, Deadline</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div></div>
+                  <div>
+                    <p><span>
+                        <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-business-time"></span></thumbnail>
+                      </span></p>
+                    <h3 id="level-4-todos-events-deadlines">Level 4. ToDos, Events, Deadlines<span id="level-4-todos-events-deadlines" class="anchor"></span><a class="fa fa-anchor" href="#level-4-todos-events-deadlines" onclick="event.stopPropagation()"></a></h3>
+                    <p>Add support for tracking three types of tasks:
+                      <br>
+                      <br></p>
+                    <ol>
+                      <li><strong>ToDos</strong>: tasks without any date/time attached to it <span class="dimmed">e.g., <em>visit new theme park</em></span></li>
+                      <li><strong>Deadlines</strong>: tasks that need to be done before a specific date/time <span class="dimmed">e.g., <em>submit report by 11/10/2019 5pm</em></span></li>
+                      <li><strong>Events</strong>: tasks that start at a specific time and ends at a specific time <span class="dimmed">e.g., <em>team project meeting on 2/10/2019 2-4pm</em></span></li>
+                    </ol>
+                    <p>Example:</p>
+                    <pre><code class="no-line-numbers hljs" v-pre><span>todo borrow book<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [T][✗] borrow book<br></span><span>     Now you have 5 tasks in the list.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>list<br></span><span>    ____________________________________________________________<br></span><span>     Here are the tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✗] return book (by: June 6th)<br></span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     4.[T][✓] join sports club<br></span><span>     5.[T][✗] borrow book<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>deadline return book /by Sunday<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [D][✗] return book (by: Sunday)<br></span><span>     Now you have 6 tasks in the list.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>event project meeting /at Mon 2-4pm<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [E][✗] project meeting (at: Mon 2-4pm)<br></span><span>     Now you have 7 tasks in the list.<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                    <p>At this point, dates/times can be treated as strings; there is no need to convert them to actual dates/times.</p>
+                    <p>Example:</p>
+                    <pre><code class="no-line-numbers hljs" v-pre><span><br></span><span>deadline do homework /by no idea :-p<br></span><span>    ____________________________________________________________<br></span><span>     Got it. I've added this task: <br></span><span>       [D][✗] do homework (by: no idea :-p)<br></span><span>     Now you have 6 tasks in the list.<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                    <div>
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
+                      <div class="indented">
+                        <panel class="algolia-no-index"><template slot="_header">
+                            <p><strong>Extension: <code v-pre>A-Inheritance</code></strong></p>
+                          </template>
+                          <div>
+                            <div>
+                              <div></div>
+                              <h3 id="a-inheritance"><span class="badge badge-pill badge-primary">A-Inheritance</span><span id="a-inheritance" class="anchor"></span><a class="fa fa-anchor" href="#a-inheritance" onclick="event.stopPropagation()"></a></h3>
+                              <p>     <big>↳</big> <strong>Use Inheritance to support multiple task types</strong></p>
+                            </div>
+                            <p>As there are multiple types of tasks that have some similarity between them, you can implement classes <code v-pre>Todo</code>, <code v-pre>Deadline</code> and <code v-pre>Event</code> classes to inherit from a <code v-pre>Task</code> class.</p>
+                            <p>Furthermore, use polymorphism to store all tasks in a data structure containing <code v-pre>Task</code> objects e.g., <code v-pre>Task[100]</code>.</p>
+                            <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
+                                <p>Partial solution</p>
+                              </template>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Deadline</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">protected</span> String by;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Deadline</span><span class="hljs-params">(String description, String by)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(description);<br></span><span>        <span class="hljs-keyword">this</span>.by = by;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"[D]"</span> + <span class="hljs-keyword">super</span>.toString() + <span class="hljs-string">" (by: "</span> + by + <span class="hljs-string">")"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span>Task[] tasks = <span class="hljs-keyword">new</span> Task[<span class="hljs-number">100</span>];<br></span><span>task[<span class="hljs-number">0</span>] = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"return book"</span>, <span class="hljs-string">"Monday"</span>);<br></span></code></pre>
+                            </panel>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless" class="algolia-no-index">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-TextUiTesting</code>: Automated Text UI Testing</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div></div>
+                  <div>
+                    <div>
+                      <div></div>
+                      <h3 id="a-textuitesting"><span class="badge badge-pill badge-primary">A-TextUiTesting</span><span id="a-textuitesting" class="anchor"></span><a class="fa fa-anchor" href="#a-textuitesting" onclick="event.stopPropagation()"></a></h3>
+                      <p>     <big>↳</big> <strong>Test using the I/O redirection technique</strong></p>
+                    </div>
+                    <p>Use the input/output redirection technique to semi-automate the testing of Duke.</p>
+                    <p>Notes:</p>
+                    <ul>
+                      <li>A tutorial of this technique is <a href="https://se-education.org/guides/tutorials/textUiTesting.html">here</a>.</li>
+                      <li>The required scripts are provided in the Duke repo (see the <code v-pre>text-ui-test</code> folder).</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless" class="algolia-no-index">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-5</code>: Handle Errors</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div></div>
+                  <div>
+                    <p><span>
+                        <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-exclamation-triangle"></span></thumbnail>
+                      </span></p>
+                    <h3 id="level-5-handle-errors">Level 5. Handle Errors<span id="level-5-handle-errors" class="anchor"></span><a class="fa fa-anchor" href="#level-5-handle-errors" onclick="event.stopPropagation()"></a></h3>
+                    <p>Teach Duke to deal with errors such as incorrect inputs entered by the user.
+                      <br>
+                      <br></p>
+                    <p>Example:</p>
+                    <pre><code class="no-line-numbers hljs" v-pre><span>todo<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! The description of a todo cannot be empty.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>blah<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                    <div>
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
+                      <div class="indented">
+                        <panel class="algolia-no-index"><template slot="_header">
+                            <p><strong>Extension: <code v-pre>A-Exceptions</code></strong></p>
+                          </template>
+                          <div>
+                            <div>
+                              <div></div>
+                              <h3 id="a-exceptions"><span class="badge badge-pill badge-primary">A-Exceptions</span><span id="a-exceptions" class="anchor"></span><a class="fa fa-anchor" href="#a-exceptions" onclick="event.stopPropagation()"></a></h3>
+                              <p>     <big>↳</big> <strong>Use Exceptions to handle errors</strong></p>
+                            </div>
+                            <p>Use exceptions to handle errors. For example, define a class <code v-pre>DukeException</code> to represent exceptions specific to Duke.</p>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                    <ul>
+                      <li><strong>Minimal</strong>: handle at least the two types of errors shown in the example above.</li>
+                      <li><strong>Stretch goal</strong>: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added.</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless" class="algolia-no-index">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-6</code>: Delete</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div></div>
+                  <div>
+                    <p><span>
+                        <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-trash-alt"></span></thumbnail>
+                      </span></p>
+                    <h3 id="level-6-delete">Level 6. Delete<span id="level-6-delete" class="anchor"></span><a class="fa fa-anchor" href="#level-6-delete" onclick="event.stopPropagation()"></a></h3>
+                    <p>Add support for deleting tasks from the list.
+                      <br>
+                      <br></p>
+                    <p>Example:</p>
+                    <pre><code class="no-line-numbers hljs" v-pre><span>list<br></span><span>    ____________________________________________________________<br></span><span>     Here are the tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✓] return book (by: June 6th)<br></span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     4.[T][✓] join sports club<br></span><span>     5.[T][✗] borrow book<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>delete 3<br></span><span>    ____________________________________________________________<br></span><span>     Noted. I've removed this task: <br></span><span>       [E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     Now you have 4 tasks in the list.<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                    <div>
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
+                      <div class="indented">
+                        <panel class="algolia-no-index"><template slot="_header">
+                            <p><strong>Extension: <code v-pre>A-Collections</code></strong></p>
+                          </template>
+                          <div>
+                            <div>
+                              <div></div>
+                              <h3 id="a-collections"><span class="badge badge-pill badge-primary">A-Collections</span><span id="a-collections" class="anchor"></span><a class="fa fa-anchor" href="#a-collections" onclick="event.stopPropagation()"></a></h3>
+                              <p>     <big>↳</big> <strong>Use Java Collections classes</strong></p>
+                            </div>
+                            <p>Use Java Collections classes for storing data. For example, you can use an <code v-pre>ArrayList&lt;Task&gt;</code> to store the tasks.</p>
+                          </div>
+                        </panel>
+                      </div>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless" class="algolia-no-index">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-Enums</code>: Use Enums</strong></span> <span class="badge badge-pill badge-secondary">if-applicable</span></span></div>
+                  <div></div>
+                  <div>
+                    <div>
+                      <div></div>
+                      <h3 id="a-enums"><span class="badge badge-pill badge-primary">A-Enums</span><span id="a-enums" class="anchor"></span><a class="fa fa-anchor" href="#a-enums" onclick="event.stopPropagation()"></a></h3>
+                      <p>     <big>↳</big> <strong>Use Enumerations</strong></p>
+                    </div>
+                    <p>Use Java <code v-pre>enum</code>s, if applicable.</p>
                   </div>
                 </panel>
               </div>
@@ -521,7 +745,7 @@
                 <a class="nav-link py-1" href="#1-learn-about-the-project">1 Learn about the project&#x200E;</a>
                 <a class="nav-link py-1" href="#2-set-up-prerequisites">2 Set up prerequisites&#x200E;</a>
                 <a class="nav-link py-1" href="#3-set-up-the-project-in-your-computer">3 Set up the project in your computer&#x200E;</a>
-                <a class="nav-link py-1" href="#4-add-increments-commit-tag-push-level-0-level-1-level-2-level-3-before-next-lecture">4 Add Increments (+ commit, tag, push): Level-0, Level-1, Level-2, Level-3 before next lecture&#x200E;</a>
+                <a class="nav-link py-1" href="#4-add-increments-while-committing-frequently-level-1-level-2-level-3-level-4-a-textuitesting-level-5-level-6-a-enums-thu-aug-20th-2359">4 Add Increments while committing frequently: Level-1, Level-2, Level-3, Level-4, A-TextUiTesting, Level-5, Level-6, A-Enums Thu, Aug 20th 2359&#x200E;</a>
               </nav>
             </nav>
 
@@ -532,7 +756,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -543,9 +767,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

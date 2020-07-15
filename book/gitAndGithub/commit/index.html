@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Git and GitHub: Commit</title>
+  <title>CS2103/T - Git and GitHub: Commit</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -34,7 +35,7 @@
             <div>
               <div>
                 <p>
-                  <panel src="/website/book/gitAndGithub/init/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/gitAndGithub/init"><template slot="_header">
+                  <panel src="/website/book/gitAndGithub/init/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/gitAndGithub/init" class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Git &amp; GitHub → Init</span></p>
                     </template></panel>
                 </p>
@@ -71,7 +72,7 @@
                           <p></p>
                         </div>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
                           <p>You can use the <code v-pre>git status</code> command to check the status of the working directory.</p>
                           <pre><code class="hljs sh" v-pre><span>git status<br></span></code></pre>
@@ -97,7 +98,7 @@
                           <p></p>
                         </div>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
                           <p>You can use the <code v-pre>stage</code> or the <code v-pre>add</code> command (they are synonyms, <code v-pre>add</code> is the more popular choice) to stage files.</p>
                           <pre><code class="hljs sh" v-pre><span>git add fruits.txt<br></span><span>git status<br></span></code></pre>
@@ -115,7 +116,7 @@
                           <p></p>
                         </div>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
                           <p>Use the <code v-pre>commit</code> command to commit. The <code v-pre>-m</code> switch is used to specify the commit message.</p>
                           <pre><code class="hljs sh" v-pre><span>git commit -m <span class="hljs-string">"add fruits.txt"</span><br></span></code></pre>
@@ -146,7 +147,7 @@
                         <p>To see the revision graph, click on the <code v-pre>History</code> item on the menu on the right edge of SourceTree.
                         </p>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <p></p>
                         <p>The <code v-pre>gitk</code> command opens a rudimentary graphical view of the revision graph.
                         </p>
@@ -181,9 +182,37 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 
 </html>

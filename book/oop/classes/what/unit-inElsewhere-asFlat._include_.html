@@ -56,7 +56,7 @@
           </template>
           <div>
             <div>
-              <panel><template slot="_header">
+              <panel class="algolia-no-index"><template slot="_header">
                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Identify Classes and Objects</p>
                 </template>
                 <question>
@@ -64,7 +64,7 @@
                   <box>
                     <p>A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p>
                   </box>
-                  <div slot="answer">
+                  <div slot="answer" class="algolia-no-index">
                     <div class="table-responsive">
                       <table class="markbind-table table table-bordered table-striped">
                         <thead>
@@ -98,14 +98,14 @@
               </panel>
             </div>
             <div>
-              <panel><template slot="_header">
+              <panel class="algolia-no-index"><template slot="_header">
                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Classes for CityConnect app</p>
                 </template>
                 <question has-input="true">
                   <p>Assume you are writing a CLI program called <strong><code v-pre>CityConnect</code></strong> for storing and querying distances between cities. The behavior is as follows:</p>
                   <pre><code class="hljs" v-pre><span>Welcome to CityConnect!<br></span><span><br></span><span>Enter command: addroute Clementi BuonaVista 12<br></span><span>Route from Clementi to BuonaVista with distance 12km added<br></span><span><br></span><span>Enter command: getdistance Clementi BuonaVista<br></span><span>Distance from Clementi to BuonaVista is 12<br></span><span><br></span><span>Enter command: getdistance Clementi JurongWest<br></span><span>No route exists from Clementi to JurongWest!<br></span><span><br></span><span>Enter command: addroute Clementi JurongWest 24<br></span><span>Route from Clementi to JurongWest with distance 24km added<br></span><span><br></span><span>Enter command: getdistance Clementi JurongWest<br></span><span>Distance from Clementi to JurongWest is 24<br></span><span><br></span><span>Enter command: exit<br></span><span><br></span></code></pre>
                   <p>What classes would you have in your code if you write your program based on the OOP paradigm?</p>
-                  <div slot="hint">
+                  <div slot="hint" class="algolia-no-index">
                     <p>One class you can have is <code v-pre>Route</code></p>
                   </div>
                 </question>

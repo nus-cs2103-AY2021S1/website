@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Admin: iP: Week 4</title>
+  <title>CS2103/T - Admin: iP: Week 4</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../markbind/css/site-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -89,7 +90,7 @@
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <ul class="site-nav-list site-nav-list-root">
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">TIC4001 Software Engineering Practicum I</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">CS2103/T Software Engineering</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -106,7 +107,10 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/weeklySchedule.html"><small>Weekly Schedule</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures/Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tutorials.html"><small>Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
               </ul>
             </li>
@@ -146,7 +150,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w6.html"><small>iP: Week 6</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w8.html"><small>iP: Week 8</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -189,22 +193,22 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w7.html"><small>tP week 7: Get ready for iterations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v2.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v2.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v2.1</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v2.1</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-deliverables.html"><small>tP: Deliverables</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -225,6 +229,9 @@
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/exams.html">Exams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -277,20 +284,20 @@
           <div id="main">
             <div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
               <ol>
-                <li><span>Review some peer PRs</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during lecture</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
-                <li>Add Increments as branches: <code v-pre>A-CodeQuality</code>, <code v-pre>A-AbstractClasses</code>, <code v-pre>A-Packages</code>, <code v-pre>Level-5</code></li>
+                <li><span>Review some peer PRs</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+                <li>Add Increments as parallel branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code></li>
               </ol>
             </div>
             <div id="body">
               <div></div>
               <p></p>
-              <h4 id="1-review-some-peer-prs-during-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Review some peer PRs</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during lecture</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-review-some-peer-prs-during-lecture" class="anchor"></span><a class="fa fa-anchor" href="#1-review-some-peer-prs-during-lecture" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="1-review-some-peer-prs"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Review some peer PRs</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-review-some-peer-prs" class="anchor"></span><a class="fa fa-anchor" href="#1-review-some-peer-prs" onclick="event.stopPropagation()"></a></h4>
               <div>
                 <ul>
                   <li><strong>Learn <em>how</em> you should review PRs in this task</strong>:</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Reviewing PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -341,7 +348,7 @@
                       <li>At the end of the review, choose <code v-pre>Comment</code> (i.e., not <code v-pre>Approve</code> or <code v-pre>Request changes</code>)</li>
                     </ul>
                   </li>
-                  <li><strong>Review two PRs</strong> created by your classmates. PRs can be found <a href="https://github.com/nus-tic4001-AY2021S1/ip/pulls">here</a>.
+                  <li><strong>Review two PRs</strong> created by your classmates. PRs can be found <a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls">here</a>.
                     <ul>
                       <li>The allocation of which PRs to review will be specified in <a href>this page</a> (you will be notified when the allocation is ready).</li>
                       <li>To find the target PR, you can use a filter <code v-pre>author:AuthorUsername</code> e.g., <code v-pre>author:johnDoe</code></li>
@@ -351,8 +358,8 @@
                 </ul>
                 <div class="indented-level2">
                   <box type="tip" light>
-                    <p><strong>You can use the iP Code Dashboard to view others' code</strong>: You can now easily view <a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard">iP code written by classmates</a>, using the <code v-pre>Links → iP Code Dashboard</code> item in the top navigation menu. Click on the <span class="badge badge-light"><span><span class="dimmed"><strong>&lt;/&gt;</strong></span></span></span> icon corresponding to a student name to see the code written by that person. We encourage you to read others’ code and learn from them. If you adopt solutions from others (also encouraged), please follow our reuse policy.</p>
-                    <panel type class="embedding" minimized><template slot="_header">
+                    <p><strong>You can use the iP Code Dashboard to view others' code</strong>: You can now easily view <a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard">iP code written by classmates</a>, using the <code v-pre>Links → iP Code Dashboard</code> item in the top navigation menu. Click on the <span class="badge badge-light"><span><span class="dimmed"><strong>&lt;/&gt;</strong></span></span></span> icon corresponding to a student name to see the code written by that person. We encourage you to read others’ code and learn from them. If you adopt solutions from others (also encouraged), please follow our reuse policy.</p>
+                    <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                         <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module Policies → Policy on Reuse</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                       </template>
                       <div>
@@ -372,7 +379,7 @@
                                   <li>The work comes from a source of 'good standing' (such as an established open source project). This means you cannot reuse code written by an outside 'friend'.</li>
                                   <li>You clearly give credit to the original author. Acknowledge use of third party resources clearly e.g. in the welcome message, splash screen (if any) or under the 'about' menu. If you are open about reuse, you are less likely to get into trouble if you unintentionally reused something copyrighted.</li>
                                   <li>You do not violate the license under which the work has been released. Please  <strong>do not use 3rd-party images/audio</strong> in your software unless they have been specifically released to be used freely. Just because you found it in the Internet does not mean it is free for reuse.</li>
-                                  <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">forum</a>. That way, the whole class get to see what libraries are being used by others.</li>
+                                  <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a>. That way, the whole class get to see what libraries are being used by others.</li>
                                 </ul>
                               </li>
                             </ul>
@@ -399,7 +406,7 @@
                                 </li>
                               </ul>
                             </box>
-                            <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
+                            <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
                                 <div>
                                 <h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
                                 <ul>
@@ -476,7 +483,7 @@
                                 </ul>
                               </div>
                             </b-modal>
-                            <b-modal id="modal:reusePolicy-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-ppp"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project → Deliverables → Project Portfolio Page</template>
+                            <b-modal id="modal:reusePolicy-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-ppp" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project → Deliverables → Project Portfolio Page</template>
                                 <div>
                                 <div>
                                   <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
@@ -490,7 +497,7 @@
                                     <li><strong>Overview</strong>: A short overview of your product to provide some context to the reader. The opening 1-2 sentences may be reused by all team members. If your product overview extends beyond 1-2 sentences, the remainder should be written by yourself.</li>
                                     <li><strong>Summary of Contributions</strong> --Suggested items to include:
                                       <ul>
-                                        <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
+                                        <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
                                         <li><strong>Enhancements implemented:</strong> A summary of the enhancements you implemented.</li>
                                         <li><strong>Contributions to documentation:</strong> Which sections did you contribute to the UG?</li>
                                         <li><strong>Contributions to the DG:</strong> Which sections did you contribute to the DG? Which UML diagrams did you add/updated?</li>
@@ -505,18 +512,24 @@
                                       </ul>
                                     </li>
                                   </ul>
-                                  <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks"><template slot="modal-title">Team-Based Tasks</template>
+                                  <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks" class="algolia-no-index"><template slot="modal-title">Team-Based Tasks</template>
                                     <div>
                                       <box>
                                         <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                                        <panel type="seamless"><template slot="_header">
+                                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                             <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
                                           </template>
                                           <span id="example-team-tasks">
                                             <p>Here is a non-exhaustive list of team-tasks:</p>
                                             <ol>
                                               <li>Setting up the GitHub team org/repo</li>
-                                              <li>Necessary general code enhancements</li>
+                                              <li>Necessary general code enhancements e.g.,
+                                                <ol>
+                                                  <li>Work related to renaming the product</li>
+                                                  <li>Work related to changing the product icon</li>
+                                                  <li>Morphing the product into a different product</li>
+                                                </ol>
+                                              </li>
                                               <li>Setting up tools e.g., GitHub, Gradle</li>
                                               <li>Maintaining the issue tracker</li>
                                               <li>Release management</li>
@@ -529,8 +542,8 @@
                                     </div>
                                   </b-modal>
                                   <div class="indented-level2">
-                                    <box border-left-color="darkcyan">
-                                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
+                                    <box type="tip" seamless>
+                                      <p>Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
                                       </p>
                                     </box>
                                     <p></p>
@@ -543,11 +556,11 @@
                                   <h4 id="ppp-format"><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><span id="ppp-format" class="anchor"></span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
                                   <ul>
                                     <li>File name (i.e., in the repo): <code v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code v-pre>docs/team/goodcoder123.md</code></li>
-                                    <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-tic4001-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
+                                    <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-cs2103-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
                                   </ul>
                                   <div class="indented-level2">
                                     <div>
-                                      <box type="important" light>
+                                      <box type="important" seamless>
                                         <p><strong>To convert the UG/DG/PPP into PDF format</strong>, go to the generated page in your project's <a href="http://github.io">github.io</a> site and use <a href="https://se-education.org/guides/tutorials/savingPdf.html">this technique</a> to save as a pdf file. <mark>Using other techniques can result in poor quality resolution (will be considered a bug) and unnecessarily large files.</mark></p>
                                         <p><strong>Ensure hyperlinks in the pdf files work</strong>. Your UG/DG/PPP will be evaluated using PDF files during the PE. <mark>Broken/non-working hyperlinks in the PDF files will be reported as bugs</mark> and will count against your project score. Again, use the conversion technique given above to ensure links in the PDF files work.
                                         </p>
@@ -600,66 +613,34 @@
                 </div>
               </div>
               <p></p>
-              <h4 id="2-add-increments-as-branches-a-codequality-a-abstractclasses-a-packages-level-5"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Add Increments as branches: <code v-pre>A-CodeQuality</code>, <code v-pre>A-AbstractClasses</code>, <code v-pre>A-Packages</code>, <code v-pre>Level-5</code><span id="2-add-increments-as-branches-a-codequality-a-abstractclasses-a-packages-level-5" class="anchor"></span><a class="fa fa-anchor" href="#2-add-increments-as-branches-a-codequality-a-abstractclasses-a-packages-level-5" onclick="event.stopPropagation()"></a></h4>
-              <div></div>
+              <h4 id="2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Add Increments as parallel branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code><span id="2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs" class="anchor"></span><a class="fa fa-anchor" href="#2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs" onclick="event.stopPropagation()"></a></h4>
               <div>
-                <div class="indented">
-                  <div class="indented border">
-                    <panel type="seamless">
-                      <div></div>
-                      <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-CodeQuality</code>: Improve Code Quality</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
-                      <div></div>
-                      <div>
-                        <div>
-                          <div></div>
-                          <h3 id="a-codequality"><span class="badge badge-pill badge-primary">A-CodeQuality</span><span id="a-codequality" class="anchor"></span><a class="fa fa-anchor" href="#a-codequality" onclick="event.stopPropagation()"></a></h3>
-                          <p>     <big>↳</big> <strong>Improve code quality</strong></p>
-                        </div>
-                        <p>Critically examines the code and refactor to improve the code quality where necessary.</p>
-                        <p>
-                          <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> When adding this increment, follow closely the 'Code Quality' topics you have learned so far, rather than merely follow your own intuition about code quality.
-                        </p>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
+                <ul>
+                  <li><strong>Do each enhancement in a separate branch and merge to the <code v-pre>master</code> branch only when ready</strong> (if you push incomplete features into the <code v-pre>master</code> branch, it can confuse others reviewing your PR).
+                    <br>
+                    <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you have completed any of them in previous weeks, just add the corresponding tag (no need to create a branch).</li>
+                </ul>
               </div>
               <div>
                 <div class="indented">
                   <div class="indented border">
-                    <panel type="seamless">
+                    <panel type="seamless" class="algolia-no-index">
                       <div></div>
-                      <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-AbstractClasses</code>: Use Abstract Classes</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
-                      <div></div>
-                      <div>
-                        <div>
-                          <div></div>
-                          <h3 id="a-abstractclasses"><span class="badge badge-pill badge-primary">A-AbstractClasses</span><span id="a-abstractclasses" class="anchor"></span><a class="fa fa-anchor" href="#a-abstractclasses" onclick="event.stopPropagation()"></a></h3>
-                          <p>     <big>↳</big> <strong>Use abstract classes</strong></p>
-                        </div>
-                        <p>Make the <code v-pre>Task</code> class an abstract class. If applicable, use abstract methods as well.</p>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="indented">
-                  <div class="indented border">
-                    <panel type="seamless">
-                      <div></div>
-                      <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-Packages</code>: Organize into Packages</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                      <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-Gradle</code>: Use Gradle</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
                       <div></div>
                       <div>
                         <div>
                           <div></div>
-                          <h3 id="a-packages"><span class="badge badge-pill badge-primary">A-Packages</span><span id="a-packages" class="anchor"></span><a class="fa fa-anchor" href="#a-packages" onclick="event.stopPropagation()"></a></h3>
-                          <p>     <big>↳</big> <strong>Divide classes into packages</strong></p>
+                          <h3 id="a-gradle"><span class="badge badge-pill badge-primary">A-Gradle</span><span id="a-gradle" class="anchor"></span><a class="fa fa-anchor" href="#a-gradle" onclick="event.stopPropagation()"></a></h3>
+                          <p>     <big>↳</big> <strong>Automate project builds using Gradle</strong></p>
                         </div>
-                        <p>Organize the classes into suitable java packages.</p>
+                        <p>Use Gradle to automate some of the build tasks of the project. Refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to set up Gradle for your project.</p>
+                        <p>Refer to the <a href="https://se-education.org/guides/tutorials/gradle.html"><em>Grade tutorial</em> @SE-EDU</a> to learn how to use Gradle.</p>
+                        <p>Gradle support is provided as a separate branch (named <code v-pre>add-gradle-support</code>) in the Duke repo. Go ahead and merge that branch to the <code v-pre>master</code> branch.</p>
                         <ul>
-                          <li><strong>Minimal</strong>: put all classes in one package e.g., <code v-pre>duke</code></li>
-                          <li><strong>Stretch goal</strong>: divide into multiple packages as the number of classes increase e.g., <code v-pre>duke.task</code>, <code v-pre>duke.command</code></li>
+                          <li><strong>Minimal</strong>: Set up gradle so that you can build and run Duke using gradle.</li>
+                          <li><strong>Recommended</strong>: Set up gradle to run unit tests.</li>
+                          <li><strong>Stretch Goal</strong>: Use gradle to automate more things in your project.</li>
                         </ul>
                       </div>
                     </panel>
@@ -669,41 +650,59 @@
               <div>
                 <div class="indented">
                   <div class="indented border">
-                    <panel type="seamless">
+                    <panel type="seamless" class="algolia-no-index">
                       <div></div>
-                      <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-5</code>: Handle Errors</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                      <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-CheckStyle</code>: Use CheckStyle</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
+                      <div></div>
+                      <div>
+                        <div>
+                          <div></div>
+                          <h3 id="a-checkstyle"><span class="badge badge-pill badge-primary">A-CheckStyle</span><span id="a-checkstyle" class="anchor"></span><a class="fa fa-anchor" href="#a-checkstyle" onclick="event.stopPropagation()"></a></h3>
+                          <p>     <big>↳</big> <strong>Use CheckStyle</strong></p>
+                        </div>
+                        <p>Use checkStyle to detect coding style violations.</p>
+                        <p>Refer the tutorial <a href="https://se-education.org/guides/tutorials/checkstyle.html"><em>Using Checkstyle</em> @SE-EDU/guides</a> to learn how to use Checkstyle.</p>
+                        <p></p>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="indented">
+                  <div class="indented border">
+                    <panel type="seamless" class="algolia-no-index">
+                      <div></div>
+                      <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-10</code>: GUI</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
                       <div></div>
                       <div>
                         <p><span>
-                            <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-exclamation-triangle"></span></thumbnail>
+                            <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-window-maximize"></span></thumbnail>
                           </span></p>
-                        <h3 id="level-5-handle-errors">Level 5. Handle Errors<span id="level-5-handle-errors" class="anchor"></span><a class="fa fa-anchor" href="#level-5-handle-errors" onclick="event.stopPropagation()"></a></h3>
-                        <p>Teach Duke to deal with errors such as incorrect inputs entered by the user.
-                          <br>
-                          <br></p>
-                        <p>Example:</p>
-                        <pre><code class="no-line-numbers hljs" v-pre><span>todo<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! The description of a todo cannot be empty.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>blah<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                        <h3 id="level-10-gui">Level 10. GUI<span id="level-10-gui" class="anchor"></span><a class="fa fa-anchor" href="#level-10-gui" onclick="event.stopPropagation()"></a></h3>
+                        <p>Add a GUI to Duke. Use the JavaFX technology to implement the GUI.</p>
+                        <br>
+                        <br>
+                        <p>Refer to the <a href="https://se-education.org/guides/tutorials/javaFx.html"><em>JavaFX tutorial</em> @SE-EDU/guides</a> to learn how to get started with JavaFX.</p>
+                      </div>
+                    </panel>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="indented">
+                  <div class="indented border">
+                    <panel type="seamless" class="algolia-no-index">
+                      <div></div>
+                      <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-Varargs</code>: Use Varargs</strong></span> <span class="badge badge-pill badge-secondary">if-applicable</span></span></div>
+                      <div></div>
+                      <div>
                         <div>
-                          <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
-                          <div class="indented">
-                            <panel><template slot="_header">
-                                <p><strong>Extension: <code v-pre>A-Exceptions</code></strong></p>
-                              </template>
-                              <div>
-                                <div>
-                                  <div></div>
-                                  <h3 id="a-exceptions"><span class="badge badge-pill badge-primary">A-Exceptions</span><span id="a-exceptions" class="anchor"></span><a class="fa fa-anchor" href="#a-exceptions" onclick="event.stopPropagation()"></a></h3>
-                                  <p>     <big>↳</big> <strong>Use Exceptions to handle errors</strong></p>
-                                </div>
-                                <p>Use exceptions to handle errors. For example, define a class <code v-pre>DukeException</code> to represent exceptions specific to Duke.</p>
-                              </div>
-                            </panel>
-                          </div>
+                          <div></div>
+                          <h3 id="a-varargs"><span class="badge badge-pill badge-primary">A-Varargs</span><span id="a-varargs" class="anchor"></span><a class="fa fa-anchor" href="#a-varargs" onclick="event.stopPropagation()"></a></h3>
+                          <p>     <big>↳</big> <strong>Use var-args</strong></p>
                         </div>
-                        <ul>
-                          <li><strong>Minimal</strong>: handle at least the two types of errors shown in the example above.</li>
-                          <li><strong>Stretch goal</strong>: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added.</li>
-                        </ul>
+                        <p>Use Java varargs feature, if applicable.</p>
                       </div>
                     </panel>
                   </div>
@@ -727,8 +726,8 @@
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
             <a class="nav-link py-1" href="#ip-week-4">iP: Week 4 &#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#1-review-some-peer-prs-during-lecture">1 Review some peer PRs during lecture counted for participation&#x200E;</a>
-              <a class="nav-link py-1" href="#2-add-increments-as-branches-a-codequality-a-abstractclasses-a-packages-level-5">2 Add Increments as branches: A-CodeQuality, A-AbstractClasses, A-Packages, Level-5&#x200E;</a>
+              <a class="nav-link py-1" href="#1-review-some-peer-prs">1 Review some peer PRs counted for participation&#x200E;</a>
+              <a class="nav-link py-1" href="#2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs">2 Add Increments as parallel branches: A-Gradle, A-CheckStyle, Level-10, A-Varargs&#x200E;</a>
             </nav>
 
           </nav>
@@ -738,7 +737,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -749,9 +748,37 @@
 <script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../markbind/layouts/default/scripts.js"></script>
 
 </html>

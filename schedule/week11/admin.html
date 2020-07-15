@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Week 11 - Admin Info</title>
+  <title>CS2103/T - Week 11 - Admin Info</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -93,10 +94,10 @@
               <li class="page-item"><a class="page-link" href="/website/schedule/week10"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
               <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week11/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week11/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week11/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
               <li class="page-item active"><a class="page-link" href="/website/schedule/week11/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week11/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week11/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week11/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
               <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week12"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
             </ul>
@@ -106,13 +107,13 @@
           <div id="main">
             <div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
               <ol>
-                <li><span>Submit post-lecture quiz</span></li>
+                <li><span>Submit post-lecture quiz</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
               </ol>
             </div>
             <div id="body">
               <div></div>
               <p></p>
-              <h4 id="1-submit-post-lecture-quiz"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Submit post-lecture quiz</span><span id="1-submit-post-lecture-quiz" class="anchor"></span><a class="fa fa-anchor" href="#1-submit-post-lecture-quiz" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="1-submit-post-lecture-quiz"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Submit post-lecture quiz</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-submit-post-lecture-quiz" class="anchor"></span><a class="fa fa-anchor" href="#1-submit-post-lecture-quiz" onclick="event.stopPropagation()"></a></h4>
               <div>
                 <ul>
                   <li><strong>Post-lecture quiz</strong>: Read weekly topics allocated for this week and submit the post-lecture quiz before the following lecture.</li>
@@ -120,6 +121,125 @@
               </div>
               <p></p>
             </div>
+          </div>
+          <h4 id="other-info-relevant-to-this-week"><span class="badge badge-pill badge-dark p-2"><big><big>+</big></big></span> Other info relevant to this week:<span id="other-info-relevant-to-this-week" class="anchor"></span><a class="fa fa-anchor" href="#other-info-relevant-to-this-week" onclick="event.stopPropagation()"></a></h4>
+          <div class="indented-level2">
+            <panel type minimized class="algolia-no-index">
+              <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Exams <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
+              <div>
+                <h2 id="final-exam">Final Exam<span id="final-exam" class="anchor"></span><a class="fa fa-anchor" href="#final-exam" onclick="event.stopPropagation()"></a></h2>
+                <box type="important">
+                  <p>Instructions below are from the previous semester. Will be updated closer to the exam.
+                  </p>
+                </box>
+                <p></p>
+                <ul>
+                  <li>The final exam will be as per the normal exam schedule, and will count for 30% of the final grade.</li>
+                  <li>The exam will be done online. Tools used: LumiNUS, Zoom, Microsoft Teams.</li>
+                </ul>
+                <h3 id="early-preparations">Early preparations<span id="early-preparations" class="anchor"></span><a class="fa fa-anchor" href="#early-preparations" onclick="event.stopPropagation()"></a></h3>
+                <ul>
+                  <li><strong>Set up Zoom</strong>: Follow the <a href="https://wiki.nus.edu.sg/display/THES/Proctoring+with+Zoom">Zoom exam instructions provided by NUS</a> (note the requirement for <mark>SSO login</mark>).
+                    <ul>
+                      <li><strong>Update the name of your Zoom profile to match the exact name on your student card, <mark>including whether the family name is give first or last</mark></strong> (reason: we need to manually locate your name in the attendance list, which is sorted by your name in LumiNUS). You will not be admitted to the Zoom meeting if you do not comply with the requirement.</li>
+                      <li><strong>Note the requirements for camera placement</strong>: Your Zoom video feed need to capture your upper body and the work area, including the computer screen (<mark>as explained in <a href="https://www.youtube.com/watch?v=BoeXRLfpYv4">this example</a></mark>). That means <strong>the built-in camera of your computer is not suitable</strong> for this purpose. Use either a separate web cam (attached to your Computer) or use Zoom through your smart phone. If neither of those options are available to you, let the prof know ASAP (deadline: April 24).</li>
+                    </ul>
+                  </li>
+                </ul>
+                <div class="indented-level2">
+                  <box type="important">
+                    <p>You will not be allowed into the Zoom meeting unless your Zoom name complies with the above requirement.<br>
+                      Your exam submission will not be accepted if your Zoom video feed does not comply with the above requirement.
+                    </p>
+                  </box>
+                  <box type="warning">
+                    <p></p>
+                    <p>As per NUS requirements, your Zoom video feed is recorded by us and will be shared with NUS administration. If you do not consent to that, please let us know ASAP (deadline: April 24) so that we can put you in touch with the NUS administration to sort it out.
+                    </p>
+                  </box>
+                  <p></p>
+                </div>
+                <ul>
+                  <li><strong>Set up MS-Teams</strong>: Follow the <a href="https://wiki.nus.edu.sg/display/THES/Before+exams+-+Install+and+log+in+to+Microsoft+Teams"><em>Microsoft Teams</em> instructions provided by NUS</a>. We'll be using MS-Teams as a backup in case of Zoom fails.</li>
+                </ul>
+                <h3 id="30-minutes-before-the-exam">30 minutes before the exam<span id="30-minutes-before-the-exam" class="anchor"></span><a class="fa fa-anchor" href="#30-minutes-before-the-exam" onclick="event.stopPropagation()"></a></h3>
+                <ul>
+                  <li>Aim to join the Zoom waiting room around 12.30pm.</li>
+                  <li>Ensure your computer and the phone (if applicable) are charged and within reach of a power supply.</li>
+                  <li>In your computer, close all other apps and browser tabs other than the ones permitted to be use for the exam. Remember to exit other background apps that starts automatically such as telegram.</li>
+                  <li>Launch MS-Teams, login to it, and close the app without exiting (which makes it run in the background).</li>
+                  <li>Login to LumiNUS. The password to open the quiz will be broadcast via Zoom (audio announcement plus chat message) by the invigilator later.</li>
+                  <li>If you are using Zoom from your phone, remember to disable the auto-sleep/lock feature so that the phone doesn't go to sleep in the middle of the exam.</li>
+                  <li>Launch Zoom, login, ensure profile name and camera complies with our requirements, and join the meeting. Wait for the invigilator to take you into the meeting.</li>
+                  <li><strong>Do not use more than one Zoom device at a time.</strong>
+                    <ul>
+                      <li>If it is inconvenient to use the Zoom device for PM'ing the invigilator <span class="dimmed">(e.g., if you are using Zoom through a smart phone mounted on a stand)</span>, use MS-Teams (via your computer) to PM the invigilator.</li>
+                      <li><strong>Exception: if you use a phone as your primary Zoom device but it not convenient to use it for audio</strong> <span class="dimmed">(e.g., its speaker volume not high enough)</span>,<br>
+                        <ol>
+                          <li>Get our permission to use the PC as a second Zoom device.</li>
+                          <li>Install Zoom in the PC.</li>
+                          <li>Use the PC for audio/chat only (i.e., switch off the video) and the phone for video only.</li>
+                          <li>Name your Zoom profile name in the PC as <code v-pre>[PC] Your Name as in Student Card</code> e.g., <code v-pre>[PC] John Doe</code></li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Once you are inside the Zoom meeting, wait patiently until all students have been admitted and the exam is ready to start. <strong>This wait could be as long as 30-45 minutes.</strong></li>
+                  <li>Note that <mark>the quiz will not appear on LumiNUS until a few minutes before we release the password</mark>.</li>
+                </ul>
+                <h3 id="during-the-exam">During the exam<span id="during-the-exam" class="anchor"></span><a class="fa fa-anchor" href="#during-the-exam" onclick="event.stopPropagation()"></a></h3>
+                <ul>
+                  <li><strong>Keep both the video and speaker switched-on (but microphone muted)</strong> in your Zoom during the entire exam.</li>
+                  <li>Do not use MS-Teams during the exam unless the invigilator uses to contact you, you need to contact the invigilator, or you need to contact CIT for tech help.</li>
+                  <li><strong>Stay in the video frame for the entire exam duration</strong>, except during the toilet break.</li>
+                  <li><strong>Do not to use virtual backgrounds in Zoom</strong>. Do not use pre-recorded videos as your video feed.</li>
+                  <li>As the exam is open-book, you can refer to any printed/written materials or use the computer to read any PDF/word documents that are in your computer. You may also access the online version of the textbook in the module website but <mark>strongly encouraged to use the PDF or printed version of the textbook instead</mark>.<br>
+                    <strong>Do not visit any other websites, use any other apps, or online search engines during the exam.</strong></li>
+                  <li><strong>Remain in the video frame until the invigilator ends the exam</strong>, even after you have submitted the quiz. Do not use the computer or other communication devices (not even Kindle) during that period (suggestion: have something in hard-copy form to ready to read during this time e.g., printed lecture notes of another module).</li>
+                  <li><strong>Do not communicate with any person other than the invigilator</strong> during the exam, as per normal exam rules.</li>
+                  <li><strong>When the invigilator asks you to do a <em>face check</em></strong>, turn your face towards the camera, move closer to the camera, remove face mask (if any), and hold the pose until the invigilator tells you to go back to your working position.</li>
+                </ul>
+                <h3 id="troubleshooting-exam-problems">Troubleshooting exam problems<span id="troubleshooting-exam-problems" class="anchor"></span><a class="fa fa-anchor" href="#troubleshooting-exam-problems" onclick="event.stopPropagation()"></a></h3>
+                <ul>
+                  <li><strong>If you have a doubt/query about a question</strong>, or want to make an assumption about a question, please write it down in the 'justification' text box. <mark>Do not try to communicate those with the invigilator during the exam.</mark> We'll take your doubt/query/assumption into account when grading. For example, if many had queries about a specific question, we can conclude that the question is unclear and omit it from grading.</li>
+                  <li><strong>If you encounter a serious problem</strong> that prevents you from proceeding with the exam (e.g., the password to open the quiz doesn't work), contact the invigilator using Zoom chat or MS-Teams.</li>
+                  <li><strong>If your computer crashed/restarted</strong> during the exam, try to get it up again and resume the exam. LumiNUS will allow you to resume from where you stopped earlier. However, note that there is a deadline to finish the quiz and you will overrun that deadline if you lose more than 5 minutes due to the computer outage.</li>
+                </ul>
+                <h3 id="format">Format<span id="format" class="anchor"></span><a class="fa fa-anchor" href="#format" onclick="event.stopPropagation()"></a></h3>
+                <ul>
+                  <li>The exam will be given as quizzes in LumiNUS.<br>
+                    For the ease of administration, the exam is split into two equal size quizzes: part 1, part 2.<br></li>
+                  <li>Each quiz,
+                    <ul>
+                      <li>consists of 15 MCQ questions (plus one easy <em>bonus question</em> and a dummy question to collect comments)</li>
+                      <li>is to be done in 30+5 minutes (if you spend around 2 minutes per question, you'll have a 5 minutes buffer)</li>
+                    </ul>
+                  </li>
+                  <li>All 30 normal questions have the same the weight and each question is expected to take a similar amount of time.</li>
+                  <li>The questions will be presented in random order.</li>
+                  <li>You are not allowed to go back to previous questions.</li>
+                  <li>You are required to give a justification for your answer. The question will specify what should be included in the justification.<br>
+                    <mark><strong>Answers without the correct justification will not earn full marks.</strong></mark> However, we'll give full marks up to two correct answers (per 15 questions) that do not have justifications <span class="dimmed">(to cater for cases where you accidentally proceeded to the next question before adding the justification)</span>.</li>
+                  <li>Here is an example question. The answer is <code v-pre>a</code> and the justification can be <code v-pre>OOP is only one of the choices for an SE project</code>.</li>
+                </ul>
+                <div class="indented-level2">
+                  <panel haader="A sample question" expanded>
+                    <p>Choose the incorrect statement.</p>
+                    <p><span class="text-info">[Justification: why is it incorrect?]</span></p>
+                    <ul radio-group="c2818" class="radio-list">
+                      <li class="radio-list-item"><label><input class="radio-list-input" name="c2818" type="radio"> a. Software engineering projects always use OOP.</label></li>
+                      <li class="radio-list-item"><label><input class="radio-list-input" name="c2818" type="radio"> b. Some software engineering projects can be large and complex.</label></li>
+                      <li class="radio-list-item"><label><input class="radio-list-input" name="c2818" type="radio"> c. Some software engineering projects can go on for many years.</label></li>
+                    </ul>
+                  </panel>
+                  <p></p>
+                </div>
+                <ul>
+                  <li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Almost all questions will ask you to choose the INCORRECT statement and justify why it is incorrect.</li>
+                </ul>
+              </div>
+            </panel>
+            <p></p>
           </div>
         </div>
       </div>
@@ -130,7 +250,8 @@
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
             <a class="nav-link py-1" href="#week-11-fri-oct-23rd-admin-info">Week 11 [Fri, Oct 23rd] - Admin Info&#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#1-submit-post-lecture-quiz">1 Submit post-lecture quiz&#x200E;</a>
+              <a class="nav-link py-1" href="#1-submit-post-lecture-quiz">1 Submit post-lecture quiz counted for participation&#x200E;</a>
+              <a class="nav-link py-1" href="#other-info-relevant-to-this-week">+ Other info relevant to this week:&#x200E;</a>
             </nav>
 
           </nav>
@@ -140,7 +261,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -151,9 +272,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

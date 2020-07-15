@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Week 9 - Lecture</title>
+  <title>CS2103/T - Week 9 - Tutorial</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -93,17 +94,96 @@
               <li class="page-item"><a class="page-link" href="/website/schedule/week8"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
               <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week9/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-              <li class="page-item active"><a class="page-link" href="/website/schedule/week9/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week9/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week9/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week9/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week9/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+              <li class="page-item active"><a class="page-link" href="/website/schedule/week9/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
               <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week10"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
             </ul>
           </nav>
           <p></p>
-          <h1 id="week-9-fri-oct-9th-lecture">Week 9 <small><small><span class="dimmed">[Fri, Oct 9th]</span> - Lecture</small></small><span id="week-9-fri-oct-9th-lecture" class="anchor"></span><a class="fa fa-anchor" href="#week-9-fri-oct-9th-lecture" onclick="event.stopPropagation()"></a></h1>
-          <div></div>
+          <h1 id="week-9-fri-oct-9th-tutorial">Week 9 <small><small><span class="dimmed">[Fri, Oct 9th]</span> - Tutorial</small></small><span id="week-9-fri-oct-9th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-9-fri-oct-9th-tutorial" onclick="event.stopPropagation()"></a></h1>
+          <div>
+            <h4 id="1-demo-v1-2"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Demo v1.2<span id="1-demo-v1-2" class="anchor"></span><a class="fa fa-anchor" href="#1-demo-v1-2" onclick="event.stopPropagation()"></a></h4>
+            <div class="indented-level2">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP v1.2: Demo <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <div id="demo">
+                    <ul>
+                      <li><strong>Do an informal demo</strong> of the new features during the tutorial. To save time, we recommend that one member demos all new features, using the commit tagged as <code v-pre>v1.2</code> in the <code v-pre>master</code> branch <span class="dimmed">i.e. only features included in the current release should be demoed</span>.</li>
+                    </ul>
+                  </div>
+                </div>
+              </panel>
+            </div>
+            <h4 id="3-exercise-oodms"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Exercise: OODMs<span id="3-exercise-oodms" class="anchor"></span><a class="fa fa-anchor" href="#3-exercise-oodms" onclick="event.stopPropagation()"></a></h4>
+            <ul>
+              <li><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 10 minutes</span></span> Do the following question. As before, you should <em>hand-draw</em> the diagram.<br>
+                <span class="dimmed"><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <em>association class</em> notation in the answer.</span></li>
+            </ul>
+            <div class="indented-level2">
+              <div>
+                <panel class="algolia-no-index"><template slot="_header">
+                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> OODM for the Course domain</p>
+                  </template>
+                  <question>
+                    <p><strong>(i) Draw an OODM</strong> for the description below, about how <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">in some universities, these are called <em>modules</em></span><em>courses</em></span> work in a certain university:</p>
+                    <div class="indented text-monospace">
+                      <p>A course has a name and a code. A course is read by 10 or more students, and taught by a team of instructors one of whom is the coordinator. A course can have a number of tasks which can be assignments or tests. Some assignments are compulsory. When a student attempts a task, a grade and an optional feedback is given.</p>
+                    </div>
+                    You can use the following layout for the diagram. Add more classes if needed.
+                    <p></p>
+                    <img src="/website/book/modeling/modelingStructures/objectOrientedDomainModels/images/CourseDomainLayout.png" width="50%">
+                    <p></p>
+                    <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
+                        <p>Example OODM</p>
+                      </template>
+                      <img src="/website/book/modeling/modelingStructures/objectOrientedDomainModels/images/diagram.png" width="700"></panel>
+                    <p></p>
+                    <p><strong>(ii) Which type of a UML diagram</strong> would you use to illustrate the following situation?</p>
+                    <div class="indented text-monospace">
+                      <p>The course <em>CS101 Intro to CS</em> is taught by Prof Lee. It has two optional assignments and one test.</p>
+                    </div>
+                  </question>
+                </panel>
+              </div>
+            </div>
+            <ul>
+              <li>Paste a scan/photo of your answer in the online document.</li>
+              <li><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 10 minutes</span></span> Discuss the answers, as guided by the tutor.</li>
+            </ul>
+            <h4 id="3-exercise-activity-diagrams"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Exercise: Activity Diagrams<span id="3-exercise-activity-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#3-exercise-activity-diagrams" onclick="event.stopPropagation()"></a></h4>
+            <ul>
+              <li>Do the following question in a similar manner to the previous question.</li>
+            </ul>
+            <div class="indented-level2">
+              <div>
+                <panel class="algolia-no-index"><template slot="_header">
+                    <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Model workflow of Burger shop</p>
+                  </template>
+                  <question>
+                    <p>Draw an activity diagram to represent the following workflow a burger shop uses when processing an order by a customer.</p>
+                    <ul>
+                      <li>First, a cashier takes the order.</li>
+                      <li>Then, three workers start preparing the order at the same time; one prepares the drinks, one prepares the burgers, and one prepares the desserts.</li>
+                      <li>In the meantime, the customer pays for the order. If the customer has a voucher, she pays using the voucher; otherwise she pays using cash.</li>
+                      <li>After paying, the customer collects the food after all three parts of the order are ready.</li>
+                    </ul>
+                    <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
+                        <p>Example Activity Diagram</p>
+                      </template>
+                      <p><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
+                        <sub>[<a href="https://en.wikipedia.org/wiki/Activity_diagram">source:wikipeida</a>]</sub></p>
+                    </panel>
+                    <p></p>
+                  </question>
+                </panel>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -111,7 +191,12 @@
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#week-9-fri-oct-9th-lecture">Week 9 [Fri, Oct 9th] - Lecture&#x200E;</a>
+            <a class="nav-link py-1" href="#week-9-fri-oct-9th-tutorial">Week 9 [Fri, Oct 9th] - Tutorial&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#1-demo-v1-2">1 Demo v1.2&#x200E;</a>
+              <a class="nav-link py-1" href="#3-exercise-oodms">3 Exercise: OODMs&#x200E;</a>
+              <a class="nav-link py-1" href="#3-exercise-activity-diagrams">3 Exercise: Activity Diagrams&#x200E;</a>
+            </nav>
 
           </nav>
         </div>
@@ -120,7 +205,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -131,9 +216,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

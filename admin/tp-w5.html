@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Admin: tP week 5: Gather requirements</title>
+  <title>CS2103/T - Admin: tP week 5: Gather requirements</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../markbind/css/site-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -89,7 +90,7 @@
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <ul class="site-nav-list site-nav-list-root">
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">TIC4001 Software Engineering Practicum I</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">CS2103/T Software Engineering</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -106,7 +107,10 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/weeklySchedule.html"><small>Weekly Schedule</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures/Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tutorials.html"><small>Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
               </ul>
             </li>
@@ -146,7 +150,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w6.html"><small>iP: Week 6</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w8.html"><small>iP: Week 8</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -189,22 +193,22 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w7.html"><small>tP week 7: Get ready for iterations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v2.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v2.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v2.1</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v2.1</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-deliverables.html"><small>tP: Deliverables</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -225,6 +229,9 @@
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/exams.html">Exams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -277,13 +284,14 @@
           <div id="main">
             <div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
               <ol>
-                <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Brainstorm user stories</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span></li>
+                <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Brainstorm user stories</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span></li>
+                <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Choose user stories for v1.2</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before/during the tutorial</span></span></li>
               </ol>
             </div>
             <div id="body">
               <div></div>
               <p></p>
-              <h4 id="1-brainstorm-user-stories-before-next-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Brainstorm user stories</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span><span id="1-brainstorm-user-stories-before-next-lecture" class="anchor"></span><a class="fa fa-anchor" href="#1-brainstorm-user-stories-before-next-lecture" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="1-brainstorm-user-stories-before-the-tutorial"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Brainstorm user stories</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span><span id="1-brainstorm-user-stories-before-the-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#1-brainstorm-user-stories-before-the-tutorial" onclick="event.stopPropagation()"></a></h4>
               <div>
                 <img class="indented-level2" src="/website/admin/images/v00.png" width="250px">
                 <div class="indented-level1">
@@ -301,7 +309,7 @@
                         You can <s>write each user story in a piece of paper (e.g. yellow sticky note, index card, or just pieces of paper about the size of a playing card). Alternatively you can</s> use an online tool (some examples given in <span trigger="click" for="modal:v10-onlinetools" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v10-onlinetools'].show()" class="trigger-click">[Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Specifying Requirements → UserStories → Usage → (panel) Tool Examples ]</span>).</p>
                     </li>
                   </ul>
-                  <b-modal id="modal:v10-brainstorming" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-brainstorming"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                  <b-modal id="modal:v10-brainstorming" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-brainstorming" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                       <div>
                       <div></div>
                       <p></p>
@@ -322,11 +330,11 @@
                           </div>
                           <div>
                             <div>
-                              <panel expandable><template slot="_header">
+                              <panel expandable class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                 </template>
                                 <div>
-                                  <panel><template slot="_header">
+                                  <panel class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Characteristic of brainstorming</p>
                                     </template>
                                     <question>
@@ -337,7 +345,7 @@
                                         <li class="radio-list-item"><label><input class="radio-list-input" name="11d89" type="radio"> c. Only the best people in the team should take part.</label></li>
                                         <li class="radio-list-item"><label><input class="radio-list-input" name="11d89" type="radio"> d. They are a good way to eliminate <em>bad</em> ideas.</label></li>
                                       </ul>
-                                      <div slot="answer">
+                                      <div slot="answer" class="algolia-no-index">
                                         <p>(b)</p>
                                       </div>
                                     </question>
@@ -350,7 +358,7 @@
                       </div>
                     </div>
                   </b-modal>
-                  <b-modal id="modal:v10-userstories" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-userstories"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                  <b-modal id="modal:v10-userstories" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-userstories" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                       <div>
                       <div></div>
                       <p></p>
@@ -410,11 +418,11 @@
                           </div>
                           <div>
                             <div>
-                              <panel expandable><template slot="_header">
+                              <panel expandable class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                 </template>
                                 <div>
-                                  <panel><template slot="_header">
+                                  <panel class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these are true about user stories?</p>
                                     </template>
                                     <question>
@@ -423,7 +431,7 @@
                                         <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They are written from the user/customer perspective</li>
                                         <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. They are always written in some physical medium such as index cards or sticky notes</li>
                                       </ul>
-                                      <div slot="answer">
+                                      <div slot="answer" class="algolia-no-index">
                                         <ul class="contains-task-list">
                                           <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Reason: Despite the name, user stories are not related to 'stories' about the software.</li>
                                           <li class="task-list-item enabled"><input class="task-list-item-checkbox" checked type="checkbox"> b.</li>
@@ -434,37 +442,37 @@
                                   </panel>
                                 </div>
                                 <div>
-                                  <panel><template slot="_header">
+                                  <panel class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What's wrong with this user story?</p>
                                     </template>
                                     <question has-input="true">
                                       <p>Critique the following user story taken from a software project to build an e-commerce website.</p>
                                       <p><code v-pre>As a developer, I want to use Python to implement the software, so that we can resue existing Python modules.</code></p>
-                                      <div slot="hint">
+                                      <div slot="hint" class="algolia-no-index">
                                         <p>Refer to the definition of a user story.</p>
                                         <p><span></span></p>
                                         <p><strong>User story</strong>: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[<a href="https://www.mountaingoatsoftware.com/agile/user-stories">Mike Cohn</a>]</sub></p>
                                         <p></p>
                                       </div>
-                                      <div slot="answer">
+                                      <div slot="answer" class="algolia-no-index">
                                         <p>This user story is not written from the perspective of the user/customer.</p>
                                       </div>
                                     </question>
                                   </panel>
                                 </div>
                                 <div>
-                                  <panel><template slot="_header">
+                                  <panel class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Extract user stories from customer statement</p>
                                     </template>
                                     <question has-input="true">
                                       <p>Bill wants you to build a Human Resource Management (HRM) system. He mentions that <em>the system will help employees to view their own <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">The number of leave days not yet taken</span>leave balance</span></em>. What are the user stories you can extract from that statement?</p>
-                                      <div slot="hint">
+                                      <div slot="hint" class="algolia-no-index">
                                         <p>Remember to follow the correct format when writing user stories.</p>
                                         <div>
                                           <p><strong>User story format</strong>: <code v-pre>As a {user type/role} I can {function} so that {benefit}</code></p>
                                         </div>
                                       </div>
-                                      <div slot="answer">
+                                      <div slot="answer" class="algolia-no-index">
                                         <p><code v-pre>As an employee, I can view my leave balance, so that I can know how many leave days I have left.</code></p>
                                         <p><span class="dimmed">Note: the <code v-pre>{benefit}</code> part may vary as it is not specifically mentioned in the question.</span></p>
                                       </div>
@@ -478,7 +486,7 @@
                       </div>
                     </div>
                   </b-modal>
-                  <b-modal id="modal:v10-onlinetools" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-onlinetools"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Specifying Requirements → UserStories → Usage → (panel)Tool Examples</template>
+                  <b-modal id="modal:v10-onlinetools" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-onlinetools" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Specifying Requirements → UserStories → Usage → (panel)Tool Examples</template>
                       <div>
                       <tabs>
                         <tab><template slot="_header">GitHub Project Boards</template>
@@ -531,13 +539,13 @@
                           <p>A video on GitHub Project Boards:</p>
                           <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/C6MGKHkNtxU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
                         </tab>
-                        <tab><template slot="_header">Google Sheets</template>
+                        <tab class="algolia-no-index"><template slot="_header">Google Sheets</template>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example Google Sheet for recording user stories:</p>
                           <p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoriesInGoogleSheets.png" width="800"></p>
                           <p></p>
                           <p></p>
                         </tab>
-                        <tab><template slot="_header">Trello</template>
+                        <tab class="algolia-no-index"><template slot="_header">Trello</template>
                           <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <a href="https://trello.com">Trello</a> Board for recording user stories:</p>
                           <p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoriesInTrello.png" width="800"></p>
                           <p></p>
@@ -546,7 +554,165 @@
                       </tabs>
                     </div>
                   </b-modal>
+                  <div tags="m--cs2103" class="indented-level2">
+                    <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>If you choose to use the GitHub issue tracker to manage user stories</strong>, you need to set up your team's GitHub organization, team repo, and its issue tracker first. Instructions for doing those steps are in the panel below.</p>
+                    <panel class="algolia-no-index"><template slot="_header">
+                        <p><span class="dimmed">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E: GitHub (extract)</span></p>
+                      </template>
+                      <div>
+                        <h3 id="tp-team-organization-setup">
+                          <div class="text-white bg-dark p-1">tP Team Organization Setup</div><span id="tp-team-organization-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-team-organization-setup" onclick="event.stopPropagation()"></a>
+                        </h3>
+                        <box light type="important">
+                          <p>Please follow the organization/repo name format precisely or else our grading scripts will not be able to detect your work.</p>
+                        </box>
+                        <p><strong><strong>(<span><span aria-hidden="true" class="fas fa-user"></span></span>/<span class="dimmed"><span><span aria-hidden="true" class="fas fa-users"></span></span></span>) Only one team member:</strong></strong></p>
+                        <p>After receiving your team ID, one team member should do the following steps:</p>
+                        <ul>
+                          <li>Create a GitHub organization with the following details:
+                            <ul>
+                              <li><strong>Organization name</strong> <mark>(all UPPER CASE) : <code v-pre>AY2021S1-TEAM_ID</code></mark>. e.g.  <code v-pre>AY2021S1-CS2103T-W12-1</code>, <code v-pre>AY2021S1-CS2103-T09-2</code></li>
+                              <li>Plan:  Open Source ($0/month)</li>
+                              <li>This organization belongs to: My personal account</li>
+                            </ul>
+                          </li>
+                          <li>Add members to the organization:
+                            <ul>
+                              <li>Create a team called <code v-pre>developers</code> to your organization.</li>
+                              <li>Add your team members to the developers team.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div>
+                        <h3 id="tp-team-repo-setup">
+                          <div class="text-white bg-dark p-1">tP Team Repo Setup</div><span id="tp-team-repo-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-team-repo-setup" onclick="event.stopPropagation()"></a>
+                        </h3>
+                        <p><strong><strong>(<span><span aria-hidden="true" class="fas fa-user"></span></span>/<span class="dimmed"><span><span aria-hidden="true" class="fas fa-users"></span></span></span>) Only one team member:</strong></strong></p>
+
+                        <ol>
+                          <li>
+                            <p><strong>Fork</strong> the <a href="https://github.com/nus-cs2103-AY2021S1/tp">https://github.com/nus-cs2103-AY2021S1/tp</a> repo to your team org.</p>
+                            <ul>
+                              <li>This repo (let's call it the <em>team repo</em>) is to be used as the repo for your project.</li>
+                              <li><span id="do-not-rename">
+                                  <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Please do not rename the fork <span class="dimmed">Reason: our grading scripts rely on the repo name.</span>
+                                </span></li>
+                            </ul>
+                          </li>
+                          <li>
+                            <p><strong>Enable the issue tracker</strong>.</p>
+                          </li>
+                          <li>
+                            <p><strong>Enable GitHub Actions</strong>: Go to the <span class="border border-secondary border-bottom-0 pr-1 pl-1 mr-1 ml-1 rounded-top"><small><span aria-hidden="true" class="fas fa-play-circle"></span> Actions</small></span> tab and enable workflows by clicking the <button type="button" class="btn btn-success btn-sm ">I understand my workflows ...</button> button. That will enable the GitHub Actions that are already included in the repo you forked.</p>
+                          </li>
+                          <li>
+                            <p><strong>Set up the project website</strong><br>
+                              Follow instructions in the <a href="https://nus-cs2103-ay2021s1.github.io/tp/Documentation.html"><em>Documentation guide</em> page</a> of AB3 developer guide. When set up correctly, your project website should be available via the URL <code v-pre>https://ay2021s1-{team-id}.github.io/tp</code> e.g., <code v-pre>https://ay2021s1-cs2103-w13-1.github.io/tp</code>.</p>
+                          </li>
+                          <li>
+                            <p><strong>Add members</strong>. Ensure your team members have the desired level of access to your team repo.<br>
+                              Recommended: Give <em>admin access</em> to 1-2 members and <em>write access</em> to others.</p>
+                          </li>
+                          <li>
+                            <p><strong>Create a <em>team PR</em></strong> for us to track your project progress: i.e., create a PR from your <mark>team repo <code v-pre>master</code> branch</mark> to [<a href="https://github.com/nus-cs2103-AY2021S1/tp">nus-cs2103-AY2021S1/tp</a>] <code v-pre>master</code> branch. PR name: <code v-pre>[Team ID] Product Name</code> e.g., <code v-pre>[CS2103-T09-2] Contact List Pro</code>. <span class="dimmed">As you merge code to your team repo's <code v-pre>master</code> branch, this PR will auto-update to reflect how much your team's product has progressed.</span><br>
+                              Please fill in these details as specified because they are used by our grading scripts.</p>
+                            <ul>
+                              <li><strong>PR subject: the name of your product</strong> e.g., <code v-pre>InsureList</code></li>
+                              <li><strong>Description: a 1-2 sentence overview</strong> (plain text only, no formatting or links) of your project indicating the target user and the value proposition e.g., <code v-pre>InsureList helps insurance agents manage detail of their clients. It is optimized for CLI users so that frequent tasks can be done faster by typing in commands.</code></li>
+                            </ul>
+                          </li>
+                        </ol>
+                      </div>
+                      <div>
+                        <h3 id="tp-issue-tracker-setup">
+                          <div class="text-white bg-dark p-1">tP Issue Tracker Setup</div><span id="tp-issue-tracker-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-issue-tracker-setup" onclick="event.stopPropagation()"></a>
+                        </h3>
+                        <p>We recommend you configure the issue tracker of the tP team repo as follows:</p>
+                        <ul>
+                          <li>Delete existing labels and add the following labels.<br>
+                            <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Issue type</strong> labels are useful from the beginning of the project. The other labels are needed only when you start implementing the features.</li>
+                        </ul>
+                        <box>
+                          <p><strong>Issue type</strong> labels:</p>
+                          <ul>
+                            <li><code v-pre>type.Epic</code> : A big feature which can be broken down into smaller stories e.g. search</li>
+                            <li><code v-pre>type.Story</code> : A user story</li>
+                            <li><code v-pre>type.Enhancement</code>: An enhancement to an existing story</li>
+                            <li><code v-pre>type.Task</code> (or <code v-pre>type.Chore</code>) : Something that needs to be done, but not a story, bug, or an epic. e.g. Move testing code into a new folder)</li>
+                            <li><code v-pre>type.Bug</code> : A bug</li>
+                          </ul>
+                        </box>
+                        <box>
+                          <p><strong>Priority</strong> labels:</p>
+                          <ul>
+                            <li><code v-pre>priority.High</code> : Must do</li>
+                            <li><code v-pre>priority.Medium</code> : Nice to have</li>
+                            <li><code v-pre>priority.Low</code> : Unlikely to do</li>
+                          </ul>
+                        </box>
+                        <span id="bug-severity">
+                          <box>
+                            <p><strong>Bug Severity</strong> labels:</p>
+                            <ul>
+                              <li><code v-pre>severity.VeryLow</code> : A flaw that is purely cosmetic and does not affect usage e.g., a typo/spacing/layout/color/font issues in the docs or the UI that doesn't affect usage.</li>
+                              <li><code v-pre>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
+                              <li><code v-pre>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
+                              <li><code v-pre>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li>
+                            </ul>
+                          </box>
+                        </span>
+                        <ul>
+                          <li>
+                            <p>Create following milestones : <span tags="m--cs2103"><code v-pre>v1.1</code>, </span><code v-pre>v1.2</code>, <code v-pre>v1.3</code>, <code v-pre>v1.4</code></p>
+                          </li>
+                          <li>
+                            <p>You may configure other project settings as you wish. e.g. more labels, more milestones</p>
+                          </li>
+                        </ul>
+                      </div>
+                    </panel>
+                  </div>
                 </div>
+              </div>
+              <p></p>
+              <h4 id="2-choose-user-stories-for-v1-2-before-during-the-tutorial"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Choose user stories for v1.2</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before/during the tutorial</span></span><span id="2-choose-user-stories-for-v1-2-before-during-the-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#2-choose-user-stories-for-v1-2-before-during-the-tutorial" onclick="event.stopPropagation()"></a></h4>
+              <div>
+                <div class="indented">
+                  <box type="success" light>
+                    <h5 id="project-planning-but-with-a-twist"><span class="text-success">Project planning, but with a twist</span><span id="project-planning-but-with-a-twist" class="anchor"></span><a class="fa fa-anchor" href="#project-planning-but-with-a-twist" onclick="event.stopPropagation()"></a></h5>
+                    <p>Intuitively, you might think the right thing to do is to decide what features will be in v1.4 and then plan the intermediate versions based on that. But that's not what we are going to do.</p>
+                    <p>Why? You don't have enough experience to reliably estimate effort each feature will need, and hence, any such long range plan is likely to be inaccurate.</p>
+                    <p>Instead, what we will do is to <mark>assume the current iteration is the last iteration</mark>, plan that iteration accordingly, and try to follow that plan as best as we can. After the iteration is over, we plan the next iteration as if <em>it's</em> the last iteration. But that time, factor in the experience from the previous iteration to do a better job of planning.</p>
+                    <p>How is that better?</p>
+                    <ul>
+                      <li>Shorter-term plans have a better chance of being accurate and doable.</li>
+                      <li>You get multiple clean shots at project planning. Each try can learn from the previous tries. Hence, more learning.</li>
+                      <li>As each iteration produces a working product, you always have a working product, which reduces the risk overshooting the final deadline.</li>
+                    </ul>
+                  </box>
+                  <p><strong>The goal of this activity is to come up with the <em>smallest possible product that is still usable</em></strong> so that it can be implemented as v1.2, to be delivered at the end of the first project iteration. We try to make it small because <mark>you will have only two weeks to implement v1.2</mark> and coding as a team is a lot harder than writing code alone.</p>
+                </div>
+                <ul>
+                  <li>If the product <em>can</em> be of some use without a given user story, that user story should be left out of v1.2, even if the omission makes the product hard to use, as long as the product is not <em>impossible</em> to use <span class="dimmed">e.g., in most cases a product can be used without an 'edit item' feature because the user can always delete an item and add a new item instead of editing an existing an item</span>.</li>
+                  <li>Don't worry about v1.3. You can design v1.3 after v1.2 done.</li>
+                  <li>Don't worry about v1.2 being 'too small'. You can always add more features to v1.2 if you finish it ahead of schedule.</li>
+                  <li>If possible, narrow the scope of v1.2 further e.g., narrower target user, a smaller value proposition.</li>
+                </ul>
+                <p>Suggested workflow:</p>
+                <ul>
+                  <li><strong>First stage</strong> [10 minutes]:
+                    <ul>
+                      <li>Divide the user stories among team members.</li>
+                      <li>Each member will go through their user stories to discard (e.g., cross out, or move to a different location, but not delete) which are <em>definitely not needed for v1.2</em>.</li>
+                    </ul>
+                  </li>
+                  <li><strong>Second stage</strong> [10 minutes]:
+                    <ul>
+                      <li>All members discuss the remaining user stories (i.e., the ones not discarded in the first stage), and try to trim the list further.</li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
               <p></p>
             </div>
@@ -566,7 +732,8 @@
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
             <a class="nav-link py-1" href="#tp-week-5-gather-requirements">tP week 5: Gather requirements &#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#1-brainstorm-user-stories-before-next-lecture">1 Brainstorm user stories before next lecture&#x200E;</a>
+              <a class="nav-link py-1" href="#1-brainstorm-user-stories-before-the-tutorial">1 Brainstorm user stories before the tutorial&#x200E;</a>
+              <a class="nav-link py-1" href="#2-choose-user-stories-for-v1-2-before-during-the-tutorial">2 Choose user stories for v1.2 before/during the tutorial&#x200E;</a>
             </nav>
 
           </nav>
@@ -576,7 +743,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -587,9 +754,37 @@
 <script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../markbind/layouts/default/scripts.js"></script>
 
 </html>

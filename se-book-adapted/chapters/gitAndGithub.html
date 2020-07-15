@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Textbook Chapter : Git and Github</title>
+  <title>CS2103/T - Textbook Chapter : Git and Github</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/site-nav.css">
@@ -28,9 +29,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -38,7 +39,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -49,10 +50,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -65,20 +66,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -89,6 +90,16 @@
           <ul class="site-nav-list site-nav-list-root">
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/index.html">Home <span aria-hidden="true" class="glyphicon glyphicon-home"></span>, printable versions <span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software Engineering</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/softwareEngineering.html">Software Engineering</a></div>
+                </li>
+              </ul>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Programming Paradigms</strong>
@@ -132,6 +143,9 @@
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/architecture.html">Software Architecture</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designPatterns.html">Software Design Patterns</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designApproaches.html">Design Approaches</a></div>
@@ -233,12 +247,6 @@
                   <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
               <ul class="site-nav-dropdown-container site-nav-list">
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/cppToJava.html">C++ to Java</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/projectDuke/index.html">Project Duke</a></div>
-                </li>
-                <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div>
                 </li>
                 <li>
@@ -264,7 +272,9 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can create a local Git repo</span></span></span></span>
               <p></p>
               <div>
@@ -274,7 +284,7 @@
                   </p>
                 </span>
                 <p></p>
-                <panel class="non-printable"><template slot="_header">
+                <panel class="non-printable algolia-no-index"><template slot="_header">
                     <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Git Overview</span></p>
                   </template>
                   <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/v40b3ExbM0c" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
@@ -297,7 +307,7 @@
                       <p><span aria-hidden="true" class="fab fa-windows"></span> Windows: you might have to <a href="https://www.howtogeek.com/howto/windows-vista/show-hidden-files-and-folders-in-windows-vista/">configure Windows Explorer to show hidden files</a>.</p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>Open a Git Bash Terminal.</p>
                       <p>If you installed SourceTree, you can click the <code v-pre>Terminal</code> button to open a GitBash terminal.</p>
@@ -324,7 +334,9 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can commit using Git</span></span></span></span>
               <p></p>
               <div>
@@ -351,7 +363,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>You can use the <code v-pre>git status</code> command to check the status of the working directory.</p>
                       <pre><code class="hljs sh" v-pre><span>git status<br></span></code></pre>
@@ -377,7 +389,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>You can use the <code v-pre>stage</code> or the <code v-pre>add</code> command (they are synonyms, <code v-pre>add</code> is the more popular choice) to stage files.</p>
                       <pre><code class="hljs sh" v-pre><span>git add fruits.txt<br></span><span>git status<br></span></code></pre>
@@ -395,7 +407,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>Use the <code v-pre>commit</code> command to commit. The <code v-pre>-m</code> switch is used to specify the commit message.</p>
                       <pre><code class="hljs sh" v-pre><span>git commit -m <span class="hljs-string">"add fruits.txt"</span><br></span></code></pre>
@@ -426,7 +438,7 @@
                     <p>To see the revision graph, click on the <code v-pre>History</code> item on the menu on the right edge of SourceTree.
                     </p>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <p></p>
                     <p>The <code v-pre>gitk</code> command opens a rudimentary graphical view of the revision graph.
                     </p>
@@ -452,7 +464,9 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can set Git to ignore files</span></span></span></span>
               <p></p>
               <div>
@@ -467,7 +481,7 @@
                       <pre><code class="hljs" v-pre><span>temp.txt<br></span></code></pre>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>Create a file named <code v-pre>.gitignore</code> in the working directory root and add the following line in it.</p>
                       <pre><code class="hljs" v-pre><span>temp.txt<br></span></code></pre>
@@ -499,7 +513,9 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can tag commits using Git</span></span></span></span>
               <p></p>
               <div>
@@ -515,7 +531,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>To add a tag to the current commit as <code v-pre>v1.0</code>,</p>
                       <pre><code class="hljs" v-pre><span>git tag –a v1.0<br></span></code></pre>
@@ -539,7 +555,9 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can compare git revisions</span></span></span></span>
               <p></p>
               <div>
@@ -552,7 +570,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <pre><code class="hljs sh" v-pre><span>git show &lt; part-of-commit-hash &gt;<br></span></code></pre>
                       <p>Example:</p>
@@ -574,7 +592,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>The <code v-pre>diff</code> command can be used to view the differences between two points of the history.</p>
                       <ul>
@@ -603,12 +621,14 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can load a specific version of a Git repo</span></span></span></span>
               <p></p>
               <div>
                 <p><strong>Git can load a specific version of the history to the working directory.</strong> Note that if you have uncommitted changes in the working directory, you need to <span trigger="click" for="modal:checkout-stash" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:checkout-stash'].show()" class="trigger-click">stash</span> them first to prevent them from being overwritten.</p>
-                <b-modal id="modal:checkout-stash" hide-footer size="lg" modal-class="mb-zoom" ref="modal:checkout-stash"><template slot="modal-title">Git &amp; GitHub → Stash</template>
+                <b-modal id="modal:checkout-stash" hide-footer size="lg" modal-class="mb-zoom" ref="modal:checkout-stash" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Stash</template>
                   <div>
                     <div class="indented">
                       <div></div>
@@ -623,7 +643,7 @@
                           <tab><template slot="_header">Source Tree</template>
                             <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
                           </tab>
-                          <tab><template slot="_header">CLI</template>
+                          <tab class="algolia-no-index"><template slot="_header">CLI</template>
                             <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
                           </tab>
                         </tabs>
@@ -648,7 +668,7 @@
                       <p>To go back to the latest commit, double-click it.</p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>Use the <code v-pre>checkout &lt;commit-identifier&gt;</code> command to change the working directory to the state it was in at a specific past commit.</p>
                       <ul>
@@ -670,7 +690,7 @@
             <div class="indented">
               <span class="badge badge-light">
                 <span><span class="dimmed">
-                    <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    <font color="ForestGreen"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font>
                   </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Git to stash files</span></span></span></span>
               <p></p>
@@ -680,7 +700,7 @@
                   <tab><template slot="_header">Source Tree</template>
                     <p>Follow <a href="https://confluence.atlassian.com/sourcetreekb/stash-a-file-with-sourcetree-785332122.html">this article from SourceTree creators</a>. <span class="dimmed">Note the GUI shown in the article is slightly outdated but you should be able to map it to the current GUI.</span></p>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <p>Follow <a href="https://www.atlassian.com/git/tutorials/git-stash">this article from Atlassian</a>.</p>
                   </tab>
                 </tabs>
@@ -693,12 +713,14 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can clone a remote repo</span></span></span></span>
               <p></p>
               <div>
                 <p>Given below is an example scenario you can try yourself to learn Git <span trigger="click" for="modal:gitCloning-rcsCloning" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitCloning-rcsCloning'].show()" class="trigger-click">cloning</span>.</p>
-                <b-modal id="modal:gitCloning-rcsCloning" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitCloning-rcsCloning"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                <b-modal id="modal:gitCloning-rcsCloning" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitCloning-rcsCloning" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                   <div>
                     <p><strong>You can <mark><em>clone</em></mark> a repo</strong> to create a copy of that repo on another location in your computer. The copy will have even the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br></p>
                   </div>
@@ -716,7 +738,7 @@
                       <p><code v-pre>File</code> → <code v-pre>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>You can use the <code v-pre>clone</code> command to clone a repo.</p>
                       <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
@@ -732,19 +754,21 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can pull changes from a repo</span></span></span></span>
               <p></p>
               <div>
                 <p>Here's a scenario you can try in order to learn how to <span trigger="click" for="modal:githubPull-rcsPulling" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPull-rcsPulling'].show()" class="trigger-click">pull</span> commits from another repo to yours.</p>
-                <b-modal id="modal:githubPull-rcsPulling" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPull-rcsPulling"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                <b-modal id="modal:githubPull-rcsPulling" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPull-rcsPulling" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                   <div>
                     <p><strong>You can <mark><em>pull</em></mark> from a repo to another, to receive new commits in the second repo</strong>, if the repos have a shared history. Let's say some new commits were added to the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a term used to refer to the repo you cloned from</span>upstream repo</span> after you cloned it and you would like to copy over those new commits to your own clone i.e., <mark>sync</mark> your clone with the upstream repo. In that case you pull from the upstream repo to your clone.</p>
                   </div>
                 </b-modal>
                 <p><strong>1.Clone a repo</strong> (e.g., the repo used in <span for="modal:clone-repository" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:clone-repository'].show()" class="trigger-click">[Git &amp; GitHub → Clone]</span>) to be used for this activity.</p>
                 <p><strong>2. Delete the last few commits to simulate cloning the repo a few commits ago.</strong></p>
-                <b-modal id="modal:clone-repository" hide-footer size="lg" modal-class="mb-zoom" ref="modal:clone-repository"><template slot="modal-title"><strong>Clone Repository</strong></template>
+                <b-modal id="modal:clone-repository" hide-footer size="lg" modal-class="mb-zoom" ref="modal:clone-repository" class="algolia-no-index"><template slot="modal-title"><strong>Clone Repository</strong></template>
                   <div>
                     <panel type="seamless" expanded>
                       <span slot="header" class="card-title">
@@ -758,7 +782,7 @@
                       <p></p>
                       <div>
                         <p>Given below is an example scenario you can try yourself to learn Git <span trigger="click" for="modal:gitCloning-rcsCloning" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitCloning-rcsCloning'].show()" class="trigger-click">cloning</span>.</p>
-                        <b-modal id="modal:gitCloning-rcsCloning" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitCloning-rcsCloning"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                        <b-modal id="modal:gitCloning-rcsCloning" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitCloning-rcsCloning" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                           <div>
                             <p><strong>You can <mark><em>clone</em></mark> a repo</strong> to create a copy of that repo on another location in your computer. The copy will have even the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br></p>
                           </div>
@@ -776,7 +800,7 @@
                               <p><code v-pre>File</code> → <code v-pre>Clone / New…</code> and provide the URL of the repo and the destination directory.</p>
                             </div>
                           </tab>
-                          <tab><template slot="_header">CLI</template>
+                          <tab class="algolia-no-index"><template slot="_header">CLI</template>
                             <div>
                               <p>You can use the <code v-pre>clone</code> command to clone a repo.</p>
                               <p>Follow instructions given <a href="https://help.github.com/articles/cloning-a-repository/">here</a>.</p>
@@ -805,7 +829,7 @@
                         Arrow marked as <code v-pre>b</code>: <code v-pre>origin/master</code> label shows what is the latest commit in the <code v-pre>master</code> branch in the remote repo.</p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>Use the <code v-pre>reset</code> command to delete commits at the tip of the revision history.</p>
                       <pre><code class="hljs" v-pre><span>git reset --hard HEAD~2<br></span></code></pre>
@@ -825,7 +849,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p><code v-pre>git pull origin</code></p>
                     </div>
@@ -837,7 +861,7 @@
                   <div id="section-working-with-multiple-remotes">
                     <h5 id="working-with-multiple-remotes">Working with multiple remotes<span id="working-with-multiple-remotes" class="anchor"></span><a class="fa fa-anchor" href="#working-with-multiple-remotes" onclick="event.stopPropagation()"></a></h5>
                     <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <span trigger="click" for="modal:gitPull-rcsMultipleRepos" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitPull-rcsMultipleRepos'].show()" class="trigger-click">a Git repo can work with remote repos other than the one it was cloned from</span>.</p>
-                    <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                    <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                       <div>
                         <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code v-pre>repo1</code> can pull from (or push to) <code v-pre>repo2</code> and <code v-pre>repo3</code> if they have a shared history between them.</p>
                       </div>
@@ -870,7 +894,7 @@
                           </ol>
                         </div>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
                           <ol>
                             <li>
@@ -900,12 +924,14 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can fork a repo</span></span></span></span>
               <p></p>
               <div>
                 <p>Given below is a scenario you can try in order to learn how to <span trigger="click" for="modal:githubForking-rcsForking" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubForking-rcsForking'].show()" class="trigger-click">fork</span> a repo:.</p>
-                <b-modal id="modal:githubForking-rcsForking" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubForking-rcsForking"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                <b-modal id="modal:githubForking-rcsForking" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubForking-rcsForking" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                   <div>
                     <p><strong>A <mark><em>fork</em></mark> is a remote copy of a remote repo</strong>. As you know, cloning creates a local copy of a repo. In contrast, Forking creates a remote copy of a Git repo hosted on GitHub. This is particularly useful if you want to play around with a GitHub repo but you don't have write permissions to it; you can simply fork the repo and do whatever you want with the fork as you are the owner of the fork.</p>
                   </div>
@@ -923,12 +949,14 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can push to a remote repo</span></span></span></span>
               <p></p>
               <div>
                 <p>Given below is a scenario you can try in order to learn how to <span trigger="click" for="modal:githubPushing-rcsPushing" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPushing-rcsPushing'].show()" class="trigger-click">push</span> commits to a remote repo hosted on GitHub:</p>
-                <b-modal id="modal:githubPushing-rcsPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPushing-rcsPushing"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                <b-modal id="modal:githubPushing-rcsPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPushing-rcsPushing" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                   <div>
                     <p><strong>You can <mark><em>push</em></mark> new commits in one repo to another repo</strong> which will copy the new commits onto the destination repo. Note that pushing to a repo requires you to have write-access to it. Furthermore, you can push between repos only if those repos have a shared history among them (i.e, one was created by copying the other at some point in the past).</p>
                   </div>
@@ -950,7 +978,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>Use the command <code v-pre>git push origin master</code>. Enter Github username and password when prompted.</p>
                       <box type="warning">
@@ -966,11 +994,11 @@
                   <li><span trigger="click" for="modal:push-addRemoteForNormalPushing" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:push-addRemoteForNormalPushing'].show()" class="trigger-click">Add the GitHub repo URL as a remote</span>, if you haven't done so already.</li>
                   <li>Push to the target repo.</li>
                 </ol>
-                <b-modal id="modal:push-addRemoteForNormalPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemoteForNormalPushing"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
+                <b-modal id="modal:push-addRemoteForNormalPushing" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemoteForNormalPushing" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
                   <div>
                     <h5 id="working-with-multiple-remotes-2">Working with multiple remotes<span id="working-with-multiple-remotes-2" class="anchor"></span><a class="fa fa-anchor" href="#working-with-multiple-remotes-2" onclick="event.stopPropagation()"></a></h5>
                     <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <span trigger="click" for="modal:gitPull-rcsMultipleRepos" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitPull-rcsMultipleRepos'].show()" class="trigger-click">a Git repo can work with remote repos other than the one it was cloned from</span>.</p>
-                    <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                    <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                       <div>
                         <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code v-pre>repo1</code> can pull from (or push to) <code v-pre>repo2</code> and <code v-pre>repo3</code> if they have a shared history between them.</p>
                       </div>
@@ -1003,7 +1031,7 @@
                           </ol>
                         </div>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
                           <ol>
                             <li>
@@ -1029,7 +1057,7 @@
                     <p>Push your repo to the new remote the usual way, but select the name of target remote instead of <code v-pre>origin</code>.<br>
                       <img src="/website/book/gitAndGithub/push/images/pushToRemote.png" width="470"></p>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <p>Push to the new remote the usual way e.g., <code v-pre>git push upstream1 master</code> (assuming the you gave the name <code v-pre>upstream1</code> to the remote).</p>
                   </tab>
                 </tabs>
@@ -1052,11 +1080,11 @@
                   </li>
                 </ol>
                 <p><strong>2. <span trigger="click" for="modal:push-addRemote" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:push-addRemote'].show()" class="trigger-click">Add the GitHub repo URL as a remote</span></strong> of the local repo. You can give it the name <code v-pre>origin</code> (or any other name).</p>
-                <b-modal id="modal:push-addRemote" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemote"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
+                <b-modal id="modal:push-addRemote" hide-footer size="lg" modal-class="mb-zoom" ref="modal:push-addRemote" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Pull →</template>
                   <div>
                     <h5 id="working-with-multiple-remotes-3">Working with multiple remotes<span id="working-with-multiple-remotes-3" class="anchor"></span><a class="fa fa-anchor" href="#working-with-multiple-remotes-3" onclick="event.stopPropagation()"></a></h5>
                     <p><strong>When you clone a repo, Git automatically adds a <em>remote</em> repo named <code v-pre>origin</code></strong> to your repo configuration. As you know, you can pull commits from that repo. As you know, <span trigger="click" for="modal:gitPull-rcsMultipleRepos" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:gitPull-rcsMultipleRepos'].show()" class="trigger-click">a Git repo can work with remote repos other than the one it was cloned from</span>.</p>
-                    <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                    <b-modal id="modal:gitPull-rcsMultipleRepos" hide-footer size="lg" modal-class="mb-zoom" ref="modal:gitPull-rcsMultipleRepos" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                       <div>
                         <p><strong>A repo can work with any number of other repositories as long as they have a shared history</strong> e.g., <code v-pre>repo1</code> can pull from (or push to) <code v-pre>repo2</code> and <code v-pre>repo3</code> if they have a shared history between them.</p>
                       </div>
@@ -1089,7 +1117,7 @@
                           </ol>
                         </div>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <div>
                           <ol>
                             <li>
@@ -1114,7 +1142,7 @@
                 <tabs>
                   <tab><template slot="_header">SourceTree</template>
                     <img src="/website/book/gitAndGithub/push/images/pushToRemote.png" width="470"></tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <p>Push each branch to the new remote the usual way <mark>but use the <code v-pre>-u</code> flag</mark> to inform Git that you wish to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., remember which branch in the remote repo corresponds to which branch in the local repo</span>track</span> the branch.<br>
                       e.g., <code v-pre>git push -u origin master</code></p>
                   </tab>
@@ -1128,7 +1156,9 @@
             </template>
             <div class="indented">
               <span class="badge badge-light">
-                <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                <span><span class="dimmed">
+                    <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                  </span></span></span>
               <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use Git branching</span></span></span></span>
               <p></p>
               <div>
@@ -1141,7 +1171,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <pre><code class="hljs" v-pre><span>git status<br></span></code></pre>
                       <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
@@ -1161,7 +1191,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>You can use the <code v-pre>branch</code> command to create a new branch and the <code v-pre>checkout</code> command to switch to a specific branch.</p>
                       <pre><code class="hljs" v-pre><span>git branch feature1<br></span><span>git checkout feature1<br></span></code></pre>
@@ -1180,7 +1210,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <pre><code class="hljs" v-pre><span>git checkout master<br></span></code></pre>
                     </div>
@@ -1199,7 +1229,7 @@
                       <p>Right-click on the <code v-pre>master</code> branch and choose <code v-pre>merge master into the current branch</code>. Click <code v-pre>OK</code> in the next dialog.</p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <pre><code class="hljs" v-pre><span>git merge master<br></span></code></pre>
                     </div>
@@ -1215,7 +1245,7 @@
                   <tab><template slot="_header">SourceTree</template>
                     <p>Right-click on the <code v-pre>feature1</code> branch and choose <code v-pre>Merge...</code>.</p>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <pre><code class="hljs" v-pre><span>git merge feature1<br></span></code></pre>
                   </tab>
                 </tabs>
@@ -1238,7 +1268,7 @@
                       <p></p>
                     </div>
                   </tab>
-                  <tab><template slot="_header">CLI</template>
+                  <tab class="algolia-no-index"><template slot="_header">CLI</template>
                     <div>
                       <p>Use the <code v-pre>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
                       <pre><code class="hljs" v-pre><span>git merge --no-ff add-countries<br></span></code></pre>
@@ -1255,7 +1285,7 @@
                         <img src="/website/book/gitAndGithub/branch/images/pushBranchToFork.png" height="300">
                         <p></p>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <p>Normally: <code v-pre>git push {remote repository} {branch}</code>. Examples:<br></p>
                         <ul>
                           <li><code v-pre>git push origin master</code> pushes the <code v-pre>master</code> branch to the repo named <code v-pre>origin</code> (i.e., the repo you cloned from)</li>
@@ -1317,7 +1347,7 @@
               <p></p>
               <div>
                 <p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <span trigger="click" for="modal:githubPullRequests-rcsPullRequests" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPullRequests-rcsPullRequests'].show()" class="trigger-click">pull request (PR)</span>. Here is a scenario you can try in order to learn how to create PRs:</p>
-                <b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                <b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                   <div>
                     <p><strong>A <mark><em>pull request</em></mark> (PR for short) is mechanism for contributing code to a remote repo.</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p>
                   </div>
@@ -1330,7 +1360,7 @@
                   <li><strong>Option B - Commit to a new branch</strong> e.g., create a branch named <code v-pre>add-intro</code> (remember to switch to the <code v-pre>master</code> branch before creating a new branch) and add your commit to it.</li>
                 </ul>
                 <p><strong>4. Push</strong> the branch you updated (i.e., <code v-pre>master</code> branch or the new branch) to your fork, as explained <span trigger="click" for="modal:createPr-pushBranch" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:createPr-pushBranch'].show()" class="trigger-click">here </span>.</p>
-                <b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
+                <b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
                   <div>
                     <h5 id="pushing-a-branch-to-a-remote-repo-2">Pushing a branch to a remote repo<span id="pushing-a-branch-to-a-remote-repo-2" class="anchor"></span><a class="fa fa-anchor" href="#pushing-a-branch-to-a-remote-repo-2" onclick="event.stopPropagation()"></a></h5>
                     <p>Here's how to push a branch to a remote repo:</p>
@@ -1340,7 +1370,7 @@
                         <img src="/website/book/gitAndGithub/branch/images/pushBranchToFork.png" height="300">
                         <p></p>
                       </tab>
-                      <tab><template slot="_header">CLI</template>
+                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
                         <p>Normally: <code v-pre>git push {remote repository} {branch}</code>. Examples:<br></p>
                         <ul>
                           <li><code v-pre>git push origin master</code> pushes the <code v-pre>master</code> branch to the repo named <code v-pre>origin</code> (i.e., the repo you cloned from)</li>
@@ -1380,32 +1410,36 @@
                   </li>
                 </ol>
                 <p><strong>6. Verify the proposed code</strong>: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">commit the new code and push to the branch</span>update the branch</span> as necessary.</p>
-                <p><strong>7. Submit the PR:</strong>
-                  <span id="submit-the-pr"></span></p>
-                <ol>
-                  <li>
-                    <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-pull-request" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z" /></svg></span> Create pull request</span> button.</p>
-                  </li>
-                  <li>
-                    <p>Fill in the PR name and description e.g.,<br>
-                      Name: <code v-pre>Add an introduction to the README.md</code><br>
-                      Description:</p>
-                    <pre><code class="no-line-numbers hljs" v-pre><span>Add some paragraph to the README.md to explain ...<br></span><span>Also add a heading ...<br></span></code></pre>
-                  </li>
-                  <li>
-                    <p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                          <path d="M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z" /></svg></span> button and choose <code v-pre>Create draft pull request</code> option.</p>
-                  </li>
-                  <li>
-                    <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                          <path d="M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z" /></svg></span> button to create the PR.<br></p>
-                  </li>
-                  <li>
-                    <p>Go to the receiving repo to verify your PR appears there in the <code v-pre>Pull requests</code> tab.
-                    </p>
-                  </li>
-                </ol>
+                <p><strong>7. Submit the PR:</strong></p>
+                <span id="submit-the-pr">
+                  <ol>
+                    <li>
+                      <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-git-pull-request" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z" /></svg></span> Create pull request</span> button.</p>
+                    </li>
+                    <li>
+                      <p>Fill in the PR name and description e.g.,<br>
+                        Name: <code v-pre>Add an introduction to the README.md</code><br>
+                        Description:</p>
+                      <pre><code class="no-line-numbers hljs" v-pre><span>Add some paragraph to the README.md to explain ...<br></span><span>Also add a heading ...<br></span></code></pre>
+                    </li>
+                    <li>
+                      <p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                            <path d="M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z" /></svg></span> button and choose <code v-pre>Create draft pull request</code> option.</p>
+                    </li>
+                    <li>
+                      <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                            <path d="M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z" /></svg></span> button to create the PR.<br></p>
+                    </li>
+                    <li>
+                      <p>Go to the receiving repo to verify your PR appears there in the <code v-pre>Pull requests</code> tab.
+                      </p>
+                    </li>
+                  </ol>
+                </span>
+                <p></p>
+
+
                 <p><strong>The next step of the PR life cycle is the PR <em>review</em>.</strong> The members of the repo that received your PR can now review your proposed changes.</p>
                 <ul>
                   <li>If they like the changes, they can <em>merge</em> the changes to their repo, which also closes the PR automatically.</li>
@@ -1527,7 +1561,7 @@
                     </ul>
                   </li>
                 </ul>
-                <b-modal id="modal:managePRs-mergeConflics" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePRs-mergeConflics"><template slot="modal-title">Tools → Git &amp; GitHub → Merge Conflicts</template>
+                <b-modal id="modal:managePRs-mergeConflics" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePRs-mergeConflics" class="algolia-no-index"><template slot="modal-title">Tools → Git &amp; GitHub → Merge Conflicts</template>
                   <div>
                     <div></div>
                     <p></p>
@@ -1703,7 +1737,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -1714,9 +1748,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

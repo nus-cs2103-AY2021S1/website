@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Textbook Chapter [Printable] : Testing</title>
+  <title>CS2103/T - Textbook Chapter [Printable] : Testing</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -42,7 +43,9 @@
           </p>
           <div class="indented-less">
             <div class="indented-less">
-              <h4 id="what">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="what">What <span class="badge badge-light"><small><small>
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <box type="definition">
@@ -61,7 +64,7 @@
                     </ul>
                   </box>
                   <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
-                  <panel type="seamless">
+                  <panel type="seamless" class="algolia-no-index">
                     <span slot="header" class="card-title"><span><span class="dimmed">Other details a test case can contain</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                     A more elaborate test case can have other details such as those given below.
                     <ul>
@@ -85,7 +88,7 @@
                   <box>
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading <code v-pre>longfile.html</code>. The defect/bug causing that failure could be an uninitialized variable.</p>
                   </box>
-                  <panel type="seamless">
+                  <panel type="seamless" class="algolia-no-index">
                     <span slot="header" class="card-title"><span><span class="dimmed">A deeper look at the definition of testing</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                     <p>Here is another definition of testing:</p>
                     <blockquote>
@@ -106,7 +109,9 @@
               </div>
             </div>
             <div class="indented-less">
-              <h4 id="testability">Testability <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#testability" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="testability">Testability <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#testability" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p><strong><em>Testability</em> is an indication of how easy it is to test an SUT.</strong> As testability depends a lot on the design and implementation. You should try to increase the testability when you design and implement a software. The higher the testability, the easier it is to achieve a better quality software.</p>
@@ -122,11 +127,72 @@
           <div class="indented-less">
             <p>
             <div>
+              <h3 id="regression-testing"><span>Regression testing</span><a class="fa fa-anchor" href="#regression-testing" onclick="event.stopPropagation()"></a></h3>
+            </div>
+            </p>
+            <div class="indented-less">
+              <h4 id="what-2">What <span class="badge badge-light"><small><small>
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4>
+              <div class="indented-less">
+                <div>
+                  <p><strong>When you modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
+                  <p><strong><em>Regression testing</em> is the re-testing of the software to detect regressions.</strong> Note that to detect regressions, you need to retest all related components, even if they had been tested before.</p>
+                  <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="indented-less">
+            <p>
+            <div>
+              <h3 id="developer-testing"><span>Developer testing</span><a class="fa fa-anchor" href="#developer-testing" onclick="event.stopPropagation()"></a></h3>
+            </div>
+            </p>
+            <div class="indented-less">
+              <h4 id="what-3">What <span class="badge badge-light"><small><small>
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4>
+              <div class="indented-less">
+                <div>
+                  <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
+                </div>
+              </div>
+            </div>
+            <div class="indented-less">
+              <h4 id="why">Why <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#why" onclick="event.stopPropagation()"></a></h4>
+              <div class="indented-less">
+                <div>
+                  <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
+                  <ul>
+                    <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.</li>
+                    <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
+                    <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
+                    <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
+                  </ul>
+                  <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
+                  <blockquote>
+                    <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
+                  </blockquote>
+                  <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+                  <p></p>
+                  <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="indented-less">
+            <p>
+            <div>
               <h3 id="unit-testing"><span>Unit testing</span><a class="fa fa-anchor" href="#unit-testing" onclick="event.stopPropagation()"></a></h3>
             </div>
             </p>
             <div class="indented-less">
-              <h4 id="what-2">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="what-4">What <span class="badge badge-light"><small><small>
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-4" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <box type="definition">
@@ -196,7 +262,9 @@
             </div>
             </p>
             <div class="indented-less">
-              <h4 id="what-3">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="what-5">What <span class="badge badge-light"><small><small>
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-5" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing.</p>
@@ -238,7 +306,9 @@
             </div>
             </p>
             <div class="indented-less">
-              <h4 id="what-4">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-4" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="what-6">What <span class="badge badge-light"><small><small>
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-6" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <box type="definition">
@@ -273,7 +343,9 @@
             </div>
             </p>
             <div class="indented-less">
-              <h4 id="what-5">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-5" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="what-7">What <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-7" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p><strong><em>Alpha testing</em> is performed by the users, under controlled conditions set by the software development team.</strong></p>
@@ -290,48 +362,12 @@
             </div>
             </p>
             <div class="indented-less">
-              <h4 id="what-6">What <span class="badge badge-light"><small><small>
+              <h4 id="what-8">What <span class="badge badge-light"><small><small>
                       <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
-                    </small></small></span><a class="fa fa-anchor" href="#what-6" onclick="event.stopPropagation()"></a></h4>
+                    </small></small></span><a class="fa fa-anchor" href="#what-8" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p><strong><em>Eating your own dog food</em> (aka dogfooding), is a creators of a product use their own product to test the product.</strong></p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="indented-less">
-            <p>
-            <div>
-              <h3 id="developer-testing"><span>Developer testing</span><a class="fa fa-anchor" href="#developer-testing" onclick="event.stopPropagation()"></a></h3>
-            </div>
-            </p>
-            <div class="indented-less">
-              <h4 id="what-7">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-7" onclick="event.stopPropagation()"></a></h4>
-              <div class="indented-less">
-                <div>
-                  <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
-                </div>
-              </div>
-            </div>
-            <div class="indented-less">
-              <h4 id="why">Why <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#why" onclick="event.stopPropagation()"></a></h4>
-              <div class="indented-less">
-                <div>
-                  <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
-                  <ul>
-                    <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.</li>
-                    <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
-                    <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
-                    <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
-                  </ul>
-                  <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
-                  <blockquote>
-                    <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
-                  </blockquote>
-                  <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
-                  <p></p>
-                  <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
                 </div>
               </div>
             </div>
@@ -343,7 +379,9 @@
             </div>
             </p>
             <div class="indented-less">
-              <h4 id="what-8">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-8" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="what-9">What <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-9" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p><strong>Here are two alternative approaches to testing a software: <em>Scripted</em> testing and <em>Exploratory</em> testing</strong></p>
@@ -366,7 +404,7 @@
                   <box>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
                   </box>
-                  <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
+                  <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                     <div>
                       <p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
                     </div>
@@ -375,7 +413,9 @@
               </div>
             </div>
             <div class="indented-less">
-              <h4 id="when">When <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="when">When <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p>Which approach is better – <strong>scripted or exploratory? A mix is better.</strong></p>
@@ -385,7 +425,7 @@
                     <p>In some contexts, you will achieve your testing mission better through a more scripted approach; in other contexts, your mission will benefit more from the ability to create and improve tests as you execute them. I find that most situations benefit from a mix of scripted and exploratory approaches.
                       --<span trigger="click" for="modal:ExploratoryWhen-bach-et-explained" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ExploratoryWhen-bach-et-explained'].show()" class="trigger-click">[source: bach-et-explained]</span></p>
                   </blockquote>
-                  <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
+                  <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                     <div>
                       <p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
                     </div>
@@ -401,7 +441,9 @@
             </div>
             </p>
             <div class="indented-less">
-              <h4 id="what-9">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-9" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="what-10">What <span class="badge badge-light"><small><small>
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-10" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <box type="definition">
@@ -414,7 +456,9 @@
               </div>
             </div>
             <div class="indented-less">
-              <h4 id="acceptance-vs-system-testing">Acceptance vs System Testing <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#acceptance-vs-system-testing" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="acceptance-vs-system-testing">Acceptance vs System Testing <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#acceptance-vs-system-testing" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p>Acceptance testing comes after system testing. Similar to system testing, acceptance testing involves testing the whole system.</p>
@@ -486,23 +530,6 @@
               </div>
             </div>
           </div>
-          <div class="indented-less">
-            <p>
-            <div>
-              <h3 id="regression-testing"><span>Regression testing</span><a class="fa fa-anchor" href="#regression-testing" onclick="event.stopPropagation()"></a></h3>
-            </div>
-            </p>
-            <div class="indented-less">
-              <h4 id="what-10">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-10" onclick="event.stopPropagation()"></a></h4>
-              <div class="indented-less">
-                <div>
-                  <p><strong>When you modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
-                  <p><strong><em>Regression testing</em> is the re-testing of the software to detect regressions.</strong> Note that to detect regressions, you need to retest all related components, even if they had been tested before.</p>
-                  <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
-                </div>
-              </div>
-            </div>
-          </div>
           <p>
           <div>
             <h2 id="test-automation"><span>Test automation</span><a class="fa fa-anchor" href="#test-automation" onclick="event.stopPropagation()"></a></h2>
@@ -510,21 +537,25 @@
           </p>
           <div class="indented-less">
             <div class="indented-less">
-              <h4 id="what-11">What <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-11" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="what-11">What <span class="badge badge-light"><small><small>
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-11" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <tabs>
                     <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
                       <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run tests repeatedly and increases precision of testing (because manual testing is susceptible to human errors).</p>
                     </tab>
-                    <tab><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
+                    <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
                       <iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe></tab>
                   </tabs>
                 </div>
               </div>
             </div>
             <div class="indented-less">
-              <h4 id="automated-testing-of-cli-apps">Automated Testing of CLI Apps <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#automated-testing-of-cli-apps" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="automated-testing-of-cli-apps">Automated Testing of CLI Apps <span class="badge badge-light"><small><small>
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#automated-testing-of-cli-apps" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p><strong>A simple way to semi-automate testing of a CLI(Command Line Interface) app is by using input/output re-direction.</strong></p>
@@ -536,7 +567,7 @@
                   <ol>
                     <li>
                       <p>Store the test input in the text file <code v-pre>input.txt</code>.</p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>input.txt</code></span></p>
                         </template>
                         <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix<br></span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing<br></span></code></pre>
@@ -544,7 +575,7 @@
                     </li>
                     <li>
                       <p>Store the output you expect from the SUT in another text file <code v-pre>expected.txt</code>.</p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>expected.txt</code></span></p>
                         </template>
                         <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]<br></span><span>Invalid command format: add <br></span><span><br></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]<br></span><span>Invalid command format: add <br></span></code></pre>
@@ -563,7 +594,7 @@
                           <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
                         </li>
                       </ul>
-                      <panel minimized><template slot="_header"></template>
+                      <panel minimized class="algolia-no-index"><template slot="_header"></template>
                         <span slot="header" class="card-title"><span>More on the <code v-pre>&gt;</code> operator and the <code v-pre>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                         <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code v-pre>&lt;</code> and <code v-pre>&gt;</code> operators. For example, if you run <code v-pre>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
                         <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt <br></span></code></pre>
@@ -597,7 +628,9 @@
               </div>
             </div>
             <div class="indented-less">
-              <h4 id="test-automation-using-test-drivers">Test Automation Using Test Drivers <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#test-automation-using-test-drivers" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="test-automation-using-test-drivers">Test Automation Using Test Drivers <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#test-automation-using-test-drivers" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p><strong>A test driver is the code that ‘drives’ the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> for the purpose of testing</strong> i.e. invoking the SUT with test inputs and verifying the behavior is as expected.</p>
@@ -609,7 +642,9 @@
               </div>
             </div>
             <div class="indented-less">
-              <h4 id="test-automation-tools">Test Automation Tools <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#test-automation-tools" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="test-automation-tools">Test Automation Tools <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#test-automation-tools" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p><strong>JUnit is a tool for automated testing of Java programs.</strong> Similar tools are available for other languages and for automating different types of testing.</p>
@@ -624,7 +659,9 @@
               </div>
             </div>
             <div class="indented-less">
-              <h4 id="automated-testing-of-guis">Automated Testing of GUIs <span class="badge badge-light"><small><small><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#automated-testing-of-guis" onclick="event.stopPropagation()"></a></h4>
+              <h4 id="automated-testing-of-guis">Automated Testing of GUIs <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#automated-testing-of-guis" onclick="event.stopPropagation()"></a></h4>
               <div class="indented-less">
                 <div>
                   <p>If a software product has a GUI(Graphical User Interface) component, all product-level testing (i.e. the types of testing mentioned above) need to be done using the GUI. However, <strong>testing the GUI is much harder than testing the CLI (command line interface) or API</strong>, for the following reasons:</p>
@@ -648,7 +685,7 @@
                       </li>
                       <li>
                         <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
-                        <panel type="seamless" class="non-printable"><template slot="_header">
+                        <panel type="seamless" class="non-printable algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> demo video of automated testing of a Web application</p>
                           </template>
                           <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
@@ -724,13 +761,105 @@
             <h2 id="dependency-injection"><span>Dependency injection</span><a class="fa fa-anchor" href="#dependency-injection" onclick="event.stopPropagation()"></a></h2>
           </div>
           </p>
-          <div class="indented-less"></div>
-          <p>
-          <div>
-            <h2 id="tdd"><span>TDD</span><a class="fa fa-anchor" href="#tdd" onclick="event.stopPropagation()"></a></h2>
+          <div class="indented-less">
+            <div class="indented-less">
+              <h4 id="what-13">What <span class="badge badge-light"><small><small>
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </small></small></span><a class="fa fa-anchor" href="#what-13" onclick="event.stopPropagation()"></a></h4>
+              <div class="indented-less">
+                <div>
+                  <p><strong><em>Dependency injection</em> is the process of 'injecting' objects to replace current dependencies with a different object.</strong> This is often used to inject <span trigger="click" for="modal:explainDi-stub" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:explainDi-stub'].show()" class="trigger-click">stubs</span> to isolate the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> from its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects it depends on</span>dependencies</span> so that it can be tested in isolation.</p>
+                  <b-modal id="modal:explainDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:explainDi-stub" class="algolia-no-index"><template slot="modal-title"></template>
+                    <div>
+                      <div>
+                        <p>
+                          <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what" class="algolia-no-index"><template slot="_header">
+                              <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Unit Testing → What →</span></p>
+                            </template></panel>
+                        </p>
+                      </div>
+                      <p></p>
+                      <p><span class="dimmed"><strong><span>Quality Assurance → Testing → Unit Testing →
+                            </span></strong></span></p>
+                      <div id="title-and-body">
+                        <div>
+                          <h4 id="stubs-2"><span>Stubs</span><a class="fa fa-anchor" href="#stubs-2" onclick="event.stopPropagation()"></a></h4>
+                        </div>
+                        <div id="main">
+                          <div>
+                            <p><strong>A proper unit test requires the <em>unit</em> to be tested <mark>in isolation</mark></strong> so that bugs in the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">code the unit depends on</span>dependencies</span> cannot influence the test <span class="dimmed">i.e. bugs outside of the unit should not affect the unit tests</span>.</p>
+                            <box>
+                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If a <code v-pre>Logic</code> class depends on a <code v-pre>Storage</code> class, unit testing the <code v-pre>Logic</code> class requires isolating the <code v-pre>Logic</code> class from the <code v-pre>Storage</code> class.</p>
+                            </box>
+                            <p><strong><em>Stubs</em> can isolate the <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">Software Under Test (in this case, the <em>unit</em> being tested)</span>SUT</span> from its dependencies</strong>.</p>
+                            <box type="definition">
+                              <div>
+                                <p><strong>Stub</strong>: A stub has the same interface as the component it replaces, but its implementation is so simple that it is unlikely to have any bugs. It mimics the responses of the component, but only for the a limited set of predetermined inputs. That is, it does not know how to respond to any other inputs. Typically, these mimicked responses are hard-coded in the stub rather than computed or retrieved from elsewhere, e.g. from a database.</p>
+                              </div>
+                            </box>
+                            <box>
+                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the code below:</p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    Storage s;<br></span><span><br></span><span>    Logic(Storage s) {<br></span><span>        <span class="hljs-keyword">this</span>.s = s;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"Name: "</span> + s.getName(index);<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Storage</span> </span>{<br></span><span>    <span class="hljs-function">String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span></span>;<br></span><span>}<br></span></code></pre>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">DatabaseStorage</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> readValueFromDatabase(index);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> String <span class="hljs-title">readValueFromDatabase</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{<br></span><span>        <span class="hljs-comment">// retrieve name from the database</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                              <p>Normally, you would use the <code v-pre>Logic</code> class as follows (note how the <code v-pre>Logic</code> object depends on a <code v-pre>DatabaseStorage</code> object to perform the <code v-pre>getName()</code> operation):</p>
+                              <pre><code class="hljs java" v-pre><span>Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());<br></span><span>String name = logic.getName(<span class="hljs-number">23</span>);<br></span></code></pre>
+                              <p>You can test it like this:</p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-meta">@Test</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{<br></span><span>    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> DatabaseStorage());<br></span><span>    assertEquals(<span class="hljs-string">"Name: John"</span>, logic.getName(<span class="hljs-number">5</span>));<br></span><span>}<br></span></code></pre>
+                              <p>However, this <code v-pre>logic</code> object being tested is making use of a <code v-pre>DataBaseStorage</code> object which means a bug in the <code v-pre>DatabaseStorage</code> class can affect the test. Therefore, this test is not testing <code v-pre>Logic</code> <em>in isolation from its dependencies</em> and hence it is not a pure unit test.</p>
+                              <p>Here is a stub class you can use in place of <code v-pre>DatabaseStorage</code>:</p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">StorageStub</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Storage</span> </span>{<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span><span class="hljs-params">(<span class="hljs-keyword">int</span> index)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span>(index == <span class="hljs-number">5</span>) {<br></span><span>            <span class="hljs-keyword">return</span> <span class="hljs-string">"Adam"</span>;<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> UnsupportedOperationException();<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
+                              <p>Note how the <code v-pre>StorageStub</code> has the same interface as <code v-pre>DatabaseStorage</code>, is so simple that it is unlikely to contain bugs, and is pre-configured to respond with a hard-coded response, presumably, the correct response <code v-pre>DatabaseStorage</code> is expected to return for the given test input.</p>
+                              <p>Here is how you can use the stub to write a unit test. This test is not affected by any bugs in the <code v-pre>DatabaseStorage</code> class and hence is a pure unit test.</p>
+                              <pre><code class="hljs java" v-pre><span><span class="hljs-meta">@Test</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">getName</span><span class="hljs-params">()</span> </span>{<br></span><span>    Logic logic = <span class="hljs-keyword">new</span> Logic(<span class="hljs-keyword">new</span> StorageStub());<br></span><span>    assertEquals(<span class="hljs-string">"Name: Adam"</span>, logic.getName(<span class="hljs-number">5</span>));<br></span><span>}<br></span></code></pre>
+                            </box>
+                            <p>In addition to Stubs, there are other type of replacements you can use during testing. E.g. <em>Mocks</em>, <em>Fakes</em>, <em>Dummies</em>, <em>Spies</em>.</p>
+                          </div>
+                          <div>
+                            <div>
+                              <panel expanded><template slot="_header">
+                                  <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
+                                </template>
+                                <ul>
+                                  <li><a href="https://martinfowler.com/articles/mocksArentStubs.html"><strong>Mocks Aren't Stubs</strong></a> by Martin Fowler -- An in-depth article about how Stubs differ from other types of test helpers.</li>
+                                </ul>
+                              </panel>
+                            </div>
+                            <div>
+                              <panel expandable class="algolia-no-index"><template slot="_header">
+                                  <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                                </template>
+                                <div>
+                                  <panel class="algolia-no-index"><template slot="_header">
+                                      <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Purpose of stubs</p>
+                                    </template>
+                                    <question>
+                                      <p>Stubs help us to test a component in isolation from its dependencies.</p>
+                                      <ul radio-group="a0303" class="radio-list">
+                                        <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
+                                        <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
+                                      </ul>
+                                      <div slot="answer" class="algolia-no-index">
+                                        <p>True</p>
+                                      </div>
+                                    </question>
+                                  </panel>
+                                </div>
+                              </panel>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </b-modal>
+                  <box>
+                    <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code v-pre>Foo</code> object normally depends on a <code v-pre>Bar</code> object, but you can inject a <code v-pre>BarStub</code> object so that the <code v-pre>Foo</code> object no longer depends on a <code v-pre>Bar</code> object. Now you can test the <code v-pre>Foo</code> object in isolation from the <code v-pre>Bar</code> object.</p>
+                    <img src="/website/book/testing/dependencyInjection/what/images/diagram.png" height="150">
+                  </box>
+                </div>
+              </div>
+            </div>
           </div>
-          </p>
-          <div class="indented-less"></div>
         </div>
       </div>
 
@@ -738,7 +867,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -749,9 +878,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

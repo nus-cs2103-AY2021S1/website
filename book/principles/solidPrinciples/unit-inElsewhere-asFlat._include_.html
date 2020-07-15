@@ -8,7 +8,7 @@
   <div id="main">
     <div>
       <p>The five OOP principles given below are known as <em>SOLID Principles</em> (an acronym made up of the first letter of each principle):</p>
-      <panel type="seamless"><template slot="_header">
+      <panel type="seamless" class="algolia-no-index"><template slot="_header">
           <p><strong>S</strong>ingle Responsibility Principle (SRP)</p>
         </template>
         <div>
@@ -52,7 +52,7 @@
           </div>
         </div>
       </panel>
-      <panel type="seamless"><template slot="_header">
+      <panel type="seamless" class="algolia-no-index"><template slot="_header">
           <p><strong>O</strong>pen-Closed Principle (OCP)</p>
         </template>
         <div>
@@ -84,11 +84,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Meaning of OCP</p>
                         </template>
                         <question>
@@ -99,7 +99,7 @@
                             <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
                             <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>(a)</p>
                             <p>Explanation: Please refer the handout for the definition of OCP.</p>
                           </div>
@@ -113,7 +113,7 @@
           </div>
         </div>
       </panel>
-      <panel type="seamless"><template slot="_header">
+      <panel type="seamless" class="algolia-no-index"><template slot="_header">
           <p><strong>L</strong>iskov Substitution Principle (LSP)</p>
         </template>
         <div>
@@ -132,11 +132,11 @@
                   </div>
                 </box>
                 <p>LSP sounds same as <span large trigger="click" for="modal:lsp-substitutability" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:lsp-substitutability'].show()" class="trigger-click">substitutability</span> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
-                <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                   <div>
                     <div>
                       <p>
-                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what"><template slot="_header">
+                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → What</span></p>
                           </template></panel>
                       </p>
@@ -180,7 +180,7 @@
                     <li><code v-pre>Admin</code> class follows LSP because it fulfills <code v-pre>Payroll</code>’s expectation of <code v-pre>Staff</code> objects (i.e. it works for all positive values). Substituting <code v-pre>Admin</code> objects for Staff objects will not break the <code v-pre>Payroll</code> class functionality.</li>
                     <li><code v-pre>Academic</code> class violates LSP because it will not work for percent values over <code v-pre>100</code> as expected by the <code v-pre>Payroll</code> class. Substituting <code v-pre>Academic</code> objects for <code v-pre>Staff</code> objects can potentially break the <code v-pre>Payroll</code> class functionality.</li>
                   </ul>
-                  <panel type="seamless"><template slot="_header">
+                  <panel type="seamless" class="algolia-no-index"><template slot="_header">
                       <p><span class="dimmed">Another example</span></p>
                     </template>
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Rectangle#resize()</code> can take any integers for <code v-pre>height</code> and <code v-pre>width</code>. This contract is violated by the subclass <code v-pre>Square#resize()</code> because it does not accept a <code v-pre>height</code> that is different from the <code v-pre>width</code>.</p>
@@ -195,11 +195,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this LSP?</p>
                         </template>
                         <question>
@@ -208,7 +208,7 @@
                             <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> True</label></li>
                             <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> False</label></li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>True.</p>
                             <p>Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP has been violated.</p>
                           </div>
@@ -222,7 +222,7 @@
           </div>
         </div>
       </panel>
-      <panel type="seamless"><template slot="_header">
+      <panel type="seamless" class="algolia-no-index"><template slot="_header">
           <p><strong>I</strong>nterface Segregation Principle (ISP)</p>
         </template>
         <div>
@@ -252,7 +252,7 @@
           </div>
         </div>
       </panel>
-      <panel type="seamless"><template slot="_header">
+      <panel type="seamless" class="algolia-no-index"><template slot="_header">
           <p><strong>D</strong>ependency Inversion Principle (DIP)</p>
         </template>
         <div>
@@ -284,11 +284,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these statements is true about the Dependency Inversion Principle.</p>
                         </template>
                         <question>
@@ -299,7 +299,7 @@
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. It reduces dependencies in a design.</li>
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. It advocates making higher level classes to depend on lower level classes.</li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>a</p>
                             <p>Explanation: Replacing dependencies with mocks is Dependency Injection, not DIP. DIP does not reduce dependencies, rather, it changes the direction of dependencies. Yes, it can introduce extra abstractions but often the benefit can outweigh the extra complications.</p>
                           </div>

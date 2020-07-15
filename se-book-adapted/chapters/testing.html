@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Textbook Chapter : Testing</title>
+  <title>CS2103/T - Textbook Chapter : Testing</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/site-nav.css">
@@ -28,9 +29,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -38,7 +39,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -49,10 +50,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -65,20 +66,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -89,6 +90,16 @@
           <ul class="site-nav-list site-nav-list-root">
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/index.html">Home <span aria-hidden="true" class="glyphicon glyphicon-home"></span>, printable versions <span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software Engineering</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/softwareEngineering.html">Software Engineering</a></div>
+                </li>
+              </ul>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Programming Paradigms</strong>
@@ -132,6 +143,9 @@
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/architecture.html">Software Architecture</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designPatterns.html">Software Design Patterns</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designApproaches.html">Design Approaches</a></div>
@@ -233,12 +247,6 @@
                   <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
               <ul class="site-nav-dropdown-container site-nav-list">
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/cppToJava.html">C++ to Java</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/projectDuke/index.html">Project Duke</a></div>
-                </li>
-                <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div>
                 </li>
                 <li>
@@ -270,7 +278,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain testing</span></span></span></span>
                 <p></p>
                 <div>
@@ -290,7 +300,7 @@
                     </ul>
                   </box>
                   <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
-                  <panel type="seamless">
+                  <panel type="seamless" class="algolia-no-index">
                     <span slot="header" class="card-title"><span><span class="dimmed">Other details a test case can contain</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                     A more elaborate test case can have other details such as those given below.
                     <ul>
@@ -314,7 +324,7 @@
                   <box>
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading <code v-pre>longfile.html</code>. The defect/bug causing that failure could be an uninitialized variable.</p>
                   </box>
-                  <panel type="seamless">
+                  <panel type="seamless" class="algolia-no-index">
                     <span slot="header" class="card-title"><span><span class="dimmed">A deeper look at the definition of testing</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                     <p>Here is another definition of testing:</p>
                     <blockquote>
@@ -334,11 +344,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Relate testing, test cases, failure, and defect</p>
                           </template>
                           <question has-input>
@@ -356,7 +366,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain testability</span></span></span></span>
                 <p></p>
                 <div>
@@ -372,10 +384,10 @@
                 <h2 id="testing-types"><span>Testing types</span><span id="testing-types" class="anchor"></span><a class="fa fa-anchor" href="#testing-types" onclick="event.stopPropagation()"></a></h2>
               </div>
             </span>
-            <panel type="seamless" expanded id="unit-testing">
+            <panel type="seamless" expanded id="regression-testing">
               <span slot="header" class="card-title">
                 <div>
-                  <h3 id="unit-testing"><span>Unit testing</span><span id="unit-testing" class="anchor"></span><a class="fa fa-anchor" href="#unit-testing" onclick="event.stopPropagation()"></a></h3>
+                  <h3 id="regression-testing"><span>Regression testing</span><span id="regression-testing" class="anchor"></span><a class="fa fa-anchor" href="#regression-testing" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
               <panel type="seamless" expanded id="what-2"><template slot="_header">
@@ -383,7 +395,177 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain regression testing</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>When you modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
+                    <p><strong><em>Regression testing</em> is the re-testing of the software to detect regressions.</strong> Note that to detect regressions, you need to retest all related components, even if they had been tested before.</p>
+                    <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable class="algolia-no-index"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Regression Testing defintion T/F?</p>
+                            </template>
+                            <question>
+                              <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
+                              <ul radio-group="63d56" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> a. True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> b. False</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> c. Partially true</label></li>
+                              </ul>
+                              <div slot="answer" class="algolia-no-index">
+                                <p>c.</p>
+                                <p>Explanation: Regression testing <mark>need not be automated</mark> but automation is highly recommended.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain regression testing</p>
+                            </template>
+                            <question has-input>
+                              <p>Explain why and when you would do regression testing in a software project.</p>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="developer-testing">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="developer-testing"><span>Developer testing</span><span id="developer-testing" class="anchor"></span><a class="fa fa-anchor" href="#developer-testing" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-3"><template slot="_header">
+                  <h4 id="what-3">What<span id="what-3" class="anchor"></span><a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain developer testing</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded id="why"><template slot="_header">
+                  <h4 id="why">Why<span id="why" class="anchor"></span><a class="fa fa-anchor" href="#why" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for early developer testing</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
+                    <ul>
+                      <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.</li>
+                      <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
+                      <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
+                      <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
+                    </ul>
+                    <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
+                    <blockquote>
+                      <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
+                    </blockquote>
+                    <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
+                    <p></p>
+                    <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable class="algolia-no-index"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> implications of developers testing their own code</p>
+                            </template>
+                            <question has-input="true">
+                              <p>Discuss pros and cons of developers testing their own code.</p>
+                              <div slot="answer" class="algolia-no-index">
+                                <p>Pros:</p>
+                                <ul>
+                                  <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
+                                  <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
+                                  <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
+                                  <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li>
+                                </ul>
+                                <p>Cons:</p>
+                                <ul>
+                                  <li>A developer may subconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
+                                  <li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
+                                  <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
+                                  <li>A developer may lack the testing expertise.</li>
+                                </ul>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Cost of bug fixing over time</p>
+                            </template>
+                            <question>
+                              <p>The cost of fixing a bug goes down as we reach the product release.</p>
+                              <ul radio-group="37242" class="radio-list">
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
+                                <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
+                              </ul>
+                              <div slot="answer" class="algolia-no-index">
+                                <p>False. The cost goes up over time.</p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Why early testing?</p>
+                            </template>
+                            <question has-input="true">
+                              <p>Explain why early testing by developers is important.</p>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="unit-testing">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="unit-testing"><span>Unit testing</span><span id="unit-testing" class="anchor"></span><a class="fa fa-anchor" href="#unit-testing" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-4"><template slot="_header">
+                  <h4 id="what-4">What<span id="what-4" class="anchor"></span><a class="fa fa-anchor" href="#what-4" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain unit testing</span></span></span></span>
                   <p></p>
                   <div>
@@ -410,7 +592,7 @@
                   </div>
                   <div>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                         </template>
                         <p><strong>Side readings:</strong></p>
@@ -475,11 +657,11 @@
                       </panel>
                     </div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Purpose of stubs</p>
                             </template>
                             <question>
@@ -488,7 +670,7 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>True</p>
                               </div>
                             </question>
@@ -506,12 +688,14 @@
                   <h3 id="integration-testing"><span>Integration testing</span><span id="integration-testing" class="anchor"></span><a class="fa fa-anchor" href="#integration-testing" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-3"><template slot="_header">
-                  <h4 id="what-3">What<span id="what-3" class="anchor"></span><a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-5"><template slot="_header">
+                  <h4 id="what-5">What<span id="what-5" class="anchor"></span><a class="fa fa-anchor" href="#what-5" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain integration testing</span></span></span></span>
                   <p></p>
                   <div>
@@ -560,12 +744,14 @@
                   <h3 id="system-testing"><span>System testing</span><span id="system-testing" class="anchor"></span><a class="fa fa-anchor" href="#system-testing" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-4"><template slot="_header">
-                  <h4 id="what-4">What<span id="what-4" class="anchor"></span><a class="fa fa-anchor" href="#what-4" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-6"><template slot="_header">
+                  <h4 id="what-6">What<span id="what-6" class="anchor"></span><a class="fa fa-anchor" href="#what-6" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain system testing</span></span></span></span>
                   <p></p>
                   <div>
@@ -601,12 +787,14 @@
                   <h3 id="alpha-and-beta-testing"><span>Alpha and beta testing</span><span id="alpha-and-beta-testing" class="anchor"></span><a class="fa fa-anchor" href="#alpha-and-beta-testing" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-5"><template slot="_header">
-                  <h4 id="what-5">What<span id="what-5" class="anchor"></span><a class="fa fa-anchor" href="#what-5" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-7"><template slot="_header">
+                  <h4 id="what-7">What<span id="what-7" class="anchor"></span><a class="fa fa-anchor" href="#what-7" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain alpha and beta testing</span></span></span></span>
                   <p></p>
                   <div>
@@ -624,8 +812,8 @@
                   <h3 id="dogfooding"><span>Dogfooding</span><span id="dogfooding" class="anchor"></span><a class="fa fa-anchor" href="#dogfooding" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-6"><template slot="_header">
-                  <h4 id="what-6">What<span id="what-6" class="anchor"></span><a class="fa fa-anchor" href="#what-6" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-8"><template slot="_header">
+                  <h4 id="what-8">What<span id="what-8" class="anchor"></span><a class="fa fa-anchor" href="#what-8" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
@@ -639,11 +827,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Dogfooding improves product design?</p>
                             </template>
                             <question>
@@ -652,114 +840,9 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="f7c90" type="radio"> True</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="f7c90" type="radio"> False</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>True</p>
                               </div>
-                            </question>
-                          </panel>
-                        </div>
-                      </panel>
-                    </div>
-                  </div>
-                </div>
-              </panel>
-            </panel>
-            <panel type="seamless" expanded id="developer-testing">
-              <span slot="header" class="card-title">
-                <div>
-                  <h3 id="developer-testing"><span>Developer testing</span><span id="developer-testing" class="anchor"></span><a class="fa fa-anchor" href="#developer-testing" onclick="event.stopPropagation()"></a></h3>
-                </div>
-              </span>
-              <panel type="seamless" expanded id="what-7"><template slot="_header">
-                  <h4 id="what-7">What<span id="what-7" class="anchor"></span><a class="fa fa-anchor" href="#what-7" onclick="event.stopPropagation()"></a></h4>
-                </template>
-                <div class="indented">
-                  <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
-                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain developer testing</span></span></span></span>
-                  <p></p>
-                  <div>
-                    <p><strong><em>Developer testing</em> is the testing done by the developers themselves</strong> as opposed to professional testers or end-users.</p>
-                  </div>
-                  <div></div>
-                </div>
-              </panel>
-              <panel type="seamless" expanded id="why"><template slot="_header">
-                  <h4 id="why">Why<span id="why" class="anchor"></span><a class="fa fa-anchor" href="#why" onclick="event.stopPropagation()"></a></h4>
-                </template>
-                <div class="indented">
-                  <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
-                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for early developer testing</span></span></span></span>
-                  <p></p>
-                  <div>
-                    <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
-                    <ul>
-                      <li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.</li>
-                      <li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
-                      <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
-                      <li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li>
-                    </ul>
-                    <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
-                    <blockquote>
-                      <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p>
-                    </blockquote>
-                    <img src="/website/book/testing/testingTypes/developerTesting/why/images/diagram.png" height="180">
-                    <p></p>
-                    <p>Such early testing of partially developed software is usually, and by necessity, done by the developers themselves i.e. developer testing.</p>
-                  </div>
-                  <div>
-                    <div>
-                      <panel expandable><template slot="_header">
-                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                        </template>
-                        <div>
-                          <panel><template slot="_header">
-                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> implications of developers testing their own code</p>
-                            </template>
-                            <question has-input="true">
-                              <p>Discuss pros and cons of developers testing their own code.</p>
-                              <div slot="answer">
-                                <p>Pros:</p>
-                                <ul>
-                                  <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
-                                  <li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
-                                  <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
-                                  <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li>
-                                </ul>
-                                <p>Cons:</p>
-                                <ul>
-                                  <li>A developer may subconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
-                                  <li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
-                                  <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
-                                  <li>A developer may lack the testing expertise.</li>
-                                </ul>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel><template slot="_header">
-                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Cost of bug fixing over time</p>
-                            </template>
-                            <question>
-                              <p>The cost of fixing a bug goes down as we reach the product release.</p>
-                              <ul radio-group="37242" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
-                              </ul>
-                              <div slot="answer">
-                                <p>False. The cost goes up over time.</p>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel><template slot="_header">
-                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Why early testing?</p>
-                            </template>
-                            <question has-input="true">
-                              <p>Explain why early testing by developers is important.</p>
                             </question>
                           </panel>
                         </div>
@@ -775,12 +858,14 @@
                   <h3 id="exploratory-versus-scripted-testing"><span>Exploratory versus scripted testing</span><span id="exploratory-versus-scripted-testing" class="anchor"></span><a class="fa fa-anchor" href="#exploratory-versus-scripted-testing" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-8"><template slot="_header">
-                  <h4 id="what-8">What<span id="what-8" class="anchor"></span><a class="fa fa-anchor" href="#what-8" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-9"><template slot="_header">
+                  <h4 id="what-9">What<span id="what-9" class="anchor"></span><a class="fa fa-anchor" href="#what-9" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain exploratory testing and scripted testing</span></span></span></span>
                   <p></p>
                   <div>
@@ -804,7 +889,7 @@
                     <box>
                       <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
                     </box>
-                    <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
+                    <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                       <div>
                         <p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
                       </div>
@@ -812,11 +897,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about exploratory and scripted testing</p>
                             </template>
                             <question>
@@ -825,7 +910,7 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> True</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> False</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>False</p>
                                 <p>Explanation: “Scripted” means test cases are predetermined. They need not be an executable script. However, exploratory testing is usually manual.</p>
                               </div>
@@ -833,7 +918,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which testing technique is better?</p>
                             </template>
                             <question>
@@ -845,19 +930,19 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> d. reactive testing</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(e)</p>
                               </div>
                             </question>
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Explain the concept of exploratory testing using Minesweeper as an example.</p>
                             </template>
                             <question has-input="true">
                               <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p>
                               </div>
                             </question>
@@ -873,7 +958,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the choice between exploratory testing and scripted testing</span></span></span></span>
                   <p></p>
                   <div>
@@ -884,7 +971,7 @@
                       <p>In some contexts, you will achieve your testing mission better through a more scripted approach; in other contexts, your mission will benefit more from the ability to create and improve tests as you execute them. I find that most situations benefit from a mix of scripted and exploratory approaches.
                         --<span trigger="click" for="modal:ExploratoryWhen-bach-et-explained" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ExploratoryWhen-bach-et-explained'].show()" class="trigger-click">[source: bach-et-explained]</span></p>
                     </blockquote>
-                    <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
+                    <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                       <div>
                         <p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
                       </div>
@@ -892,11 +979,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which is better?</p>
                             </template>
                             <question>
@@ -905,7 +992,7 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="7d3ff" type="radio"> True</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="7d3ff" type="radio"> False</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>False</p>
                                 <p>Explanation: Each has pros and cons. Relying on only one is not recommended. A combination is better.</p>
                               </div>
@@ -924,12 +1011,14 @@
                   <h3 id="acceptance-testing"><span>Acceptance testing</span><span id="acceptance-testing" class="anchor"></span><a class="fa fa-anchor" href="#acceptance-testing" onclick="event.stopPropagation()"></a></h3>
                 </div>
               </span>
-              <panel type="seamless" expanded id="what-9"><template slot="_header">
-                  <h4 id="what-9">What<span id="what-9" class="anchor"></span><a class="fa fa-anchor" href="#what-9" onclick="event.stopPropagation()"></a></h4>
+              <panel type="seamless" expanded id="what-10"><template slot="_header">
+                  <h4 id="what-10">What<span id="what-10" class="anchor"></span><a class="fa fa-anchor" href="#what-10" onclick="event.stopPropagation()"></a></h4>
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain acceptance testing</span></span></span></span>
                   <p></p>
                   <div>
@@ -948,7 +1037,9 @@
                 </template>
                 <div class="indented">
                   <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
                   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the differences between system testing and acceptance testing</span></span></span></span>
                   <p></p>
                   <div>
@@ -1020,11 +1111,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about system testing and acceptance testing.</p>
                             </template>
                             <question>
@@ -1037,69 +1128,12 @@
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. In smaller projects, the developers may do system testing as well, in addition to developer testing.</li>
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. If system testing is adequately done, we need not do acceptance testing.</li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
                                 <p>Explanation:</p>
                                 <p>(b) is correct because system testing can aim to cover all specified behaviors and can even go beyond the system specification. Therefore, system testing is typically more extensive than acceptance testing.</p>
                                 <p>(f) is incorrect because it is possible for a system to pass system tests but fail acceptance tests.</p>
                               </div>
-                            </question>
-                          </panel>
-                        </div>
-                      </panel>
-                    </div>
-                  </div>
-                </div>
-              </panel>
-            </panel>
-            <panel type="seamless" expanded id="regression-testing">
-              <span slot="header" class="card-title">
-                <div>
-                  <h3 id="regression-testing"><span>Regression testing</span><span id="regression-testing" class="anchor"></span><a class="fa fa-anchor" href="#regression-testing" onclick="event.stopPropagation()"></a></h3>
-                </div>
-              </span>
-              <panel type="seamless" expanded id="what-10"><template slot="_header">
-                  <h4 id="what-10">What<span id="what-10" class="anchor"></span><a class="fa fa-anchor" href="#what-10" onclick="event.stopPropagation()"></a></h4>
-                </template>
-                <div class="indented">
-                  <span class="badge badge-light">
-                    <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
-                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain regression testing</span></span></span></span>
-                  <p></p>
-                  <div>
-                    <p><strong>When you modify a system, the modification may result in some unintended and undesirable effects on the system. Such an effect is called a <em>regression</em>.</strong></p>
-                    <p><strong><em>Regression testing</em> is the re-testing of the software to detect regressions.</strong> Note that to detect regressions, you need to retest all related components, even if they had been tested before.</p>
-                    <p>Regression testing is more effective when it is done frequently, after each small change. However, doing so can be prohibitively expensive if testing is done manually. Hence, <strong>regression testing is more practical when it is automated</strong>.</p>
-                  </div>
-                  <div>
-                    <div>
-                      <panel expandable><template slot="_header">
-                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                        </template>
-                        <div>
-                          <panel><template slot="_header">
-                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Regression Testing defintion T/F?</p>
-                            </template>
-                            <question>
-                              <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
-                              <ul radio-group="63d56" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> a. True</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> b. False</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="63d56" type="radio"> c. Partially true</label></li>
-                              </ul>
-                              <div slot="answer">
-                                <p>c.</p>
-                                <p>Explanation: Regression testing <mark>need not be automated</mark> but automation is highly recommended.</p>
-                              </div>
-                            </question>
-                          </panel>
-                        </div>
-                        <div>
-                          <panel><template slot="_header">
-                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain regression testing</p>
-                            </template>
-                            <question has-input>
-                              <p>Explain why and when you would do regression testing in a software project.</p>
                             </question>
                           </panel>
                         </div>
@@ -1121,7 +1155,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test automation</span></span></span></span>
                 <p></p>
                 <div>
@@ -1129,13 +1165,13 @@
                     <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
                       <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run tests repeatedly and increases precision of testing (because manual testing is susceptible to human errors).</p>
                     </tab>
-                    <tab><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
+                    <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
                       <iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe></tab>
                   </tabs>
                 </div>
                 <div>
                   <div>
-                    <panel><template slot="_header">
+                    <panel class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                       </template>
                       <p><strong>Side readings:</strong></p>
@@ -1153,7 +1189,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can semi-automate testing of CLIs</span></span></span></span>
                 <p></p>
                 <div>
@@ -1166,7 +1204,7 @@
                   <ol>
                     <li>
                       <p>Store the test input in the text file <code v-pre>input.txt</code>.</p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>input.txt</code></span></p>
                         </template>
                         <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix<br></span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing<br></span></code></pre>
@@ -1174,7 +1212,7 @@
                     </li>
                     <li>
                       <p>Store the output you expect from the SUT in another text file <code v-pre>expected.txt</code>.</p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>expected.txt</code></span></p>
                         </template>
                         <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]<br></span><span>Invalid command format: add <br></span><span><br></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]<br></span><span>Invalid command format: add <br></span></code></pre>
@@ -1193,7 +1231,7 @@
                           <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
                         </li>
                       </ul>
-                      <panel minimized><template slot="_header"></template>
+                      <panel minimized class="algolia-no-index"><template slot="_header"></template>
                         <span slot="header" class="card-title"><span>More on the <code v-pre>&gt;</code> operator and the <code v-pre>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                         <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code v-pre>&lt;</code> and <code v-pre>&gt;</code> operators. For example, if you run <code v-pre>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
                         <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt <br></span></code></pre>
@@ -1232,7 +1270,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test drivers</span></span></span></span>
                 <p></p>
                 <div>
@@ -1250,7 +1290,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain test automation tools</span></span></span></span>
                 <p></p>
                 <div>
@@ -1271,7 +1313,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain automated GUI testing</span></span></span></span>
                 <p></p>
                 <div>
@@ -1296,7 +1340,7 @@
                       </li>
                       <li>
                         <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
-                        <panel type="seamless" class="non-printable"><template slot="_header">
+                        <panel type="seamless" class="non-printable algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> demo video of automated testing of a Web application</p>
                           </template>
                           <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
@@ -1308,11 +1352,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> API testing vs GUI testing</p>
                           </template>
                           <question>
@@ -1321,7 +1365,7 @@
                               <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> True</label></li>
                               <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> False</label></li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>False</p>
                             </div>
                           </question>
@@ -1379,11 +1423,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> highest intensity coverage</p>
                           </template>
                           <question>
@@ -1394,7 +1438,7 @@
                               <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> c. 100% branch coverage</label></li>
                               <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> d. 100% condition coverage</label></li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>(b)</p>
                               <p>Explanation: 100% path coverage implies all possible execution paths through the SUT have been tested. This is essentially ‘exhaustive testing’. While this is very hard to achieve for a non-trivial SUT, it technically gives us the highest intensity of testing. If all tests pass at 100% path coverage, the SUT code can be considered ‘bug free’. However, note that path coverage does not include paths that are missing from the code altogether because the programmer left them out by mistake.</p>
                             </div>
@@ -1440,16 +1484,18 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain dependency injection</span></span></span></span>
                 <p></p>
                 <div>
                   <p><strong><em>Dependency injection</em> is the process of 'injecting' objects to replace current dependencies with a different object.</strong> This is often used to inject <span trigger="click" for="modal:explainDi-stub" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:explainDi-stub'].show()" class="trigger-click">stubs</span> to isolate the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> from its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects it depends on</span>dependencies</span> so that it can be tested in isolation.</p>
-                  <b-modal id="modal:explainDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:explainDi-stub"><template slot="modal-title"></template>
+                  <b-modal id="modal:explainDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:explainDi-stub" class="algolia-no-index"><template slot="modal-title"></template>
                     <div>
                       <div>
                         <p>
-                          <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what"><template slot="_header">
+                          <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what" class="algolia-no-index"><template slot="_header">
                               <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Unit Testing → What →</span></p>
                             </template></panel>
                         </p>
@@ -1502,11 +1548,11 @@
                               </panel>
                             </div>
                             <div>
-                              <panel expandable><template slot="_header">
+                              <panel expandable class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                 </template>
                                 <div>
-                                  <panel><template slot="_header">
+                                  <panel class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Purpose of stubs</p>
                                     </template>
                                     <question>
@@ -1515,7 +1561,7 @@
                                         <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
                                         <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
                                       </ul>
-                                      <div slot="answer">
+                                      <div slot="answer" class="algolia-no-index">
                                         <p>True</p>
                                       </div>
                                     </question>
@@ -1541,16 +1587,18 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="ForestGreen"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use dependency injection</span></span></span></span>
                 <p></p>
                 <div>
                   <p><strong>Polymorphism can be used to implement dependency injection</strong>, as can be seen in the example given in <span trigger="click" for="modal:useDi-stub" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:useDi-stub'].show()" class="trigger-click">[Quality Assurance → Testing → Unit Testing → Stubs]</span> where a stub is injected to replace a dependency.</p>
-                  <b-modal id="modal:useDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:useDi-stub"><template slot="modal-title"></template>
+                  <b-modal id="modal:useDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:useDi-stub" class="algolia-no-index"><template slot="modal-title"></template>
                     <div>
                       <div>
                         <p>
-                          <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what"><template slot="_header">
+                          <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what" class="algolia-no-index"><template slot="_header">
                               <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Unit Testing → What →</span></p>
                             </template></panel>
                         </p>
@@ -1603,11 +1651,11 @@
                               </panel>
                             </div>
                             <div>
-                              <panel expandable><template slot="_header">
+                              <panel expandable class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                 </template>
                                 <div>
-                                  <panel><template slot="_header">
+                                  <panel class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Purpose of stubs</p>
                                     </template>
                                     <question>
@@ -1616,7 +1664,7 @@
                                         <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
                                         <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
                                       </ul>
-                                      <div slot="answer">
+                                      <div slot="answer" class="algolia-no-index">
                                         <p>True</p>
                                       </div>
                                     </question>
@@ -1639,11 +1687,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about dependency injection</p>
                           </template>
                           <question>
@@ -1654,7 +1702,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. It can be done using polymorphism</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. It can be used to substitute a component with a stub</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p><s>(a)</s>(b)(c)(d)</p>
                               <p>Explanation: It is a technique we can use to substitute an existing dependency with another, not increase dependencies. It is useful when you want to test a component in isolation but the SUT depends on other components. Using dependency injection, we can substitute those other components with test-friendly stubs. This is often done using polymorphism.</p>
                             </div>
@@ -1678,7 +1726,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain TDD</span></span></span></span>
                 <p></p>
                 <div>
@@ -1686,11 +1736,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> When do we write tests in TDD?</p>
                           </template>
                           <question>
@@ -1704,7 +1754,7 @@
                               <li class="radio-list-item"><label><input class="radio-list-input" name="b90f5" type="radio"> True</label></li>
                               <li class="radio-list-item"><label><input class="radio-list-input" name="b90f5" type="radio"> False</label></li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>A) False</p>
                               <p>Explanation: No, not <em>all</em>. We proceed in small steps, writing tests and functional code in tandem, but writing the test before we write the corresponding functional code.</p>
                               <p>B) False</p>
@@ -1716,6 +1766,32 @@
                     </panel>
                   </div>
                 </div>
+              </div>
+            </panel>
+            <panel type="seamless" expanded id="how-4"><template slot="_header">
+                <h4 id="how-4">How<span id="how-4" class="anchor"></span><a class="fa fa-anchor" href="#how-4" onclick="event.stopPropagation()"></a></h4>
+              </template>
+              <div class="indented">
+                <span class="badge badge-light">
+                  <span><span class="dimmed">
+                      <font color="ForestGreen"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font>
+                    </span></span></span>
+                <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can follow TDD</span></span></span></span>
+                <p></p>
+                <div>
+                  <p>Note that TDD does not imply writing all the test cases first before writing functional code. Rather, proceed in small steps:</p>
+                  <ol>
+                    <li>Decide what behavior to implement.</li>
+                    <li>Write test cases to test that behavior.</li>
+                    <li>Run those test cases and watch them fail.</li>
+                    <li>Implement the behavior.</li>
+                    <li>Run the test case.</li>
+                    <li>Keep modifying the code and rerunning test cases until they all pass.</li>
+                    <li>Refactor code to improve quality.</li>
+                    <li>Repeat the cycle for each small unit of behavior that needs to be implemented.</li>
+                  </ol>
+                </div>
+                <div></div>
               </div>
             </panel>
           </panel>
@@ -1735,46 +1811,46 @@
               </nav>
               <a class="nav-link py-1" href="#testing-types">Testing types&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                <a class="nav-link py-1" href="#unit-testing">Unit testing&#x200E;</a>
+                <a class="nav-link py-1" href="#regression-testing">Regression testing&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                   <a class="nav-link py-1" href="#what-2">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#developer-testing">Developer testing&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-3">What&#x200E;</a>
+                  <a class="nav-link py-1" href="#why">Why&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#unit-testing">Unit testing&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-4">What&#x200E;</a>
                   <a class="nav-link py-1" href="#stubs">Stubs&#x200E;</a>
                 </nav>
                 <a class="nav-link py-1" href="#integration-testing">Integration testing&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                  <a class="nav-link py-1" href="#what-3">What&#x200E;</a>
+                  <a class="nav-link py-1" href="#what-5">What&#x200E;</a>
                   <a class="nav-link py-1" href="#how">How&#x200E;</a>
                 </nav>
                 <a class="nav-link py-1" href="#system-testing">System testing&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                  <a class="nav-link py-1" href="#what-4">What&#x200E;</a>
+                  <a class="nav-link py-1" href="#what-6">What&#x200E;</a>
                 </nav>
                 <a class="nav-link py-1" href="#alpha-and-beta-testing">Alpha and beta testing&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                  <a class="nav-link py-1" href="#what-5">What&#x200E;</a>
+                  <a class="nav-link py-1" href="#what-7">What&#x200E;</a>
                 </nav>
                 <a class="nav-link py-1" href="#dogfooding">Dogfooding&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                  <a class="nav-link py-1" href="#what-6">What&#x200E;</a>
-                </nav>
-                <a class="nav-link py-1" href="#developer-testing">Developer testing&#x200E;</a>
-                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                  <a class="nav-link py-1" href="#what-7">What&#x200E;</a>
-                  <a class="nav-link py-1" href="#why">Why&#x200E;</a>
+                  <a class="nav-link py-1" href="#what-8">What&#x200E;</a>
                 </nav>
                 <a class="nav-link py-1" href="#exploratory-versus-scripted-testing">Exploratory versus scripted testing&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                  <a class="nav-link py-1" href="#what-8">What&#x200E;</a>
+                  <a class="nav-link py-1" href="#what-9">What&#x200E;</a>
                   <a class="nav-link py-1" href="#when">When&#x200E;</a>
                 </nav>
                 <a class="nav-link py-1" href="#acceptance-testing">Acceptance testing&#x200E;</a>
                 <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                  <a class="nav-link py-1" href="#what-9">What&#x200E;</a>
-                  <a class="nav-link py-1" href="#acceptance-vs-system-testing">Acceptance vs System Testing&#x200E;</a>
-                </nav>
-                <a class="nav-link py-1" href="#regression-testing">Regression testing&#x200E;</a>
-                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                   <a class="nav-link py-1" href="#what-10">What&#x200E;</a>
+                  <a class="nav-link py-1" href="#acceptance-vs-system-testing">Acceptance vs System Testing&#x200E;</a>
                 </nav>
               </nav>
               <a class="nav-link py-1" href="#test-automation">Test automation&#x200E;</a>
@@ -1798,6 +1874,7 @@
               <a class="nav-link py-1" href="#tdd">TDD&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                 <a class="nav-link py-1" href="#what-14">What&#x200E;</a>
+                <a class="nav-link py-1" href="#how-4">How&#x200E;</a>
               </nav>
             </nav>
 
@@ -1808,7 +1885,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -1819,9 +1896,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

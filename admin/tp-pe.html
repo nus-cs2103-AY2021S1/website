@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Admin: tP: Practical Exam</title>
+  <title>CS2103/T - Admin: tP: Practical Exam</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../markbind/css/site-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -89,7 +90,7 @@
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <ul class="site-nav-list site-nav-list-root">
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">TIC4001 Software Engineering Practicum I</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">CS2103/T Software Engineering</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -106,7 +107,10 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/weeklySchedule.html"><small>Weekly Schedule</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures/Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tutorials.html"><small>Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
               </ul>
             </li>
@@ -146,7 +150,7 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w6.html"><small>iP: Week 6</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w8.html"><small>iP: Week 8</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -189,22 +193,22 @@
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w7.html"><small>tP week 7: Get ready for iterations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v2.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v2.0</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v2.1</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v2.1</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-deliverables.html"><small>tP: Deliverables</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -225,6 +229,9 @@
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/exams.html">Exams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
@@ -281,9 +288,9 @@
             <span id="tp-practicalexam-dry-run">
               <div>
                 <h4 id="pe-d-overview"><span class="badge badge-primary">PE-D</span> <span class="text-primary">Overview</span><span id="pe-d-overview" class="anchor"></span><a class="fa fa-anchor" href="#pe-d-overview" onclick="event.stopPropagation()"></a></h4>
-                <p><strong>What</strong>: The v2.0 is subjected to a round of peer <em>acceptance/system testing</em>, also called the <em>Practical Exam (PE) Dry Run</em> as this round of testing will be similar to the graded <span trigger="click" for="modal:projectDeliverablesPeDryRun-pe" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:projectDeliverablesPeDryRun-pe'].show()" class="trigger-click">Practical Exam that will be done at v2.1</span>.</p>
+                <p><strong>What</strong>: The v1.3 is subjected to a round of peer <em>acceptance/system testing</em>, also called the <em>Practical Exam (PE) Dry Run</em> as this round of testing will be similar to the graded <span trigger="click" for="modal:projectDeliverablesPeDryRun-pe" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:projectDeliverablesPeDryRun-pe'].show()" class="trigger-click">Practical Exam that will be done at v1.4</span>.</p>
                 <p><strong>When, where</strong>: uses a 40 minute slot at the start of week 11 lecture slot (to be done online).</p>
-                <b-modal id="modal:projectDeliverablesPeDryRun-pe" hide-footer size="lg" modal-class="mb-zoom" ref="modal:projectDeliverablesPeDryRun-pe"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Practical Exam</template>
+                <b-modal id="modal:projectDeliverablesPeDryRun-pe" hide-footer size="lg" modal-class="mb-zoom" ref="modal:projectDeliverablesPeDryRun-pe" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Practical Exam</template>
                     <div>
                     <div>
                       <h4 id="pe-overview"><span class="badge badge-success">PE</span> <span class="text-success">Overview</span><span id="pe-overview" class="anchor"></span><a class="fa fa-anchor" href="#pe-overview" onclick="event.stopPropagation()"></a></h4>
@@ -302,7 +309,7 @@
                           <li>Also see:</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → Notes on how marks are calculated for PE <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -334,13 +341,13 @@
                         <li>It's similar to,</li>
                       </ul>
                       <div class="indented-level2">
-                        <panel type="primary" minimized><template slot="_header">
+                        <panel type="primary" minimized class="algolia-no-index"><template slot="_header">
                             <p>PE-D Preparation</p>
                           </template>
                           <div>
                             <ul>
                               <li>
-                                <p>Ensure that you have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/nus-tic4001-AY2021S1">https://github.com/nus-tic4001-AY2021S1</a> to accept the invitation.</p>
+                                <p>Ensure that you have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/nus-cs2103-AY2021S1">https://github.com/nus-cs2103-AY2021S1</a> to accept the invitation.</p>
                               </li>
                               <li>
                                 <p>Ensure you have access to a <strong>computer that is able to run module projects</strong> <span class="dimmed">e.g. has the right Java version</span>.</p>
@@ -350,7 +357,7 @@
                               </li>
                             </ul>
                             <div class="indented-level2">
-                              <panel minimized><template slot="_header">
+                              <panel minimized class="algolia-no-index"><template slot="_header">
                                   <p>If not using CATcher</p>
                                 </template>
                                 <div id="not-using-catcher-warning">
@@ -383,7 +390,7 @@
                                     <p><strong>Type</strong> labels:</p>
                                     <ul>
                                       <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-                                      <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v2.1 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v2.1 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+                                      <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
                                       <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li>
                                     </ul>
                                   </box>
@@ -405,12 +412,12 @@
                               </li>
                             </ul>
                             <tabs active="1" add-class="ml-4">
-                              <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                              <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                                 <ul>
                                   <li>After you have been notified which team to test (likely to be in the morning of PE-D day), download the jar file from the team's releases page.</li>
                                 </ul>
                               </tab>
-                              <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                              <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                                 <ul>
                                   <li>After you have been notified of the download location, download the zip file that bears your name.</li>
                                 </ul>
@@ -435,7 +442,7 @@
                         <ul>
                           <li><strong><strong>Gitter</strong></strong>:
                             <ul>
-                              <li>Prof will be online in <a href="https://gitter.im/nus-tic4001-AY2021S1/community">Gitter</a>.</li>
+                              <li>Prof will be online in <a href="https://gitter.im/nus-cs2103-AY2021S1/community">Gitter</a>.</li>
                               <li><mark>Direct all your queries to prof as private messages to <code v-pre>@damithc</code>. <span class="text-danger">Do not use the public chat channel</span> .</mark> If you use the main channel, you might accidentally reveal which team you are testing.</li>
                             </ul>
                           </li>
@@ -466,12 +473,12 @@
                             <li>Get the jar file to be tested:</li>
                           </ul>
                           <tabs active="1">
-                            <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                            <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                               <ul>
                                 <li>Download the jar file from the team's releases page, if you haven't done this already.</li>
                               </ul>
                             </tab>
-                            <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                            <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                               <ul>
                                 <li>Download the zip file from the given location, if you haven't done that already.</li>
                                 <li>Unzip the downloaded zip file with the password (to be given to you at the start of the PE, via LumiNUS gradebook). This will give you another zip file with the name suffix <code v-pre>_inner.zip</code>.</li>
@@ -490,13 +497,13 @@
                             <div class="text-white bg-secondary p-1">b) What to test</div><span id="b-what-to-test" class="anchor"></span><a class="fa fa-anchor" href="#b-what-to-test" onclick="event.stopPropagation()"></a>
                           </h6>
                           <tabs active="1">
-                            <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                            <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                               <ul>
                                 <li>Test the product <mark>based on the User Guide</mark> available from their GitHub website <code v-pre>https://{team-id}.github.io/tp/UserGuide.html</code>.</li>
                                 <li>Do <mark><em>system</em> testing first</mark> <span class="dimmed">i.e., does the product work as specified by the documentation?</span>. If there is time left, you can <mark>do <em>acceptance</em> testing as well</mark> <span class="dimmed">i.e., does the product solve the problem it claims to solve?</span>.</li>
                               </ul>
                             </tab>
-                            <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                            <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                               <ul>
                                 <li>Test <mark>based on the Developer Guide</mark> (Appendix named <em>Instructions for Manual Testing</em>) <mark>and the User Guide</mark>. The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.</li>
                                 <li>As before, do both <mark>system testing and acceptance testing</mark> but give priority to system testing as system-testing bugs can earn you more credit.</li>
@@ -508,12 +515,12 @@
                             <div class="text-white bg-secondary p-1">c) What bugs to report?</div><span id="c-what-bugs-to-report" class="anchor"></span><a class="fa fa-anchor" href="#c-what-bugs-to-report" onclick="event.stopPropagation()"></a>
                           </h6>
                           <tabs active="1">
-                            <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                            <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                               <ul>
                                 <li>You may report functionality bugs, UG bugs, and feature flaws.</li>
                               </ul>
                               <div class="indented-level2">
-                                <panel type class="embedding" minimized><template slot="_header">
+                                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Functionality Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                                   </template>
                                   <div>
@@ -523,7 +530,7 @@
                                       <span aria-hidden="true" class="fas fa-bug"></span> Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span><br></p>
                                   </div>
                                 </panel>
-                                <panel type class="embedding" minimized><template slot="_header">
+                                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                                   </template>
                                   <div>
@@ -534,7 +541,7 @@
                                       <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p>
                                   </div>
                                 </panel>
-                                <panel type class="embedding" minimized><template slot="_header">
+                                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible UG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                                   </template>
                                   <div>
@@ -585,12 +592,12 @@
                                   <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Be diplomatic when reporting bugs or suggesting improvements. For example, instead of criticising the current behavior, simply suggest alternatives to consider.</li>
                               </ul>
                             </tab>
-                            <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                            <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                               <ul>
                                 <li>Report functionality bugs:</li>
                               </ul>
                               <div class="indented-level2">
-                                <panel type class="embedding" minimized><template slot="_header">
+                                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Functionality Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                                   </template>
                                   <div>
@@ -606,7 +613,7 @@
                                 <li>Do not post suggestions but if a feature is missing a critical functionality that makes the feature less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li>
                               </ul>
                               <div class="indented-level2">
-                                <panel type class="embedding" minimized><template slot="_header">
+                                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                                   </template>
                                   <div>
@@ -623,7 +630,7 @@
                                 <li>You may also report UG bugs.</li>
                               </ul>
                               <div class="indented-level2">
-                                <panel type class="embedding" minimized><template slot="_header">
+                                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible UG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                                   </template>
                                   <div>
@@ -686,15 +693,15 @@
                                 <ul>
                                   <li>Launch CATcher, and login to the correct profile:
                                     <ul>
-                                      <li>PE Dry Run: <code v-pre>TIC4001/T PE Dry run</code></li>
-                                      <li>PE: <code v-pre>TIC4001/T PE</code></li>
+                                      <li>PE Dry Run: <code v-pre>CS2103/T PE Dry run</code></li>
+                                      <li>PE: <code v-pre>CS2103/T PE</code></li>
                                     </ul>
                                   </li>
                                   <li>Post bugs using CATcher.
                                   </li>
                                 </ul>
                               </tab>
-                              <tab><template slot="_header">Not using CATcher</template>
+                              <tab class="algolia-no-index"><template slot="_header">Not using CATcher</template>
 
                                 <div class="indented-less">
                                   <div>
@@ -749,7 +756,7 @@
                                 <p><strong>Type</strong> labels:</p>
                                 <ul>
                                   <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-                                  <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v2.1 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v2.1 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+                                  <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
                                   <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li>
                                 </ul>
                               </box>
@@ -763,7 +770,7 @@
                         <li><strong>For each bug reported, cite evidence and justify.</strong> For example, if you think the explanation of a feature is too brief, explain what information is missing and why the omission hinders the reader.</li>
                       </ul>
                       <div class="indented-level2">
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible UG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -810,12 +817,12 @@
                       </div>
                       <p></p>
                       <div class="indented-level2">
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible DG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
                             <p><strong>These are considered DG bugs (if they hinder the reader):</strong></p>
-                            <panel type="seamless"><template slot="_header">
+                            <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                 <p>Those given as possible UG bugs ...</p>
                               </template>
                               <div>
@@ -859,7 +866,16 @@
                                   </span></div>
                               </div>
                             </panel>
-
+                            <span tags="m--cs2103" id="architectureDiagramBugs">
+                              <p><span aria-hidden="true" class="fas fa-bug"></span> Architecture:</p>
+                              <ul>
+                                <li>Symbols used are not intuitive</li>
+                                <li>Indiscriminate use of double-headed arrows</li>
+                                <li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
+                                <li>Description given are not usufficiently high-level
+                                </li>
+                              </ul>
+                            </span>
                             <span id="umlDiagramBugs">
 
                               <p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
@@ -890,7 +906,17 @@
                                 </li>
                               </ul>
                             </span>
+                            <span tags="m--cs2103" id="useCaseBugs">
 
+                              <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in Use Cases. Examples:</p>
+                              <ul>
+                                <li>Incorrect step numbering</li>
+                                <li>Missing extensions</li>
+                                <li>Unnecessary UI details mentioned</li>
+                                <li>Formatting/notational errors
+                                </li>
+                              </ul>
+                            </span>
                             <span id="nfrBugs">
 
                               <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in NFRs. Examples:</p>
@@ -1002,19 +1028,14 @@
                           </div>
                           <p></p>
                           <div id="projectGrading-effort-instructions">
-
-                            <div tags="m--cs2113 m--tic4001">
+                            <div tags="m--cs2103">
                               <p>
-                                <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>[For each member] The functional code contributed by the person is,</strong><br>
-                                <mark>Consider implementation work only (i.e., exclude testing, documentation, project management etc.)</mark><br>
-                                The <em>typical iP</em> refers to an iP where all the requirements are met at the minimal expectations given.<br>
-                                Use the person's PPP and RepoSense page to evaluate the effort.
+                                <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>If the implementation effort required to create AB3 from scratch is 10, the estimated implementation effort of this team is,</strong> [<code v-pre>0</code>..<code v-pre>20</code>] e.g., if you give <code v-pre>8</code>, that means the team's effort is about 80% of that spent on creating AB3. We expect most typical teams to score near to <code v-pre>10</code>.
                               </p>
-                              <ul radio-group="c9961" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Unable to judge</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Significantly less than a typical iP</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Slightly less than a typical iP</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> At least as much as a typical iP</label></li>
+                              <ul>
+                                <li>Do read the DG appendix named <code v-pre>Effort</code>, if any.</li>
+                                <li><mark>Consider implementation work only (i.e., exclude testing, documentation, project management etc.)</mark></li>
+                                <li>Do not give a high value just <em>to be nice</em>. <mark>Your responses will be used to evaluate your effort estimation skills.</mark></li>
                               </ul>
                             </div>
                           </div>
@@ -1041,7 +1062,7 @@
                                 </li>
                               </ul>
                             </box>
-                            <li>Launch CATcher, and login to the profile <code v-pre>TIC4001/T PE</code>. It will show all the bugs assigned to your team, divided into three sections:
+                            <li>Launch CATcher, and login to the profile <code v-pre>CS2103/T PE</code>. It will show all the bugs assigned to your team, divided into three sections:
                               <ol>
                                 <li><code v-pre>Issues Pending Responses</code> - Issues that your team has not processed yet.</li>
                                 <li><code v-pre>Issues Responded</code> - Your job is to get all issues to the second category.</li>
@@ -1051,7 +1072,7 @@
                             <li>Respond to the bug reports shown.
                             </li>
                           </tab>
-                          <tab><template slot="_header">Not using CATcher</template>
+                          <tab class="algolia-no-index"><template slot="_header">Not using CATcher</template>
 
                             <div class="indented-less">
                               <div><span id="warning-use-catcher">
@@ -1088,7 +1109,7 @@
                             <p><strong>Response</strong> Labels:</p>
                             <ul>
                               <li><code v-pre>response.Accepted</code>: You accept it as a bug.</li>
-                              <li><code v-pre>response.NotInScope</code>: It is a valid issue but not something the team should be penalized for <span class="dimmed">e.g., it was not related to features delivered in v2.1</span>.</li>
+                              <li><code v-pre>response.NotInScope</code>: It is a valid issue but not something the team should be penalized for <span class="dimmed">e.g., it was not related to features delivered in v1.4</span>.</li>
                               <li><code v-pre>response.Rejected</code>: What tester treated as a bug is in fact the expected behavior. You can reject bugs that you inherited from AB3.</li>
                               <li><code v-pre>response.CannotReproduce</code>: You are unable to reproduce the behavior reported in the bug after multiple tries.</li>
                               <li><code v-pre>response.IssueUnclear</code>: The issue description is not clear. Don't post comments asking the tester to give more info. The tester will not be able to see those comments because the bug reports are anonymous.</li>
@@ -1103,7 +1124,7 @@
                             <p><strong>Type</strong> labels:</p>
                             <ul>
                               <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-                              <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v2.1 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v2.1 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+                              <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
                               <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li>
                             </ul>
                           </box>
@@ -1125,7 +1146,7 @@
                           </div>
                         </div>
                         <ul>
-                          <li><strong>If you need teaching team's inputs when deciding on a bug</strong> e.g., if you are not sure if the UML notation is correct, post in the <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">forum</a>. Remember to <mark>quote the issue number shown in CATcher</mark> (it appears at the end of the issue title).</li>
+                          <li><strong>If you need teaching team's inputs when deciding on a bug</strong> e.g., if you are not sure if the UML notation is correct, post in the <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a>. Remember to <mark>quote the issue number shown in CATcher</mark> (it appears at the end of the issue title).</li>
                         </ul>
                         <div class="indented-level2" id="additionalGuidelinesForBugTriaging">
                           <box type="info"><template slot="_header">
@@ -1185,7 +1206,7 @@
                         <li>You can also refer to the below guidelines:</li>
                       </ul>
                       <div class="indented-level2">
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> PE → Phase 2 → Additional Guidelines for Bug Triaging</p>
                           </template>
                           <div>
@@ -1221,7 +1242,7 @@
                         <tabs>
                           <tab><template slot="_header">Using CATcher</template>
                             <ul>
-                              <li>When the phase has been announced as open, login to CATcher as usual (profile: <code v-pre>TIC4001/T PE</code>).</li>
+                              <li>When the phase has been announced as open, login to CATcher as usual (profile: <code v-pre>CS2103/T PE</code>).</li>
                               <li>For each issues listed in the <code v-pre>Issues Pending Responses</code> section:,
                                 <ul>
                                   <li>Go to the details, and read the dev team's response.</li>
@@ -1232,7 +1253,7 @@
                               <li>Note that only bugs that require your response will be shown by CATcher. <strong>Bugs already accepted by the team will not appear in CATcher</strong> as there is nothing for you to do about them.</li>
                             </ul>
                           </tab>
-                          <tab><template slot="_header">Not using CATcher</template>
+                          <tab class="algolia-no-index"><template slot="_header">Not using CATcher</template>
                             <div class="indented-less">
                               <div>
                                 <div>
@@ -1276,7 +1297,7 @@
                 <div>
                   <ul>
                     <li>
-                      <p>Ensure that you have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/nus-tic4001-AY2021S1">https://github.com/nus-tic4001-AY2021S1</a> to accept the invitation.</p>
+                      <p>Ensure that you have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/nus-cs2103-AY2021S1">https://github.com/nus-cs2103-AY2021S1</a> to accept the invitation.</p>
                     </li>
                     <li>
                       <p>Ensure you have access to a <strong>computer that is able to run module projects</strong> <span class="dimmed">e.g. has the right Java version</span>.</p>
@@ -1286,7 +1307,7 @@
                     </li>
                   </ul>
                   <div class="indented-level2">
-                    <panel minimized><template slot="_header">
+                    <panel minimized class="algolia-no-index"><template slot="_header">
                         <p>If not using CATcher</p>
                       </template>
                       <div id="not-using-catcher-warning">
@@ -1319,7 +1340,7 @@
                           <p><strong>Type</strong> labels:</p>
                           <ul>
                             <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-                            <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v2.1 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v2.1 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+                            <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
                             <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li>
                           </ul>
                         </box>
@@ -1341,12 +1362,12 @@
                     </li>
                   </ul>
                   <tabs active="0" add-class="ml-4">
-                    <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                    <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                       <ul>
                         <li>After you have been notified which team to test (likely to be in the morning of PE-D day), download the jar file from the team's releases page.</li>
                       </ul>
                     </tab>
-                    <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                    <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                       <ul>
                         <li>After you have been notified of the download location, download the zip file that bears your name.</li>
                       </ul>
@@ -1369,12 +1390,12 @@
                       <li>Get the jar file to be tested:</li>
                     </ul>
                     <tabs active="0">
-                      <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                      <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                         <ul>
                           <li>Download the jar file from the team's releases page, if you haven't done this already.</li>
                         </ul>
                       </tab>
-                      <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                      <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                         <ul>
                           <li>Download the zip file from the given location, if you haven't done that already.</li>
                           <li>Unzip the downloaded zip file with the password (to be given to you at the start of the PE, via LumiNUS gradebook). This will give you another zip file with the name suffix <code v-pre>_inner.zip</code>.</li>
@@ -1393,13 +1414,13 @@
                       <div class="text-white bg-secondary p-1">b) What to test</div><span id="b-what-to-test-2" class="anchor"></span><a class="fa fa-anchor" href="#b-what-to-test-2" onclick="event.stopPropagation()"></a>
                     </h6>
                     <tabs active="0">
-                      <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                      <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                         <ul>
                           <li>Test the product <mark>based on the User Guide</mark> available from their GitHub website <code v-pre>https://{team-id}.github.io/tp/UserGuide.html</code>.</li>
                           <li>Do <mark><em>system</em> testing first</mark> <span class="dimmed">i.e., does the product work as specified by the documentation?</span>. If there is time left, you can <mark>do <em>acceptance</em> testing as well</mark> <span class="dimmed">i.e., does the product solve the problem it claims to solve?</span>.</li>
                         </ul>
                       </tab>
-                      <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                      <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                         <ul>
                           <li>Test <mark>based on the Developer Guide</mark> (Appendix named <em>Instructions for Manual Testing</em>) <mark>and the User Guide</mark>. The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.</li>
                           <li>As before, do both <mark>system testing and acceptance testing</mark> but give priority to system testing as system-testing bugs can earn you more credit.</li>
@@ -1411,12 +1432,12 @@
                       <div class="text-white bg-secondary p-1">c) What bugs to report?</div><span id="c-what-bugs-to-report-2" class="anchor"></span><a class="fa fa-anchor" href="#c-what-bugs-to-report-2" onclick="event.stopPropagation()"></a>
                     </h6>
                     <tabs active="0">
-                      <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                      <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                         <ul>
                           <li>You may report functionality bugs, UG bugs, and feature flaws.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Functionality Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1426,7 +1447,7 @@
                                 <span aria-hidden="true" class="fas fa-bug"></span> Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span><br></p>
                             </div>
                           </panel>
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1437,7 +1458,7 @@
                                 <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p>
                             </div>
                           </panel>
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible UG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1488,12 +1509,12 @@
                             <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Be diplomatic when reporting bugs or suggesting improvements. For example, instead of criticising the current behavior, simply suggest alternatives to consider.</li>
                         </ul>
                       </tab>
-                      <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                      <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                         <ul>
                           <li>Report functionality bugs:</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Functionality Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1509,7 +1530,7 @@
                           <li>Do not post suggestions but if a feature is missing a critical functionality that makes the feature less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1526,7 +1547,7 @@
                           <li>You may also report UG bugs.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible UG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1589,15 +1610,15 @@
                           <ul>
                             <li>Launch CATcher, and login to the correct profile:
                               <ul>
-                                <li>PE Dry Run: <code v-pre>TIC4001/T PE Dry run</code></li>
-                                <li>PE: <code v-pre>TIC4001/T PE</code></li>
+                                <li>PE Dry Run: <code v-pre>CS2103/T PE Dry run</code></li>
+                                <li>PE: <code v-pre>CS2103/T PE</code></li>
                               </ul>
                             </li>
                             <li>Post bugs using CATcher.
                             </li>
                           </ul>
                         </tab>
-                        <tab><template slot="_header">Not using CATcher</template>
+                        <tab class="algolia-no-index"><template slot="_header">Not using CATcher</template>
 
                           <div class="indented-less">
                             <div>
@@ -1652,7 +1673,7 @@
                           <p><strong>Type</strong> labels:</p>
                           <ul>
                             <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-                            <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v2.1 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v2.1 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+                            <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
                             <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li>
                           </ul>
                         </box>
@@ -1660,7 +1681,7 @@
                     </div>
                   </box>
                 </div>
-                <b-modal id="modal:v1.3-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v1.3-ppp"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project →</template>
+                <b-modal id="modal:v1.3-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v1.3-ppp" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project →</template>
                     <div>
                     <div>
                       <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
@@ -1674,7 +1695,7 @@
                         <li><strong>Overview</strong>: A short overview of your product to provide some context to the reader. The opening 1-2 sentences may be reused by all team members. If your product overview extends beyond 1-2 sentences, the remainder should be written by yourself.</li>
                         <li><strong>Summary of Contributions</strong> --Suggested items to include:
                           <ul>
-                            <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
+                            <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
                             <li><strong>Enhancements implemented:</strong> A summary of the enhancements you implemented.</li>
                             <li><strong>Contributions to documentation:</strong> Which sections did you contribute to the UG?</li>
                             <li><strong>Contributions to the DG:</strong> Which sections did you contribute to the DG? Which UML diagrams did you add/updated?</li>
@@ -1689,18 +1710,24 @@
                           </ul>
                         </li>
                       </ul>
-                      <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks"><template slot="modal-title">Team-Based Tasks</template>
+                      <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks" class="algolia-no-index"><template slot="modal-title">Team-Based Tasks</template>
                         <div>
                           <box>
                             <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                            <panel type="seamless"><template slot="_header">
+                            <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
                               </template>
                               <span id="example-team-tasks">
                                 <p>Here is a non-exhaustive list of team-tasks:</p>
                                 <ol>
                                   <li>Setting up the GitHub team org/repo</li>
-                                  <li>Necessary general code enhancements</li>
+                                  <li>Necessary general code enhancements e.g.,
+                                    <ol>
+                                      <li>Work related to renaming the product</li>
+                                      <li>Work related to changing the product icon</li>
+                                      <li>Morphing the product into a different product</li>
+                                    </ol>
+                                  </li>
                                   <li>Setting up tools e.g., GitHub, Gradle</li>
                                   <li>Maintaining the issue tracker</li>
                                   <li>Release management</li>
@@ -1713,8 +1740,8 @@
                         </div>
                       </b-modal>
                       <div class="indented-level2">
-                        <box border-left-color="darkcyan">
-                          <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
+                        <box type="tip" seamless>
+                          <p>Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
                           </p>
                         </box>
                         <p></p>
@@ -1727,11 +1754,11 @@
                       <h4 id="ppp-format"><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><span id="ppp-format" class="anchor"></span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
                       <ul>
                         <li>File name (i.e., in the repo): <code v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code v-pre>docs/team/goodcoder123.md</code></li>
-                        <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-tic4001-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
+                        <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-cs2103-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
                       </ul>
                       <div class="indented-level2">
                         <div>
-                          <box type="important" light>
+                          <box type="important" seamless>
                             <p><strong>To convert the UG/DG/PPP into PDF format</strong>, go to the generated page in your project's <a href="http://github.io">github.io</a> site and use <a href="https://se-education.org/guides/tutorials/savingPdf.html">this technique</a> to save as a pdf file. <mark>Using other techniques can result in poor quality resolution (will be considered a bug) and unnecessarily large files.</mark></p>
                             <p><strong>Ensure hyperlinks in the pdf files work</strong>. Your UG/DG/PPP will be evaluated using PDF files during the PE. <mark>Broken/non-working hyperlinks in the PDF files will be reported as bugs</mark> and will count against your project score. Again, use the conversion technique given above to ensure links in the PDF files work.
                             </p>
@@ -1779,7 +1806,7 @@
                 <span id="after-ped">
                   <h4 id="pe-d-after-the-session"><span class="badge badge-primary">PE-D</span> <span class="text-primary">After the session</span><span id="pe-d-after-the-session" class="anchor"></span><a class="fa fa-anchor" href="#pe-d-after-the-session" onclick="event.stopPropagation()"></a></h4>
                   <ul>
-                    <li>We'll transfer the relevant bug reports to your repo within a day after the session is over. Once you have received the bug reports for your product, you can decide whether you will act on reported issues before the final submission v2.1. For some issues, the correct decision could be to reject or postpone to a version beyond v2.1.</li>
+                    <li>We'll transfer the relevant bug reports to your repo within a day after the session is over. Once you have received the bug reports for your product, you can decide whether you will act on reported issues before the final submission v1.4. For some issues, the correct decision could be to reject or postpone to a version beyond v1.4.</li>
                     <li>If you have received bug reports that don't seem to be about your project, do let us know ASAP (email the prof).</li>
                     <li>You can navigate to the original bug report (via the back-link provided in the bug report given to you) and post in that issue thread to communicate with the tester who reported the bug <span class="dimmed">e.g. to ask for more info</span>, etc. However, the tester is not obliged to respond. Note that simply replying to the bug report in your own repo will not notify the tester.
                       <ul>
@@ -1812,7 +1839,7 @@
                     <li>Also see:</li>
                   </ul>
                   <div class="indented-level2">
-                    <panel type class="embedding" minimized><template slot="_header">
+                    <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                         <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → Notes on how marks are calculated for PE <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                       </template>
                       <div>
@@ -1844,13 +1871,13 @@
                   <li>It's similar to,</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type="primary" minimized><template slot="_header">
+                  <panel type="primary" minimized class="algolia-no-index"><template slot="_header">
                       <p>PE-D Preparation</p>
                     </template>
                     <div>
                       <ul>
                         <li>
-                          <p>Ensure that you have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/nus-tic4001-AY2021S1">https://github.com/nus-tic4001-AY2021S1</a> to accept the invitation.</p>
+                          <p>Ensure that you have accepted the invitation to join the GitHub org used by the module. Go to <a href="https://github.com/nus-cs2103-AY2021S1">https://github.com/nus-cs2103-AY2021S1</a> to accept the invitation.</p>
                         </li>
                         <li>
                           <p>Ensure you have access to a <strong>computer that is able to run module projects</strong> <span class="dimmed">e.g. has the right Java version</span>.</p>
@@ -1860,7 +1887,7 @@
                         </li>
                       </ul>
                       <div class="indented-level2">
-                        <panel minimized><template slot="_header">
+                        <panel minimized class="algolia-no-index"><template slot="_header">
                             <p>If not using CATcher</p>
                           </template>
                           <div id="not-using-catcher-warning">
@@ -1893,7 +1920,7 @@
                               <p><strong>Type</strong> labels:</p>
                               <ul>
                                 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-                                <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v2.1 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v2.1 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+                                <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
                                 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li>
                               </ul>
                             </box>
@@ -1915,12 +1942,12 @@
                         </li>
                       </ul>
                       <tabs active="1" add-class="ml-4">
-                        <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                        <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                           <ul>
                             <li>After you have been notified which team to test (likely to be in the morning of PE-D day), download the jar file from the team's releases page.</li>
                           </ul>
                         </tab>
-                        <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                        <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                           <ul>
                             <li>After you have been notified of the download location, download the zip file that bears your name.</li>
                           </ul>
@@ -1945,7 +1972,7 @@
                   <ul>
                     <li><strong><strong>Gitter</strong></strong>:
                       <ul>
-                        <li>Prof will be online in <a href="https://gitter.im/nus-tic4001-AY2021S1/community">Gitter</a>.</li>
+                        <li>Prof will be online in <a href="https://gitter.im/nus-cs2103-AY2021S1/community">Gitter</a>.</li>
                         <li><mark>Direct all your queries to prof as private messages to <code v-pre>@damithc</code>. <span class="text-danger">Do not use the public chat channel</span> .</mark> If you use the main channel, you might accidentally reveal which team you are testing.</li>
                       </ul>
                     </li>
@@ -1976,12 +2003,12 @@
                       <li>Get the jar file to be tested:</li>
                     </ul>
                     <tabs active="1">
-                      <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                      <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                         <ul>
                           <li>Download the jar file from the team's releases page, if you haven't done this already.</li>
                         </ul>
                       </tab>
-                      <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                      <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                         <ul>
                           <li>Download the zip file from the given location, if you haven't done that already.</li>
                           <li>Unzip the downloaded zip file with the password (to be given to you at the start of the PE, via LumiNUS gradebook). This will give you another zip file with the name suffix <code v-pre>_inner.zip</code>.</li>
@@ -2000,13 +2027,13 @@
                       <div class="text-white bg-secondary p-1">b) What to test</div><span id="b-what-to-test-3" class="anchor"></span><a class="fa fa-anchor" href="#b-what-to-test-3" onclick="event.stopPropagation()"></a>
                     </h6>
                     <tabs active="1">
-                      <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                      <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                         <ul>
                           <li>Test the product <mark>based on the User Guide</mark> available from their GitHub website <code v-pre>https://{team-id}.github.io/tp/UserGuide.html</code>.</li>
                           <li>Do <mark><em>system</em> testing first</mark> <span class="dimmed">i.e., does the product work as specified by the documentation?</span>. If there is time left, you can <mark>do <em>acceptance</em> testing as well</mark> <span class="dimmed">i.e., does the product solve the problem it claims to solve?</span>.</li>
                         </ul>
                       </tab>
-                      <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                      <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                         <ul>
                           <li>Test <mark>based on the Developer Guide</mark> (Appendix named <em>Instructions for Manual Testing</em>) <mark>and the User Guide</mark>. The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.</li>
                           <li>As before, do both <mark>system testing and acceptance testing</mark> but give priority to system testing as system-testing bugs can earn you more credit.</li>
@@ -2018,12 +2045,12 @@
                       <div class="text-white bg-secondary p-1">c) What bugs to report?</div><span id="c-what-bugs-to-report-3" class="anchor"></span><a class="fa fa-anchor" href="#c-what-bugs-to-report-3" onclick="event.stopPropagation()"></a>
                     </h6>
                     <tabs active="1">
-                      <tab><template slot="_header">PE Dry Run (at <strong>v2.0</strong>)</template>
+                      <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
                         <ul>
                           <li>You may report functionality bugs, UG bugs, and feature flaws.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Functionality Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -2033,7 +2060,7 @@
                                 <span aria-hidden="true" class="fas fa-bug"></span> Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span><br></p>
                             </div>
                           </panel>
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -2044,7 +2071,7 @@
                                 <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p>
                             </div>
                           </panel>
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible UG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -2095,12 +2122,12 @@
                             <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Be diplomatic when reporting bugs or suggesting improvements. For example, instead of criticising the current behavior, simply suggest alternatives to consider.</li>
                         </ul>
                       </tab>
-                      <tab><template slot="_header">PE (at <strong>v2.1</strong>)</template>
+                      <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
                         <ul>
                           <li>Report functionality bugs:</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Functionality Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -2116,7 +2143,7 @@
                           <li>Do not post suggestions but if a feature is missing a critical functionality that makes the feature less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -2133,7 +2160,7 @@
                           <li>You may also report UG bugs.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible UG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -2196,15 +2223,15 @@
                           <ul>
                             <li>Launch CATcher, and login to the correct profile:
                               <ul>
-                                <li>PE Dry Run: <code v-pre>TIC4001/T PE Dry run</code></li>
-                                <li>PE: <code v-pre>TIC4001/T PE</code></li>
+                                <li>PE Dry Run: <code v-pre>CS2103/T PE Dry run</code></li>
+                                <li>PE: <code v-pre>CS2103/T PE</code></li>
                               </ul>
                             </li>
                             <li>Post bugs using CATcher.
                             </li>
                           </ul>
                         </tab>
-                        <tab><template slot="_header">Not using CATcher</template>
+                        <tab class="algolia-no-index"><template slot="_header">Not using CATcher</template>
 
                           <div class="indented-less">
                             <div>
@@ -2259,7 +2286,7 @@
                           <p><strong>Type</strong> labels:</p>
                           <ul>
                             <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-                            <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v2.1 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v2.1 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+                            <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
                             <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li>
                           </ul>
                         </box>
@@ -2273,7 +2300,7 @@
                   <li><strong>For each bug reported, cite evidence and justify.</strong> For example, if you think the explanation of a feature is too brief, explain what information is missing and why the omission hinders the reader.</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible UG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -2320,12 +2347,12 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Possible DG Bugs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
                       <p><strong>These are considered DG bugs (if they hinder the reader):</strong></p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p>Those given as possible UG bugs ...</p>
                         </template>
                         <div>
@@ -2369,7 +2396,16 @@
                             </span></div>
                         </div>
                       </panel>
-
+                      <span tags="m--cs2103" id="architectureDiagramBugs">
+                        <p><span aria-hidden="true" class="fas fa-bug"></span> Architecture:</p>
+                        <ul>
+                          <li>Symbols used are not intuitive</li>
+                          <li>Indiscriminate use of double-headed arrows</li>
+                          <li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
+                          <li>Description given are not usufficiently high-level
+                          </li>
+                        </ul>
+                      </span>
                       <span id="umlDiagramBugs">
 
                         <p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
@@ -2400,7 +2436,17 @@
                           </li>
                         </ul>
                       </span>
+                      <span tags="m--cs2103" id="useCaseBugs">
 
+                        <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in Use Cases. Examples:</p>
+                        <ul>
+                          <li>Incorrect step numbering</li>
+                          <li>Missing extensions</li>
+                          <li>Unnecessary UI details mentioned</li>
+                          <li>Formatting/notational errors
+                          </li>
+                        </ul>
+                      </span>
                       <span id="nfrBugs">
 
                         <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in NFRs. Examples:</p>
@@ -2512,19 +2558,14 @@
                     </div>
                     <p></p>
                     <div id="projectGrading-effort-instructions">
-
-                      <div tags="m--cs2113 m--tic4001">
+                      <div tags="m--cs2103">
                         <p>
-                          <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>[For each member] The functional code contributed by the person is,</strong><br>
-                          <mark>Consider implementation work only (i.e., exclude testing, documentation, project management etc.)</mark><br>
-                          The <em>typical iP</em> refers to an iP where all the requirements are met at the minimal expectations given.<br>
-                          Use the person's PPP and RepoSense page to evaluate the effort.
+                          <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>If the implementation effort required to create AB3 from scratch is 10, the estimated implementation effort of this team is,</strong> [<code v-pre>0</code>..<code v-pre>20</code>] e.g., if you give <code v-pre>8</code>, that means the team's effort is about 80% of that spent on creating AB3. We expect most typical teams to score near to <code v-pre>10</code>.
                         </p>
-                        <ul radio-group="c9961" class="radio-list">
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Unable to judge</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Significantly less than a typical iP</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Slightly less than a typical iP</label></li>
-                          <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> At least as much as a typical iP</label></li>
+                        <ul>
+                          <li>Do read the DG appendix named <code v-pre>Effort</code>, if any.</li>
+                          <li><mark>Consider implementation work only (i.e., exclude testing, documentation, project management etc.)</mark></li>
+                          <li>Do not give a high value just <em>to be nice</em>. <mark>Your responses will be used to evaluate your effort estimation skills.</mark></li>
                         </ul>
                       </div>
                     </div>
@@ -2551,7 +2592,7 @@
                           </li>
                         </ul>
                       </box>
-                      <li>Launch CATcher, and login to the profile <code v-pre>TIC4001/T PE</code>. It will show all the bugs assigned to your team, divided into three sections:
+                      <li>Launch CATcher, and login to the profile <code v-pre>CS2103/T PE</code>. It will show all the bugs assigned to your team, divided into three sections:
                         <ol>
                           <li><code v-pre>Issues Pending Responses</code> - Issues that your team has not processed yet.</li>
                           <li><code v-pre>Issues Responded</code> - Your job is to get all issues to the second category.</li>
@@ -2561,7 +2602,7 @@
                       <li>Respond to the bug reports shown.
                       </li>
                     </tab>
-                    <tab><template slot="_header">Not using CATcher</template>
+                    <tab class="algolia-no-index"><template slot="_header">Not using CATcher</template>
 
                       <div class="indented-less">
                         <div><span id="warning-use-catcher">
@@ -2598,7 +2639,7 @@
                       <p><strong>Response</strong> Labels:</p>
                       <ul>
                         <li><code v-pre>response.Accepted</code>: You accept it as a bug.</li>
-                        <li><code v-pre>response.NotInScope</code>: It is a valid issue but not something the team should be penalized for <span class="dimmed">e.g., it was not related to features delivered in v2.1</span>.</li>
+                        <li><code v-pre>response.NotInScope</code>: It is a valid issue but not something the team should be penalized for <span class="dimmed">e.g., it was not related to features delivered in v1.4</span>.</li>
                         <li><code v-pre>response.Rejected</code>: What tester treated as a bug is in fact the expected behavior. You can reject bugs that you inherited from AB3.</li>
                         <li><code v-pre>response.CannotReproduce</code>: You are unable to reproduce the behavior reported in the bug after multiple tries.</li>
                         <li><code v-pre>response.IssueUnclear</code>: The issue description is not clear. Don't post comments asking the tester to give more info. The tester will not be able to see those comments because the bug reports are anonymous.</li>
@@ -2613,7 +2654,7 @@
                       <p><strong>Type</strong> labels:</p>
                       <ul>
                         <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-                        <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v2.1 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v2.1 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+                        <li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
                         <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li>
                       </ul>
                     </box>
@@ -2635,7 +2676,7 @@
                     </div>
                   </div>
                   <ul>
-                    <li><strong>If you need teaching team's inputs when deciding on a bug</strong> e.g., if you are not sure if the UML notation is correct, post in the <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">forum</a>. Remember to <mark>quote the issue number shown in CATcher</mark> (it appears at the end of the issue title).</li>
+                    <li><strong>If you need teaching team's inputs when deciding on a bug</strong> e.g., if you are not sure if the UML notation is correct, post in the <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a>. Remember to <mark>quote the issue number shown in CATcher</mark> (it appears at the end of the issue title).</li>
                   </ul>
                   <div class="indented-level2" id="additionalGuidelinesForBugTriaging">
                     <box type="info"><template slot="_header">
@@ -2695,7 +2736,7 @@
                   <li>You can also refer to the below guidelines:</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> PE → Phase 2 → Additional Guidelines for Bug Triaging</p>
                     </template>
                     <div>
@@ -2731,7 +2772,7 @@
                   <tabs>
                     <tab><template slot="_header">Using CATcher</template>
                       <ul>
-                        <li>When the phase has been announced as open, login to CATcher as usual (profile: <code v-pre>TIC4001/T PE</code>).</li>
+                        <li>When the phase has been announced as open, login to CATcher as usual (profile: <code v-pre>CS2103/T PE</code>).</li>
                         <li>For each issues listed in the <code v-pre>Issues Pending Responses</code> section:,
                           <ul>
                             <li>Go to the details, and read the dev team's response.</li>
@@ -2742,7 +2783,7 @@
                         <li>Note that only bugs that require your response will be shown by CATcher. <strong>Bugs already accepted by the team will not appear in CATcher</strong> as there is nothing for you to do about them.</li>
                       </ul>
                     </tab>
-                    <tab><template slot="_header">Not using CATcher</template>
+                    <tab class="algolia-no-index"><template slot="_header">Not using CATcher</template>
                       <div class="indented-less">
                         <div>
                           <div>
@@ -2808,7 +2849,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -2819,9 +2860,37 @@
 <script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../markbind/layouts/default/scripts.js"></script>
 
 </html>

@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Specifying Requirements: User Stories</title>
+  <title>CS2103/T - Specifying Requirements: User Stories</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -95,11 +96,11 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these are true about user stories?</p>
                                 </template>
                                 <question>
@@ -108,7 +109,7 @@
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They are written from the user/customer perspective</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. They are always written in some physical medium such as index cards or sticky notes</li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <ul class="contains-task-list">
                                       <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Reason: Despite the name, user stories are not related to 'stories' about the software.</li>
                                       <li class="task-list-item enabled"><input class="task-list-item-checkbox" checked type="checkbox"> b.</li>
@@ -119,37 +120,37 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What's wrong with this user story?</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Critique the following user story taken from a software project to build an e-commerce website.</p>
                                   <p><code v-pre>As a developer, I want to use Python to implement the software, so that we can resue existing Python modules.</code></p>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>Refer to the definition of a user story.</p>
                                     <p><span></span></p>
                                     <p><strong>User story</strong>: User stories are short, simple descriptions of a feature told from the perspective of the person who desires the new capability, usually a user or customer of the system. <sub>[<a href="https://www.mountaingoatsoftware.com/agile/user-stories">Mike Cohn</a>]</sub></p>
                                     <p></p>
                                   </div>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>This user story is not written from the perspective of the user/customer.</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Extract user stories from customer statement</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Bill wants you to build a Human Resource Management (HRM) system. He mentions that <em>the system will help employees to view their own <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">The number of leave days not yet taken</span>leave balance</span></em>. What are the user stories you can extract from that statement?</p>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>Remember to follow the correct format when writing user stories.</p>
                                     <div>
                                       <p><strong>User story format</strong>: <code v-pre>As a {user type/role} I can {function} so that {benefit}</code></p>
                                     </div>
                                   </div>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p><code v-pre>As an employee, I can view my leave balance, so that I can know how many leave days I have left.</code></p>
                                     <p><span class="dimmed">Note: the <code v-pre>{benefit}</code> part may vary as it is not specifically mentioned in the question.</span></p>
                                   </div>
@@ -222,7 +223,7 @@
                           <li>Urgency: how soon the feature is needed</li>
                         </ul>
                         <span class="non-printable">
-                          <panel minimized>
+                          <panel minimized class="algolia-no-index">
                             <span slot="header" class="card-title"><span><span aria-hidden="true" class="fas fa-cube"></span></span> More examples <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span>
                             <p>User stories for a travel website (credit: Mike Cohen)</p>
                             <box>
@@ -253,11 +254,11 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Correct statements about user stories</p>
                                 </template>
                                 <question>
@@ -268,7 +269,7 @@
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. User stories describes past experiences users had with similar systems. These are helpful in developing the new system.</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. User stories are not detailed enough to tell us exact details of the product.</li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>d</p>
                                     <p>Explanation: User stories are short and written in natural language, NOT in a formal language. They are used for estimation and scheduling purposes but do not contain enough details to form a complete system specification.</p>
                                   </div>
@@ -300,7 +301,7 @@
                         </blockquote>
                         <p><strong>User stories differ from <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">e.g. a description of the requirements written in prose</span>traditional requirements specifications</span> mainly in the level of detail.</strong> User stories should only provide enough details to make a reasonably low risk estimate of how long the user story will take to implement. When the time comes to implement the user story, the developers will meet with the customer face-to-face to work out a more detailed description of the requirements. <span class="dimmed">[<span for="modal:xp-user-stories" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:xp-user-stories'].show()" class="trigger-click">more...</span>]</span></p>
                         <p><strong>User stories can capture <span trigger="click" for="modal:userStoriesUsage-nfr" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:userStoriesUsage-nfr'].show()" class="trigger-click">non-functional requirements</span> too</strong> because even NFRs must benefit some stakeholder.</p>
-                        <b-modal id="modal:userStoriesUsage-nfr" hide-footer size="lg" modal-class="mb-zoom" ref="modal:userStoriesUsage-nfr"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                        <b-modal id="modal:userStoriesUsage-nfr" hide-footer size="lg" modal-class="mb-zoom" ref="modal:userStoriesUsage-nfr" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                           <div>
                             <div></div>
                             <p></p>
@@ -348,11 +349,11 @@
                                 </div>
                                 <div>
                                   <div>
-                                    <panel expandable><template slot="_header">
+                                    <panel expandable class="algolia-no-index"><template slot="_header">
                                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                       </template>
                                       <div>
-                                        <panel><template slot="_header">
+                                        <panel class="algolia-no-index"><template slot="_header">
                                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> TEAMMATES NFRs</p>
                                           </template>
                                           <question>
@@ -366,7 +367,7 @@
                                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. The user interface should be intuitive enough for users who are not IT-savvy.</li>
                                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> g. The product is offered as a free online service.</li>
                                             </ul>
-                                            <div slot="answer">
+                                            <div slot="answer" class="algolia-no-index">
                                               <p>(a)(c)(d)(f)(g)</p>
                                               <p>Explanation: (b) are (e) are functions available for a specific user types. Therefore, they are functional requirements. (a), (c), (d), (f) and (g) are either constraints on functionality or constraints on how the project is done, both of which are considered non-functional requirements.</p>
                                             </div>
@@ -483,7 +484,7 @@
                         </div>
                         <p>While use cases can be recorded on <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g. index cards or sticky notes</span>physical paper</span> in the initial stages, an online tool is more suitable for longer-term management of user stories, especially if the team is not <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">physically in the same location</span>co-located</span>.</p>
                         <span class="non-printable">
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><strong>Tool Examples</strong>: How to use some example online tools to manage user stories</p>
                             </template><template slot="_alt">
                               <p>tool examples</p>
@@ -540,13 +541,13 @@
                                   <p>A video on GitHub Project Boards:</p>
                                   <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/C6MGKHkNtxU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
                                 </tab>
-                                <tab><template slot="_header">Google Sheets</template>
+                                <tab class="algolia-no-index"><template slot="_header">Google Sheets</template>
                                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example Google Sheet for recording user stories:</p>
                                   <p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoriesInGoogleSheets.png" width="800"></p>
                                   <p></p>
                                   <p></p>
                                 </tab>
-                                <tab><template slot="_header">Trello</template>
+                                <tab class="algolia-no-index"><template slot="_header">Trello</template>
                                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <a href="https://trello.com">Trello</a> Board for recording user stories:</p>
                                   <p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoriesInTrello.png" width="800"></p>
                                   <p></p>
@@ -556,7 +557,7 @@
                             </div>
                           </panel>
                         </span>
-                        <b-modal id="modal:xp-user-stories" hide-footer size modal-class="mb-zoom" ref="modal:xp-user-stories"><template slot="modal-title">🔖 User stories vs traditional requirement specifications, according to XP</template>
+                        <b-modal id="modal:xp-user-stories" hide-footer size modal-class="mb-zoom" ref="modal:xp-user-stories" class="algolia-no-index"><template slot="modal-title">🔖 User stories vs traditional requirement specifications, according to XP</template>
                           <p><span>
                               <span id="pop:xp" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header">eXtreme Programming (XP)</span>eXtreme Programming (XP)</span></span></p>
                           <div slot="content">
@@ -599,9 +600,37 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 
 </html>

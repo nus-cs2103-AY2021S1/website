@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Week 7 - Lecture</title>
+  <title>CS2103/T - Week 7 - Tutorial</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -93,17 +94,512 @@
               <li class="page-item"><a class="page-link" href="/website/schedule/week6"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
               <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week7/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-              <li class="page-item active"><a class="page-link" href="/website/schedule/week7/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week7/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week7/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week7/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week7/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+              <li class="page-item active"><a class="page-link" href="/website/schedule/week7/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
               <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week8"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
             </ul>
           </nav>
           <p></p>
-          <h1 id="week-7-fri-sep-25th-lecture">Week 7 <small><small><span class="dimmed">[Fri, Sep 25th]</span> - Lecture</small></small><span id="week-7-fri-sep-25th-lecture" class="anchor"></span><a class="fa fa-anchor" href="#week-7-fri-sep-25th-lecture" onclick="event.stopPropagation()"></a></h1>
-          <div></div>
+          <h1 id="week-7-fri-sep-18th-tutorial">Week 7 <small><small><span class="dimmed">[Fri, Sep 18th]</span> - Tutorial</small></small><span id="week-7-fri-sep-18th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-7-fri-sep-18th-tutorial" onclick="event.stopPropagation()"></a></h1>
+          <div>
+            <h4 id="1-exercise-on-requirements-pr-tracker"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Exercise on Requirements: PR Tracker<span id="1-exercise-on-requirements-pr-tracker" class="anchor"></span><a class="fa fa-anchor" href="#1-exercise-on-requirements-pr-tracker" onclick="event.stopPropagation()"></a></h4>
+            <ol>
+              <li>
+                <p><strong>Divide the team into sub-team</strong> A and sub-team B, 2-3 members each.</p>
+              </li>
+              <li>
+                <p><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 7-8 minutes</span></span> <strong>Write the answers to the following questions</strong> on the online document provided.</p>
+                <box>
+                  <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Question adapted from a past exam paper.</span></p>
+                  <p><span class="text-monospace">Pull Request Tracker (PRT) is a desktop application meant to help CS2103 tutors deal with GitHub PRs more efficiently (compared to the GitHub Web interface). For example, it will help tutors find and review PRs from their <em>mentees</em> easily. It will help the <em>managers</em> of the module (e.g., professor, head TA) to easily keep track of how tutors are dealing with mentee PRs. PRT will communicate with GitHub using the GitHub API.</span></p>
+                  <p><strong>Sub-team A:</strong></p>
+                  <ul>
+                    <li>Write 1 must-have and 1 nice-to-have user stories, covering user types <code v-pre>tutor</code> and <code v-pre>manager</code>.</li>
+                    <li>Write at least 1 <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Non-Functional Requirements</span>NFRs</span>, related to performance/scalability and/or usability.</li>
+                    <li>Give at least 1 terms worth recording in the glossary.</li>
+                  </ul>
+                  <p><strong>Sub-team B:</strong></p>
+                  <ul>
+                    <li>Complete the following use case. Give at least one extension. Note that the tutor should give comments in the order of PR size (i.e., give comments to smaller PRs first). Assume the following use cases exists already: <code v-pre>U1. Sort PRs by a criterion</code>, <code v-pre>U2. Add comments to a PR</code></li>
+                  </ul>
+                  <div class="indented-level2 text-monospace">
+                    <blockquote>
+                      <p>System: PRT<br>
+                        Use Case: U3. Add comments to mentee PRs<br>
+                        Actor: ...<br>
+                        Precondition: ...<br></p>
+                      <p>...</p>
+                    </blockquote>
+                  </div>
+                </box>
+              </li>
+              <li>
+                <p><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 7-8 minutes</span></span> <strong>Discuss the answers</strong> as guided by the tutor.</p>
+              </li>
+            </ol>
+            <h4 id="2-review-requirements-of-a-peer-team"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Review Requirements of a Peer Team<span id="2-review-requirements-of-a-peer-team" class="anchor"></span><a class="fa fa-anchor" href="#2-review-requirements-of-a-peer-team" onclick="event.stopPropagation()"></a></h4>
+            <ul>
+              <li><strong>Find the team you have been allocated to discuss</strong> in the panel below and click on the link to locate their team PR.</li>
+            </ul>
+            <div class="indented-level2">
+              <panel minimized class="algolia-no-index"><template slot="_header">
+                  <p>Team allocation for PR discussion</p>
+                </template>
+                <div class="table-responsive">
+                  <table class="markbind-table table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th>Team</th>
+                        <th>Discuss PR of</th>
+                        <th>Backup team to discuss</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>CS2103T-W11-1</td>
+                        <td>CS2103T-W13-1: <a href="https://AY2021S1-cs2103t-w13-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W13+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-W12-1: <a href="https://AY2021S1-cs2103t-w12-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W12+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W11-2</td>
+                        <td>CS2103T-W13-2: <a href="https://AY2021S1-cs2103t-w13-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W13+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-W12-2: <a href="https://AY2021S1-cs2103t-w12-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W12+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W11-3</td>
+                        <td>CS2103T-W13-3: <a href="https://AY2021S1-cs2103t-w13-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W13+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-W12-3: <a href="https://AY2021S1-cs2103t-w12-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W12+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W11-4</td>
+                        <td>CS2103T-W13-4: <a href="https://AY2021S1-cs2103t-w13-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W13+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-W12-4: <a href="https://AY2021S1-cs2103t-w12-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W12+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W12-1</td>
+                        <td>CS2103T-W11-1: <a href="https://AY2021S1-cs2103t-w11-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W11+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-W13-1: <a href="https://AY2021S1-cs2103t-w13-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W13+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W12-2</td>
+                        <td>CS2103T-W11-2: <a href="https://AY2021S1-cs2103t-w11-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W11+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-W13-2: <a href="https://AY2021S1-cs2103t-w13-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W13+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W12-3</td>
+                        <td>CS2103T-W11-3: <a href="https://AY2021S1-cs2103t-w11-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W11+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-W13-3: <a href="https://AY2021S1-cs2103t-w13-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W13+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W12-4</td>
+                        <td>CS2103T-W11-4: <a href="https://AY2021S1-cs2103t-w11-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W11+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-W13-4: <a href="https://AY2021S1-cs2103t-w13-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W13+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W13-1</td>
+                        <td>CS2103T-W12-1: <a href="https://AY2021S1-cs2103t-w12-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W12+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-W11-1: <a href="https://AY2021S1-cs2103t-w11-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W11+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W13-2</td>
+                        <td>CS2103T-W12-2: <a href="https://AY2021S1-cs2103t-w12-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W12+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-W11-2: <a href="https://AY2021S1-cs2103t-w11-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W11+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W13-3</td>
+                        <td>CS2103T-W12-3: <a href="https://AY2021S1-cs2103t-w12-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W12+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-W11-3: <a href="https://AY2021S1-cs2103t-w11-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W11+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-W13-4</td>
+                        <td>CS2103T-W12-4: <a href="https://AY2021S1-cs2103t-w12-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W12+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-W11-4: <a href="https://AY2021S1-cs2103t-w11-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-W11+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T09-1</td>
+                        <td>CS2103-T16-3: <a href="https://AY2021S1-cs2103-t16-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T16+label%3Ateam.3">PR</a></td>
+                        <td>CS2103-T14-3: <a href="https://AY2021S1-cs2103-t14-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T14+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T09-2</td>
+                        <td>CS2103-T16-4: <a href="https://AY2021S1-cs2103-t16-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T16+label%3Ateam.4">PR</a></td>
+                        <td>CS2103-T14-4: <a href="https://AY2021S1-cs2103-t14-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T14+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T09-3</td>
+                        <td>CS2103T-T17-1: <a href="https://AY2021S1-cs2103t-t17-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T17+label%3Ateam.1">PR</a></td>
+                        <td>CS2103-T16-1: <a href="https://AY2021S1-cs2103-t16-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T16+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T09-4</td>
+                        <td>CS2103T-T17-2: <a href="https://AY2021S1-cs2103t-t17-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T17+label%3Ateam.2">PR</a></td>
+                        <td>CS2103-T16-2: <a href="https://AY2021S1-cs2103-t16-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T16+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T10-1</td>
+                        <td>CS2103T-T09-1: <a href="https://AY2021S1-cs2103t-t09-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T09+label%3Ateam.1">PR</a></td>
+                        <td>CS2103-T16-3: <a href="https://AY2021S1-cs2103-t16-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T16+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T10-2</td>
+                        <td>CS2103T-T09-2: <a href="https://AY2021S1-cs2103t-t09-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T09+label%3Ateam.2">PR</a></td>
+                        <td>CS2103-T16-4: <a href="https://AY2021S1-cs2103-t16-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T16+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T10-3</td>
+                        <td>CS2103T-T09-3: <a href="https://AY2021S1-cs2103t-t09-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T09+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-T17-1: <a href="https://AY2021S1-cs2103t-t17-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T17+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T10-4</td>
+                        <td>CS2103T-T09-4: <a href="https://AY2021S1-cs2103t-t09-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T09+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-T17-2: <a href="https://AY2021S1-cs2103t-t17-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T17+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T11-1</td>
+                        <td>CS2103T-T10-1: <a href="https://AY2021S1-cs2103t-t10-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T10+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-T09-1: <a href="https://AY2021S1-cs2103t-t09-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T09+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T11-1</td>
+                        <td>CS2103T-T10-2: <a href="https://AY2021S1-cs2103t-t10-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T10+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-T09-2: <a href="https://AY2021S1-cs2103t-t09-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T09+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T11-2</td>
+                        <td>CS2103T-T10-3: <a href="https://AY2021S1-cs2103t-t10-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T10+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-T09-3: <a href="https://AY2021S1-cs2103t-t09-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T09+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T11-2</td>
+                        <td>CS2103T-T10-4: <a href="https://AY2021S1-cs2103t-t10-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T10+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-T09-4: <a href="https://AY2021S1-cs2103t-t09-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T09+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T11-3</td>
+                        <td>CS2103T-T11-1: <a href="https://AY2021S1-cs2103t-t11-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T11+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-T10-1: <a href="https://AY2021S1-cs2103t-t10-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T10+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T11-3</td>
+                        <td>CS2103-T11-1: <a href="https://AY2021S1-cs2103-t11-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T11+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-T10-2: <a href="https://AY2021S1-cs2103t-t10-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T10+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T11-4</td>
+                        <td>CS2103-T11-2: <a href="https://AY2021S1-cs2103-t11-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T11+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-T10-3: <a href="https://AY2021S1-cs2103t-t10-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T10+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T12-1</td>
+                        <td>CS2103T-T11-2: <a href="https://AY2021S1-cs2103t-t11-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T11+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-T10-4: <a href="https://AY2021S1-cs2103t-t10-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T10+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T12-2</td>
+                        <td>CS2103T-T11-3: <a href="https://AY2021S1-cs2103t-t11-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T11+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-T11-1: <a href="https://AY2021S1-cs2103t-t11-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T11+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T12-3</td>
+                        <td>CS2103-T11-3: <a href="https://AY2021S1-cs2103-t11-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T11+label%3Ateam.3">PR</a></td>
+                        <td>CS2103-T11-1: <a href="https://AY2021S1-cs2103-t11-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T11+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T12-4</td>
+                        <td>CS2103T-T11-4: <a href="https://AY2021S1-cs2103t-t11-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T11+label%3Ateam.4">PR</a></td>
+                        <td>CS2103-T11-2: <a href="https://AY2021S1-cs2103-t11-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T11+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T13-1</td>
+                        <td>CS2103T-T12-1: <a href="https://AY2021S1-cs2103t-t12-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T12+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-T11-2: <a href="https://AY2021S1-cs2103t-t11-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T11+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T13-2</td>
+                        <td>CS2103T-T12-2: <a href="https://AY2021S1-cs2103t-t12-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T12+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-T11-3: <a href="https://AY2021S1-cs2103t-t11-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T11+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T13-3</td>
+                        <td>CS2103T-T12-3: <a href="https://AY2021S1-cs2103t-t12-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T12+label%3Ateam.3">PR</a></td>
+                        <td>CS2103-T11-3: <a href="https://AY2021S1-cs2103-t11-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T11+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T13-4</td>
+                        <td>CS2103T-T12-4: <a href="https://AY2021S1-cs2103t-t12-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T12+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-T11-4: <a href="https://AY2021S1-cs2103t-t11-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T11+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T14-1</td>
+                        <td>CS2103T-T13-1: <a href="https://AY2021S1-cs2103t-t13-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T13+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-T12-1: <a href="https://AY2021S1-cs2103t-t12-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T12+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T14-2</td>
+                        <td>CS2103T-T13-2: <a href="https://AY2021S1-cs2103t-t13-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T13+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-T12-2: <a href="https://AY2021S1-cs2103t-t12-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T12+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T14-3</td>
+                        <td>CS2103T-T13-3: <a href="https://AY2021S1-cs2103t-t13-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T13+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-T12-3: <a href="https://AY2021S1-cs2103t-t12-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T12+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T14-4</td>
+                        <td>CS2103T-T13-4: <a href="https://AY2021S1-cs2103t-t13-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T13+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-T12-4: <a href="https://AY2021S1-cs2103t-t12-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T12+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T16-1</td>
+                        <td>CS2103-T14-1: <a href="https://AY2021S1-cs2103-t14-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T14+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-T13-1: <a href="https://AY2021S1-cs2103t-t13-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T13+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T16-2</td>
+                        <td>CS2103-T14-2: <a href="https://AY2021S1-cs2103-t14-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T14+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-T13-2: <a href="https://AY2021S1-cs2103t-t13-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T13+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T16-3</td>
+                        <td>CS2103-T14-3: <a href="https://AY2021S1-cs2103-t14-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T14+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-T13-3: <a href="https://AY2021S1-cs2103t-t13-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T13+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-T16-4</td>
+                        <td>CS2103-T14-4: <a href="https://AY2021S1-cs2103-t14-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T14+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-T13-4: <a href="https://AY2021S1-cs2103t-t13-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-T13+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T17-1</td>
+                        <td>CS2103-T16-1: <a href="https://AY2021S1-cs2103-t16-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T16+label%3Ateam.1">PR</a></td>
+                        <td>CS2103-T14-1: <a href="https://AY2021S1-cs2103-t14-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T14+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-T17-2</td>
+                        <td>CS2103-T16-2: <a href="https://AY2021S1-cs2103-t16-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T16+label%3Ateam.2">PR</a></td>
+                        <td>CS2103-T14-2: <a href="https://AY2021S1-cs2103-t14-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-T14+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-F09-1</td>
+                        <td>CS2103T-F14-1: <a href="https://AY2021S1-cs2103t-f14-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F14+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-F13-1: <a href="https://AY2021S1-cs2103t-f13-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F13+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-F09-2</td>
+                        <td>CS2103T-F14-2: <a href="https://AY2021S1-cs2103t-f14-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F14+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-F13-2: <a href="https://AY2021S1-cs2103t-f13-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F13+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-F09-3</td>
+                        <td>CS2103T-F14-3: <a href="https://AY2021S1-cs2103t-f14-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F14+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-F13-3: <a href="https://AY2021S1-cs2103t-f13-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F13+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-F09-4</td>
+                        <td>CS2103T-F14-4: <a href="https://AY2021S1-cs2103t-f14-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F14+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-F13-4: <a href="https://AY2021S1-cs2103t-f13-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F13+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-F10-1</td>
+                        <td>CS2103-F09-1: <a href="https://AY2021S1-cs2103-f09-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F09+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-F14-1: <a href="https://AY2021S1-cs2103t-f14-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F14+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-F10-2</td>
+                        <td>CS2103-F09-2: <a href="https://AY2021S1-cs2103-f09-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F09+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-F14-2: <a href="https://AY2021S1-cs2103t-f14-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F14+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103-F10-3</td>
+                        <td>CS2103-F09-3: <a href="https://AY2021S1-cs2103-f09-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F09+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-F14-3: <a href="https://AY2021S1-cs2103t-f14-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F14+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F11-1</td>
+                        <td>CS2103-F09-4: <a href="https://AY2021S1-cs2103-f09-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F09+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-F14-4: <a href="https://AY2021S1-cs2103t-f14-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F14+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F11-2</td>
+                        <td>CS2103-F10-1: <a href="https://AY2021S1-cs2103-f10-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F10+label%3Ateam.1">PR</a></td>
+                        <td>CS2103-F09-1: <a href="https://AY2021S1-cs2103-f09-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F09+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F11-3</td>
+                        <td>CS2103-F10-2: <a href="https://AY2021S1-cs2103-f10-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F10+label%3Ateam.2">PR</a></td>
+                        <td>CS2103-F09-2: <a href="https://AY2021S1-cs2103-f09-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F09+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F11-4</td>
+                        <td>CS2103-F10-3: <a href="https://AY2021S1-cs2103-f10-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F10+label%3Ateam.3">PR</a></td>
+                        <td>CS2103-F09-3: <a href="https://AY2021S1-cs2103-f09-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F09+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F12-1</td>
+                        <td>CS2103T-F11-1: <a href="https://AY2021S1-cs2103t-f11-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F11+label%3Ateam.1">PR</a></td>
+                        <td>CS2103-F09-4: <a href="https://AY2021S1-cs2103-f09-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F09+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F12-2</td>
+                        <td>CS2103T-F11-2: <a href="https://AY2021S1-cs2103t-f11-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F11+label%3Ateam.2">PR</a></td>
+                        <td>CS2103-F10-1: <a href="https://AY2021S1-cs2103-f10-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F10+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F12-3</td>
+                        <td>CS2103T-F11-3: <a href="https://AY2021S1-cs2103t-f11-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F11+label%3Ateam.3">PR</a></td>
+                        <td>CS2103-F10-2: <a href="https://AY2021S1-cs2103-f10-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F10+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F12-4</td>
+                        <td>CS2103T-F11-4: <a href="https://AY2021S1-cs2103t-f11-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F11+label%3Ateam.4">PR</a></td>
+                        <td>CS2103-F10-3: <a href="https://AY2021S1-cs2103-f10-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103-F10+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F13-1</td>
+                        <td>CS2103T-F12-1: <a href="https://AY2021S1-cs2103t-f12-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F12+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-F11-1: <a href="https://AY2021S1-cs2103t-f11-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F11+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F13-2</td>
+                        <td>CS2103T-F12-2: <a href="https://AY2021S1-cs2103t-f12-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F12+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-F11-2: <a href="https://AY2021S1-cs2103t-f11-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F11+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F13-3</td>
+                        <td>CS2103T-F12-3: <a href="https://AY2021S1-cs2103t-f12-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F12+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-F11-3: <a href="https://AY2021S1-cs2103t-f11-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F11+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F13-4</td>
+                        <td>CS2103T-F12-4: <a href="https://AY2021S1-cs2103t-f12-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F12+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-F11-4: <a href="https://AY2021S1-cs2103t-f11-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F11+label%3Ateam.4">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F14-1</td>
+                        <td>CS2103T-F13-1: <a href="https://AY2021S1-cs2103t-f13-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F13+label%3Ateam.1">PR</a></td>
+                        <td>CS2103T-F12-1: <a href="https://AY2021S1-cs2103t-f12-1.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F12+label%3Ateam.1">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F14-2</td>
+                        <td>CS2103T-F13-2: <a href="https://AY2021S1-cs2103t-f13-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F13+label%3Ateam.2">PR</a></td>
+                        <td>CS2103T-F12-2: <a href="https://AY2021S1-cs2103t-f12-2.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F12+label%3Ateam.2">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F14-3</td>
+                        <td>CS2103T-F13-3: <a href="https://AY2021S1-cs2103t-f13-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F13+label%3Ateam.3">PR</a></td>
+                        <td>CS2103T-F12-3: <a href="https://AY2021S1-cs2103t-f12-3.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F12+label%3Ateam.3">PR</a></td>
+                      </tr>
+                      <tr>
+                        <td>CS2103T-F14-4</td>
+                        <td>CS2103T-F13-4: <a href="https://AY2021S1-cs2103t-f13-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F13+label%3Ateam.4">PR</a></td>
+                        <td>CS2103T-F12-4: <a href="https://AY2021S1-cs2103t-f12-4.github.io/main/DeveloperGuide.html">DG</a> <a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3/pulls?q=is%3Aopen+is%3Apr+label%3Atutorial.CS2103T-F12+label%3Ateam.4">PR</a></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </panel>
+              <p></p>
+            </div>
+            <ul>
+              <li>
+                <p><strong>Open the DG</strong> link given. Check if the team has added at least three out of these four: use cases, user stories, NFRs, glossary terms.<br>
+                  <span class="dimmed"><strong>If the answer is no</strong>, you can try the <em>backup</em> team (see the third column in the allocation panel). If even the backup team does not match the requirement, choose any random teams having tutorials in the same day and not in the same tutorial as you.</span></p>
+              </li>
+              <li>
+                <p><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 7-8 minutes</span></span> <strong>Read the following sections in the DG and check for the bugs listed below</strong>. If you notice a bug, take a screenshot, annotate the screenshot if needed, and paste the screenshot in the online document provided. You can also add explanatory notes to the online document if it helps.</p>
+                <ul>
+                  <li>All members of the sub-team should do this in parallel.</li>
+                  <li>If you are not sure if something is a bug, add it anyway.</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="indented-level2">
+              <p><strong>Sub-team A:</strong> Review use cases, w.r.t. the possible bugs are given below.</p>
+              <div class="indented-level2">
+                <panel type="danger" class="embedding" expanded><template slot="_header">
+                    <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → Use Case → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                  </template>
+                  <div>
+                    <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in Use Cases. Examples:</p>
+                    <ul>
+                      <li>Incorrect step numbering</li>
+                      <li>Missing extensions</li>
+                      <li>Unnecessary UI details mentioned</li>
+                      <li>Formatting/notational errors</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+              <p></p>
+              <p><strong>Sub-team B</strong>: review user stores, NFRs, glossary, w.r.t. the possible bugs are given below.</p>
+              <div class="indented-level2">
+                <panel type="danger" class="embedding" expanded><template slot="_header">
+                    <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → User Story → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                  </template>
+                  <div>
+                    <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in User Stories. Examples:</p>
+                    <ul>
+                      <li>Incorrect format</li>
+                      <li>All three parts are not present</li>
+                      <li>Benefit does not match the function</li>
+                      <li>Important user stories missing</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+              <p></p>
+              <div class="indented-level2">
+                <panel type="danger" class="embedding" expanded><template slot="_header">
+                    <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → NFR → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                  </template>
+                  <div>
+                    <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in NFRs. Examples:</p>
+                    <ul>
+                      <li>Not really a <em>Non-Functional</em> Requirement</li>
+                      <li>Not well-defined (i.e., hard to decide when it has been met)</li>
+                      <li>Not reasonably achievable</li>
+                      <li>Highly relevant NFRs missing</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+              <p></p>
+              <div class="indented-level2">
+                <panel type="danger" class="embedding" expanded><template slot="_header">
+                    <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → Glossary → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                  </template>
+                  <div>
+                    <p><span aria-hidden="true" class="fas fa-bug"></span> Problems in Glossary. Examples:</p>
+                    <ul>
+                      <li>Unnecessary terms included</li>
+                      <li>Important terms missing</li>
+                    </ul>
+                  </div>
+                </panel>
+              </div>
+              <p></p>
+            </div>
+            <ul>
+              <li><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 7-8 minutes</span></span> <strong>Discuss your comments/observations/doubts</strong> as guided by the tutor, in particular, cases you are not sure of.</li>
+              <li><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 7-8 minutes</span></span> <strong>Submit your findings as a PR review:</strong>
+                <ol>
+                  <li>Open the iP PR of the team you reviewed (link provided in the review allocation table you used earlier).</li>
+                  <li>Add your comments in the corresponding place in the PR as review comments.
+                    <ul>
+                      <li>The textbook section on how to review PRs is <a href="/website/book/gitAndGithub/reviewPRs">here</a>.</li>
+                      <li>Remember to follow <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html">the guidelines for PR reviews</a>.</li>
+                    </ul>
+                  </li>
+                  <li>You may divide the work among the sub-team members so that each person has some comments to add.</li>
+                  <li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> After adding comments, you may want to unsubscribe from the PR to avoid getting GitHub alerts from that PR in the future.</li>
+                </ol>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -111,7 +607,11 @@
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#week-7-fri-sep-25th-lecture">Week 7 [Fri, Sep 25th] - Lecture&#x200E;</a>
+            <a class="nav-link py-1" href="#week-7-fri-sep-18th-tutorial">Week 7 [Fri, Sep 18th] - Tutorial&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#1-exercise-on-requirements-pr-tracker">1 Exercise on Requirements: PR Tracker&#x200E;</a>
+              <a class="nav-link py-1" href="#2-review-requirements-of-a-peer-team">2 Review Requirements of a Peer Team&#x200E;</a>
+            </nav>
 
           </nav>
         </div>
@@ -120,7 +620,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -131,9 +631,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

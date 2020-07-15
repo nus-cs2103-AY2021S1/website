@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Textbook Chapter : Software Architecture</title>
+  <title>CS2103/T - Textbook Chapter : Software Architecture</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/site-nav.css">
@@ -28,9 +29,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -38,7 +39,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -49,10 +50,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -65,20 +66,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -89,6 +90,16 @@
           <ul class="site-nav-list site-nav-list-root">
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/index.html">Home <span aria-hidden="true" class="glyphicon glyphicon-home"></span>, printable versions <span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span></a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Software Engineering</strong>
+                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
+              <ul class="site-nav-dropdown-container site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/softwareEngineering.html">Software Engineering</a></div>
+                </li>
+              </ul>
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><strong>Programming Paradigms</strong>
@@ -132,6 +143,9 @@
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/architecture.html" class="current">Software Architecture</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designPatterns.html">Software Design Patterns</a></div>
                 </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/designApproaches.html">Design Approaches</a></div>
@@ -233,12 +247,6 @@
                   <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
               <ul class="site-nav-dropdown-container site-nav-list">
                 <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/cppToJava.html">C++ to Java</a></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/projectDuke/index.html">Project Duke</a></div>
-                </li>
-                <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div>
                 </li>
                 <li>
@@ -270,7 +278,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain Software Architecture</span></span></span></span>
                 <p></p>
                 <div>
@@ -302,11 +312,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about architecture</p>
                           </template>
                           <question>
@@ -317,7 +327,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. The architecture is usually decided by the project manager.</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. The architecture can contain details private to a component.</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>(a)(b)</p>
                               <p><s>(c)</s> Reason: Architecture is usually designed by the Architect</p>
                               <p><s>(d)</s> Reason:</p>
@@ -345,7 +355,9 @@
               </template>
               <div class="indented">
                 <span class="badge badge-light">
-                  <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+                  <span><span class="dimmed">
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                    </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret an architecture diagram</span></span></span></span>
                 <p></p>
                 <div>
@@ -357,18 +369,18 @@
                         <tab><template slot="_header">TEAMMATES</template>
                           <p><img src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"><br></p>
                         </tab>
-                        <tab><template slot="_header">se-edu/addressbook-level3</template>
+                        <tab class="algolia-no-index"><template slot="_header">se-edu/addressbook-level3</template>
                           <p><img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"><br></p>
                         </tab>
-                        <tab><template slot="_header">Example 1</template>
+                        <tab class="algolia-no-index"><template slot="_header">Example 1</template>
                           <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"><br>
                             <sub><a href="https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png">source: https://commons.wikimedia.org</a></sub></p>
                         </tab>
-                        <tab><template slot="_header">Example 2</template>
+                        <tab class="algolia-no-index"><template slot="_header">Example 2</template>
                           <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"><br>
                             <sub><a href="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png">source: https://commons.wikimedia.org</a></sub></p>
                         </tab>
-                        <tab><template slot="_header">Example 3</template>
+                        <tab class="algolia-no-index"><template slot="_header">Example 3</template>
                           <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"><br>
                             <sub><a href="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg">source: https://commons.wikimedia.org</a></sub></p>
                         </tab>
@@ -385,7 +397,7 @@
               <div class="indented">
                 <span class="badge badge-light">
                   <span><span class="dimmed">
-                      <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      <font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
                     </span></span></span>
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw an architecture diagram</span></span></span></span>
                 <p></p>
@@ -409,6 +421,281 @@
               </div>
             </panel>
           </panel>
+          <panel type="seamless" expanded id="architectural-styles">
+            <span slot="header" class="card-title">
+              <div>
+                <h2 id="architectural-styles"><span>Architectural styles</span><span id="architectural-styles" class="anchor"></span><a class="fa fa-anchor" href="#architectural-styles" onclick="event.stopPropagation()"></a></h2>
+              </div>
+            </span>
+            <panel type="seamless" expanded id="introduction-2">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="introduction-2"><span>Introduction</span><span id="introduction-2" class="anchor"></span><a class="fa fa-anchor" href="#introduction-2" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-2"><template slot="_header">
+                  <h4 id="what-2">What<span id="what-2" class="anchor"></span><a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain architectural styles</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>Software architectures follow various high-level styles (aka <em>architectural patterns</em>)</strong>, just like <span trigger="click" for="modal:archiStyles-buildingArchitectures" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:archiStyles-buildingArchitectures'].show()" class="trigger-click">building architectures follow various architecture styles</span>.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> n-tier style, client-server style, event-driven style, transaction processing style, service-oriented style, pipes-and-filters style, message-driven style, broker style, ...</p>
+                    </box>
+                    <b-modal id="modal:archiStyles-buildingArchitectures" hide-footer size="lg" modal-class="mb-zoom" ref="modal:archiStyles-buildingArchitectures" class="algolia-no-index"><template slot="modal-title">Building Architecture Styles</template>
+                      <p><img src="https://inspectapedia.com/exterior/ArchitectureStyles.jpg" width="600"><br>
+                        <sub>source: <a href="https://inspectapedia.com">https://inspectapedia.com</a></sub></p>
+                    </b-modal>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="n-tier-architectural-style">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="n-tier-architectural-style"><span>N-tier architectural style</span><span id="n-tier-architectural-style" class="anchor"></span><a class="fa fa-anchor" href="#n-tier-architectural-style" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-3"><template slot="_header">
+                  <h4 id="what-3">What<span id="what-3" class="anchor"></span><a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify n-tier architectural style</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>In the <em>n-tier</em> style, higher layers make use of services provided by lower layers.</strong> Lower layers are independent of higher layers. Other names: <em>multi-layered</em>, <em>layered</em>.</p>
+                    <img src="/website/book/architecture/architecturalStyles/nTier/what/images/nTier.png" height="150">
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Operating systems and network communication software often use n-tier style.<br>
+                        <img src="/website/book/architecture/architecturalStyles/nTier/what/images/nTierExamples.png" height="150"></p>
+                    </box>
+                    <p></p>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="client-server-architectural-style">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="client-server-architectural-style"><span>Client-server architectural style</span><span id="client-server-architectural-style" class="anchor"></span><a class="fa fa-anchor" href="#client-server-architectural-style" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-4"><template slot="_header">
+                  <h4 id="what-4">What<span id="what-4" class="anchor"></span><a class="fa fa-anchor" href="#what-4" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify the client-server architectural style</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>The <em>client-server</em> style has at least one component playing the role of a server and at least one client component accessing the services of the server.</strong> This is an architectural style used often in distributed applications.</p>
+                    <img src="/website/book/architecture/architecturalStyles/clientServer/what/images/clientServer.png" height="120">
+                    <p></p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The online game and the Web application below uses the client-server style.</p>
+                      <img src="/website/book/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.png" height="200">
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="transaction-processing-architectural-style">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="transaction-processing-architectural-style"><span>Transaction processing architectural style</span><span id="transaction-processing-architectural-style" class="anchor"></span><a class="fa fa-anchor" href="#transaction-processing-architectural-style" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-5"><template slot="_header">
+                  <h4 id="what-5">What<span id="what-5" class="anchor"></span><a class="fa fa-anchor" href="#what-5" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify transaction processing architectural style</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>The <em>transaction processing</em> style divides the workload of the system down to a number of <em>transactions</em> which are then given to a <em>dispatcher</em> that controls the execution of each transaction.</strong> Task queuing, ordering, undo etc. are handled by the dispatcher.</p>
+                    <img src="/website/book/architecture/architecturalStyles/transactionProcessing/what/images/transactionProcessing.png" height="120">
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example from a Banking system, transactions are generated by the terminals used by <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">employees of a bank who deals directly with customers</span>tellers</span> which are then sent to a central dispatching unit which in turn dispatches the transactions to various other units to execute.</p>
+                      <img src="/website/book/architecture/architecturalStyles/transactionProcessing/what/images/transactionProcessingExamples.png" height="120">
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="service-oriented-architectural-style">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="service-oriented-architectural-style"><span>Service-oriented architectural style</span><span id="service-oriented-architectural-style" class="anchor"></span><a class="fa fa-anchor" href="#service-oriented-architectural-style" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-6"><template slot="_header">
+                  <h4 id="what-6">What<span id="what-6" class="anchor"></span><a class="fa fa-anchor" href="#what-6" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify service-oriented architectural style</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>The <em>service-oriented architecture</em> (SOA) style builds applications by combining functionalities packaged as <em>programmatically accessible services</em></strong>. SOA aims to achieve interoperability between distributed services, which may not even be implemented using the same programming language. A common way to implement SOA is through the use of <em>XML web services</em> where the web is used as the medium for the services to interact, and XML is used as the language of communication between service providers and service users.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose that <a href="http://Amazon.com">Amazon.com</a> provides a web service for customers to browse and buy merchandise, while HSBC provides a web service for merchants to charge HSBC credit cards. Using these web services, an ‘eBookShop’ web application can be developed that allows HSBC customers to buy merchandise from Amazon and pay for them using HSBC credit cards. Because both Amazon and HSBC services follow the SOA architecture, their web services can be reused by the web application, even if all three systems use different programming platforms.</p>
+                      <img src="/website/book/architecture/architecturalStyles/serviceOriented/what/images/amazonWebServices.png" height="280">
+                      <p></p>
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="event-driven-architectural-style">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="event-driven-architectural-style"><span>Event-driven architectural style</span><span id="event-driven-architectural-style" class="anchor"></span><a class="fa fa-anchor" href="#event-driven-architectural-style" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="what-7"><template slot="_header">
+                  <h4 id="what-7">What<span id="what-7" class="anchor"></span><a class="fa fa-anchor" href="#what-7" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify event-driven architectural style</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong><em>Event-driven</em> style controls the flow of the application by detecting <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">An event is a notable occurrence that happens inside or outside the software, such as the user clicking a button, a timer running out, minimizing a window, etc.</span>events</span> from event <em>emitters</em> and communicating those events to interested event <em>consumers</em> .</strong> This architectural style is often used in GUIs.</p>
+                    <img src="/website/book/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" width="450">
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> When the ‘button clicked’ event occurs in a GUI, that event can be transmitted to components that are interested in reacting to that event. Similarly, events detected at a Printer port can be transmitted to components related to operating the Printer. The same event can be sent to multiple consumers too.</p>
+                      <img src="/website/book/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.png" width="450">
+                    </box>
+                  </div>
+                  <div></div>
+                </div>
+              </panel>
+            </panel>
+            <panel type="seamless" expanded id="more">
+              <span slot="header" class="card-title">
+                <div>
+                  <h3 id="more"><span>More</span><span id="more" class="anchor"></span><a class="fa fa-anchor" href="#more" onclick="event.stopPropagation()"></a></h3>
+                </div>
+              </span>
+              <panel type="seamless" expanded id="more-styles"><template slot="_header">
+                  <h4 id="more-styles">More Styles<span id="more-styles" class="anchor"></span><a class="fa fa-anchor" href="#more-styles" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="ForestGreen"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can name several other architecture styles</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>Other well-known architectural styles include the <em>pipes-and-filters architectures</em>, the <em>broker architectures</em>, the <em>peer-to-peer architectures</em>, and the <em>message-oriented architectures</em>.</strong></p>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expanded><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
+                        </template>
+                        <ul>
+                          <li>
+                            <p><a href="https://docs.microsoft.com/en-us/azure/architecture/patterns/pipes-and-filters"><strong>Pipes and Filters pattern</strong></a> -- an article from Microsoft about the pipes and filters architectural style</p>
+                          </li>
+                          <li>
+                            <p><a href="https://en.wikipedia.org/wiki/Broker_pattern"><strong>Broker pattern</strong></a> -- Wikipedia article on the broker architectural style</p>
+                          </li>
+                          <li>
+                            <p><a href="https://en.wikipedia.org/wiki/Peer-to-peer"><strong>Peer-to-peer pattern</strong></a> -- Wikipedia article on the P2P architectural style</p>
+                          </li>
+                          <li>
+                            <p><a href="http://searchmicroservices.techtarget.com/definition/message-driven-processing"><strong>Message-driven processing</strong></a> -- a post by <em>Margaret Rouse</em></p>
+                          </li>
+                        </ul>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+              <panel type="seamless" expanded id="using-styles"><template slot="_header">
+                  <h4 id="using-styles">Using Styles<span id="using-styles" class="anchor"></span><a class="fa fa-anchor" href="#using-styles" onclick="event.stopPropagation()"></a></h4>
+                </template>
+                <div class="indented">
+                  <span class="badge badge-light">
+                    <span><span class="dimmed">
+                        <font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span>
+                      </span></span></span>
+                  <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how architectural styles are combined</span></span></span></span>
+                  <p></p>
+                  <div>
+                    <p><strong>Most applications use a mix of these architectural styles.</strong></p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An application can use a client-server architecture where the server component comprises several layers, i.e. it uses the n-Tier architecture.</p>
+                    </box>
+                  </div>
+                  <div>
+                    <div>
+                      <panel expandable class="algolia-no-index"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
+                        </template>
+                        <div>
+                          <panel class="algolia-no-index"><template slot="_header">
+                              <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Comment on how to use architecture styles in Minesweeper.</p>
+                            </template>
+                            <question has-input="true">
+                              <p>Assume you are designing a multiplayer version of the Minesweeper game where any number of players can play the same Minefield. Players use their own PCs to play the game. A player scores by deducing a cell correctly before any of the other players do. Once a cell is correctly deduced, it appears as either marked or cleared for all players.</p>
+                              <p>Comment on how each of the following architectural styles could be potentially useful when designing the architecture for this game.</p>
+                              <ol>
+                                <li>Client-server</li>
+                                <li>Transaction-processing</li>
+                                <li>SOA (Service Oriented Architecture)</li>
+                                <li>multi-layer (n-tier)</li>
+                              </ol>
+                              <div slot="answer" class="algolia-no-index">
+                                <ol>
+                                  <li>Client-server – Clients can be the game UI running on player PCs. The server can be the game logic running on one machine.</li>
+                                  <li>Transaction-processing – Each player action can be packaged as transactions (by the client component running on the player PC) and sent to the server. Server processes them in the order they are received.</li>
+                                  <li>SOA – The game can access a remote web services for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.</li>
+                                  <li>Multi-layer – The server component can have two layers: logic layer and the storage layer.</li>
+                                </ol>
+                                <img src="/website/book/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300">
+                                <p></p>
+                              </div>
+                            </question>
+                          </panel>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </div>
+              </panel>
+            </panel>
+          </panel>
         </div>
       </div>
 
@@ -427,6 +714,38 @@
                 <a class="nav-link py-1" href="#reading">Reading&#x200E;</a>
                 <a class="nav-link py-1" href="#drawing">Drawing&#x200E;</a>
               </nav>
+              <a class="nav-link py-1" href="#architectural-styles">Architectural styles&#x200E;</a>
+              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                <a class="nav-link py-1" href="#introduction-2">Introduction&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-2">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#n-tier-architectural-style">N-tier architectural style&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-3">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#client-server-architectural-style">Client-server architectural style&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-4">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#transaction-processing-architectural-style">Transaction processing architectural style&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-5">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#service-oriented-architectural-style">Service-oriented architectural style&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-6">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#event-driven-architectural-style">Event-driven architectural style&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#what-7">What&#x200E;</a>
+                </nav>
+                <a class="nav-link py-1" href="#more">More&#x200E;</a>
+                <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+                  <a class="nav-link py-1" href="#more-styles">More Styles&#x200E;</a>
+                  <a class="nav-link py-1" href="#using-styles">Using Styles&#x200E;</a>
+                </nav>
+              </nav>
             </nav>
 
           </nav>
@@ -436,7 +755,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -447,9 +766,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

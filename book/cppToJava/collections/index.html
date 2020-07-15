@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - C++ to Java: Collections</title>
+  <title>CS2103/T - C++ to Java: Collections</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -141,7 +142,7 @@
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);<br></span><span>        addNumber(<span class="hljs-number">3</span>);<br></span><span>        addNumber(<span class="hljs-number">8</span>);<br></span><span>        addNumber(<span class="hljs-number">24</span>);<br></span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());<br></span><span>        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );<br></span><span>        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );<br></span><span>        removeNumber(<span class="hljs-number">8</span>);<br></span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
                                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                     <pre><code class="hljs" v-pre><span>Adding numbers to the list<br></span><span>[3]<br></span><span>[3, 8]<br></span><span>[3, 8, 24]<br></span><span>The total is: 35<br></span><span>8 in the list : true<br></span><span>5 in the list : false<br></span><span>[3, 24]<br></span><span>The total is: 27<br></span></code></pre>
-                                    <div slot="hint">
+                                    <div slot="hint" class="algolia-no-index">
                                       <p>Partial solution:</p>
                                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.ArrayList;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{<br></span><span>        numbers.add(Integer.valueOf(i));<br></span><span>        System.out.println(numbers);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>}<br></span></code></pre>
                                     </div>
@@ -190,7 +191,7 @@
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();<br></span><span><br></span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span><br></span><span>        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span><br></span><span>        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span><br></span><span>        addToRoster(<span class="hljs-string">"Friday"</span>);<br></span><span>        addToRoster(<span class="hljs-string">"Monday"</span>);<br></span><span>        printRoster();<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
                                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                     <pre><code class="hljs" v-pre><span>Monday =&gt; 2<br></span><span>Friday =&gt; 1<br></span><span>Wednesday =&gt; 2<br></span></code></pre>
-                                    <div slot="hint">
+                                    <div slot="hint" class="algolia-no-index">
                                       <p>Partial solution:</p>
                                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.HashMap;<br></span><span><span class="hljs-keyword">import</span> java.util.Map;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (roster.containsKey(day)){<br></span><span>            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);<br></span><span>            roster.put(day, newValue);<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// ...</span><br></span><span>}<br></span></code></pre>
                                     </div>
@@ -231,9 +232,37 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../../markbind/layouts/default/scripts.js"></script>
 
 </html>

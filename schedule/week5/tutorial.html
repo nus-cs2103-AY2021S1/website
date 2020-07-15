@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Week 5 - Lecture</title>
+  <title>CS2103/T - Week 5 - Tutorial</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -93,17 +94,145 @@
               <li class="page-item"><a class="page-link" href="/website/schedule/week4"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
               <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week5/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-              <li class="page-item active"><a class="page-link" href="/website/schedule/week5/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week5/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week5/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+              <li class="page-item"><a class="page-link" href="/website/schedule/week5/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week5/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+              <li class="page-item active"><a class="page-link" href="/website/schedule/week5/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
               <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
               <li class="page-item"><a class="page-link" href="/website/schedule/week6"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
             </ul>
           </nav>
           <p></p>
-          <h1 id="week-5-fri-sep-4th-lecture">Week 5 <small><small><span class="dimmed">[Fri, Sep 4th]</span> - Lecture</small></small><span id="week-5-fri-sep-4th-lecture" class="anchor"></span><a class="fa fa-anchor" href="#week-5-fri-sep-4th-lecture" onclick="event.stopPropagation()"></a></h1>
-          <div></div>
+          <h1 id="week-5-fri-sep-4th-tutorial">Week 5 <small><small><span class="dimmed">[Fri, Sep 4th]</span> - Tutorial</small></small><span id="week-5-fri-sep-4th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-5-fri-sep-4th-tutorial" onclick="event.stopPropagation()"></a></h1>
+          <div>
+            <h4 id="1-discuss-ip-progress"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Discuss iP progress<span id="1-discuss-ip-progress" class="anchor"></span><a class="fa fa-anchor" href="#1-discuss-ip-progress" onclick="event.stopPropagation()"></a></h4>
+            <p>Quickly update the tutor about your iP progress:</p>
+            <ul>
+              <li>Who has managed to set up CI?</li>
+              <li>Has everyone completed <code v-pre>Level-10</code> (i.e., the GUI) and <code v-pre>A-Gradle</code>? Any GUIs that went beyond the JavaFx tutorial?</li>
+              <li>Anyone has iP increments overdue more than one week?</li>
+            </ul>
+            <h4 id="2-discuss-the-code-quality-of-ip-prs"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Discuss the code quality of iP PRs<span id="2-discuss-the-code-quality-of-ip-prs" class="anchor"></span><a class="fa fa-anchor" href="#2-discuss-the-code-quality-of-ip-prs" onclick="event.stopPropagation()"></a></h4>
+
+            <ol>
+              <li>
+                <p><strong>Find the PR you have been allocated to discuss</strong> (given below). If the allocated PR is not available or suitable, you can choose the fallback option, and failing that, any random PR.</p>
+                <panel class="algolia-no-index"><template slot="_header">
+                    <p>PR allocation</p>
+                  </template>
+                  <div class="table-responsive">
+                    <table class="markbind-table table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Your username</th>
+                          <th>PR to review</th>
+                          <th>Fallback PR to review</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>thanhduc2000</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/lowjiayee">lowjiayee's PR</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/wangqinNick">wangqinNick's PR</a></td>
+                        </tr>
+                        <tr>
+                          <td>trishaangelica</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/DeetoMok">DeetoMok's PR</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/SibingWu">SibingWu's PR</a></td>
+                        </tr>
+                        <tr>
+                          <td>wangqinNick</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/yantingsanity">yantingsanity's PR</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/brandoncjh">brandoncjh's PR</a></td>
+                        </tr>
+                        <tr>
+                          <td>yantingsanity</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/yuxianglim">yuxianglim's PR</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/andy-aw-why">andy-aw-why's PR</a></td>
+                        </tr>
+                        <tr>
+                          <td>yuxianglim</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/JosephLimWeiJie">JosephLimWeiJie's PR</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/thanhduc2000">thanhduc2000's PR</a></td>
+                        </tr>
+                        <tr>
+                          <td>zi-hui</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/wangqinNick">wangqinNick's PR</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/HAOYUN49">HAOYUN49's PR</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </panel>
+                <p></p>
+              </li>
+              <li>
+                <p><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 10 minutes</span></span> <strong>Find potential <em>abstraction</em> problems</strong>: Go through the code in the dif view (i.e., the <span class="tab"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-diff" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M8.75 1.75a.75.75 0 00-1.5 0V5H4a.75.75 0 000 1.5h3.25v3.25a.75.75 0 001.5 0V6.5H12A.75.75 0 0012 5H8.75V1.75zM4 13a.75.75 0 000 1.5h8a.75.75 0 100-1.5H4z" /></svg> Files changed</span> tab), and and find potential <mark>abstraction problems (weak SLAP, arrow-head style code, too-long methods, too-deep nesting)</mark> <br>
+                  <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> To identify long methods or deep nesting, zoom out and scroll through the entire PR code to do a visual inspection (no need to read the code line-by-line). After visually locating a method that looks too long/deep, have a closer look to see it can be improved by using better abstraction.If you are unsure about a case, you can also rope the tutor in to the discussion.</p>
+                <ul>
+                  <li>If you can't find at least one example, you can try the fallback option provided, and failing that, another random iP PR.</li>
+                  <li>You can also select borderline cases.</li>
+                  <li><strong>Paste screenshots of problematic code</strong> in the shared online document provided (in the section of the document allocated to you).</li>
+                </ul>
+              </li>
+              <li>
+                <p><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> 10 minutes</span></span> <strong>Discussion</strong>: The tutor will lead a short discussion to go through the problematic code you found.</p>
+              </li>
+              <li>
+                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>After the tutorial</strong>, you can apply the insights gained from this activity to <strong>improve the code quality of your own iP</strong>, if necessary.</p>
+              </li>
+            </ol>
+            <h4 id="3-prioritize-tp-user-stories"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Prioritize tP user stories<span id="3-prioritize-tp-user-stories" class="anchor"></span><a class="fa fa-anchor" href="#3-prioritize-tp-user-stories" onclick="event.stopPropagation()"></a></h4>
+            <ul>
+              <li>Show your list of tP user stories to the tutor <span class="dimmed">(for progress tracking)</span>.</li>
+              <li>If you haven't done so already, prioritize tP user stories as explained in the <a href="/website/schedule/week5/project.html#2-prioritize-the-user-stories-before-or-during-the-tutorial"><span class="border bg-white"> <span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Project </span></a>.</li>
+            </ul>
+            <div class="indented-level2">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Week 5 → <strong>Choose user stories for v1.2</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <div class="indented">
+                    <box type="success" light>
+                      <h5 id="project-planning-but-with-a-twist"><span class="text-success">Project planning, but with a twist</span><span id="project-planning-but-with-a-twist" class="anchor"></span><a class="fa fa-anchor" href="#project-planning-but-with-a-twist" onclick="event.stopPropagation()"></a></h5>
+                      <p>Intuitively, you might think the right thing to do is to decide what features will be in v1.4 and then plan the intermediate versions based on that. But that's not what we are going to do.</p>
+                      <p>Why? You don't have enough experience to reliably estimate effort each feature will need, and hence, any such long range plan is likely to be inaccurate.</p>
+                      <p>Instead, what we will do is to <mark>assume the current iteration is the last iteration</mark>, plan that iteration accordingly, and try to follow that plan as best as we can. After the iteration is over, we plan the next iteration as if <em>it's</em> the last iteration. But that time, factor in the experience from the previous iteration to do a better job of planning.</p>
+                      <p>How is that better?</p>
+                      <ul>
+                        <li>Shorter-term plans have a better chance of being accurate and doable.</li>
+                        <li>You get multiple clean shots at project planning. Each try can learn from the previous tries. Hence, more learning.</li>
+                        <li>As each iteration produces a working product, you always have a working product, which reduces the risk overshooting the final deadline.</li>
+                      </ul>
+                    </box>
+                    <p><strong>The goal of this activity is to come up with the <em>smallest possible product that is still usable</em></strong> so that it can be implemented as v1.2, to be delivered at the end of the first project iteration. We try to make it small because <mark>you will have only two weeks to implement v1.2</mark> and coding as a team is a lot harder than writing code alone.</p>
+                  </div>
+                  <ul>
+                    <li>If the product <em>can</em> be of some use without a given user story, that user story should be left out of v1.2, even if the omission makes the product hard to use, as long as the product is not <em>impossible</em> to use <span class="dimmed">e.g., in most cases a product can be used without an 'edit item' feature because the user can always delete an item and add a new item instead of editing an existing an item</span>.</li>
+                    <li>Don't worry about v1.3. You can design v1.3 after v1.2 done.</li>
+                    <li>Don't worry about v1.2 being 'too small'. You can always add more features to v1.2 if you finish it ahead of schedule.</li>
+                    <li>If possible, narrow the scope of v1.2 further e.g., narrower target user, a smaller value proposition.</li>
+                  </ul>
+                  <p>Suggested workflow:</p>
+                  <ul>
+                    <li><strong>First stage</strong> [10 minutes]:
+                      <ul>
+                        <li>Divide the user stories among team members.</li>
+                        <li>Each member will go through their user stories to discard (e.g., cross out, or move to a different location, but not delete) which are <em>definitely not needed for v1.2</em>.</li>
+                      </ul>
+                    </li>
+                    <li><strong>Second stage</strong> [10 minutes]:
+                      <ul>
+                        <li>All members discuss the remaining user stories (i.e., the ones not discarded in the first stage), and try to trim the list further.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </panel>
+            </div>
+            <p></p>
+          </div>
         </div>
       </div>
 
@@ -111,7 +240,12 @@
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#week-5-fri-sep-4th-lecture">Week 5 [Fri, Sep 4th] - Lecture&#x200E;</a>
+            <a class="nav-link py-1" href="#week-5-fri-sep-4th-tutorial">Week 5 [Fri, Sep 4th] - Tutorial&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#1-discuss-ip-progress">1 Discuss iP progress&#x200E;</a>
+              <a class="nav-link py-1" href="#2-discuss-the-code-quality-of-ip-prs">2 Discuss the code quality of iP PRs&#x200E;</a>
+              <a class="nav-link py-1" href="#3-prioritize-tp-user-stories">3 Prioritize tP user stories&#x200E;</a>
+            </nav>
 
           </nav>
         </div>
@@ -120,7 +254,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -131,9 +265,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

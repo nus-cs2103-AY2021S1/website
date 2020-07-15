@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>TIC4001 - Week 4 - Project</title>
+  <title>CS2103/T - Week 4 - Project</title>
   <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -29,9 +30,9 @@
     <header fixed>
       <div class="w-100 p-1 bg-warning text-center"><span><strong>This site is not ready yet! The updated version will be available soon.</strong></span></div>
       <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-info">TIC4001 <small>2020</small></span></a>
+        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -39,7 +40,7 @@
           <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
           <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
           <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 25th] </span></a></li>
+          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
           <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
           <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
           <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
@@ -50,10 +51,10 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li><a href="https://gitter.im/nus-tic4001-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+          <li><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
           <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> File Submissions</span></a></li>
@@ -66,20 +67,20 @@
           <hr>
           <span><strong> Individual Project (iP):</strong></span>
           <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-tic4001-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
           <li><a href="/website/admin/ip-progress-dashboard.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
           <hr>
           <span><strong> Team Project (tP):</strong></span>
           <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-
+          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/addressbook-level3" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
           <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
           <li><a href="/website/admin/tp-progress-dashboard.html" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -92,10 +93,10 @@
             <li class="page-item"><a class="page-link" href="/website/schedule/week3"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
             <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
             <li class="page-item"><a class="page-link" href="/website/schedule/week4/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week4/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Lecture</a></li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week4/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
             <li class="page-item"><a class="page-link" href="/website/schedule/week4/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week4/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
             <li class="page-item active"><a class="page-link" href="/website/schedule/week4/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+            <li class="page-item"><a class="page-link" href="/website/schedule/week4/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
             <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
             <li class="page-item"><a class="page-link" href="/website/schedule/week5"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
           </ul>
@@ -106,16 +107,16 @@
           <p><strong>iP:</strong></p>
           <div>
             <ol>
-              <li><span>Review some peer PRs</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during lecture</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
-              <li>Add Increments as branches: <code v-pre>A-CodeQuality</code>, <code v-pre>A-AbstractClasses</code>, <code v-pre>A-Packages</code>, <code v-pre>Level-5</code></li>
+              <li><span>Review some peer PRs</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+              <li>Add Increments as parallel branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code></li>
             </ol>
           </div>
           <p><strong>tP:</strong></p>
           <div>
             <ol>
               <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start weekly project meetings</span></li>
-              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start a collaborative doc to take project notes</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span></li>
-              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Decide on an overall project direction <span class="dimmed">(user profile, problem addressed)</span></span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span></li>
+              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start a collaborative doc to take project notes</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span></li>
+              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Decide on an overall project direction <span class="dimmed">(user profile, problem addressed)</span></span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span></li>
             </ol>
           </div>
         </div>
@@ -123,13 +124,13 @@
         <div>
           <div></div>
           <p></p>
-          <h4 id="1-review-some-peer-prs-during-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Review some peer PRs</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during lecture</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-review-some-peer-prs-during-lecture" class="anchor"></span><a class="fa fa-anchor" href="#1-review-some-peer-prs-during-lecture" onclick="event.stopPropagation()"></a></h4>
+          <h4 id="1-review-some-peer-prs"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Review some peer PRs</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-review-some-peer-prs" class="anchor"></span><a class="fa fa-anchor" href="#1-review-some-peer-prs" onclick="event.stopPropagation()"></a></h4>
           <div>
             <ul>
               <li><strong>Learn <em>how</em> you should review PRs in this task</strong>:</li>
             </ul>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Reviewing PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
@@ -180,7 +181,7 @@
                   <li>At the end of the review, choose <code v-pre>Comment</code> (i.e., not <code v-pre>Approve</code> or <code v-pre>Request changes</code>)</li>
                 </ul>
               </li>
-              <li><strong>Review two PRs</strong> created by your classmates. PRs can be found <a href="https://github.com/nus-tic4001-AY2021S1/ip/pulls">here</a>.
+              <li><strong>Review two PRs</strong> created by your classmates. PRs can be found <a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls">here</a>.
                 <ul>
                   <li>The allocation of which PRs to review will be specified in <a href>this page</a> (you will be notified when the allocation is ready).</li>
                   <li>To find the target PR, you can use a filter <code v-pre>author:AuthorUsername</code> e.g., <code v-pre>author:johnDoe</code></li>
@@ -190,8 +191,8 @@
             </ul>
             <div class="indented-level2">
               <box type="tip" light>
-                <p><strong>You can use the iP Code Dashboard to view others' code</strong>: You can now easily view <a href="https://nus-tic4001-ay2021s1.github.io/ip-dashboard">iP code written by classmates</a>, using the <code v-pre>Links → iP Code Dashboard</code> item in the top navigation menu. Click on the <span class="badge badge-light"><span><span class="dimmed"><strong>&lt;/&gt;</strong></span></span></span> icon corresponding to a student name to see the code written by that person. We encourage you to read others’ code and learn from them. If you adopt solutions from others (also encouraged), please follow our reuse policy.</p>
-                <panel type class="embedding" minimized><template slot="_header">
+                <p><strong>You can use the iP Code Dashboard to view others' code</strong>: You can now easily view <a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard">iP code written by classmates</a>, using the <code v-pre>Links → iP Code Dashboard</code> item in the top navigation menu. Click on the <span class="badge badge-light"><span><span class="dimmed"><strong>&lt;/&gt;</strong></span></span></span> icon corresponding to a student name to see the code written by that person. We encourage you to read others’ code and learn from them. If you adopt solutions from others (also encouraged), please follow our reuse policy.</p>
+                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module Policies → Policy on Reuse</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                   </template>
                   <div>
@@ -211,7 +212,7 @@
                               <li>The work comes from a source of 'good standing' (such as an established open source project). This means you cannot reuse code written by an outside 'friend'.</li>
                               <li>You clearly give credit to the original author. Acknowledge use of third party resources clearly e.g. in the welcome message, splash screen (if any) or under the 'about' menu. If you are open about reuse, you are less likely to get into trouble if you unintentionally reused something copyrighted.</li>
                               <li>You do not violate the license under which the work has been released. Please  <strong>do not use 3rd-party images/audio</strong> in your software unless they have been specifically released to be used freely. Just because you found it in the Internet does not mean it is free for reuse.</li>
-                              <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">forum</a>. That way, the whole class get to see what libraries are being used by others.</li>
+                              <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a>. That way, the whole class get to see what libraries are being used by others.</li>
                             </ul>
                           </li>
                         </ul>
@@ -238,7 +239,7 @@
                             </li>
                           </ul>
                         </box>
-                        <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
+                        <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
                             <div>
                             <h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
                             <ul>
@@ -315,7 +316,7 @@
                             </ul>
                           </div>
                         </b-modal>
-                        <b-modal id="modal:reusePolicy-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-ppp"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project → Deliverables → Project Portfolio Page</template>
+                        <b-modal id="modal:reusePolicy-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-ppp" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project → Deliverables → Project Portfolio Page</template>
                             <div>
                             <div>
                               <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
@@ -329,7 +330,7 @@
                                 <li><strong>Overview</strong>: A short overview of your product to provide some context to the reader. The opening 1-2 sentences may be reused by all team members. If your product overview extends beyond 1-2 sentences, the remainder should be written by yourself.</li>
                                 <li><strong>Summary of Contributions</strong> --Suggested items to include:
                                   <ul>
-                                    <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-tic4001-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
+                                    <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
                                     <li><strong>Enhancements implemented:</strong> A summary of the enhancements you implemented.</li>
                                     <li><strong>Contributions to documentation:</strong> Which sections did you contribute to the UG?</li>
                                     <li><strong>Contributions to the DG:</strong> Which sections did you contribute to the DG? Which UML diagrams did you add/updated?</li>
@@ -344,18 +345,24 @@
                                   </ul>
                                 </li>
                               </ul>
-                              <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks"><template slot="modal-title">Team-Based Tasks</template>
+                              <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks" class="algolia-no-index"><template slot="modal-title">Team-Based Tasks</template>
                                 <div>
                                   <box>
                                     <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                                    <panel type="seamless"><template slot="_header">
+                                    <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
                                       </template>
                                       <span id="example-team-tasks">
                                         <p>Here is a non-exhaustive list of team-tasks:</p>
                                         <ol>
                                           <li>Setting up the GitHub team org/repo</li>
-                                          <li>Necessary general code enhancements</li>
+                                          <li>Necessary general code enhancements e.g.,
+                                            <ol>
+                                              <li>Work related to renaming the product</li>
+                                              <li>Work related to changing the product icon</li>
+                                              <li>Morphing the product into a different product</li>
+                                            </ol>
+                                          </li>
                                           <li>Setting up tools e.g., GitHub, Gradle</li>
                                           <li>Maintaining the issue tracker</li>
                                           <li>Release management</li>
@@ -368,8 +375,8 @@
                                 </div>
                               </b-modal>
                               <div class="indented-level2">
-                                <box border-left-color="darkcyan">
-                                  <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
+                                <box type="tip" seamless>
+                                  <p>Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
                                   </p>
                                 </box>
                                 <p></p>
@@ -382,11 +389,11 @@
                               <h4 id="ppp-format"><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><span id="ppp-format" class="anchor"></span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
                               <ul>
                                 <li>File name (i.e., in the repo): <code v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code v-pre>docs/team/goodcoder123.md</code></li>
-                                <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-tic4001-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
+                                <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-cs2103-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
                               </ul>
                               <div class="indented-level2">
                                 <div>
-                                  <box type="important" light>
+                                  <box type="important" seamless>
                                     <p><strong>To convert the UG/DG/PPP into PDF format</strong>, go to the generated page in your project's <a href="http://github.io">github.io</a> site and use <a href="https://se-education.org/guides/tutorials/savingPdf.html">this technique</a> to save as a pdf file. <mark>Using other techniques can result in poor quality resolution (will be considered a bug) and unnecessarily large files.</mark></p>
                                     <p><strong>Ensure hyperlinks in the pdf files work</strong>. Your UG/DG/PPP will be evaluated using PDF files during the PE. <mark>Broken/non-working hyperlinks in the PDF files will be reported as bugs</mark> and will count against your project score. Again, use the conversion technique given above to ensure links in the PDF files work.
                                     </p>
@@ -439,66 +446,34 @@
             </div>
           </div>
           <p></p>
-          <h4 id="2-add-increments-as-branches-a-codequality-a-abstractclasses-a-packages-level-5"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Add Increments as branches: <code v-pre>A-CodeQuality</code>, <code v-pre>A-AbstractClasses</code>, <code v-pre>A-Packages</code>, <code v-pre>Level-5</code><span id="2-add-increments-as-branches-a-codequality-a-abstractclasses-a-packages-level-5" class="anchor"></span><a class="fa fa-anchor" href="#2-add-increments-as-branches-a-codequality-a-abstractclasses-a-packages-level-5" onclick="event.stopPropagation()"></a></h4>
-          <div></div>
+          <h4 id="2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Add Increments as parallel branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code><span id="2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs" class="anchor"></span><a class="fa fa-anchor" href="#2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs" onclick="event.stopPropagation()"></a></h4>
           <div>
-            <div class="indented">
-              <div class="indented border">
-                <panel type="seamless">
-                  <div></div>
-                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-CodeQuality</code>: Improve Code Quality</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
-                  <div></div>
-                  <div>
-                    <div>
-                      <div></div>
-                      <h3 id="a-codequality"><span class="badge badge-pill badge-primary">A-CodeQuality</span><span id="a-codequality" class="anchor"></span><a class="fa fa-anchor" href="#a-codequality" onclick="event.stopPropagation()"></a></h3>
-                      <p>     <big>↳</big> <strong>Improve code quality</strong></p>
-                    </div>
-                    <p>Critically examines the code and refactor to improve the code quality where necessary.</p>
-                    <p>
-                      <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> When adding this increment, follow closely the 'Code Quality' topics you have learned so far, rather than merely follow your own intuition about code quality.
-                    </p>
-                  </div>
-                </panel>
-              </div>
-            </div>
+            <ul>
+              <li><strong>Do each enhancement in a separate branch and merge to the <code v-pre>master</code> branch only when ready</strong> (if you push incomplete features into the <code v-pre>master</code> branch, it can confuse others reviewing your PR).
+                <br>
+                <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you have completed any of them in previous weeks, just add the corresponding tag (no need to create a branch).</li>
+            </ul>
           </div>
           <div>
             <div class="indented">
               <div class="indented border">
-                <panel type="seamless">
+                <panel type="seamless" class="algolia-no-index">
                   <div></div>
-                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-AbstractClasses</code>: Use Abstract Classes</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
-                  <div></div>
-                  <div>
-                    <div>
-                      <div></div>
-                      <h3 id="a-abstractclasses"><span class="badge badge-pill badge-primary">A-AbstractClasses</span><span id="a-abstractclasses" class="anchor"></span><a class="fa fa-anchor" href="#a-abstractclasses" onclick="event.stopPropagation()"></a></h3>
-                      <p>     <big>↳</big> <strong>Use abstract classes</strong></p>
-                    </div>
-                    <p>Make the <code v-pre>Task</code> class an abstract class. If applicable, use abstract methods as well.</p>
-                  </div>
-                </panel>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="indented">
-              <div class="indented border">
-                <panel type="seamless">
-                  <div></div>
-                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-Packages</code>: Organize into Packages</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-Gradle</code>: Use Gradle</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
                   <div></div>
                   <div>
                     <div>
                       <div></div>
-                      <h3 id="a-packages"><span class="badge badge-pill badge-primary">A-Packages</span><span id="a-packages" class="anchor"></span><a class="fa fa-anchor" href="#a-packages" onclick="event.stopPropagation()"></a></h3>
-                      <p>     <big>↳</big> <strong>Divide classes into packages</strong></p>
+                      <h3 id="a-gradle"><span class="badge badge-pill badge-primary">A-Gradle</span><span id="a-gradle" class="anchor"></span><a class="fa fa-anchor" href="#a-gradle" onclick="event.stopPropagation()"></a></h3>
+                      <p>     <big>↳</big> <strong>Automate project builds using Gradle</strong></p>
                     </div>
-                    <p>Organize the classes into suitable java packages.</p>
+                    <p>Use Gradle to automate some of the build tasks of the project. Refer to the Gradle tutorial at the Duke repo (i.e., the repo you forked from) to find how to set up Gradle for your project.</p>
+                    <p>Refer to the <a href="https://se-education.org/guides/tutorials/gradle.html"><em>Grade tutorial</em> @SE-EDU</a> to learn how to use Gradle.</p>
+                    <p>Gradle support is provided as a separate branch (named <code v-pre>add-gradle-support</code>) in the Duke repo. Go ahead and merge that branch to the <code v-pre>master</code> branch.</p>
                     <ul>
-                      <li><strong>Minimal</strong>: put all classes in one package e.g., <code v-pre>duke</code></li>
-                      <li><strong>Stretch goal</strong>: divide into multiple packages as the number of classes increase e.g., <code v-pre>duke.task</code>, <code v-pre>duke.command</code></li>
+                      <li><strong>Minimal</strong>: Set up gradle so that you can build and run Duke using gradle.</li>
+                      <li><strong>Recommended</strong>: Set up gradle to run unit tests.</li>
+                      <li><strong>Stretch Goal</strong>: Use gradle to automate more things in your project.</li>
                     </ul>
                   </div>
                 </panel>
@@ -508,41 +483,59 @@
           <div>
             <div class="indented">
               <div class="indented border">
-                <panel type="seamless">
+                <panel type="seamless" class="algolia-no-index">
                   <div></div>
-                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-5</code>: Handle Errors</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-CheckStyle</code>: Use CheckStyle</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
+                  <div></div>
+                  <div>
+                    <div>
+                      <div></div>
+                      <h3 id="a-checkstyle"><span class="badge badge-pill badge-primary">A-CheckStyle</span><span id="a-checkstyle" class="anchor"></span><a class="fa fa-anchor" href="#a-checkstyle" onclick="event.stopPropagation()"></a></h3>
+                      <p>     <big>↳</big> <strong>Use CheckStyle</strong></p>
+                    </div>
+                    <p>Use checkStyle to detect coding style violations.</p>
+                    <p>Refer the tutorial <a href="https://se-education.org/guides/tutorials/checkstyle.html"><em>Using Checkstyle</em> @SE-EDU/guides</a> to learn how to use Checkstyle.</p>
+                    <p></p>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless" class="algolia-no-index">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>Level-10</code>: GUI</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
                   <div></div>
                   <div>
                     <p><span>
-                        <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-exclamation-triangle"></span></thumbnail>
+                        <thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-window-maximize"></span></thumbnail>
                       </span></p>
-                    <h3 id="level-5-handle-errors">Level 5. Handle Errors<span id="level-5-handle-errors" class="anchor"></span><a class="fa fa-anchor" href="#level-5-handle-errors" onclick="event.stopPropagation()"></a></h3>
-                    <p>Teach Duke to deal with errors such as incorrect inputs entered by the user.
-                      <br>
-                      <br></p>
-                    <p>Example:</p>
-                    <pre><code class="no-line-numbers hljs" v-pre><span>todo<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! The description of a todo cannot be empty.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>blah<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(<br></span><span>    ____________________________________________________________<br></span></code></pre>
+                    <h3 id="level-10-gui">Level 10. GUI<span id="level-10-gui" class="anchor"></span><a class="fa fa-anchor" href="#level-10-gui" onclick="event.stopPropagation()"></a></h3>
+                    <p>Add a GUI to Duke. Use the JavaFX technology to implement the GUI.</p>
+                    <br>
+                    <br>
+                    <p>Refer to the <a href="https://se-education.org/guides/tutorials/javaFx.html"><em>JavaFX tutorial</em> @SE-EDU/guides</a> to learn how to get started with JavaFX.</p>
+                  </div>
+                </panel>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="indented">
+              <div class="indented border">
+                <panel type="seamless" class="algolia-no-index">
+                  <div></div>
+                  <div slot="header"><span><span class="dimmed"><strong><code v-pre>A-Varargs</code>: Use Varargs</strong></span> <span class="badge badge-pill badge-secondary">if-applicable</span></span></div>
+                  <div></div>
+                  <div>
                     <div>
-                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> When implementing this feature, you are also recommended to implement the following extension:</p>
-                      <div class="indented">
-                        <panel><template slot="_header">
-                            <p><strong>Extension: <code v-pre>A-Exceptions</code></strong></p>
-                          </template>
-                          <div>
-                            <div>
-                              <div></div>
-                              <h3 id="a-exceptions"><span class="badge badge-pill badge-primary">A-Exceptions</span><span id="a-exceptions" class="anchor"></span><a class="fa fa-anchor" href="#a-exceptions" onclick="event.stopPropagation()"></a></h3>
-                              <p>     <big>↳</big> <strong>Use Exceptions to handle errors</strong></p>
-                            </div>
-                            <p>Use exceptions to handle errors. For example, define a class <code v-pre>DukeException</code> to represent exceptions specific to Duke.</p>
-                          </div>
-                        </panel>
-                      </div>
+                      <div></div>
+                      <h3 id="a-varargs"><span class="badge badge-pill badge-primary">A-Varargs</span><span id="a-varargs" class="anchor"></span><a class="fa fa-anchor" href="#a-varargs" onclick="event.stopPropagation()"></a></h3>
+                      <p>     <big>↳</big> <strong>Use var-args</strong></p>
                     </div>
-                    <ul>
-                      <li><strong>Minimal</strong>: handle at least the two types of errors shown in the example above.</li>
-                      <li><strong>Stretch goal</strong>: handle all possible errors in the current version. As you evolve Duke, continue to handle errors related to the new features added.</li>
-                    </ul>
+                    <p>Use Java varargs feature, if applicable.</p>
                   </div>
                 </panel>
               </div>
@@ -561,7 +554,7 @@
             </ul>
           </div>
           <p></p>
-          <h4 id="2-start-a-collaborative-doc-to-take-project-notes-before-next-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start a collaborative doc to take project notes</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span><span id="2-start-a-collaborative-doc-to-take-project-notes-before-next-lecture" class="anchor"></span><a class="fa fa-anchor" href="#2-start-a-collaborative-doc-to-take-project-notes-before-next-lecture" onclick="event.stopPropagation()"></a></h4>
+          <h4 id="2-start-a-collaborative-doc-to-take-project-notes-before-the-tutorial"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start a collaborative doc to take project notes</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span><span id="2-start-a-collaborative-doc-to-take-project-notes-before-the-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#2-start-a-collaborative-doc-to-take-project-notes-before-the-tutorial" onclick="event.stopPropagation()"></a></h4>
           <div>
             <ul>
               <li>Keep project notes in easy-to-use collaborative docs such as GoogleDocs/sheets. This document will be checked by the tutor at various points.<br>
@@ -569,13 +562,13 @@
             </ul>
           </div>
           <p></p>
-          <h4 id="3-decide-on-an-overall-project-direction-user-profile-problem-addressed-before-next-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Decide on an overall project direction <span class="dimmed">(user profile, problem addressed)</span></span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before next lecture</span></span><span id="3-decide-on-an-overall-project-direction-user-profile-problem-addressed-before-next-lecture" class="anchor"></span><a class="fa fa-anchor" href="#3-decide-on-an-overall-project-direction-user-profile-problem-addressed-before-next-lecture" onclick="event.stopPropagation()"></a></h4>
+          <h4 id="3-decide-on-an-overall-project-direction-user-profile-problem-addressed-before-the-tutorial"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Decide on an overall project direction <span class="dimmed">(user profile, problem addressed)</span></span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span><span id="3-decide-on-an-overall-project-direction-user-profile-problem-addressed-before-the-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#3-decide-on-an-overall-project-direction-user-profile-problem-addressed-before-the-tutorial" onclick="event.stopPropagation()"></a></h4>
           <div>
             <ul>
               <li><strong>Decide project direction, target user profile, and problem addressed</strong>: Use your first project meeting to discuss with your team members and decide your project direction, target user profile, and the value proposition of the product, as described in the panels below:</li>
             </ul>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Expectations</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
@@ -587,14 +580,14 @@
                   <p>
                     <box> <span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can contribute production quality SE work to a small/medium software project </box>
                   </p>
-
-                  <div tags="m--cs2113 m--tic4001">
-                    <p>Accordingly, the tP is structured to resemble an early stage of a small software project in which you will,</p>
+                  <div tags="m--cs2103">
+                    <p>Accordingly, the tP is structured to resemble an intermediate stage of a non-trivial real-life brownfield software project in which you will,</p>
                     <ol>
-                      <li>conceptualize and implement a product, and,</li>
+                      <li>conceptualize and implement enhancements to a given product, and,</li>
                       <li>have it ready to be continued by future developers</li>
                     </ol>
                   </div>
+
                   <p>The focus of the tP is to learn the following aspects:</p>
                   <ul>
                     <li><s>coding</s></li>
@@ -608,10 +601,14 @@
                     <h3 id="direction">
                       <div class="text-white bg-dark p-1">Direction</div><span id="direction" class="anchor"></span><a class="fa fa-anchor" href="#direction" onclick="event.stopPropagation()"></a>
                     </h3>
-
+                    <div tags="m--cs2103">
+                      <p>The tP uses a generic application called <a href="https://se-edu.github.io/addressbook-level3/">AddressBook-Level3 (AB3)</a> (from <a href="https://se-education.org">https://se-education.org</a>) as the starting point.</p>
+                      <img src="https://github.com/se-edu/addressbook-level3/raw/master/docs/images/Ui.png" width="600">
+                      <p></p>
+                    </div>
                     <p>You may develop any product provided it is meant for users who can type fast, and prefer typing over mouse/voice commands. Therefore, <mark>Command Line Interface (CLI) is the primary mode of input.</mark></p>
                     <div class="indented-level1">
-                      <panel type class="embedding" minimized><template slot="_header">
+                      <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                           <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Constraint-Typing-Preferred <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                         </template>
                         <div>
@@ -625,14 +622,14 @@
                     </div>
                     <p></p>
                     <div class="indented-level1">
-                      <panel type class="embedding" minimized><template slot="_header">
+                      <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                           <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Recommendation-CLI-First <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                         </template>
                         <div>
                           <h4 id="recommendation-cli-first"><span class="badge badge-info text-monospace"><span aria-hidden="true" class="far fa-thumbs-up"></span> Recommendation-CLI-First</span><span id="recommendation-cli-first" class="anchor"></span><a class="fa fa-anchor" href="#recommendation-cli-first" onclick="event.stopPropagation()"></a></h4>
                           <div class="indented-level2">
                             <p>Following from the <em>Constraint-Typing-Preferred</em>, if the app is optimized for the target user (graded under the <em>product design</em> criterion), <mark>a user who can type fast should be able to accomplish most tasks faster via CLI, compared to a hypothetical GUI-only version of the app.</mark> <span class="dimmed">For example, adding a new entity via the CLI should be faster than entering the same data through a GUI form.</span><br>
-                              Therefore, the input to the app needs to be primarily CLI. <span tags="m--cs2113 m--tic4001">If you do implement a GUI, that GUI should primarily be used to give visual feedback to the user.</span> While we don't prohibit non-CLI inputs, note that such inputs will reduce the suitability of the product to target users. Therefore, give CLI alternatives to mouse/GUI inputs, if applicable.<br>
+                              Therefore, the input to the app needs to be primarily CLI. <span tags="m--cs2103">The GUI is used primarily to give visual feedback to the user.</span> While we don't prohibit non-CLI inputs, note that such inputs will reduce the suitability of the product to target users. Therefore, give CLI alternatives to mouse/GUI inputs, if applicable.<br>
                               Also keep in mind:</p>
                             <ul>
                               <li>Regular typing is usually faster than using key combinations.</li>
@@ -645,52 +642,66 @@
                     <p></p>
                     <p></p>
 
-
-                    <div tags="m--cs2113 m--tic4001">
+                    <div tags="m--cs2103">
                       <ul>
-                        <li><span>For example, an app to manage one of these:
-                            <ul>
-                              <li>Contact details</li>
-                              <li>Bookmarks of websites</li>
-                              <li>Tasks/Schedule</li>
-                              <li>Location info</li>
-                              <li>Thing to memorize i.e. flash cards, trivia</li>
-                              <li>Forum posts, news feeds, Social media feeds</li>
-                              <li>Online projects or issue trackers that the user is interested in</li>
-                              <li>Emails, possibly from different accounts</li>
-                              <li>Multiple types of related things <span class="dimmed">e.g. Contacts and Tasks (if Tasks are allocated to Contacts)</span></li>
-                              <li>...</li>
-                            </ul></span></li>
+                        <li><strong>Direction 1: Evolve</strong> <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">AddressBook-Level3</span>AB3</span> into a more powerful or more optimized contact management app.
+                          <ul>
+                            <li>Some examples:
+                              <ul>
+                                <li>Manage more entity types related to contacts <span class="dimmed">e.g. Tasks allocated to contacts</span></li>
+                                <li>Contact managing optimized for a specific type of user <span class="dimmed">e.g. a sales person managing client contacts</span></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
                       </ul>
+                      <div class="indented-level2">
+                        <ul>
+                          <li><span class="text-success"><strong>pros:</strong></span> less changes to existing code at the start of the project (i.e., progress will be smoother at the start), can result in a more mature product with deeper features as the product functionality will be moving forward from the start</li>
+                          <li><span class="text-danger"><strong>cons:</strong></span> less flexibility in product design, less differentiation with other team's projects</li>
+                        </ul>
+                      </div>
+                      <ul>
+                        <li><strong>Direction 2: Morph</strong> AB3 any direction you wish.
+                          <ul>
+                            <li><span>For example, an app to manage one of these:
+                                <ul>
+                                  <li>Bookmarks of websites</li>
+                                  <li>Tasks/Schedule</li>
+                                  <li>Location info</li>
+                                  <li>Thing to memorize i.e. flash cards, trivia</li>
+                                  <li>Forum posts, news feeds, Social media feeds</li>
+                                  <li>Online projects or issue trackers that the user is interested in</li>
+                                  <li>Emails, possibly from different accounts</li>
+                                  <li>Multiple types of related things <span class="dimmed">e.g. Contacts and Tasks (if Tasks are allocated to Contacts)</span></li>
+                                  <li>...</li>
+                                </ul></span></li>
+                          </ul>
+                        </li>
+                      </ul>
+
+
+                      <div class="indented-level2">
+                        <ul>
+                          <li><span class="text-success"><strong>pros:</strong></span> more flexibility in the project direction, more room to differentiate from other teams' projects</li>
+                          <li><span class="text-danger"><strong>cons:</strong></span> more changes to the existing code at the start while you are still not very familiar with the code base</li>
+                        </ul>
+                      </div>
+                      <p><mark>Weigh the pros/cons and choose the one that suits you.</mark></p>
                     </div>
                   </span>
-                  <div tags="m--cs2113 m--tic4001">
-                    <p><mark>You are strongly discouraged from developing a GUI application</mark> as it can increase the workload unnecessarily.</p>
-                    <div class="indented-level1">
-                      <panel type class="embedding" minimized><template slot="_header">
-                          <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Recommendation-No-GUI <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                        </template>
-                        <div>
-                          <h4 id="recommendation-no-gui"><span class="badge badge-info text-monospace"><span aria-hidden="true" class="far fa-thumbs-up"></span> Recommendation-No-GUI</span><span id="recommendation-no-gui" class="anchor"></span><a class="fa fa-anchor" href="#recommendation-no-gui" onclick="event.stopPropagation()"></a></h4>
-                          <div class="indented-level2">
-                            <p>Creating a good Java GUI takes a lot of extra effort, which can easily push the tP effort beyond the expected range. In addition, good GUI design is not a learning outcome of this module. Therefore, you are strongly discouraged from creating a GUI application. Choose the GUI path only if you are willing to take the extra workload on top of the module's normal load.</p>
-                          </div>
-                        </div>
-                      </panel>
-                    </div>
-                    <p></p>
-                  </div>
+
                   <h3 id="target-user-and-amp-value-proposition">
                     <div class="text-white bg-dark p-1">Target User &amp; Value Proposition</div><span id="target-user-and-amp-value-proposition" class="anchor"></span><a class="fa fa-anchor" href="#target-user-and-amp-value-proposition" onclick="event.stopPropagation()"></a>
                   </h3>
                   <p>You are expected to:</p>
                   <ul>
-                    <li><strong>Define a very specific <em>target user profile</em>.</strong> <br> <mark>We require you to narrow down the target user profile</mark> <span class="dimmed">as opposed to trying to make it as general as possible. Here is an example direction of narrowing down target user: anybody → teachers → university teachers → tech savvy university teachers → TIC4001 instructors.</span><br><br>
+                    <li><strong>Define a very specific <em>target user profile</em>.</strong> <br> <mark>We require you to narrow down the target user profile</mark> <span class="dimmed">as opposed to trying to make it as general as possible. Here is an example direction of narrowing down target user: anybody → teachers → university teachers → tech savvy university teachers → CS2103/T instructors.</span><br><br>
                       <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Be careful not to contradict given <a href="/website/admin/tp-constraints.html">project constraints</a> when defining the user profile <span class="dimmed">e.g. the target user should still prefer typing over mouse actions</span>.
                     </li>
                   </ul>
                   <div class="indented-level2">
-                    <panel type="seamless"><template slot="_header">
+                    <panel type="seamless" class="algolia-no-index"><template slot="_header">
                         <p><span class="dimmed">Why the need to narrow down the user profile?</span></p>
                       </template>
                       <ul>
@@ -705,7 +716,7 @@
                     <li><strong>Optimize the product to the chosen target users</strong> i.e., add features that are especially/only applicable for target users (to make the app especially attractive to them).
                       <ul>
                         <li>
-                          <p>Example 1: If the product targets TIC4001 instructors, there can be features that are applicable to them only, <span class="dimmed">such as the ability to navigate to a student's project on GitHub</span></p>
+                          <p>Example 1: If the product targets CS2103/T instructors, there can be features that are applicable to them only, <span class="dimmed">such as the ability to see a link to a student's project on GitHub</span></p>
                         </li>
                         <li>
                           <p>Example 2: If your app manages contacts, you can optimize its features based on,</p>
@@ -723,38 +734,37 @@
                     <h3 id="functionality-expectations">
                       <div class="text-white bg-danger p-1">Functionality Expectations</div><span id="functionality-expectations" class="anchor"></span><a class="fa fa-anchor" href="#functionality-expectations" onclick="event.stopPropagation()"></a>
                     </h3>
-
-                    <div tags="m--cs2113 m--tic4001">
-                      <p><strong>The expected level of <em>functionality</em> from a team is roughly <mark>what you can achieve if each member contribute about the same amount of functional code as required by a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., if all requirements were met at the <em>minimal</em> level specified</span>typical iP</span></mark></strong>.</p>
+                    <div tags="m--cs2103">
+                      <p><strong>The expected level of <em>functionality</em> to be added by a 5-person team is roughly the <mark>equivalent effort taken to create AB3 <em>functionality</em></mark></strong>. Some examples meeting that criterion:</p>
+                      <ul>
+                        <li>Example 1: A fictional contact management app optimized for a specific target user group:
+                          <ul>
+                            <li>Existing AB3 features are optimized to the new target user group.</li>
+                            <li>Person objects are enhanced to contain more details.</li>
+                            <li>There are a 4-5 new functionality that are specific to the target user group.</li>
+                          </ul>
+                        </li>
+                        <li>Example 2: a FooBar app that keeps track of two different types of entities <em>Foo</em> entities and <em>Bar</em> entities.
+                          <ul>
+                            <li>Foo and Bar entities are tightly-connected e.g., a Foo entity can contain Bar entities. Each type is similar to AB3 Person objects in terms of complexity.</li>
+                            <li>In addition to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Creat Read Update Delete</span>CRUD</span> for Foo and Bar entities, there are a 4-5 FooBar-specific functionality, some of which involves both Foo and Bar entities e.g., link a Foo entity to a Bar entity.</li>
+                          </ul>
+                        </li>
+                      </ul>
                     </div>
-                    <p><mark>You will get full marks for implementation effort</mark> if you meet the expectation stated above. There are no extra marks for exceeding that bar. You are better off spending that effort in improving other aspects of the project.</p>
 
+                    <p><mark>You will get full marks for implementation effort</mark> if you meet the expectation stated above. There are no extra marks for exceeding that bar. You are better off spending that effort in improving other aspects of the project.</p>
+                    <box tags="m--cs2103">
+                      <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you wish to add the following features to your app, we recommend (but not require) you to follow similar features in AB4 in order to reduce the effort required.</p>
+                      <ul>
+                        <li><a href="https://se-education.org/addressbook-level4/DeveloperGuide.html#undo-redo-feature">Undo/redo</a></li>
+                        <li><a href="https://se-education.org/addressbook-level4/Testing.html#types-of-tests">Automated GUI tests</a></li>
+                      </ul>
+                    </box>
 
                     <box type="important" light>
-                      <p>One semester ago, we reduced the tP functionality expectations by about 40-50% compared to the previous semesters, in order to reduce your workload. Keep that in mind in case you receive advice about project from seniors who did this module more than one semester ago.</p>
-                      <div tags="m--cs2113 m--tic4001">
-                        <p>In fact, here is the grading criterion for the individual project effort:</p>
-                        <panel type class="embedding" minimized><template slot="_header">
-                            <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Evaluating the Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                          </template>
-                          <div>
-
-                            <div tags="m--cs2113 m--tic4001">
-                              <p>
-                                <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>[For each member] The functional code contributed by the person is,</strong><br>
-                                <mark>Consider implementation work only (i.e., exclude testing, documentation, project management etc.)</mark><br>
-                                The <em>typical iP</em> refers to an iP where all the requirements are met at the minimal expectations given.<br>
-                                Use the person's PPP and RepoSense page to evaluate the effort.
-                              </p>
-                              <ul radio-group="c9961" class="radio-list">
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Unable to judge</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Significantly less than a typical iP</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> Slightly less than a typical iP</label></li>
-                                <li class="radio-list-item"><label><input class="radio-list-input" name="c9961" type="radio"> At least as much as a typical iP</label></li>
-                              </ul>
-                            </div>
-                          </div>
-                        </panel>
+                      <div tags="m--cs2103 m--cs2113">
+                        <p>One semester ago, we reduced the tP functionality expectations by about 40-50% compared to the previous semesters, in order to reduce your workload. Keep that in mind in case you receive advice about project from seniors who did this module more than one semester ago.</p>
                       </div>
                     </box>
                   </span>
@@ -789,7 +799,22 @@
                         </ul>
                       </li>
                     </ul>
-
+                    <div tags="m--cs2103" class="indented-level4">
+                      <p>Some examples:</p>
+                      <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
+                          <p>Example enhancements</p>
+                        </template>
+                        <ul>
+                          <li>Add a new feature <span class="dimmed">e.g. add the ability to view statistics</span></li>
+                          <li>Enhance an existing features in a major way <span class="dimmed">e.g. make the command syntax more user friendly and closer to natural language</span></li>
+                          <li>A redesign of the GUI <span class="dimmed">e.g. make it work like a chat application (note: chat is a form of CLI)</span></li>
+                          <li>A redesign of the code <span class="dimmed">e.g. Improve the design to improve the code quality.</span></li>
+                        </ul>
+                        <p></p>
+                      </panel>
+                      <p></p>
+                      <p></p>
+                    </div>
                     <ul>
                       <li>
                         <p><strong>Tip: Contribute to all aspects of the project</strong> e.g. write backend code, frontend code, test code, user documentation, and developer documentation. <span class="dimmed">Reason: If you limit yourself to certain aspects only, you could lose marks allocated for the aspects you did not do. In addition, the final exam assumes that you are familiar with all aspects of the project.</span></p>
@@ -798,7 +823,11 @@
                         <p><strong>Tip: Do <em>all</em> the work related to your enhancement yourself.</strong> <span class="dimmed">Reason:If there is no clear division of who did which enhancement, it will be difficult to divide project credit (or assign responsibility for bugs detected by testers) later.</span></p>
                       </li>
                     </ul>
-
+                    <div tags="m--cs2103">
+                      <ul>
+                        <li><strong>Tip: Divide the components of the product among team members</strong>. Notwithstanding the above, you are still recommended to divide the components of the product among team members so that each team member is <em>in charge</em> of one or more components. While others will be modifying those components to fit their features, your role as the <em>in charge</em> of a component is to guide others modifying that component <span class="dimmed">(reason: you are supposed to be the most knowledgeable about that component)</span> and protect that component from degrading <span class="dimmed">e.g., you can review others' changes to your component and suggest possible changes</span>.</li>
+                      </ul>
+                    </div>
                     <h4 id="individual-expectations-on-documentation"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Documentation</span><span id="individual-expectations-on-documentation" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-documentation" onclick="event.stopPropagation()"></a></h4>
                     <ul>
                       <li><strong>Objective:</strong> showcase your ability to write both <em>user-facing documentation</em> and <em>developer-facing documentation</em>.</li>
@@ -831,14 +860,20 @@
                     <div id="team-tasks" class="indented-level2">
                       <box>
                         <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
                           </template>
                           <span id="example-team-tasks">
                             <p>Here is a non-exhaustive list of team-tasks:</p>
                             <ol>
                               <li>Setting up the GitHub team org/repo</li>
-                              <li>Necessary general code enhancements</li>
+                              <li>Necessary general code enhancements e.g.,
+                                <ol>
+                                  <li>Work related to renaming the product</li>
+                                  <li>Work related to changing the product icon</li>
+                                  <li>Morphing the product into a different product</li>
+                                </ol>
+                              </li>
                               <li>Setting up tools e.g., GitHub, Gradle</li>
                               <li>Maintaining the issue tracker</li>
                               <li>Release management</li>
@@ -856,7 +891,7 @@
                       <box>
                         <span id="roles">
                           <p><em>Roles</em> indicate aspects you are in charge of and responsible for. <span class="dimmed">E.g., if you are in charge of documentation, you are the person who should allocate which parts of the documentation is to be done by who, ensure the document is in right format, ensure consistency etc.</span></p>
-                          <panel type="seamless"><template slot="_header">
+                          <panel type="seamless" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Recommended roles and responsibilities</p>
                             </template>
                             <p>This is a non-exhaustive list; you may define additional roles.</p>
@@ -870,10 +905,9 @@
                               <li><em>Scheduling and tracking</em>: In charge of defining, assigning, and tracking project tasks.</li>
                               <li><em>[Tool ABC] expert</em>: <span class="dimmed">e.g. Intellij expert, Git expert, etc.</span> Helps other team member with matters related to the specific tool.</li>
                             </ul>
-
-                            <div tags="m--cs2113 m--tic4001">
+                            <div tags="m--cs2103">
                               <ul>
-                                <li><em>In charge of[Area XYZ]</em> of the code: <span class="dimmed">e.g. In charge of the code that deals with storage, etc.</span> If you are in charge of an area, you are expected to know that area well, and review changes done to that code.</li>
+                                <li><em>In charge of[Component XYZ]</em>: <span class="dimmed">e.g. In charge of <code v-pre>Model</code>, <code v-pre>UI</code>, <code v-pre>Storage</code>, etc.</span> If you are in charge of a component, you are expected to know that component well, and review changes done to that component in v1.3-v1.4.</li>
                               </ul>
                             </div>
                           </panel>
@@ -891,12 +925,20 @@
             </div>
             <p></p>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Constraints</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
                   <p><strong>Your project should comply with the following constraints.</strong> <span class="dimmed"><strong>Reason</strong>: to increase comparability among projects and to maximize applicability of module learning outcomes in the project.</span></p>
-
+                  <span tags="m--cs2103">
+                    <div id="Constraint-Brownfield">
+                      <h4 id="constraint-brownfield"><span class="badge badge-warning text-monospace"><span aria-hidden="true" class="fas fa-ban"></span> Constraint-Brownfield</span><span id="constraint-brownfield" class="anchor"></span><a class="fa fa-anchor" href="#constraint-brownfield" onclick="event.stopPropagation()"></a></h4>
+                      <div class="indented-level2">
+                        <p>The final product should be a result of evolving/enhancing/morphing the given code base. However, you are allowed to replace all existing code with new code, as long as it is done incrementally. <span class="dimmed">e.g. done in small steps, each producing a working product</span><br>
+                          <span class="dimmed"><strong>Reason:</strong> To simulate a brownfield project.</span></p>
+                      </div>
+                    </div>
+                  </span>
                   <div id="Constraint-Typing-Preferred">
                     <h4 id="constraint-typing-preferred-2"><span class="badge badge-warning text-monospace"><span aria-hidden="true" class="fas fa-ban"></span> Constraint-Typing-Preferred</span><span id="constraint-typing-preferred-2" class="anchor"></span><a class="fa fa-anchor" href="#constraint-typing-preferred-2" onclick="event.stopPropagation()"></a></h4>
                     <div class="indented-level2">
@@ -930,7 +972,7 @@
                     <div class="indented-level2">
                       <p>Do not use a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Database Management System e.g., MySQL</span>DBMS</span> to store data.<br>
                         <span class="dimmed"><strong>Reason:</strong> Using a DBMS to store data will reduce the room to apply OOP techniques to manage data. It is true that most real world systems use a DBMS, but given the small size of this project, we
-                          need to optimize it for TIC4001
+                          need to optimize it for CS2103/T
                           module learning outcomes; covering DBMS-related topics will have to be left to database modules or level 3 project modules.</span></p>
                     </div>
                   </div>
@@ -979,18 +1021,22 @@
                       </ul>
                       <p>and is subjected to prior approval by the teaching team.<br>
                         <span class="dimmed"><strong>Reason:</strong> We will not allow third-party software that can interfere with the learning objectives of the module.</span></p>
-                      <p>Please <mark>post in the <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">forum</a> your request to use a third-party libraries</mark> <em>before</em> you start using the library. Once a specific library has been approved for one team, other teams may use it without requesting permission again.<br>
+                      <p>Please <mark>post in the <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a> your request to use a third-party libraries</mark> <em>before</em> you start using the library. Once a specific library has been approved for one team, other teams may use it without requesting permission again.<br>
                         <span class="dimmed"><strong>Reason:</strong> The whole class should know which external software are used by others so that they can do the same if they wish to.</span></p>
                     </div>
                   </div>
                   <div id="Constraint-File-Size">
                     <h4 id="constraint-file-size"><span class="badge badge-warning text-monospace"><span aria-hidden="true" class="fas fa-ban"></span> Constraint-File-Size</span><span id="constraint-file-size" class="anchor"></span><a class="fa fa-anchor" href="#constraint-file-size" onclick="event.stopPropagation()"></a></h4>
                     <div class="indented-level2">
-                      <p>The file sizes of the deliverables should not exceed the limits given below. <br>
-                        <span class="dimmed"><strong>Reason:</strong> It is hard to download big files during the practical exam due to limited WiFi bandwidth at the venue</span>:</p>
+                      <p>The file sizes of the deliverables should not exceed the limits given below. <br></p>
+                      <div tags="m--cs2113 m--cs2103">%%**Reason:** It is hard to download big files during the practical exam due to limited WiFi bandwidth at the venue%%:</div>
                       <ul>
-                        <li><span class="text-danger">JAR file: 100Mb</span> (Some third-party software -- e.g., Stanford NLP library, certain graphics libraries -- can cause you to exceed this limit)</li>
-                        <li><span class="text-danger">PDF files: 15Mb/file</span> (Not following <a href="https://se-education.org/guides/tutorials/savingPdf.html">the recommended method of converting to PDF format</a> can cause big PDF files. Another cause is using unnecessarily high resolution images for screenshots).</li>
+                        <li>
+                          <p><span class="text-danger">JAR file: 100Mb</span> (Some third-party software -- e.g., Stanford NLP library, certain graphics libraries -- can cause you to exceed this limit)</p>
+                        </li>
+                        <li>
+                          <p><span class="text-danger">PDF files: 15Mb/file</span> (Not following <a href="https://se-education.org/guides/tutorials/savingPdf.html">the recommended method of converting to PDF format</a> can cause big PDF files. Another cause is using unnecessarily high resolution images for screenshots).</p>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -1017,19 +1063,12 @@
                       </ul>
                     </div>
                   </div>
-                  <span tags="m--cs2113 m--tic4001">
-                    <div id="Recommendation-No-GUI">
-                      <h4 id="recommendation-no-gui-2"><span class="badge badge-info text-monospace"><span aria-hidden="true" class="far fa-thumbs-up"></span> Recommendation-No-GUI</span><span id="recommendation-no-gui-2" class="anchor"></span><a class="fa fa-anchor" href="#recommendation-no-gui-2" onclick="event.stopPropagation()"></a></h4>
-                      <div class="indented-level2">
-                        <p>Creating a good Java GUI takes a lot of extra effort, which can easily push the tP effort beyond the expected range. In addition, good GUI design is not a learning outcome of this module. Therefore, you are strongly discouraged from creating a GUI application. Choose the GUI path only if you are willing to take the extra workload on top of the module's normal load.</p>
-                      </div>
-                    </div>
-                  </span>
+
                   <div id="Recommendation-CLI-First">
                     <h4 id="recommendation-cli-first-2"><span class="badge badge-info text-monospace"><span aria-hidden="true" class="far fa-thumbs-up"></span> Recommendation-CLI-First</span><span id="recommendation-cli-first-2" class="anchor"></span><a class="fa fa-anchor" href="#recommendation-cli-first-2" onclick="event.stopPropagation()"></a></h4>
                     <div class="indented-level2">
                       <p>Following from the <em>Constraint-Typing-Preferred</em>, if the app is optimized for the target user (graded under the <em>product design</em> criterion), <mark>a user who can type fast should be able to accomplish most tasks faster via CLI, compared to a hypothetical GUI-only version of the app.</mark> <span class="dimmed">For example, adding a new entity via the CLI should be faster than entering the same data through a GUI form.</span><br>
-                        Therefore, the input to the app needs to be primarily CLI. <span tags="m--cs2113 m--tic4001">If you do implement a GUI, that GUI should primarily be used to give visual feedback to the user.</span> While we don't prohibit non-CLI inputs, note that such inputs will reduce the suitability of the product to target users. Therefore, give CLI alternatives to mouse/GUI inputs, if applicable.<br>
+                        Therefore, the input to the app needs to be primarily CLI. <span tags="m--cs2103">The GUI is used primarily to give visual feedback to the user.</span> While we don't prohibit non-CLI inputs, note that such inputs will reduce the suitability of the product to target users. Therefore, give CLI alternatives to mouse/GUI inputs, if applicable.<br>
                         Also keep in mind:</p>
                       <ul>
                         <li>Regular typing is usually faster than using key combinations.</li>
@@ -1038,7 +1077,7 @@
                     </div>
                   </div>
                   <box type="warning">
-                    <p>If you are not sure if your product complies with a certain constraint/recommendation, please seek clarification by posting in the <a href="https://github.com/nus-tic4001-AY2021S1/forum/issues">forum</a> (preferred) or emailing the supervisor.
+                    <p>If you are not sure if your product complies with a certain constraint/recommendation, please seek clarification by posting in the <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a> (preferred) or emailing the supervisor.
                     </p>
                   </box>
                   <p></p>
@@ -1047,87 +1086,85 @@
             </div>
             <p></p>
             <div class="indented-level2">
-              <panel type class="embedding" minimized><template slot="_header">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Grading → <mark>Criteria Used for Grading the Product Design</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
                 <div>
                   <h4 id="1-project-grading-product-design-5-marks">
-                    <div class="bg-warning p-1">1. Project Grading: Product Design <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-users"></span></span>/<span><span aria-hidden="true" class="fas fa-user"></span></span> 5 marks]</span></div><span id="1-project-grading-product-design-5-marks" class="anchor"></span><a class="fa fa-anchor" href="#1-project-grading-product-design-5-marks" onclick="event.stopPropagation()"></a>
+                    <div class="bg-warning p-1">1. Project Grading: Product Design <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 5 marks]</span></div><span id="1-project-grading-product-design-5-marks" class="anchor"></span><a class="fa fa-anchor" href="#1-project-grading-product-design-5-marks" onclick="event.stopPropagation()"></a>
                   </h4>
                   <p><strong>Evaluates:</strong> how well your features fit together to form a cohesive product (not how many features or how big the features are) and how well does it match the target user</p>
-                  <p><strong>Evaluated by:</strong></p>
-                  <ul>
-                    <li>tutors (based on product demo and user guide)</li>
-                    <li>peers from other teams (based on peer testing and user guide)</li>
-                  </ul>
-                  <panel type class="embedding" minimized><template slot="_header">
-                      <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                    </template>
-                    <div>
-                      <p>
-                        <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Quality of the product design,</strong><br>
-                        Evaluate based on the User Guide and the actual product behavior.
-                      </p>
-                      <div class="table-responsive">
-                        <table class="markbind-table table table-bordered table-striped">
-                          <thead>
-                            <tr>
-                              <th>Criterion</th>
-                              <th>Unable to judge</th>
-                              <th>Low</th>
-                              <th>Medium</th>
-                              <th>High</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><code v-pre>target user</code></td>
-                              <td>Not specified</td>
-                              <td></td>
-                              <td></td>
-                              <td>Clearly specified and narrowed down appropriately</td>
-                            </tr>
-                            <tr>
-                              <td><code v-pre>value proposition</code></td>
-                              <td>Not specified</td>
-                              <td>The value to target user is low. App is not worth using</td>
-                              <td>Some small group of target users might find the app worth using</td>
-                              <td>Most of the target users are likely to find the app worth using</td>
-                            </tr>
-                            <tr>
-                              <td><code v-pre>optimized for target user</code></td>
-                              <td></td>
-                              <td>Not enough focus for CLI users</td>
-                              <td>Mostly CLI-based, but cumbersome to use most of the time</td>
-                              <td>Feels like a fast typist can be more productive with the app, compared to an equivalent GUI app without a CLI</td>
-                            </tr>
-                            <tr>
-                              <td><code v-pre>feature-fit</code></td>
-                              <td></td>
-                              <td>Many of the features don't fit with others</td>
-                              <td>Most features fit together but a few may be possible misfits</td>
-                              <td>All features fit together to for a cohesive whole</td>
-                            </tr>
-                          </tbody>
-                        </table>
+                  <div tags="m--cs2113 m--cs2103">
+                    <p><strong>Evaluated by:</strong></p>
+                    <ul>
+                      <li>tutors (based on product demo and user guide)</li>
+                      <li>peers from other teams (based on peer testing and user guide)</li>
+                    </ul>
+                    <panel type class="embedding algolia-no-index" minimized><template slot="_header">
+                        <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                      </template>
+                      <div>
+                        <p>
+                          <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Quality of the product design,</strong><br>
+                          Evaluate based on the User Guide and the actual product behavior.
+                        </p>
+                        <div class="table-responsive">
+                          <table class="markbind-table table table-bordered table-striped">
+                            <thead>
+                              <tr>
+                                <th>Criterion</th>
+                                <th>Unable to judge</th>
+                                <th>Low</th>
+                                <th>Medium</th>
+                                <th>High</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><code v-pre>target user</code></td>
+                                <td>Not specified</td>
+                                <td></td>
+                                <td></td>
+                                <td>Clearly specified and narrowed down appropriately</td>
+                              </tr>
+                              <tr>
+                                <td><code v-pre>value proposition</code></td>
+                                <td>Not specified</td>
+                                <td>The value to target user is low. App is not worth using</td>
+                                <td>Some small group of target users might find the app worth using</td>
+                                <td>Most of the target users are likely to find the app worth using</td>
+                              </tr>
+                              <tr>
+                                <td><code v-pre>optimized for target user</code></td>
+                                <td></td>
+                                <td>Not enough focus for CLI users</td>
+                                <td>Mostly CLI-based, but cumbersome to use most of the time</td>
+                                <td>Feels like a fast typist can be more productive with the app, compared to an equivalent GUI app without a CLI</td>
+                              </tr>
+                              <tr>
+                                <td><code v-pre>feature-fit</code></td>
+                                <td></td>
+                                <td>Many of the features don't fit with others</td>
+                                <td>Most features fit together but a few may be possible misfits</td>
+                                <td>All features fit together to for a cohesive whole</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
-                    </div>
-                  </panel>
-                  <p>In addition, feature flaws reported in the PE will be considered when grading this aspect.</p>
-                  <box tags="m--cs2113 m--tic4001" type="tip">
-                    <p>Note that 'product design' or 'functionality' are not critical learning outcomes of the tP. Therefore, <mark>the bar you need to reach to get full 5 marks will be quite low</mark>. For example, the <code v-pre>Medium</code> level in the rubric given in the panel above should be enough to achieve full marks. Similarly, only cases of <em>excessive</em> 'feature flaw' bugs will affect the score.
-                    </p>
-                  </box>
-                  <p></p>
-                  <box>
-                    <div>
-                      <p>These are considered <em>feature flaws</em>:<br>
-                        <span aria-hidden="true" class="fas fa-bug"></span> The feature does not solve the stated problem of the intended user i.e., the feature is 'incomplete'<br>
-                        <span aria-hidden="true" class="fas fa-bug"></span> Hard-to-test features<br>
-                        <span aria-hidden="true" class="fas fa-bug"></span> Features that don't fit well with the product<br>
-                        <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p>
-                    </div>
-                  </box>
+                    </panel>
+                    <p>In addition, feature flaws reported in the PE will be considered when grading this aspect.</p>
+                    <p></p>
+                    <box>
+                      <div>
+                        <p>These are considered <em>feature flaws</em>:<br>
+                          <span aria-hidden="true" class="fas fa-bug"></span> The feature does not solve the stated problem of the intended user i.e., the feature is 'incomplete'<br>
+                          <span aria-hidden="true" class="fas fa-bug"></span> Hard-to-test features<br>
+                          <span aria-hidden="true" class="fas fa-bug"></span> Features that don't fit well with the product<br>
+                          <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p>
+                      </div>
+                    </box>
+                  </div>
                 </div>
               </panel>
             </div>
@@ -1148,14 +1185,14 @@
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
               <a class="nav-link py-1" href="#ip">iP&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                <a class="nav-link py-1" href="#1-review-some-peer-prs-during-lecture">1 Review some peer PRs during lecture counted for participation&#x200E;</a>
-                <a class="nav-link py-1" href="#2-add-increments-as-branches-a-codequality-a-abstractclasses-a-packages-level-5">2 Add Increments as branches: A-CodeQuality, A-AbstractClasses, A-Packages, Level-5&#x200E;</a>
+                <a class="nav-link py-1" href="#1-review-some-peer-prs">1 Review some peer PRs counted for participation&#x200E;</a>
+                <a class="nav-link py-1" href="#2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs">2 Add Increments as parallel branches: A-Gradle, A-CheckStyle, Level-10, A-Varargs&#x200E;</a>
               </nav>
               <a class="nav-link py-1" href="#tp-set-direction">tP: Set direction&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                 <a class="nav-link py-1" href="#1-start-weekly-project-meetings">1 Start weekly project meetings&#x200E;</a>
-                <a class="nav-link py-1" href="#2-start-a-collaborative-doc-to-take-project-notes-before-next-lecture">2 Start a collaborative doc to take project notes before next lecture&#x200E;</a>
-                <a class="nav-link py-1" href="#3-decide-on-an-overall-project-direction-user-profile-problem-addressed-before-next-lecture">3 Decide on an overall project direction (user profile, problem addressed) before next lecture&#x200E;</a>
+                <a class="nav-link py-1" href="#2-start-a-collaborative-doc-to-take-project-notes-before-the-tutorial">2 Start a collaborative doc to take project notes before the tutorial&#x200E;</a>
+                <a class="nav-link py-1" href="#3-decide-on-an-overall-project-direction-user-profile-problem-addressed-before-the-tutorial">3 Decide on an overall project direction (user profile, problem addressed) before the tutorial&#x200E;</a>
               </nav>
             </nav>
 
@@ -1166,7 +1203,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sun, 12 Jul 2020, 23:01:31 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -1177,9 +1214,37 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  const enableSearch = false
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122519234-1');
+</script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
 
 </html>

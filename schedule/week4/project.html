@@ -108,6 +108,7 @@
           <div>
             <ol>
               <li><span>Review some peer PRs</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+              <li><span>Learn from others (optional)</span></li>
               <li>Add Increments as parallel branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code></li>
             </ol>
           </div>
@@ -126,6 +127,11 @@
           <p></p>
           <h4 id="1-review-some-peer-prs"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Review some peer PRs</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-review-some-peer-prs" class="anchor"></span><a class="fa fa-anchor" href="#1-review-some-peer-prs" onclick="event.stopPropagation()"></a></h4>
           <div>
+            <box type="info" add-class="ml-4">
+              <p>This task is worth <code v-pre>2x2=4</code> participtaion points.
+              </p>
+            </box>
+            <p></p>
             <ul>
               <li><strong>Learn <em>how</em> you should review PRs in this task</strong>:</li>
             </ul>
@@ -164,8 +170,8 @@
                   <ol>
                     <li>When there are no more comments to add, click on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Review changes <svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-triangle-down" aria-hidden="true">
                           <path d="M4.427 6.427l3.396 3.396a.25.25 0 00.354 0l3.396-3.396A.25.25 0 0011.396 6H4.604a.25.25 0 00-.177.427z" /></svg></span> button (on the top right of the diff page).</li>
-                    <li>Type in an overall comment about the PR, if any.<br>
-                      <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <code v-pre>LGTM</code> is often used in such overall comments, to indicate <code v-pre>Looks good to merge</code>.<br>
+                    <li>Type in an overall comment about the PR, if any.e.g.,<br>e.g.,
+                      <pre><code class="hljs" v-pre><span>Overall, I found your code easy to read for the most part except a few places<br></span><span>where the nesting was too deep. I noted a few minor coding standard violations<br></span><span>too. Some of the classes are getting quite long. Consider splitting into smaller<br></span><span>classes if that makes sense.<br></span></code></pre><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <code v-pre>LGTM</code> is often used in such overall comments, to indicate <code v-pre>Looks good to merge</code>.<br>
                       <code v-pre>nit</code> is another such term, used to indicate minor flaw e.g., <code v-pre>LGTM, almost. Just a few nits to fix.</code></li>
                     <li>Choose <code v-pre>Approve</code>, <code v-pre>Comment</code>, or <code v-pre>Request changes</code> option as appropriate and click on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Submit review</span> button.</li>
                   </ol>
@@ -174,279 +180,388 @@
             </div>
             <p></p>
             <ul>
-              <li><strong>Note these additional guidelines</strong>:
+              <li>
+                <p><span class="badge badge-dark">Step 1</span> <strong>Note these additional guidelines</strong>:</p>
                 <ul>
                   <li>Read the <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html"><em>Best practices for reviewing PRs</em> @SE-EDU/guides</a>. You are <mark>expected to follow all of them</mark>.</li>
-                  <li>Comment on coding standard violations in particular.</li>
+                  <li>If the PR has received some review comments already, feel free to confirm/complement/question those comments in your review. Also, look for things the previous reviewers may have missed.</li>
                   <li>At the end of the review, choose <code v-pre>Comment</code> (i.e., not <code v-pre>Approve</code> or <code v-pre>Request changes</code>)</li>
                 </ul>
               </li>
-              <li><strong>Review two PRs</strong> created by your classmates. PRs can be found <a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls">here</a>.
+              <li>
+                <p><strong>Do the first PR review</strong> as follows.</p>
                 <ul>
-                  <li>The allocation of which PRs to review will be specified in <a href>this page</a> (you will be notified when the allocation is ready).</li>
-                  <li>To find the target PR, you can use a filter <code v-pre>author:AuthorUsername</code> e.g., <code v-pre>author:johnDoe</code></li>
-                  <li>If the student you have been allocated to review has not created a PR yet, you can review another PR of your choice.</li>
+                  <li>Comment on <mark><a href="https://se-education.org/guides/conventions/java/intermediate.html">coding standard</a> violations only</mark>.</li>
+                  <li>The review allocation is given in the panel below.</li>
                 </ul>
               </li>
             </ul>
-            <div class="indented-level2">
-              <box type="tip" light>
-                <p><strong>You can use the iP Code Dashboard to view others' code</strong>: You can now easily view <a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard">iP code written by classmates</a>, using the <code v-pre>Links → iP Code Dashboard</code> item in the top navigation menu. Click on the <span class="badge badge-light"><span><span class="dimmed"><strong>&lt;/&gt;</strong></span></span></span> icon corresponding to a student name to see the code written by that person. We encourage you to read others’ code and learn from them. If you adopt solutions from others (also encouraged), please follow our reuse policy.</p>
-                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                    <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module Policies → Policy on Reuse</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+            <div class="indented-level4">
+              <div>
+                <panel minimized class="algolia-no-index"><template slot="_header">
+                    <p>iP PR review allocation</p>
                   </template>
-                  <div>
-                    <h3 id="policy-on-reuse">Policy on reuse <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="policy-on-reuse" class="anchor"></span><a class="fa fa-anchor" href="#policy-on-reuse" onclick="event.stopPropagation()"></a></h3>
-                    <div class="indented">
-                      <div>
-                        <p><strong>Reuse is encouraged. However, note that reuse has its own costs</strong> (such as the learning curve, additional complexity, usage restrictions, and unknown bugs). Furthermore, you will not be given credit for work done by others. Rather, you will be given credit for <em>reusing</em> work done by others.</p>
+                  <div class="table-responsive">
+                    <table class="markbind-table table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Tutorial</th>
+                          <th>Reviewer</th>
+                          <th>First PR to review</th>
+                          <th>Backup PR to review</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>CS2113-T15-2</td>
+                          <td>E0309556</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/r11">r11</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/b11">b11</a></td>
+                        </tr>
+                        <tr>
+                          <td>CS2113-T15-2</td>
+                          <td>Keith-JK</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/r21">r21</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/b21">b21</a></td>
+                        </tr>
+                        <tr>
+                          <td>CS2113-T15-2</td>
+                          <td>jichngan</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/r31">r31</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/b31">b31</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </panel>
+                <p></p>
+                <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If the student you have been allocated to review has not created a PR (or the PR has a trivial amount of code), you can review the <em>Backup PR to review</em> provided in the allocation table. Failing both, review another PR allocated to another student in your own tutorial <ins>but not in your team</ins>.</p>
+                <p></p>
+                <box type="tip" light>
+                  <p>Tip for future reference: GitHub allows you to filter PRs/Issues using various criteria such as <code v-pre>author:AuthorUsername</code> (<a href="https://github.com/reposense/RepoSense/pulls?utf8=%E2%9C%93&amp;q=is%3Apr+author%3Afzdy1914+">example</a> -- see the <code v-pre>filters</code> text box in the target page).</p>
+                  <p>Alternatively, you can use PR labels (if any) to filter PRs/Issues.<br>
+                    <img src="/website/admin/images/filterPrsUsingLabels.png"></p>
+                </box>
+                <p></p>
+              </div>
+            </div>
+            <ul>
+              <li><span class="badge badge-dark">Step 2</span> <strong>Do the second PR review</strong> as follows.
+                <ul>
+                  <li>Comment on <mark>other code quality guidelines</mark> (see the <span tags="m--cs2103">section <em>Naming</em></span> in <a href="/website/se-book-adapted/chapters/codeQuality.html">this textbook chapter</a>) you have learned so far. It's optional to comment on coding standard violations in this PR review.</li>
+                  <li>The review allocation is given in the panel below.</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="indented-level4">
+              <div>
+                <panel minimized class="algolia-no-index"><template slot="_header">
+                    <p>iP PR review allocation</p>
+                  </template>
+                  <div class="table-responsive">
+                    <table class="markbind-table table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Tutorial</th>
+                          <th>Reviewer</th>
+                          <th>Second PR to review</th>
+                          <th>Backup PR to review</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>CS2113-T15-2</td>
+                          <td>E0309556</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/r12">r12</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/b12">b12</a></td>
+                        </tr>
+                        <tr>
+                          <td>CS2113-T15-2</td>
+                          <td>Keith-JK</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/r22">r22</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/b22">b22</a></td>
+                        </tr>
+                        <tr>
+                          <td>CS2113-T15-2</td>
+                          <td>jichngan</td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/r32">r32</a></td>
+                          <td><a href="https://github.com/nus-cs2103-AY2021S1/ip/pulls/b32">b32</a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </panel>
+                <p></p>
+                <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If the allocated PR is not suitable, use the same strategy as before to find an alternative PR to review.</p>
+                <p></p>
+              </div>
+            </div>
+            <ul>
+              <li><span class="badge badge-dark">Step 3</span> <strong>[When you receive reviews for your own PR] Respond to comments received</strong>. You are recommended to (but not obliged to) respond to comments received from peers, especially if the PR reviewer asked you for more info. As mentioned in <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html">these guidelines</a>, do not get into arguments with PR reviewers/authors.</li>
+            </ul>
+          </div>
+          <p></p>
+          <h4 id="2-learn-from-others-optional"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span>Learn from others (optional)</span><span id="2-learn-from-others-optional" class="anchor"></span><a class="fa fa-anchor" href="#2-learn-from-others-optional" onclick="event.stopPropagation()"></a></h4>
+          <div>
+            <ul>
+              <li><strong>You can use the <a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&amp;groupSelect=groupByAuthors">iP Code Dashboard</a> to view others' iP code</strong>, using the <code v-pre>Links → iP Code Dashboard</code> item in the top navigation menu. Click on the <span class="badge badge-light"><span><span class="dimmed"><strong>&lt;/&gt;</strong></span></span></span> icon corresponding to a student name to see the code written by that person. We encourage you to read others’ code and learn from them. If you adopt solutions from others (also encouraged), please follow our reuse policy.</li>
+            </ul>
+            <div class="indented-level2">
+              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module Policies → Policy on Reuse</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <h3 id="policy-on-reuse">Policy on reuse <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="policy-on-reuse" class="anchor"></span><a class="fa fa-anchor" href="#policy-on-reuse" onclick="event.stopPropagation()"></a></h3>
+                  <div class="indented">
+                    <div>
+                      <p><strong>Reuse is encouraged. However, note that reuse has its own costs</strong> (such as the learning curve, additional complexity, usage restrictions, and unknown bugs). Furthermore, you will not be given credit for work done by others. Rather, you will be given credit for <em>reusing</em> work done by others.</p>
+                      <ul>
+                        <li>You are allowed to reuse work from your classmates, subject to following conditions:
+                          <ul>
+                            <li>The work has been shared publicly by us or the authors.</li>
+                            <li>You clearly give credit to the original author(s).</li>
+                          </ul>
+                        </li>
+                        <li>You are allowed to reuse work from external sources, subject to following conditions:
+                          <ul>
+                            <li>The work comes from a source of 'good standing' (such as an established open source project). This means you cannot reuse code written by an outside 'friend'.</li>
+                            <li>You clearly give credit to the original author. Acknowledge use of third party resources clearly e.g. in the welcome message, splash screen (if any) or under the 'about' menu. If you are open about reuse, you are less likely to get into trouble if you unintentionally reused something copyrighted.</li>
+                            <li>You do not violate the license under which the work has been released. Please  <strong>do not use 3rd-party images/audio</strong> in your software unless they have been specifically released to be used freely. Just because you found it in the Internet does not mean it is free for reuse.</li>
+                            <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a>. That way, the whole class get to see what libraries are being used by others.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <box>
+                        <h4 id="giving-credit-for-reused-work">Giving credit for reused work<span id="giving-credit-for-reused-work" class="anchor"></span><a class="fa fa-anchor" href="#giving-credit-for-reused-work" onclick="event.stopPropagation()"></a></h4>
+                        <p>Given below are how to give credit for things you reuse from elsewhere. These requirements are specific to this module <span class="dimmed">i.e., not applicable outside the module (outside the module you should follow the rules specified by your employer and the license of the reused work)</span></p>
+                        <p>If you <strong>used a third party library</strong>:</p>
                         <ul>
-                          <li>You are allowed to reuse work from your classmates, subject to following conditions:
-                            <ul>
-                              <li>The work has been shared publicly by us or the authors.</li>
-                              <li>You clearly give credit to the original author(s).</li>
-                            </ul>
+                          <li>iP/tP: Mention in the <code v-pre>README</code> file (under the <em>Acknowledgements</em> section)</li>
+                          <li>tP: Mention in the <span trigger="click" for="modal:reusePolicy-ppp" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:reusePolicy-ppp'].show()" class="trigger-click">Project Portfolio Page</span> if the library has a significant relevance to the features you implemented</li>
+                        </ul>
+                        <p>If you <strong>reused code snippets found on the Internet</strong> <span class="dimmed">e.g. from StackOverflow answers</span> or<br>
+                          <strong>referred code in another software</strong> or<br>
+                          <strong>referred project code by current/past student</strong>:</p>
+                        <ul>
+                          <li>If you read the code to understand the approach and implemented it yourself, mention it as a comment<br>
+                            <span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:
+                            <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//Solution below adapted from https://stackoverflow.com/a/16252290</span><br></span><span>{Your implmentation of the reused solution here ...}<br></span></code></pre>
                           </li>
-                          <li>You are allowed to reuse work from external sources, subject to following conditions:
-                            <ul>
-                              <li>The work comes from a source of 'good standing' (such as an established open source project). This means you cannot reuse code written by an outside 'friend'.</li>
-                              <li>You clearly give credit to the original author. Acknowledge use of third party resources clearly e.g. in the welcome message, splash screen (if any) or under the 'about' menu. If you are open about reuse, you are less likely to get into trouble if you unintentionally reused something copyrighted.</li>
-                              <li>You do not violate the license under which the work has been released. Please  <strong>do not use 3rd-party images/audio</strong> in your software unless they have been specifically released to be used freely. Just because you found it in the Internet does not mean it is free for reuse.</li>
-                              <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a>. That way, the whole class get to see what libraries are being used by others.</li>
-                            </ul>
+                          <li>If you copy-pasted a non-trivial code block (possibly with minor modifications <span class="dimmed">renaming, layout changes, changes to comments, etc.</span>), also mark the code block as reused code (using <span trigger="click" for="modal:reusePolicy-authorTags" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:reusePolicy-authorTags'].show()" class="trigger-click"><code v-pre>@@author</code> tags</span>)<br>
+                            Format:
+                            <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//@@author {yourGithubUsername}-reused</span><br></span><span><span class="hljs-comment">//{Info about the source...}</span><br></span><span><br></span><span>{<span class="hljs-function">Reused <span class="hljs-title">code</span> <span class="hljs-params">(possibly with minor modifications)</span> here ...}</span><br></span><span><span class="hljs-function"></span><br></span><span><span class="hljs-function"><span class="hljs-comment">//@@author</span></span><br></span></code></pre><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example of reusing a code snippet (with minor modifications):
+                            <pre><code class="hljs java" v-pre><span>persons = getList()<br></span><span><span class="hljs-comment">//@@author johndoe-reused</span><br></span><span><span class="hljs-comment">//Reused from https://stackoverflow.com/a/34646172 with minor modifications</span><br></span><span>Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;CustomData&gt;() {<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(CustomData lhs, CustomData rhs)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> lhs.customInt &gt; rhs.customInt ? -<span class="hljs-number">1</span> : <span class="hljs-number">0</span>;<br></span><span>    }<br></span><span>});<br></span><span><span class="hljs-comment">//@@author</span><br></span><span><span class="hljs-keyword">return</span> persons;<br></span></code></pre>
                           </li>
                         </ul>
-                        <box>
-                          <h4 id="giving-credit-for-reused-work">Giving credit for reused work<span id="giving-credit-for-reused-work" class="anchor"></span><a class="fa fa-anchor" href="#giving-credit-for-reused-work" onclick="event.stopPropagation()"></a></h4>
-                          <p>Given below are how to give credit for things you reuse from elsewhere. These requirements are specific to this module <span class="dimmed">i.e., not applicable outside the module (outside the module you should follow the rules specified by your employer and the license of the reused work)</span></p>
-                          <p>If you <strong>used a third party library</strong>:</p>
+                      </box>
+                      <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
+                          <div>
+                          <h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
                           <ul>
-                            <li>iP/tP: Mention in the <code v-pre>README</code> file (under the <em>Acknowledgements</em> section)</li>
-                            <li>tP: Mention in the <span trigger="click" for="modal:reusePolicy-ppp" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:reusePolicy-ppp'].show()" class="trigger-click">Project Portfolio Page</span> if the library has a significant relevance to the features you implemented</li>
+                            <li>
+                              <p>Mark your code with a <code v-pre>//@@author {yourGithubUsername}</code>. Note the double <code v-pre>@</code>.<br>
+                                The <code v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
+                                Here is a sample code file:</p>
+                              <pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author sarahkhoo<br></span><span>method 3 ...<br></span><span>//@@author johndoe<br></span><span>method 4 ...<br></span></code></pre>
+                            </li>
+                            <li>
+                              <p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
+                                Here is a sample code with an empty <code v-pre>author</code> tag:</p>
+                              <pre><code class="hljs" v-pre><span>method 0 ...<br></span><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author<br></span><span>method 3 ...<br></span><span>method 4 ...<br></span></code></pre>
+                            </li>
+                            <li>
+                              <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br>
+                                Here is an example code from an xml/fxml file.</p>
+                              <pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;<br></span><span>&lt;textbox&gt;<br></span><span>  &lt;label&gt;...&lt;/label&gt;<br></span><span>  &lt;input&gt;...&lt;/input&gt;<br></span><span>&lt;/textbox&gt;<br></span><span>...<br></span></code></pre>
+                            </li>
+                            <li>
+                              <p><strong>Do not put the <code v-pre>//@@author</code> inside java header comments</strong>.<br>
+                                👎<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                              <pre><code class="hljs" v-pre><span>/**<br></span><span>  * Returns true if ...<br></span><span>  * @@author johndoe<br></span><span>  */<br></span></code></pre>
+                              <p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+                              <pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>/**<br></span><span>  * Returns true if ...<br></span><span>  */<br></span></code></pre>
+                            </li>
                           </ul>
-                          <p>If you <strong>reused code snippets found on the Internet</strong> <span class="dimmed">e.g. from StackOverflow answers</span> or<br>
-                            <strong>referred code in another software</strong> or<br>
-                            <strong>referred project code by current/past student</strong>:</p>
+                          <h4 id="what-to-and-what-not-to-annotate">What to and what not to annotate<span id="what-to-and-what-not-to-annotate" class="anchor"></span><a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
                           <ul>
-                            <li>If you read the code to understand the approach and implemented it yourself, mention it as a comment<br>
-                              <span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//Solution below adapted from https://stackoverflow.com/a/16252290</span><br></span><span>{Your implmentation of the reused solution here ...}<br></span></code></pre>
+                            <li>
+                              <p><strong>Annotate both functional and test code</strong> There is no need to annotate documentation files.</p>
                             </li>
-                            <li>If you copy-pasted a non-trivial code block (possibly with minor modifications <span class="dimmed">renaming, layout changes, changes to comments, etc.</span>), also mark the code block as reused code (using <span trigger="click" for="modal:reusePolicy-authorTags" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:reusePolicy-authorTags'].show()" class="trigger-click"><code v-pre>@@author</code> tags</span>)<br>
-                              Format:
-                              <pre><code class="hljs java" v-pre><span><span class="hljs-comment">//@@author {yourGithubUsername}-reused</span><br></span><span><span class="hljs-comment">//{Info about the source...}</span><br></span><span><br></span><span>{<span class="hljs-function">Reused <span class="hljs-title">code</span> <span class="hljs-params">(possibly with minor modifications)</span> here ...}</span><br></span><span><span class="hljs-function"></span><br></span><span><span class="hljs-function"><span class="hljs-comment">//@@author</span></span><br></span></code></pre><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example of reusing a code snippet (with minor modifications):
-                              <pre><code class="hljs java" v-pre><span>persons = getList()<br></span><span><span class="hljs-comment">//@@author johndoe-reused</span><br></span><span><span class="hljs-comment">//Reused from https://stackoverflow.com/a/34646172 with minor modifications</span><br></span><span>Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;CustomData&gt;() {<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(CustomData lhs, CustomData rhs)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> lhs.customInt &gt; rhs.customInt ? -<span class="hljs-number">1</span> : <span class="hljs-number">0</span>;<br></span><span>    }<br></span><span>});<br></span><span><span class="hljs-comment">//@@author</span><br></span><span><span class="hljs-keyword">return</span> persons;<br></span></code></pre>
-                            </li>
-                          </ul>
-                        </box>
-                        <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
-                            <div>
-                            <h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
-                            <ul>
-                              <li>
-                                <p>Mark your code with a <code v-pre>//@@author {yourGithubUsername}</code>. Note the double <code v-pre>@</code>.<br>
-                                  The <code v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
-                                  Here is a sample code file:</p>
-                                <pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author sarahkhoo<br></span><span>method 3 ...<br></span><span>//@@author johndoe<br></span><span>method 4 ...<br></span></code></pre>
-                              </li>
-                              <li>
-                                <p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
-                                  Here is a sample code with an empty <code v-pre>author</code> tag:</p>
-                                <pre><code class="hljs" v-pre><span>method 0 ...<br></span><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author<br></span><span>method 3 ...<br></span><span>method 4 ...<br></span></code></pre>
-                              </li>
-                              <li>
-                                <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br>
-                                  Here is an example code from an xml/fxml file.</p>
-                                <pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;<br></span><span>&lt;textbox&gt;<br></span><span>  &lt;label&gt;...&lt;/label&gt;<br></span><span>  &lt;input&gt;...&lt;/input&gt;<br></span><span>&lt;/textbox&gt;<br></span><span>...<br></span></code></pre>
-                              </li>
-                              <li>
-                                <p><strong>Do not put the <code v-pre>//@@author</code> inside java header comments</strong>.<br>
-                                  👎<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>/**<br></span><span>  * Returns true if ...<br></span><span>  * @@author johndoe<br></span><span>  */<br></span></code></pre>
-                                <p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-                                <pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>/**<br></span><span>  * Returns true if ...<br></span><span>  */<br></span></code></pre>
-                              </li>
-                            </ul>
-                            <h4 id="what-to-and-what-not-to-annotate">What to and what not to annotate<span id="what-to-and-what-not-to-annotate" class="anchor"></span><a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
-                            <ul>
-                              <li>
-                                <p><strong>Annotate both functional and test code</strong> There is no need to annotate documentation files.</p>
-                              </li>
-                              <li>
-                                <p><strong>Annotate only significant size code blocks that can be reviewed on its own</strong> <span class="dimmed">e.g., a class, a sequence of methods, a method.</span> <br> <strong>Claiming credit for code blocks smaller than a method is discouraged</strong> but allowed. If you do, do it sparingly and only claim meaningful blocks of code such as a block of statements, a loop, or an if-else statement.</p>
-                                <ul>
-                                  <li>If an enhancement required you to do tiny changes in many places, there is no need to annotate all those tiny changes; you can describe those changes in the Project Portfolio page instead.</li>
-                                  <li>If a code block was touched by more than one person, either let the person who wrote most of it (e.g. more than 80%) take credit for the entire block, or leave it as 'unclaimed' (i.e., no author tags).</li>
-                                  <li>Related to the above point, <mark>if you claim a code block as your own, more than 80% of the code in that block should have been written by yourself</mark>. For example, no more than 20% of it can be code you reused from somewhere.</li>
-                                  <li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> GitHub has a <a href="https://help.github.com/articles/tracing-changes-in-a-file/"><em>blame</em> feature and a <em>history</em></a> feature that can help you determine who wrote a piece of code.</li>
-                                </ul>
-                              </li>
-                              <li>
-                                <p><strong>Do not try to boost the quantity of your contribution using unethical means</strong> such as duplicating the same code in multiple places. In particular, do not copy-paste test cases to create redundant tests. Even repetitive code blocks within test methods should be extracted out as utility methods to reduce code duplication.
-                                  Individual members are responsible for making sure code attributed to them are correct.
-                                  If you notice a team member claiming credit for code that he/she did not write or use other questionable tactics, you can email us (after the final submission) to let us know.</p>
-                              </li>
-                              <li>
-                                <p><strong>If you wrote a significant amount of code that was not used in the final product</strong>,</p>
-                                <ul>
-                                  <li>Create a folder called <code v-pre>{project root}/unused</code></li>
-                                  <li>Move unused files (or copies of files containing unused code) to that folder</li>
-                                  <li>use <code v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code v-pre>unused</code>)
-                                    e.g.</li>
-                                </ul>
-                                <pre><code class="hljs" v-pre><span>//@@author johndoe-unused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre>
-                                <p>Please put a comment in the code to explain why it was not used.</p>
-                              </li>
-                              <li>
-                                <p><strong>If you reused code from elsewhere,</strong> mark such code as <code v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code v-pre>reused</code>)
-                                  e.g.</p>
-                                <pre><code class="hljs" v-pre><span>//@@author johndoe-reused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre>
-                              </li>
-                              <li>
-                                <p><strong>You can use empty <code v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
-                                <ul>
-                                  <li>
-                                    <p><strong>Code generated by the IDE/framework,</strong> should not be annotated as your own.</p>
-                                  </li>
-                                  <li>
-                                    <p><strong>Code you modified in minor ways</strong> e.g. adding a parameter. These should not be claimed as yours but you can mention these additional contributions in the Project Portfolio page if you want to claim credit for them.</p>
-                                  </li>
-                                </ul>
-                              </li>
-                            </ul>
-                          </div>
-                        </b-modal>
-                        <b-modal id="modal:reusePolicy-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-ppp" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project → Deliverables → Project Portfolio Page</template>
-                            <div>
-                            <div>
-                              <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
-                              <h4 id="ppp-objectives"><span class="badge badge-info">PPP</span> <span class="text-info">Objectives</span><span id="ppp-objectives" class="anchor"></span><a class="fa fa-anchor" href="#ppp-objectives" onclick="event.stopPropagation()"></a></h4>
+                            <li>
+                              <p><strong>Annotate only significant size code blocks that can be reviewed on its own</strong> <span class="dimmed">e.g., a class, a sequence of methods, a method.</span> <br> <strong>Claiming credit for code blocks smaller than a method is discouraged</strong> but allowed. If you do, do it sparingly and only claim meaningful blocks of code such as a block of statements, a loop, or an if-else statement.</p>
                               <ul>
-                                <li>For you to use <span class="dimmed">(e.g. in your resume)</span> as a well-documented data point of your SE experience</li>
-                                <li>For evaluators to use as a data point for evaluating your project contributions</li>
+                                <li>If an enhancement required you to do tiny changes in many places, there is no need to annotate all those tiny changes; you can describe those changes in the Project Portfolio page instead.</li>
+                                <li>If a code block was touched by more than one person, either let the person who wrote most of it (e.g. more than 80%) take credit for the entire block, or leave it as 'unclaimed' (i.e., no author tags).</li>
+                                <li>Related to the above point, <mark>if you claim a code block as your own, more than 80% of the code in that block should have been written by yourself</mark>. For example, no more than 20% of it can be code you reused from somewhere.</li>
+                                <li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> GitHub has a <a href="https://help.github.com/articles/tracing-changes-in-a-file/"><em>blame</em> feature and a <em>history</em></a> feature that can help you determine who wrote a piece of code.</li>
                               </ul>
-                              <h4 id="ppp-sections-to-include"><span class="badge badge-info">PPP</span> <span class="text-info">Sections to include</span><span id="ppp-sections-to-include" class="anchor"></span><a class="fa fa-anchor" href="#ppp-sections-to-include" onclick="event.stopPropagation()"></a></h4>
+                            </li>
+                            <li>
+                              <p><strong>Do not try to boost the quantity of your contribution using unethical means</strong> such as duplicating the same code in multiple places. In particular, do not copy-paste test cases to create redundant tests. Even repetitive code blocks within test methods should be extracted out as utility methods to reduce code duplication.
+                                Individual members are responsible for making sure code attributed to them are correct.
+                                If you notice a team member claiming credit for code that he/she did not write or use other questionable tactics, you can email us (after the final submission) to let us know.</p>
+                            </li>
+                            <li>
+                              <p><strong>If you wrote a significant amount of code that was not used in the final product</strong>,</p>
                               <ul>
-                                <li><strong>Overview</strong>: A short overview of your product to provide some context to the reader. The opening 1-2 sentences may be reused by all team members. If your product overview extends beyond 1-2 sentences, the remainder should be written by yourself.</li>
-                                <li><strong>Summary of Contributions</strong> --Suggested items to include:
-                                  <ul>
-                                    <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
-                                    <li><strong>Enhancements implemented:</strong> A summary of the enhancements you implemented.</li>
-                                    <li><strong>Contributions to documentation:</strong> Which sections did you contribute to the UG?</li>
-                                    <li><strong>Contributions to the DG:</strong> Which sections did you contribute to the DG? Which UML diagrams did you add/updated?</li>
-                                    <li><strong>Contributions to <span trigger="click" for="modal:deliverablesPPP-teamTasks" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:deliverablesPPP-teamTasks'].show()" class="trigger-click">team-based tasks </span>:</strong></li>
-                                    <li><strong>Review/mentoring contributions:</strong> Links to PRs reviewed, instances of helping team members in other ways</li>
-                                    <li><strong>Contributions beyond the project team:</strong>
-                                      <ul>
-                                        <li>Evidence of helping others <span class="dimmed">e.g. responses you posted in our forum, bugs you reported in other team's products</span>,</li>
-                                        <li>Evidence of technical leadership <span class="dimmed">e.g. sharing useful information in the forum</span></li>
-                                      </ul>
-                                    </li>
-                                  </ul>
+                                <li>Create a folder called <code v-pre>{project root}/unused</code></li>
+                                <li>Move unused files (or copies of files containing unused code) to that folder</li>
+                                <li>use <code v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code v-pre>unused</code>)
+                                  e.g.</li>
+                              </ul>
+                              <pre><code class="hljs" v-pre><span>//@@author johndoe-unused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre>
+                              <p>Please put a comment in the code to explain why it was not used.</p>
+                            </li>
+                            <li>
+                              <p><strong>If you reused code from elsewhere,</strong> mark such code as <code v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code v-pre>reused</code>)
+                                e.g.</p>
+                              <pre><code class="hljs" v-pre><span>//@@author johndoe-reused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre>
+                            </li>
+                            <li>
+                              <p><strong>You can use empty <code v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
+                              <ul>
+                                <li>
+                                  <p><strong>Code generated by the IDE/framework,</strong> should not be annotated as your own.</p>
+                                </li>
+                                <li>
+                                  <p><strong>Code you modified in minor ways</strong> e.g. adding a parameter. These should not be claimed as yours but you can mention these additional contributions in the Project Portfolio page if you want to claim credit for them.</p>
                                 </li>
                               </ul>
-                              <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks" class="algolia-no-index"><template slot="modal-title">Team-Based Tasks</template>
-                                <div>
-                                  <box>
-                                    <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                                    <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
-                                      </template>
-                                      <span id="example-team-tasks">
-                                        <p>Here is a non-exhaustive list of team-tasks:</p>
-                                        <ol>
-                                          <li>Setting up the GitHub team org/repo</li>
-                                          <li>Necessary general code enhancements e.g.,
-                                            <ol>
-                                              <li>Work related to renaming the product</li>
-                                              <li>Work related to changing the product icon</li>
-                                              <li>Morphing the product into a different product</li>
-                                            </ol>
-                                          </li>
-                                          <li>Setting up tools e.g., GitHub, Gradle</li>
-                                          <li>Maintaining the issue tracker</li>
-                                          <li>Release management</li>
-                                          <li>Updating user/developer docs that are not specific to a feature <span class="dimmed">e.g. documenting the target user profile</span></li>
-                                          <li>Incorporating more useful tools/libraries/frameworks into the product or the project workflow <span class="dimmed">(e.g. automate more aspects of the project workflow using a GitHub plugin)</span></li>
-                                        </ol>
-                                      </span></panel>
-                                    <p></p>
-                                  </box>
-                                </div>
-                              </b-modal>
-                              <div class="indented-level2">
-                                <box type="tip" seamless>
-                                  <p>Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
+                            </li>
+                          </ul>
+                        </div>
+                      </b-modal>
+                      <b-modal id="modal:reusePolicy-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-ppp" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project → Deliverables → Project Portfolio Page</template>
+                          <div>
+                          <div>
+                            <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
+                            <h4 id="ppp-objectives"><span class="badge badge-info">PPP</span> <span class="text-info">Objectives</span><span id="ppp-objectives" class="anchor"></span><a class="fa fa-anchor" href="#ppp-objectives" onclick="event.stopPropagation()"></a></h4>
+                            <ul>
+                              <li>For you to use <span class="dimmed">(e.g. in your resume)</span> as a well-documented data point of your SE experience</li>
+                              <li>For evaluators to use as a data point for evaluating your project contributions</li>
+                            </ul>
+                            <h4 id="ppp-sections-to-include"><span class="badge badge-info">PPP</span> <span class="text-info">Sections to include</span><span id="ppp-sections-to-include" class="anchor"></span><a class="fa fa-anchor" href="#ppp-sections-to-include" onclick="event.stopPropagation()"></a></h4>
+                            <ul>
+                              <li><strong>Overview</strong>: A short overview of your product to provide some context to the reader. The opening 1-2 sentences may be reused by all team members. If your product overview extends beyond 1-2 sentences, the remainder should be written by yourself.</li>
+                              <li><strong>Summary of Contributions</strong> --Suggested items to include:
+                                <ul>
+                                  <li><strong>Code contributed</strong>: Give a link to your code on <a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true">tP Code Dashboard</a>. The link is available in the <a href="/website/admin/teamList.html">Project List Page</a> -- linked to the <span class="dimmed"><span aria-hidden="true" class="fas fa-code"></span></span> icon under your profile picture.</li>
+                                  <li><strong>Enhancements implemented:</strong> A summary of the enhancements you implemented.</li>
+                                  <li><strong>Contributions to documentation:</strong> Which sections did you contribute to the UG?</li>
+                                  <li><strong>Contributions to the DG:</strong> Which sections did you contribute to the DG? Which UML diagrams did you add/updated?</li>
+                                  <li><strong>Contributions to <span trigger="click" for="modal:deliverablesPPP-teamTasks" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:deliverablesPPP-teamTasks'].show()" class="trigger-click">team-based tasks </span>:</strong></li>
+                                  <li><strong>Review/mentoring contributions:</strong> Links to PRs reviewed, instances of helping team members in other ways</li>
+                                  <li><strong>Contributions beyond the project team:</strong>
+                                    <ul>
+                                      <li>Evidence of helping others <span class="dimmed">e.g. responses you posted in our forum, bugs you reported in other team's products</span>,</li>
+                                      <li>Evidence of technical leadership <span class="dimmed">e.g. sharing useful information in the forum</span></li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                            <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks" class="algolia-no-index"><template slot="modal-title">Team-Based Tasks</template>
+                              <div>
+                                <box>
+                                  <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
+                                  <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
+                                    </template>
+                                    <span id="example-team-tasks">
+                                      <p>Here is a non-exhaustive list of team-tasks:</p>
+                                      <ol>
+                                        <li>Setting up the GitHub team org/repo</li>
+                                        <li>Necessary general code enhancements e.g.,
+                                          <ol>
+                                            <li>Work related to renaming the product</li>
+                                            <li>Work related to changing the product icon</li>
+                                            <li>Morphing the product into a different product</li>
+                                          </ol>
+                                        </li>
+                                        <li>Setting up tools e.g., GitHub, Gradle</li>
+                                        <li>Maintaining the issue tracker</li>
+                                        <li>Release management</li>
+                                        <li>Updating user/developer docs that are not specific to a feature <span class="dimmed">e.g. documenting the target user profile</span></li>
+                                        <li>Incorporating more useful tools/libraries/frameworks into the product or the project workflow <span class="dimmed">(e.g. automate more aspects of the project workflow using a GitHub plugin)</span></li>
+                                      </ol>
+                                    </span></panel>
+                                  <p></p>
+                                </box>
+                              </div>
+                            </b-modal>
+                            <div class="indented-level2">
+                              <box type="tip" seamless>
+                                <p>Keep in mind that evaluators will use the PPP to estimate your project effort. We recommend that you mention things that will earn you a fair score <span class="dimmed">e.g., explain how deep the enhancement is, why it is <em>complete</em>, how hard it was to implement etc.</span>.
+                                </p>
+                              </box>
+                              <p></p>
+                            </div>
+                            <ul>
+                              <li><strong>[Optional] Contributions to the User Guide (Extracts)</strong>: Reproduce the parts in the User Guide that you wrote. This can include features you implemented as well as features you propose to implement.<br>
+                                <span class="dimmed">The purpose of allowing you to include <em>proposed</em> features is to provide you more flexibility to show your documentation skills. e.g. you can bring in a proposed feature just to give you an opportunity to use a UML diagram type not used by the actual features.</span></li>
+                              <li><strong>[Optional] Contributions to the Developer Guide (Extracts)</strong>: Reproduce the parts in the Developer Guide that you wrote. Ensure there is enough content to evaluate your technical documentation skills and UML modelling skills. You can include descriptions of your design/implementations, possible alternatives, pros and cons of alternatives, etc.</li>
+                            </ul>
+                            <h4 id="ppp-format"><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><span id="ppp-format" class="anchor"></span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
+                            <ul>
+                              <li>File name (i.e., in the repo): <code v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code v-pre>docs/team/goodcoder123.md</code></li>
+                              <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-cs2103-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
+                            </ul>
+                            <div class="indented-level2">
+                              <div>
+                                <box type="important" seamless>
+                                  <p><strong>To convert the UG/DG/PPP into PDF format</strong>, go to the generated page in your project's <a href="http://github.io">github.io</a> site and use <a href="https://se-education.org/guides/tutorials/savingPdf.html">this technique</a> to save as a pdf file. <mark>Using other techniques can result in poor quality resolution (will be considered a bug) and unnecessarily large files.</mark></p>
+                                  <p><strong>Ensure hyperlinks in the pdf files work</strong>. Your UG/DG/PPP will be evaluated using PDF files during the PE. <mark>Broken/non-working hyperlinks in the PDF files will be reported as bugs</mark> and will count against your project score. Again, use the conversion technique given above to ensure links in the PDF files work.
                                   </p>
                                 </box>
                                 <p></p>
                               </div>
-                              <ul>
-                                <li><strong>[Optional] Contributions to the User Guide (Extracts)</strong>: Reproduce the parts in the User Guide that you wrote. This can include features you implemented as well as features you propose to implement.<br>
-                                  <span class="dimmed">The purpose of allowing you to include <em>proposed</em> features is to provide you more flexibility to show your documentation skills. e.g. you can bring in a proposed feature just to give you an opportunity to use a UML diagram type not used by the actual features.</span></li>
-                                <li><strong>[Optional] Contributions to the Developer Guide (Extracts)</strong>: Reproduce the parts in the Developer Guide that you wrote. Ensure there is enough content to evaluate your technical documentation skills and UML modelling skills. You can include descriptions of your design/implementations, possible alternatives, pros and cons of alternatives, etc.</li>
-                              </ul>
-                              <h4 id="ppp-format"><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><span id="ppp-format" class="anchor"></span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
-                              <ul>
-                                <li>File name (i.e., in the repo): <code v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code v-pre>docs/team/goodcoder123.md</code></li>
-                                <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-cs2103-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li>
-                              </ul>
-                              <div class="indented-level2">
-                                <div>
-                                  <box type="important" seamless>
-                                    <p><strong>To convert the UG/DG/PPP into PDF format</strong>, go to the generated page in your project's <a href="http://github.io">github.io</a> site and use <a href="https://se-education.org/guides/tutorials/savingPdf.html">this technique</a> to save as a pdf file. <mark>Using other techniques can result in poor quality resolution (will be considered a bug) and unnecessarily large files.</mark></p>
-                                    <p><strong>Ensure hyperlinks in the pdf files work</strong>. Your UG/DG/PPP will be evaluated using PDF files during the PE. <mark>Broken/non-working hyperlinks in the PDF files will be reported as bugs</mark> and will count against your project score. Again, use the conversion technique given above to ensure links in the PDF files work.
-                                    </p>
-                                  </box>
-                                  <p></p>
-                                </div>
-                              </div>
-                              <h4 id="ppp-page-limit"><span class="badge badge-info">PPP</span> <span class="text-info">Page Limit</span><span id="ppp-page-limit" class="anchor"></span><a class="fa fa-anchor" href="#ppp-page-limit" onclick="event.stopPropagation()"></a></h4>
-                              <div class="indented-level2">
-                                <div class="table-responsive">
-                                  <table class="markbind-table table table-bordered table-striped">
-                                    <thead>
-                                      <tr>
-                                        <th>Content</th>
-                                        <th>Recommended</th>
-                                        <th>Hard Limit</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>Overview + Summary of contributions</td>
-                                        <td>0.5-1</td>
-                                        <td>2</td>
-                                      </tr>
-                                      <tr>
-                                        <td>[Optional] Contributions to the User Guide</td>
-                                        <td>1-3</td>
-                                        <td></td>
-                                      </tr>
-                                      <tr>
-                                        <td>[Optional] Contributions to the Developer Guide</td>
-                                        <td>3-6</td>
-                                        <td></td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </div>
-                              </div>
-                              <ul>
-                                <li>The <mark>page limits given above are <em>after</em> converting to PDF format</mark>. The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a lot of spacing around content.</li>
-                              </ul>
                             </div>
+                            <h4 id="ppp-page-limit"><span class="badge badge-info">PPP</span> <span class="text-info">Page Limit</span><span id="ppp-page-limit" class="anchor"></span><a class="fa fa-anchor" href="#ppp-page-limit" onclick="event.stopPropagation()"></a></h4>
+                            <div class="indented-level2">
+                              <div class="table-responsive">
+                                <table class="markbind-table table table-bordered table-striped">
+                                  <thead>
+                                    <tr>
+                                      <th>Content</th>
+                                      <th>Recommended</th>
+                                      <th>Hard Limit</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>Overview + Summary of contributions</td>
+                                      <td>0.5-1</td>
+                                      <td>2</td>
+                                    </tr>
+                                    <tr>
+                                      <td>[Optional] Contributions to the User Guide</td>
+                                      <td>1-3</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>[Optional] Contributions to the Developer Guide</td>
+                                      <td>3-6</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            <ul>
+                              <li>The <mark>page limits given above are <em>after</em> converting to PDF format</mark>. The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a lot of spacing around content.</li>
+                            </ul>
                           </div>
-                        </b-modal>
-                      </div>
+                        </div>
+                      </b-modal>
                     </div>
                   </div>
-                </panel>
-              </box>
+                </div>
+              </panel>
             </div>
+            <p></p>
           </div>
           <p></p>
-          <h4 id="2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Add Increments as parallel branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code><span id="2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs" class="anchor"></span><a class="fa fa-anchor" href="#2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs" onclick="event.stopPropagation()"></a></h4>
+          <h4 id="3-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Add Increments as parallel branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code><span id="3-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs" class="anchor"></span><a class="fa fa-anchor" href="#3-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs" onclick="event.stopPropagation()"></a></h4>
           <div>
             <ul>
               <li><strong>Do each enhancement in a separate branch and merge to the <code v-pre>master</code> branch only when ready</strong> (if you push incomplete features into the <code v-pre>master</code> branch, it can confuse others reviewing your PR).
@@ -1186,7 +1301,8 @@
               <a class="nav-link py-1" href="#ip">iP&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
                 <a class="nav-link py-1" href="#1-review-some-peer-prs">1 Review some peer PRs counted for participation&#x200E;</a>
-                <a class="nav-link py-1" href="#2-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs">2 Add Increments as parallel branches: A-Gradle, A-CheckStyle, Level-10, A-Varargs&#x200E;</a>
+                <a class="nav-link py-1" href="#2-learn-from-others-optional">2 Learn from others (optional)&#x200E;</a>
+                <a class="nav-link py-1" href="#3-add-increments-as-parallel-branches-a-gradle-a-checkstyle-level-10-a-varargs">3 Add Increments as parallel branches: A-Gradle, A-CheckStyle, Level-10, A-Varargs&#x200E;</a>
               </nav>
               <a class="nav-link py-1" href="#tp-set-direction">tP: Set direction&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
@@ -1203,7 +1319,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 15 Jul 2020, 22:22:01 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 18 Jul 2020, 12:45:32 GMT+8]</small></div>
     </footer>
   </div>
 </body>

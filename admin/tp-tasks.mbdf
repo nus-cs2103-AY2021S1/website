@@ -73,7 +73,7 @@
 {#====================================================================================================================#}
 <span id="cs2113-week10-intro">
 
-{% call topic_preamble() %}
+{% call topic_preamble(reuse=false) %}
 Some things to note as you start the {{ version_penultimate }} iteration:
 * **Set moderate targets for functionality.** Adding more functionality than needed will not earn you more marks but can expose you to higher risk of bugs.<br>
   **Focus on improving the process and the quality** instead.
@@ -84,7 +84,7 @@ Some things to note as you start the {{ version_penultimate }} iteration:
 {#====================================================================================================================#}
 <span id="cs2113-week11-intro">
 
-{% call topic_preamble() %}
+{% call topic_preamble(reuse=false) %}
 ==This week, you get a chance to fix your tP bugs (in the project, as well as documentation) without any penalty.== What's more, others will help you find those bugs (via tutorial activities and the PE Dry Run happening in this week).
 
 To take advantage of the above, try to make your {{ version_penultimate }} (product, DG, and UG) as close to what you intend to submit as your final version (i.e., {{ version_final }}).
@@ -186,7 +186,7 @@ Get together with your team members and <trigger trigger="click" for="modal:v10-
 
 <box type="success" light>
 
-##### <span class="text-success">Project planning, but with a twist</span>
+##### <span class="text-success">Project planning, with a twist</span>
 
 Intuitively, you might think the right thing to do is to decide what features will be in {{ version_final }} and then plan the intermediate versions based on that. But that's not what we are going to do.
 
@@ -211,10 +211,10 @@ How is that better?
 * If possible, narrow the scope of {{ version_first }} further e.g., narrower target user, a smaller value proposition.
 
 Suggested workflow:
-* **First stage** [10 minutes]:
+* **First stage**:
   * Divide the user stories among team members.
-  * Each member will go through their user stories to discard (e.g., cross out, or move to a different location, but not delete) which are _definitely not needed for {{ version_first }}_.
-* **Second stage** [10 minutes]:
+  * Each member will go through their user stories to discard (e.g., cross out, or move to a different location, but not delete) which are _definitely not needed_ for {{ version_first }}.
+* **Second stage**:
   * All members discuss the remaining user stories (i.e., the ones not discarded in the first stage), and try to trim the list further.
 </span>
 {#====================================================================================================================#}
@@ -250,7 +250,7 @@ Suggested workflow:
 <span id="desc_conceptualize_first_version">
 
 * Based on your user story selected previously, conceptualize the product in terms of how it will look like at {{ version_first }}. Suggestion: this can be in the form of a <trigger trigger="click" for="modal:v10-featureLists">feature list</trigger>.<br>
-  You can note down the feature list in your online project notes document.
+  Note down the feature list in your online project notes document.
 
 <modal large header="Textbook {{ icon_embedding }}" id="modal:v10-featureLists">
   <include src="../book/specifyingRequirements/featureList/what/unit-inElsewhere-asFlat.md" boilerplate/>
@@ -402,7 +402,7 @@ Update the following pages in your project repo:
 
 </div>
 
-* {{ icon_team }} **Plan the next iteration**. As per the project planning approach described in the box above, first you must decide what functionalities should be in the product if you had only two weeks to implement it. You have done that already when you chose user stories for {{ version_first }}, translated that to features, and even drafted the UG based on those features. You can tweak that plan further at this point if you wish, given that you now have some idea of how fast the team can work when using the prescribed workflow.
+* {{ icon_team }} **Plan the next iteration**. As you know, you should follow the _breadth-first iterative_ process. Therefore, first you must decide what functionalities should be in the product if you had only two weeks to implement it. You have done that already when you chose user stories for {{ version_first }}, translated that to features, and even drafted the UG based on those features. You can tweak that plan further at this point if you wish, given that you now have some idea of how fast the team can work when using the prescribed workflow.
   * ==Aim to produce a _working_ [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)== at the end of this iteration even if the functionalities are not polished (polishing can be done in a later iteration).
   * If possible, break the iteration into two increments i.e., aim to produce an even simpler but working version after one week.
   * "I'll do the back-end part of feature X in this iteration" is not acceptable as that is not in the spirit of iterative development. Remember, we are pretending this to be the last iteration; why would you implement the back-end part of a feature in the last iteration?<br>

@@ -35,8 +35,10 @@ The technique of _use cases_ (don't confuse with _user stories_) covered below i
 <!-- ==================================================================================================== -->
                                              OOP
 <!-- ==================================================================================================== -->
+<div id="{{ slugify("OOP: Intro") }}">
 <div id="{{ slugify("OOP: Classes and Objects") }}">
 As you know, OOP is a core part of this module. Let's start learning the OOP paradigm this week.
+</div>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <div id="{{ slugify("oop-objects-abstraction") }}">
@@ -160,15 +162,22 @@ While the next few topics are optional, we recommend that you ==have a quick loo
                                            Revision Control
 <!-- ==================================================================================================== -->
 <div id="rcs-intro">
+<span tags="m--cs2103">
 This week, you are starting your individual project (iP). As you are adding code to the iP in rapid succession, you'll need a way to keep track of all the changes you do. The tool we are going to use for that is called Git, and we need to learn Git basics pretty quickly.
 
 Let's jump in and learn how to get started using Git in your own computer. Yes, we are now switching our focus to the _project management_ aspect of SE.
-
+</span>
 <span tags="m--cs2113">
 
 :thinking: In case you are puzzled by the sudden change of topic, it's because we take an iterative approach to covering topics, as explained in the panel below:
 
 {{ embed_topic("moduleOverview.md#meaning-of-iterative-topics", "Admin " + icon_embedding + " Module Overview → Extract", "3") }}
+<p/></span>
+<span tags="m--tic2002">
+You are going to start your project pretty soon. As you are adding feature increments to your project, you'll need a way to keep track of all those changes too. The tool we are going to use for that is called Git.
+
+Let's jump in and learn how to get started using Git in your own computer.
+
 <p/></span>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------ -->
@@ -189,11 +198,11 @@ For the next few sections, the drill is the same: first learn the high-level exp
 </div>
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <div id="rcs-remote-repos">
-Having learned how to use Git in your own computer, let's also learn a bit about working with remote code repositories too. Yes it's a bit too much to take in one week but we want you to start using Git in your iP from the very beginning.
+Having learned how to use Git in your own computer, let's also learn a bit about working with remote code repositories too. <span tags="m--cs2103 m--cs2113">Yes it's a bit too much to take in one week but we want you to start using Git in your iP from the very beginning.</span>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <div id="{{ slugify("RCS: Using History") }}">
-Last week, you learned how to save revision history in your local repository, in the form of _commits_. Next, let us use how to make use of that history.
+Previously, you learned how to _save_ revision history in your local repository, in the form of _commits_. Next, let us use how to make use of that history.
 </div>
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <div id="{{ slugify("RCS: Pull, Push") }}">
@@ -240,12 +249,13 @@ When working with Git, sooner or later you will face a problem called _merge con
                                      IDEs
 <!-- ==================================================================================================== -->
 <div id="{{ slugify("IDEs: Basic Features") }}">
- As you are likely to be using an IDE for the iP, let's learn at least enough about IDEs to get you started using one.
+ As you are likely to be using an IDE for the {{ ip_name }}, let's learn at least enough about IDEs to get you started using one.
 
-:thinking: In case you are puzzled by the sudden change of topic, it's because we take an iterative approach to covering topics, as explained in the panel below:
+<div tags="m--cs2103">:thinking: In case you are puzzled by the sudden change of topic, it's because we take an iterative approach to covering topics, as explained in the panel below:
 
-{{ embed_topic("../../admin/moduleOverview.md#meaning-of-iterative-topics", "Admin " + icon_embedding + " Module Overview → Extract", "3") }}
+{{ embed_topic("moduleOverview.md#meaning-of-iterative-topics", "Admin " + icon_embedding + " Module Overview → Extract", "3") }}
 <p/>
+</div>
 </div>
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <div id="{{ slugify("IDEs: Intermediate Features") }}">
@@ -284,6 +294,10 @@ Another step in our journey to improve code quality: Let's learn some legit but 
 <div id="{{ slugify("Error Handling: Exceptions") }}">
 So far, your iP may have assumed a 'perfect world' e.g., user input is always in the expected format. To make the product ready for the not-so-perfect real world, the code should be able to handle error conditions. Let's learn how to do that.
 </div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Logging") }}">
+Given next are **two techniques that help you locate problems in the code**.
+</div>
 <!-- ==================================================================================================== -->
                                     Testing
 <!-- ==================================================================================================== -->
@@ -302,6 +316,56 @@ First, let us learn such testing fits into an aspect called _developer testing_ 
 <div id="{{ slugify("testing-testAutomation-usingTestDrivers") }}">
 **The sections below gives an overview of _test automation_**, something used heavily in developer testing.
 </div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Testing: Intermediate Techniques") }}">
+We started writing JUnit testing in the last week. The topics below helps you push a bit further in the same direction.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Testing: Test Coverage") }}">
+Previously, you learned how to write JUnit tests. **How do you know which parts of the code is being tested by your tests? That's where _test coverage_ comes in.**
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("testing-testCoverage-how") }}">
+Learn how to measure test coverage in your tP. You will be asked to demo that in the coming tutorial.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("Types of Testing") }}" >
+As we approach the last part of the tP, we'll be spending more time learning about software testing. This week, we start off with an overview of different _types_ of software testing.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("testing-dependencyInjection-what") }}" >
+_Dependency Injection_ is a technique closely related to stubs. It is not in the syllabus but is given below in case some of you would like to know more about it.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("Test Case Design") }}" >
+Previously, we learned how to measure test _coverage_. This week, we look into how to increase coverage with the least number of test cases.
+
+First, we take a look at test case design in general, different approaches to test case design, and few different categorization of test cases.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("testCaseDesign-introduction-what") }}" >
+**What is _test case design_, and why should we care?**
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("testCaseDesign-introduction-blackVsGlass") }}" >
+**How much information about the code is being used when designing test cases?**
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("Equivalence Partitioning") }}" >
+Our syllabus includes two specific techniques for improving test case design. This week, we cover one of them: _equivalence partitioning_.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Boundary Value Analysis") }}" >
+Last week, we learned about _equivalence partitions_, a heuristic for improving E&E of testing. This week, let us learn another heuristic that builds on top of equivalence partitioning.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("Combining Multiple Test Inputs") }}" >
+The number of test cases can increase when a the SUT takes multiple inputs. Let's have a brief peek into how we can deal with such situations.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("Other QA Techniques") }}" >
+Testing is not the same as Quality Assurance. What else can be done for QA?
+</div>
 <!-- ==================================================================================================== -->
                                     Project Mgt
 <!-- ==================================================================================================== -->
@@ -309,6 +373,11 @@ First, let us learn such testing fits into an aspect called _developer testing_ 
 Broadly speaking, there are two approaches to doing a software project. Those two approaches are also highly relevant to the way this module is run, and how it is different from most SE modules elsewhere.
 
 Let's learn about those two approaches early so that we can better understand how this module works.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("SDLC Process Models: XP/Scrum") }}" >
+In [a previous week](../week7/topics.html), you learned about _sequential_ and _iterative_ ways of doing a software.
+Now, let us take a quick look at a couple of well-known processes used in the industry, both of which fall into a category called _agile processes_.
 </div>
 <!-- ------------------------------------------------------------------------------------------------------ -->
 <div id="{{ slugify("Project Mgt: Scheduling and Tracking") }}">
@@ -359,3 +428,59 @@ We recommend you ==try the relevant post-lecture quizzes as you read each sectio
 **Object diagrams complements class diagrams** and therefore covered together with class diagrams.
 </div>
 <!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Class Diagrams: Intermediate-Level") }}">
+**This week, let us learn the remaining class diagram notations**.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Sequence Diagrams: Basics") }}">
+Good news: this will the the last installment of UML notations.<br>
+Bad news: we are going to cover an entire new diagram type in one go (reason: to give you more time to use them in project documentation).
+
+**Let us learn a UML diagram type that can be used to model a _behavioral_ aspect of software entities**; in contrast, CD/OD's that you learned in the past two weeks model _structural_ aspects.
+</div>
+<!-- ==================================================================================================== -->
+                                   Design
+<!-- ==================================================================================================== -->
+<div id="{{ slugify("Design Principles") }}">
+As you are still in the early stage of the tP, **this is a good time to learn some design principles that you can try to apply as you evolve the tP design**.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("designFundamentals-abstraction-what") }}">
+Let's start by learning **the three most fundamental design qualities** upon which all other design principles are built.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Some Principles") }}">
+Given next are **two design principles that we can apply when designing OOP systems**. These aim to improve <tooltip content="abstraction, coupling, cohesion">the three design qualities you learned earlier</tooltip>.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Design Patterns") }}">
+Previously, you learned:
+* Three basic design quality aspects: abstraction, coupling, cohesion
+* Two design principles that aims to improve those aspects: SRP, SoC. There are many more principles but we covered only two (to reduce workload) just to give you a taste only.
+
+**This week, we cover _design patterns_, a concept that builds upon the above**. Again, we limit to only two of them, for similar reasons.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("designPatterns-introduction-what") }}">
+First, let's learn what _design patterns_ are, in general.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Singleton pattern") }}">
+Given next are **two simple design patterns**: _singleton_ and _facade_.
+</div>
+<!-- ------------------------------------------------------------------------------------------------------ -->
+<div id="{{ slugify("Architecture") }}" >
+**While _architecture_ is not of high importance to a small project such as the tP, it is good to know a little bit about it** in case you are thrown into a larger project in future.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("designApproaches-multilevelDesign-what") }}" >
+**First, let us learn about multi-level design**, a pre-cursor to learning about architecture.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("architecture-introduction-what") }}" >
+Now that we know about multi-level design, let us learn about architecture, which is a special case of multi-level design. We also cover _architecture diagrams_ here.
+</div>
+<!-- ---------------------------------------------------------------------------- -->
+<div id="{{ slugify("Architectural Styles") }}" >
+Remember _design patterns_? The _architectural styles_ covered below are like 'design patterns' at architecture level. As before, we only cover two of them just to give you a taste of the topic while keeping the workload low.
+</div>

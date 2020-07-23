@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -65,7 +64,7 @@
                           <li><a href="https://gradle.org/docs/#getting-started"><strong>Getting Started with Gradle</strong></a> -- Documentation from Gradle</li>
                           <li><a href="http://www.tutorialspoint.com/gradle/"><strong>Gradle Tutorial</strong></a> -- from <a href="http://tutorialspoint.com">tutorialspoint.com</a></li>
                         </ul>
-                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                        <panel type="seamless"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Working With Gradle in Intellij IDEA (6 minutes)</p>
                           </template>
                           <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/JwPYjnhah3g" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
@@ -73,11 +72,11 @@
                       </panel>
                     </div>
                     <div>
-                      <panel expandable class="algolia-no-index"><template slot="_header">
+                      <panel expandable><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel class="algolia-no-index"><template slot="_header">
+                          <panel><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> <em>Gradle</em> is a tool for ...</p>
                             </template>
                             <question>
@@ -88,7 +87,7 @@
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. UML diagramming</li>
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. project collaboration</li>
                               </ul>
-                              <div slot="answer" class="algolia-no-index">
+                              <div slot="answer">
                                 <p>(b)</p>
                               </div>
                             </question>
@@ -113,24 +112,9 @@
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

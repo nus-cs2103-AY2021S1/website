@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -113,7 +112,7 @@
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                 <pre><code class="hljs" v-pre><span>description: Read a good book<br></span><span>is done? No<br></span><span>description: Read a good book<br></span><span>is done? Yes<br></span><span>description: Read textbook<br></span><span>is done? No<br></span><span>do by: Nov 16<br></span><span>description: Read textbook<br></span><span>is done? Yes<br></span><span>do by: Postponed to Nov 18th<br></span></code></pre>
                                 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <code v-pre>super.toString</code> from the subclass to invoke the behavior of the method you are overriding. This is useful here because the overriding method is simply <em>adding onto</em> the behavior of the overridden method.</p>
-                                <div slot="hint" class="algolia-no-index">
+                                <div slot="hint">
                                   <p><code v-pre>toString()</code> method of <code v-pre>Task</code> class and <code v-pre>Todo</code> class are given below. You can follow a similar approach for the <code v-pre>Deadline</code> class.</p>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-string">"description: "</span> + description;<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        String status = <span class="hljs-keyword">null</span>;<br></span><span>        <span class="hljs-keyword">if</span> (isDone){<br></span><span>            status = <span class="hljs-string">"Yes"</span>;<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            status = <span class="hljs-string">"No"</span>;<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">super</span>.toString() + System.lineSeparator() + <span class="hljs-string">"is done? "</span> + status;<br></span><span>    }<br></span><span>}<br></span></code></pre>
@@ -141,24 +140,9 @@
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

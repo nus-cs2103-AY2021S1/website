@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -148,7 +147,7 @@
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();<br></span><span><br></span><span>        System.out.println(c.getArea());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);<br></span><span>        System.out.println(c.getArea());<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
                                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                     <pre><code class="hljs" v-pre><span>0<br></span><span>78<br></span></code></pre>
-                                    <div slot="hint" class="algolia-no-index">
+                                    <div slot="hint">
                                       <ul>
                                         <li>Put the <code v-pre>Circle</code> class in a file called <code v-pre>Circle.java</code></li>
                                       </ul>
@@ -205,7 +204,7 @@
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Circle c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>, <span class="hljs-number">5</span>);<br></span><span><br></span><span>        c.setX(<span class="hljs-number">4</span>);<br></span><span>        c.setY(<span class="hljs-number">5</span>);<br></span><span>        c.setRadius(<span class="hljs-number">6</span>);<br></span><span>        System.out.println(<span class="hljs-string">"x      : "</span> + c.getX());<br></span><span>        System.out.println(<span class="hljs-string">"y      : "</span> + c.getY());<br></span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());<br></span><span>        System.out.println(<span class="hljs-string">"area   : "</span> + c.getArea());<br></span><span><br></span><span>        c.setRadius(-<span class="hljs-number">5</span>);<br></span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">4</span>);<br></span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
                                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                     <pre><code class="hljs" v-pre><span>x      : 4<br></span><span>y      : 5<br></span><span>radius : 6.0<br></span><span>area   : 113<br></span><span>radius : 0.0<br></span><span>radius : 0.0<br></span></code></pre>
-                                    <div slot="hint" class="algolia-no-index">
+                                    <div slot="hint">
                                       <p>Partial solution:</p>
                                       <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{<br></span><span>    setX(x);<br></span><span>    setY(y);<br></span><span>    setRadius(radius);<br></span><span>}<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{<br></span><span>    <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);<br></span><span>}<br></span></code></pre>
                                     </div>
@@ -277,7 +276,7 @@
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();<br></span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>);<br></span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">15</span>);<br></span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());<br></span><span>        c.setRadius(<span class="hljs-number">12</span>);<br></span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                     <pre><code class="hljs" v-pre><span>max radius used so far : 0.0<br></span><span>max radius used so far : 10.0<br></span><span>max radius used so far : 10.0<br></span><span>max radius used so far : 12.0<br></span></code></pre>
-                                    <div slot="hint" class="algolia-no-index">
+                                    <div slot="hint">
                                       <p>You can use a <code v-pre>static</code> variable <code v-pre>maxRadius</code> to track the maximum value used for the <code v-pre>radius</code> attribute so far.</p>
                                       <p>Partial solution:</p>
                                       <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{<br></span><span>    <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);<br></span><span>    <span class="hljs-keyword">if</span> (maxRadius &lt; <span class="hljs-keyword">this</span>.radius){<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
@@ -307,24 +306,9 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

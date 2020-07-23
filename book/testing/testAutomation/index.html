@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -52,13 +51,13 @@
                           <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
                             <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run tests repeatedly and increases precision of testing (because manual testing is susceptible to human errors).</p>
                           </tab>
-                          <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
+                          <tab><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe></tab>
                         </tabs>
                       </div>
                       <div>
                         <div>
-                          <panel class="algolia-no-index"><template slot="_header">
+                          <panel><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
                             </template>
                             <p><strong>Side readings:</strong></p>
@@ -94,7 +93,7 @@
                         <ol>
                           <li>
                             <p>Store the test input in the text file <code v-pre>input.txt</code>.</p>
-                            <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                            <panel type="seamless"><template slot="_header">
                                 <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>input.txt</code></span></p>
                               </template>
                               <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix<br></span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing<br></span></code></pre>
@@ -102,7 +101,7 @@
                           </li>
                           <li>
                             <p>Store the output you expect from the SUT in another text file <code v-pre>expected.txt</code>.</p>
-                            <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                            <panel type="seamless"><template slot="_header">
                                 <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>expected.txt</code></span></p>
                               </template>
                               <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]<br></span><span>Invalid command format: add <br></span><span><br></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]<br></span><span>Invalid command format: add <br></span></code></pre>
@@ -121,7 +120,7 @@
                                 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
                               </li>
                             </ul>
-                            <panel minimized class="algolia-no-index"><template slot="_header"></template>
+                            <panel minimized><template slot="_header"></template>
                               <span slot="header" class="card-title"><span>More on the <code v-pre>&gt;</code> operator and the <code v-pre>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                               <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code v-pre>&lt;</code> and <code v-pre>&gt;</code> operators. For example, if you run <code v-pre>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
                               <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt <br></span></code></pre>
@@ -239,7 +238,7 @@
                             </li>
                             <li>
                               <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
-                              <panel type="seamless" class="non-printable algolia-no-index"><template slot="_header">
+                              <panel type="seamless" class="non-printable"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> demo video of automated testing of a Web application</p>
                                 </template>
                                 <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
@@ -251,11 +250,11 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> API testing vs GUI testing</p>
                                 </template>
                                 <question>
@@ -264,7 +263,7 @@
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> True</label></li>
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> False</label></li>
                                   </ul>
-                                  <div slot="answer" class="algolia-no-index">
+                                  <div slot="answer">
                                     <p>False</p>
                                   </div>
                                 </question>
@@ -291,24 +290,9 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

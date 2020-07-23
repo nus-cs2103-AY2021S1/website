@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -74,7 +73,7 @@
                             </template>
                             <div>
                               <div>
-                                <panel class="algolia-no-index"><template slot="_header">
+                                <panel><template slot="_header">
                                     <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Greeter</p>
                                   </template>
                                   <question>
@@ -113,7 +112,7 @@
                                       <smal><span class="badge badge-secondary">&gt;_</span></smal> <code v-pre>java Greeter Tan M M F</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>Dear Tan family</code>
                                     </p>
                                     <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
-                                    <div slot="hint" class="algolia-no-index">
+                                    <div slot="hint">
                                       <p>Partial solution:</p>
                                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String first = args[<span class="hljs-number">0</span>];<br></span><span>        String second = args[<span class="hljs-number">1</span>];<br></span><span>        <span class="hljs-keyword">if</span> (args.length == <span class="hljs-number">2</span>) {<br></span><span>            <span class="hljs-keyword">if</span> (second.equals(<span class="hljs-string">"M"</span>)) {<br></span><span>                <span class="hljs-comment">// ...</span><br></span><span>            }<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                     </div>
@@ -162,7 +161,7 @@
                                       <smal><span class="badge badge-secondary">&gt;_</span></smal> <code v-pre>java GradeHelper B</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>CAP for grade B is 3.5</code>
                                     </p>
                                     <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
-                                    <div slot="hint" class="algolia-no-index">
+                                    <div slot="hint">
                                       <p>Partial solution:</p>
                                       <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String grade = args[<span class="hljs-number">0</span>];<br></span><span>        <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;<br></span><span>        <span class="hljs-keyword">switch</span> (grade) {<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>        System.out.println(<span class="hljs-string">"CAP for grade "</span> + grade + <span class="hljs-string">" is "</span> + cutoff);<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                     </div>
@@ -207,7 +206,7 @@
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                           <pre><code class="hljs" v-pre><span>Polly likes crackers<br></span><span>Polly likes crackers<br></span></code></pre>
                           <p>By convention, method names should be named in the <span trigger="click" for="modal:javaMethods_camelCase" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:javaMethods_camelCase'].show()" class="trigger-click"><em>camelCase</em></span> format.</p>
-                          <b-modal id="modal:javaMethods_camelCase" hide-footer size="lg" modal-class="mb-zoom" ref="modal:javaMethods_camelCase" class="algolia-no-index"><template slot="modal-title">Defintion: camelCase</template>
+                          <b-modal id="modal:javaMethods_camelCase" hide-footer size="lg" modal-class="mb-zoom" ref="modal:javaMethods_camelCase"><template slot="modal-title">Defintion: camelCase</template>
                             <div>
                               <blockquote>
                                 <pic src="https://upload.wikimedia.org/wikipedia/commons/e/ef/CamelCase.svg" width="200" alt="camelCase"></pic>
@@ -303,7 +302,7 @@
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));<br></span><span>        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                     <pre><code class="hljs" v-pre><span>A+: 5.0<br></span><span>B : 3.5<br></span></code></pre>
-                                    <div slot="hint" class="algolia-no-index">
+                                    <div slot="hint">
                                       <p>Partial solution:</p>
                                       <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{<br></span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;<br></span><span>        <span class="hljs-keyword">switch</span> (grade) {<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:<br></span><span>            cap = <span class="hljs-number">5.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:<br></span><span>            cap = <span class="hljs-number">4.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:<br></span><span>            cap = <span class="hljs-number">4.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:<br></span><span>            cap = <span class="hljs-number">3.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:<br></span><span>            cap = <span class="hljs-number">3.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">default</span>:<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> cap;<br></span><span>    }<br></span></code></pre>
                                     </div>
@@ -434,7 +433,7 @@
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{<br></span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;<br></span><span>        <span class="hljs-keyword">switch</span> (grade) {<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:<br></span><span>            cap = <span class="hljs-number">5.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:<br></span><span>            cap = <span class="hljs-number">4.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:<br></span><span>            cap = <span class="hljs-number">4.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:<br></span><span>            cap = <span class="hljs-number">3.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:<br></span><span>            cap = <span class="hljs-number">3.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:<br></span><span>            cap = <span class="hljs-number">2.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">default</span>:<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> cap;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};<br></span><span>        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);<br></span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {<br></span><span>            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                     <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                     <pre><code class="hljs" v-pre><span>A+:5.0<br></span><span>A:5.0<br></span><span>A-:4.5<br></span></code></pre>
-                                    <div slot="hint" class="algolia-no-index">
+                                    <div slot="hint">
                                       <p>Partial solution:</p>
                                       <pre><code class="hljs java" v-pre><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span>[] getMultipleGradeCaps(String[] grades) {<br></span><span>        <span class="hljs-keyword">double</span>[] caps = <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[grades.length];<br></span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {<br></span><span>           <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> caps;<br></span><span>    }<br></span></code></pre>
                                     </div>
@@ -463,24 +462,9 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -49,7 +48,7 @@
                       <p></p>
                       <div>
                         <p><strong>A <em>supplementary requirements</em> section can be used to capture <em>requirements that do not fit elsewhere</em></strong>. Typically, this is where most <span trigger="click" for="modal:supplementary-nfr" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:supplementary-nfr'].show()" class="trigger-click">Non Functional Requirements</span> will be listed.</p>
-                        <b-modal id="modal:supplementary-nfr" hide-footer size="lg" modal-class="mb-zoom" ref="modal:supplementary-nfr" class="algolia-no-index"><template slot="modal-title"><span class="dimmed">Textbook »</span></template>
+                        <b-modal id="modal:supplementary-nfr" hide-footer size="lg" modal-class="mb-zoom" ref="modal:supplementary-nfr"><template slot="modal-title"><span class="dimmed">Textbook »</span></template>
                           <div>
                             <div></div>
                             <p></p>
@@ -97,11 +96,11 @@
                                 </div>
                                 <div>
                                   <div>
-                                    <panel expandable class="algolia-no-index"><template slot="_header">
+                                    <panel expandable><template slot="_header">
                                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                       </template>
                                       <div>
-                                        <panel class="algolia-no-index"><template slot="_header">
+                                        <panel><template slot="_header">
                                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> TEAMMATES NFRs</p>
                                           </template>
                                           <question>
@@ -115,7 +114,7 @@
                                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. The user interface should be intuitive enough for users who are not IT-savvy.</li>
                                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> g. The product is offered as a free online service.</li>
                                             </ul>
-                                            <div slot="answer" class="algolia-no-index">
+                                            <div slot="answer">
                                               <p>(a)(c)(d)(f)(g)</p>
                                               <p>Explanation: (b) are (e) are functions available for a specific user types. Therefore, they are functional requirements. (a), (c), (d), (f) and (g) are either constraints on functionality or constraints on how the project is done, both of which are considered non-functional requirements.</p>
                                             </div>
@@ -149,24 +148,9 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

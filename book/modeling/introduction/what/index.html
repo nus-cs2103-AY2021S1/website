@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -47,13 +46,13 @@
                     <box>
                       <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <span trigger="click" for="modal:modellingIntro-classDiagram" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:modellingIntro-classDiagram'].show()" class="trigger-click">class diagram</span> is a model that represents a software design.</p>
                     </box>
-                    <b-modal id="modal:modellingIntro-classDiagram" hide-footer size="lg" modal-class="mb-zoom" ref="modal:modellingIntro-classDiagram" class="algolia-no-index"><template slot="modal-title">Class diagrams</template>
+                    <b-modal id="modal:modellingIntro-classDiagram" hide-footer size="lg" modal-class="mb-zoom" ref="modal:modellingIntro-classDiagram"><template slot="modal-title">Class diagrams</template>
                       <p>A <em>class diagram</em> is a diagram drawn using the UML modelling notation.<br>
                         <span><span aria-hidden="true" class="fas fa-cube"></span></span> An example class diagram:<br></p>
                       <img src="/website/book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600">
                     </b-modal>
                     <p><strong>A <em>model</em> provides a simpler view of a complex entity because a model captures only a selected aspect.</strong> This omission of some aspects implies models are <span trigger="click" for="modal:modellingIntro-abstraction" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:modellingIntro-abstraction'].show()" class="trigger-click">abstractions</span>.</p>
-                    <b-modal id="modal:modellingIntro-abstraction" hide-footer size="lg" modal-class="mb-zoom" ref="modal:modellingIntro-abstraction" class="algolia-no-index"><template slot="modal-title"><span class="dimmed">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></span></template>
+                    <b-modal id="modal:modellingIntro-abstraction" hide-footer size="lg" modal-class="mb-zoom" ref="modal:modellingIntro-abstraction"><template slot="modal-title"><span class="dimmed">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></span></template>
                       <div>
                         <div></div>
                         <p></p>
@@ -124,24 +123,9 @@
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

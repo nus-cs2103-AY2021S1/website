@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -35,7 +34,7 @@
             <div>
               <div>
                 <p>
-                  <panel src="/website/book/revisionControl/branching/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/revisionControl/branching" class="algolia-no-index"><template slot="_header">
+                  <panel src="/website/book/revisionControl/branching/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/revisionControl/branching"><template slot="_header">
                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> <span class="dimmed">Project Management → Revision Control → Branching</span></p>
                     </template></panel>
                 </p>
@@ -58,7 +57,7 @@
                           <p></p>
                         </div>
                       </tab>
-                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
+                      <tab><template slot="_header">CLI</template>
                         <div>
                           <pre><code class="hljs" v-pre><span>git status<br></span></code></pre>
                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
@@ -78,7 +77,7 @@
                           <p></p>
                         </div>
                       </tab>
-                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
+                      <tab><template slot="_header">CLI</template>
                         <div>
                           <p>You can use the <code v-pre>branch</code> command to create a new branch and the <code v-pre>checkout</code> command to switch to a specific branch.</p>
                           <pre><code class="hljs" v-pre><span>git branch feature1<br></span><span>git checkout feature1<br></span></code></pre>
@@ -97,7 +96,7 @@
                           <p></p>
                         </div>
                       </tab>
-                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
+                      <tab><template slot="_header">CLI</template>
                         <div>
                           <pre><code class="hljs" v-pre><span>git checkout master<br></span></code></pre>
                         </div>
@@ -116,7 +115,7 @@
                           <p>Right-click on the <code v-pre>master</code> branch and choose <code v-pre>merge master into the current branch</code>. Click <code v-pre>OK</code> in the next dialog.</p>
                         </div>
                       </tab>
-                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
+                      <tab><template slot="_header">CLI</template>
                         <div>
                           <pre><code class="hljs" v-pre><span>git merge master<br></span></code></pre>
                         </div>
@@ -132,7 +131,7 @@
                       <tab><template slot="_header">SourceTree</template>
                         <p>Right-click on the <code v-pre>feature1</code> branch and choose <code v-pre>Merge...</code>.</p>
                       </tab>
-                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
+                      <tab><template slot="_header">CLI</template>
                         <pre><code class="hljs" v-pre><span>git merge feature1<br></span></code></pre>
                       </tab>
                     </tabs>
@@ -155,7 +154,7 @@
                           <p></p>
                         </div>
                       </tab>
-                      <tab class="algolia-no-index"><template slot="_header">CLI</template>
+                      <tab><template slot="_header">CLI</template>
                         <div>
                           <p>Use the <code v-pre>--no-ff</code> switch (short for <em>no fast forward</em>):</p>
                           <pre><code class="hljs" v-pre><span>git merge --no-ff add-countries<br></span></code></pre>
@@ -172,7 +171,7 @@
                             <img src="/website/book/gitAndGithub/branch/images/pushBranchToFork.png" height="300">
                             <p></p>
                           </tab>
-                          <tab class="algolia-no-index"><template slot="_header">CLI</template>
+                          <tab><template slot="_header">CLI</template>
                             <p>Normally: <code v-pre>git push {remote repository} {branch}</code>. Examples:<br></p>
                             <ul>
                               <li><code v-pre>git push origin master</code> pushes the <code v-pre>master</code> branch to the repo named <code v-pre>origin</code> (i.e., the repo you cloned from)</li>
@@ -204,24 +203,9 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

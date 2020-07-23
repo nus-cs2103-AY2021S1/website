@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -79,7 +78,7 @@
                       </ol>
                     </box>
                     <p><strong>Interfaces can also contain <span trigger="click" for="modal:javaInterfaces-constants" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:javaInterfaces-constants'].show()" class="trigger-click">constants</span> and static methods</strong>.</p>
-                    <b-modal id="modal:javaInterfaces-constants" hide-footer size="lg" modal-class="mb-zoom" ref="modal:javaInterfaces-constants" class="algolia-no-index"><template slot="modal-title"><span class="dimmed">Textbook »</span></template>
+                    <b-modal id="modal:javaInterfaces-constants" hide-footer size="lg" modal-class="mb-zoom" ref="modal:javaInterfaces-constants"><template slot="modal-title"><span class="dimmed">Textbook »</span></template>
                       <div>
                         <div></div>
                         <p></p>
@@ -130,7 +129,7 @@
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.height = height;<br></span><span>        <span class="hljs-keyword">this</span>.width = width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> height * width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Rectangle of area "</span> + area());<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                 <p>Add the missing <code v-pre>Printable</code> interface. Add the missing methods of the <code v-pre>Person</code> class given below.</p>
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> String name;<br></span><span><br></span><span>    <span class="hljs-comment">// todo: add missing methods</span><br></span><span>}<br></span></code></pre>
-                                <panel type="seamless" class="algolia-no-index"><template slot="_header">
+                                <panel type="seamless"><template slot="_header">
                                     <p>Partial solution</p>
                                   </template>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Printable</span> </span>{<br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span></code></pre>
@@ -158,24 +157,9 @@
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

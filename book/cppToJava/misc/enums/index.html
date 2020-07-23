@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -67,7 +66,7 @@
                                 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// Add your method here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);<br></span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                 <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                 <pre><code class="hljs" v-pre><span>Red indicates high priority<br></span><span>Orange indicates medium priority<br></span><span>Blue indicates medium priority<br></span><span>Green indicates low priority<br></span></code></pre>
-                                <div slot="hint" class="algolia-no-index">
+                                <div slot="hint">
                                   <p>Use a <code v-pre>switch</code> statement to select between possible values for <code v-pre>Priority</code>.</p>
                                   <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{<br></span><span>        <span class="hljs-keyword">switch</span> (p) {<br></span><span>            <span class="hljs-keyword">case</span> LOW:<br></span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);<br></span><span>                <span class="hljs-keyword">break</span>;<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>    }<br></span></code></pre>
                                   <p>Code for the enumeration is given below:</p>
@@ -96,24 +95,9 @@
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -91,17 +90,17 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Big-bang integration in school projects</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Give two arguments in support and two arguments against the following statement.</p>
                                   <p><em>Because there is no external client, it is OK to use big bang integration for a school project.</em></p>
-                                  <div slot="answer" class="algolia-no-index">
+                                  <div slot="answer">
                                     <p>Arguments for:</p>
                                     <ul>
                                       <li>It is relatively simple; even big-bang can succeed.</li>
@@ -157,11 +156,11 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suggest an integration strategy</p>
                                 </template>
                                 <question has-input="true">
@@ -175,7 +174,7 @@
                                   </ul>
                                   <img src="/website/book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
                                   <p></p>
-                                  <div slot="answer" class="algolia-no-index">
+                                  <div slot="answer">
                                     <p>There can be many acceptable answers to this question. But any good strategy should consider at least some of the below.</p>
                                     <ul>
                                       <li>Because <code v-pre>HospitalUI</code> will be developed early, it’s OK to integrate it early, using stubs, rather than wait for the rest of the system to finish. (i.e. a top-down integration is suitable for <code v-pre>HospitalUI</code>)</li>
@@ -192,7 +191,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Integration order</p>
                                 </template>
                                 <question has-input="false">
@@ -203,7 +202,7 @@
                                   <p>Note that dashed arrows show dependencies (e.g. A depend on B, C, D and therefore, higher-level than B, C and D).</p>
                                   <img src="/website/book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
                                   <p></p>
-                                  <div slot="answer" class="algolia-no-index">
+                                  <div slot="answer">
                                     <p>a) Diagram:</p>
                                     <img src="/website/book/integration/approaches/topDownVsBottomUp/images/aAnswer.png" height="230">
                                     <p></p>
@@ -238,24 +237,9 @@
 <script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

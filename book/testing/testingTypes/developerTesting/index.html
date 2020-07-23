@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -84,16 +83,16 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable class="algolia-no-index"><template slot="_header">
+                          <panel expandable><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> implications of developers testing their own code</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Discuss pros and cons of developers testing their own code.</p>
-                                  <div slot="answer" class="algolia-no-index">
+                                  <div slot="answer">
                                     <p>Pros:</p>
                                     <ul>
                                       <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
@@ -113,7 +112,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Cost of bug fixing over time</p>
                                 </template>
                                 <question>
@@ -122,14 +121,14 @@
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> True</label></li>
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="37242" type="radio"> False</label></li>
                                   </ul>
-                                  <div slot="answer" class="algolia-no-index">
+                                  <div slot="answer">
                                     <p>False. The cost goes up over time.</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel class="algolia-no-index"><template slot="_header">
+                              <panel><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Why early testing?</p>
                                 </template>
                                 <question has-input="true">
@@ -158,24 +157,9 @@
 <script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

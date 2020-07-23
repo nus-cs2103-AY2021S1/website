@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -72,9 +71,9 @@
                                   <tabs>
                                     <tab><template slot="_header">UI</template>
                                       <img src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700"></tab>
-                                    <tab class="algolia-no-index"><template slot="_header">Logic</template>
+                                    <tab><template slot="_header">Logic</template>
                                       <img src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="800"></tab>
-                                    <tab class="algolia-no-index"><template slot="_header">Storage</template>
+                                    <tab><template slot="_header">Storage</template>
                                       <img src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="700"></tab>
                                   </tabs>
                                 </box>
@@ -117,11 +116,11 @@
                             </div>
                             <div>
                               <div>
-                                <panel expandable class="algolia-no-index"><template slot="_header">
+                                <panel expandable><template slot="_header">
                                     <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                   </template>
                                   <div>
-                                    <panel class="algolia-no-index"><template slot="_header">
+                                    <panel><template slot="_header">
                                         <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which is better?</p>
                                       </template>
                                       <question>
@@ -130,7 +129,7 @@
                                           <li class="radio-list-item"><label><input class="radio-list-input" name="81698" type="radio"> True</label></li>
                                           <li class="radio-list-item"><label><input class="radio-list-input" name="81698" type="radio"> False</label></li>
                                         </ul>
-                                        <div slot="answer" class="algolia-no-index">
+                                        <div slot="answer">
                                           <p>False</p>
                                           <p>Explanation: Not necessarily. It depends on the situation. Bottom-up design may be preferable when there are lot of existing components we want to reuse.</p>
                                         </div>
@@ -174,11 +173,11 @@
                             </div>
                             <div>
                               <div>
-                                <panel expandable class="algolia-no-index"><template slot="_header">
+                                <panel expandable><template slot="_header">
                                     <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                   </template>
                                   <div>
-                                    <panel class="algolia-no-index"><template slot="_header">
+                                    <panel><template slot="_header">
                                         <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statement about agile design</p>
                                       </template>
                                       <question>
@@ -187,7 +186,7 @@
                                           <li class="radio-list-item"><label><input class="radio-list-input" name="07214" type="radio"> True</label></li>
                                           <li class="radio-list-item"><label><input class="radio-list-input" name="07214" type="radio"> False</label></li>
                                         </ul>
-                                        <div slot="answer" class="algolia-no-index">
+                                        <div slot="answer">
                                           <p>True</p>
                                           <p>Explanation: Yes, that is why they do not believe in spending too much time creating a detailed and full design at the very beginning. However, the architecture is expected to remain relatively stable even in the agile design approach.</p>
                                         </div>
@@ -232,24 +231,9 @@
 <script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = false
+  const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

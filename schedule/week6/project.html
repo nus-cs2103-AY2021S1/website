@@ -55,8 +55,8 @@
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
           <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+          <li><a href="https://luminus.nus.edu.sg/modules/852a7711-54a0-4103-a2f7-3d877f33a454/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
           <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
 
           <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
@@ -394,12 +394,12 @@
                                     </tr>
                                     <tr>
                                       <td>[Optional] Contributions to the User Guide</td>
-                                      <td>1-3</td>
+                                      <td>1</td>
                                       <td></td>
                                     </tr>
                                     <tr>
                                       <td>[Optional] Contributions to the Developer Guide</td>
-                                      <td>3-6</td>
+                                      <td>3</td>
                                       <td></td>
                                     </tr>
                                   </tbody>
@@ -520,10 +520,10 @@
                 <p><span><span aria-hidden="true" class="fas fa-clock"></span></span> <strong>Soft deadline</strong>: midnight before the tutorial</p>
               </li>
               <li>
-                <p><strong>Create a new jar file</strong> using Gradle. Creating jar file using Intellij is not recommended unless the product is very simple <span class="dimmed">(e.g., no GUI or 3rd party libraries).</span> The jar file should be <mark>cross-platform and should work in a computer that has Java 11</mark>.</p>
+                <p><strong>Create a new jar file</strong> using Intellij (unless you have added a GUI or using third-party libraries in which case you should <a href="https://se-education.org/guides/tutorials/gradle.html">use Gradle</a> to create the jar file). The jar file should be <mark>cross-platform and should work in a computer that has Java 11</mark>.</p>
               </li>
               <li>
-                <p><strong>Do the following <a href="https://en.wikipedia.org/wiki/Smoke_testing_(software)"><em>smoke tests</em></a></strong> to ensure the jar file works <span class="dimmed">(reason: it will be used to grade your iP)</span>.<br></p>
+                <p><strong>Do the following <a href="https://en.wikipedia.org/wiki/Smoke_testing_(software)"><em>smoke tests</em></a></strong> to ensure the jar file works <span class="dimmed">(reason: a similar flow will be used when grading your iP)</span>.<br></p>
                 <ol>
                   <li>Copy the jar file to an empty folder and test it from there. This should surface issues with hard-coded file paths.</li>
                   <li>Pass the jar file to team members and ask them to do a test drive. Assuming some of your team members' OS differ from yours, this should verify if the app is cross-platform.</li>
@@ -642,7 +642,7 @@
           <h4 id="1-conceptualize-v1-2"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Conceptualize v1.2</span><span id="1-conceptualize-v1-2" class="anchor"></span><a class="fa fa-anchor" href="#1-conceptualize-v1-2" onclick="event.stopPropagation()"></a></h4>
           <div>
             <ul>
-              <li>Based on your user story selected previously, conceptualize the product in terms of how it will look like at v1.2. Suggestion: this can be in the form of a <span trigger="click" for="modal:v10-featureLists" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v10-featureLists'].show()" class="trigger-click">feature list</span>.<br>
+              <li>Based on your user stories selected previously, conceptualize the product in terms of how it will look like at v1.2 <mark>in the form of a <span trigger="click" for="modal:v10-featureLists" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v10-featureLists'].show()" class="trigger-click">feature list</span></mark>.<br>
                 Note down the feature list in your online project notes document.</li>
             </ul>
             <b-modal id="modal:v10-featureLists" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-featureLists"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
@@ -657,7 +657,7 @@
                   </div>
                   <div id="main">
                     <div>
-                      <box type="definition">
+                      <box type="definition" seamless>
                         <div>
                           <p><strong>Feature list</strong>: A list of features of a product <em>grouped according to some criteria</em> such as aspect, priority, order of delivery, etc.</p>
                         </div>
@@ -690,11 +690,11 @@
             <ul>
               <li>Draft a user guide in a convenient medium (e.g., a GoogleDoc) to describe what the product would be like when it is at v1.2.
                 <ul>
-                  <li>We recommend that you follow the <a href="https://nus-cs2103-ay2021s1.github.io/tp/UserGuide.html">AB3 User Guide</a> in terms of structure and format.</li>
+                  <li>We recommend that you follow the <a href="https://se-education.org/addressbook-level3/UserGuide.html">AB3 User Guide</a> in terms of structure and format.</li>
                   <li>As this is a very rough draft and the final version will be in a different format altogether <span class="dimmed">(i.e., in Markdown format)</span>, don't waste time in formatting, copy editing etc. It is fine as long as the tutor can get a rough idea of the features from this draft. You can also do just the 'Features' section and omit the other parts.</li>
                   <li>Do try to come up with concrete command syntax for the CLI commands that you will deliver at v1.2.</li>
                   <li>Include only features that will be delivered in v1.2.</li>
-                  <li>Consider including some UI mock-ups too <span class="dimmed">(they can be hand-drawn or created using a tool such as PowerPoint, PlantUML or <a href="https://balsamiq.com/">Balsamiq</a>)</span>.</li>
+                  <li><span tags="m--cs2103">Consider including some UI mock-ups too <span class="dimmed">(they can be hand-drawn or created using a tool such as PowerPoint, PlantUML or <a href="https://balsamiq.com/">Balsamiq</a>)</span></span>.</li>
                   <li>
                     <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Submission</strong>: Save the draft UG as a PDF file, name it <code v-pre>{team-id}.pdf</code> e.g., <code v-pre>CS2103-T09-2.pdf</code>, and upload to LumiNUS.<br><br>
                   </li>
@@ -703,7 +703,7 @@
             </ul>
             <div id="divideDocs" class="indented">
               <box>
-                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Recommended: <strong>Divide documentation work (in the User Guide and the Developer Guide) among team members equally; preferably based on enhancements/features each person would be adding</strong> <span class="dimmed">e.g., If you are the person planing to add a feature X, you should be the person to describe the feature X in the User Guide and in the Developer Guide</span>.</p>
+                <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Recommended: <strong>Divide <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., work related to the User Guide and the Developer Guide</span>documentation work</span> among team members equally; preferably based on enhancements/features each person would be adding</strong> <span class="dimmed">e.g., If you are the person planing to add a feature X, you should be the person to describe the feature X in the User Guide and in the Developer Guide</span>.</p>
                 <p><span class="dimmed">Reason: In the final project evaluation your documentation skills will be graded based on sections of the User/Developer Guide you have written.</span></p>
                 <panel type class="embedding" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Grading → <mark>Documentation</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
@@ -1465,12 +1465,12 @@
                                           </tr>
                                           <tr>
                                             <td>[Optional] Contributions to the User Guide</td>
-                                            <td>1-3</td>
+                                            <td>1</td>
                                             <td></td>
                                           </tr>
                                           <tr>
                                             <td>[Optional] Contributions to the Developer Guide</td>
-                                            <td>3-6</td>
+                                            <td>3</td>
                                             <td></td>
                                           </tr>
                                         </tbody>
@@ -1650,7 +1650,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Thu, 23 Jul 2020, 13:19:03 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
     </footer>
   </div>
 </body>

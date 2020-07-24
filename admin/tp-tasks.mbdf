@@ -131,8 +131,8 @@ To take advantage of the above, try to make your {{ version_penultimate }} (prod
 <span id="heading_start_project_notes">{{ icon_team }} Start a collaborative doc to take project notes</span>
 <span id="desc_start_project_notes">
 
-* Keep project notes in easy-to-use collaborative docs such as GoogleDocs/sheets. This document will be checked by the tutor at various points.<br>
-  Remember to choose a tool that ==allow public _view_ access== (not write access) e.g., GoogleDoc can be shared via a public link.
+* Keep project notes in easy-to-use collaborative docs (Recommended: use a GoogleDoc). This document will be checked by the tutor at various points.<br>
+  Remember to choose a tool that ==allow public _view_ access== (not write access) e.g., GoogleDoc can be shared via a public link so that the document can be viewed by others.
 
 </span>
 {#====================================================================================================================#}
@@ -145,7 +145,7 @@ To take advantage of the above, try to make your {{ version_penultimate }} (prod
 
 Get together with your team members and <trigger trigger="click" for="modal:v10-brainstorming">brainstorm</trigger> for <trigger trigger="click" for="modal:v10-userstories">user stories</trigger> **&nbsp;for the the product**.
 
-* **How many?** Aim to collect more user stories than you can deliver in the project. %%Aim to create at least 30 user stories. Include all 'obvious' ones you can think of but also look for 'non obvious' ones that you think are likely to be missed by other teams.%%
+* **How many?** Aim to collect more user stories than you can deliver in the project. %%Aim to create at least 30 user stories. Include all 'obvious' ones you can think of but also look for 'non obvious' ones that you think are likely to be missed by other competing products.%%
 * **Follow** [**the _recipe for brainstorming user stories_** in the textbook → Specifying Requirements → UserStories →  Usage]({{ baseUrl }}/se-book-adapted/chapters/specifyingRequirements.html#a-recipe-for-brainstorming-user-stories).
 
 * **How to record?**<br>
@@ -191,14 +191,14 @@ Get together with your team members and <trigger trigger="click" for="modal:v10-
 
 Intuitively, you might think the right thing to do is to decide what features will be in {{ version_final }} and then plan the intermediate versions based on that. But that's not what we are going to do.
 
-Why? You don't have enough experience to reliably estimate effort each feature will need, and hence, any such long range plan is likely to be inaccurate.
+Why? Given the difficulty of reliably estimating the effort each feature will need, any such long-range plan is likely to be inaccurate.
 
-Instead, what we will do is to ==assume the current iteration is the last iteration==, plan that iteration accordingly, and try to follow that plan as best as we can. After the iteration is over, we plan the next iteration as if _it's_ the last iteration. But that time, factor in the experience from the previous iteration to do a better job of planning.
+Instead, what we will do is to ==assume the current iteration is the last iteration==, plan that iteration to deliver the product (based on available time), and try to follow that plan as best as we can. After the iteration is over, we plan the next iteration as if _it's_ the last iteration. But that time, you can factor in the experience from the previous iteration to do a better job of planning.
 
 How is that better?
 * Shorter-term plans have a better chance of being accurate and doable.
 * You get multiple clean shots at project planning. Each try can learn from the previous tries. Hence, more learning.
-* As each iteration produces a working product, you always have a working product, which reduces the risk overshooting the final deadline.
+* As each iteration produces a working product, you always have a working product, which practically eliminates the risk failing to deliver a working product by the final deadline.
 
 </box>
 
@@ -250,7 +250,7 @@ Suggested workflow:
 <span id="heading_conceptualize_first_version">{{ icon_team }} Conceptualize {{ version_first }}</span>
 <span id="desc_conceptualize_first_version">
 
-* Based on your user story selected previously, conceptualize the product in terms of how it will look like at {{ version_first }}. Suggestion: this can be in the form of a <trigger trigger="click" for="modal:v10-featureLists">feature list</trigger>.<br>
+* Based on your user stories selected previously, conceptualize the product in terms of how it will look like at {{ version_first }} ==in the form of a <trigger trigger="click" for="modal:v10-featureLists">feature list</trigger>==.<br>
   Note down the feature list in your online project notes document.
 
 <modal large header="Textbook {{ icon_embedding }}" id="modal:v10-featureLists">
@@ -263,18 +263,18 @@ Suggested workflow:
 <span id="desc_draft_the_ug">
 
 * Draft a user guide in a convenient medium (e.g., a GoogleDoc) to describe what the product would be like when it is at {{ version_first }}.
-  * We recommend that you follow the [AB3 User Guide]({{ url_ab3_fork_website }}/UserGuide.html) in terms of structure and format.
+  * We recommend that you follow the [AB3 User Guide]({{ url_ab3_upstream_website }}/UserGuide.html) in terms of structure and format.
   * As this is a very rough draft and the final version will be in a different format altogether %%(i.e., in Markdown format)%%, don't waste time in formatting, copy editing etc. It is fine as long as the tutor can get a rough idea of the features from this draft. You can also do just the 'Features' section and omit the other parts.
   * Do try to come up with concrete command syntax for the CLI commands that you will deliver at {{ version_first }}.
   * Include only features that will be delivered in {{ version_first }}.
-  * Consider including some UI mock-ups too %%(they can be hand-drawn or created using a tool such as PowerPoint, PlantUML or [Balsamiq](https://balsamiq.com/))%%.
+  * <span tags="m--cs2103">Consider including some UI mock-ups too %%(they can be hand-drawn or created using a tool such as PowerPoint, PlantUML or [Balsamiq](https://balsamiq.com/))%%</span><span tags="m--cs2113 m--tic4001">Consider including examples of expected outputs too</span>.
   * {{ icon_important_big_red }} **Submission**: Save the draft UG as a PDF file, name it `{team-id}.pdf` e.g., `{{ example_team_id }}.pdf`, and upload to LumiNUS.<br><br>
 
 <div id="divideDocs" class="indented">
 
   <box>
 
-  {{ icon_tip }} Recommended: **Divide documentation work (in the User Guide and the Developer Guide) among team members equally; preferably based on enhancements/features each person would be adding** %%e.g., If you are the person planing to add a feature X, you should be the person to describe the feature X in the User Guide and in the Developer Guide%%.
+  {{ icon_tip }} Recommended: **Divide <tooltip content="i.e., work related to the User Guide and the Developer Guide">documentation work</tooltip> among team members equally; preferably based on enhancements/features each person would be adding** %%e.g., If you are the person planing to add a feature X, you should be the person to describe the feature X in the User Guide and in the Developer Guide%%.
 
   %%Reason: In the final project evaluation your documentation skills will be graded based on sections of the User/Developer Guide you have written.%%
 
@@ -404,12 +404,11 @@ Update the following pages in your project repo:
 </div>
 
 * {{ icon_team }} **Plan the next iteration**. As you know, you should follow the _breadth-first iterative_ process. Therefore, first you must decide what functionalities should be in the product if you had only two weeks to implement it. You have done that already when you chose user stories for {{ version_first }}, translated that to features, and even drafted the UG based on those features. You can tweak that plan further at this point if you wish, given that you now have some idea of how fast the team can work when using the prescribed workflow.
-  * ==Aim to produce a _working_ [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)== at the end of this iteration even if the functionalities are not polished (polishing can be done in a later iteration).
-  * If possible, break the iteration into two increments i.e., aim to produce an even simpler but working version after one week.
-  * "I'll do the back-end part of feature X in this iteration" is not acceptable as that is not in the spirit of iterative development. Remember, we are pretending this to be the last iteration; why would you implement the back-end part of a feature in the last iteration?<br>
+  * ==**Aim to produce a _working_ [MVP](https://en.wikipedia.org/wiki/Minimum_viable_product)**== at the end of this iteration even if the functionalities are not polished (polishing can be done in a later iteration).
+  * **If possible, break the iteration into two _increments_** i.e., aim to produce an even simpler but working version after one week.
+  * **Avoid depth-first implementations**: "I'll do the back-end part of feature X in this iteration" is not acceptable as that is not in the spirit of iterative development. Remember, we are pretending this to be the last iteration; why would you implement the back-end part of a feature in the last iteration?<br>
     It is OK to add simpler versions of bigger features, but not OK to add partial features that can't be used yet i.e., go _breadth-first iterative_ not _depth-first iterative_.
-* {{ icon_team }} **Divide the work** (i.e., the work required to produce that version) among the team members.
-* {{ icon_individual }} **Divide the work assigned to you into at least two increments** i.e., have at least one task to do in each of the coming two weeks.
+* {{ icon_team }} **Divide the work among the team members** i.e., the work required for the current iteration.
 * {{ icon_individual }} **Reflect the above plan in the issue tracker** by assigning the corresponding issues (create new issues if necessary) to yourself and to the corresponding milestone. %%For example, the user story pertaining to the increment `show a place holder for photo, showing a generic default image` should be assigned to Jake and to milestone `{{ version_first }}`%%<br>
   Optionally, you can define a `mid-{{ version_first }}` milestone to keep track of things to be done within the first half of the milestone.
 </span>
@@ -429,7 +428,7 @@ Update the following pages in your project repo:
 
 {{ icon_tip }} **You may <tooltip content="i.e., copy-paste, not clone/fork">re-purpose/adopt</tooltip> code** from any of the below to be used in your tP, provided you give credit to the source (and do not claim such code as yours).
 * The iP code of any of your team members, or of any other person in the module.
-* Code from [AddressBook-Level2](https://se-education.org/addressbook-level2/) or any code used in module activities e.g., personbook
+* Code from [AddressBook-Level2](https://se-education.org/addressbook-level2/) or any code used in module activities {{ "e.g., personbook" if not tic4001 }}
 
 </box>
 </div>
@@ -921,8 +920,8 @@ Not applicable this semester
 * {{ icon_important_big_red }} **Penalty for late submission:** {% if tic4001 %}Given that you are part-time students, we'll try to be as lenient as possible w.r.t. the late submission penalty but there will be no free deadline extensions, to be fair to those who submit on time.{% endif %}<br>
   ==-1 mark for missing the deadline (up to 2 hour of delay).==<br>
   -2 for an _extended delay_ (up to 24 hours late).<br>
-  Penalty for delays beyond 24 hours is determined on a case by case basis.
-  * Even a one-second delay is considered late, irrespective of the reason.
+  Penalty for delays beyond 24 hours is determined on a case by case basis.{% if not tic4001 %}
+  * Even a one-second delay is considered late, irrespective of the reason.{% endif %}
   * For submissions done via LumiNUS, the submission time is the timestamp shown by LumiNUS.
   * When determining the late submission penalty, **we take the latest submission** even if the same exact file was submitted earlier. Do not submit the same file multiple times if you want to avoid unnecessary late submission penalties.
   * The whole team is penalized for problems in team submissions. Only the respective student is penalized for problems in individual submissions.

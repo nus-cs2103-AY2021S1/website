@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -34,7 +35,7 @@
             <div>
               <div>
                 <p>
-                  <panel src="/website/book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/errorHandling/defensiveProgramming/what"><template slot="_header">
+                  <panel src="/website/book/errorHandling/defensiveProgramming/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/errorHandling/defensiveProgramming/what" class="algolia-no-index"><template slot="_header">
                       <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Implementation → Error Handling → Defensive Programming → What</span></p>
                     </template></panel>
                 </p>
@@ -59,11 +60,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Defensive programming</p>
                             </template>
                             <question>
@@ -75,7 +76,7 @@
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. can make the code less susceptible to misuse.</li>
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. can require extra effort.</li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(a)(b)(c)(d)(e)</p>
                                 <p>Explanation: Defensive programming requires a more checks, possibly making the code longer, more complex, and possibly slower. Use it only when benefits outweigh costs, which is often.</p>
                               </div>
@@ -104,6 +105,21 @@
   const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

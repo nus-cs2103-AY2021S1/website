@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -402,7 +403,7 @@
                         </template>
                         <div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about test input combinations</p>
                               </template>
                               <question>
@@ -413,7 +414,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>a</p>
                                   <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p>
                                 </div>
@@ -421,7 +422,7 @@
                             </panel>
                           </div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code v-pre>consume</code> method</p>
                               </template>
                               <question>
@@ -483,6 +484,21 @@
   const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

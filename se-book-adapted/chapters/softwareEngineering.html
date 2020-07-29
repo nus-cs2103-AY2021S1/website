@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/site-nav.css">
@@ -30,7 +31,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -49,7 +50,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -78,7 +79,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -341,7 +342,7 @@
                     <p>This then is programming, both a tar pit in which many efforts have floundered and a creative activity with joys
                       and woes all its own. For many, the joys far outweigh the woes....</p>
                   </blockquote>
-                  <b-modal id="modal:mmm" hide-footer size modal-class="mb-zoom" ref="modal:mmm"><template slot="modal-title"><strong>📖 The Mythical Man-Month: Essays on Software Engineering</strong></template>
+                  <b-modal id="modal:mmm" hide-footer size modal-class="mb-zoom" ref="modal:mmm" class="algolia-no-index"><template slot="modal-title"><strong>📖 The Mythical Man-Month: Essays on Software Engineering</strong></template>
                     <table>
                       <tr>
                         <td>
@@ -363,16 +364,16 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> SE vs Civil Engineering</p>
                           </template>
                           <question has-input="true">
                             <p>Compare Software Engineering with Civil Engineering in terms of how work products in CE (i.e. buildings) differ from those of SE (i.e. software).</p>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <div class="table-responsive">
                                 <table class="markbind-table table table-bordered table-striped">
                                   <thead>
@@ -438,24 +439,24 @@
                         </panel>
                       </div>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Software vs Bridges</p>
                           </template>
                           <question has-input="true">
                             <p>Comment on this statement: Building software is cheaper and easier than building bridges (all we need is a PC!).</p>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>Depends on the size of the software. Manpower required for software is very costly. On the other hand, we can create a very valuable software (e.g. an iPhone application that can make million dollars in a month) with a just a PC and a few days of work!</p>
                             </div>
                           </question>
                         </panel>
                       </div>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coding as a manufacturing activity</p>
                           </template>
                           <question has-input="true">
                             <p>Justify this statement: Coding is still a ‘design’ activity, not a ‘manufacturing’ activity. You may use a comparison (or an analogy) of Software engineering versus Civil Engineering to argue this point.</p>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>Arguments to support this statement:</p>
                               <ul>
                                 <li>If coding is a manufacturing activity, we should be able to do it using robotic machines (just like in the car industry) or low-skilled laborers (like in the construction industry).</li>
@@ -468,7 +469,7 @@
                         </panel>
                       </div>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> List pros and cons of SE</p>
                           </template>
                           <question has-input="true">
@@ -477,7 +478,7 @@
                         </panel>
                       </div>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which one of these is not included in Brook’s list of ‘Woes of the Craft’?</p>
                           </template>
                           <question>
@@ -489,7 +490,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Seemingly never ending effort required for testing and debugging software</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. Fast moving industry making our work obsolete quickly</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>(c)</p>
                             </div>
                           </question>
@@ -523,7 +524,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -537,6 +538,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

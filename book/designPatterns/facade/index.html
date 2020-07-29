@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -66,11 +67,11 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this Facade?</p>
                                 </template>
                                 <question>
@@ -81,7 +82,7 @@
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="cdd35" type="radio"> True</label></li>
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="cdd35" type="radio"> False</label></li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>True.</p>
                                     <p>Facade is clearly visible (Storage is the &lt;<facade>&gt; class).</facade>
                                     </p>
@@ -115,6 +116,21 @@
   const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

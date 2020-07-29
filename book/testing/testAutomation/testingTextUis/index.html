@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -51,7 +52,7 @@
                     <ol>
                       <li>
                         <p>Store the test input in the text file <code v-pre>input.txt</code>.</p>
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>input.txt</code></span></p>
                           </template>
                           <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix<br></span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing<br></span></code></pre>
@@ -59,7 +60,7 @@
                       </li>
                       <li>
                         <p>Store the output you expect from the SUT in another text file <code v-pre>expected.txt</code>.</p>
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>expected.txt</code></span></p>
                           </template>
                           <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]<br></span><span>Invalid command format: add <br></span><span><br></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]<br></span><span>Invalid command format: add <br></span></code></pre>
@@ -78,7 +79,7 @@
                             <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
                           </li>
                         </ul>
-                        <panel minimized><template slot="_header"></template>
+                        <panel minimized class="algolia-no-index"><template slot="_header"></template>
                           <span slot="header" class="card-title"><span>More on the <code v-pre>&gt;</code> operator and the <code v-pre>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                           <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code v-pre>&lt;</code> and <code v-pre>&gt;</code> operators. For example, if you run <code v-pre>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
                           <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt <br></span></code></pre>
@@ -129,6 +130,21 @@
   const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

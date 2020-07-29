@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../markbind/css/site-nav.css">
@@ -31,7 +32,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -50,7 +51,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -79,7 +80,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -290,7 +291,7 @@
                     <li>Specify your full name.</li>
                     <li>Upload a profile photo that matches <span trigger="click" for="modal:creatingGitHubAccount-photoCriteria" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:creatingGitHubAccount-photoCriteria'].show()" class="trigger-click">our requirements</span>.</li>
                   </ul>
-                  <panel type="seamless"><template slot="_header">
+                  <panel type="seamless" class="algolia-no-index"><template slot="_header">
                       <p><span class="dimmed">Why am I being encouraged to complete my GitHub profile?</span></p>
                     </template>
                     <p>The GitHub profile is useful for the tutors and classmates to identify you. If you are reluctant to share your info in your long-term GitHub account, you can remove those details after the module is over or create a separate GitHub account just for the module.</p>
@@ -300,7 +301,7 @@
                   <p><mark>You are discouraged from changing your GitHub username during the semester/exam/grading period</mark> as it can cause our auto-grading scripts to miss your GitHub activities. If you do change your GitHub username during that period, please let us know immediately.</p>
                 </li>
               </ol>
-              <b-modal id="modal:creatingGitHubAccount-photoCriteria" hide-footer size="lg" modal-class="mb-zoom" ref="modal:creatingGitHubAccount-photoCriteria"><template slot="modal-title">Our requirements for the profile photo</template>
+              <b-modal id="modal:creatingGitHubAccount-photoCriteria" hide-footer size="lg" modal-class="mb-zoom" ref="modal:creatingGitHubAccount-photoCriteria" class="algolia-no-index"><template slot="modal-title">Our requirements for the profile photo</template>
                   <div>
                   <p>The purpose of the profile photo is for the reader to identify you. Therefore, choose a <mark>recent individual photo showing your face clearly</mark> (i.e., not too small) -- somewhat similar to a passport photo. Given below are some examples of good and bad profile photos.<br>
                     <img src="/website/admin/images/profilephotos.png" style="width: 365.33px"></p>
@@ -454,7 +455,7 @@
                 <p>
                   <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Read <span trigger="click" for="modal:appE-reusePolicy" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:appE-reusePolicy'].show()" class="trigger-click">our reuse policy <span class="dimmed">(in Admin: Appendix B)</span></span></strong>, in particular, <mark>how to give credit when you reuse code from the Internet or classmates</mark>:
                 </p>
-                <b-modal id="modal:appE-gitUsername" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appE-gitUsername"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E → Setting Git Username to Match GitHub Username</template>
+                <b-modal id="modal:appE-gitUsername" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appE-gitUsername" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E → Setting Git Username to Match GitHub Username</template>
                     <div>
                     <p><strong>Set Git <code v-pre>user.name</code></strong>: We use various tools to analyze your code. For us to be able to identify your commits, we encourage you to <mark>set your Git <code v-pre>user.name</code> in all computers you use</mark> to a sensible string that uniquely identifies you. For example, <mark>you can set it to your GitHub username or your full name</mark>. If this user name is not set properly or if you use multiple usernames for Git, our grading scripts might miss some of your work.</p>
                     <p>After installing Git in a computer, you can set the Git username as follows:</p>
@@ -466,7 +467,7 @@
                     <p>More info about setting Git username is <a href="https://help.github.com/articles/setting-your-username-in-git/">here</a>.</p>
                   </div>
                 </b-modal>
-                <b-modal id="modal:appE-reusePolicy" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appE-reusePolicy"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix B: Policies → Policy on Reuse</template>
+                <b-modal id="modal:appE-reusePolicy" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appE-reusePolicy" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix B: Policies → Policy on Reuse</template>
                     <div>
                     <h3 id="policy-on-reuse">Policy on reuse <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="policy-on-reuse" class="anchor"></span><a class="fa fa-anchor" href="#policy-on-reuse" onclick="event.stopPropagation()"></a></h3>
                     <div class="indented">
@@ -511,7 +512,7 @@
                             </li>
                           </ul>
                         </box>
-                        <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
+                        <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
                             <div>
                             <h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
                             <ul>
@@ -588,7 +589,7 @@
                             </ul>
                           </div>
                         </b-modal>
-                        <b-modal id="modal:reusePolicy-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-ppp"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project → Deliverables → Project Portfolio Page</template>
+                        <b-modal id="modal:reusePolicy-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-ppp" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project → Deliverables → Project Portfolio Page</template>
                             <div>
                             <div>
                               <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
@@ -617,11 +618,11 @@
                                   </ul>
                                 </li>
                               </ul>
-                              <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks"><template slot="modal-title">Team-Based Tasks</template>
+                              <b-modal id="modal:deliverablesPPP-teamTasks" hide-footer size="lg" modal-class="mb-zoom" ref="modal:deliverablesPPP-teamTasks" class="algolia-no-index"><template slot="modal-title">Team-Based Tasks</template>
                                 <div>
                                   <box>
                                     <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                                    <panel type="seamless"><template slot="_header">
+                                    <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
                                       </template>
                                       <span id="example-team-tasks">
@@ -763,7 +764,7 @@
                   <li><strong>After merging a PR</strong>, close the corresponding issue.<br>
                     <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span> PRO TIP</span> You can use GitHub's <a href="https://help.github.com/en/articles/closing-issues-using-keywords"><code v-pre>Fixes #123</code> trick</a> to get the issue to close automatically when the PR is merged.</li>
                 </ul>
-                <b-modal id="modal:appErecommendedWorkflow-forkingworkflow" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appErecommendedWorkflow-forkingworkflow"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                <b-modal id="modal:appErecommendedWorkflow-forkingworkflow" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appErecommendedWorkflow-forkingworkflow" class="algolia-no-index"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                     <div>
                     <div></div>
                     <p></p>
@@ -823,7 +824,7 @@
                     <p>If you are unsure if a certain adjustment is allowed, you can check with the teaching team first.</p>
                   </li>
                 </ul>
-                <b-modal id="modal:appEworkflow-testingExpectations" hide-footer size modal-class="mb-zoom" ref="modal:appEworkflow-testingExpectations"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project Grading → Expectation on testing</template>
+                <b-modal id="modal:appEworkflow-testingExpectations" hide-footer size modal-class="mb-zoom" ref="modal:appEworkflow-testingExpectations" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project Grading → Expectation on testing</template>
                     <div>
                     <ul>
                       <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Write <em>some</em> automated tests</strong></span> so that we can evaluate your ability to write tests.</li>
@@ -998,7 +999,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -1012,6 +1013,21 @@
   const enableSearch = true
 </script>
 <script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

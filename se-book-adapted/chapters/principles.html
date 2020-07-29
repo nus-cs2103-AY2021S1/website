@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/site-nav.css">
@@ -30,7 +31,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -49,7 +50,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -78,7 +79,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -332,11 +333,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Meaning of OCP</p>
                         </template>
                         <question>
@@ -347,7 +348,7 @@
                             <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
                             <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>(a)</p>
                             <p>Explanation: Please refer the handout for the definition of OCP.</p>
                           </div>
@@ -374,11 +375,11 @@
                   </div>
                 </box>
                 <p>LSP sounds same as <span large trigger="click" for="modal:lsp-substitutability" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:lsp-substitutability'].show()" class="trigger-click">substitutability</span> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
-                <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                   <div>
                     <div>
                       <p>
-                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what"><template slot="_header">
+                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → What</span></p>
                           </template></panel>
                       </p>
@@ -422,7 +423,7 @@
                     <li><code v-pre>Admin</code> class follows LSP because it fulfills <code v-pre>Payroll</code>’s expectation of <code v-pre>Staff</code> objects (i.e. it works for all positive values). Substituting <code v-pre>Admin</code> objects for Staff objects will not break the <code v-pre>Payroll</code> class functionality.</li>
                     <li><code v-pre>Academic</code> class violates LSP because it will not work for percent values over <code v-pre>100</code> as expected by the <code v-pre>Payroll</code> class. Substituting <code v-pre>Academic</code> objects for <code v-pre>Staff</code> objects can potentially break the <code v-pre>Payroll</code> class functionality.</li>
                   </ul>
-                  <panel type="seamless"><template slot="_header">
+                  <panel type="seamless" class="algolia-no-index"><template slot="_header">
                       <p><span class="dimmed">Another example</span></p>
                     </template>
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Rectangle#resize()</code> can take any integers for <code v-pre>height</code> and <code v-pre>width</code>. This contract is violated by the subclass <code v-pre>Square#resize()</code> because it does not accept a <code v-pre>height</code> that is different from the <code v-pre>width</code>.</p>
@@ -437,11 +438,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this LSP?</p>
                         </template>
                         <question>
@@ -450,7 +451,7 @@
                             <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> True</label></li>
                             <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> False</label></li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>True.</p>
                             <p>Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP has been violated.</p>
                           </div>
@@ -518,11 +519,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these statements is true about the Dependency Inversion Principle.</p>
                         </template>
                         <question>
@@ -533,7 +534,7 @@
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. It reduces dependencies in a design.</li>
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. It advocates making higher level classes to depend on lower level classes.</li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>a</p>
                             <p>Explanation: Replacing dependencies with mocks is Dependency Injection, not DIP. DIP does not reduce dependencies, rather, it changes the direction of dependencies. Yes, it can introduce extra abstractions but often the benefit can outweigh the extra complications.</p>
                           </div>
@@ -557,7 +558,7 @@
               <p></p>
               <div>
                 <p>The five OOP principles given below are known as <em>SOLID Principles</em> (an acronym made up of the first letter of each principle):</p>
-                <panel type="seamless"><template slot="_header">
+                <panel type="seamless" class="algolia-no-index"><template slot="_header">
                     <p><strong>S</strong>ingle Responsibility Principle (SRP)</p>
                   </template>
                   <div>
@@ -601,7 +602,7 @@
                     </div>
                   </div>
                 </panel>
-                <panel type="seamless"><template slot="_header">
+                <panel type="seamless" class="algolia-no-index"><template slot="_header">
                     <p><strong>O</strong>pen-Closed Principle (OCP)</p>
                   </template>
                   <div>
@@ -633,11 +634,11 @@
                         </div>
                         <div>
                           <div>
-                            <panel expandable><template slot="_header">
+                            <panel expandable class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                               </template>
                               <div>
-                                <panel><template slot="_header">
+                                <panel class="algolia-no-index"><template slot="_header">
                                     <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Meaning of OCP</p>
                                   </template>
                                   <question>
@@ -648,7 +649,7 @@
                                       <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> c. A software module should be open to modification and closed to extension.</label></li>
                                       <li class="radio-list-item"><label><input class="radio-list-input" name="6906e" type="radio"> d. Open source software rocks. Closed source software sucks.</label></li>
                                     </ul>
-                                    <div slot="answer">
+                                    <div slot="answer" class="algolia-no-index">
                                       <p>(a)</p>
                                       <p>Explanation: Please refer the handout for the definition of OCP.</p>
                                     </div>
@@ -662,7 +663,7 @@
                     </div>
                   </div>
                 </panel>
-                <panel type="seamless"><template slot="_header">
+                <panel type="seamless" class="algolia-no-index"><template slot="_header">
                     <p><strong>L</strong>iskov Substitution Principle (LSP)</p>
                   </template>
                   <div>
@@ -681,11 +682,11 @@
                             </div>
                           </box>
                           <p>LSP sounds same as <span large trigger="click" for="modal:lsp-substitutability" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:lsp-substitutability'].show()" class="trigger-click">substitutability</span> but it goes beyond substitutability; <strong>LSP implies that a subclass should not be more restrictive than the behavior specified by the superclass.</strong> As you know, Java has language support for substitutability. However, if LSP is not followed, substituting a subclass object for a superclass object can break the functionality of the code.</p>
-                          <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                          <b-modal id="modal:lsp-substitutability" hide-footer size="lg" modal-class="mb-zoom" ref="modal:lsp-substitutability" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                             <div>
                               <div>
                                 <p>
-                                  <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what"><template slot="_header">
+                                  <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what" class="algolia-no-index"><template slot="_header">
                                       <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → What</span></p>
                                     </template></panel>
                                 </p>
@@ -729,7 +730,7 @@
                               <li><code v-pre>Admin</code> class follows LSP because it fulfills <code v-pre>Payroll</code>’s expectation of <code v-pre>Staff</code> objects (i.e. it works for all positive values). Substituting <code v-pre>Admin</code> objects for Staff objects will not break the <code v-pre>Payroll</code> class functionality.</li>
                               <li><code v-pre>Academic</code> class violates LSP because it will not work for percent values over <code v-pre>100</code> as expected by the <code v-pre>Payroll</code> class. Substituting <code v-pre>Academic</code> objects for <code v-pre>Staff</code> objects can potentially break the <code v-pre>Payroll</code> class functionality.</li>
                             </ul>
-                            <panel type="seamless"><template slot="_header">
+                            <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                 <p><span class="dimmed">Another example</span></p>
                               </template>
                               <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Rectangle#resize()</code> can take any integers for <code v-pre>height</code> and <code v-pre>width</code>. This contract is violated by the subclass <code v-pre>Square#resize()</code> because it does not accept a <code v-pre>height</code> that is different from the <code v-pre>width</code>.</p>
@@ -744,11 +745,11 @@
                         </div>
                         <div>
                           <div>
-                            <panel expandable><template slot="_header">
+                            <panel expandable class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                               </template>
                               <div>
-                                <panel><template slot="_header">
+                                <panel class="algolia-no-index"><template slot="_header">
                                     <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this LSP?</p>
                                   </template>
                                   <question>
@@ -757,7 +758,7 @@
                                       <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> True</label></li>
                                       <li class="radio-list-item"><label><input class="radio-list-input" name="55ada" type="radio"> False</label></li>
                                     </ul>
-                                    <div slot="answer">
+                                    <div slot="answer" class="algolia-no-index">
                                       <p>True.</p>
                                       <p>Explanation: If the subclass is more restrictive than the parent class, code that worked with the parent class may not work with the child class. Hence, the substitutability does not exist and LSP has been violated.</p>
                                     </div>
@@ -771,7 +772,7 @@
                     </div>
                   </div>
                 </panel>
-                <panel type="seamless"><template slot="_header">
+                <panel type="seamless" class="algolia-no-index"><template slot="_header">
                     <p><strong>I</strong>nterface Segregation Principle (ISP)</p>
                   </template>
                   <div>
@@ -801,7 +802,7 @@
                     </div>
                   </div>
                 </panel>
-                <panel type="seamless"><template slot="_header">
+                <panel type="seamless" class="algolia-no-index"><template slot="_header">
                     <p><strong>D</strong>ependency Inversion Principle (DIP)</p>
                   </template>
                   <div>
@@ -833,11 +834,11 @@
                         </div>
                         <div>
                           <div>
-                            <panel expandable><template slot="_header">
+                            <panel expandable class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                               </template>
                               <div>
-                                <panel><template slot="_header">
+                                <panel class="algolia-no-index"><template slot="_header">
                                     <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these statements is true about the Dependency Inversion Principle.</p>
                                   </template>
                                   <question>
@@ -848,7 +849,7 @@
                                       <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. It reduces dependencies in a design.</li>
                                       <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. It advocates making higher level classes to depend on lower level classes.</li>
                                     </ul>
-                                    <div slot="answer">
+                                    <div slot="answer" class="algolia-no-index">
                                       <p>a</p>
                                       <p>Explanation: Replacing dependencies with mocks is Dependency Injection, not DIP. DIP does not reduce dependencies, rather, it changes the direction of dependencies. Yes, it can introduce extra abstractions but often the benefit can outweigh the extra complications.</p>
                                     </div>
@@ -899,7 +900,7 @@
                 <box>
                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <span trigger="click" for="modal:soc-nTier" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:soc-nTier'].show()" class="trigger-click">n-tier architecture</span> utilizes this principle. Each layer in the architecture has a well-defined functionality that has no functional overlap with each other.</p>
                 </box>
-                <b-modal id="modal:soc-nTier" hide-footer size modal-class="mb-zoom" ref="modal:soc-nTier"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                <b-modal id="modal:soc-nTier" hide-footer size modal-class="mb-zoom" ref="modal:soc-nTier" class="algolia-no-index"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                   <div>
                     <div class="indented">
                       <div></div>
@@ -922,7 +923,7 @@
                   </div>
                 </b-modal>
                 <p><strong>This principle should lead to higher <span trigger="click" for="soc-cohesion" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['soc-cohesion'].show()" class="trigger-click">cohesion</span> and lower <span trigger="click" for="soc-coupling" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['soc-coupling'].show()" class="trigger-click">coupling</span>.</strong></p>
-                <b-modal id="soc-coupling" hide-footer size modal-class="mb-zoom" ref="soc-coupling"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                <b-modal id="soc-coupling" hide-footer size modal-class="mb-zoom" ref="soc-coupling" class="algolia-no-index"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                   <div>
                     <div class="indented">
                       <div></div>
@@ -946,11 +947,11 @@
                       </div>
                       <div>
                         <div>
-                          <panel expandable><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling levels of alternative designs</p>
                                 </template>
                                 <question has-input="true">
@@ -959,38 +960,38 @@
                                     <img src="/website/book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
                                     <p></p>
                                   </box>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be stronger than the others.). However, in <em>x</em>, <code v-pre>A</code> is highly-coupled to the rest of the system while <code v-pre>B</code>, <code v-pre>C</code>, <code v-pre>D</code>, and <code v-pre>E</code> are standalone (do not depend on anything else). In <em>y</em>, no component is as highly-coupled as <code v-pre>A</code> of <em>x</em>. However, only <code v-pre>D</code> and <code v-pre>E</code> are standalone.</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> regressions and coupling.</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Explain the link (if any) between regressions and coupling.</p>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed">e.g. when component <code v-pre>A</code> is modified, all components ‘coupled’ to component <code v-pre>A</code> risk ‘unintended behavioral changes’</span>.</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling and testability</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Discuss the relationship between coupling and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">a measure of how easily a given component can be tested</span>testability</span>.</p>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>Coupling decreases testability because if the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> is coupled to many other components it becomes difficult to test the SUI in isolation of its dependencies.</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about coupling</p>
                                 </template>
                                 <question>
@@ -1002,7 +1003,7 @@
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. As coupling increases, integration becomes easier as everything is connected together.</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. As coupling increases, maintainability decreases.</li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>(a)(b)(c)<s>(d)</s>(e)</p>
                                     <p>Explanation: High coupling means either more components require to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.</p>
                                   </div>
@@ -1015,7 +1016,7 @@
                     </div>
                   </div>
                 </b-modal>
-                <b-modal id="soc-cohesion" hide-footer size modal-class="mb-zoom" ref="soc-cohesion"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                <b-modal id="soc-cohesion" hide-footer size modal-class="mb-zoom" ref="soc-cohesion" class="algolia-no-index"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                   <div>
                     <div class="indented">
                       <div></div>
@@ -1040,11 +1041,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> correct statement about SoC</p>
                         </template>
                         <question>
@@ -1054,7 +1055,7 @@
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. A software design should increase cohesion of its components.</li>
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A software design should follow single responsibility principle.</li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>(a)(b)(c)</p>
                             <p>Explanation: By making ‘user interaction’ GUI class’ sole responsibility, we increase its cohesion. This is also in line with separation of concerns (i.e., we separated the concern of user interaction) and single responsibility principle (GUI class has only one responsibility).</p>
                           </div>
@@ -1109,16 +1110,16 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p>
                         </template>
                         <question has-input="true">
                           <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>Let us take the <code v-pre>Logic</code> class as an example. Assume that it has the following operation.</p>
                             <p><code v-pre>setMinefield(Minefiled mf):void</code></p>
                             <p>Consider the following that can happen inside this operation.</p>
@@ -1133,7 +1134,7 @@
                       </panel>
                     </div>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p>
                         </template>
                         <question>
@@ -1143,7 +1144,7 @@
                             <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
                             <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>False</p>
                             <p>Explanation: The line <code v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
                           </div>
@@ -1151,7 +1152,7 @@
                       </panel>
                     </div>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p>
                         </template>
                         <question>
@@ -1163,7 +1164,7 @@
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>(b)</p>
                             <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p>
                           </div>
@@ -1251,23 +1252,23 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Brook’s Law vs school project</p>
                         </template>
                         <question has-input="true">
                           <p>Do the Brook’s Law apply to a school project? Justify.</p>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>Yes. Adding a new student to a project team can result in a slow-down of the project for a short period. This is because the new member needs time to learn the project and existing members will have to spend time helping the new guy get up to speed. If the project is already behind schedule and near a deadline, this could delay the delivery even further.</p>
                           </div>
                         </question>
                       </panel>
                     </div>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which one is related to Brook's law</p>
                         </template>
                         <question>
@@ -1278,7 +1279,7 @@
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. The bearing of a child takes nine months, no matter how many women are assigned.</li>
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Adding more manpower to an already late project makes it even later.</li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>(d)</p>
                           </div>
                         </question>
@@ -1318,7 +1319,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -1332,6 +1333,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

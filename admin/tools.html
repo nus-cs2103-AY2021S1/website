@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../markbind/css/site-nav.css">
@@ -31,7 +32,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -50,7 +51,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -79,7 +80,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -287,7 +288,7 @@
               <box>
                 <p><span style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation</strong>:</span></p>
                 <p>Create a GitHub account (if you don't have one yet), as explained in the panel below.</p>
-                <panel type class="embedding" minimized><template slot="_header">
+                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Appendix E - GitHub: Creating an Account</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                   </template>
                   <div>
@@ -302,7 +303,7 @@
                           <li>Specify your full name.</li>
                           <li>Upload a profile photo that matches <span trigger="click" for="modal:creatingGitHubAccount-photoCriteria" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:creatingGitHubAccount-photoCriteria'].show()" class="trigger-click">our requirements</span>.</li>
                         </ul>
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed">Why am I being encouraged to complete my GitHub profile?</span></p>
                           </template>
                           <p>The GitHub profile is useful for the tutors and classmates to identify you. If you are reluctant to share your info in your long-term GitHub account, you can remove those details after the module is over or create a separate GitHub account just for the module.</p>
@@ -312,7 +313,7 @@
                         <p><mark>You are discouraged from changing your GitHub username during the semester/exam/grading period</mark> as it can cause our auto-grading scripts to miss your GitHub activities. If you do change your GitHub username during that period, please let us know immediately.</p>
                       </li>
                     </ol>
-                    <b-modal id="modal:creatingGitHubAccount-photoCriteria" hide-footer size="lg" modal-class="mb-zoom" ref="modal:creatingGitHubAccount-photoCriteria"><template slot="modal-title">Our requirements for the profile photo</template>
+                    <b-modal id="modal:creatingGitHubAccount-photoCriteria" hide-footer size="lg" modal-class="mb-zoom" ref="modal:creatingGitHubAccount-photoCriteria" class="algolia-no-index"><template slot="modal-title">Our requirements for the profile photo</template>
                         <div>
                         <p>The purpose of the profile photo is for the reader to identify you. Therefore, choose a <mark>recent individual photo showing your face clearly</mark> (i.e., not too small) -- somewhat similar to a passport photo. Given below are some examples of good and bad profile photos.<br>
                           <img src="/website/admin/images/profilephotos.png" style="width: 365.33px"></p>
@@ -424,7 +425,7 @@
                   </li>
                 </ul>
                 <div class="indented-level2">
-                  <panel><template slot="_header">
+                  <panel class="algolia-no-index"><template slot="_header">
                       <p>Adding <code v-pre>@@author</code> tags to indicate authorship</p>
                     </template>
                     <div>
@@ -553,7 +554,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -567,6 +568,21 @@
   const enableSearch = true
 </script>
 <script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

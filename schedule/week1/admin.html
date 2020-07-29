@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -31,7 +32,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -50,7 +51,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -79,7 +80,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -127,7 +128,7 @@
                   <li><strong>Read prerequisite <a href="/website/schedule/week1/topics.html"><span class="border bg-white"> <span><span aria-hidden="true" class="fas fa-book"></span></span> Topics </span></a></strong> allocated for week 1. <strong>Submit <code v-pre>Lecture 1 - Pre-Lecture Quiz</code></strong> (on LumiNUS) to test your knowledge of those topics. Ideally, finish the quiz before the first lecture, latest by the given deadline. The quiz is counted for participation (in place of week 1 post-lecture quiz).</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Participation</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -172,7 +173,7 @@
                           <li>-1 for each <em>professional conduct</em> criterion in which you score below average (based on the average of ratings received).</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Conduct) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -215,7 +216,7 @@
                           <li>No penalty for scoring low on <em>competency criteria</em>.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Competency) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -290,7 +291,7 @@
                   <li>Follow the <span class="border pr-1 pl-1" style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation</strong></span> instructions of the following tools.</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Programming Language</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -322,7 +323,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - GitHub</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -331,7 +332,7 @@
                       <box>
                         <p><span style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation</strong>:</span></p>
                         <p>Create a GitHub account (if you don't have one yet), as explained in the panel below.</p>
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Appendix E - GitHub: Creating an Account</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -346,7 +347,7 @@
                                   <li>Specify your full name.</li>
                                   <li>Upload a profile photo that matches <span trigger="click" for="modal:creatingGitHubAccount-photoCriteria" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:creatingGitHubAccount-photoCriteria'].show()" class="trigger-click">our requirements</span>.</li>
                                 </ul>
-                                <panel type="seamless"><template slot="_header">
+                                <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                     <p><span class="dimmed">Why am I being encouraged to complete my GitHub profile?</span></p>
                                   </template>
                                   <p>The GitHub profile is useful for the tutors and classmates to identify you. If you are reluctant to share your info in your long-term GitHub account, you can remove those details after the module is over or create a separate GitHub account just for the module.</p>
@@ -356,7 +357,7 @@
                                 <p><mark>You are discouraged from changing your GitHub username during the semester/exam/grading period</mark> as it can cause our auto-grading scripts to miss your GitHub activities. If you do change your GitHub username during that period, please let us know immediately.</p>
                               </li>
                             </ol>
-                            <b-modal id="modal:creatingGitHubAccount-photoCriteria" hide-footer size="lg" modal-class="mb-zoom" ref="modal:creatingGitHubAccount-photoCriteria"><template slot="modal-title">Our requirements for the profile photo</template>
+                            <b-modal id="modal:creatingGitHubAccount-photoCriteria" hide-footer size="lg" modal-class="mb-zoom" ref="modal:creatingGitHubAccount-photoCriteria" class="algolia-no-index"><template slot="modal-title">Our requirements for the profile photo</template>
                                 <div>
                                 <p>The purpose of the profile photo is for the reader to identify you. Therefore, choose a <mark>recent individual photo showing your face clearly</mark> (i.e., not too small) -- somewhat similar to a passport photo. Given below are some examples of good and bad profile photos.<br>
                                   <img src="/website/admin/images/profilephotos.png" style="width: 365.33px"></p>
@@ -372,7 +373,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - RCS</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -398,7 +399,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - IDE</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -417,7 +418,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - Communication</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -471,7 +472,7 @@
                   <li>Read the following admin info about the module.</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type="danger" class="embedding" minimized><template slot="_header">
+                  <panel type="danger" class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module expectations and the <mark>star rating system</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -521,7 +522,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type="danger" class="embedding" minimized><template slot="_header">
+                  <panel type="danger" class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Using this website [essential info]</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -538,7 +539,7 @@
                         <p>This book tries to <em>layer</em> information so that readers can decide to omit less important layers if they wish to.</p>
                         <p><strong>More important information are in bold</strong> or <mark>highlighted</mark> while <span class="dimmed">less important information are dimmed</span> or in collapsed panels such as the below.</p>
                         <box>
-                          <panel minimized><template slot="_header">
+                          <panel minimized class="algolia-no-index"><template slot="_header">
                               <p>Some less important info in a minimized panel</p>
                             </template>
                             <p>Less important info</p>
@@ -546,7 +547,7 @@
                           </panel>
                           <p></p>
                           <p></p>
-                          <panel type="seamless"><template slot="_header">
+                          <panel type="seamless" class="algolia-no-index"><template slot="_header">
                               <p><span class="dimmed">Some less important info in a boarder-less panel</span></p>
                             </template>
                             <p>Less important info</p>
@@ -554,7 +555,7 @@
                           </panel>
                           <p></p>
                           <p></p>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span class="dimmed">Some less important info in a panel</span></p>
                             </template>
                             <p>Less important info</p>
@@ -569,7 +570,7 @@
                             <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
                               <p>Some textual description of X</p>
                             </tab>
-                            <tab><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
+                            <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
                               <p>Video describing X</p>
                             </tab>
                           </tabs>
@@ -580,12 +581,12 @@
                             Additional information
                           </div>
                         </span>
-                        <b-modal id="modal:modal-example" hide-footer size modal-class="mb-zoom" ref="modal:modal-example"><template slot="modal-title">Modal Example</template>
+                        <b-modal id="modal:modal-example" hide-footer size modal-class="mb-zoom" ref="modal:modal-example" class="algolia-no-index"><template slot="modal-title">Modal Example</template>
                           Additional information
                         </b-modal>
                       </div>
                       <p>This website <mark>uses a star rating system</mark> to indicate the priority level of contents.</p>
-                      <panel type class="embedding" minimized><template slot="_header">
+                      <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                           <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Module Expectations → Star Rating System</p>
                         </template>
                         <div>
@@ -619,7 +620,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type="info" class="embedding" minimized><template slot="_header">
+                  <panel type="info" class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Using this website [more info]</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -630,7 +631,7 @@
                         <ul>
                           <li><big><strong>What</strong></big> : the <strong>meaning</strong> of the concept in concern (<span trigger="click" for="modal:conventions-what" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conventions-what'].show()" class="trigger-click">example</span>)</li>
                         </ul>
-                        <b-modal id="modal:conventions-what" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-what"><template slot="modal-title">Example of a 'What' topic</template>
+                        <b-modal id="modal:conventions-what" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-what" class="algolia-no-index"><template slot="modal-title">Example of a 'What' topic</template>
                           <div>
                             <div></div>
                             <p></p>
@@ -655,7 +656,7 @@
                                     </ul>
                                   </box>
                                   <p>Given below are two common refactorings (<span trigger="click" for="modal:refactoring-catalog-what" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:refactoring-catalog-what'].show()" class="trigger-click">more</span>).</p>
-                                  <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
+                                  <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
                                     <div>
                                       <ul>
                                         <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
@@ -726,11 +727,11 @@
                                 </div>
                                 <div>
                                   <div>
-                                    <panel expandable><template slot="_header">
+                                    <panel expandable class="algolia-no-index"><template slot="_header">
                                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                       </template>
                                       <div>
-                                        <panel><template slot="_header">
+                                        <panel class="algolia-no-index"><template slot="_header">
                                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Results of Refactoring</p>
                                           </template>
                                           <question>
@@ -741,7 +742,7 @@
                                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Refactoring can result in better performance</li>
                                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Refactoring can change the number of methods/classes</li>
                                             </ul>
-                                            <div slot="answer">
+                                            <div slot="answer" class="algolia-no-index">
                                               <p>a, b, c, d</p>
                                               <p>Explanation:</p>
                                               <ul>
@@ -753,16 +754,16 @@
                                         </panel>
                                       </div>
                                       <div>
-                                        <panel><template slot="_header">
+                                        <panel class="algolia-no-index"><template slot="_header">
                                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Do you agree with the following statement? Refactoring and regression testing</p>
                                           </template>
                                           <question has-input="true">
                                             <p>Do you agree with the following statement? Justify your answer.</p>
                                             <p>Statement: <code v-pre>Whenever you refactor code to fix bugs, you need not do regression testing if the bug fix was minor.</code></p>
-                                            <div slot="hint">
+                                            <div slot="hint" class="algolia-no-index">
                                               <p>There are two flaws in the given statement.</p>
                                             </div>
-                                            <div slot="answer">
+                                            <div slot="answer" class="algolia-no-index">
                                               <p>DISAGREE.</p>
                                               <ol>
                                                 <li>Even a minor change can have major repercussions on the system. You MUST do regression testing after each change, no matter how minor it is.</li>
@@ -773,7 +774,7 @@
                                         </panel>
                                       </div>
                                       <div>
-                                        <panel><template slot="_header">
+                                        <panel class="algolia-no-index"><template slot="_header">
                                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Refactoring</p>
                                           </template>
                                           <question has-input>
@@ -791,7 +792,7 @@
                         <ul>
                           <li><big><strong>Why</strong></big> : the <strong>motivation</strong> behind the concept in concern (<span trigger="click" for="modal:conventions-why" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conventions-why'].show()" class="trigger-click">example</span>)</li>
                         </ul>
-                        <b-modal id="modal:conventions-why" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-why"><template slot="modal-title">Example of a 'Why' topic</template>
+                        <b-modal id="modal:conventions-why" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-why" class="algolia-no-index"><template slot="modal-title">Example of a 'Why' topic</template>
                           <div>
                             <div></div>
                             <p></p>
@@ -813,7 +814,7 @@
                         <ul>
                           <li><big><strong>How</strong></big> : the <strong>usage</strong> of the concept in concern (<span trigger="click" for="modal:conventions-how" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conventions-how'].show()" class="trigger-click">example</span>)</li>
                         </ul>
-                        <b-modal id="modal:conventions-how" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-how"><template slot="modal-title">Example of a 'How' topic</template>
+                        <b-modal id="modal:conventions-how" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-how" class="algolia-no-index"><template slot="modal-title">Example of a 'How' topic</template>
                           <div>
                             <div></div>
                             <p></p>
@@ -826,7 +827,7 @@
                               <div id="main">
                                 <div>
                                   <p>Given below are some more commonly used refactorings. A more comprehensive list is available at <span trigger="click" for="modal:refactoring-catalog-how" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:refactoring-catalog-how'].show()" class="trigger-click"> refactoring-catalog </span>.</p>
-                                  <b-modal id="modal:refactoring-catalog-how" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-how"><template slot="modal-title"><strong>Refactoring Catalog</strong></template>
+                                  <b-modal id="modal:refactoring-catalog-how" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-how" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalog</strong></template>
                                     <div>
                                       <ul>
                                         <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
@@ -857,7 +858,7 @@
                         <ul>
                           <li><big><strong>When</strong></big> : the <strong>pros and cons</strong> of the concept in concern, <strong>when to use</strong> the concept (<span trigger="click" for="modal:conventions-when" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conventions-when'].show()" class="trigger-click">example</span>)</li>
                         </ul>
-                        <b-modal id="modal:conventions-when" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-when"><template slot="modal-title">Example of a 'When' topic</template>
+                        <b-modal id="modal:conventions-when" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-when" class="algolia-no-index"><template slot="modal-title">Example of a 'When' topic</template>
                           <div>
                             <div></div>
                             <p></p>
@@ -873,11 +874,11 @@
                                 </div>
                                 <div>
                                   <div>
-                                    <panel expandable><template slot="_header">
+                                    <panel expandable class="algolia-no-index"><template slot="_header">
                                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                       </template>
                                       <div>
-                                        <panel><template slot="_header">
+                                        <panel class="algolia-no-index"><template slot="_header">
                                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> ‘Extract method’ and ‘Inline method’ refactorings</p>
                                           </template>
                                           <question>
@@ -886,7 +887,7 @@
                                               <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> a. are opposites of each other.</label></li>
                                               <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> b. sounds like opposites but they are not.</label></li>
                                             </ul>
-                                            <div slot="answer">
+                                            <div slot="answer" class="algolia-no-index">
                                               <p>a</p>
                                             </div>
                                           </question>
@@ -949,7 +950,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type="warning" class="embedding" minimized><template slot="_header">
+                  <panel type="warning" class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Weekly schedule</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div></div>
@@ -957,7 +958,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type="success" class="embedding" minimized><template slot="_header">
+                  <panel type="success" class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module overview</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -1051,7 +1052,7 @@
                             </tbody>
                           </table>
                         </div><br>
-                        <panel src="/website/admin/appendixC-faq._include_.html#admin-faq-tVsNonT" class="embedding" minimized fragment="admin-faq-tVsNonT"><template slot="_header">
+                        <panel src="/website/admin/appendixC-faq._include_.html#admin-faq-tVsNonT" class="embedding algolia-no-index" minimized fragment="admin-faq-tVsNonT"><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>FAQ: What are the differences between CS2103 and CS2103T?</strong></p>
                           </template></panel>
                       </span>
@@ -1070,7 +1071,7 @@
                   <li>Attend the first lecture on Fri, Aug 14th (<mark><strong>compulsory</strong></mark>).</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Lectures</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -1122,7 +1123,7 @@
           </div>
           <h4 id="other-info-relevant-to-this-week"><span class="badge badge-pill badge-dark p-2"><big><big>+</big></big></span> Other info relevant to this week:<span id="other-info-relevant-to-this-week" class="anchor"></span><a class="fa fa-anchor" href="#other-info-relevant-to-this-week" onclick="event.stopPropagation()"></a></h4>
           <div class="indented-level2">
-            <panel type minimized>
+            <panel type minimized class="algolia-no-index">
               <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Apdx C (FAQs) → Where is everything? <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
               <div>
                 <h3 id="where-is-everything">Where is everything? <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="where-is-everything" class="anchor"></span><a class="fa fa-anchor" href="#where-is-everything" onclick="event.stopPropagation()"></a></h3>
@@ -1136,7 +1137,7 @@
               </div>
             </panel>
             <p></p>
-            <panel type minimized>
+            <panel type minimized class="algolia-no-index">
               <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Forming Teams <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
               <div>
                 <p><img src="/website/admin/images/team.png" width="300px"><br>
@@ -1172,11 +1173,11 @@
               </div>
             </panel>
             <p></p>
-            <panel type minimized>
+            <panel type minimized class="algolia-no-index">
               <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Textbooks <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
               <div>
                 <p>This module is supported by a customized online textbook <a href="/website/se-book-adapted/index.html"><strong><em>Software Engineering for Self-Directed Learners</em></strong> (CS2103 edition)</a>, integrated into this module website. While it is in a dynamic Web page format, there is a way to save the main text as pdf files. Printer-friendly versions have been provided too. In addition, <mark>a PDF version of the full textbook will be provided</mark> at the start of the semester, via LumiNUS.</p>
-                <panel type class="embedding" minimized><template slot="_header">
+                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Using this Website → Saving as PDF files <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                   </template>
                   <div>
@@ -1187,13 +1188,13 @@
               </div>
             </panel>
             <p></p>
-            <panel type minimized>
+            <panel type minimized class="algolia-no-index">
               <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Grade Breakdown <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
               <div>
                 <p>
                   <pic src="/website/admin/1109045cf26a4f803aa8db3f0dd176d5.png"></pic>
                 </p>
-                <panel type class="embedding" minimized><template slot="_header">
+                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Participation Marks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                   </template>
                   <div>
@@ -1238,7 +1239,7 @@
                         <li>-1 for each <em>professional conduct</em> criterion in which you score below average (based on the average of ratings received).</li>
                       </ul>
                       <div class="indented-level2">
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Conduct) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -1281,7 +1282,7 @@
                         <li>No penalty for scoring low on <em>competency criteria</em>.</li>
                       </ul>
                       <div class="indented-level2">
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Competency) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -1347,7 +1348,7 @@
                   </div>
                 </panel>
                 <p></p>
-                <panel type class="embedding" minimized><template slot="_header">
+                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Individual Project (iP) Grading <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                   </template>
                   <div>
@@ -1378,7 +1379,7 @@
                   </div>
                 </panel>
                 <p></p>
-                <panel type class="embedding" minimized><template slot="_header">
+                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Team Project (tP) Grading <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                   </template>
                   <div>
@@ -1399,7 +1400,7 @@
                           <li>tutors (based on product demo and user guide)</li>
                           <li>peers from other teams (based on peer testing and user guide)</li>
                         </ul>
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -1506,7 +1507,7 @@
                         <li>Step 1: Evaluate the effort for the entire project. This is evaluated by peers who tested your product, and tutors.</li>
                       </ul>
                       <div class="indented-level2">
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Questions used for Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -1528,7 +1529,7 @@
                         <li>Step 2: Evaluate how much of that effort can be attributed to you. This is evaluated by team members, and tutors.</li>
                       </ul>
                       <div class="indented-level2">
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -1536,7 +1537,7 @@
                               <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the product implementation (excluding UG, DG, and team-based tasks) is,</strong>
                             </p>
                             <div>
-                              <panel type="seamless"><template slot="_header">
+                              <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                   <p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p>
                                 </template>
                                 <ul radio-group="2ef43" class="radio-list">
@@ -1571,7 +1572,7 @@
                         <li>functionality bugs in your work found by others during the <a href="/website/admin/tp-pe.html#tp-practical-exam">Practical Exam (PE)</a></li>
                         <li>your test code <span class="dimmed">(note <span trigger="click" for="modal:projectGradingQA-testingExpectations" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:projectGradingQA-testingExpectations'].show()" class="trigger-click">our expectations for automated testing</span>)</span></li>
                       </ol>
-                      <b-modal id="modal:projectGradingQA-testingExpectations" hide-footer size="lg" modal-class="mb-zoom" ref="modal:projectGradingQA-testingExpectations"><template slot="modal-title">Our expectations for automated testing in the project</template>
+                      <b-modal id="modal:projectGradingQA-testingExpectations" hide-footer size="lg" modal-class="mb-zoom" ref="modal:projectGradingQA-testingExpectations" class="algolia-no-index"><template slot="modal-title">Our expectations for automated testing in the project</template>
                           <div>
                           <ul>
                             <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Write <em>some</em> automated tests</strong></span> so that we can evaluate your ability to write tests.</li>
@@ -1633,7 +1634,7 @@
                           <li>Step 1: Evaluate the whole UG and DG. This is evaluated by peers who tested your product, and tutors.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for User Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1653,7 +1654,7 @@
                         </div>
                         <p></p>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Developer Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1676,7 +1677,7 @@
                           <li>Step 2: Evaluate how much of that effort can be attributed to you. This is evaluated by team members, and tutors.</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the UG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1684,7 +1685,7 @@
                                 <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the User Guide is,</strong>
                               </p>
                               <span id="equalShareScale">
-                                <panel type="seamless"><template slot="_header">
+                                <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                     <p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p>
                                   </template>
                                   <ul radio-group="186a5" class="radio-list">
@@ -1702,7 +1703,7 @@
                         </div>
                         <p></p>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the DG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -1710,7 +1711,7 @@
                                 <thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the Developer Guide is,</strong>
                               </p>
                               <div>
-                                <panel type="seamless"><template slot="_header">
+                                <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                     <p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p>
                                   </template>
                                   <ul radio-group="2ef43" class="radio-list">
@@ -1776,7 +1777,7 @@
                           <box>
                             <div>
                               <p><strong>These are considered DG bugs (if they hinder the reader):</strong></p>
-                              <panel type="seamless"><template slot="_header">
+                              <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                   <p>Those given as possible UG bugs ...</p>
                                 </template>
                                 <div>
@@ -1923,7 +1924,7 @@
                       <p><big><strong>5B. Team-tasks:</strong></big></p>
                       <p><strong>Evaluates:</strong> How much you contributed to team-tasks</p>
                       <div class="indented-level1">
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Expectations: Examples of team-tasks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -1957,7 +1958,7 @@
                   </div>
                 </panel>
                 <p></p>
-                <panel type class="embedding" minimized><template slot="_header">
+                <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Exams <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                   </template>
                   <div>
@@ -2076,7 +2077,7 @@
               </div>
             </panel>
             <p></p>
-            <panel type minimized>
+            <panel type minimized class="algolia-no-index">
               <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Apdx C (FAQs) → What are the differences between CS2103T and CS2103? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></span>
               <div>
                 <h3 id="what-are-the-differences-between-cs2103t-and-cs2103-optional">What are the differences between CS2103T and CS2103? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></small></small><span id="what-are-the-differences-between-cs2103t-and-cs2103-optional" class="anchor"></span><a class="fa fa-anchor" href="#what-are-the-differences-between-cs2103t-and-cs2103-optional" onclick="event.stopPropagation()"></a></h3>
@@ -2088,7 +2089,7 @@
               </div>
             </panel>
             <p></p>
-            <panel type minimized>
+            <panel type minimized class="algolia-no-index">
               <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Apdx C (FAQs) → Why the workload is so high? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></span>
               <div>
                 <h3 id="why-the-workload-is-so-high-optional">Why the workload is so high? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></small></small><span id="why-the-workload-is-so-high-optional" class="anchor"></span><a class="fa fa-anchor" href="#why-the-workload-is-so-high-optional" onclick="event.stopPropagation()"></a></h3>
@@ -2104,7 +2105,7 @@
               </div>
             </panel>
             <p></p>
-            <panel type minimized>
+            <panel type minimized class="algolia-no-index">
               <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Apdx C (FAQs) → What are the extra requirements to get an A+? <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
               <div>
                 <h3 id="what-are-the-extra-requirements-to-get-an-a">What are the extra requirements to get an A+? <small><small><span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="what-are-the-extra-requirements-to-get-an-a" class="anchor"></span><a class="fa fa-anchor" href="#what-are-the-extra-requirements-to-get-an-a" onclick="event.stopPropagation()"></a></h3>
@@ -2151,7 +2152,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -2165,6 +2166,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

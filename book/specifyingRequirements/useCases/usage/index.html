@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -68,11 +69,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Advantages of use cases</p>
                             </template>
                             <question>
@@ -83,14 +84,14 @@
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Extensions encourage us to consider all situations a software product might face during its operations.</li>
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. They encourage us to identify and optimize the typical scenario of usage over exceptional usage scenarios.</li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(a) (b) (c) (d)</p>
                               </div>
                             </question>
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about use cases</p>
                             </template>
                             <question>
@@ -101,7 +102,7 @@
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Use cases are better than user stories.</li>
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Use cases can be expressed at different levels of abstraction.</li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(a)(b)(d)</p>
                                 <p>Explanation: It is not correct to say one format is better than the other. It depends on the context.</p>
                               </div>
@@ -130,6 +131,21 @@
   const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

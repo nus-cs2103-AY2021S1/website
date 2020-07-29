@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -63,7 +64,7 @@
                     </ul>
                   </box>
                   <p><strong>Test cases can be determined based on the specification, reviewing similar existing systems, or comparing to the past behavior of the SUT.</strong></p>
-                  <panel type="seamless">
+                  <panel type="seamless" class="algolia-no-index">
                     <span slot="header" class="card-title"><span><span class="dimmed">Other details a test case can contain</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                     A more elaborate test case can have other details such as those given below.
                     <ul>
@@ -87,7 +88,7 @@
                   <box>
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example: In the browser example above, a test case failure is implied if the scrollbar remains disabled after loading <code v-pre>longfile.html</code>. The defect/bug causing that failure could be an uninitialized variable.</p>
                   </box>
-                  <panel type="seamless">
+                  <panel type="seamless" class="algolia-no-index">
                     <span slot="header" class="card-title"><span><span class="dimmed">A deeper look at the definition of testing</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                     <p>Here is another definition of testing:</p>
                     <blockquote>
@@ -403,7 +404,7 @@
                   <box>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
                   </box>
-                  <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
+                  <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                     <div>
                       <p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
                     </div>
@@ -424,7 +425,7 @@
                     <p>In some contexts, you will achieve your testing mission better through a more scripted approach; in other contexts, your mission will benefit more from the ability to create and improve tests as you execute them. I find that most situations benefit from a mix of scripted and exploratory approaches.
                       --<span trigger="click" for="modal:ExploratoryWhen-bach-et-explained" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ExploratoryWhen-bach-et-explained'].show()" class="trigger-click">[source: bach-et-explained]</span></p>
                   </blockquote>
-                  <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
+                  <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                     <div>
                       <p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
                     </div>
@@ -545,7 +546,7 @@
                     <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
                       <p><strong>An automated test case can be run programmatically and the result of the test case (pass or fail) is determined programmatically.</strong> Compared to manual testing, automated testing reduces the effort required to run tests repeatedly and increases precision of testing (because manual testing is susceptible to human errors).</p>
                     </tab>
-                    <tab><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
+                    <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
                       <iframe width="560" height="315" src="https://www.youtube.com/embed/RbSlW8jZFe8?end=79&version=3" frameborder="0" allowfullscreen></iframe></tab>
                   </tabs>
                 </div>
@@ -566,7 +567,7 @@
                   <ol>
                     <li>
                       <p>Store the test input in the text file <code v-pre>input.txt</code>.</p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>input.txt</code></span></p>
                         </template>
                         <pre><code class="hljs" v-pre><span>add Valid Name p/12345 valid@email.butNoPrefix<br></span><span>add Valid Name 12345 e/valid@email.butPhonePrefixMissing<br></span></code></pre>
@@ -574,7 +575,7 @@
                     </li>
                     <li>
                       <p>Store the output you expect from the SUT in another text file <code v-pre>expected.txt</code>.</p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example <code v-pre>expected.txt</code></span></p>
                         </template>
                         <pre><code class="hljs" v-pre><span>Command: || [add Valid Name p/12345 valid@email.butNoPrefix]<br></span><span>Invalid command format: add <br></span><span><br></span><span>Command: || [add Valid Name 12345 e/valid@email.butPhonePrefixMissing]<br></span><span>Invalid command format: add <br></span></code></pre>
@@ -593,7 +594,7 @@
                           <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you are using Windows, use a normal command window to run the app, not a Power Shell window.</p>
                         </li>
                       </ul>
-                      <panel minimized><template slot="_header"></template>
+                      <panel minimized class="algolia-no-index"><template slot="_header"></template>
                         <span slot="header" class="card-title"><span>More on the <code v-pre>&gt;</code> operator and the <code v-pre>&lt;</code> operator <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span>
                         <p>A CLI program takes input from the keyboard and outputs to the console. That is because those two are default input and output streams, respectively. But you can change that behavior using <code v-pre>&lt;</code> and <code v-pre>&gt;</code> operators. For example, if you run <code v-pre>AddressBook</code> in a command window, the output will be shown in the console, but if you run it like this,</p>
                         <pre><code class="no-line-numbers hljs sh" v-pre><span>java AddressBook &gt; output.txt <br></span></code></pre>
@@ -684,7 +685,7 @@
                       </li>
                       <li>
                         <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
-                        <panel type="seamless" class="non-printable"><template slot="_header">
+                        <panel type="seamless" class="non-printable algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> demo video of automated testing of a Web application</p>
                           </template>
                           <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
@@ -768,11 +769,11 @@
               <div class="indented-less">
                 <div>
                   <p><strong><em>Dependency injection</em> is the process of 'injecting' objects to replace current dependencies with a different object.</strong> This is often used to inject <span trigger="click" for="modal:explainDi-stub" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:explainDi-stub'].show()" class="trigger-click">stubs</span> to isolate the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> from its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects it depends on</span>dependencies</span> so that it can be tested in isolation.</p>
-                  <b-modal id="modal:explainDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:explainDi-stub"><template slot="modal-title"></template>
+                  <b-modal id="modal:explainDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:explainDi-stub" class="algolia-no-index"><template slot="modal-title"></template>
                     <div>
                       <div>
                         <p>
-                          <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what"><template slot="_header">
+                          <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what" class="algolia-no-index"><template slot="_header">
                               <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Unit Testing → What →</span></p>
                             </template></panel>
                         </p>
@@ -825,11 +826,11 @@
                               </panel>
                             </div>
                             <div>
-                              <panel expandable><template slot="_header">
+                              <panel expandable class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                 </template>
                                 <div>
-                                  <panel><template slot="_header">
+                                  <panel class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Purpose of stubs</p>
                                     </template>
                                     <question>
@@ -838,7 +839,7 @@
                                         <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
                                         <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
                                       </ul>
-                                      <div slot="answer">
+                                      <div slot="answer" class="algolia-no-index">
                                         <p>True</p>
                                       </div>
                                     </question>
@@ -866,7 +867,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -880,6 +881,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

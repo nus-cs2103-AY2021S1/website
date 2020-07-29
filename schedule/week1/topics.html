@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -31,7 +32,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -50,7 +51,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -79,7 +80,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -109,7 +110,7 @@
           </box>
           <p></p>
           <div></div>
-          <panel type="seamless"><template slot="_header">
+          <panel type="seamless" class="algolia-no-index"><template slot="_header">
               <p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p>
             </template>
             <span id="toc">
@@ -374,11 +375,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about OOP</p>
                               </template>
                               <question>
@@ -397,7 +398,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Java can be used to write procedural code</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Prolog follows the Logic Programming paradigm</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>A) (a)(b)(c)(e)</p>
                                   <p>Explanation: While many languages support the OO paradigm, OO is not a language itself.</p>
                                   <p>B) Choose the correct statement</p>
@@ -408,7 +409,7 @@
                             </panel>
                           </div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> procedural vs OOP</p>
                               </template>
                               <question>
@@ -417,7 +418,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>True.</p>
                                   <p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p>
                                 </div>
@@ -604,12 +605,12 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
 
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Describe objects in the given scenario</p>
                               </template>
                               <question has-input="true">
@@ -625,7 +626,7 @@
                                   <li>Objects interact by sending messages.</li>
                                   <li>OOP does not demand that the virtual world object network follow the real world exactly.</li>
                                 </ol>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <blockquote>
                                     <p>[1] Object Oriented Programming (OOP) views the world as a network of interacting objects.</p>
                                   </blockquote>
@@ -744,7 +745,7 @@
                     <p></p>
                     <div>
                       <p>The concept of <strong><em>Objects</em> in OOP is an <span trigger="click" for="modal:objectsAsAbstractions-abstraction" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:objectsAsAbstractions-abstraction'].show()" class="trigger-click">abstraction</span> mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities</strong> i.e. ignore details of data formats and the method implementation details and work at the level of objects.</p>
-                      <b-modal id="modal:objectsAsAbstractions-abstraction" hide-footer size="lg" modal-class="mb-zoom" ref="modal:objectsAsAbstractions-abstraction"><template slot="modal-title">Definition: Abstraction</template>
+                      <b-modal id="modal:objectsAsAbstractions-abstraction" hide-footer size="lg" modal-class="mb-zoom" ref="modal:objectsAsAbstractions-abstraction" class="algolia-no-index"><template slot="modal-title">Definition: Abstraction</template>
                         <div>
                           <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
                         </div>
@@ -786,11 +787,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Choose the correct statement.</p>
                               </template>
                               <question>
@@ -799,10 +800,10 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. An object is an encapsulation because it packages data and behavior into one bundle.</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. An object is an encapsulation because it lets us think in terms of higher level concepts such as Students rather than student-related functions and data separately.</li>
                                 </ul>
-                                <div slot="hint">
+                                <div slot="hint" class="algolia-no-index">
                                   <p>Don't confuse encapsulation with abstraction.</p>
                                 </div>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>Choose the correct statement</p>
                                   <p>(a)</p>
                                   <p>Explanation: The second statement should be: An object is an <strong>abstraction</strong> <s>encapsulation</s> because it lets ...</p>
@@ -884,7 +885,7 @@
                           </template>
                           <div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Identify Classes and Objects</p>
                                 </template>
                                 <question>
@@ -892,7 +893,7 @@
                                   <box>
                                     <p>A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p>
                                   </box>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <div class="table-responsive">
                                       <table class="markbind-table table table-bordered table-striped">
                                         <thead>
@@ -926,14 +927,14 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Classes for CityConnect app</p>
                                 </template>
                                 <question has-input="true">
                                   <p>Assume you are writing a CLI program called <strong><code v-pre>CityConnect</code></strong> for storing and querying distances between cities. The behavior is as follows:</p>
                                   <pre><code class="hljs" v-pre><span>Welcome to CityConnect!<br></span><span><br></span><span>Enter command: addroute Clementi BuonaVista 12<br></span><span>Route from Clementi to BuonaVista with distance 12km added<br></span><span><br></span><span>Enter command: getdistance Clementi BuonaVista<br></span><span>Distance from Clementi to BuonaVista is 12<br></span><span><br></span><span>Enter command: getdistance Clementi JurongWest<br></span><span>No route exists from Clementi to JurongWest!<br></span><span><br></span><span>Enter command: addroute Clementi JurongWest 24<br></span><span>Route from Clementi to JurongWest with distance 24km added<br></span><span><br></span><span>Enter command: getdistance Clementi JurongWest<br></span><span>Distance from Clementi to JurongWest is 24<br></span><span><br></span><span>Enter command: exit<br></span><span><br></span></code></pre>
                                   <p>What classes would you have in your code if you write your program based on the OOP paradigm?</p>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>One class you can have is <code v-pre>Route</code></p>
                                   </div>
                                 </question>
@@ -1066,7 +1067,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();<br></span><span><br></span><span>        System.out.println(c.getArea());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">5</span>);<br></span><span>        System.out.println(c.getArea());<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                   <pre><code class="hljs" v-pre><span>0<br></span><span>78<br></span></code></pre>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <ul>
                                       <li>Put the <code v-pre>Circle</code> class in a file called <code v-pre>Circle.java</code></li>
                                     </ul>
@@ -1130,7 +1131,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Circle c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>,<span class="hljs-number">2</span>, <span class="hljs-number">5</span>);<br></span><span><br></span><span>        c.setX(<span class="hljs-number">4</span>);<br></span><span>        c.setY(<span class="hljs-number">5</span>);<br></span><span>        c.setRadius(<span class="hljs-number">6</span>);<br></span><span>        System.out.println(<span class="hljs-string">"x      : "</span> + c.getX());<br></span><span>        System.out.println(<span class="hljs-string">"y      : "</span> + c.getY());<br></span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());<br></span><span>        System.out.println(<span class="hljs-string">"area   : "</span> + c.getArea());<br></span><span><br></span><span>        c.setRadius(-<span class="hljs-number">5</span>);<br></span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, -<span class="hljs-number">4</span>);<br></span><span>        System.out.println(<span class="hljs-string">"radius : "</span> + c.getRadius());<br></span><span><br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                   <pre><code class="hljs" v-pre><span>x      : 4<br></span><span>y      : 5<br></span><span>radius : 6.0<br></span><span>area   : 113<br></span><span>radius : 0.0<br></span><span>radius : 0.0<br></span></code></pre>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>Partial solution:</p>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> x, <span class="hljs-keyword">int</span> y, <span class="hljs-keyword">double</span> radius)</span></span>{<br></span><span>    setX(x);<br></span><span>    setY(y);<br></span><span>    setRadius(radius);<br></span><span>}<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{<br></span><span>    <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);<br></span><span>}<br></span></code></pre>
                                   </div>
@@ -1184,11 +1185,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as a class-level variables</p>
                               </template>
                               <question>
@@ -1199,7 +1200,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: <code v-pre>Task</code>, variable: <code v-pre>totalPendingTasks</code></li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code v-pre>ArrayList</code>, variable: <code v-pre>total</code> (i.e., total items in a given <code v-pre>ArrayList</code> object)</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(c)</p>
                                   <p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p>
                                 </div>
@@ -1277,7 +1278,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        Circle c = <span class="hljs-keyword">new</span> Circle();<br></span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">10</span>);<br></span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());<br></span><span>        c = <span class="hljs-keyword">new</span> Circle(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, -<span class="hljs-number">15</span>);<br></span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());<br></span><span>        c.setRadius(<span class="hljs-number">12</span>);<br></span><span>        System.out.println(<span class="hljs-string">"max radius used so far : "</span> + Circle.getMaxRadius());<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                   <pre><code class="hljs" v-pre><span>max radius used so far : 0.0<br></span><span>max radius used so far : 10.0<br></span><span>max radius used so far : 10.0<br></span><span>max radius used so far : 12.0<br></span></code></pre>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>You can use a <code v-pre>static</code> variable <code v-pre>maxRadius</code> to track the maximum value used for the <code v-pre>radius</code> attribute so far.</p>
                                     <p>Partial solution:</p>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{<br></span><span>    <span class="hljs-keyword">this</span>.radius = Math.max(radius, <span class="hljs-number">0</span>);<br></span><span>    <span class="hljs-keyword">if</span> (maxRadius &lt; <span class="hljs-keyword">this</span>.radius){<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
@@ -1366,7 +1367,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// Add your method here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        describe(<span class="hljs-string">"Red"</span>, Priority.HIGH);<br></span><span>        describe(<span class="hljs-string">"Orange"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Blue"</span>, Priority.MEDIUM);<br></span><span>        describe(<span class="hljs-string">"Green"</span>, Priority.LOW);<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                   <pre><code class="hljs" v-pre><span>Red indicates high priority<br></span><span>Orange indicates medium priority<br></span><span>Blue indicates medium priority<br></span><span>Green indicates low priority<br></span></code></pre>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>Use a <code v-pre>switch</code> statement to select between possible values for <code v-pre>Priority</code>.</p>
                                     <pre><code class="hljs java" v-pre><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">describe</span><span class="hljs-params">(String color, Priority p)</span> </span>{<br></span><span>        <span class="hljs-keyword">switch</span> (p) {<br></span><span>            <span class="hljs-keyword">case</span> LOW:<br></span><span>                System.out.println(color + <span class="hljs-string">" indicates low priority"</span>);<br></span><span>                <span class="hljs-keyword">break</span>;<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>    }<br></span></code></pre>
                                     <p>Code for the enumeration is given below:</p>
@@ -1453,11 +1454,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statements are correct</p>
                               </template>
                               <question>
@@ -1469,7 +1470,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the superclass will not affect its subclasses.</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(a) (b) (c) (d)</p>
                                   <p>Explanation: (e) is incorrect. Because subclasses inherit behavior from the superclass, any changes to the superclass could affect subclasses.</p>
                                 </div>
@@ -1566,7 +1567,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what"><template slot="_header">
+                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → What</span></p>
                           </template></panel>
                       </p>
@@ -1608,7 +1609,7 @@
                             </tbody>
                           </table>
                         </div>
-                        <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading"><template slot="modal-title"><strong>Overloading</strong></template>
+                        <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading" class="algolia-no-index"><template slot="modal-title"><strong>Overloading</strong></template>
                           <div>
                             <div></div>
                             <p></p>
@@ -1674,11 +1675,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which methods override?</p>
                               </template>
                               <question>
@@ -1692,7 +1693,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>d</p>
                                   <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
                                 </div>
@@ -1816,7 +1817,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-comment">// create a todo task and print details</span><br></span><span>        Todo t = <span class="hljs-keyword">new</span> Todo(<span class="hljs-string">"Read a good book"</span>);<br></span><span>        System.out.println(t.getDescription());<br></span><span>        System.out.println(t.isDone());<br></span><span><br></span><span>        <span class="hljs-comment">// change todo fields and print again</span><br></span><span>        t.setDone(<span class="hljs-keyword">true</span>);<br></span><span>        System.out.println(t.isDone());<br></span><span><br></span><span>        <span class="hljs-comment">// create a deadline task and print details</span><br></span><span>        Deadline d = <span class="hljs-keyword">new</span> Deadline(<span class="hljs-string">"Read textbook"</span>, <span class="hljs-string">"Nov 16"</span>);<br></span><span>        System.out.println(d.getDescription());<br></span><span>        System.out.println(d.isDone());<br></span><span>        System.out.println(d.getBy());<br></span><span><br></span><span>        <span class="hljs-comment">// change deadline details and print again</span><br></span><span>        d.setDone(<span class="hljs-keyword">true</span>);<br></span><span>        d.setBy(<span class="hljs-string">"Postponed to Nov 18th"</span>);<br></span><span>        System.out.println(d.isDone());<br></span><span>        System.out.println(d.getBy());<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                   <pre><code class="hljs" v-pre><span>Read a good book<br></span><span>false<br></span><span>true<br></span><span>Read textbook<br></span><span>false<br></span><span>Nov 16<br></span><span>true<br></span><span>Postponed to Nov 18th<br></span></code></pre>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p><code v-pre>Todo</code> class is given below. You can follow a similar approach for the <code v-pre>Deadline</code> class.</p>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todo</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">protected</span> <span class="hljs-keyword">boolean</span> isDone;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Todo</span><span class="hljs-params">(String description)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(description);<br></span><span>        isDone = <span class="hljs-keyword">false</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   </div>
@@ -1919,7 +1920,7 @@
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){<br></span><span>            System.out.println(c.speak());<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                         <pre><code class="hljs" v-pre><span>Mittens: Meow<br></span><span>Snowball: Meow<br></span></code></pre>
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed">The <code v-pre>Cat</code> class</span></p>
                           </template>
                           <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Cat</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Cat</span><span class="hljs-params">(String name)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(name);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Meow"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
@@ -1931,7 +1932,7 @@
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Cat[] cats = <span class="hljs-keyword">new</span> Cat[]{<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>)};<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Dog[] dogs = <span class="hljs-keyword">new</span> Dog[]{<br></span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">for</span> (Cat c: cats){<br></span><span>            System.out.println(c.speak());<br></span><span>        }<br></span><span>        <span class="hljs-keyword">for</span>(Dog d: dogs){<br></span><span>            System.out.println(d.speak());<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                         <pre><code class="hljs" v-pre><span>Mittens: Meow<br></span><span>Snowball: Meow<br></span><span>Spot: Woof<br></span></code></pre>
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed">The <code v-pre>Dog</code> class</span></p>
                           </template>
                           <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Dog</span><span class="hljs-params">(String name)</span> </span>{<br></span><span>        <span class="hljs-keyword">super</span>(name);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> name + <span class="hljs-string">": Woof"</span>;<br></span><span>    }<br></span><span>}<br></span></code></pre>
@@ -1943,7 +1944,7 @@
                         <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PetShelter2</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Animal[] animals = <span class="hljs-keyword">new</span> Animal[]{<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Mittens"</span>),<br></span><span>            <span class="hljs-keyword">new</span> Cat(<span class="hljs-string">"Snowball"</span>),<br></span><span>            <span class="hljs-keyword">new</span> Dog(<span class="hljs-string">"Spot"</span>)};<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        <span class="hljs-keyword">for</span> (Animal a: animals){<br></span><span>            System.out.println(a.speak());<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
                         <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                         <pre><code class="hljs" v-pre><span>Mittens: Meow<br></span><span>Snowball: Meow<br></span><span>Spot: Woof<br></span></code></pre>
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed">The <code v-pre>Animal</code>, <code v-pre>Cat</code>, and <code v-pre>Dog</code> classes</span></p>
                           </template>
                           <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Animal</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">protected</span> String name;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Animal</span><span class="hljs-params">(String name)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.name = name;<br></span><span>    }<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">speak</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> name;<br></span><span>    }<br></span><span>}<br></span></code></pre>
@@ -1982,7 +1983,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.radius = radius;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.height = height;<br></span><span>        <span class="hljs-keyword">this</span>.width = width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> height * width;<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You may use an array of size 100 to store the shapes.</p>
-                                  <panel type="seamless"><template slot="_header">
+                                  <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                       <p>Partial solution</p>
                                     </template>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Shape[] shapes = <span class="hljs-keyword">new</span> Shape[<span class="hljs-number">100</span>];<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> shapeCount = <span class="hljs-number">0</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addShape</span><span class="hljs-params">(Shape s)</span></span>{<br></span><span>        shapes[shapeCount] = s;<br></span><span>        shapeCount++;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>}<br></span></code></pre>
@@ -2119,7 +2120,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> radius;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Circle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> radius)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.radius = radius;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>)(Math.PI * radius * radius);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Circle of area "</span> + area());<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.height = height;<br></span><span>        <span class="hljs-keyword">this</span>.width = width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> height * width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Rectangle of area "</span> + area());<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p>Add the missing <code v-pre>Shape</code> class <mark>as an abstract class with two abstract methods</mark>.</p>
-                                  <panel type="seamless"><template slot="_header">
+                                  <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                       <p>Partial solution</p>
                                     </template>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Shape</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span></span>;<br></span><span>    <span class="hljs-comment">// ...</span><br></span><span>}<br></span></code></pre>
@@ -2128,7 +2129,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about abstract classes</p>
                                 </template>
                                 <question>
@@ -2139,7 +2140,7 @@
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. An abstract class need not contain any concrete methods.</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. An abstract class cannot be instantiated.</li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>(b)(c)(d)</p>
                                     <p>Explanation: A concrete class cannot contain even a single abstract method.</p>
                                   </div>
@@ -2249,7 +2250,7 @@
                         </ol>
                       </box>
                       <p><strong>Interfaces can also contain <span trigger="click" for="modal:javaInterfaces-constants" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:javaInterfaces-constants'].show()" class="trigger-click">constants</span> and static methods</strong>.</p>
-                      <b-modal id="modal:javaInterfaces-constants" hide-footer size="lg" modal-class="mb-zoom" ref="modal:javaInterfaces-constants"><template slot="modal-title"><span class="dimmed">Textbook »</span></template>
+                      <b-modal id="modal:javaInterfaces-constants" hide-footer size="lg" modal-class="mb-zoom" ref="modal:javaInterfaces-constants" class="algolia-no-index"><template slot="modal-title"><span class="dimmed">Textbook »</span></template>
                         <div>
                           <div></div>
                           <p></p>
@@ -2300,7 +2301,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Rectangle</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Shape</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> height;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> width;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Rectangle</span><span class="hljs-params">(<span class="hljs-keyword">int</span> height, <span class="hljs-keyword">int</span> width)</span></span>{<br></span><span>        <span class="hljs-keyword">this</span>.height = height;<br></span><span>        <span class="hljs-keyword">this</span>.width = width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">area</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> height * width;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Rectangle of area "</span> + area());<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p>Add the missing <code v-pre>Printable</code> interface. Add the missing methods of the <code v-pre>Person</code> class given below.</p>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Printable</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> String name;<br></span><span><br></span><span>    <span class="hljs-comment">// todo: add missing methods</span><br></span><span>}<br></span></code></pre>
-                                  <panel type="seamless"><template slot="_header">
+                                  <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                       <p>Partial solution</p>
                                     </template>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Printable</span> </span>{<br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span></code></pre>
@@ -2333,7 +2334,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what"><template slot="_header">
+                        <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → What</span></p>
                           </template></panel>
                       </p>
@@ -2385,11 +2386,11 @@
                         </div>
                       </box>
                       <p><strong><span trigger="click" for="modal:dynamicAndStatic-overriding" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:dynamicAndStatic-overriding'].show()" class="trigger-click">Overridden methods</span> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.</strong></p>
-                      <b-modal id="modal:dynamicAndStatic-overriding" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overriding"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                      <b-modal id="modal:dynamicAndStatic-overriding" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overriding" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                         <div>
                           <div>
                             <p>
-                              <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what"><template slot="_header">
+                              <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what" class="algolia-no-index"><template slot="_header">
                                   <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → What</span></p>
                                 </template></panel>
                             </p>
@@ -2434,7 +2435,7 @@
                                       </tbody>
                                     </table>
                                   </div>
-                                  <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading"><template slot="modal-title"><strong>Overloading</strong></template>
+                                  <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading" class="algolia-no-index"><template slot="modal-title"><strong>Overloading</strong></template>
                                     <div>
                                       <div></div>
                                       <p></p>
@@ -2500,11 +2501,11 @@
                               </div>
                               <div>
                                 <div>
-                                  <panel expandable><template slot="_header">
+                                  <panel expandable class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                     </template>
                                     <div>
-                                      <panel><template slot="_header">
+                                      <panel class="algolia-no-index"><template slot="_header">
                                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which methods override?</p>
                                         </template>
                                         <question>
@@ -2518,7 +2519,7 @@
                                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
                                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e</li>
                                           </ul>
-                                          <div slot="answer">
+                                          <div slot="answer" class="algolia-no-index">
                                             <p>d</p>
                                             <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
                                           </div>
@@ -2543,7 +2544,7 @@
                         </div>
                       </box>
                       <p><strong>In contrast, <span trigger="click" for="modal:dynamicAndStatic-overloading" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:dynamicAndStatic-overloading'].show()" class="trigger-click">overloaded</span> methods are resolved using static binding.</strong></p>
-                      <b-modal id="modal:dynamicAndStatic-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overloading"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                      <b-modal id="modal:dynamicAndStatic-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overloading" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                         <div>
                           <div></div>
                           <p></p>
@@ -2631,10 +2632,10 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/oop/inheritance/substitutability/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/substitutability"><template slot="_header">
+                        <panel src="/website/book/oop/inheritance/substitutability/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/substitutability" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → Substitutability</span></p>
                           </template></panel>
-                        <panel src="/website/book/oop/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/dynamicAndStaticBinding"><template slot="_header">
+                        <panel src="/website/book/oop/inheritance/dynamicAndStaticBinding/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/dynamicAndStaticBinding" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Paradigms → Object Oriented Programming → Inheritance → Dynamic and Static Binding</span></p>
                           </template></panel>
                       </p>
@@ -2654,11 +2655,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Concepts related to polymorphism</p>
                               </template>
                               <question>
@@ -2668,7 +2669,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> b. dynamic binding</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> c. operation overloading</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(c)</p>
                                   <p>Explanation: Operation overriding is the one that is related, not operation overloading.</p>
                                 </div>
@@ -2818,7 +2819,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"Adding numbers to the list"</span>);<br></span><span>        addNumber(<span class="hljs-number">3</span>);<br></span><span>        addNumber(<span class="hljs-number">8</span>);<br></span><span>        addNumber(<span class="hljs-number">24</span>);<br></span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());<br></span><span>        System.out.println(<span class="hljs-string">"8 in the list : "</span> + isFound(<span class="hljs-number">8</span>) );<br></span><span>        System.out.println(<span class="hljs-string">"5 in the list : "</span> + isFound(<span class="hljs-number">5</span>) );<br></span><span>        removeNumber(<span class="hljs-number">8</span>);<br></span><span>        System.out.println(<span class="hljs-string">"The total is: "</span> + getTotal());<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
                                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                   <pre><code class="hljs" v-pre><span>Adding numbers to the list<br></span><span>[3]<br></span><span>[3, 8]<br></span><span>[3, 8, 24]<br></span><span>The total is: 35<br></span><span>8 in the list : true<br></span><span>5 in the list : false<br></span><span>[3, 24]<br></span><span>The total is: 27<br></span></code></pre>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>Partial solution:</p>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.ArrayList;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> ArrayList&lt;Integer&gt; numbers = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span> </span>{<br></span><span>        numbers.add(Integer.valueOf(i));<br></span><span>        System.out.println(numbers);<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// ...</span><br></span><span><br></span><span>}<br></span></code></pre>
                                   </div>
@@ -2874,7 +2875,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();<br></span><span><br></span><span>    <span class="hljs-comment">//<span class="hljs-doctag">TODO:</span> add your methods here</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        addToRoster(<span class="hljs-string">"Monday"</span>); <span class="hljs-comment">// i.e., one person signed up for Monday</span><br></span><span>        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., one person signed up for Wednesday</span><br></span><span>        addToRoster(<span class="hljs-string">"Wednesday"</span>); <span class="hljs-comment">// i.e., another person signed up for Wednesday</span><br></span><span>        addToRoster(<span class="hljs-string">"Friday"</span>);<br></span><span>        addToRoster(<span class="hljs-string">"Monday"</span>);<br></span><span>        printRoster();<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
                                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                   <pre><code class="hljs" v-pre><span>Monday =&gt; 2<br></span><span>Friday =&gt; 1<br></span><span>Wednesday =&gt; 2<br></span></code></pre>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>Partial solution:</p>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.HashMap;<br></span><span><span class="hljs-keyword">import</span> java.util.Map;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> HashMap&lt;String, Integer&gt; roster = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addToRoster</span><span class="hljs-params">(String day)</span> </span>{<br></span><span>        <span class="hljs-keyword">if</span> (roster.containsKey(day)){<br></span><span>            Integer newValue = Integer.valueOf(roster.get(day).intValue() + <span class="hljs-number">1</span>);<br></span><span>            roster.put(day, newValue);<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            roster.put(day, Integer.valueOf(<span class="hljs-number">1</span>));<br></span><span>        }<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-comment">// ...</span><br></span><span>}<br></span></code></pre>
                                   </div>
@@ -3076,11 +3077,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Benefit of exceptions</p>
                               </template>
                               <question>
@@ -3090,7 +3091,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Exceptions can prevent problems that happen in the environment.</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Exceptions allow us to handle in one location an error raised in another location.</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(a) (c)</p>
                                   <p>Explanation: Exceptions cannot <em>prevent</em> problems in the environment. They can only be used to handle and recover from such problems.</p>
                                 </div>
@@ -3254,7 +3255,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">//...</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        printArea(<span class="hljs-string">"3x4"</span>);<br></span><span>        printArea(<span class="hljs-string">"3xy"</span>);<br></span><span>        printArea(<span class="hljs-string">"3x"</span>);<br></span><span>        printArea(<span class="hljs-string">"3"</span>);<br></span><span>        printArea(<span class="hljs-string">"3x4x5"</span>);<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                   <pre><code class="hljs" v-pre><span>3x4=12<br></span><span>WIDTH or HEIGHT is not a number: 3xy<br></span><span>WIDTH or HEIGHT is missing: 3x<br></span><span>WIDTH or HEIGHT is missing: 3<br></span><span>Too many dimensions: 3x4x5<br></span></code></pre>
-                                  <panel type="seamless"><template slot="_header">
+                                  <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                       <p>Partial solution</p>
                                     </template>
                                     <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printArea</span><span class="hljs-params">(String descriptor)</span></span>{<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            System.out.println(descriptor + <span class="hljs-string">"="</span> + calculateArea(descriptor));<br></span><span>        } <span class="hljs-keyword">catch</span> (NumberFormatException e) {<br></span><span>            System.out.println(<span class="hljs-string">"WIDTH or HEIGHT is not a number: "</span> + descriptor);<br></span><span>        } <span class="hljs-comment">// add more catch blocks here</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(String descriptor)</span> <span class="hljs-keyword">throws</span> IllegalShapeException </span>{<br></span><span>        String[] dimensions = descriptor.split(<span class="hljs-string">"x"</span>);<br></span><span><br></span><span>        <span class="hljs-comment">//throw IllegalShapeException here if dimensions.length &gt; 2</span><br></span><span><br></span><span>        <span class="hljs-keyword">return</span> Integer.parseInt(dimensions[<span class="hljs-number">0</span>]) * Integer.parseInt(dimensions[<span class="hljs-number">1</span>]);<br></span><span>    }<br></span><span><br></span><span><br></span><span>}<br></span></code></pre>
@@ -3354,7 +3355,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -3368,6 +3369,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

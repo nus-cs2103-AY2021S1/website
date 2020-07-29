@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -31,7 +32,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -50,7 +51,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -79,7 +80,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -104,7 +105,7 @@
           <p></p>
           <h1 id="week-11-fri-oct-23rd-topics">Week 11 <small><small><span class="dimmed">[Fri, Oct 23rd]</span> - Topics</small></small><span id="week-11-fri-oct-23rd-topics" class="anchor"></span><a class="fa fa-anchor" href="#week-11-fri-oct-23rd-topics" onclick="event.stopPropagation()"></a></h1>
           <div></div>
-          <panel type="seamless"><template slot="_header">
+          <panel type="seamless" class="algolia-no-index"><template slot="_header">
               <p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p>
             </template>
             <span id="toc">
@@ -498,16 +499,16 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> polymorphism and Observer pattern.</p>
                               </template>
                               <question has-input="true">
                                 <p>Explain how polymorphism is used in the Observer pattern.</p>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <img src="/website/book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90">
                                   <p></p>
                                   <p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code v-pre>notifyObservers()</code> method, it is treating all <code v-pre>ConcreteObserver</code> objects as a general type called <code v-pre>Observer</code> and calling the <code v-pre>update()</code> method of each of them. However, the <code v-pre>update()</code> method of each <code v-pre>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code v-pre>update()</code> method shows polymorphic behavior.</p>
@@ -519,7 +520,7 @@
                             </panel>
                           </div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Observer patter usage</p>
                               </template>
                               <question>
@@ -528,7 +529,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="991dd" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="991dd" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>True</p>
                                   <p>Explanation: Yes. For example, when applying the Observer pattern to an MVC structure, Views can get notified and update themselves about a change to the Model without the Model having to depend on the Views.</p>
                                 </div>
@@ -556,7 +557,7 @@
                   </div>
                 </div>
               </div>
-              <panel type="seamless" popup-url="/website/book/designPatterns/more/otherDesignPatterns" id="design-design-patterns-other-design-patterns">
+              <panel type="seamless" popup-url="/website/book/designPatterns/more/otherDesignPatterns" id="design-design-patterns-other-design-patterns" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.1c</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-design-patterns-other-design-patterns"><small><span class="font-weight-bold text-muted"><span>Design → Design Patterns →</span></span></small> <strong><span>Other design patterns</span></strong><span id="design-design-patterns-other-design-patterns" class="anchor"></span><a class="fa fa-anchor" href="#design-design-patterns-other-design-patterns" onclick="event.stopPropagation()"></a></h4>
@@ -599,7 +600,7 @@
               </div>
               <p><span id="W11-1d"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/designPatterns/more/combiningDesignPatterns" id="design-design-patterns-combining-design-patterns">
+              <panel type="seamless" popup-url="/website/book/designPatterns/more/combiningDesignPatterns" id="design-design-patterns-combining-design-patterns" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.1d</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-design-patterns-combining-design-patterns"><small><span class="font-weight-bold text-muted"><span>Design → Design Patterns →</span></span></small> <strong><span>Combining design patterns</span></strong><span id="design-design-patterns-combining-design-patterns" class="anchor"></span><a class="fa fa-anchor" href="#design-design-patterns-combining-design-patterns" onclick="event.stopPropagation()"></a></h4>
@@ -663,7 +664,7 @@
               </div>
               <p><span id="W11-1e"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/designPatterns/more/usingDesignPatterns" id="design-design-patterns-using-design-patterns">
+              <panel type="seamless" popup-url="/website/book/designPatterns/more/usingDesignPatterns" id="design-design-patterns-using-design-patterns" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.1e</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-design-patterns-using-design-patterns"><small><span class="font-weight-bold text-muted"><span>Design → Design Patterns →</span></span></small> <strong><span>Using design patterns</span></strong><span id="design-design-patterns-using-design-patterns" class="anchor"></span><a class="fa fa-anchor" href="#design-design-patterns-using-design-patterns" onclick="event.stopPropagation()"></a></h4>
@@ -699,7 +700,7 @@
               </div>
               <p><span id="W11-1f"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/designPatterns/more/vsPrinciples" id="design-design-patterns-design-patterns-versus-design-principles">
+              <panel type="seamless" popup-url="/website/book/designPatterns/more/vsPrinciples" id="design-design-patterns-design-patterns-versus-design-principles" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.1f</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-design-patterns-design-patterns-versus-design-principles"><small><span class="font-weight-bold text-muted"><span>Design → Design Patterns →</span></span></small> <strong><span>Design patterns versus design principles</span></strong><span id="design-design-patterns-design-patterns-versus-design-principles" class="anchor"></span><a class="fa fa-anchor" href="#design-design-patterns-design-patterns-versus-design-principles" onclick="event.stopPropagation()"></a></h4>
@@ -725,7 +726,7 @@
               </div>
               <p><span id="W11-1g"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/designPatterns/more/otherTypesOfPatterns" id="design-design-patterns-other-types-of-patterns">
+              <panel type="seamless" popup-url="/website/book/designPatterns/more/otherTypesOfPatterns" id="design-design-patterns-other-types-of-patterns" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.1g</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-design-patterns-other-types-of-patterns"><small><span class="font-weight-bold text-muted"><span>Design → Design Patterns →</span></span></small> <strong><span>Other types of patterns</span></strong><span id="design-design-patterns-other-types-of-patterns" class="anchor"></span><a class="fa fa-anchor" href="#design-design-patterns-other-types-of-patterns" onclick="event.stopPropagation()"></a></h4>
@@ -753,11 +754,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Give a pattern from another domain</p>
                               </template>
                               <question has-input="true">
@@ -816,7 +817,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/architecture/introduction/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/architecture/introduction/what"><template slot="_header">
+                        <panel src="/website/book/architecture/introduction/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/architecture/introduction/what" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Architecture → Introduction → What</span></p>
                           </template></panel>
                       </p>
@@ -831,7 +832,7 @@
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> n-tier style, client-server style, event-driven style, transaction processing style, service-oriented style, pipes-and-filters style, message-driven style, broker style, ...</p>
                       </box>
-                      <b-modal id="modal:archiStyles-buildingArchitectures" hide-footer size="lg" modal-class="mb-zoom" ref="modal:archiStyles-buildingArchitectures"><template slot="modal-title">Building Architecture Styles</template>
+                      <b-modal id="modal:archiStyles-buildingArchitectures" hide-footer size="lg" modal-class="mb-zoom" ref="modal:archiStyles-buildingArchitectures" class="algolia-no-index"><template slot="modal-title">Building Architecture Styles</template>
                         <p><img src="https://inspectapedia.com/exterior/ArchitectureStyles.jpg" width="600"><br>
                           <sub>source: <a href="https://inspectapedia.com">https://inspectapedia.com</a></sub></p>
                       </b-modal>
@@ -1024,11 +1025,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Comment on how to use architecture styles in Minesweeper.</p>
                               </template>
                               <question has-input="true">
@@ -1040,7 +1041,7 @@
                                   <li>SOA (Service Oriented Architecture)</li>
                                   <li>multi-layer (n-tier)</li>
                                 </ol>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <ol>
                                     <li>Client-server – Clients can be the game UI running on player PCs. The server can be the game logic running on one machine.</li>
                                     <li>Transaction-processing – Each player action can be packaged as transactions (by the client component running on the player PC) and sent to the server. Server processes them in the order they are received.</li>
@@ -1065,7 +1066,7 @@
               </div>
               <p><span id="W11-2h"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/architecture/architecturalStyles/more/moreStyles" id="design-architecture-styles-more-styles">
+              <panel type="seamless" popup-url="/website/book/architecture/architecturalStyles/more/moreStyles" id="design-architecture-styles-more-styles" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.2h</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-architecture-styles-more-styles"><small><span class="font-weight-bold text-muted"><span>Design → Architecture → Styles →</span></span></small> <strong><span>More styles</span></strong><span id="design-architecture-styles-more-styles" class="anchor"></span><a class="fa fa-anchor" href="#design-architecture-styles-more-styles" onclick="event.stopPropagation()"></a></h4>
@@ -1345,7 +1346,7 @@
                       <p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 9 test cases:</p>
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p>see steps</p>
                           </template>
                           <p>Let's first consider inputs p1 and p2:</p>
@@ -1723,7 +1724,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/testCaseDesign/combiningTestInputs/heuristicValid/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testCaseDesign/combiningTestInputs/heuristicValid"><template slot="_header">
+                        <panel src="/website/book/testCaseDesign/combiningTestInputs/heuristicValid/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testCaseDesign/combiningTestInputs/heuristicValid" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: Each Valid Input at Least Once in a Positive Test Case</span></p>
                           </template></panel>
                       </p>
@@ -1735,7 +1736,7 @@
                     <p></p>
                     <div>
                       <p>Consider the <span for="modal:heuristic-valid-test-case" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:heuristic-valid-test-case'].show()" class="trigger-click">test cases designed in [Heuristic: each valid input at least once in a positive test case]</span>.</p>
-                      <b-modal id="modal:heuristic-valid-test-case" hide-footer size="lg" modal-class="mb-zoom" ref="modal:heuristic-valid-test-case"><template slot="modal-title"><strong>Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case</strong></template>
+                      <b-modal id="modal:heuristic-valid-test-case" hide-footer size="lg" modal-class="mb-zoom" ref="modal:heuristic-valid-test-case" class="algolia-no-index"><template slot="modal-title"><strong>Extract from Quality Assurance → Test Case Design → Combining Test Inputs → Heuristic: each valid input at least once in a positive test case</strong></template>
                         <div>
                           <div class="table-responsive">
                             <table class="markbind-table table table-bordered table-striped">
@@ -1846,11 +1847,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Can define test cases precisely</p>
                               </template>
                               <question>
@@ -1859,7 +1860,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>False</p>
                                   <p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give you precise number of test cases.</p>
                                 </div>
@@ -2252,7 +2253,7 @@
                           </template>
                           <div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about test input combinations</p>
                                 </template>
                                 <question>
@@ -2263,7 +2264,7 @@
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
                                     <li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>a</p>
                                     <p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p>
                                   </div>
@@ -2271,7 +2272,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code v-pre>consume</code> method</p>
                                 </template>
                                 <question>
@@ -2398,11 +2399,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about validation and verification.</p>
                               </template>
                               <question>
@@ -2415,7 +2416,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. QA covers both validation and verification.</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. A system crash is more likely to be a verification failure than a validation failure.</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
                                   <p>Explanation:</p>
                                   <p>Whether something belongs under validation or verification is not that important. What is more important is that we do both.</p>
@@ -2453,7 +2454,7 @@
                     <p></p>
                     <div>
                       <p><strong>Formal verification uses mathematical techniques to prove the correctness of a program.</strong></p>
-                      <panel type="seamless" class="non-printable"><template slot="_header">
+                      <panel type="seamless" class="non-printable algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> An introduction to Formal Methods</p>
                         </template>
                         <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/89fKiaMxHrA" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
@@ -2474,11 +2475,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Absence of errors</p>
                               </template>
                               <question>
@@ -2487,7 +2488,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="cefed" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="cefed" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>True</p>
                                   <p>Explanation: While using formal methods is more expensive than testing, it indeed can prove the correctness of a piece of software conclusively, in certain contexts. Getting such proof via testing requires exhaustive testing, which is not practical to do in most cases.</p>
                                 </div>
@@ -2587,16 +2588,16 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Using a cool UI framework</p>
                               </template>
                               <question has-input="true">
                                 <p>One of your teammates is proposing to use a recently-released “cool” UI framework for your class project. List the pros and cons of this idea.</p>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>Pros</p>
                                   <ul>
                                     <li>The potential to create a much better product by reusing the framework.</li>
@@ -2721,11 +2722,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about APIs</p>
                               </template>
                               <question>
@@ -2737,7 +2738,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. The API forms the contract between the component developer and the component user.</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Sequence diagrams can be used to show how components interact with each other via APIs.</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(a) (c) (d) (e)</p>
                                   <p>Explanation: (b) is incorrect because private methods cannot be a part of the API</p>
                                 </div>
@@ -2745,7 +2746,7 @@
                             </panel>
                           </div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> True or False?</p>
                               </template>
                               <question>
@@ -2754,7 +2755,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="9bd8a" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>True</p>
                                   <p>Explanation: Yes, once you know the precise behavior expected of each component, you can start developing them in parallel.</p>
                                 </div>
@@ -2860,11 +2861,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statement about software frameworks</p>
                               </template>
                               <question>
@@ -2877,7 +2878,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. They are similar to reusable libraries but bigger.</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
                                   <p>Explanation: While both libraries and frameworks are reuse mechanisms, and both more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p>
                                 </div>
@@ -2885,7 +2886,7 @@
                             </panel>
                           </div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are frameworks?</p>
                               </template>
                               <question>
@@ -2896,7 +2897,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Drupal</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Ruby on Rails</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(a)(b)(c)(d)</p>
                                   <p>Explanation: These are frameworks.</p>
                                 </div>
@@ -2943,7 +2944,7 @@
                           <li>.NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and usually used on Windows machines.</li>
                         </ul>
                       </box>
-                      <b-modal id="modal:enterprise-application" hide-footer size modal-class="mb-zoom" ref="modal:enterprise-application"><template slot="modal-title"><strong>Enterprise Applications</strong></template>
+                      <b-modal id="modal:enterprise-application" hide-footer size modal-class="mb-zoom" ref="modal:enterprise-application" class="algolia-no-index"><template slot="modal-title"><strong>Enterprise Applications</strong></template>
                         <div>
                           <p><strong>Enterprise application</strong>: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.</p>
                         </div>
@@ -2983,7 +2984,7 @@
             <div class="indented-level1">
               <p><span id="W11-6a"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/reuse/cloudComputing/what" id="implementation-reuse-cloud-computing-what">
+              <panel type="seamless" popup-url="/website/book/reuse/cloudComputing/what" id="implementation-reuse-cloud-computing-what" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.6a</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="implementation-reuse-cloud-computing-what"><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Cloud Computing →</span></span></small> <strong><span>What</span></strong><span id="implementation-reuse-cloud-computing-what" class="anchor"></span><a class="fa fa-anchor" href="#implementation-reuse-cloud-computing-what" onclick="event.stopPropagation()"></a></h4>
@@ -3009,7 +3010,7 @@
               </div>
               <p><span id="W11-6b"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/reuse/cloudComputing/services" id="implementation-reuse-cloud-computing-iaas-paas-and-saas">
+              <panel type="seamless" popup-url="/website/book/reuse/cloudComputing/services" id="implementation-reuse-cloud-computing-iaas-paas-and-saas" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.6b</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="implementation-reuse-cloud-computing-iaas-paas-and-saas"><small><span class="font-weight-bold text-muted"><span>Implementation → Reuse → Cloud Computing →</span></span></small> <strong><span>Iaas, PaaS, and SaaS</span></strong><span id="implementation-reuse-cloud-computing-iaas-paas-and-saas" class="anchor"></span><a class="fa fa-anchor" href="#implementation-reuse-cloud-computing-iaas-paas-and-saas" onclick="event.stopPropagation()"></a></h4>
@@ -3040,11 +3041,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Google Calendar in which category?</p>
                               </template>
                               <question>
@@ -3054,7 +3055,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="7ed92" type="radio"> b. PaaS</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="7ed92" type="radio"> c. SaaS</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(c)</p>
                                   <p>Explanation: It is a <em>software</em> as a service. Instead of installing a calendar software on your desktop, you can use the Google Calendar software that lives ‘on the cloud’.</p>
                                 </div>
@@ -3098,7 +3099,7 @@
             <div class="indented-level1">
               <p><span id="W11-7a"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/modeling/modelingBehaviors/communicationDiagrams" id="design-modelling-modelling-behaviors-communication-diagrams">
+              <panel type="seamless" popup-url="/website/book/modeling/modelingBehaviors/communicationDiagrams" id="design-modelling-modelling-behaviors-communication-diagrams" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.7a</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-modelling-modelling-behaviors-communication-diagrams"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Behaviors</span></span></small> <strong><span>Communication diagrams</span></strong><span id="design-modelling-modelling-behaviors-communication-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-behaviors-communication-diagrams" onclick="event.stopPropagation()"></a></h4>
@@ -3130,7 +3131,7 @@
               </div>
               <p><span id="W11-7b"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/modeling/modelingBehaviors/stateMachineDiagrams" id="design-modelling-modelling-behaviors-state-machine-diagrams">
+              <panel type="seamless" popup-url="/website/book/modeling/modelingBehaviors/stateMachineDiagrams" id="design-modelling-modelling-behaviors-state-machine-diagrams" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.7b</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-modelling-modelling-behaviors-state-machine-diagrams"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Behaviors</span></span></small> <strong><span>State machine diagrams</span></strong><span id="design-modelling-modelling-behaviors-state-machine-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-behaviors-state-machine-diagrams" onclick="event.stopPropagation()"></a></h4>
@@ -3175,7 +3176,7 @@
               </div>
               <p><span id="W11-7c"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/modeling/modelingStructures/deploymentDiagrams" id="design-modelling-modelling-structure-deployment-diagrams">
+              <panel type="seamless" popup-url="/website/book/modeling/modelingStructures/deploymentDiagrams" id="design-modelling-modelling-structure-deployment-diagrams" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.7c</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-modelling-modelling-structure-deployment-diagrams"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Structure →</span></span></small> <strong><span>Deployment diagrams</span></strong><span id="design-modelling-modelling-structure-deployment-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-structure-deployment-diagrams" onclick="event.stopPropagation()"></a></h4>
@@ -3207,7 +3208,7 @@
               </div>
               <p><span id="W11-7d"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/modeling/modelingStructures/componentDiagrams" id="design-modelling-modelling-structure-component-diagrams">
+              <panel type="seamless" popup-url="/website/book/modeling/modelingStructures/componentDiagrams" id="design-modelling-modelling-structure-component-diagrams" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.7d</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-modelling-modelling-structure-component-diagrams"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Structure →</span></span></small> <strong><span>Component diagrams</span></strong><span id="design-modelling-modelling-structure-component-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-structure-component-diagrams" onclick="event.stopPropagation()"></a></h4>
@@ -3238,7 +3239,7 @@
               </div>
               <p><span id="W11-7e"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/modeling/modelingStructures/packageDiagrams" id="design-modelling-modelling-structure-package-diagrams">
+              <panel type="seamless" popup-url="/website/book/modeling/modelingStructures/packageDiagrams" id="design-modelling-modelling-structure-package-diagrams" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.7e</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-modelling-modelling-structure-package-diagrams"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Structure →</span></span></small> <strong><span>Package diagrams</span></strong><span id="design-modelling-modelling-structure-package-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-structure-package-diagrams" onclick="event.stopPropagation()"></a></h4>
@@ -3269,7 +3270,7 @@
               </div>
               <p><span id="W11-7f"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/modeling/modelingStructures/compositeStructureDiagrams" id="design-modelling-modelling-structure-composite-structure-diagrams">
+              <panel type="seamless" popup-url="/website/book/modeling/modelingStructures/compositeStructureDiagrams" id="design-modelling-modelling-structure-composite-structure-diagrams" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.7f</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-modelling-modelling-structure-composite-structure-diagrams"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Structure →</span></span></small> <strong><span>Composite structure diagrams</span></strong><span id="design-modelling-modelling-structure-composite-structure-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-structure-composite-structure-diagrams" onclick="event.stopPropagation()"></a></h4>
@@ -3301,7 +3302,7 @@
               </div>
               <p><span id="W11-7g"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/modeling/modelingBehaviors/timingDiagrams" id="design-modelling-modelling-behaviors-timing-diagrams">
+              <panel type="seamless" popup-url="/website/book/modeling/modelingBehaviors/timingDiagrams" id="design-modelling-modelling-behaviors-timing-diagrams" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.7g</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-modelling-modelling-behaviors-timing-diagrams"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Behaviors</span></span></small> <strong><span>Timing diagrams</span></strong><span id="design-modelling-modelling-behaviors-timing-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-behaviors-timing-diagrams" onclick="event.stopPropagation()"></a></h4>
@@ -3333,7 +3334,7 @@
               </div>
               <p><span id="W11-7h"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/modeling/modelingBehaviors/interactionOverviewDiagrams" id="design-modelling-modelling-behaviors-interaction-overview-diagrams">
+              <panel type="seamless" popup-url="/website/book/modeling/modelingBehaviors/interactionOverviewDiagrams" id="design-modelling-modelling-behaviors-interaction-overview-diagrams" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W11.7h</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="design-modelling-modelling-behaviors-interaction-overview-diagrams"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Behaviors</span></span></small> <strong><span>Interaction overview diagrams</span></strong><span id="design-modelling-modelling-behaviors-interaction-overview-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-behaviors-interaction-overview-diagrams" onclick="event.stopPropagation()"></a></h4>
@@ -3401,7 +3402,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -3415,6 +3416,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

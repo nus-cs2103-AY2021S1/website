@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../markbind/css/site-nav.css">
@@ -31,7 +32,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -50,7 +51,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -79,7 +80,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -310,7 +311,7 @@
                   <ul>
                     <li><strong>Landing page (<code v-pre>docs/index.md</code>)</strong>: Update to look like a real product (rather than a project for learning SE) if you haven't done so already. In particular, <mark>update the <code v-pre>Ui.png</code> to match the current product (<span trigger="click" for="modal:v13-tipsForProductScreenshot" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v13-tipsForProductScreenshot'].show()" class="trigger-click"><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> tips</span>)</mark>.</li>
                   </ul>
-                  <b-modal id="modal:v13-tipsForProductScreenshot" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v13-tipsForProductScreenshot"><template slot="modal-title">Admin → Project Deliverables → Website</template>
+                  <b-modal id="modal:v13-tipsForProductScreenshot" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v13-tipsForProductScreenshot" class="algolia-no-index"><template slot="modal-title">Admin → Project Deliverables → Website</template>
                       <div>
                       <box>
                         <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Some common sense tips for a good product screenshot</strong></p>
@@ -331,17 +332,17 @@
                               <p>Reason: Distracting annotations.</p>
                               <img src="/website/admin/images/Ui-notGood1.png" width="600">
                             </tab>
-                              <tab><template slot="_header">👎 Not Good</template>
+                              <tab class="algolia-no-index"><template slot="_header">👎 Not Good</template>
                               <p>Reason: Not enough data. Should have used real profile pictures instead of placeholder images.</p>
                               <img src="/website/admin/images/Ui-notGood2.png" width="600">
                             </tab>
-                              <tab><template slot="_header">👎 Not Good</template>
+                              <tab class="algolia-no-index"><template slot="_header">👎 Not Good</template>
                               <p>Reason: screenshot not cropped cleanly (contains extra background details)</p>
                               <img src="/website/admin/images/Ui-notGood3.png" width="600">
                             </tab>
-                            <tab><template slot="_header">👍 Good</template>
+                            <tab class="algolia-no-index"><template slot="_header">👍 Good</template>
                               <img src="/website/admin/images/Ui-good1.png" width="600"></tab>
-                              <tab><template slot="_header">👍 Good</template>
+                              <tab class="algolia-no-index"><template slot="_header">👍 Good</template>
                               <img src="https://ay1920s2-cs2103-w15-2.github.io/main/images/Ui.png" width="600"></tab>
                           </tabs>
                         </panel>
@@ -350,7 +351,7 @@
                   </b-modal>
                 </div>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Deliverables → User Guide <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -370,7 +371,7 @@
                           <li>Also note the following constraint:</li>
                         </ul>
                         <div class="indented-level2">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Constraint-File-Size <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -444,7 +445,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -458,6 +459,21 @@
   const enableSearch = true
 </script>
 <script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

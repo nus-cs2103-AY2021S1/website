@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/page-nav.css">
@@ -31,7 +32,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -50,7 +51,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -79,7 +80,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -104,7 +105,7 @@
           <p></p>
           <h1 id="week-8-fri-oct-2nd-topics">Week 8 <small><small><span class="dimmed">[Fri, Oct 2nd]</span> - Topics</small></small><span id="week-8-fri-oct-2nd-topics" class="anchor"></span><a class="fa fa-anchor" href="#week-8-fri-oct-2nd-topics" onclick="event.stopPropagation()"></a></h1>
           <div></div>
-          <panel type="seamless"><template slot="_header">
+          <panel type="seamless" class="algolia-no-index"><template slot="_header">
               <p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p>
             </template>
             <span id="toc">
@@ -311,7 +312,7 @@
                     <div>
                       <p><span class="dimmed"><small><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Contents of the panels given below belong to a different chapter; they have been embedded here for convenience and are collapsed by default to avoid content duplication in the printed version.</small></span></p>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/introduction/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Introduction → What</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/ClassDiagrams</p>
@@ -319,12 +320,12 @@
                       </p>
                       <p><strong>Classes form the basis of class diagrams.</strong></p>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/classes/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/classes/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Classes → What</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Classes</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/classLevelMembers/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/classLevelMembers/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Class-Level Members → What</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Class-Level Members</p>
@@ -332,12 +333,12 @@
                       </p>
                       <p><strong><em>Associations</em> are the main connections among the classes in a class diagram.</strong></p>
                       <p>
-                        <panel type="seamless" src="/website/book/oop/associations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/oop/associations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Associations → What</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Associations</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → What</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Associations</p>
@@ -351,32 +352,32 @@
                       </box>
                       <p>In addition, <strong>associations can show additional decorations such as <em>association labels</em>, <em>association roles</em>, <em>multiplicity</em> and <em>navigability</em></strong> to add more information to a class diagram.</p>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/labels/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → Labels</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Labels</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/roles/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → Roles</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Roles</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/oop/associations/multiplicity/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/oop/associations/multiplicity/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Associations → Multiplicity</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Multiplicity</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/multiplicity/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → Multiplicity</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Multiplicity</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/oop/associations/navigability/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/oop/associations/navigability/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Associations → Navigability</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Navigability</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/associations/navigability/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Associations → Navigability</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Navigability</p>
@@ -395,7 +396,7 @@
                           </template>
                           <div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which association notations are shown?</p>
                                 </template>
                                 <question>
@@ -408,7 +409,7 @@
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. association multiplicity</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. class names</li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>(a) (b) (c) (d)</p>
                                     <p>Explanation: '1’ is a <em>multiplicity</em>, ‘mentored by’ is a <em>label</em>, and ‘mentor’ is a <em>role</em>.</p>
                                   </div>
@@ -416,7 +417,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Class Diagram</p>
                                 </template>
                                 <question>
@@ -427,7 +428,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Class Diagram for Box etc.</p>
                                 </template>
                                 <question>
@@ -466,7 +467,7 @@
                     <p></p>
                     <div>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/objectDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/objectDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Object Diagrams → Introduction</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Object Diagrams</p>
@@ -474,12 +475,12 @@
                       </p>
                       <p><strong>Object diagrams can be used to complement class diagrams.</strong> For example, you can use object diagrams to model different object structures that can result from a design represented by a given class diagram.</p>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/objectDiagrams/objects/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Object Diagrams → Objects</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OD/Objects</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/objectDiagrams/associations/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/objectDiagrams/associations/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Object Diagrams → Associations</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OD/Associations</p>
@@ -493,13 +494,13 @@
                           </template>
                           <div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw an Object Diagram for Box etc.</p>
                                 </template>
                                 <question>
                                   <p>This question is based on the following question from another topic:</p>
                                   <div>
-                                    <panel><template slot="_header">
+                                    <panel class="algolia-no-index"><template slot="_header">
                                         <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Class Diagram for Box etc.</p>
                                       </template>
                                       <question>
@@ -564,11 +565,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which class diagrams match object diagram?</p>
                               </template>
                               <question>
@@ -579,7 +580,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 1</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> 2</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(1) (2)</p>
                                   <p>Explanation: Both class diagrams allow one <code v-pre>Unit</code> object to be linked to one <code v-pre>Item</code> object.</p>
                                 </div>
@@ -629,7 +630,7 @@
               </div>
               <p><span id="W8-1e"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/uml/notes/constraints" id="tools-uml-constraints">
+              <panel type="seamless" popup-url="/website/book/uml/notes/constraints" id="tools-uml-constraints" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W8.1e</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="tools-uml-constraints"><small><span class="font-weight-bold text-muted"><span>Tools → UML →</span></span></small> <strong><span>Constraints</span></strong><span id="tools-uml-constraints" class="anchor"></span><a class="fa fa-anchor" href="#tools-uml-constraints" onclick="event.stopPropagation()"></a></h4>
@@ -638,7 +639,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/uml/notes/notes/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/uml/notes/notes"><template slot="_header">
+                        <panel src="/website/book/uml/notes/notes/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/uml/notes/notes" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Notes</span></p>
                           </template></panel>
                       </p>
@@ -715,7 +716,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/modeling/modelingStructures/classDiagramsBasic"><template slot="_header">
+                        <panel src="/website/book/modeling/modelingStructures/classDiagramsBasic/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/modeling/modelingStructures/classDiagramsBasic" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Modeling → Class Diagrams (Basic)</span></p>
                           </template></panel>
                       </p>
@@ -730,12 +731,12 @@
                       <div class="indented">
                         <h5 id="modeling-inheritance">Modeling inheritance<span id="modeling-inheritance" class="anchor"></span><a class="fa fa-anchor" href="#modeling-inheritance" onclick="event.stopPropagation()"></a></h5>
                         <p>
-                          <panel type="seamless" src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → What</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Inheritance</p>
                             </template></panel>
-                          <panel type="seamless" src="/website/book/uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/uml/classDiagrams/classInheritance/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Inheritance → What</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Inheritance</p>
@@ -743,12 +744,12 @@
                         </p>
                         <h5 id="modeling-composition">Modeling composition<span id="modeling-composition" class="anchor"></span><a class="fa fa-anchor" href="#modeling-composition" onclick="event.stopPropagation()"></a></h5>
                         <p>
-                          <panel type="seamless" src="/website/book/oop/associations/composition/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/oop/associations/composition/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Associations → Composition</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Composition</p>
                             </template></panel>
-                          <panel type="seamless" src="/website/book/uml/classDiagrams/composition/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/uml/classDiagrams/composition/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Composition → What</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Composition</p>
@@ -756,12 +757,12 @@
                         </p>
                         <h5 id="modeling-aggregation">Modeling aggregation<span id="modeling-aggregation" class="anchor"></span><a class="fa fa-anchor" href="#modeling-aggregation" onclick="event.stopPropagation()"></a></h5>
                         <p>
-                          <panel type="seamless" src="/website/book/oop/associations/aggregation/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/oop/associations/aggregation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Associations → Aggregation</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Aggregation</p>
                             </template></panel>
-                          <panel type="seamless" src="/website/book/uml/classDiagrams/aggregation/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/uml/classDiagrams/aggregation/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Aggregation → What</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Aggregation</p>
@@ -769,12 +770,12 @@
                         </p>
                         <h5 id="modeling-dependencies">Modeling dependencies<span id="modeling-dependencies" class="anchor"></span><a class="fa fa-anchor" href="#modeling-dependencies" onclick="event.stopPropagation()"></a></h5>
                         <p>
-                          <panel type="seamless" src="/website/book/oop/associations/dependencies/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/oop/associations/dependencies/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Associations → Dependencies</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Dependencies</p>
                             </template></panel>
-                          <panel type="seamless" src="/website/book/uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/uml/classDiagrams/dependencies/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Dependencies → What</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Dependencies</p>
@@ -785,12 +786,12 @@
                       <div class="indented">
                         <h5 id="modeling-enumerations">Modeling enumerations<span id="modeling-enumerations" class="anchor"></span><a class="fa fa-anchor" href="#modeling-enumerations" onclick="event.stopPropagation()"></a></h5>
                         <p>
-                          <panel type="seamless" src="/website/book/oop/classes/enumerations/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/oop/classes/enumerations/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Classes → Enumerations</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Enumerations</p>
                             </template></panel>
-                          <panel type="seamless" src="/website/book/uml/classDiagrams/enumerations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/uml/classDiagrams/enumerations/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Enumerations → What</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Enumerations</p>
@@ -798,12 +799,12 @@
                         </p>
                         <h5 id="modeling-abstract-classes">Modeling abstract classes<span id="modeling-abstract-classes" class="anchor"></span><a class="fa fa-anchor" href="#modeling-abstract-classes" onclick="event.stopPropagation()"></a></h5>
                         <p>
-                          <panel type="seamless" src="/website/book/oop/inheritance/abstractClasses/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/oop/inheritance/abstractClasses/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → Abstract Classes</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/AbstractClasses</p>
                             </template></panel>
-                          <panel type="seamless" src="/website/book/uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/uml/classDiagrams/abstractClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Abstract Classes → What</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AbstractClasses</p>
@@ -811,12 +812,12 @@
                         </p>
                         <h5 id="modeling-interfaces">Modeling interfaces<span id="modeling-interfaces" class="anchor"></span><a class="fa fa-anchor" href="#modeling-interfaces" onclick="event.stopPropagation()"></a></h5>
                         <p>
-                          <panel type="seamless" src="/website/book/oop/inheritance/interfaces/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/oop/inheritance/interfaces/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → Interfaces</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/Interfaces</p>
                             </template></panel>
-                          <panel type="seamless" src="/website/book/uml/classDiagrams/interfaces/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                          <panel type="seamless" src="/website/book/uml/classDiagrams/interfaces/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Interfaces → What</p>
                             </template><template slot="_alt">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/Interfaces</p>
@@ -831,7 +832,7 @@
                           </template>
                           <div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about class diagram.</p>
                                 </template>
                                 <question>
@@ -845,7 +846,7 @@
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. A <code v-pre>Snake</code> head can be in more than one <code v-pre>SnakeHeadSquare</code></li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. The <code v-pre>Board</code> has exactly 5 <code v-pre>Snake</code>s.</li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p><s>(a)</s>(b)(c)(d)(e)</p>
                                     <p>Explanation:</p>
                                     <p>(a) does not match because a <code v-pre>Snake</code> may or may not belong to a <code v-pre>Board</code> (multiplicity is <code v-pre>0..1</code>)<br>
@@ -858,7 +859,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain notations in the class diagram</p>
                                 </template>
                                 <question>
@@ -868,7 +869,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw a Class Diagram for the code (<code v-pre>StokItem</code>, <code v-pre>Inventory</code>, <code v-pre>Review</code> etc.)</p>
                                 </template>
                                 <question>
@@ -922,7 +923,7 @@
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code v-pre>Man</code> class and a <code v-pre>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association rather than specifically owned by either the <code v-pre>Man</code> object or the <code v-pre>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code v-pre>Marriage</code> class, to store such information.</p>
                       </box>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Association Classes → What</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AssociationClasses</p>
@@ -937,11 +938,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are suitable as an Association Class?</p>
                               </template>
                               <question>
@@ -954,7 +955,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(a)(b)<s>(c)</s>(d)</p>
                                   <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would be suitable as an association class.</p>
                                 </div>
@@ -1012,33 +1013,33 @@
                     <p></p>
                     <div>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Introduction</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SequenceDiagrams</p>
                           </template></panel>
                       </p>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Basic Notation</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Basic</p>
                           </template></panel>
                       </p>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Loops</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Loops</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Object Creation</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Creation</p>
                           </template></panel>
                       </p>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Minimal Notation</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Minimal</p>
@@ -1052,7 +1053,7 @@
                           </template>
                           <div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram about Machine</p>
                                 </template>
                                 <question>
@@ -1062,7 +1063,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw a Sequence Diagram for the code (<code v-pre>PersonList</code>, <code v-pre>Person</code>, <code v-pre>Tag</code>)</p>
                                 </template>
                                 <question>
@@ -1081,7 +1082,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find notation errors in sequence diagram</p>
                                 </template>
                                 <question>
@@ -1118,28 +1119,28 @@
                     <p></p>
                     <div>
                       <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/objectDeletion/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/objectDeletion/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Object Deletion</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Deletion</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/selfInvocation/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/selfInvocation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Self-Invocation</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Self-Invocation</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Alternative Paths</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Alternative</p>
                           </template></panel>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Optional Paths</p>
                           </template><template slot="_alt">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Optional</p>
                           </template></panel>
                       </p>
-                      <panel type="seamless"><template slot="_header">
+                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Calls to Static Methods</p>
                         </template><template slot="_alt">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/StaticMethods</p>
@@ -1170,7 +1171,7 @@
                           </template>
                           <div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What’s going on here?</p>
                                 </template>
                                 <question>
@@ -1184,28 +1185,28 @@
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code v-pre>Logic</code> object’s methods is calling another of its methods.</li>
                                     <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. <code v-pre>Minefield</code> object is calling a method of <code v-pre>Logic</code>.</li>
                                   </ul>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <p>(d)</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram (<code v-pre>ParserFactory</code>)</p>
                                 </template>
                                 <question>
                                   <p>Explain the interactions depicted in this sequence diagram.</p>
                                   <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
                                   <p></p>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>First, the <code v-pre>createParser()</code> method of an existing <code v-pre>ParserFactory</code> object is called. Then, ...</p>
                                   </div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Sequence Diagram for printing a quote</p>
                                 </template>
                                 <question>
@@ -1213,7 +1214,7 @@
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isFirstPage) {<br></span><span>    <span class="hljs-keyword">new</span> Quote().print();<br></span><span>}<br></span></code></pre>
                                   <p>The <code v-pre>Quote</code> class:</p>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{<br></span><span><br></span><span>    String q;<br></span><span><br></span><span>    Quote(){<br></span><span>        q = generate();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{<br></span><span>        System.out.println(q);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <ul>
                                       <li>Show <code v-pre>new Quote().print();</code> as two method calls.</li>
                                       <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code v-pre>print()</code> method is called.</li>
@@ -1346,7 +1347,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what"><template slot="_header">
+                        <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Unit Testing → What →</span></p>
                           </template></panel>
                       </p>
@@ -1381,7 +1382,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/testing/testingTypes/integrationTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/integrationTesting/what"><template slot="_header">
+                        <panel src="/website/book/testing/testingTypes/integrationTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/integrationTesting/what" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Integration Testing → What →</span></p>
                           </template></panel>
                       </p>
@@ -1502,7 +1503,7 @@
                           </li>
                           <li>
                             <p><a href="http://seleniumhq.org/"><strong>Selenium</strong></a> can be used to automate testing of Web application UIs<br></p>
-                            <panel type="seamless" class="non-printable"><template slot="_header">
+                            <panel type="seamless" class="non-printable algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> demo video of automated testing of a Web application</p>
                               </template>
                               <p>This video shows automated testing of the <a href="http://github.com/teammates/teammates">TEAMMATES</a> Web app using Selenium</p>
@@ -1514,11 +1515,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> API testing vs GUI testing</p>
                               </template>
                               <question>
@@ -1527,7 +1528,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="dc574" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>False</p>
                                 </div>
                               </question>
@@ -1661,11 +1662,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about system testing and acceptance testing.</p>
                               </template>
                               <question>
@@ -1678,7 +1679,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. In smaller projects, the developers may do system testing as well, in addition to developer testing.</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. If system testing is adequately done, we need not do acceptance testing.</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
                                   <p>Explanation:</p>
                                   <p>(b) is correct because system testing can aim to cover all specified behaviors and can even go beyond the system specification. Therefore, system testing is typically more extensive than acceptance testing.</p>
@@ -1767,7 +1768,7 @@
                       <box>
                         <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p>
                       </box>
-                      <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
+                      <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                         <div>
                           <p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
                         </div>
@@ -1775,11 +1776,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about exploratory and scripted testing</p>
                               </template>
                               <question>
@@ -1788,7 +1789,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="db31a" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>False</p>
                                   <p>Explanation: “Scripted” means test cases are predetermined. They need not be an executable script. However, exploratory testing is usually manual.</p>
                                 </div>
@@ -1796,7 +1797,7 @@
                             </panel>
                           </div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which testing technique is better?</p>
                               </template>
                               <question>
@@ -1808,19 +1809,19 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> d. reactive testing</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> e. These are different names used to describe exploratory testing.</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(e)</p>
                                 </div>
                               </question>
                             </panel>
                           </div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Explain the concept of exploratory testing using Minesweeper as an example.</p>
                               </template>
                               <question has-input="true">
                                 <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p>
                                 </div>
                               </question>
@@ -1859,7 +1860,7 @@
                         <p>In some contexts, you will achieve your testing mission better through a more scripted approach; in other contexts, your mission will benefit more from the ability to create and improve tests as you execute them. I find that most situations benefit from a mix of scripted and exploratory approaches.
                           --<span trigger="click" for="modal:ExploratoryWhen-bach-et-explained" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ExploratoryWhen-bach-et-explained'].show()" class="trigger-click">[source: bach-et-explained]</span></p>
                       </blockquote>
-                      <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
+                      <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
                         <div>
                           <p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a> -- James Bach is an industry thought leader in software testing).</p>
                         </div>
@@ -1867,11 +1868,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which is better?</p>
                               </template>
                               <question>
@@ -1880,7 +1881,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="7d3ff" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="7d3ff" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>False</p>
                                   <p>Explanation: Each has pros and cons. Relying on only one is not recommended. A combination is better.</p>
                                 </div>
@@ -1942,11 +1943,11 @@
                     <p></p>
                     <div>
                       <p><strong><em>Dependency injection</em> is the process of 'injecting' objects to replace current dependencies with a different object.</strong> This is often used to inject <span trigger="click" for="modal:explainDi-stub" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:explainDi-stub'].show()" class="trigger-click">stubs</span> to isolate the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> from its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects it depends on</span>dependencies</span> so that it can be tested in isolation.</p>
-                      <b-modal id="modal:explainDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:explainDi-stub"><template slot="modal-title"></template>
+                      <b-modal id="modal:explainDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:explainDi-stub" class="algolia-no-index"><template slot="modal-title"></template>
                         <div>
                           <div>
                             <p>
-                              <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what"><template slot="_header">
+                              <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what" class="algolia-no-index"><template slot="_header">
                                   <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Unit Testing → What →</span></p>
                                 </template></panel>
                             </p>
@@ -1999,11 +2000,11 @@
                                   </panel>
                                 </div>
                                 <div>
-                                  <panel expandable><template slot="_header">
+                                  <panel expandable class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                     </template>
                                     <div>
-                                      <panel><template slot="_header">
+                                      <panel class="algolia-no-index"><template slot="_header">
                                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Purpose of stubs</p>
                                         </template>
                                         <question>
@@ -2012,7 +2013,7 @@
                                             <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
                                             <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
                                           </ul>
-                                          <div slot="answer">
+                                          <div slot="answer" class="algolia-no-index">
                                             <p>True</p>
                                           </div>
                                         </question>
@@ -2040,7 +2041,7 @@
               </div>
               <p><span id="W8-4b"></span></p>
               <div></div>
-              <panel type="seamless" popup-url="/website/book/testing/dependencyInjection/how" id="quality-assurance-testing-dependency-injection-how">
+              <panel type="seamless" popup-url="/website/book/testing/dependencyInjection/how" id="quality-assurance-testing-dependency-injection-how" class="algolia-no-index">
                 <span slot="header" class="card-title">
                   <span class="badge badge-pill badge-light text-mute">W8.4b</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span>
                   <h4 id="quality-assurance-testing-dependency-injection-how"><small><span class="font-weight-bold text-muted"><span>Quality Assurance → Testing → Dependency Injection →</span></span></small> <strong><span>How</span></strong><span id="quality-assurance-testing-dependency-injection-how" class="anchor"></span><a class="fa fa-anchor" href="#quality-assurance-testing-dependency-injection-how" onclick="event.stopPropagation()"></a></h4>
@@ -2049,7 +2050,7 @@
                   <div class="indented">
                     <div>
                       <p>
-                        <panel src="/website/book/testing/dependencyInjection/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/dependencyInjection/what"><template slot="_header">
+                        <panel src="/website/book/testing/dependencyInjection/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/dependencyInjection/what" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Dependency Injection → What</span></p>
                           </template></panel>
                       </p>
@@ -2061,11 +2062,11 @@
                     <p></p>
                     <div>
                       <p><strong>Polymorphism can be used to implement dependency injection</strong>, as can be seen in the example given in <span trigger="click" for="modal:useDi-stub" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:useDi-stub'].show()" class="trigger-click">[Quality Assurance → Testing → Unit Testing → Stubs]</span> where a stub is injected to replace a dependency.</p>
-                      <b-modal id="modal:useDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:useDi-stub"><template slot="modal-title"></template>
+                      <b-modal id="modal:useDi-stub" hide-footer size="lg" modal-class="mb-zoom" ref="modal:useDi-stub" class="algolia-no-index"><template slot="modal-title"></template>
                         <div>
                           <div>
                             <p>
-                              <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what"><template slot="_header">
+                              <panel src="/website/book/testing/testingTypes/unitTesting/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/testing/testingTypes/unitTesting/what" class="algolia-no-index"><template slot="_header">
                                   <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Quality Assurance → Testing → Unit Testing → What →</span></p>
                                 </template></panel>
                             </p>
@@ -2118,11 +2119,11 @@
                                   </panel>
                                 </div>
                                 <div>
-                                  <panel expandable><template slot="_header">
+                                  <panel expandable class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                     </template>
                                     <div>
-                                      <panel><template slot="_header">
+                                      <panel class="algolia-no-index"><template slot="_header">
                                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Purpose of stubs</p>
                                         </template>
                                         <question>
@@ -2131,7 +2132,7 @@
                                             <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> True</label></li>
                                             <li class="radio-list-item"><label><input class="radio-list-input" name="a0303" type="radio"> False</label></li>
                                           </ul>
-                                          <div slot="answer">
+                                          <div slot="answer" class="algolia-no-index">
                                             <p>True</p>
                                           </div>
                                         </question>
@@ -2154,11 +2155,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about dependency injection</p>
                               </template>
                               <question>
@@ -2169,7 +2170,7 @@
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. It can be done using polymorphism</li>
                                   <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. It can be used to substitute a component with a stub</li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p><s>(a)</s>(b)(c)(d)</p>
                                   <p>Explanation: It is a technique we can use to substitute an existing dependency with another, not increase dependencies. It is useful when you want to test a component in isolation but the SUT depends on other components. Using dependency injection, we can substitute those other components with test-friendly stubs. This is often done using polymorphism.</p>
                                 </div>
@@ -2263,11 +2264,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> highest intensity coverage</p>
                               </template>
                               <question>
@@ -2278,7 +2279,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> c. 100% branch coverage</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="3db75" type="radio"> d. 100% condition coverage</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>(b)</p>
                                   <p>Explanation: 100% path coverage implies all possible execution paths through the SUT have been tested. This is essentially ‘exhaustive testing’. While this is very hard to achieve for a non-trivial SUT, it technically gives us the highest intensity of testing. If all tests pass at 100% path coverage, the SUT code can be considered ‘bug free’. However, note that path coverage does not include paths that are missing from the code altogether because the programmer left them out by mistake.</p>
                                 </div>
@@ -2350,11 +2351,11 @@
                     </div>
                     <div>
                       <div>
-                        <panel expandable><template slot="_header">
+                        <panel expandable class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                           </template>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> When do we write tests in TDD?</p>
                               </template>
                               <question>
@@ -2368,7 +2369,7 @@
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="b90f5" type="radio"> True</label></li>
                                   <li class="radio-list-item"><label><input class="radio-list-input" name="b90f5" type="radio"> False</label></li>
                                 </ul>
-                                <div slot="answer">
+                                <div slot="answer" class="algolia-no-index">
                                   <p>A) False</p>
                                   <p>Explanation: No, not <em>all</em>. We proceed in small steps, writing tests and functional code in tandem, but writing the test before we write the corresponding functional code.</p>
                                   <p>B) False</p>
@@ -2429,7 +2430,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -2443,6 +2444,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -68,7 +69,7 @@
                         </template>
                         <div>
                           <div>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Greeter</p>
                               </template>
                               <question>
@@ -107,7 +108,7 @@
                                   <smal><span class="badge badge-secondary">&gt;_</span></smal> <code v-pre>java Greeter Tan M M F</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>Dear Tan family</code>
                                 </p>
                                 <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
-                                <div slot="hint">
+                                <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String first = args[<span class="hljs-number">0</span>];<br></span><span>        String second = args[<span class="hljs-number">1</span>];<br></span><span>        <span class="hljs-keyword">if</span> (args.length == <span class="hljs-number">2</span>) {<br></span><span>            <span class="hljs-keyword">if</span> (second.equals(<span class="hljs-string">"M"</span>)) {<br></span><span>                <span class="hljs-comment">// ...</span><br></span><span>            }<br></span><span>        } <span class="hljs-keyword">else</span> {<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                 </div>
@@ -156,7 +157,7 @@
                                   <smal><span class="badge badge-secondary">&gt;_</span></smal> <code v-pre>java GradeHelper B</code> <span><span aria-hidden="true" class="fas fa-arrow-right"></span></span> <code v-pre>CAP for grade B is 3.5</code>
                                 </p>
                                 <p>You can assume that the input is always in the correct format <span class="dimmed">i.e., no need to handle invalid input cases</span>.</p>
-                                <div slot="hint">
+                                <div slot="hint" class="algolia-no-index">
                                   <p>Partial solution:</p>
                                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GradeHelper</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String grade = args[<span class="hljs-number">0</span>];<br></span><span>        <span class="hljs-keyword">double</span> cutoff = <span class="hljs-number">0</span>;<br></span><span>        <span class="hljs-keyword">switch</span> (grade) {<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:<br></span><span>            <span class="hljs-comment">// ...</span><br></span><span>        }<br></span><span>        System.out.println(<span class="hljs-string">"CAP for grade "</span> + grade + <span class="hljs-string">" is "</span> + cutoff);<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                 </div>
@@ -197,6 +198,21 @@
   const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

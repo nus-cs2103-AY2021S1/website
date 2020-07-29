@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/site-nav.css">
@@ -30,7 +31,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -49,7 +50,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -78,7 +79,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -322,11 +323,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about OOP</p>
                           </template>
                           <question>
@@ -345,7 +346,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Java can be used to write procedural code</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Prolog follows the Logic Programming paradigm</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>A) (a)(b)(c)(e)</p>
                               <p>Explanation: While many languages support the OO paradigm, OO is not a language itself.</p>
                               <p>B) Choose the correct statement</p>
@@ -356,7 +357,7 @@
                         </panel>
                       </div>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> procedural vs OOP</p>
                           </template>
                           <question>
@@ -365,7 +366,7 @@
                               <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> True</label></li>
                               <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>True.</p>
                               <p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p>
                             </div>
@@ -547,12 +548,12 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
 
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Describe objects in the given scenario</p>
                           </template>
                           <question has-input="true">
@@ -568,7 +569,7 @@
                               <li>Objects interact by sending messages.</li>
                               <li>OOP does not demand that the virtual world object network follow the real world exactly.</li>
                             </ol>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <blockquote>
                                 <p>[1] Object Oriented Programming (OOP) views the world as a network of interacting objects.</p>
                               </blockquote>
@@ -675,7 +676,7 @@
                 <p></p>
                 <div>
                   <p>The concept of <strong><em>Objects</em> in OOP is an <span trigger="click" for="modal:objectsAsAbstractions-abstraction" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:objectsAsAbstractions-abstraction'].show()" class="trigger-click">abstraction</span> mechanism because it allows us to abstract away the lower level details and work with bigger granularity entities</strong> i.e. ignore details of data formats and the method implementation details and work at the level of objects.</p>
-                  <b-modal id="modal:objectsAsAbstractions-abstraction" hide-footer size="lg" modal-class="mb-zoom" ref="modal:objectsAsAbstractions-abstraction"><template slot="modal-title">Definition: Abstraction</template>
+                  <b-modal id="modal:objectsAsAbstractions-abstraction" hide-footer size="lg" modal-class="mb-zoom" ref="modal:objectsAsAbstractions-abstraction" class="algolia-no-index"><template slot="modal-title">Definition: Abstraction</template>
                     <div>
                       <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p>
                     </div>
@@ -705,11 +706,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Choose the correct statement.</p>
                           </template>
                           <question>
@@ -718,10 +719,10 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. An object is an encapsulation because it packages data and behavior into one bundle.</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. An object is an encapsulation because it lets us think in terms of higher level concepts such as Students rather than student-related functions and data separately.</li>
                             </ul>
-                            <div slot="hint">
+                            <div slot="hint" class="algolia-no-index">
                               <p>Don't confuse encapsulation with abstraction.</p>
                             </div>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>Choose the correct statement</p>
                               <p>(a)</p>
                               <p>Explanation: The second statement should be: An object is an <strong>abstraction</strong> <s>encapsulation</s> because it lets ...</p>
@@ -798,7 +799,7 @@
                       </template>
                       <div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Identify Classes and Objects</p>
                             </template>
                             <question>
@@ -806,7 +807,7 @@
                               <box>
                                 <p>A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p>
                               </box>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <div class="table-responsive">
                                   <table class="markbind-table table table-bordered table-striped">
                                     <thead>
@@ -840,14 +841,14 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Classes for CityConnect app</p>
                             </template>
                             <question has-input="true">
                               <p>Assume you are writing a CLI program called <strong><code v-pre>CityConnect</code></strong> for storing and querying distances between cities. The behavior is as follows:</p>
                               <pre><code class="hljs" v-pre><span>Welcome to CityConnect!<br></span><span><br></span><span>Enter command: addroute Clementi BuonaVista 12<br></span><span>Route from Clementi to BuonaVista with distance 12km added<br></span><span><br></span><span>Enter command: getdistance Clementi BuonaVista<br></span><span>Distance from Clementi to BuonaVista is 12<br></span><span><br></span><span>Enter command: getdistance Clementi JurongWest<br></span><span>No route exists from Clementi to JurongWest!<br></span><span><br></span><span>Enter command: addroute Clementi JurongWest 24<br></span><span>Route from Clementi to JurongWest with distance 24km added<br></span><span><br></span><span>Enter command: getdistance Clementi JurongWest<br></span><span>Distance from Clementi to JurongWest is 24<br></span><span><br></span><span>Enter command: exit<br></span><span><br></span></code></pre>
                               <p>What classes would you have in your code if you write your program based on the OOP paradigm?</p>
-                              <div slot="hint">
+                              <div slot="hint" class="algolia-no-index">
                                 <p>One class you can have is <code v-pre>Route</code></p>
                               </div>
                             </question>
@@ -888,11 +889,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as a class-level variables</p>
                           </template>
                           <question>
@@ -903,7 +904,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. system: ToDo manager, class: <code v-pre>Task</code>, variable: <code v-pre>totalPendingTasks</code></li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code v-pre>ArrayList</code>, variable: <code v-pre>total</code> (i.e., total items in a given <code v-pre>ArrayList</code> object)</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>(c)</p>
                               <p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p>
                             </div>
@@ -1167,7 +1168,7 @@
                     <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code v-pre>Man</code> class and a <code v-pre>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association rather than specifically owned by either the <code v-pre>Man</code> object or the <code v-pre>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code v-pre>Marriage</code> class, to store such information.</p>
                   </box>
                   <p>
-                    <panel type="seamless" src="/website/book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                    <panel type="seamless" src="/website/book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Association Classes → What</p>
                       </template><template slot="_alt">
                         <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AssociationClasses</p>
@@ -1182,11 +1183,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are suitable as an Association Class?</p>
                           </template>
                           <question>
@@ -1199,7 +1200,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>(a)(b)<s>(c)</s>(d)</p>
                               <p>Explanation: Mileage is a property of the car, and not specifically about the association between the Driver and the Car. If Mileage was defined as the total number of miles that car was driven by that driver, then it would be suitable as an association class.</p>
                             </div>
@@ -1263,11 +1264,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statements are correct</p>
                           </template>
                           <question>
@@ -1279,7 +1280,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Code reuse can be one benefit of inheritance.</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. A change to the superclass will not affect its subclasses.</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>(a) (b) (c) (d)</p>
                               <p>Explanation: (e) is incorrect. Because subclasses inherit behavior from the superclass, any changes to the superclass could affect subclasses.</p>
                             </div>
@@ -1331,7 +1332,7 @@
                         </tbody>
                       </table>
                     </div>
-                    <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading"><template slot="modal-title"><strong>Overloading</strong></template>
+                    <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading" class="algolia-no-index"><template slot="modal-title"><strong>Overloading</strong></template>
                       <div>
                         <div></div>
                         <p></p>
@@ -1397,11 +1398,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which methods override?</p>
                           </template>
                           <question>
@@ -1415,7 +1416,7 @@
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
                               <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e</li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>d</p>
                               <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
                             </div>
@@ -1578,11 +1579,11 @@
                     </div>
                   </box>
                   <p><strong><span trigger="click" for="modal:dynamicAndStatic-overriding" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:dynamicAndStatic-overriding'].show()" class="trigger-click">Overridden methods</span> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.</strong></p>
-                  <b-modal id="modal:dynamicAndStatic-overriding" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overriding"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                  <b-modal id="modal:dynamicAndStatic-overriding" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overriding" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                     <div>
                       <div>
                         <p>
-                          <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what"><template slot="_header">
+                          <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/oop/inheritance/what" class="algolia-no-index"><template slot="_header">
                               <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Inheritance → What</span></p>
                             </template></panel>
                         </p>
@@ -1627,7 +1628,7 @@
                                   </tbody>
                                 </table>
                               </div>
-                              <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading"><template slot="modal-title"><strong>Overloading</strong></template>
+                              <b-modal id="modal:overriding-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:overriding-overloading" class="algolia-no-index"><template slot="modal-title"><strong>Overloading</strong></template>
                                 <div>
                                   <div></div>
                                   <p></p>
@@ -1693,11 +1694,11 @@
                           </div>
                           <div>
                             <div>
-                              <panel expandable><template slot="_header">
+                              <panel expandable class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                                 </template>
                                 <div>
-                                  <panel><template slot="_header">
+                                  <panel class="algolia-no-index"><template slot="_header">
                                       <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which methods override?</p>
                                     </template>
                                     <question>
@@ -1711,7 +1712,7 @@
                                         <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d</li>
                                         <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e</li>
                                       </ul>
-                                      <div slot="answer">
+                                      <div slot="answer" class="algolia-no-index">
                                         <p>d</p>
                                         <p>Explanation: Method overriding requires a method in a <em>child class</em> to use the same method name and same parameter sequence used by one of its ancestors</p>
                                       </div>
@@ -1736,7 +1737,7 @@
                     </div>
                   </box>
                   <p><strong>In contrast, <span trigger="click" for="modal:dynamicAndStatic-overloading" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:dynamicAndStatic-overloading'].show()" class="trigger-click">overloaded</span> methods are resolved using static binding.</strong></p>
-                  <b-modal id="modal:dynamicAndStatic-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overloading"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
+                  <b-modal id="modal:dynamicAndStatic-overloading" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overloading" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
                     <div>
                       <div></div>
                       <p></p>
@@ -1866,11 +1867,11 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Concepts related to polymorphism</p>
                           </template>
                           <question>
@@ -1880,7 +1881,7 @@
                               <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> b. dynamic binding</label></li>
                               <li class="radio-list-item"><label><input class="radio-list-input" name="8bdf8" type="radio"> c. operation overloading</label></li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>(c)</p>
                               <p>Explanation: Operation overriding is the one that is related, not operation overloading.</p>
                             </div>
@@ -1938,20 +1939,20 @@
                 </div>
                 <div>
                   <div>
-                    <panel expandable><template slot="_header">
+                    <panel expandable class="algolia-no-index"><template slot="_header">
                         <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                       </template>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> In the context of OOP, what is the relationship between abstraction and encapsulation?</p>
                           </template>
                           <panel expandable expanded><template slot="_header">
                               <p><span class="dimmed">Prerequisites</span></p>
                             </template>
-                            <panel src="/website/book/oop/objects/encapsulation/unit-inElsewhere-asFlat._include_.html"><template slot="_header">
+                            <panel src="/website/book/oop/objects/encapsulation/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header">
                                 <p>OOP: Objects: Encapsulation</p>
                               </template></panel>
-                            <panel src="/website/book/oop/objects/abstraction/unit-inElsewhere-asFlat._include_.html"><template slot="_header">
+                            <panel src="/website/book/oop/objects/abstraction/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header">
                                 <p>OOP: Objects: Abstraction</p>
                               </template></panel>
                           </panel>
@@ -1964,7 +1965,7 @@
                               <li class="radio-list-item"><label><input class="radio-list-input" name="f48e7" type="radio"> c. Encapsulation strengthens abstraction</label></li>
                               <li class="radio-list-item"><label><input class="radio-list-input" name="f48e7" type="radio"> d. Abstraction strengthens encapsulation</label></li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>c</p>
                               <p>Explanation: We can have abstraction without encapsulation. For example, we can <em>think</em> in terms of student entities when we code in C (a procedural language). But when we use a language that has encapsulation too (e.g., in Java/C++/C#), we can package all student related data and functions into one construct (i.e. a class). This makes the ‘student’ abstraction stronger because now we can not only think in terms of students, the program can perform actions using objects that represent student entities.</p>
                             </div>
@@ -1972,25 +1973,25 @@
                         </panel>
                       </div>
                       <div>
-                        <panel><template slot="_header">
+                        <panel class="algolia-no-index"><template slot="_header">
                             <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these do not belong to four main OO principles?</p>
                           </template>
                           <panel expandable expanded><template slot="_header">
                               <p><span class="dimmed">Prerequisites</span></p>
                             </template>
-                            <panel src="/website/book/oop/objects/abstraction/unit-inElsewhere-asFlat._include_.html"><template slot="_header">
+                            <panel src="/website/book/oop/objects/abstraction/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header">
                                 <p>OOP: Objects: Abstraction</p>
                               </template></panel>
-                            <panel src="/website/book/oop/objects/encapsulation/unit-inElsewhere-asFlat._include_.html"><template slot="_header">
+                            <panel src="/website/book/oop/objects/encapsulation/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header">
                                 <p>OOP: Objects: Encapsulation</p>
                               </template></panel>
-                            <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html"><template slot="_header">
+                            <panel src="/website/book/oop/inheritance/what/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header">
                                 <p>OOP: Inheritance: Basic</p>
                               </template></panel>
-                            <panel src="/website/book/oop/inheritance/substitutability/unit-inElsewhere-asFlat._include_.html"><template slot="_header">
+                            <panel src="/website/book/oop/inheritance/substitutability/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header">
                                 <p>OOP: Inheritance: Substitutability</p>
                               </template></panel>
-                            <panel src="/website/book/oop/polymorphism/what/unit-inElsewhere-asFlat._include_.html"><template slot="_header">
+                            <panel src="/website/book/oop/polymorphism/what/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header">
                                 <p>OOP: Polymorphism: Introduction</p>
                               </template></panel>
                           </panel>
@@ -2004,7 +2005,7 @@
                               <li class="radio-list-item"><label><input class="radio-list-input" name="a2b7b" type="radio"> d. Substitutability</label></li>
                               <li class="radio-list-item"><label><input class="radio-list-input" name="a2b7b" type="radio"> e. Polymorphism</label></li>
                             </ul>
-                            <div slot="answer">
+                            <div slot="answer" class="algolia-no-index">
                               <p>d</p>
                             </div>
                           </question>
@@ -2080,7 +2081,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -2094,6 +2095,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -49,11 +50,11 @@
                       <div></div>
                       <div>
                         <div>
-                          <panel expandable><template slot="_header">
+                          <panel expandable class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                             </template>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Class Diagram for code</p>
                                 </template>
                                 <question>
@@ -69,13 +70,13 @@
                                     <p>Draw a class diagram for the code below. Also draw an object diagram that will represent the object structure after running the code. Make the multiplicities as strict as possible without contradicting the code.</p>
                                     <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Box</span>:</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, item)</span>:</span><br></span><span>    self.__item = item <span class="hljs-comment"># type: Item</span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Item</span>:</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.__previous_boxes = [] <span class="hljs-comment"># type: list of Box objects</span><br></span><span>    self.__main_card = <span class="hljs-literal">None</span>    <span class="hljs-comment"># type: Car</span><br></span><span>    self.__sub_card = <span class="hljs-literal">None</span>     <span class="hljs-comment"># type: Card</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_main_card</span><span class="hljs-params">(self, card)</span>:</span><br></span><span>    self.__main_card = card <span class="hljs-comment"># type: Card</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_sub_card</span><span class="hljs-params">(self, card)</span>:</span><br></span><span>    self.__sub_card = card <span class="hljs-comment"># type: Card</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">add_previous_box</span><span class="hljs-params">(self, previous_box)</span>:</span><br></span><span>    self.__previous_boxes.append(previous_box)<br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Card</span>:</span><br></span><span>  <span class="hljs-keyword">pass</span><br></span><span><br></span><span><br></span><span>item1 = Item();<br></span><span>item2 = Item();<br></span><span>box1 = Box(item1);<br></span><span>box2 = Box(item2);<br></span><span>item2.set_main_card(Card());<br></span><span>item2.add_previous_box(box1);<br></span><span>item2.add_previous_box(box2);<br></span></code></pre>
                                   </div>
-                                  <div slot="answer">
+                                  <div slot="answer" class="algolia-no-index">
                                     <img src="/website/book/uml/classDiagrams/combine/basic/images/classDiagramForCodeAnswer.png" width="600"></div>
                                 </question>
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Implement Class Diagram</p>
                                 </template>
                                 <question>
@@ -86,7 +87,7 @@
                               </panel>
                             </div>
                             <div>
-                              <panel><template slot="_header">
+                              <panel class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw an Object Diagrams for the Class Diagram (Person-Guardian)</p>
                                 </template>
                                 <question>
@@ -112,7 +113,7 @@
                                       <p><code v-pre>Alfred</code> has a an office address at <code v-pre>Wayne Industries</code> building which is different from his home address (i.e. <code v-pre>Bat Cave</code>).</p>
                                     </li>
                                   </ol>
-                                  <div slot="hint">
+                                  <div slot="hint" class="algolia-no-index">
                                     <p>After step 2, the diagram should be like this:</p>
                                     <img src="/website/book/uml/classDiagrams/combine/basic/images/objectDiagramsForClassDiagramHint.png" width="600">
                                   </div>
@@ -143,6 +144,21 @@
   const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

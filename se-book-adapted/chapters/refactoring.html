@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../../markbind/css/site-nav.css">
@@ -30,7 +31,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -49,7 +50,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -78,7 +79,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -290,7 +291,7 @@
                   </ul>
                 </box>
                 <p>Given below are two common refactorings (<span trigger="click" for="modal:refactoring-catalog-what" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:refactoring-catalog-what'].show()" class="trigger-click">more</span>).</p>
-                <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
+                <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
                   <div>
                     <ul>
                       <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
@@ -361,11 +362,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Results of Refactoring</p>
                         </template>
                         <question>
@@ -376,7 +377,7 @@
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Refactoring can result in better performance</li>
                             <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Refactoring can change the number of methods/classes</li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>a, b, c, d</p>
                             <p>Explanation:</p>
                             <ul>
@@ -388,16 +389,16 @@
                       </panel>
                     </div>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Do you agree with the following statement? Refactoring and regression testing</p>
                         </template>
                         <question has-input="true">
                           <p>Do you agree with the following statement? Justify your answer.</p>
                           <p>Statement: <code v-pre>Whenever you refactor code to fix bugs, you need not do regression testing if the bug fix was minor.</code></p>
-                          <div slot="hint">
+                          <div slot="hint" class="algolia-no-index">
                             <p>There are two flaws in the given statement.</p>
                           </div>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>DISAGREE.</p>
                             <ol>
                               <li>Even a minor change can have major repercussions on the system. You MUST do regression testing after each change, no matter how minor it is.</li>
@@ -408,7 +409,7 @@
                       </panel>
                     </div>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Refactoring</p>
                         </template>
                         <question has-input>
@@ -433,7 +434,7 @@
               <p></p>
               <div>
                 <p>Given below are some more commonly used refactorings. A more comprehensive list is available at <span trigger="click" for="modal:refactoring-catalog-how" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:refactoring-catalog-how'].show()" class="trigger-click"> refactoring-catalog </span>.</p>
-                <b-modal id="modal:refactoring-catalog-how" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-how"><template slot="modal-title"><strong>Refactoring Catalog</strong></template>
+                <b-modal id="modal:refactoring-catalog-how" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-how" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalog</strong></template>
                   <div>
                     <ul>
                       <li>Java: <a href="http://refactoring.com/catalog/">http://refactoring.com/catalog/</a> - This is a list of common refactorings, maintained by Martin Fowler, a leading authority on refactoring. He is also the author of the ‘bestseller’ on refactoring: <a href="https://martinfowler.com/books/#refactoring">Refactoring: Improving the Design of Existing Code</a></li>
@@ -474,11 +475,11 @@
               </div>
               <div>
                 <div>
-                  <panel expandable><template slot="_header">
+                  <panel expandable class="algolia-no-index"><template slot="_header">
                       <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                     </template>
                     <div>
-                      <panel><template slot="_header">
+                      <panel class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> ‘Extract method’ and ‘Inline method’ refactorings</p>
                         </template>
                         <question>
@@ -487,7 +488,7 @@
                             <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> a. are opposites of each other.</label></li>
                             <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> b. sounds like opposites but they are not.</label></li>
                           </ul>
-                          <div slot="answer">
+                          <div slot="answer" class="algolia-no-index">
                             <p>a</p>
                           </div>
                         </question>
@@ -519,7 +520,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -533,6 +534,21 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

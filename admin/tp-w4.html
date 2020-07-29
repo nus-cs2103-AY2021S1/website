@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../markbind/css/octicons.css">
   <link rel="stylesheet" href="../markbind/css/github.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="../markbind/css/site-nav.css">
@@ -31,7 +32,7 @@
       <navbar placement="top" type="dark" class="temp-navbar">
         <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
         <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Schedule</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
           <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
           <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
           <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
@@ -50,7 +51,7 @@
         <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
         <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
         <div class="nav-link temp-dropdown-placeholder">**Links**</div>
-        <dropdown class="nav-link temp-dropdown"><template slot="_header"><strong>Links</strong></template>
+        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Links</strong></template>
           <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
           <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
           <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
@@ -79,7 +80,7 @@
         </dropdown>
         <li slot="right" class="nav-link">
           <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
           </form>
         </li>
       </navbar>
@@ -308,7 +309,7 @@
                   <li><strong>Decide project direction, target user profile, and problem addressed</strong>: Use your first project meeting to discuss with your team members and decide your project direction, target user profile, and the value proposition of the product, as described in the panels below:</li>
                 </ul>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Expectations</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -346,7 +347,7 @@
                         </div>
                         <p>You may develop any product provided it is meant for users who can type fast, and prefer typing over mouse/voice commands. Therefore, <mark>Command Line Interface (CLI) is the primary mode of input.</mark></p>
                         <div class="indented-level1">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Constraint-Typing-Preferred <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -360,7 +361,7 @@
                         </div>
                         <p></p>
                         <div class="indented-level1">
-                          <panel type class="embedding" minimized><template slot="_header">
+                          <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                               <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Recommendation-CLI-First <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                             </template>
                             <div>
@@ -438,7 +439,7 @@
                         </li>
                       </ul>
                       <div class="indented-level2">
-                        <panel type="seamless"><template slot="_header">
+                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
                             <p><span class="dimmed">Why the need to narrow down the user profile?</span></p>
                           </template>
                           <ul>
@@ -535,7 +536,7 @@
                         </ul>
                         <div tags="m--cs2103" class="indented-level4">
                           <p>Some examples:</p>
-                          <panel type="seamless" minimized><template slot="_header">
+                          <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
                               <p>Example enhancements</p>
                             </template>
                             <ul>
@@ -594,7 +595,7 @@
                         <div id="team-tasks" class="indented-level2">
                           <box>
                             <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                            <panel type="seamless"><template slot="_header">
+                            <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
                               </template>
                               <span id="example-team-tasks">
@@ -625,7 +626,7 @@
                           <box>
                             <span id="roles">
                               <p><em>Roles</em> indicate aspects you are in charge of and responsible for. <span class="dimmed">E.g., if you are in charge of documentation, you are the person who should allocate which parts of the documentation is to be done by who, ensure the document is in right format, ensure consistency etc.</span></p>
-                              <panel type="seamless"><template slot="_header">
+                              <panel type="seamless" class="algolia-no-index"><template slot="_header">
                                   <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Recommended roles and responsibilities</p>
                                 </template>
                                 <p>This is a non-exhaustive list; you may define additional roles.</p>
@@ -659,7 +660,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Constraints</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -820,7 +821,7 @@
                 </div>
                 <p></p>
                 <div class="indented-level2">
-                  <panel type class="embedding" minimized><template slot="_header">
+                  <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                       <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>tP: Grading → <mark>Criteria Used for Grading the Product Design</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                     </template>
                     <div>
@@ -834,7 +835,7 @@
                           <li>tutors (based on product demo and user guide)</li>
                           <li>peers from other teams (based on peer testing and user guide)</li>
                         </ul>
-                        <panel type class="embedding" minimized><template slot="_header">
+                        <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                             <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                           </template>
                           <div>
@@ -937,7 +938,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 25 Jul 2020, 1:41:05 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
     </footer>
   </div>
 </body>
@@ -951,6 +952,21 @@
   const enableSearch = true
 </script>
 <script src="../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

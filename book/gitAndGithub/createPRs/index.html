@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -43,7 +44,7 @@
                 <div id="main">
                   <div>
                     <p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <span trigger="click" for="modal:githubPullRequests-rcsPullRequests" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPullRequests-rcsPullRequests'].show()" class="trigger-click">pull request (PR)</span>. Here is a scenario you can try in order to learn how to create PRs:</p>
-                    <b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+                    <b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
                       <div>
                         <p><strong>A <mark><em>pull request</em></mark> (PR for short) is mechanism for contributing code to a remote repo.</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p>
                       </div>
@@ -56,7 +57,7 @@
                       <li><strong>Option B - Commit to a new branch</strong> e.g., create a branch named <code v-pre>add-intro</code> (remember to switch to the <code v-pre>master</code> branch before creating a new branch) and add your commit to it.</li>
                     </ul>
                     <p><strong>4. Push</strong> the branch you updated (i.e., <code v-pre>master</code> branch or the new branch) to your fork, as explained <span trigger="click" for="modal:createPr-pushBranch" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:createPr-pushBranch'].show()" class="trigger-click">here </span>.</p>
-                    <b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
+                    <b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
                       <div>
                         <h5 id="pushing-a-branch-to-a-remote-repo">Pushing a branch to a remote repo<a class="fa fa-anchor" href="#pushing-a-branch-to-a-remote-repo" onclick="event.stopPropagation()"></a></h5>
                         <p>Here's how to push a branch to a remote repo:</p>
@@ -66,7 +67,7 @@
                             <img src="/website/book/gitAndGithub/branch/images/pushBranchToFork.png" height="300">
                             <p></p>
                           </tab>
-                          <tab><template slot="_header">CLI</template>
+                          <tab class="algolia-no-index"><template slot="_header">CLI</template>
                             <p>Normally: <code v-pre>git push {remote repository} {branch}</code>. Examples:<br></p>
                             <ul>
                               <li><code v-pre>git push origin master</code> pushes the <code v-pre>master</code> branch to the repo named <code v-pre>origin</code> (i.e., the repo you cloned from)</li>
@@ -174,6 +175,21 @@
   const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

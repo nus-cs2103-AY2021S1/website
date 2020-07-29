@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -73,16 +74,16 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p>
                             </template>
                             <question has-input="true">
                               <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>Let us take the <code v-pre>Logic</code> class as an example. Assume that it has the following operation.</p>
                                 <p><code v-pre>setMinefield(Minefiled mf):void</code></p>
                                 <p>Consider the following that can happen inside this operation.</p>
@@ -97,7 +98,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p>
                             </template>
                             <question>
@@ -107,7 +108,7 @@
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
                                 <li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>False</p>
                                 <p>Explanation: The line <code v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p>
                               </div>
@@ -115,7 +116,7 @@
                           </panel>
                         </div>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p>
                             </template>
                             <question>
@@ -127,7 +128,7 @@
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Principle of least knowledge.</li>
                                 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li>
                               </ul>
-                              <div slot="answer">
+                              <div slot="answer" class="algolia-no-index">
                                 <p>(b)</p>
                                 <p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p>
                               </div>
@@ -156,6 +157,21 @@
   const enableSearch = true
 </script>
 <script src="../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

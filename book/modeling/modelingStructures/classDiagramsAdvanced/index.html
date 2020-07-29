@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
   <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
   <link rel="stylesheet" href="../../../../markbind/css/markbind.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
   <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css">
   <link rel="icon" href="/website/favicon.ico">
@@ -34,7 +35,7 @@
             <div>
               <div>
                 <p>
-                  <panel src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/modeling/modelingStructures/classDiagramsIntermediate"><template slot="_header">
+                  <panel src="/website/book/modeling/modelingStructures/classDiagramsIntermediate/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/modeling/modelingStructures/classDiagramsIntermediate" class="algolia-no-index"><template slot="_header">
                       <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Modeling → Class Diagrams (Intermediate)</span></p>
                     </template></panel>
                 </p>
@@ -50,12 +51,12 @@
                   <div>
                     <p><strong>A class diagram can show association classes too.</strong></p>
                     <p>
-                      <panel type="seamless" src="/website/book/oop/associations/associationClasses/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                      <panel type="seamless" src="/website/book/oop/associations/associationClasses/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP → Associations → Association Classes</p>
                         </template><template slot="_alt">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> OOP/AssociationClasses</p>
                         </template></panel>
-                      <panel type="seamless" src="/website/book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main"><template slot="_header">
+                      <panel type="seamless" src="/website/book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML → Class Diagrams → Association Classes → What</p>
                         </template><template slot="_alt">
                           <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AssociationsClasses</p>
@@ -64,11 +65,11 @@
                   </div>
                   <div>
                     <div>
-                      <panel expandable><template slot="_header">
+                      <panel expandable class="algolia-no-index"><template slot="_header">
                           <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
                         </template>
                         <div>
-                          <panel><template slot="_header">
+                          <panel class="algolia-no-index"><template slot="_header">
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> draw class diagram: Player, Bot, etc.</p>
                             </template>
                             <p>(a) Draw a class diagram to represent the following code.</p>
@@ -77,21 +78,21 @@
                               i. A <code v-pre>Player</code> can <em>challenge</em> another <code v-pre>Player</code> object. <code v-pre>Challenge</code> class keeps track that association between the two <code v-pre>Player</code> objects: the <em>challenger</em> and the <em>target</em> of the challenge.<br>
                               ii. A <code v-pre>Human</code> can <em>train</em> a <code v-pre>SmartBot</code> object. <code v-pre>Lesson</code> class keeps track of that association.</p>
                             <p>(c) Convert the two association classes to normal classes.</p>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p>🔑 (a)</p>
                               </template>
                               <img src="/website/book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotA.png" height="250">
                               <p></p>
                               <p></p>
                             </panel>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p>🔑 (b)</p>
                               </template>
                               <img src="/website/book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotB.png" height="310">
                               <p></p>
                               <p></p>
                             </panel>
-                            <panel><template slot="_header">
+                            <panel class="algolia-no-index"><template slot="_header">
                                 <p>🔑 (c)</p>
                               </template>
                               <img src="/website/book/modeling/modelingStructures/classDiagramsAdvanced/images/playerBotC.png" height="290">
@@ -123,6 +124,21 @@
   const enableSearch = true
 </script>
 <script src="../../../../markbind/js/setup.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+<script>
+  function initAlgolia() {
+    docsearch({
+      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+      indexName: "nus-cs2103-ay1920s1",
+      inputSelector: "#algolia-search-input",
+      algoliaOptions: {
+        "hitsPerPage": 10
+      },
+      debug: false,
+    });
+  }
+  MarkBind.afterSetup(initAlgolia);
+</script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>

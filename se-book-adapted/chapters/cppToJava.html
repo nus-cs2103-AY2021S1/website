@@ -243,9 +243,15 @@
             </li>
             <li>
               <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Supplementary
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
                   <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div>
-              <ul class="site-nav-dropdown-container site-nav-list">
+              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/chapters/cppToJava.html" class="current">C++ to Java</a></div>
+                </li>
+                <li>
+                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/projectDuke/index.html">Project Duke</a></div>
+                </li>
                 <li>
                   <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div>
                 </li>
@@ -538,7 +544,7 @@
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use primitive data types</span></span></span></span>
                 <p></p>
                 <div>
-                  <p>Here are the primitive data types in Java:</p>
+                  <p><strong>Java has a number of <em>primitive</em> data types</strong>, as given below:</p>
                   <ul>
                     <li><strong><code v-pre>byte</code></strong>: an integer in the range -128 to 127 (inclusive).</li>
                     <li><strong><code v-pre>short</code></strong>: an integer in the range -32,768 to 32,767 (inclusive).</li>
@@ -549,11 +555,9 @@
                     <li><strong><code v-pre>boolean</code></strong>: has only two possible values: <code v-pre>true</code> and <code v-pre>false</code>.</li>
                     <li><strong><code v-pre>char</code></strong>: The char data type is a single 16-bit Unicode character. It has a minimum value of <code v-pre>'\u0000'</code> (or <code v-pre>0</code>) and a maximum value of <code v-pre>'\uffff'</code> (or <code v-pre>65,535</code> inclusive).</li>
                   </ul>
-                  <p><strong><code v-pre>String</code></strong> (a peek)</p>
-                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> Java has a built-in type called <code v-pre>String</code> to represent strings. While <code v-pre>String</code> is not a primitive type, they are used as often, if not more. <code v-pre>String</code> values are demarcated by enclosing in a pair of double quotes. You can use the plus operator to concatenate strings.
-                    E.g.,</p>
-                  <pre><code class="hljs java" v-pre><span>String name = <span class="hljs-string">"John Doe"</span>;<br></span><span>System.out.println(<span class="hljs-string">"Hello "</span> + name + <span class="hljs-string">"!"</span>);<br></span></code></pre>
-                  <p>String is not a primitive type. You’ll learn more about strings in a later section.</p>
+                  <h6 id="the-string-type-a-peek">The <code v-pre>String</code> type (a peek)<span id="the-string-type-a-peek" class="anchor"></span><a class="fa fa-anchor" href="#the-string-type-a-peek" onclick="event.stopPropagation()"></a></h6>
+                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> <strong>Java has a built-in type called <code v-pre>String</code> to represent strings. While <code v-pre>String</code> is not a primitive type, strings are used often.</strong> <code v-pre>String</code> values are demarcated by enclosing in a pair of double quotes (e.g., <code v-pre>&quot;Hello&quot;</code>). You can use the <code v-pre>+</code> operator to concatenate strings (e.g., <code v-pre>&quot;Hello &quot; + &quot;!&quot;</code>).</p>
+                  <p>You’ll learn more about strings in a later section.</p>
                 </div>
                 <div>
                   <div>
@@ -580,14 +584,14 @@
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use variables</span></span></span></span>
                 <p></p>
                 <div>
-                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> Java is a <em>statically-typed</em> language in that variables have a fixed type. Here are some examples of declaring variables and assigning values to them.</p>
+                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>Java is a <em>statically-typed</em> language</strong> in that variables have a fixed type. Here are some examples of declaring variables and assigning values to them.</p>
                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> x;<br></span><span>x = <span class="hljs-number">5</span>;<br></span><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;<br></span><span><span class="hljs-keyword">boolean</span> isCorrect = <span class="hljs-keyword">true</span>;<br></span><span><span class="hljs-keyword">char</span> capitalC = <span class="hljs-string">'C'</span>;<br></span><span><span class="hljs-keyword">byte</span> b = <span class="hljs-number">100</span>;<br></span><span><span class="hljs-keyword">short</span> s = <span class="hljs-number">10000</span>;<br></span><span><span class="hljs-keyword">int</span> i = <span class="hljs-number">100000</span>;<br></span></code></pre>
-                  <p>You can use any name starting with a letter, underscore, or $ as a variable name but you cannot use Java <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">keywords</a> as variables names.
-                    You can display the value of a variable using <code v-pre>System.out.print</code> or <code v-pre>System.out.println</code> (the latter goes to the next line after printing). To output multiple values on the same line, it’s common to use several print statements followed by println at the end.</p>
-                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;<br></span><span><span class="hljs-keyword">int</span> mintue = <span class="hljs-number">59</span>;<br></span><span>System.out.print(<span class="hljs-string">"The current time is "</span>);<br></span><span>System.out.print(hour);<br></span><span>System.out.print(<span class="hljs-string">":"</span>);<br></span><span>System.out.print(minute);<br></span><span>System.out.println(<span class="hljs-string">"."</span>); <span class="hljs-comment">//use println here to complete the line</span><br></span><span>System.out.println(<span class="hljs-string">"done"</span>);<br></span><span><br></span></code></pre>
+                  <p><strong>You can use any name starting with a letter, underscore, or $ as a variable name but you cannot use Java <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html">keywords</a> as variables names.</strong>
+                    You can display the value of a variable using <code v-pre>System.out.print</code> or <code v-pre>System.out.println</code> (the latter goes to the next line after printing). To output multiple values on the same line, it’s common to use several <code v-pre>print</code> statements followed by <code v-pre>println</code> at the end.</p>
+                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;<br></span><span><span class="hljs-keyword">int</span> mintue = <span class="hljs-number">59</span>;<br></span><span>System.out.print(<span class="hljs-string">"The current time is "</span>);<br></span><span>System.out.print(hour);<br></span><span>System.out.print(<span class="hljs-string">":"</span>);<br></span><span>System.out.print(minute);<br></span><span>System.out.println(<span class="hljs-string">"."</span>); <span class="hljs-comment">//use println here to complete the line</span><br></span><span>System.out.println(<span class="hljs-string">"done"</span>);<br></span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                   <pre><code class="hljs" v-pre><span>The current time is 11:59.<br></span><span>done<br></span></code></pre>
-                  <p>Use the keyword <code v-pre>final</code> to indicate that the variable value, once assigned, should not be allowed to change later i.e., act like a ‘constant’. By convention, names for constants are all uppercase, with the underscore character (<code v-pre>_</code>) between words.</p>
+                  <p><strong>Use the keyword <code v-pre>final</code> to indicate that the variable value, once assigned, should not be allowed to change later</strong> i.e., act like a ‘constant’. By convention, names for constants are all uppercase, with the underscore character (<code v-pre>_</code>) between words.</p>
                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">final</span> <span class="hljs-keyword">double</span> CM_PER_INCH = <span class="hljs-number">2.54</span>;<br></span></code></pre>
                 </div>
                 <div>
@@ -615,7 +619,7 @@
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use operators</span></span></span></span>
                 <p></p>
                 <div>
-                  <p>Java has the following <strong>arithmetic operators</strong>:</p>
+                  <p><strong>Java supports the usual arithmetic operators</strong>, given below.</p>
                   <div class="table-responsive">
                     <table class="markbind-table table table-bordered table-striped">
                       <thead>
@@ -654,7 +658,7 @@
                       </tbody>
                     </table>
                   </div>
-                  <p>The following program uses some operators as part of an expression <code v-pre>hour * 60 + minute</code>:</p>
+                  <p>The following program uses some operators as part of an <em>expression</em> <code v-pre>hour * 60 + minute</code>:</p>
                   <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">int</span> hour = <span class="hljs-number">11</span>;<br></span><span><span class="hljs-keyword">int</span> minute = <span class="hljs-number">59</span>;<br></span><span>System.out.print(<span class="hljs-string">"Number of minutes since midnight: "</span>);<br></span><span>System.out.println(hour * <span class="hljs-number">60</span> + minute);<br></span></code></pre>
                   <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                   <pre><code class="hljs" v-pre><span>Number of minutes since midnight: 719<br></span></code></pre>
@@ -668,10 +672,8 @@
                     </ul>
                   </box>
 
-                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> Java does not allow <em>operator overloading</em>.</p>
-                  <blockquote>
-                    <p>The <strong>unary operators</strong> require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean.<small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
-                  </blockquote>
+                  <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-danger"><span><span aria-hidden="true" class="fas fa-not-equal"></span></span></span></span> Java does not allow <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">changing the meaning of operators</span><em>operator overloading</em></span>.</p>
+                  <p>The <strong>unary operators</strong> require only one operand; they perform various operations such as incrementing/decrementing a value by one, negating an expression, or inverting the value of a boolean.<small><span style="opacity: 0.5"><span class="badge badge-secondary">-- Java Tutorial</span></span></small></p>
                   <div class="table-responsive">
                     <table class="markbind-table table table-bordered table-striped">
                       <thead>
@@ -1089,7 +1091,7 @@
                     <h5 id="parameters">Parameters<span id="parameters" class="anchor"></span><a class="fa fa-anchor" href="#parameters" onclick="event.stopPropagation()"></a></h5>
                     <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>A method can specify <em>parameters</em>.</strong> The <code v-pre>printTwice</code> method above specifies a parameter of <code v-pre>String</code> type. The <code v-pre>main</code> method passes the <em>argument</em> <code v-pre>&quot;Polly likes crackers&quot;</code> to that parameter.</p>
                     <p><strong>The value provided as an argument must have the same type as the parameter.</strong> Sometimes Java can convert an argument from one type to another automatically. For example, if the method requires a <code v-pre>double</code>, you can invoke it with an <code v-pre>int</code> argument <code v-pre>5</code> and Java will automatically convert the argument to the equivalent value of type double <code v-pre>5.0</code>.</p>
-                    <p><strong>Because variables only exist inside the methods where they are defined, they are often called <em>local</em> variables.</strong> Parameters and other variables declared inside a method only exist inside their own methods. Inside <code v-pre>main</code>, there is no such thing as <code v-pre>s</code>. If you try to use it there, you’ll get a compiler error. Similarly, inside <code v-pre>printTwice</code> there is no such thing as <code v-pre>sentence</code>. That variable belongs to <code v-pre>main</code>.</p>
+                    <p><strong>Because a variable declared inside a method only exists inside that method, such variables are called <em>local</em> variables. That applies to parameters of a method too.</strong> For example, In the code above, <code v-pre>s</code> cannot be used inside <code v-pre>main</code> because it is a parameter of the <code v-pre>printTwice</code> method and can only be used inside that method. If you try to use <code v-pre>s</code> inside <code v-pre>main</code>, you’ll get a compiler error. Similarly, inside <code v-pre>printTwice</code> there is no such thing as <code v-pre>sentence</code>. That variable belongs to <code v-pre>main</code>.</p>
                   </div>
                   <h5 id="return-statements"><code v-pre>return</code> statements<span id="return-statements" class="anchor"></span><a class="fa fa-anchor" href="#return-statements" onclick="event.stopPropagation()"></a></h5>
                   <div class="indented">
@@ -1100,7 +1102,7 @@
                   </div>
                   <h5 id="overloading">Overloading<span id="overloading" class="anchor"></span><a class="fa fa-anchor" href="#overloading" onclick="event.stopPropagation()"></a></h5>
                   <div class="indented">
-                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>Java methods can be <em>overloaded</em>.</strong> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long as each version takes different parameters.</p>
+                    <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> <strong>Java methods can be <em>overloaded</em>.</strong> If two methods do the same thing, it is natural to give them the same name. Having more than one method with the same name is called overloading, and it is legal in Java as long as each version has a different method <em>signature</em> (the signature of the method is the method name and ordered list of parameter types) . For example, the following overloading of the method <code v-pre>calculateArea</code> is allowed because the method signatures are different (i.e., <code v-pre>calculateArea(double)</code> vs <code v-pre>calculateArea(double, double)</code>).</p>
                     <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius)</span> </span>{<br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">calculateArea</span><span class="hljs-params">(<span class="hljs-keyword">double</span> height, <span class="hljs-keyword">double</span> width)</span> </span>{<br></span><span>    <span class="hljs-comment">//...</span><br></span><span>}<br></span></code></pre>
                   </div>
                   <h5 id="recursion">Recursion<span id="recursion" class="anchor"></span><a class="fa fa-anchor" href="#recursion" onclick="event.stopPropagation()"></a></h5>
@@ -1193,6 +1195,7 @@
                 <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use loops</span></span></span></span>
                 <p></p>
                 <div>
+                  <p><strong>Java has <code v-pre>while</code> and <code v-pre>for</code> constructs for looping</strong>.</p>
                   <h5 id="while-loops"><code v-pre>while</code> loops<span id="while-loops" class="anchor"></span><a class="fa fa-anchor" href="#while-loops" onclick="event.stopPropagation()"></a></h5>
                   <div class="indented">
                     <p><span style="opacity: 0.5"> <span class="badge badge-pill badge-success"><span><span aria-hidden="true" class="fas fa-equals"></span></span></span></span> Here is an example while loop:</p>
@@ -4001,7 +4004,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 1 Aug 2020, 0:22:43 GMT+8]</small></div>
     </footer>
   </div>
 </body>

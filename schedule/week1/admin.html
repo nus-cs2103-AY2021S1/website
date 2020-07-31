@@ -487,16 +487,19 @@
                       </span>
                       <p></p>
                       <h2 id="workload">Workload<span id="workload" class="anchor"></span><a class="fa fa-anchor" href="#workload" onclick="event.stopPropagation()"></a></h2>
-                      <p>As 70% of this module is based on CA, it can appear to be <em>heavy</em>. However, <strong>it is not expected that you will spend more time on this module than its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., if this module is core for you, it should not take more time than other core modules at the same level in your program</span>peer modules</span></strong>.</p>
+                      <p>As 70% of this module is based on CA (see <span trigger="click" for="modal:expectations-gradeBreakdown" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:expectations-gradeBreakdown'].show()" class="trigger-click">grade breakdown</span>), it can appear to be <em>heavy</em>. However, <strong>it is not expected that you will spend more time on this module than its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., if this module is core for you, it should not take more time than other core modules at the same level in your program</span>peer modules</span></strong>.</p>
                       <ul>
                         <li>Note that the <strong>module contains more things than a typical students can do</strong>, in order to provide enough things for even the strongest students to learn as much as they wish to.</li>
                         <li>This means it is <mark>perfectly OK if you don't have time to learn everything the module offers</mark>. Control your workload based on time you spend for the module in a week e.g., 1-1.5 days per week.</li>
                         <li>We have provided a star rating system to guide you when prioritizing which things to do.</li>
                       </ul>
+                      <b-modal id="modal:expectations-gradeBreakdown" hide-footer size="lg" modal-class="mb-zoom" ref="modal:expectations-gradeBreakdown" class="algolia-no-index"><template slot="modal-title">Grade breakdown</template>
+                        <pic src="/website/admin/gradeBreakdown.png"></pic>
+                      </b-modal>
                       <div id="starRatingSystem">
                         <h4 id="star-rating-system">Star Rating System<span id="star-rating-system" class="anchor"></span><a class="fa fa-anchor" href="#star-rating-system" onclick="event.stopPropagation()"></a></h4>
                         <div class="indented">
-                          <p class="lead"><span>We use a <em>star rating system</em> indicate the importance of module components. <strong>Start with things that are rated one-star and progress to things with more stars.</strong> Things rated four stars are optional.</span></p>
+                          <p class="lead"><span>We use a <em>star rating system</em> to indicate the importance of module components. <strong>Start with things that are rated one-star and progress to things with more stars.</strong> Things rated four stars are optional.</span></p>
                           <p><strong>Star ratings for topics</strong> (and textbook sections):</p>
                           <ul>
                             <li><strong>One-star topics</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> are essential to keep up with the module. We recommend you to <mark>learn these topics if you want to pass the module</mark> (i.e. up to a <strong>C</strong> grade).</li>
@@ -592,7 +595,7 @@
                         <div>
                           <h4 id="star-rating-system-2">Star Rating System<span id="star-rating-system-2" class="anchor"></span><a class="fa fa-anchor" href="#star-rating-system-2" onclick="event.stopPropagation()"></a></h4>
                           <div class="indented">
-                            <p class="lead"><span>We use a <em>star rating system</em> indicate the importance of module components. <strong>Start with things that are rated one-star and progress to things with more stars.</strong> Things rated four stars are optional.</span></p>
+                            <p class="lead"><span>We use a <em>star rating system</em> to indicate the importance of module components. <strong>Start with things that are rated one-star and progress to things with more stars.</strong> Things rated four stars are optional.</span></p>
                             <p><strong>Star ratings for topics</strong> (and textbook sections):</p>
                             <ul>
                               <li><strong>One-star topics</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> are essential to keep up with the module. We recommend you to <mark>learn these topics if you want to pass the module</mark> (i.e. up to a <strong>C</strong> grade).</li>
@@ -1192,7 +1195,7 @@
               <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Grade Breakdown <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
               <div>
                 <p>
-                  <pic src="/website/admin/1109045cf26a4f803aa8db3f0dd176d5.png"></pic>
+                  <pic name="gradeBreakdown.png" src="/website/admin/gradeBreakdown.png"></pic>
                 </p>
                 <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                     <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Participation Marks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
@@ -2152,7 +2155,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Wed, 29 Jul 2020, 10:59:30 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Sat, 1 Aug 2020, 0:22:43 GMT+8]</small></div>
     </footer>
   </div>
 </body>

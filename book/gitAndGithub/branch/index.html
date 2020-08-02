@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.14.1">
+  <meta name="generator" content="MarkBind 2.15.2">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CS2103/T - Git and GitHub: Branch</title>
   <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -49,7 +49,28 @@
                 </div>
                 <div id="main">
                   <div>
-                    <p><strong>Git branches allow you to do multiple parallel changes to the content of a repository</strong>. Follow the steps below to learn how to work with branches. You can use any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) for this.</p>
+                    <p><strong>Git supports branching</strong> which allows you to do multiple parallel changes to the content of a repository.</p>
+                    <p><strong>A Git branch is simply a <em>named label</em> pointing to a commit. The <code v-pre>HEAD</code> label indicates which branch you are on.</strong> Git creates a branch named <code v-pre>master</code> by default. When you add a commit, it goes into the branch you are currently on, and the branch label (together with the <code v-pre>HEAD</code> label) moves to the new commit.</p>
+                    <p>Given below is an illustrations of how branch labels move as branches evolve.</p>
+                    <p>
+                      <pic src="/website/book/gitAndGithub/branch/images/branchesAsLabels1.png" width="650"></pic>
+                    </p>
+                    <ol>
+                      <li>There is only one branch (i.e., <code v-pre>master</code>) and there is only one commit on it.</li>
+                      <li>A new commit has been added. The <code v-pre>master</code> and the <code v-pre>HEAD</code> labels have moved to the new commit.</li>
+                      <li>A new branch <code v-pre>fix1</code> has been added. The repo has switched to the new branch too (hence, the <code v-pre>HEAD</code> label is attached to the <code v-pre>fix1</code> branch).</li>
+                      <li>A new commit (<code v-pre>c</code>) has been added. The current branch label <code v-pre>fix1</code> moves to the new commit, together with the <code v-pre>HEAD</code> label.</li>
+                      <li>The repo has switched back to the <code v-pre>master</code> branch.</li>
+                    </ol>
+                    <p>
+                      <pic src="/website/book/gitAndGithub/branch/images/branchesAsLabels2.png" width="600"></pic>
+                    </p>
+                    <ol start="6">
+                      <li>A new commit (<code v-pre>d</code>) has been added. The <code v-pre>master</code> label has moved to that commit.</li>
+                      <li>The repo has switched back to the <code v-pre>fix1</code> branch and added a new commit (<code v-pre>e</code>) to it.</li>
+                      <li>The repo has switched to the <code v-pre>master</code> branch and the <code v-pre>fix1</code> branch has been merged into the <code v-pre>master</code> branch, creating a <em>merge commit</em> <code v-pre>f</code>. The repo is currently on the <code v-pre>master</code> branch.</li>
+                    </ol>
+                    <p>Follow the steps below to learn how to work with branches. You can use any repo you have on your computer (e.g. a clone of the <a href="https://github.com/se-edu/samplerepo-things">samplerepo-things</a>) for this.</p>
                     <p><strong>0. Observe that you are normally in the branch called <code v-pre>master</code>.</strong></p>
                     <tabs>
                       <tab><template slot="_header">SourceTree</template>
@@ -87,7 +108,8 @@
                         </div>
                       </tab>
                     </tabs>
-                    <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span></p>
+                    <p><strong>2. Create some commits in the new branch.</strong> <span class="dimmed">Just commit as per normal. Commits you add while on a certain branch will become part of that branch.</span><br>
+                      Note how the <code v-pre>master</code> label and the <code v-pre>HEAD</code> label moves to the new commit (The <code v-pre>HEAD</code> label of the local repo is represented as <span aria-hidden="true" class="fas fa-dot-circle"></span> in SourceTree)</p>
                     <p><strong>3. Switch to the <code v-pre>master</code> branch.</strong> Note how the changes you did in the <code v-pre>feature1</code> branch are no longer in the working directory.</p>
                     <tabs>
                       <tab><template slot="_header">SourceTree</template>
@@ -103,7 +125,8 @@
                         </div>
                       </tab>
                     </tabs>
-                    <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.</p>
+                    <p><strong>4. Add a commit to the master branch.</strong> Let’s imagine it’s a bug fix.<br>
+                      To keep things simple for the time being, this commit should <mark>not involve the same content that you changed in the <code v-pre>feature1</code> branch</mark>. To be one the safe side, this commit can change an entirely different file.</p>
                     <img src="/website/book/gitAndGithub/branch/images/sourcetree_4.png" height="100">
                     <p></p>
                     <p><strong>5. Switch back to the <code v-pre>feature1</code> branch</strong> <span class="dimmed">(similar to step 3)</span>.</p>
@@ -122,7 +145,12 @@
                         </div>
                       </tab>
                     </tabs>
-                    <p>Observe how the changes you did in the <code v-pre>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code v-pre>feature1</code> branch.</p>
+                    <p>The objective of that merge was to <em>sync</em> the <code v-pre>feature1</code> branch with the <code v-pre>master</code> branch. Observe how the changes you did in the <code v-pre>master</code> branch (i.e. the imaginary bug fix) is now available even when you are in the <code v-pre>feature1</code> branch.</p>
+                    <box type="info" seamless>
+                      <p>Instead of merging <code v-pre>master</code> to <code v-pre>feature1</code>, an alternative is to <a href="https://www.atlassian.com/git/tutorials/merging-vs-rebasing"><em>rebase</em></a> the <code v-pre>feature1</code> branch. However, rebasing is an advance feature that requires modifying past commits. If you modify past commits that have been pushed to a remote repository, you'll have to <a href="https://www.datree.io/resources/git-push-force"><em>force-push</em></a> the modified commit to the remote repo in order to update the commits in it.
+                      </p>
+                    </box>
+                    <p></p>
                     <p><strong>7. Add another commit to the <code v-pre>feature1</code> branch.</strong></p>
                     <p><strong>8. Switch to the <code v-pre>master</code> branch and add one more commit.</strong></p>
                     <p><strong>9. Merge <code v-pre>feature1</code> to the master branch</strong>, giving and end-result like this:</p>
@@ -138,6 +166,12 @@
                     </tabs>
                     <p><strong>10. Create a new branch called <code v-pre>add-countries</code>, switch to it, and add some commits to it</strong> <span class="dimmed">(similar to steps 1-2 above)</span>. You should have something like this now:</p>
                     <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchBeforeMerging.png" height="80">
+                    <p></p>
+                    <box type="wrong" seamless>
+                      <p><strong class="text-danger">Avoid this common rookie mistake!</strong></p>
+                      <p><mark>Always remember to switch back to the <code v-pre>master</code> branch before creating a new branch.</mark> If not, your new branch will be created on top of the current branch.
+                      </p>
+                    </box>
                     <p></p>
                     <p><strong>11. Go back to the <code v-pre>master</code> branch and merge the <code v-pre>add-countries</code> branch onto the <code v-pre>master</code> branch</strong> <span class="dimmed">(similar to steps 8-9 above)</span>. While you might expect to see something like the below,</p>
                     <img src="/website/book/gitAndGithub/branch/images/addCountriesBranchNoFastForward.png" height="100">

@@ -318,8 +318,8 @@
                                   </template>
                                   <div>
                                     <div>
-                                      <panel type="dark" expanded id="key-exercise-run-helloworld"><template slot="_header">
-                                          <h3 id="key-exercise-run-helloworld"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] Run HelloWorld</small></small><a class="fa fa-anchor" href="#key-exercise-run-helloworld" onclick="event.stopPropagation()"></a></h3>
+                                      <panel type="secondary" expanded id="exercise-run-helloworld"><template slot="_header">
+                                          <h3 id="exercise-run-helloworld"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Exercise] Run HelloWorld</small></small><a class="fa fa-anchor" href="#exercise-run-helloworld" onclick="event.stopPropagation()"></a></h3>
                                         </template>
                                         <question>
                                           <ul>
@@ -327,6 +327,16 @@
                                             <li>Write, compile and run a small Java program <span class="dimmed">(e.g., a HelloWorld program)</span> in your computer. You can use any code editor to write the program but use the command prompt to compile and run the program.</li>
                                             <li>Modify the code to print something else, save, compile, and run the program again.</li>
                                           </ul>
+                                        </question>
+                                      </panel>
+                                    </div>
+                                    <div>
+                                      <panel type="dark" expanded id="key-exercise-byeworld"><template slot="_header">
+                                          <h3 id="key-exercise-byeworld"><small><small><span><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></span> [Key Exercise] ByeWorld</small></small><a class="fa fa-anchor" href="#key-exercise-byeworld" onclick="event.stopPropagation()"></a></h3>
+                                        </template>
+                                        <question>
+                                          <p>Modify the code below to print &quot;Bye World!&quot;.</p>
+                                          <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span>  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span class="highlighted">    <span class="hljs-comment">// add code here</span><br></span><span>  }<br></span><span>}<br></span></code></pre>
                                         </question>
                                       </panel>
                                     </div>
@@ -1016,6 +1026,7 @@
                                               </div>
                                             </div>
                                           </div>
+                                          <p><mark>Do not change the code of the <code v-pre>main</code> method!</mark></p>
                                           <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        System.out.println(<span class="hljs-string">"A+: "</span> + getGradeCap(<span class="hljs-string">"A+"</span>));<br></span><span>        System.out.println(<span class="hljs-string">"B : "</span> + getGradeCap(<span class="hljs-string">"B"</span>));<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                           <pre><code class="hljs" v-pre><span>A+: 5.0<br></span><span>B : 3.5<br></span></code></pre>
@@ -1148,6 +1159,7 @@
                                               </div>
                                             </div>
                                           </div>
+                                          <p><mark>Do not change the code of the <code v-pre>main</code> method!</mark></p>
                                           <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>{<br></span><span><br></span><span>    <span class="hljs-comment">// ADD YOUR CODE HERE</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getGradeCap</span><span class="hljs-params">(String grade)</span> </span>{<br></span><span>        <span class="hljs-keyword">double</span> cap = <span class="hljs-number">0</span>;<br></span><span>        <span class="hljs-keyword">switch</span> (grade) {<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A+"</span>:<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A"</span>:<br></span><span>            cap = <span class="hljs-number">5.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"A-"</span>:<br></span><span>            cap = <span class="hljs-number">4.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B+"</span>:<br></span><span>            cap = <span class="hljs-number">4.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B"</span>:<br></span><span>            cap = <span class="hljs-number">3.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"B-"</span>:<br></span><span>            cap = <span class="hljs-number">3.0</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">case</span> <span class="hljs-string">"C"</span>:<br></span><span>            cap = <span class="hljs-number">2.5</span>;<br></span><span>            <span class="hljs-keyword">break</span>;<br></span><span>        <span class="hljs-keyword">default</span>:<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> cap;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{<br></span><span>        String[] grades = <span class="hljs-keyword">new</span> String[]{<span class="hljs-string">"A+"</span>, <span class="hljs-string">"A"</span>, <span class="hljs-string">"A-"</span>};<br></span><span>        <span class="hljs-keyword">double</span>[] caps = getMultipleGradeCaps(grades);<br></span><span>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; grades.length; i++) {<br></span><span>            System.out.println(grades[i] + <span class="hljs-string">":"</span> + caps[i]);<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre>
                                           <p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
                                           <pre><code class="hljs" v-pre><span>A+:5.0<br></span><span>A:5.0<br></span><span>A-:4.5<br></span></code></pre>
@@ -3813,7 +3825,8 @@
               <a class="nav-link py-1" href="#the-java-world">The Java world&#x200E;</a>
               <a class="nav-link py-1" href="#getting-started">Getting started&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                <a class="nav-link py-1" href="#key-exercise-run-helloworld"> [Key Exercise] Run HelloWorld&#x200E;</a>
+                <a class="nav-link py-1" href="#exercise-run-helloworld"> [Exercise] Run HelloWorld&#x200E;</a>
+                <a class="nav-link py-1" href="#key-exercise-byeworld"> [Key Exercise] ByeWorld&#x200E;</a>
               </nav>
               <a class="nav-link py-1" href="#data-types">Data types&#x200E;</a>
               <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">

@@ -126,7 +126,7 @@
           <p></p>
           <h4 id="1-review-some-peer-prs"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Review some peer PRs</span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-review-some-peer-prs" class="anchor"></span><a class="fa fa-anchor" href="#1-review-some-peer-prs" onclick="event.stopPropagation()"></a></h4>
           <div>
-            <div tags="m--cs2103">
+            <div tags="m--cs2103 m--tic4001">
               <box type="wrong" add-class="ml-4" icon-size="2x" seamless><template slot="icon"><span aria-hidden="true" class="fas fa-hand-paper"></span></template>
                 <p><strong>Please wait till Mon, Aug 31st</strong> to start this task, to give others a few extra days to create the PR if they haven't done so yet.
                 </p>
@@ -141,6 +141,11 @@
             <ul>
               <li><strong>Learn <em>how</em> you should review PRs in this task</strong>:</li>
             </ul>
+            <panel type="seamless" class="algolia-no-index">
+              <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span></div>
+              <iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=c001244c-01b5-4471-ab9d-ac1b0098110a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+            </panel>
+            <p></p>
             <div class="indented-level2">
               <panel type class="embedding algolia-no-index" minimized><template slot="_header">
                   <p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Reviewing PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
@@ -195,7 +200,7 @@
                 </ul>
               </li>
               <li>
-                <p><strong>Do the first PR review</strong> as follows.</p>
+                <p><span class="badge badge-dark">Step 2</span> <strong>Do the first PR review</strong> as follows.</p>
                 <ul>
                   <li>Comment on <mark><a href="https://se-education.org/guides/conventions/java/intermediate.html">coding standard</a> violations only</mark>.</li>
                   <li>The review allocation is given in the panel below.</li>
@@ -241,18 +246,21 @@
                   </div>
                 </panel>
                 <p></p>
-                <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If the student you have been allocated to review has not created a PR (or the PR has a trivial amount of code), you can review the <em>Backup PR to review</em> provided in the allocation table. Failing both, review another PR allocated to another student in your own tutorial <ins>but not in your team</ins>.</p>
-                <p></p>
-                <box type="tip" light>
-                  <p>Tip for future reference: GitHub allows you to filter PRs/Issues using various criteria such as <code v-pre>author:AuthorUsername</code> (<a href="https://github.com/reposense/RepoSense/pulls?utf8=%E2%9C%93&amp;q=is%3Apr+author%3Afzdy1914+">example</a> -- see the <code v-pre>filters</code> text box in the target page).</p>
-                  <p>Alternatively, you can use PR labels (if any) to filter PRs/Issues.<br>
-                    <img src="/website/admin/images/filterPrsUsingLabels.png"></p>
-                </box>
-                <p></p>
+
+                <div tags="m--cs2113 m--cs2103">
+                  <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If the student you have been allocated to review has not created a PR (or the PR has a trivial amount of code), you can review the <em>Backup PR to review</em> provided in the allocation table. Failing both, review another PR allocated to another student in your own tutorial <ins>but not in your team</ins>.</p>
+                  <p></p>
+                  <box type="tip" light>
+                    <p>Tip for future reference: GitHub allows you to filter PRs/Issues using various criteria such as <code v-pre>author:AuthorUsername</code> (<a href="https://github.com/reposense/RepoSense/pulls?utf8=%E2%9C%93&amp;q=is%3Apr+author%3Afzdy1914+">example</a> -- see the <code v-pre>filters</code> text box in the target page).</p>
+                    <p>Alternatively, you can use PR labels (if any) to filter PRs/Issues.<br>
+                      <img src="/website/admin/images/filterPrsUsingLabels.png"></p>
+                  </box>
+                  <p></p>
+                </div>
               </div>
             </div>
             <ul>
-              <li><span class="badge badge-dark">Step 2</span> <strong>Do the second PR review</strong> as follows.
+              <li><span class="badge badge-dark">Step 3</span> <strong>Do the second PR review</strong> as follows.
                 <ul>
                   <li>Comment on <mark>other code quality guidelines</mark> (see the <span tags="m--cs2103">section <em>Naming</em></span> in <a href="/website/se-book-adapted/chapters/codeQuality.html">this textbook chapter</a>) you have learned so far. It's optional to comment on coding standard violations in this PR review.</li>
                   <li>The review allocation is given in the panel below.</li>
@@ -303,7 +311,7 @@
               </div>
             </div>
             <ul>
-              <li><span class="badge badge-dark">Step 3</span> <strong>[When you receive reviews for your own PR] Respond to comments received</strong>. You are recommended to (but not obliged to) respond to comments received from peers, especially if the PR reviewer asked you for more info. As mentioned in <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html">these guidelines</a>, do not get into arguments with PR reviewers/authors.</li>
+              <li><span class="badge badge-dark">Step 4</span> <strong>[When you receive reviews for your own PR] Respond to comments received</strong>. You are recommended to (but not obliged to) respond to comments received from peers, especially if the PR reviewer asked you for more info. As mentioned in <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html">these guidelines</a>, do not get into arguments with PR reviewers/authors.</li>
             </ul>
           </div>
           <p></p>
@@ -1320,7 +1328,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 26 Aug 2020, 22:22:46 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, 27 Aug 2020, 20:21:43 GMT+8]</small></div>
     </footer>
   </div>
 </body>

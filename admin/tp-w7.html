@@ -364,10 +364,10 @@
                           <p><strong>Formalize the project plan</strong> by assigning relevant issues to the corresponding milestone.</p>
                         </li>
                         <li>
-                          <p><strong>Define project tasks as issues</strong>. When you start implementing a user story (or a feature), break it down to smaller tasks if necessary. Define reasonable sized, standalone tasks. <mark>Create issues for each</mark> of those tasks so that they can be tracked.<span class="dimmed">e.g.</span></p>
+                          <p><strong>Define project tasks as issues</strong>. When you start implementing a user story (or a feature), break it down to smaller tasks if necessary. Define reasonable sized, standalone tasks. <mark>Create issues for each</mark> of those tasks so that they can be tracked.</p>
                           <ul>
                             <li>
-                              <p>A typical task should be able to done by one person, in a few hours.</p>
+                              <p>A typical task should be small enough for one person to do in a few hours. <span class="dimmed">eg.,</span></p>
                               <ul>
                                 <li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad (reasons: not a one-person task, not small enough): <code v-pre>Write the Developer Guide</code></span></li>
                                 <li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good: <code v-pre>Update class diagram in the Developer Guide for v1.4</code></span></li>
@@ -440,8 +440,8 @@
               <h4 id="2-update-project-website-aboutus-readme"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Update project website: <code v-pre>AboutUs</code>, <code v-pre>README</code></span><span id="2-update-project-website-aboutus-readme" class="anchor"></span><a class="fa fa-anchor" href="#2-update-project-website-aboutus-readme" onclick="event.stopPropagation()"></a></h4>
               <div>
                 <div class="indented-level1">
-                  <box type="info" light>
-                    <p><strong>Recommended procedure for updating docs</strong>:</p>
+                  <box type="info" seamless>
+                    <p class="text-info"><strong>Recommended procedure for updating docs</strong>:</p>
                     <ol>
                       <li>Divide among yourselves who will update which parts of the document(s).</li>
                       <li>Update the team repo by following the recommended workflow.</li>
@@ -762,9 +762,7 @@
                                 </svg> conversation</small></span> tab of the PR page. Here's an example:<br>
                             <a href="/website/admin/images/gitHubPrStatus.png" target="_self"><img src="/website/admin/images/gitHubPrStatus.png" alt class="img-fluid"></a>
                             <ul>
-                              <li><strong>If there is a failure</strong>, you can click on the <code v-pre>Details</code> link in corresponding line to find out more about the failure. Once you figure out the cause of the failure, push the a fix to the PR.<br>
-                                <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span> PRO TIP</span> You can use GitHub's <a href="https://help.github.com/en/articles/about-protected-branches"><em>protected branches</em></a> feature to prevent CI-failing PRs from being merged.
-                              </li>
+                              <li><strong>If there is a failure</strong>, you can click on the <code v-pre>Details</code> link in corresponding line to find out more about the failure. Once you figure out the cause of the failure, push the a fix to the PR.</li>
                             </ul>
                           </li>
                           <li><strong>After merging a PR</strong>, close the corresponding issue.<br>
@@ -895,7 +893,7 @@
               <h4 id="3-update-the-ug"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Update the UG</span><span id="3-update-the-ug" class="anchor"></span><a class="fa fa-anchor" href="#3-update-the-ug" onclick="event.stopPropagation()"></a></h4>
               <div>
                 <ul>
-                  <li>Move the draft UG into the User Guide page in your repository. Update the content as necessary. If a feature is not implemented in the current version, you can either omit it from the UG or mark it as 'Coming soon' (e.g., <code v-pre>## Archiving contacts [coming soon]</code>).<br>
+                  <li><strong>Move the draft UG content into the User Guide page</strong> in your repository. Update the content as necessary. If a feature is not implemented in the current version, you can either omit it from the UG or mark it as 'Coming soon' (e.g., <code v-pre>## Archiving contacts [coming soon]</code>).<br>
                     As <span trigger="click" for="modal:v11-divideDocs" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v11-divideDocs'].show()" class="trigger-click">mentioned before</span>, while it is more convenient for one person to update the entire UG, we recommend that <strong>each person updates their own part of the docs</strong> so that we can easily track the contribution of each member using <a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true">RepoSense</a>.</li>
                 </ul>
                 <b-modal id="modal:v11-divideDocs" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v11-divideDocs" class="algolia-no-index"><template slot="modal-title">About Dividing Documentation Work</template>
@@ -1194,12 +1192,7 @@
               <div>
                 <ul>
                   <li>
-                    <p>
-                      <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Do a sincere job in this task as the DG will be reviewed during this week's tutorial.
-                    </p>
-                  </li>
-                  <li>
-                    <p>Update the following in the DG, based on your project notes from the previous weeks.<br>
+                    <p><strong>Add the following to the DG</strong>, based on your project notes from the previous weeks.<br>
                       <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some examples of these can be found in the <a href="https://nus-cs2103-ay2021s1.github.io/tp/DeveloperGuide.html#product-scope">AB3 Developer Guide</a>.
                     </p>
                     <ul>
@@ -1557,7 +1550,7 @@ Extensions:
                       <li><mark><strong>Aim to produce a <em>working</em> <a href="https://en.wikipedia.org/wiki/Minimum_viable_product">MVP</a></strong></mark> at the end of this iteration even if the functionalities are not polished (polishing can be done in a later iteration).</li>
                       <li><strong>If possible, break the iteration into two <em>increments</em></strong> i.e., aim to produce an even simpler but working version after one week.</li>
                       <li><strong>Avoid depth-first implementations</strong>: &quot;I'll do the back-end part of feature X in this iteration&quot; is not acceptable as that is not in the spirit of iterative development. Remember, we are pretending this to be the last iteration; why would you implement the back-end part of a feature in the last iteration?<br>
-                        It is OK to add simpler versions of bigger features, but not OK to add partial features that can't be used yet i.e., go <em>breadth-first iterative</em> not <em>depth-first iterative</em>.</li>
+                        It is OK to add simpler versions of bigger features, but not OK to add partial features that can't be used yet.</li>
                     </ul>
                   </li>
                   <li><span><span aria-hidden="true" class="fas fa-users"></span></span> <strong>Divide the work among the team members</strong> i.e., the work required for the current iteration.</li>
@@ -1605,7 +1598,7 @@ Extensions:
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 16 Sep 2020, 15:48:03 GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, 17 Sep 2020, 0:06:01 GMT+8]</small>
       </div>
     </footer>
   </div>

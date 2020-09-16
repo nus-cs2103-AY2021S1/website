@@ -131,7 +131,8 @@
           <div>
             <ul>
               <li>We recommend that you re-generate a new jar file again and ensure it works. Note that you might have to use Gradle to generate the jar file this time as you need to bundle the JavaFX third-party library into the jar file. Refer to the <a href="https://se-education.org/guides/tutorials/gradle.html#creating-a-jar-file"><em>Gradle tutorial</em> @SE-EDU/guides</a> to find how.<br>
-                <mark>If the <code v-pre>.jar</code> file is smaller than 10Mb</mark>, most likely JavaFX libraries are not inside it.</li>
+                <mark>If the <code v-pre>.jar</code> file is smaller than 10Mb</mark>, most likely JavaFX libraries are not inside it.
+              </li>
               <li>There is no need to create a release in GitHub with this jar file (although you are welcome to).</li>
             </ul>
           </div>
@@ -159,9 +160,11 @@
                       </ol>
                       <p><strong>1. Locate the PR</strong> to be merged in your repo's GitHub page.</p>
                       <p><strong>2. Click on the <span class="tab"><span aria-hidden="true" class="far fa-comments"></span> Conversation</span> tab</strong> and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
-                        <img src="/website/book/gitAndGithub/managePRs/images/mergePr.png" width="800"></p>
+                        <img src="/website/book/gitAndGithub/managePRs/images/mergePr.png" width="800">
+                      </p>
                       <p><strong>3. If the PR is not merge-able in the current state</strong>, the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> will not be green. Here are the possible reasons and remedies:</p>
+                            <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                          </svg></span> will not be green. Here are the possible reasons and remedies:</p>
                       <ul>
                         <li><strong>Problem: The PR code is out-of-date</strong>, indicated by the message <strong><span class="dimmed">This branch is out-of-date with the base branch</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated.
                           <ul>
@@ -212,10 +215,12 @@
                         </div>
                       </b-modal>
                       <p><strong>3. Merge the PR</strong> by clicking on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button, followed by the <code v-pre>Confirm merge</code> button. You should see a <code v-pre>Pull request successfully merged and closed</code> message after the PR is merged.<br></p>
+                            <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                          </svg></span> button, followed by the <code v-pre>Confirm merge</code> button. You should see a <code v-pre>Pull request successfully merged and closed</code> message after the PR is merged.<br></p>
                       <ul>
                         <li>You can choose between three merging options by clicking on the down-arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                              <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button. If you are new to Git and GitHub, the <code v-pre>Create merge commit</code> options are recommended.</li>
+                              <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                            </svg></span> button. If you are new to Git and GitHub, the <code v-pre>Create merge commit</code> options are recommended.</li>
                       </ul>
                       <p><strong>Next, sync your local repos (and forks).</strong> Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to syn the fork with the upstream repo.</p>
                     </div>
@@ -279,13 +284,17 @@
                         </li>
                         <li>
                           <p>Click on the <span class="tab"><span class="dimmed"><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
-                                  <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /></svg></span> Pull requests</span> tab followed by the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">New pull request</span> <strong>button</strong>. This will bring you to the 'Comparing changes' page.</p>
+                                  <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" />
+                                </svg></span> Pull requests</span> tab followed by the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">New pull request</span> <strong>button</strong>. This will bring you to the 'Comparing changes' page.</p>
                         </li>
                         <li>
                           <p>Set the appropriate target repo and the branch that should receive your PR, using the <code v-pre>base repository</code> and <code v-pre>base</code> dropdowns. e.g.,<br>
                             <span class="btn btn-light border">base repository: <strong>se-edu/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> <span class="btn btn-light border">base: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span><br></p>
+                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                              </svg></span> <span class="btn btn-light border">base: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                              </svg></span><br>
+                          </p>
                           <box type="info" seamless>
                             <p>Normally, the default value shown in the dropdown is what you want but in case your fork has <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">e.g., the repo you forked from is also a fork of a another repo, which means both of those are considered upstream repos of your fork</span>multiple upstream repos</span>, the default may not be what you want.</p>
                           </box>
@@ -293,8 +302,11 @@
                         <li>
                           <p>Indicate which repo:branch contains your proposed code, using the <code v-pre>head repository</code> and <code v-pre>compare</code> dropdowns. e.g.,<br>
                             <span class="btn btn-light border">head repository: <strong>myrepo/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> <span class="btn btn-light border">compare: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span><br></p>
+                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                              </svg></span> <span class="btn btn-light border">compare: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                              </svg></span><br>
+                          </p>
                         </li>
                       </ol>
                       <p><strong>6. Verify the proposed code</strong>: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">commit the new code and push to the branch</span>update the branch</span> as necessary.</p>
@@ -303,7 +315,8 @@
                         <ol>
                           <li>
                             <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" /></svg></span> Create pull request</span> button.</p>
+                                    <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" />
+                                  </svg></span> Create pull request</span> button.</p>
                           </li>
                           <li>
                             <p>Fill in the PR name and description e.g.,<br>
@@ -313,11 +326,13 @@
                           </li>
                           <li>
                             <p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                  <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button and choose <code v-pre>Create draft pull request</code> option.</p>
+                                  <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                                </svg></span> button and choose <code v-pre>Create draft pull request</code> option.</p>
                           </li>
                           <li>
                             <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                  <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" /></svg></span> button to create the PR.<br></p>
+                                  <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
+                                </svg></span> button to create the PR.<br></p>
                           </li>
                           <li>
                             <p>Go to the receiving repo to verify your PR appears there in the <code v-pre>Pull requests</code> tab.
@@ -362,7 +377,9 @@
                   <li>Merge the remaining PRs using a procedure similar to the above.</li>
                 </ol>
               </div>
-            </span></div>
+            </span>
+          </div>
+          <div></div>
           <div>
             <div class="indented">
               <div class="indented border">
@@ -382,6 +399,8 @@
               </div>
             </div>
           </div>
+          <div></div>
+          <div></div>
           <div>
             <div class="indented">
               <div class="indented border">
@@ -404,6 +423,8 @@
               </div>
             </div>
           </div>
+          <div></div>
+          <div></div>
           <div>
             <div class="indented">
               <div class="indented border">
@@ -423,6 +444,8 @@
               </div>
             </div>
           </div>
+          <div></div>
+          <div></div>
           <div>
             <div class="indented">
               <div class="indented border">
@@ -442,6 +465,7 @@
               </div>
             </div>
           </div>
+          <div></div>
           <p></p>
           <h4 id="3-add-increment-a-ci"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Add Increment: <code v-pre>A-CI</code><span id="3-add-increment-a-ci" class="anchor"></span><a class="fa fa-anchor" href="#3-add-increment-a-ci" onclick="event.stopPropagation()"></a></h4>
           <div>
@@ -449,6 +473,7 @@
               <li>We recommend that <mark>at least one member</mark> of the team attempt the following.</li>
             </ul>
           </div>
+          <div></div>
           <div>
             <div class="indented">
               <div class="indented border">
@@ -470,6 +495,7 @@
               </div>
             </div>
           </div>
+          <div></div>
           <p></p>
           <h4 id="4-add-an-extension"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span>Add an extension</span><span id="4-add-an-extension" class="anchor"></span><a class="fa fa-anchor" href="#4-add-an-extension" onclick="event.stopPropagation()"></a></h4>
           <div>
@@ -527,7 +553,8 @@
                 <li>
                   <p><strong>How to record?</strong><br>
                     <mark>Keep records of intermediate steps (e.g., persona, scenarios)</mark> in your collaborative project document started in the previous week.<br>
-                    You can <s>write each user story in a piece of paper (e.g. yellow sticky note, index card, or just pieces of paper about the size of a playing card). Alternatively you can</s> use an online tool (some examples given in <span trigger="click" for="modal:v10-onlinetools" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v10-onlinetools'].show()" class="trigger-click">[Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Specifying Requirements → UserStories → Usage → (panel) Tool Examples ]</span>).</p>
+                    You can <s>write each user story in a piece of paper (e.g. yellow sticky note, index card, or just pieces of paper about the size of a playing card). Alternatively you can</s> use an online tool (some examples given in <span trigger="click" for="modal:v10-onlinetools" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v10-onlinetools'].show()" class="trigger-click">[Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Specifying Requirements → UserStories → Usage → (panel) Tool Examples ]</span>).
+                  </p>
                 </li>
               </ul>
               <b-modal id="modal:v10-brainstorming" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v10-brainstorming" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
@@ -769,7 +796,8 @@
                                     <p>Conditions:</p>
                                     <p><span aria-hidden="true" class="far fa-check-square"></span> Separate post count for each forum should be shown<br>
                                       <span aria-hidden="true" class="far fa-square"></span> Total post count of a student should be shown<br>
-                                      <span aria-hidden="true" class="far fa-check-square"></span> The list should be sortable by student name and post count</p>
+                                      <span aria-hidden="true" class="far fa-check-square"></span> The list should be sortable by student name and post count
+                                    </p>
                                   </div>
                                 </box>
                                 <p><strong>Other useful info that can be added to a user story</strong> includes (but not limited to)</p>
@@ -1288,7 +1316,8 @@
                     <p>We recommend you configure the issue tracker of the tP team repo as follows:</p>
                     <ul>
                       <li>Delete existing labels and add the following labels.<br>
-                        <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Issue type</strong> labels are useful from the beginning of the project. The other labels are needed only when you start implementing the features.</li>
+                        <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Issue type</strong> labels are useful from the beginning of the project. The other labels are needed only when you start implementing the features.
+                      </li>
                     </ul>
                     <box>
                       <p><strong>Issue type</strong> labels:</p>
@@ -1357,7 +1386,8 @@
               <li>If the product <em>can</em> be of some use without a given user story, that user story should be left out of v1.2, even if the omission makes the product hard to use, as long as the product is not <em>impossible</em> to use <span class="dimmed">e.g., in most cases a product can be used without an 'edit item' feature because the user can always delete an item and add a new item instead of editing an existing an item</span>.</li>
               <li>Don't worry about v1.3. You can design v1.3 after v1.2 done.</li>
               <li>Don't worry about v1.2 being 'too small'. You can always add more features to v1.2 if you finish it ahead of schedule.<br>
-                <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can also select an additional set of user stories that are <em>nice-to-have</em> in v1.2, to be done but only if there's time left.</li>
+                <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can also select an additional set of user stories that are <em>nice-to-have</em> in v1.2, to be done but only if there's time left.
+              </li>
               <li>If possible, narrow the scope of v1.2 further e.g., narrower target user, a smaller value proposition.</li>
             </ul>
             <p>Suggested workflow:</p>
@@ -1406,7 +1436,8 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sat, 12 Sep 2020, 21:36:22 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 16 Sep 2020, 15:48:03 GMT+8]</small>
+      </div>
     </footer>
   </div>
 </body>

@@ -157,7 +157,8 @@
                     <li><span class="dimmed">[<a href="/website/schedule/week10/topics.html#W10-1h">W10.1h</a>] <span>Design → Design Patterns → Abstraction Occurrence Pattern →
                         </span></span> <span>What</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></li>
                   </ul>
-                </small></div>
+                </small>
+              </div>
               <p></p>
               <ul>
                 <li>[<a href="/website/schedule/week10/topics.html#W10-2">W10.2</a>] <strong>Defensive Programming</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
@@ -190,7 +191,8 @@
                           </span></span> <span>Design by contract</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p>
                     </li>
                   </ul>
-                </small></div>
+                </small>
+              </div>
               <p></p>
               <ul>
                 <li>[<a href="/website/schedule/week10/topics.html#W10-3">W10.3</a>] <strong>Test Cases: Intro</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
@@ -215,7 +217,8 @@
                           </span></span> <span>Testing based on use cases</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
                     </li>
                   </ul>
-                </small></div>
+                </small>
+              </div>
               <ul>
                 <li>[<a href="/website/schedule/week10/topics.html#W10-4">W10.4</a>] <strong>Test Cases: Equivalence Partitioning</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
               </ul>
@@ -235,7 +238,8 @@
                           </span></span> <span>Intermediate</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
                     </li>
                   </ul>
-                </small></div>
+                </small>
+              </div>
               <ul>
                 <li>[<a href="/website/schedule/week10/topics.html#W10-5">W10.5</a>] <strong>Test Cases: Boundary Value Analysis</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
               </ul>
@@ -251,9 +255,11 @@
                           </span></span> <span>How</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
                     </li>
                   </ul>
-                </small></div>
+                </small>
+              </div>
               <p></p>
-            </span></panel>
+            </span>
+          </panel>
           <hr style="border: 1px dotted #cccccc;">
           <p><span id="W10-1"></span></p>
           <div>
@@ -1346,7 +1352,8 @@
                       </box>
                       <blockquote>
                         <p>Program testing can be used to show the presence of bugs, but never to show their absence!<br>
-                          <sub>--Edsger Dijkstra</sub></p>
+                          <sub>--Edsger Dijkstra</sub>
+                        </p>
                       </blockquote>
                       <div id="e-and-e">
                         <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed">e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong> In particular:</p>
@@ -1718,7 +1725,8 @@
                       </box>
                       <p>It is inefficient and impractical to test this method for all integer values <code v-pre>[-MIN_INT to MAX_INT]</code>. Fortunately, there is no need to test all possible input values. For example, if the input value <code v-pre>233</code> failed to produce the correct result, the input <code v-pre>234</code> is likely to fail too; there is no need to test both.</p>
                       <p>In general, <strong>most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways.</strong> That means a range of inputs is treated the same way inside the SUT.
-                        <strong><em>Equivalence partitioning (EP)</em> is a test case design technique that uses the above observation to improve the E&amp;E of testing.</strong></p>
+                        <strong><em>Equivalence partitioning (EP)</em> is a test case design technique that uses the above observation to improve the E&amp;E of testing.</strong>
+                      </p>
                       <box type="definition" seamless>
                         <div>
                           <p><strong>Equivalence partition (aka equivalence class)</strong>: A group of test inputs that are likely to be processed by the SUT in the same way.</p>
@@ -1908,7 +1916,8 @@
                       </ul>
                       <box>
                         <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this method in the <code v-pre>DataStack</code> class:
-                          <code v-pre>push(Object o): boolean</code></p>
+                          <code v-pre>push(Object o): boolean</code>
+                        </p>
                         <ul>
                           <li>Adds o to the top of the stack if the stack is not full.</li>
                           <li>returns <code v-pre>true</code> if the push operation was a success.</li>
@@ -2071,7 +2080,8 @@
                             <tr>
                               <td>
                                 <p>[MIN_INT, 0]<br>
-                                  <span class="dimmed">(MIN_INT is the minimum possible integer value allowed by the environment)</span></p>
+                                  <span class="dimmed">(MIN_INT is the minimum possible integer value allowed by the environment)</span>
+                                </p>
                               </td>
                               <td>
                                 <p>MIN_INT, MIN_INT+1, -1, 0 , 1</p>
@@ -2100,7 +2110,8 @@
                             <tr>
                               <td>
                                 <p>[non-empty Stack]<br>
-                                  <span class="dimmed">(assuming a fixed size stack)</span></p>
+                                  <span class="dimmed">(assuming a fixed size stack)</span>
+                                </p>
                               </td>
                               <td>
                                 <p>Stack with: one element, two elements, no empty spaces, only one empty space</p>
@@ -2155,7 +2166,8 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sat, 12 Sep 2020, 21:36:22 GMT+8]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 16 Sep 2020, 15:48:03 GMT+8]</small>
+      </div>
     </footer>
   </div>
 </body>

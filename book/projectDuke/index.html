@@ -72,7 +72,8 @@
                   <h3 id="level-0-greet">Level 0. Greet<a class="fa fa-anchor" href="#level-0-greet" onclick="event.stopPropagation()"></a></h3>
                   <p>Implement an initial <em>skeletal</em> version of the Duke that simply greets the user and exits.
                     <br>
-                    Example:</p>
+                    Example:
+                  </p>
                   <pre><code class="no-line-numbers hljs" v-pre><span>____________________________________________________________<br></span><span> Hello! I'm Duke<br></span><span> What can I do for you?<br></span><span>____________________________________________________________<br></span><span> Bye. Hope to see you again soon!<br></span><span>____________________________________________________________<br></span></code></pre>
                   <ul>
                     <li>The indentation and horizontal lines are optional.</li>
@@ -86,7 +87,8 @@
                   <h3 id="level-1-greet-echo-exit">Level 1. Greet, Echo, Exit<a class="fa fa-anchor" href="#level-1-greet-echo-exit" onclick="event.stopPropagation()"></a></h3>
                   <p>Implement a <em>skeletal</em> version of Duke that starts by greeting the user, simply echos commands entered by the user, and exits when the user types <code v-pre>bye</code>.
                     <br>
-                    Example:</p>
+                    Example:
+                  </p>
                   <pre><code class="no-line-numbers hljs" v-pre><span>    ____________________________________________________________<br></span><span>     Hello! I'm Duke<br></span><span>     What can I do for you?<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>list<br></span><span>    ____________________________________________________________<br></span><span>     list<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>blah<br></span><span>    ____________________________________________________________<br></span><span>     blah<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>bye<br></span><span>    ____________________________________________________________<br></span><span>     Bye. Hope to see you again soon!<br></span><span>    ____________________________________________________________<br></span><span><br></span></code></pre>
                   <ul>
                     <li>The indentation and horizontal lines are optional.</li>
@@ -151,7 +153,8 @@
                   <h3 id="level-4-todos-events-deadlines">Level 4. ToDos, Events, Deadlines<a class="fa fa-anchor" href="#level-4-todos-events-deadlines" onclick="event.stopPropagation()"></a></h3>
                   <p>Add support for tracking three types of tasks:
                     <br>
-                    <br></p>
+                    <br>
+                  </p>
                   <ol>
                     <li><strong>ToDos</strong>: tasks without any date/time attached to it <span class="dimmed">e.g., <em>visit new theme park</em></span></li>
                     <li><strong>Deadlines</strong>: tasks that need to be done before a specific date/time <span class="dimmed">e.g., <em>submit report by 11/10/2019 5pm</em></span></li>
@@ -195,7 +198,8 @@
                   <h3 id="level-5-handle-errors">Level 5. Handle Errors<a class="fa fa-anchor" href="#level-5-handle-errors" onclick="event.stopPropagation()"></a></h3>
                   <p>Teach Duke to deal with errors such as incorrect inputs entered by the user.
                     <br>
-                    <br></p>
+                    <br>
+                  </p>
                   <p>Example:</p>
                   <pre><code class="no-line-numbers hljs" v-pre><span>todo<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! The description of a todo cannot be empty.<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>blah<br></span><span>    ____________________________________________________________<br></span><span>     ☹ OOPS!!! I'm sorry, but I don't know what that means :-(<br></span><span>    ____________________________________________________________<br></span></code></pre>
                   <div>
@@ -228,7 +232,8 @@
                   <h3 id="level-6-delete">Level 6. Delete<a class="fa fa-anchor" href="#level-6-delete" onclick="event.stopPropagation()"></a></h3>
                   <p>Add support for deleting tasks from the list.
                     <br>
-                    <br></p>
+                    <br>
+                  </p>
                   <p>Example:</p>
                   <pre><code class="no-line-numbers hljs" v-pre><span>list<br></span><span>    ____________________________________________________________<br></span><span>     Here are the tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✓] return book (by: June 6th)<br></span><span>     3.[E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     4.[T][✓] join sports club<br></span><span>     5.[T][✗] borrow book<br></span><span>    ____________________________________________________________<br></span><span><br></span><span>delete 3<br></span><span>    ____________________________________________________________<br></span><span>     Noted. I've removed this task: <br></span><span>       [E][✗] project meeting (at: Aug 6th 2-4pm)<br></span><span>     Now you have 4 tasks in the list.<br></span><span>    ____________________________________________________________<br></span></code></pre>
                   <div>
@@ -296,7 +301,8 @@
                   <h3 id="level-9-find">Level 9. Find<a class="fa fa-anchor" href="#level-9-find" onclick="event.stopPropagation()"></a></h3>
                   <p>Give users a way to find a task by searching for a keyword.
                     <br>
-                    <br></p>
+                    <br>
+                  </p>
                   <p>Example:</p>
                   <pre><code class="no-line-numbers hljs" v-pre><span>find book<br></span><span>    ____________________________________________________________<br></span><span>     Here are the matching tasks in your list:<br></span><span>     1.[T][✓] read book<br></span><span>     2.[D][✓] return book (by: June 6th)<br></span><span>    ____________________________________________________________<br></span></code></pre>
                 </div>
@@ -411,7 +417,8 @@
                     </div>
                     <ul>
                       <li><strong>Stretch Goal</strong>: Consider extracting more classes. e.g., <code v-pre>*Command</code> classes (i.e., <code v-pre>AddCommand</code>, <code v-pre>DeleteCommand</code>, <code v-pre>ExitCommand</code> etc.) that inherits from an abstract <code v-pre>Command</code> class, so that you can write the main logic of the App as follows:
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{<br></span><span>    ui.showWelcome();<br></span><span>    <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;<br></span><span>    <span class="hljs-keyword">while</span> (!isExit) {<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            String fullCommand = ui.readCommand();<br></span><span>            ui.showLine(); <span class="hljs-comment">// show the divider line ("_______")</span><br></span><span>            Command c = Parser.parse(fullCommand);<br></span><span>            c.execute(tasks, ui, storage);<br></span><span>            isExit = c.isExit();<br></span><span>        } <span class="hljs-keyword">catch</span> (DukeException e) {<br></span><span>            ui.showError(e.getMessage());<br></span><span>        } <span class="hljs-keyword">finally</span> {<br></span><span>            ui.showLine();<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can get some inspiration from how the code of the <a href="https://github.com/se-edu/addressbook-level2">addressbook-level2</a> is organized.</li>
+                        <pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>{<br></span><span>    ui.showWelcome();<br></span><span>    <span class="hljs-keyword">boolean</span> isExit = <span class="hljs-keyword">false</span>;<br></span><span>    <span class="hljs-keyword">while</span> (!isExit) {<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            String fullCommand = ui.readCommand();<br></span><span>            ui.showLine(); <span class="hljs-comment">// show the divider line ("_______")</span><br></span><span>            Command c = Parser.parse(fullCommand);<br></span><span>            c.execute(tasks, ui, storage);<br></span><span>            isExit = c.isExit();<br></span><span>        } <span class="hljs-keyword">catch</span> (DukeException e) {<br></span><span>            ui.showError(e.getMessage());<br></span><span>        } <span class="hljs-keyword">finally</span> {<br></span><span>            ui.showLine();<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can get some inspiration from how the code of the <a href="https://github.com/se-edu/addressbook-level2">addressbook-level2</a> is organized.
+                      </li>
                     </ul>
                   </div>
                   <hr>
@@ -637,8 +644,10 @@
                     <ul>
                       <li>Tweak the GUI to match the asymmetric nature of the conversation: As the conversation is between the user and the app (not between two humans), it is asymmetric in nature. Accordingly, it makes sense not to display both sides of the conversion in the same visual format.</li>
                       <li>Highlight errors e.g., when the user types a wrong command, the error should be shown in a different format to catch ther user's attention.</li>
-                      <li>Tweak padding, fonts, colors, alignments to make the GUI more pleasing to look at.</li>
-                      <li>Profile pictures: If your GUI shows profile pictures, you can tweak the way the picture is shown (e.g., crop as a circle or a square with rounded corners). In fact, an easy tweak is to use a picture with a transparent background so that it blends nicely with the background.</li>
+                      <li>Tweak padding, fonts, colors, alignments to make the GUI more pleasing to look at.<br>
+                        Given the app is likely to take only a small portion of the screen, and the bot replies can contain lot of text, try to optimize for space (e.g., avoid wasting display space that simply shows the background graphics)</li>
+                      <li>Profile pictures: If your GUI shows profile pictures, you can tweak the way the picture is shown (e.g., crop as a circle or a square with rounded corners). In fact, an easy tweak is to use a picture with a transparent background so that it blends nicely with the background.<br>
+                        Given that the participants of the conversion are fixed (i.e., you and the chatbot), do you even need big profile pictures?</li>
                     </ul>
                     <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can take inspiration from <a href="https://nus-cs2103-ay1920s1.github.io/website/admin/ip-showcase.html">these past projects</a>. If you adopt any ideas from them, don't forget to give credit to the original author.</p>
                   </div>

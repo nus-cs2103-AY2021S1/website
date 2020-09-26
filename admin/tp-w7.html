@@ -734,7 +734,7 @@
                             </ul>
                           </li>
                           <li><strong>Create issues to represent project tasks</strong> so that they can be tracked using the issue tracker features.</li>
-                          <li><strong>Create a PR when you implement a project task</strong> that updates the code.<br>
+                          <li><strong>Create a PR when you implement a project task</strong> that updates the code. Remember to use a separate branch for each PR.<br>
                             <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use GitHub's <a href="https://github.blog/2019-02-14-introducing-draft-pull-requests/"><em>draft PRs</em></a> feature to indicate that a PR is not yet ready for merging.<br>
                           </li>
                           <li><strong>Get team members to review PRs.</strong> A workflow without PR reviews is a risky workflow.
@@ -765,12 +765,17 @@
                               <li><strong>If there is a failure</strong>, you can click on the <code v-pre>Details</code> link in corresponding line to find out more about the failure. Once you figure out the cause of the failure, push the a fix to the PR.</li>
                             </ul>
                           </li>
-                          <li><strong>After merging a PR</strong>, close the corresponding issue.<br>
-                            <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span> PRO TIP</span> You can use GitHub's <a href="https://help.github.com/en/articles/closing-issues-using-keywords"><code v-pre>Fixes #123</code> trick</a> to get the issue to close automatically when the PR is merged.
+                          <li><strong>After merging a PR</strong>,
+                            <ul>
+                              <li>close the corresponding issue.<br>
+                                <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span> PRO TIP</span> You can use GitHub's <a href="https://help.github.com/en/articles/closing-issues-using-keywords"><code v-pre>Fixes #123</code> trick</a> to get the issue to close automatically when the PR is merged.
+                              </li>
+                              <li>sync your repos with the team rep by pulling the latest <code v-pre>master</code> from the team repo and pushing it to your own fork.</li>
+                            </ul>
                           </li>
                         </ul>
                         <b-modal id="modal:appErecommendedWorkflow-forkingworkflow" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appErecommendedWorkflow-forkingworkflow" class="algolia-no-index"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
-                            <div>
+                          <div>
                             <div></div>
                             <p></p>
                             <p><span class="dimmed"><strong><span>Project Management → Revision Control →
@@ -786,13 +791,17 @@
                                   <p><strong>In the <em>forking workflow</em>, the 'official' version of the software is kept in a remote repo designated as the 'main repo'. All team members fork the main repo create pull requests from their fork to the main repo.</strong></p>
                                   <p>To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in the code. Here are the steps:</p>
                                   <ol>
-                                    <li>Jean creates a separate branch in her local repo and fixes the bug in that branch.</li>
+                                    <li>Jean creates a separate branch in her local repo and fixes the bug in that branch.<br>
+                                      <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Common mistake: Done the proposed changes in the <code v-pre>master</code> branch -- if Jean does that, she will not be able to have more than one open PR at any time because any changes to the <code v-pre>master</code> branch will be reflected in all open PRs.
+                                    </li>
                                     <li>Jean pushes the branch to her fork.</li>
                                     <li>Jean creates a pull request from that branch in her fork to the main repo.</li>
                                     <li>Other members review Jean’s pull request.</li>
                                     <li>If reviewers suggested any changes, Jean updates the PR accordingly.</li>
                                     <li>When reviewers are satisfied with the PR, one of the members (usually the team lead or a designated 'maintainer' of the main repo) merges the PR, which brings Jean’s code to the main repo.</li>
-                                    <li>Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.</li>
+                                    <li>Other members, realizing there is new code in the upstream repo, sync their forks with the new upstream repo (i.e. the main repo). This is done by pulling the new code to their own local repo and pushing the updated code to their own fork.<br>
+                                      <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Possible mistake: Creating another 'reverse' PR from the team repo to team member fork to syn the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.
+                                    </li>
                                   </ol>
                                 </div>
                                 <div>
@@ -806,6 +815,108 @@
                                     </panel>
                                   </div>
                                 </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div>
+                              <p>
+                                <panel src="/website/book/revisionControl/forkingWorkflow/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/revisionControl/forkingWorkflow" class="algolia-no-index"><template slot="_header">
+                                    <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Revision Control → Forking Workflow</span></p>
+                                  </template></panel>
+                              </p>
+                            </div>
+                            <p></p>
+                            <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+                                  </span></strong></span></p>
+                            <div id="title-and-body">
+                              <div>
+                                <h4 id="forking-workflow"><span>Forking workflow</span><span id="forking-workflow" class="anchor"></span><a class="fa fa-anchor" href="#forking-workflow" onclick="event.stopPropagation()"></a></h4>
+                              </div>
+                              <div id="main">
+                                <div>
+                                  <p>You can follow the steps in the simulation of a forking workflow given below to learn how to follow the such a workflow.</p>
+                                  <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> This activity is best done as a team.</p>
+                                  <p><strong>Step 1. One member: set up the team org and the team repo.</strong></p>
+                                  <ol>
+                                    <li>
+                                      <p><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/"><strong>Create a GitHub organization</strong></a> for your team. The org name is up to you. We'll refer to this organization as <em>team org</em> from now on.</p>
+                                    </li>
+                                    <li>
+                                      <p><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/"><strong>Add a team</strong></a> called <code v-pre>developers</code> to your team org.</p>
+                                    </li>
+                                    <li>
+                                      <p><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/"><strong>Add team members</strong></a> to the <code v-pre>developers</code> team.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>Fork</strong> <a href="https://github.com/se-edu/samplerepo-workflow-practice">se-edu/samplerepo-workflow-practice</a> to your team org. We'll refer to this as the <em>team repo</em>.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code v-pre>developers</code> team.</strong> Give write access.</p>
+                                    </li>
+                                  </ol>
+                                  <p><strong>Step 2. Each team member: create PRs via own fork</strong></p>
+                                  <ol>
+                                    <li>
+                                      <p><strong>Fork that repo</strong> from your team org to your own GitHub account.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>Create a branch</strong> named <code v-pre>add-{your name}-info</code> (e.g. <code v-pre>add-johnTan-info</code>) in the local repo.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>Add a file</strong> <code v-pre>yourName.md</code> into the <code v-pre>members</code> directory (e.g., <code v-pre>members/jonhTan.md</code>) containing some info about you into that branch.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>Push that branch to your fork</strong>.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>Create a PR</strong> from that branch to the <code v-pre>master</code> branch of the team repo.</p>
+                                    </li>
+                                  </ol>
+                                  <p><strong>Step 3. For each PR: review, update, and merge.</strong></p>
+                                  <ol>
+                                    <li>
+                                      <p><strong>[A team member (not the PR author)] Review the PR</strong> by adding comments (can be just dummy comments).</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>[PR author] Update the PR</strong> by pushing more commits to it, to simulate updating the PR based on review comments.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>[Another team member] Approve and merge</strong> the PR using the GitHub interface.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>[All members]</strong> <a href="https://help.github.com/articles/syncing-a-fork/"><strong>Sync your local repo (and your fork)</strong> with upstream repo</a>. In this case, your <em>upstream repo</em> is the repo in your team org.</p>
+                                    </li>
+                                  </ol>
+                                  <p><strong>Step 4. Create conflicting PRs.</strong></p>
+                                  <ol>
+                                    <li>
+                                      <p><strong>[One member]: Update README:</strong> In the <code v-pre>master</code> branch, remove John Doe and Jane Doe from the <code v-pre>README.md</code>, commit, and push to the main repo.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>[Each team member] Create a PR</strong> to add yourself under the <code v-pre>Team Members</code> section in the <code v-pre>README.md</code>. Use a new branch for the PR e.g., <code v-pre>add-johnTan-name</code></p>
+                                    </li>
+                                  </ol>
+                                  <p><strong>Step 5. Merge conflicting PRs</strong> one at a time. Before merging a PR, you’ll have to resolve conflicts.</p>
+                                  <ol>
+                                    <li>
+                                      <p>[Optional] A member can inform the PR author (by posting a comment) that there is a conflict in the PR.</p>
+                                    </li>
+                                    <li>
+                                      <p><strong>[PR author] Resolve the conflict locally</strong>:</p>
+                                      <ol>
+                                        <li>Pull the <code v-pre>master</code> branch from the repo in your team org.</li>
+                                        <li>Merge the pulled <code v-pre>master</code> branch to your PR branch.</li>
+                                        <li>Resolve the merge conflict that crops up during the merge.</li>
+                                        <li>Push the updated PR branch to your fork.</li>
+                                      </ol>
+                                    </li>
+                                    <li>
+                                      <p><strong>[Another member or the PR author]: Merge the de-conflicted PR</strong>: When GitHub does not indicate a conflict anymore, you can go ahead and merge the PR.</p>
+                                    </li>
+                                  </ol>
+                                </div>
+                                <div></div>
                               </div>
                             </div>
                           </div>
@@ -1598,7 +1709,7 @@ Extensions:
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Fri, 25 Sep 2020, 0:05:07 GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sat, 26 Sep 2020, 13:35:22 GMT+8]</small>
       </div>
     </footer>
   </div>

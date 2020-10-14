@@ -108,267 +108,192 @@
           <p></p>
           <h1 id="week-10-fri-oct-16th-tutorial">Week 10 <small><small><span class="dimmed">[Fri, Oct 16th]</span> - Tutorial</small></small><span id="week-10-fri-oct-16th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-10-fri-oct-16th-tutorial" onclick="event.stopPropagation()"></a></h1>
           <div>
-            <h4 id="0-smoke-test-catcher"><span class="badge badge-pill badge-dark p-2"><big><big>0</big></big></span> Smoke-test CATcher<span id="0-smoke-test-catcher" class="anchor"></span><a class="fa fa-anchor" href="#0-smoke-test-catcher" onclick="event.stopPropagation()"></a></h4>
-            <span id="catcher-alpha">
-              <div class="indented-level2">
-                <box dismissible>
-                  <p><span class="dimmed"><strong><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Some background:</strong> As you know, our <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., Practical Exam</span>PE</span> includes peer-testing tP products under exam conditions. In the past, we used GitHub as the platform for that -- which was not optimal (e.g., it was hard to ensure the compulsory labels have been applied). As a remedy, some ex-students have been developing an app called <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">CAT stands for Crowd-sourced Anonymous Testing</span>CATcher</span> that we would like to use for the PE this semester.</span></p>
-                </box>
-                <p></p>
-                <p>In this tutorial, we would like to smoke-test the CATcher app <strong>to ensure it can run in your computer</strong>.</p>
-                <p></p>
-                <panel type="info" minimized class="algolia-no-index"><template slot="_header">
-                    <p><strong>The steps for smoke-testing CATcher:</strong></p>
-                  </template>
-                  <ol>
-                    <li><strong>Download the latest version</strong> of the CATcher executable from <a href="https://github.com/CATcher-org/CATcher/releases">https://github.com/CATcher-org/CATcher/releases</a>.</li>
-                    <li><strong>Launch the app.</strong> Allow the app to run if there are security warnings <span class="dimmed">(e.g., for Win 10, click the <code v-pre>More Info</code> link in the security warning and choose <code v-pre>Run anyway</code>)</span>.<br>
-                      <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If the app is blocked by your virus scanner, put it in a new folder and add the folder to the <em>exclusions</em> list of the virus scanner.<br>
-                      <span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If you encounter other problems at the app launch, refer to the <a href="https://github.com/CATcher-org/CATcher/blob/master/usage-notes.md">Notes on using the CATcher Desktop App</a>.
-                    </li>
-                    <li><strong>Login</strong>: Choose the <em>session</em> <code v-pre>CS2103/T Alpha Test</code>, and submit.
-                      <img src="/website/admin/images/catcherLogin.png">
-                    </li>
-                    <li>In the next screen, submit your GitHub credentials directly or choose to the <code v-pre>Use GitHub login interface</code> to login to CATcher using your GitHub account.<br>
-                      If the app asks for public repo access permissions, grant it (just go with the default settings).</li>
-                    <li><strong>Let CATcher create a repo named <code v-pre>alpha</code></strong> in your GitHub account, when it asks for permission. That repo will be used to hold the bug reports you will create in this testing session.</li>
-                    <li><strong>Use the app to create 1-2 dummy bug reports</strong>, similar to how you would enter bug reports in the GitHub issue tracker. Include at least one screenshot in one of those bug reports.<br>
-                      <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> you can <mark>copy-paste screenshots</mark> into the bug description.<br>
-                      <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use Markdown syntax in the bug descriptions.<br>
-                      <span><span aria-hidden="true" class="fas fa-info-circle"></span></span> The <code v-pre>severity</code> and <code v-pre>type</code> labels are compulsory.
-                    </li>
-                    <li><strong>Report any problems you encounter</strong> at the <a href="https://github.com/CATcher-org/CATcher/issues">CATcher issue tracker</a>.</li>
-                    <li><strong>Do NOT delete the <code v-pre>alpha</code> repo</strong> created by CATcher in your GitHub account (keep it until the end of the semester) as our scripts will look for it later to check if you have done this activity.</li>
-                  </ol>
-                </panel>
-                <p></p>
-                <p>
-                  <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Being able to run CATcher is important for the PE</strong> -- if you are unable to run it, please follow up via the <a href="https://github.com/CATcher-org/CATcher/issues">CATcher issue tracker</a> until you resolve the issue ASAP.
-                </p>
-              </div>
-            </span>
-            <h4 id="1-review-the-dg-of-a-peer-team"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Review the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Developer Guide</span>DG</span> of a Peer Team<span id="1-review-the-dg-of-a-peer-team" class="anchor"></span><a class="fa fa-anchor" href="#1-review-the-dg-of-a-peer-team" onclick="event.stopPropagation()"></a></h4>
+            <h4 id="1-demonstrate-an-assertion-failure"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Demonstrate an assertion failure<span id="1-demonstrate-an-assertion-failure" class="anchor"></span><a class="fa fa-anchor" href="#1-demonstrate-an-assertion-failure" onclick="event.stopPropagation()"></a></h4>
+            <ol>
+              <li>Demonstrate an assertion failure using Intellij.
+                <ol>
+                  <li>Modify the code of your tP to deliberately cause an assertion failure<br>
+                    e.g., add <code class="hljs inline java" v-pre><span class="hljs-keyword">assert</span> <span class="hljs-keyword">false</span>: <span class="hljs-string">"this line causes an assertion failure"</span>;</code> to your code.</li>
+                  <li>Run the code so that the application crashes with an assertion failure.</li>
+                  <li>Take a screenshot and paste in the tutorial workspace document.</li>
+                </ol>
+              </li>
+              <li>Give an example of defensive programming from AB3 or your tP.</li>
+            </ol>
+            <h4 id="2-review-the-dg-of-a-peer-team"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Review the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Developer Guide</span>DG</span> of a Peer Team<span id="2-review-the-dg-of-a-peer-team" class="anchor"></span><a class="fa fa-anchor" href="#2-review-the-dg-of-a-peer-team" onclick="event.stopPropagation()"></a></h4>
             <ul>
-              <li><strong>Divide into two sub-teams</strong>, ensuring that each team has at least one member who is good with UML.</li>
-              <li><strong>Find the team your sub-team have been allocated to discuss</strong> in the panel below and click on the link to locate their team PR.</li>
+              <li>Evaluate the given sample DG extracts, as guided by the tutor.</li>
+              <li>In particular, detect the following DG bugs (they are the same bugs that will be used when evaluating your final DG).</li>
             </ul>
             <div class="indented-level2">
-              <panel class="algolia-no-index"><template slot="_header">
-                  <p>Allocation for DG review</p>
+              <panel type="danger" class="embedding" expanded><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → Architecture Section → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
                 </template>
-                <div class="table-responsive">
-                  <table class="markbind-table table table-bordered table-striped">
-                    <thead>
-                      <tr>
-                        <th>Your Team ID</th>
-                        <th>Sub-team A Reviews <small><span class="dimmed">(backup)</span></small></th>
-                        <th>Sub-team B Reviews <small><span class="dimmed">(backup)</span></small></th>
-                      </tr>
-                    </thead>
-                    <tbody></tbody>
-                  </table>
+                <div>
+                  <p><span aria-hidden="true" class="fas fa-bug"></span> Architecture:</p>
+                  <ul>
+                    <li>Symbols used are not intuitive</li>
+                    <li>Indiscriminate use of double-headed arrows</li>
+                    <li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
+                    <li>Description given are not sufficiently high-level</li>
+                  </ul>
                 </div>
               </panel>
             </div>
+            <p></p>
+            <div class="indented-level2">
+              <panel type="danger" class="embedding" expanded><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → UML Diagrams → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
+                  <ul>
+                    <li>Notation incorrect or not compliant with the notation covered in the module.</li>
+                    <li>Some other type of diagram used when a UML diagram would have worked just as well.</li>
+                    <li>The diagram used is not suitable for the purpose it is used.</li>
+                    <li>The diagram is too complicated.</li>
+                  </ul>
+                </div>
+              </panel>
+            </div>
+            <p></p>
+            <div class="indented-level2">
+              <panel type="danger" class="embedding" expanded><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → General Documentation Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <span id="visualsBugs">
+                    <p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
+                    <ul>
+                      <li>Not enough visuals e.g., screenshots/diagrams</li>
+                      <li>The visuals are not well integrated to the explanation</li>
+                      <li>The visuals are unnecessarily repetitive e.g., same visual repeated with minor changes
+                      </li>
+                    </ul>
+                  </span>
+                  <span id="examplesBugs">
+
+                    <p><span aria-hidden="true" class="fas fa-bug"></span> Use of examples:</p>
+                    <ul>
+                      <li>Not enough or too many examples e.g., sample inputs/outputs
+                      </li>
+                    </ul>
+                  </span>
+                  <span id="explanationBugs">
+
+                    <p><span aria-hidden="true" class="fas fa-bug"></span> Explanations:</p>
+                    <ul>
+                      <li>The explanation is too brief or unnecessarily long.</li>
+                      <li>The information is hard to understand for the target audience. e.g., using terms the reader might not know
+                      </li>
+                    </ul>
+                  </span>
+                  <span id="neatnessBugs">
+
+                    <p><span aria-hidden="true" class="fas fa-bug"></span> Neatness/correctness:</p>
+                    <ul>
+                      <li>looks messy</li>
+                      <li>not well-formatted</li>
+                      <li>broken links, other inaccuracies, typos, etc.
+                      </li>
+                    </ul>
+                  </span>
+                </div>
+              </panel>
+            </div>
+            <p></p>
             <ul>
-              <li><strong>Go to the PR</strong> of the allocated team.</li>
-              <li><strong>Open the DG of that team in another Browser tab</strong>.</li>
-              <li><strong>Confirm that the DG has significant updates</strong>, to the diagrams in particular. If it doesn't, you can review the <em>backup</em> team (given within brackets). <span class="dimmed">If even the backup team is not suitable, ask the tutor for a suggestion or choose any random teams having tutorials in the same day.</span></li>
-              <li><strong>Evaluate the <code v-pre>Design</code> and the <code v-pre>Implementation</code> sections w.r.t possible DG bugs</strong> (given further down); add your observations as comments.<br></li>
+              <li>Also, lookout for places where these tips can be applied.</li>
             </ul>
             <div class="indented-level2">
-              <box>
-                <ul>
-                  <li>To be done collectively with sub-team members.</li>
-                  <li>Add <em>review comments</em> in the corresponding place of the code. But <mark>if the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., the tab named <code v-pre>Files changed</code></span><em>diff view</em></span> is too laggy, you can use a normal comment</mark>.</li>
-                  <li>Choose the <code v-pre>Start a review</code> option rather than <code v-pre>Add single comment</code>.</li>
-                  <li>Each person can do their own review, but coordinate with sub-team members to avoid duplicating the same point.</li>
-                  <li>Phrase your comments as question/doubts (e.g., <code v-pre>Is this format correct? Should it be ... instead?</code>) rather than directives (e.g., <code v-pre>Change this to ...</code>).</li>
-                  <li>Where possible, use screenshots from their DG in your comments, preferably with annotations. This is particularly useful when commenting on diagrams.</li>
-                  <li>Do not finalize the review at this stage. Just keep adding comments.</li>
-                  <li><span class="text-success"><strong>The understanding you gain from this exercise can indirectly determine how well you do in your own project.</strong></span> <mark>If you have even the slightest doubt about your observations in this exercise, please discuss it with the tutor</mark> to ensure you have the right understanding of the criteria used.
-                  </li>
-                </ul>
-              </box>
-
-              <box border-left-color="green">
-                <h5 id="dg-possible-bugs"><span class="text-success">DG - Possible Bugs</span><span id="dg-possible-bugs" class="anchor"></span><a class="fa fa-anchor" href="#dg-possible-bugs" onclick="event.stopPropagation()"></a></h5>
-                <p>
-                  <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Pay attention to these as they are same as the final evaluation criteria of the DG.<br>
-                </p>
-                <div class="indented-level1">
-                  <panel type="danger" class="embedding" expanded><template slot="_header">
-                      <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → Architecture Section → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                    </template>
-                    <div>
-                      <p><span aria-hidden="true" class="fas fa-bug"></span> Architecture:</p>
+              <panel type="success" class="embedding" expanded><template slot="_header">
+                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Deliverables → DG → Tips <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
+                </template>
+                <div>
+                  <ul>
+                    <li><strong>Aim to showcase your documentation skills.</strong> The stated objective of the DG is to explain the implementation to a future developer, but a secondary objective is to serve as evidence of your ability to document deeply-technical content using prose, examples, diagrams, code snippets, etc. appropriately. To that end, you may also describe features that you plan to implement in the future, even beyond v1.4 (hypothetically).<br>
+                      For an example, see <a href="https://nus-cs2103-ay2021s1.github.io/tp/DeveloperGuide.html#proposed-undoredo-feature">the description of the undo/redo feature implementation in the AddressBook-Level3 developer guide</a>.</li>
+                    <li><strong>Diagramming tools</strong>:
                       <ul>
-                        <li>Symbols used are not intuitive</li>
-                        <li>Indiscriminate use of double-headed arrows</li>
-                        <li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
-                        <li>Description given are not usufficiently high-level</li>
-                      </ul>
-                    </div>
-                  </panel>
-                </div>
-                <p></p>
-                <div class="indented-level1">
-                  <panel type="danger" class="embedding" expanded><template slot="_header">
-                      <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → UML Diagrams → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                    </template>
-                    <div>
-                      <p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
-                      <ul>
-                        <li>Notation incorrect or not compliant with the notation covered in the module.</li>
-                        <li>Some other type of diagram used when a UML diagram would have worked just as well.</li>
-                        <li>The diagram used is not suitable for the purpose it is used.</li>
-                        <li>The diagram is too complicated.</li>
-                      </ul>
-                    </div>
-                  </panel>
-                </div>
-                <p></p>
-                <div class="indented-level1">
-                  <panel type="danger" class="embedding" expanded><template slot="_header">
-                      <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → General Documentation Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                    </template>
-                    <div>
-                      <span id="visualsBugs">
-                        <p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
-                        <ul>
-                          <li>Not enough visuals e.g., screenshots/diagrams</li>
-                          <li>The visuals are not well integrated to the explanation</li>
-                          <li>The visuals are unnecessarily repetitive e.g., same visual repeated with minor changes
-                          </li>
-                        </ul>
-                      </span>
-                      <span id="examplesBugs">
-
-                        <p><span aria-hidden="true" class="fas fa-bug"></span> Use of examples:</p>
-                        <ul>
-                          <li>Not enough or too many examples e.g., sample inputs/outputs
-                          </li>
-                        </ul>
-                      </span>
-                      <span id="explanationBugs">
-
-                        <p><span aria-hidden="true" class="fas fa-bug"></span> Explanations:</p>
-                        <ul>
-                          <li>The explanation is too brief or unnecessarily long.</li>
-                          <li>The information is hard to understand for the target audience. e.g., using terms the reader might not know
-                          </li>
-                        </ul>
-                      </span>
-                      <span id="neatnessBugs">
-
-                        <p><span aria-hidden="true" class="fas fa-bug"></span> Neatness/correctness:</p>
-                        <ul>
-                          <li>looks messy</li>
-                          <li>not well-formatted</li>
-                          <li>broken links, other inaccuracies, typos, etc.
-                          </li>
-                        </ul>
-                      </span>
-                    </div>
-                  </panel>
-                </div>
-                <p></p>
-                <p>Also see:</p>
-                <div class="indented-level1">
-                  <panel type="success" class="embedding" expanded><template slot="_header">
-                      <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Deliverables → DG → Tips <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                    </template>
-                    <div>
-                      <ul>
-                        <li><strong>Aim to showcase your documentation skills.</strong> The stated objective of the DG is to explain the implementation to a future developer, but a secondary objective is to serve as evidence of your ability to document deeply-technical content using prose, examples, diagrams, code snippets, etc. appropriately. To that end, you may also describe features that you plan to implement in the future, even beyond v1.4 (hypothetically).<br>
-                          For an example, see <a href="https://nus-cs2103-ay2021s1.github.io/tp/DeveloperGuide.html#proposed-undoredo-feature">the description of the undo/redo feature implementation in the AddressBook-Level3 developer guide</a>.</li>
-                        <li><strong>Diagramming tools</strong>:
+                        <li>
+                          <p>AB3 uses PlantUML (see the guide <a href="https://se-education.org/guides/tutorials/plantUml.html"><em>Using PlantUML</em> @SE-EDU/guides</a> for more info).<br></p>
+                        </li>
+                        <li>
+                          <p>You may use any other tool too (e.g., PowerPoint). But if you do, note the following:<br>
+                            <mark>Choose a diagramming tool that allows incremental updates</mark> to diagrams <span class="dimmed">(reason: because diagrams need to be updated multiple times as the product evolves)</span>. For example, if you use PowerPoint to draw diagrams, also commit the source PowerPoint files so that they can be reused when updating diagrams later.
+                          </p>
+                        </li>
+                        <li>
+                          <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Can IDE-generated UML diagrams be used in project submissions? Not a good idea. Given are three reasons each of which can be reported by evaluators as 'bugs' in your diagrams, costing you marks:</p>
                           <ul>
-                            <li>
-                              <p>AB3 uses PlantUML (see the guide <a href="https://se-education.org/guides/tutorials/plantUml.html"><em>Using PlantUML</em> @SE-EDU/guides</a> for more info).<br></p>
-                            </li>
-                            <li>
-                              <p>You may use any other tool too (e.g., PowerPoint). But if you do, note the following:<br>
-                                <mark>Choose a diagramming tool that allows incremental updates</mark> to diagrams <span class="dimmed">(reason: because diagrams need to be updated multiple times as the product evolves)</span>. For example, if you use PowerPoint to draw diagrams, also commit the source PowerPoint files so that they can be reused when updating diagrams later.
-                              </p>
-                            </li>
-                            <li>
-                              <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Can IDE-generated UML diagrams be used in project submissions? Not a good idea. Given are three reasons each of which can be reported by evaluators as 'bugs' in your diagrams, costing you marks:</p>
-                              <ul>
-                                <li>They often don't follow the standard UML notation (e.g., they add extra icons).</li>
-                                <li>They tend to include <em>every</em> little detail whereas we want to limit UML diagrams to important details only, to improve readability.</li>
-                                <li>Diagrams reverse-engineered by an IDE might not represent the actual design as some design concepts cannot be deterministically identified from the code. e.g., differentiating between multiplicities <code v-pre>0..1</code> vs <code v-pre>1</code>, composition vs aggregation</li>
-                              </ul>
-                            </li>
+                            <li>They often don't follow the standard UML notation (e.g., they add extra icons).</li>
+                            <li>They tend to include <em>every</em> little detail whereas we want to limit UML diagrams to important details only, to improve readability.</li>
+                            <li>Diagrams reverse-engineered by an IDE might not represent the actual design as some design concepts cannot be deterministically identified from the code. e.g., differentiating between multiplicities <code v-pre>0..1</code> vs <code v-pre>1</code>, composition vs aggregation</li>
                           </ul>
                         </li>
-                        <li><strong>Use multiple UML diagram types.</strong> Following from the point above, try to include UML diagrams of multiple types to showcase your ability to use different UML diagrams.</li>
-                        <li><strong>Keep diagrams simple.</strong> The aim is to make diagrams <mark><em>comprehensible</em>, not necessarily <em>comprehensive</em></mark>.<br>
-                          Ways to simplify diagrams:
+                      </ul>
+                    </li>
+                    <li><strong>Use multiple UML diagram types.</strong> Following from the point above, try to include UML diagrams of multiple types to showcase your ability to use different UML diagrams.</li>
+                    <li><strong>Keep diagrams simple.</strong> The aim is to make diagrams <mark><em>comprehensible</em>, not necessarily <em>comprehensive</em></mark>.<br>
+                      Ways to simplify diagrams:
+                      <ul>
+                        <li><strong>Omit less important details</strong>. Examples:
                           <ul>
-                            <li><strong>Omit less important details</strong>. Examples:
-                              <ul>
-                                <li>a class diagram can omit minor utility classes, private/unimportant members; some less-important associations can be shown as attributes instead.</li>
-                                <li>a sequence diagram can omit less important interactions, self-calls.</li>
-                              </ul>
-                            </li>
-                            <li><strong>Omit repetitive details</strong> e.g., a class diagram can show only a few representative ones in place of many similar classes (note how the <span trigger="click" for="modal:ipWeek10-logicClassDiagram" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-logicClassDiagram'].show()" class="trigger-click">AB3 Logic class diagram</span> shows concrete <code v-pre>*Command</code> classes).</li>
-                            <li><strong>Limit the scope of a diagram.</strong> Decide the purpose of the diagram (i.e., what does it help to explain?) and omit details not related to it.<span tags="m--cs2103"> In particular, avoid showing lower-level details of multiple components in the same diagram unless strictly necessary e.g., note how the <span trigger="click" for="modal:ipWeek10-deleteSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-deleteSd'].show()" class="trigger-click">this sequence diagram</span> shows only the detailed interactions within the Logic component i.e., does not show detailed interactions within the model component.</span></li>
-                            <li><strong>Break diagrams into smaller fragments</strong> when possible.
-                              <ul>
-                                <li>If a component has a lot of classes, consider further dividing into sub-components (e.g., a Parser sub-component inside the Logic component). After that, sub-components can be shown as black-boxes in the main diagram and their details can be shown as separate diagrams.</li>
-                                <li>You can use <code v-pre>ref</code> frames to break sequence diagrams to multiple diagrams. Similarly, <code v-pre>rake</code>s can be used to divide activity diagrams.</li>
-                              </ul>
-                            </li>
-                            <li><strong>Stay at the highest level of abstraction</strong> possible e.g., note how <span trigger="click" for="modal:ipWeek10-archiSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-archiSd'].show()" class="trigger-click">this sequence diagram</span> shows only the interactions between architectural components, abstracting away the interactions that happen inside each component.</li>
-                            <li><strong>Use visual representations</strong> as much as possible. E.g., show associations and navigabilities using lines and arrows connecting classes, rather than adding a variable in one of the classes.</li>
-                            <li>For some more examples, see <span trigger="click" for="modal:ipWeek10-umlExamples" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-umlExamples'].show()" class="trigger-click">here</span>.</li>
+                            <li>a class diagram can omit minor utility classes, private/unimportant members; some less-important associations can be shown as attributes instead.</li>
+                            <li>a sequence diagram can omit less important interactions, self-calls.</li>
                           </ul>
                         </li>
-                        <li><strong>Integrate diagrams into the description.</strong> Place the diagram close to where it is being described.</li>
-                        <li><strong>Use code snippets sparingly.</strong> The more you use code snippets in the DG, and longer the code snippet, the higher the risk of it getting outdated quickly. Instead, use code snippets only when necessary and cite only the strictly relevant parts only.</li>
-                        <li><strong>Resize diagrams</strong> so that the text size in the diagram matches the the text size of the main text of the diagram. See <span trigger="click" for="modal:ipWeek10-diagramSizeNegative" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-diagramSizeNegative'].show()" class="trigger-click">example</span>.</li>
+                        <li><strong>Omit repetitive details</strong> e.g., a class diagram can show only a few representative ones in place of many similar classes (note how the <span trigger="click" for="modal:ipWeek10-logicClassDiagram" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-logicClassDiagram'].show()" class="trigger-click">AB3 Logic class diagram</span> shows concrete <code v-pre>*Command</code> classes using a placeholder <code v-pre>XYZCommand</code>).</li>
+                        <li><strong>Limit the scope of a diagram.</strong> Decide the purpose of the diagram (i.e., what does it help to explain?) and omit details not related to it.<span tags="m--cs2103"> In particular, avoid showing lower-level details of multiple components in the same diagram unless strictly necessary e.g., note how the <span trigger="click" for="modal:ipWeek10-deleteSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-deleteSd'].show()" class="trigger-click">this sequence diagram</span> shows only the detailed interactions within the Logic component i.e., does not show detailed interactions within the model component.</span></li>
+                        <li><strong>Break diagrams into smaller fragments</strong> when possible.
+                          <ul>
+                            <li>If a component has a lot of classes, consider further dividing into sub-components (e.g., a Parser sub-component inside the Logic component). After that, sub-components can be shown as black-boxes in the main diagram and their details can be shown as separate diagrams.</li>
+                            <li>You can use <code v-pre>ref</code> frames to break sequence diagrams to multiple diagrams. Similarly, <code v-pre>rake</code>s can be used to divide activity diagrams.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Stay at the highest level of abstraction</strong> possible e.g., note how <span trigger="click" for="modal:ipWeek10-archiSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-archiSd'].show()" class="trigger-click">this sequence diagram</span> shows only the interactions between architectural components, abstracting away the interactions that happen inside each component.</li>
+                        <li><strong>Use visual representations</strong> as much as possible. E.g., show associations and navigabilities using lines and arrows connecting classes, rather than adding a variable in one of the classes.</li>
+                        <li>For some more examples, see <span trigger="click" for="modal:ipWeek10-umlExamples" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-umlExamples'].show()" class="trigger-click">here</span>.</li>
                       </ul>
-                      <b-modal id="modal:ipWeek10-umlExamples" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-umlExamples" class="algolia-no-index"><template slot="modal-title">UML Diagrams: Negative Examples </template>
-                        <p>These class diagrams seem to have lot of member details, which can get outdated pretty quickly:<br>
-                          <img src="https://cs2103-ay1819s1-w10-3.github.io/main/images/PollClassDiagram.png" width="750"><br>
-                          <img src="https://cs2103-ay1819s1-w10-4.github.io/main/images/healthPlanClassDiagram.png" width="750">
-                        </p>
-                        <hr>
-                        This class diagram seems to have too many classes:
-                        <img src="https://cs2103-ay1819s1-f10-1.github.io/main/images/ModelClassDiagram.png" width="750">
-                        <hr>
-                        These sequence diagrams are bordering on 'too complicated':
-                        <img src="https://cs2103-ay1819s1-w13-1.github.io/main/images/TagCommandSequenceDiagram.png" width="750">
-                        <p></p>
-                        <img src="https://cs2103-ay1819s1-f10-1.github.io/main/images/modifyPermissionSequenceDiagram.png" width="750">
-                      </b-modal>
-                      <b-modal id="modal:ipWeek10-diagramSizeNegative" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-diagramSizeNegative" class="algolia-no-index"><template slot="modal-title">Diagram resizing: a negative example</template>
-                        <p>In this negative example, the text size in the diagram is much bigger than the text size used by the document:<br>
-                          <img src="/website/admin/images/diagramSizeNegativeExample.png" width="200"><br>
-                          It will look more 'polished' if the two text sizes match.
-                        </p>
-                      </b-modal>
-                      <p></p>
-                      <b-modal id="modal:ipWeek10-logicClassDiagram" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-logicClassDiagram" class="algolia-no-index"><template slot="modal-title">AB3 - Class Diagram of the Logic Component</template>
-                        <img src="https://se-education.org/addressbook-level3/images/LogicClassDiagram.png" width="900">
-                      </b-modal>
-                      <b-modal id="modal:ipWeek10-deleteSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-deleteSd" class="algolia-no-index"><template slot="modal-title">AB3 - Sequence Diagram for the <code v-pre>delete</code> command</template>
-                        <img src="https://se-education.org/addressbook-level3/images/DeleteSequenceDiagram.png" width="900">
-                      </b-modal>
-                      <b-modal id="modal:ipWeek10-archiSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-archiSd" class="algolia-no-index"><template slot="modal-title">AB3 - Architecture-Level Sequence Diagram</template>
-                        <img src="https://se-education.org/addressbook-level3/images/ArchitectureSequenceDiagram.png">
-                      </b-modal>
-                    </div>
-                  </panel>
+                    </li>
+                    <li><strong>Integrate diagrams into the description.</strong> Place the diagram close to where it is being described.</li>
+                    <li><strong>Use code snippets sparingly.</strong> The more you use code snippets in the DG, and longer the code snippet, the higher the risk of it getting outdated quickly. Instead, use code snippets only when necessary and cite only the strictly relevant parts only.</li>
+                    <li><strong>Resize diagrams</strong> so that the text size in the diagram matches the the text size of the main text of the diagram. See <span trigger="click" for="modal:ipWeek10-diagramSizeNegative" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-diagramSizeNegative'].show()" class="trigger-click">example</span>.</li>
+                  </ul>
+                  <b-modal id="modal:ipWeek10-umlExamples" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-umlExamples" class="algolia-no-index"><template slot="modal-title">UML Diagrams: Negative Examples </template>
+                    <p>These class diagrams seem to have lot of member details, which can get outdated pretty quickly:<br>
+                      <img src="https://cs2103-ay1819s1-w10-3.github.io/main/images/PollClassDiagram.png" width="750"><br>
+                      <img src="https://cs2103-ay1819s1-w10-4.github.io/main/images/healthPlanClassDiagram.png" width="750">
+                    </p>
+                    <hr>
+                    This class diagram seems to have too many classes:
+                    <img src="https://cs2103-ay1819s1-f10-1.github.io/main/images/ModelClassDiagram.png" width="750">
+                    <hr>
+                    These sequence diagrams are bordering on 'too complicated':
+                    <img src="https://cs2103-ay1819s1-w13-1.github.io/main/images/TagCommandSequenceDiagram.png" width="750">
+                    <p></p>
+                    <img src="https://cs2103-ay1819s1-f10-1.github.io/main/images/modifyPermissionSequenceDiagram.png" width="750">
+                  </b-modal>
+                  <b-modal id="modal:ipWeek10-diagramSizeNegative" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-diagramSizeNegative" class="algolia-no-index"><template slot="modal-title">Diagram resizing: a negative example</template>
+                    <p>In this negative example, the text size in the diagram is much bigger than the text size used by the document:<br>
+                      <img src="/website/admin/images/diagramSizeNegativeExample.png" width="200"><br>
+                      It will look more 'polished' if the two text sizes match.
+                    </p>
+                  </b-modal>
+                  <p></p>
+                  <b-modal id="modal:ipWeek10-logicClassDiagram" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-logicClassDiagram" class="algolia-no-index"><template slot="modal-title">AB3 - Class Diagram of the Logic Component</template>
+                    <img src="https://se-education.org/addressbook-level3/images/LogicClassDiagram.png" width="900">
+                  </b-modal>
+                  <b-modal id="modal:ipWeek10-deleteSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-deleteSd" class="algolia-no-index"><template slot="modal-title">AB3 - Sequence Diagram for the <code v-pre>delete</code> command</template>
+                    <img src="https://se-education.org/addressbook-level3/images/DeleteSequenceDiagram.png" width="900">
+                  </b-modal>
+                  <b-modal id="modal:ipWeek10-archiSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-archiSd" class="algolia-no-index"><template slot="modal-title">AB3 - Architecture-Level Sequence Diagram</template>
+                    <img src="https://se-education.org/addressbook-level3/images/ArchitectureSequenceDiagram.png">
+                  </b-modal>
                 </div>
-                <p></p>
-              </box>
+              </panel>
             </div>
-            <ul>
-              <li><strong>Discuss your comments/observations/doubts with the tutor</strong> and other team members to confirm the comments you entered are correct.</li>
-              <li><strong>Update your review comments if necessary</strong>, based on the discussion you just had. After that, you can submit the review.<br></li>
-            </ul>
+            <p></p>
           </div>
         </div>
       </div>
@@ -379,8 +304,8 @@
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
             <a class="nav-link py-1" href="#week-10-fri-oct-16th-tutorial">Week 10 [Fri, Oct 16th] - Tutorial&#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#0-smoke-test-catcher">0 Smoke-test CATcher&#x200E;</a>
-              <a class="nav-link py-1" href="#1-review-the-dg-of-a-peer-team">1 Review the Developer GuideDG of a Peer Team&#x200E;</a>
+              <a class="nav-link py-1" href="#1-demonstrate-an-assertion-failure">1 Demonstrate an assertion failure&#x200E;</a>
+              <a class="nav-link py-1" href="#2-review-the-dg-of-a-peer-team">2 Review the Developer GuideDG of a Peer Team&#x200E;</a>
             </nav>
 
           </nav>
@@ -390,7 +315,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 13 Oct 2020, 11:40:56 GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 14 Oct 2020, 17:23:52 GMT+8]</small>
       </div>
     </footer>
   </div>

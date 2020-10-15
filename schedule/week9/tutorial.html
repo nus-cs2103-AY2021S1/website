@@ -245,10 +245,79 @@
             </div>
             <h4 id="2-exercise-oodms"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Exercise: OODMs<span id="2-exercise-oodms" class="anchor"></span><a class="fa fa-anchor" href="#2-exercise-oodms" onclick="event.stopPropagation()"></a></h4>
             <ol>
-              <li><span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span> Do the following question. As before, you should <em>hand-draw</em> the diagram.<br>
-                <span class="dimmed"><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <em>association class</em> notation in the answer.</span>
+              <li><span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span> Do the following question. As before, you should <mark><em>freehand-draw</em></mark> the diagram.<br>
+                <span class="dimmed"><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use the <span trigger="click" for="modal:context-target" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:context-target'].show()" class="trigger-click"><em>association class</em> notation</span> in the answer.</span>
               </li>
             </ol>
+            <b-modal id="modal:context-target" hide-footer size="lg" modal-class="mb-zoom" ref="modal:context-target" class="algolia-no-index"><template slot="modal-title">Relevant textbook topics</template>
+              <h2 id="textbook-oop-associations">Textbook → OOP → Associations →<span id="textbook-oop-associations" class="anchor"></span><a class="fa fa-anchor" href="#textbook-oop-associations" onclick="event.stopPropagation()"></a></h2>
+              <div>
+                <panel type="seamless" expanded id="association-classes">
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h2 id="association-classes"><span>Association classes</span><span id="association-classes" class="anchor"></span><a class="fa fa-anchor" href="#association-classes" onclick="event.stopPropagation()"></a></h2>
+                    </div>
+                  </span>
+                  <div>
+                    <p><strong>An <em>association class</em> represents additional information about an association.</strong> It is a normal class but plays a special role from a design point of view.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code v-pre>Man</code> class and a <code v-pre>Woman</code> class is linked with a ‘married to’ association and there is a need to store the date of marriage. However, that data is related to the association rather than specifically owned by either the <code v-pre>Man</code> object or the <code v-pre>Woman</code> object. In such situations, an additional association class can be introduced, e.g. a <code v-pre>Marriage</code> class, to store such information.</p>
+                    </box>
+                    <p>
+                      <panel type="seamless" src="/website/book/uml/classDiagrams/associationClasses/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
+                          <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Class Diagrams → Association Classes → What</p>
+                        </template><template slot="_alt">
+                          <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AssociationClasses</p>
+                        </template></panel>
+                    </p>
+                    <h5 id="implementing-association-classes">Implementing association classes<span id="implementing-association-classes" class="anchor"></span><a class="fa fa-anchor" href="#implementing-association-classes" onclick="event.stopPropagation()"></a></h5>
+                    <p>There is no special way to implement an association class. It can be implemented as a normal class that has variables to represent the endpoint of the association it represents.</p>
+                    <box>
+                      <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code v-pre>Transaction</code> class is an association class that represent a transaction between a <code v-pre>Person</code> who is the seller and another <code v-pre>Person</code> who is the buyer.</p>
+                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Transaction</span></span>{<br></span><span>    <br></span><span>    <span class="hljs-comment">//all fields are compulsory</span><br></span><span>    Person seller;<br></span><span>    Person buyer;<br></span><span>    Date date;<br></span><span>    String receiptNumber;<br></span><span>    <br></span><span>    Transaction (Person seller, Person buyer, Date date, String receiptNumber){<br></span><span>        <span class="hljs-comment">//set fields</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
+                    </box>
+                  </div>
+                </panel>
+              </div>
+              <hr>
+              <h2 id="textbook-uml-class-diagrams">Textbook → UML → Class diagrams →<span id="textbook-uml-class-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#textbook-uml-class-diagrams" onclick="event.stopPropagation()"></a></h2>
+              <div>
+                <panel type="seamless" expanded id="association-classes-2">
+                  <span slot="header" class="card-title">
+                    <div>
+                      <h2 id="association-classes-2"><span>Association classes</span><span id="association-classes-2" class="anchor"></span><a class="fa fa-anchor" href="#association-classes-2" onclick="event.stopPropagation()"></a></h2>
+                    </div>
+                  </span>
+                  <div>
+                    <div>
+                      <panel type="seamless" expanded id="association-classes-3">
+                        <span slot="header" class="card-title">
+                          <div>
+                            <h4 id="association-classes-3"><span>Association classes</span><span id="association-classes-3" class="anchor"></span><a class="fa fa-anchor" href="#association-classes-3" onclick="event.stopPropagation()"></a></h4>
+                          </div>
+                        </span>
+                        <div class="indented">
+                          <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret association classes in class diagrams</span></span></span></span></p>
+                          <p></p>
+                          <p></p>
+                          <p></p>
+                          <div>
+                            <p>Association classes are denoted as a connection to an association link using a dashed line as shown below.</p>
+                            <img src="/website/book/uml/classDiagrams/associationClasses/what/images/notation.png" height="100">
+                            <box>
+                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example <code v-pre>Loan</code> is an association class because it stores information about the <code v-pre>borrows</code> association between the <code v-pre>User</code> and the <code v-pre>Book</code>.</p>
+                              <img src="/website/book/uml/classDiagrams/associationClasses/what/images/bookLoan.png" height="150">
+                              <p></p>
+                            </box>
+                          </div>
+                          <div></div>
+                        </div>
+                      </panel>
+                    </div>
+                  </div>
+                </panel>
+              </div>
+            </b-modal>
             <div class="indented-level2">
               <div>
                 <panel class="algolia-no-index"><template slot="_header">
@@ -315,7 +384,7 @@
               </div>
             </div>
             <ol start="2">
-              <li><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during the tutorial</span></span>: Post your answer and discuss, similar to the previous question.</li>
+              <li><span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during the tutorial</span></span> Post your answer and discuss, similar to the previous question.</li>
             </ol>
           </div>
         </div>
@@ -340,7 +409,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, 15 Oct 2020, 1:06:08 GMT+8]</small>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, 15 Oct 2020, 14:36:40 GMT+8]</small>
       </div>
     </footer>
   </div>

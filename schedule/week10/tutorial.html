@@ -1,327 +1,237 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CS2103/T - Week 10 - Tutorial</title>
-  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/page-nav.css">
-  <link rel="stylesheet" href="/website/book/css/textbook.css">
-  <link rel="stylesheet" href="/website/css/main.css">
-  <link rel="stylesheet" href="/website/css/schedule.css">
-  <link rel="icon" href="/website/favicon.ico">
-</head>
-
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
-  <div id="app">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T - Week 10 - Tutorial</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
     <header fixed>
-      <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
-        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
-          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
-          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
-          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
-          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
-          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
-          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
-          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
-          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
-          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
-          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
-          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
-          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
-          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
-        </dropdown>
-        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-        <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span><strong>Dashboards</strong></span></a></li>
-        <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Project Links</strong></template>
-          <span><strong> Individual Project (iP):</strong></span>
-          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="/website/admin/ip-showcase.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
-          <hr>
-          <span><strong> Team Project (tP):</strong></span>
-          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
-          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
-        </dropdown>
-        <div class="nav-link temp-dropdown-placeholder">**Other Links**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
-          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
-          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
-          <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+  <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span><strong>Dashboards</strong></span></a></li>
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Project Links</strong></template>
+    <span><strong> Individual Project (iP):</strong></span>
+    <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+    <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+    <li><a href="/website/admin/ip-showcase.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+    <hr>
+    <span><strong> Team Project (tP):</strong></span>
+    <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+    <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
+    <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+    <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+    <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
+    <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+    
+    <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+    <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+    <li tags="m--cs2103 m--cs2113"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/website/schedule/week9"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week10/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week10/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week10/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week10/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+<li class="page-item active"><a class="page-link" href="/website/schedule/week10/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week11"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-10-fri-oct-16th-tutorial">Week 10 <small><small><span class="dimmed">[Fri, Oct 16th]</span> - Tutorial</small></small><span id="week-10-fri-oct-16th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-10-fri-oct-16th-tutorial" onclick="event.stopPropagation()"></a></h1>
+<div>
+<h4 id="1-demonstrate-an-assertion-failure"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Demonstrate an assertion failure<span id="1-demonstrate-an-assertion-failure" class="anchor"></span><a class="fa fa-anchor" href="#1-demonstrate-an-assertion-failure" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li>Demonstrate an assertion failure using Intellij.</li></ul>
+<ol>
+<li>Modify the code of your tP to deliberately cause an assertion failure<br>
+e.g., add <code class="hljs inline java" v-pre><span class="hljs-keyword">assert</span> <span class="hljs-keyword">false</span>;</code> somewhere in your code.</li>
+<li>Run the code so that the application crashes with an assertion failure.</li>
+<li>Take a screenshot and paste in the tutorial workspace document.</li></ol>
+<h4 id="2-give-examples-of-defensive-programming"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Give examples of defensive programming<span id="2-give-examples-of-defensive-programming" class="anchor"></span><a class="fa fa-anchor" href="#2-give-examples-of-defensive-programming" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li>Give an example of defensive programming from AB3 or your tP.</li></ul>
+<h4 id="3-review-the-dg-of-a-peer-team"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Review the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Developer Guide</span>DG</span> of a Peer Team<span id="3-review-the-dg-of-a-peer-team" class="anchor"></span><a class="fa fa-anchor" href="#3-review-the-dg-of-a-peer-team" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li>Evaluate the sample DG extracts (will be provided by the tutor), as guided by the tutor.</li>
+<li>In particular, detect the following DG bugs (they are the same bugs that will be used when evaluating your final DG).</li></ul>
+<div class="indented-level2">
+<panel type="danger" class="embedding" expanded><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → Architecture Section → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<p><span aria-hidden="true" class="fas fa-bug"></span> Architecture:</p>
+<ul>
+<li>Symbols used are not intuitive</li>
+<li>Indiscriminate use of double-headed arrows</li>
+<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
+<li>Description given are not sufficiently high-level</li></ul></div></panel></div><p></p>
+<div class="indented-level2">
+<panel type="danger" class="embedding" expanded><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → UML Diagrams → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
+<ul>
+<li>Notation incorrect or not compliant with the notation covered in the module.</li>
+<li>Some other type of diagram used when a UML diagram would have worked just as well.</li>
+<li>The diagram used is not suitable for the purpose it is used.</li>
+<li>The diagram is too complicated.</li></ul></div></panel></div><p></p>
+<div class="indented-level2">
+<panel type="danger" class="embedding" expanded><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → General Documentation Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<span id="visualsBugs">
+<p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
+<ul>
+<li>Not enough visuals e.g., screenshots/diagrams</li>
+<li>The visuals are not well integrated to the explanation</li>
+<li>The visuals are unnecessarily repetitive e.g., same visual repeated with minor changes
+</li></ul></span>
+<span id="examplesBugs">
 
-          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
-          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
-          <li tags="m--cs2103 m--cs2113"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
-        </dropdown>
-        <li slot="right" class="nav-link">
-          <form class="navbar-form">
-            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
-    <div id="flex-body">
+<p><span aria-hidden="true" class="fas fa-bug"></span> Use of examples:</p>
+<ul>
+<li>Not enough or too many examples e.g., sample inputs/outputs
+</li></ul></span>
+<span id="explanationBugs">
 
-      <div id="content-wrapper">
-        <div class="website-content">
-          <nav>
-            <ul class="pagination mt-2">
-              <li class="page-item"><a class="page-link" href="/website/schedule/week9"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
-              <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week10/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week10/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week10/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week10/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
-              <li class="page-item active"><a class="page-link" href="/website/schedule/week10/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
-              <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week11"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
-            </ul>
-          </nav>
-          <p></p>
-          <h1 id="week-10-fri-oct-16th-tutorial">Week 10 <small><small><span class="dimmed">[Fri, Oct 16th]</span> - Tutorial</small></small><span id="week-10-fri-oct-16th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-10-fri-oct-16th-tutorial" onclick="event.stopPropagation()"></a></h1>
-          <div>
-            <h4 id="1-demonstrate-an-assertion-failure"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Demonstrate an assertion failure<span id="1-demonstrate-an-assertion-failure" class="anchor"></span><a class="fa fa-anchor" href="#1-demonstrate-an-assertion-failure" onclick="event.stopPropagation()"></a></h4>
-            <ul>
-              <li>Demonstrate an assertion failure using Intellij.</li>
-            </ul>
-            <ol>
-              <li>Modify the code of your tP to deliberately cause an assertion failure<br>
-                e.g., add <code class="hljs inline java" v-pre><span class="hljs-keyword">assert</span> <span class="hljs-keyword">false</span>;</code> somewhere in your code.</li>
-              <li>Run the code so that the application crashes with an assertion failure.</li>
-              <li>Take a screenshot and paste in the tutorial workspace document.</li>
-            </ol>
-            <h4 id="2-give-examples-of-defensive-programming"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Give examples of defensive programming<span id="2-give-examples-of-defensive-programming" class="anchor"></span><a class="fa fa-anchor" href="#2-give-examples-of-defensive-programming" onclick="event.stopPropagation()"></a></h4>
-            <ul>
-              <li>Give an example of defensive programming from AB3 or your tP.</li>
-            </ul>
-            <h4 id="3-review-the-dg-of-a-peer-team"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Review the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Developer Guide</span>DG</span> of a Peer Team<span id="3-review-the-dg-of-a-peer-team" class="anchor"></span><a class="fa fa-anchor" href="#3-review-the-dg-of-a-peer-team" onclick="event.stopPropagation()"></a></h4>
-            <ul>
-              <li>Evaluate the sample DG extracts (will be provided by the tutor), as guided by the tutor.</li>
-              <li>In particular, detect the following DG bugs (they are the same bugs that will be used when evaluating your final DG).</li>
-            </ul>
-            <div class="indented-level2">
-              <panel type="danger" class="embedding" expanded><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → Architecture Section → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
-                  <p><span aria-hidden="true" class="fas fa-bug"></span> Architecture:</p>
-                  <ul>
-                    <li>Symbols used are not intuitive</li>
-                    <li>Indiscriminate use of double-headed arrows</li>
-                    <li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
-                    <li>Description given are not sufficiently high-level</li>
-                  </ul>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-            <div class="indented-level2">
-              <panel type="danger" class="embedding" expanded><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → UML Diagrams → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
-                  <p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
-                  <ul>
-                    <li>Notation incorrect or not compliant with the notation covered in the module.</li>
-                    <li>Some other type of diagram used when a UML diagram would have worked just as well.</li>
-                    <li>The diagram used is not suitable for the purpose it is used.</li>
-                    <li>The diagram is too complicated.</li>
-                  </ul>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-            <div class="indented-level2">
-              <panel type="danger" class="embedding" expanded><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → General Documentation Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
-                  <span id="visualsBugs">
-                    <p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
-                    <ul>
-                      <li>Not enough visuals e.g., screenshots/diagrams</li>
-                      <li>The visuals are not well integrated to the explanation</li>
-                      <li>The visuals are unnecessarily repetitive e.g., same visual repeated with minor changes
-                      </li>
-                    </ul>
-                  </span>
-                  <span id="examplesBugs">
+<p><span aria-hidden="true" class="fas fa-bug"></span> Explanations:</p>
+<ul>
+<li>The explanation is too brief or unnecessarily long.</li>
+<li>The information is hard to understand for the target audience. e.g., using terms the reader might not know
+</li></ul></span>
+<span id="neatnessBugs">
 
-                    <p><span aria-hidden="true" class="fas fa-bug"></span> Use of examples:</p>
-                    <ul>
-                      <li>Not enough or too many examples e.g., sample inputs/outputs
-                      </li>
-                    </ul>
-                  </span>
-                  <span id="explanationBugs">
+<p><span aria-hidden="true" class="fas fa-bug"></span> Neatness/correctness:</p>
+<ul>
+<li>looks messy</li>
+<li>not well-formatted</li>
+<li>broken links, other inaccuracies, typos, etc.
+</li></ul></span></div></panel></div><p></p>
+<ul>
+<li>Also, lookout for places where these tips can be applied.</li></ul>
+<div class="indented-level2">
+<panel type="success" class="embedding" expanded><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Deliverables → DG → Tips <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<ul>
+<li><strong>Aim to showcase your documentation skills.</strong> The stated objective of the DG is to explain the implementation to a future developer, but a secondary objective is to serve as evidence of your ability to document deeply-technical content using prose, examples, diagrams, code snippets, etc. appropriately. To that end, you may also describe features that you plan to implement in the future, even beyond v1.4 (hypothetically).<br>
+For an example, see <a href="https://nus-cs2103-ay2021s1.github.io/tp/DeveloperGuide.html#proposed-undoredo-feature">the description of the undo/redo feature implementation in the AddressBook-Level3 developer guide</a>.</li>
+<li><strong>Diagramming tools</strong>:
+<ul>
+<li>
+<p>AB3 uses PlantUML (see the guide <a href="https://se-education.org/guides/tutorials/plantUml.html"><em>Using PlantUML</em> @SE-EDU/guides</a> for more info).<br></p></li>
+<li>
+<p>You may use any other tool too (e.g., PowerPoint). But if you do, note the following:<br>
+<mark>Choose a diagramming tool that allows incremental updates</mark> to diagrams <span class="dimmed">(reason: because diagrams need to be updated multiple times as the product evolves)</span>. For example, if you use PowerPoint to draw diagrams, also commit the source PowerPoint files so that they can be reused when updating diagrams later.</p></li>
+<li>
+<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Can IDE-generated UML diagrams be used in project submissions? Not a good idea. Given are three reasons each of which can be reported by evaluators as 'bugs' in your diagrams, costing you marks:</p>
+<ul>
+<li>They often don't follow the standard UML notation (e.g., they add extra icons).</li>
+<li>They tend to include <em>every</em> little detail whereas we want to limit UML diagrams to important details only, to improve readability.</li>
+<li>Diagrams reverse-engineered by an IDE might not represent the actual design as some design concepts cannot be deterministically identified from the code. e.g., differentiating between multiplicities <code v-pre>0..1</code> vs <code v-pre>1</code>, composition vs aggregation</li></ul></li></ul></li>
+<li><strong>Use multiple UML diagram types.</strong> Following from the point above, try to include UML diagrams of multiple types to showcase your ability to use different UML diagrams.</li>
+<li><strong>Keep diagrams simple.</strong> The aim is to make diagrams <mark><em>comprehensible</em>, not necessarily <em>comprehensive</em></mark>.<br>
+Ways to simplify diagrams:
+<ul>
+<li><strong>Omit less important details</strong>. Examples:
+<ul>
+<li>a class diagram can omit minor utility classes, private/unimportant members; some less-important associations can be shown as attributes instead.</li>
+<li>a sequence diagram can omit less important interactions, self-calls.</li></ul></li>
+<li><strong>Omit repetitive details</strong> e.g., a class diagram can show only a few representative ones in place of many similar classes (note how the <span trigger="click" for="modal:ipWeek10-logicClassDiagram" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-logicClassDiagram'].show()" class="trigger-click">AB3 Logic class diagram</span> shows concrete <code v-pre>*Command</code> classes using a placeholder <code v-pre>XYZCommand</code>).</li>
+<li><strong>Limit the scope of a diagram.</strong> Decide the purpose of the diagram (i.e., what does it help to explain?) and omit details not related to it.<span tags="m--cs2103"> In particular, avoid showing lower-level details of multiple components in the same diagram unless strictly necessary e.g., note how the <span trigger="click" for="modal:ipWeek10-deleteSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-deleteSd'].show()" class="trigger-click">this sequence diagram</span> shows only the detailed interactions within the Logic component i.e., does not show detailed interactions within the model component.</span></li>
+<li><strong>Break diagrams into smaller fragments</strong> when possible.
+<ul>
+<li>If a component has a lot of classes, consider further dividing into sub-components (e.g., a Parser sub-component inside the Logic component). After that, sub-components can be shown as black-boxes in the main diagram and their details can be shown as separate diagrams.</li>
+<li>You can use <code v-pre>ref</code> frames to break sequence diagrams to multiple diagrams. Similarly, <code v-pre>rake</code>s can be used to divide activity diagrams.</li></ul></li>
+<li><strong>Stay at the highest level of abstraction</strong> possible e.g., note how <span trigger="click" for="modal:ipWeek10-archiSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-archiSd'].show()" class="trigger-click">this sequence diagram</span> shows only the interactions between architectural components, abstracting away the interactions that happen inside each component.</li>
+<li><strong>Use visual representations</strong> as much as possible. E.g., show associations and navigabilities using lines and arrows connecting classes, rather than adding a variable in one of the classes.</li>
+<li>For some more examples, see <span trigger="click" for="modal:ipWeek10-umlExamples" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-umlExamples'].show()" class="trigger-click">here</span>.</li></ul></li>
+<li><strong>Integrate diagrams into the description.</strong> Place the diagram close to where it is being described.</li>
+<li><strong>Use code snippets sparingly.</strong> The more you use code snippets in the DG, and longer the code snippet, the higher the risk of it getting outdated quickly. Instead, use code snippets only when necessary and cite only the strictly relevant parts only.</li>
+<li><strong>Resize diagrams</strong> so that the text size in the diagram matches the the text size of the main text of the diagram. See <span trigger="click" for="modal:ipWeek10-diagramSizeNegative" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-diagramSizeNegative'].show()" class="trigger-click">example</span>.</li></ul>
+<b-modal id="modal:ipWeek10-umlExamples" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-umlExamples" class="algolia-no-index"><template slot="modal-title">UML Diagrams: Negative Examples </template>
+<p>These class diagrams seem to have lot of member details, which can get outdated pretty quickly:<br>
+<img src="https://cs2103-ay1819s1-w10-3.github.io/main/images/PollClassDiagram.png" width="750"><br>
+<img src="https://cs2103-ay1819s1-w10-4.github.io/main/images/healthPlanClassDiagram.png" width="750"></p>
+  <hr>
+  This class diagram seems to have too many classes:
+  <img src="https://cs2103-ay1819s1-f10-1.github.io/main/images/ModelClassDiagram.png" width="750">
+  <hr>
+  These sequence diagrams are bordering on 'too complicated':
+  <img src="https://cs2103-ay1819s1-w13-1.github.io/main/images/TagCommandSequenceDiagram.png" width="750">
+  <p></p>
+  <img src="https://cs2103-ay1819s1-f10-1.github.io/main/images/modifyPermissionSequenceDiagram.png" width="750"></b-modal>
+<b-modal id="modal:ipWeek10-diagramSizeNegative" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-diagramSizeNegative" class="algolia-no-index"><template slot="modal-title">Diagram resizing: a negative example</template>
+<p>In this negative example, the text size in the diagram is much bigger than the text size used by the document:<br>
+<img src="/website/admin/images/diagramSizeNegativeExample.png" width="200"><br>
+It will look more 'polished' if the two text sizes match.
+</p></b-modal><p></p>
+<b-modal id="modal:ipWeek10-logicClassDiagram" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-logicClassDiagram" class="algolia-no-index"><template slot="modal-title">AB3 - Class Diagram of the Logic Component</template>
+  <img src="https://se-education.org/addressbook-level3/images/LogicClassDiagram.png" width="900"></b-modal>
+<b-modal id="modal:ipWeek10-deleteSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-deleteSd" class="algolia-no-index"><template slot="modal-title">AB3 - Sequence Diagram for the <code v-pre>delete</code> command</template>
+  <img src="https://se-education.org/addressbook-level3/images/DeleteSequenceDiagram.png" width="900"></b-modal>
+<b-modal id="modal:ipWeek10-archiSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-archiSd" class="algolia-no-index"><template slot="modal-title">AB3 - Architecture-Level Sequence Diagram</template>
+  <img src="https://se-education.org/addressbook-level3/images/ArchitectureSequenceDiagram.png"></b-modal></div></panel></div><p></p></div></div></div>
 
-                    <p><span aria-hidden="true" class="fas fa-bug"></span> Explanations:</p>
-                    <ul>
-                      <li>The explanation is too brief or unnecessarily long.</li>
-                      <li>The information is hard to understand for the target audience. e.g., using terms the reader might not know
-                      </li>
-                    </ul>
-                  </span>
-                  <span id="neatnessBugs">
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
 
-                    <p><span aria-hidden="true" class="fas fa-bug"></span> Neatness/correctness:</p>
-                    <ul>
-                      <li>looks messy</li>
-                      <li>not well-formatted</li>
-                      <li>broken links, other inaccuracies, typos, etc.
-                      </li>
-                    </ul>
-                  </span>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-            <ul>
-              <li>Also, lookout for places where these tips can be applied.</li>
-            </ul>
-            <div class="indented-level2">
-              <panel type="success" class="embedding" expanded><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Deliverables → DG → Tips <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
-                  <ul>
-                    <li><strong>Aim to showcase your documentation skills.</strong> The stated objective of the DG is to explain the implementation to a future developer, but a secondary objective is to serve as evidence of your ability to document deeply-technical content using prose, examples, diagrams, code snippets, etc. appropriately. To that end, you may also describe features that you plan to implement in the future, even beyond v1.4 (hypothetically).<br>
-                      For an example, see <a href="https://nus-cs2103-ay2021s1.github.io/tp/DeveloperGuide.html#proposed-undoredo-feature">the description of the undo/redo feature implementation in the AddressBook-Level3 developer guide</a>.</li>
-                    <li><strong>Diagramming tools</strong>:
-                      <ul>
-                        <li>
-                          <p>AB3 uses PlantUML (see the guide <a href="https://se-education.org/guides/tutorials/plantUml.html"><em>Using PlantUML</em> @SE-EDU/guides</a> for more info).<br></p>
-                        </li>
-                        <li>
-                          <p>You may use any other tool too (e.g., PowerPoint). But if you do, note the following:<br>
-                            <mark>Choose a diagramming tool that allows incremental updates</mark> to diagrams <span class="dimmed">(reason: because diagrams need to be updated multiple times as the product evolves)</span>. For example, if you use PowerPoint to draw diagrams, also commit the source PowerPoint files so that they can be reused when updating diagrams later.
-                          </p>
-                        </li>
-                        <li>
-                          <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Can IDE-generated UML diagrams be used in project submissions? Not a good idea. Given are three reasons each of which can be reported by evaluators as 'bugs' in your diagrams, costing you marks:</p>
-                          <ul>
-                            <li>They often don't follow the standard UML notation (e.g., they add extra icons).</li>
-                            <li>They tend to include <em>every</em> little detail whereas we want to limit UML diagrams to important details only, to improve readability.</li>
-                            <li>Diagrams reverse-engineered by an IDE might not represent the actual design as some design concepts cannot be deterministically identified from the code. e.g., differentiating between multiplicities <code v-pre>0..1</code> vs <code v-pre>1</code>, composition vs aggregation</li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><strong>Use multiple UML diagram types.</strong> Following from the point above, try to include UML diagrams of multiple types to showcase your ability to use different UML diagrams.</li>
-                    <li><strong>Keep diagrams simple.</strong> The aim is to make diagrams <mark><em>comprehensible</em>, not necessarily <em>comprehensive</em></mark>.<br>
-                      Ways to simplify diagrams:
-                      <ul>
-                        <li><strong>Omit less important details</strong>. Examples:
-                          <ul>
-                            <li>a class diagram can omit minor utility classes, private/unimportant members; some less-important associations can be shown as attributes instead.</li>
-                            <li>a sequence diagram can omit less important interactions, self-calls.</li>
-                          </ul>
-                        </li>
-                        <li><strong>Omit repetitive details</strong> e.g., a class diagram can show only a few representative ones in place of many similar classes (note how the <span trigger="click" for="modal:ipWeek10-logicClassDiagram" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-logicClassDiagram'].show()" class="trigger-click">AB3 Logic class diagram</span> shows concrete <code v-pre>*Command</code> classes using a placeholder <code v-pre>XYZCommand</code>).</li>
-                        <li><strong>Limit the scope of a diagram.</strong> Decide the purpose of the diagram (i.e., what does it help to explain?) and omit details not related to it.<span tags="m--cs2103"> In particular, avoid showing lower-level details of multiple components in the same diagram unless strictly necessary e.g., note how the <span trigger="click" for="modal:ipWeek10-deleteSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-deleteSd'].show()" class="trigger-click">this sequence diagram</span> shows only the detailed interactions within the Logic component i.e., does not show detailed interactions within the model component.</span></li>
-                        <li><strong>Break diagrams into smaller fragments</strong> when possible.
-                          <ul>
-                            <li>If a component has a lot of classes, consider further dividing into sub-components (e.g., a Parser sub-component inside the Logic component). After that, sub-components can be shown as black-boxes in the main diagram and their details can be shown as separate diagrams.</li>
-                            <li>You can use <code v-pre>ref</code> frames to break sequence diagrams to multiple diagrams. Similarly, <code v-pre>rake</code>s can be used to divide activity diagrams.</li>
-                          </ul>
-                        </li>
-                        <li><strong>Stay at the highest level of abstraction</strong> possible e.g., note how <span trigger="click" for="modal:ipWeek10-archiSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-archiSd'].show()" class="trigger-click">this sequence diagram</span> shows only the interactions between architectural components, abstracting away the interactions that happen inside each component.</li>
-                        <li><strong>Use visual representations</strong> as much as possible. E.g., show associations and navigabilities using lines and arrows connecting classes, rather than adding a variable in one of the classes.</li>
-                        <li>For some more examples, see <span trigger="click" for="modal:ipWeek10-umlExamples" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-umlExamples'].show()" class="trigger-click">here</span>.</li>
-                      </ul>
-                    </li>
-                    <li><strong>Integrate diagrams into the description.</strong> Place the diagram close to where it is being described.</li>
-                    <li><strong>Use code snippets sparingly.</strong> The more you use code snippets in the DG, and longer the code snippet, the higher the risk of it getting outdated quickly. Instead, use code snippets only when necessary and cite only the strictly relevant parts only.</li>
-                    <li><strong>Resize diagrams</strong> so that the text size in the diagram matches the the text size of the main text of the diagram. See <span trigger="click" for="modal:ipWeek10-diagramSizeNegative" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-diagramSizeNegative'].show()" class="trigger-click">example</span>.</li>
-                  </ul>
-                  <b-modal id="modal:ipWeek10-umlExamples" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-umlExamples" class="algolia-no-index"><template slot="modal-title">UML Diagrams: Negative Examples </template>
-                    <p>These class diagrams seem to have lot of member details, which can get outdated pretty quickly:<br>
-                      <img src="https://cs2103-ay1819s1-w10-3.github.io/main/images/PollClassDiagram.png" width="750"><br>
-                      <img src="https://cs2103-ay1819s1-w10-4.github.io/main/images/healthPlanClassDiagram.png" width="750">
-                    </p>
-                    <hr>
-                    This class diagram seems to have too many classes:
-                    <img src="https://cs2103-ay1819s1-f10-1.github.io/main/images/ModelClassDiagram.png" width="750">
-                    <hr>
-                    These sequence diagrams are bordering on 'too complicated':
-                    <img src="https://cs2103-ay1819s1-w13-1.github.io/main/images/TagCommandSequenceDiagram.png" width="750">
-                    <p></p>
-                    <img src="https://cs2103-ay1819s1-f10-1.github.io/main/images/modifyPermissionSequenceDiagram.png" width="750">
-                  </b-modal>
-                  <b-modal id="modal:ipWeek10-diagramSizeNegative" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-diagramSizeNegative" class="algolia-no-index"><template slot="modal-title">Diagram resizing: a negative example</template>
-                    <p>In this negative example, the text size in the diagram is much bigger than the text size used by the document:<br>
-                      <img src="/website/admin/images/diagramSizeNegativeExample.png" width="200"><br>
-                      It will look more 'polished' if the two text sizes match.
-                    </p>
-                  </b-modal>
-                  <p></p>
-                  <b-modal id="modal:ipWeek10-logicClassDiagram" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-logicClassDiagram" class="algolia-no-index"><template slot="modal-title">AB3 - Class Diagram of the Logic Component</template>
-                    <img src="https://se-education.org/addressbook-level3/images/LogicClassDiagram.png" width="900">
-                  </b-modal>
-                  <b-modal id="modal:ipWeek10-deleteSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-deleteSd" class="algolia-no-index"><template slot="modal-title">AB3 - Sequence Diagram for the <code v-pre>delete</code> command</template>
-                    <img src="https://se-education.org/addressbook-level3/images/DeleteSequenceDiagram.png" width="900">
-                  </b-modal>
-                  <b-modal id="modal:ipWeek10-archiSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-archiSd" class="algolia-no-index"><template slot="modal-title">AB3 - Architecture-Level Sequence Diagram</template>
-                    <img src="https://se-education.org/addressbook-level3/images/ArchitectureSequenceDiagram.png">
-                  </b-modal>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-          </div>
-        </div>
-      </div>
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-10-fri-oct-16th-tutorial">Week 10 [Fri, Oct 16th] - Tutorial&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#1-demonstrate-an-assertion-failure">1 Demonstrate an assertion failure&#x200E;</a>
+<a class="nav-link py-1" href="#2-give-examples-of-defensive-programming">2 Give examples of defensive programming&#x200E;</a>
+<a class="nav-link py-1" href="#3-review-the-dg-of-a-peer-team">3 Review the Developer GuideDG of a Peer Team&#x200E;</a>
+</nav>
 
-      <nav id="page-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-left-grey nav-inner position-sticky slim-scroll">
-
-          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#week-10-fri-oct-16th-tutorial">Week 10 [Fri, Oct 16th] - Tutorial&#x200E;</a>
-            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#1-demonstrate-an-assertion-failure">1 Demonstrate an assertion failure&#x200E;</a>
-              <a class="nav-link py-1" href="#2-give-examples-of-defensive-programming">2 Give examples of defensive programming&#x200E;</a>
-              <a class="nav-link py-1" href="#3-review-the-dg-of-a-peer-team">3 Review the Developer GuideDG of a Peer Team&#x200E;</a>
-            </nav>
-
-          </nav>
-        </div>
-      </nav>
-    </div>
+</nav>
+</div>
+</nav>
+</div>
     <footer>
-
-      <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sat, 24 Oct 2020, 21:14:45 GMT+8]</small>
-      </div>
-    </footer>
-  </div>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 28 Oct 2020, 0:40:42 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>
@@ -333,34 +243,28 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-122519234-1');
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+        indexName: "nus-cs2103-ay1920s1",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-122519234-1');
+    </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
-
 </html>

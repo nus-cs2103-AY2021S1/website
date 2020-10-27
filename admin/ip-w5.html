@@ -1,720 +1,426 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CS2103/T - Admin: iP: Week 5</title>
-  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../markbind/css/site-nav.css">
-  <link rel="stylesheet" href="../markbind/css/page-nav.css">
-  <link rel="stylesheet" href="/website/css/main.css">
-  <link rel="stylesheet" href="/website/css/admin.css">
-  <link rel="icon" href="/website/favicon.ico">
-</head>
-
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
-  <div id="app">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T - Admin: iP: Week 5</title>
+    <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
     <header fixed>
-      <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
-        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
-          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
-          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
-          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
-          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
-          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
-          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
-          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
-          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
-          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
-          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
-          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
-          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
-          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
-        </dropdown>
-        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-        <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span><strong>Dashboards</strong></span></a></li>
-        <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Project Links</strong></template>
-          <span><strong> Individual Project (iP):</strong></span>
-          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="/website/admin/ip-showcase.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
-          <hr>
-          <span><strong> Team Project (tP):</strong></span>
-          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
-          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
-        </dropdown>
-        <div class="nav-link temp-dropdown-placeholder">**Other Links**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
-          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
-          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
-          <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+  <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span><strong>Dashboards</strong></span></a></li>
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Project Links</strong></template>
+    <span><strong> Individual Project (iP):</strong></span>
+    <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+    <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+    <li><a href="/website/admin/ip-showcase.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+    <hr>
+    <span><strong> Team Project (tP):</strong></span>
+    <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+    <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
+    <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+    <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+    <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
+    <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+    
+    <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+    <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+    <li tags="m--cs2103 m--cs2113"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        <nav id="site-nav" class="navbar navbar-light bg-transparent">
+<div class="border-right-grey nav-inner position-sticky slim-scroll">
+<ul class="site-nav-list site-nav-list-root">
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">Module Overview</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleExpectations.html">Module Expectations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Module Structure 
+<i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/weeklySchedule.html"><small>Weekly Schedule</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tutorials.html"><small>Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/instructors.html">Instructors</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/textbooks.html">Textbooks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/programmingLanguages.html">Programming Language</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/standardsAndConventions.html">Standards/Conventions</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Individual Project (iP)
+<i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-overview.html"><small>iP (Individual Project): Overview</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w2.html"><small>iP: Week 2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w3.html"><small>iP: Week 3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w4.html"><small>iP: Week 4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w5.html" class="current"><small>iP: Week 5</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w6.html"><small>iP: Week 6</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w8.html"><small>iP: Week 8</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-grading.html"><small>iP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Team Project (tP)
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-expectations.html"><small>tP (team project): Expectations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-timeline.html"><small>tP: Timeline</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-constraints.html"><small>tP: Constraints</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-teams.html"><small>tP: Forming Teams</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w3.html"><small>tP week 3: Kickoff</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w4.html"><small>tP week 4: Set direction</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w5.html"><small>tP week 5: Gather requirements</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w6.html"><small>tP week 6: Conceptualize the product</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w7.html"><small>tP week 7: Get ready for iterations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-deliverables.html"><small>tP: Deliverables</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-pe.html"><small>tP: Practical Exam</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-grading.html"><small>tP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-supervision.html"><small>tP: Supervision</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/peerEvaluations.html">Peer Evaluations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/exams.html">Exams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/gradeBreakdown.html">Grade Breakdown</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Appendices 
+<i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixA-principles.html"><small>Apdx A: Module Principles</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixB-policies.html"><small>Apdx B: Module Policies</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixC-faq.html"><small>Apdx C: FAQ</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixD-help.html"><small>Apdx D: Getting Help</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
-          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
-          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
-          <li tags="m--cs2103 m--cs2113"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
-        </dropdown>
-        <li slot="right" class="nav-link">
-          <form class="navbar-form">
-            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
-    <div id="flex-body">
-      <nav id="site-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-right-grey nav-inner position-sticky slim-scroll">
-          <ul class="site-nav-list site-nav-list-root">
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">Module Overview</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleExpectations.html">Module Expectations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Module Structure
-                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/weeklySchedule.html"><small>Weekly Schedule</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tutorials.html"><small>Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/instructors.html">Instructors</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/textbooks.html">Textbooks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/programmingLanguages.html">Programming Language</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/standardsAndConventions.html">Standards/Conventions</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Individual Project (iP)
-                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-overview.html"><small>iP (Individual Project): Overview</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w2.html"><small>iP: Week 2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w3.html"><small>iP: Week 3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w4.html"><small>iP: Week 4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w5.html" class="current"><small>iP: Week 5</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w6.html"><small>iP: Week 6</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w8.html"><small>iP: Week 8</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-grading.html"><small>iP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Team Project (tP)
-                <i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-expectations.html"><small>tP (team project): Expectations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-timeline.html"><small>tP: Timeline</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-constraints.html"><small>tP: Constraints</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-teams.html"><small>tP: Forming Teams</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w3.html"><small>tP week 3: Kickoff</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w4.html"><small>tP week 4: Set direction</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w5.html"><small>tP week 5: Gather requirements</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w6.html"><small>tP week 6: Conceptualize the product</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w7.html"><small>tP week 7: Get ready for iterations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-deliverables.html"><small>tP: Deliverables</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-pe.html"><small>tP: Practical Exam</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-grading.html"><small>tP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-supervision.html"><small>tP: Supervision</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/peerEvaluations.html">Peer Evaluations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/exams.html">Exams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/gradeBreakdown.html">Grade Breakdown</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Appendices
-                <i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
-                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i>
-              </div>
-              <ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixA-principles.html"><small>Apdx A: Module Principles</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixB-policies.html"><small>Apdx B: Module Policies</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixC-faq.html"><small>Apdx C: FAQ</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixD-help.html"><small>Apdx D: Getting Help</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-                <li>
-                  <div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-      <div id="content-wrapper">
-        <div class="website-content">
-          <p><span class="float-left algolia-no-index">
-              <b-btn variant="light" href="/website/admin/ip-w4.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Week 4</span></b-btn>
-            </span><span class="float-right algolia-no-index">
-              <b-btn variant="light" href="/website/admin/ip-w6.html"><span>iP: Week 6 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn>
-            </span></p>
-          <br>
-          <h1 id="ip-week-5"><span class="display-4">iP: Week 5</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="ip-week-5" class="anchor"></span><a class="fa fa-anchor" href="#ip-week-5" onclick="event.stopPropagation()"></a></h1>
-          <div id="main">
-            <div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
-              <ol>
-                <li><span>Generate a new jar file</span></li>
-                <li>Add Increments as PRs: <code v-pre>A-Assertions</code>, <code v-pre>A-CodeQuality</code>, <code v-pre>A-Lambdas</code>, <code v-pre>A-Streams</code></li>
-                <li>Add Increment: <code v-pre>A-CI</code></li>
-                <li><span>Add an extension</span></li>
-              </ol>
-            </div>
-            <div id="body">
-              <div></div>
-              <p></p>
-              <h4 id="1-generate-a-new-jar-file"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Generate a new jar file</span><span id="1-generate-a-new-jar-file" class="anchor"></span><a class="fa fa-anchor" href="#1-generate-a-new-jar-file" onclick="event.stopPropagation()"></a></h4>
-              <div>
-                <ul>
-                  <li>We recommend that you re-generate a new jar file again and ensure it works. Note that you might have to use Gradle to generate the jar file this time as you need to bundle the JavaFX third-party library into the jar file. Refer to the <a href="https://se-education.org/guides/tutorials/gradle.html#creating-a-jar-file"><em>Gradle tutorial</em> @SE-EDU/guides</a> to find how.<br>
-                    <mark>If the <code v-pre>.jar</code> file is smaller than 10Mb</mark>, most likely JavaFX libraries are not inside it.
-                  </li>
-                  <li>There is no need to create a release in GitHub with this jar file (although you are welcome to).</li>
-                </ul>
-              </div>
-              <p></p>
-              <h4 id="2-add-increments-as-prs-a-assertions-a-codequality-a-lambdas-a-streams"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Add Increments as PRs: <code v-pre>A-Assertions</code>, <code v-pre>A-CodeQuality</code>, <code v-pre>A-Lambdas</code>, <code v-pre>A-Streams</code><span id="2-add-increments-as-prs-a-assertions-a-codequality-a-lambdas-a-streams" class="anchor"></span><a class="fa fa-anchor" href="#2-add-increments-as-prs-a-assertions-a-codequality-a-lambdas-a-streams" onclick="event.stopPropagation()"></a></h4>
-              <div>
-                <span tags="m--cs2103">
-                  <div>
-                    <ul>
-                      <li><strong>Note how to merge PRs</strong>:</li>
-                    </ul>
-                    <div class="indented-level2">
-                      <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                          <p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Merging PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                        </template>
-                        <div>
-                          <p>Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.</p>
-                          <p>Preparation: If you would like to try merging a PR yourself, you can create a dummy PR in the following manner.</p>
-                          <ol>
-                            <li>Fork any repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>).</li>
-                            <li>Clone in to your computer.</li>
-                            <li>Create a new branch e.g., (<code v-pre>feature1</code>) and add some commits to it.</li>
-                            <li>Push the new branch to the fork.</li>
-                            <li>Create a PR from that branch to the <code v-pre>master</code> branch in your fork. Yes, it is possible to create a PR within the same repo.</li>
-                          </ol>
-                          <p><strong>1. Locate the PR</strong> to be merged in your repo's GitHub page.</p>
-                          <p><strong>2. Click on the <span class="tab"><span aria-hidden="true" class="far fa-comments"></span> Conversation</span> tab</strong> and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
-                            <img src="/website/book/gitAndGithub/managePRs/images/mergePr.png" width="800">
-                          </p>
-                          <p><strong>3. If the PR is not merge-able in the current state</strong>, the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                              </svg></span> will not be green. Here are the possible reasons and remedies:</p>
-                          <ul>
-                            <li><strong>Problem: The PR code is out-of-date</strong>, indicated by the message <strong><span class="dimmed">This branch is out-of-date with the base branch</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated.
-                              <ul>
-                                <li>If the PR author has allowed you to update the PR and you have sufficient permissions, GitHub will allow you to update the PR simply by clicking the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Update branch</span> on the right side of the 'out-of-date' error message.
-                                  If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
-                              </ul>
-                            </li>
-                            <li><strong>Problem: There are merge conflicts</strong>, indicated by the message <strong><span class="dimmed">This branch has conflicts that must be resolved</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current <code v-pre>master</code> branch. Those <span trigger="click" for="modal:managePRs-mergeConflics" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:managePRs-mergeConflics'].show()" class="trigger-click">conflicts must be resolved</span> before the PR can be merged.
-                              <ul>
-                                <li>If the conflicts are simple, GitHub might allow you to resolve them using the Web interface.</li>
-                                <li>If that option is not available, post a message in the PR requesting the PR author to update the PR.</li>
-                              </ul>
-                            </li>
-                          </ul>
-                          <b-modal id="modal:managePRs-mergeConflics" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePRs-mergeConflics" class="algolia-no-index"><template slot="modal-title">Tools → Git &amp; GitHub → Merge Conflicts</template>
-                            <div>
-                              <div></div>
-                              <p></p>
-                              <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
-                                    </span></strong></span></p>
-                              <div id="title-and-body">
-                                <div>
-                                  <h4 id="dealing-with-merge-conflicts"><span>Dealing with merge conflicts</span><span id="dealing-with-merge-conflicts" class="anchor"></span><a class="fa fa-anchor" href="#dealing-with-merge-conflicts" onclick="event.stopPropagation()"></a></h4>
-                                </div>
-                                <div id="main">
-                                  <div>
-                                    <p><strong>Merge conflicts happen when you try to combine two incompatible versions</strong> (e.g., merging a branch to another but each branch changed the same part of the code in a different way).</p>
-                                    <p>Here are the steps to simulate a merge conflict and use it to learn how to resolve merge conflicts.</p>
-                                    <p><strong>0. Create an empty repo or clone an existing repo</strong>, to be used for this activity.</p>
-                                    <p><strong>1. Start a branch named <code v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
-                                    <p><strong>2. Switch back to <code v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
-                                    <img src="/website/book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
-                                    <p></p>
-                                    <p><strong>3. Try to merge the <code v-pre>fix1</code> branch onto the <code v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
-                                    <pre><code class="hljs" v-pre><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span class="highlighted">=======<br></span><span>green<br></span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span><span>white<br></span></code></pre>
-                                    <p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code v-pre>=======</code>.</p>
-                                    <p>Highlighted below is the conflicting part that is coming from the <code v-pre>master</code> branch:</p>
-                                    <pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span class="highlighted">black<br></span><span>=======<br></span><span>green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre>
-                                    <p>This is the conflicting part that is coming from the <code v-pre>fix1</code> branch:</p>
-                                    <pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span>=======<br></span><span class="highlighted">green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre>
-                                    <p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
-                                    <pre><code class="hljs" v-pre><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">black<br></span><span class="highlighted">green<br></span><span>red<br></span><span>white<br></span></code></pre>
-                                    <p><strong>6. Stage the changes, and commit.</strong></p>
-                                  </div>
-                                  <div></div>
-                                </div>
-                              </div>
-                            </div>
-                          </b-modal>
-                          <p><strong>3. Merge the PR</strong> by clicking on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                              </svg></span> button, followed by the <code v-pre>Confirm merge</code> button. You should see a <code v-pre>Pull request successfully merged and closed</code> message after the PR is merged.<br></p>
-                          <ul>
-                            <li>You can choose between three merging options by clicking on the down-arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                  <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                                </svg></span> button. If you are new to Git and GitHub, the <code v-pre>Create merge commit</code> options are recommended.</li>
-                          </ul>
-                          <p><strong>Next, sync your local repos (and forks).</strong> Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to syn the fork with the upstream repo.</p>
-                        </div>
-                      </panel>
-                    </div>
-                    <p></p>
-                    <ul>
-                      <li><strong>Practice using parallel git branches <em>and</em> PRs</strong>, as explained below:</li>
-                    </ul>
-                    <ol>
-                      <li>First, do each increment as a parallel branch (follow the branch naming convention you followed earlier <code v-pre>branch-Level-8</code> etc.), but do not merge any.</li>
-                      <li>Then, push each branch to your fork, and create a PR <ins>within your fork</ins> (i.e., from the increment branch to the <code v-pre>master</code> branch). <mark>Be careful not to create a PR to <a href="https://github.com/nus-cs2103-AY2021S1/ip">the upstream repo</a>.</mark> <span class="dimmed">If you did create such a PR by mistake, no worries, just close it yourself.</span></li>
-                    </ol>
-                    <div class="indented-level2">
-                      <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                          <p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Creating PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                        </template>
-                        <div>
-                          <p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <span trigger="click" for="modal:githubPullRequests-rcsPullRequests" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPullRequests-rcsPullRequests'].show()" class="trigger-click">pull request (PR)</span>. Here is a scenario you can try in order to learn how to create PRs:</p>
-                          <b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
-                            <div>
-                              <p><strong>A <mark><em>pull request</em></mark> (PR for short) is mechanism for contributing code to a remote repo.</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p>
-                            </div>
-                          </b-modal>
-                          <p><strong>1. Fork</strong> the repo onto your GitHub account.</p>
-                          <p><strong>2. Clone</strong> it onto your computer.</p>
-                          <p><strong>3. Commit</strong> your changes e.g., add a new file with some contents and commit it.</p>
-                          <ul>
-                            <li><strong>Option A - Commit changes to the <code v-pre>master</code> branch</strong></li>
-                            <li><strong>Option B - Commit to a new branch</strong> e.g., create a branch named <code v-pre>add-intro</code> (remember to switch to the <code v-pre>master</code> branch before creating a new branch) and add your commit to it.</li>
-                          </ul>
-                          <p><strong>4. Push</strong> the branch you updated (i.e., <code v-pre>master</code> branch or the new branch) to your fork, as explained <span trigger="click" for="modal:createPr-pushBranch" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:createPr-pushBranch'].show()" class="trigger-click">here </span>.</p>
-                          <b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
-                            <div>
-                              <h5 id="pushing-a-branch-to-a-remote-repo">Pushing a branch to a remote repo<span id="pushing-a-branch-to-a-remote-repo" class="anchor"></span><a class="fa fa-anchor" href="#pushing-a-branch-to-a-remote-repo" onclick="event.stopPropagation()"></a></h5>
-                              <p>Here's how to push a branch to a remote repo:</p>
-                              <tabs>
-                                <tab><template slot="_header">SourceTree</template>
-                                  <p>Here's how to push a branch named <code v-pre>add-intro</code> to your own fork of a repo named <code v-pre>samplerepo-pr-practice</code>:</p>
-                                  <img src="/website/book/gitAndGithub/branch/images/pushBranchToFork.png" height="300">
-                                  <p></p>
-                                </tab>
-                                <tab class="algolia-no-index"><template slot="_header">CLI</template>
-                                  <p>Normally: <code v-pre>git push {remote repository} {branch}</code>. Examples:<br></p>
-                                  <ul>
-                                    <li><code v-pre>git push origin master</code> pushes the <code v-pre>master</code> branch to the repo named <code v-pre>origin</code> (i.e., the repo you cloned from)</li>
-                                    <li><code v-pre>git push upstream-repo add-intro</code> pushes the <code v-pre>add-intro</code> branch to the repo named <code v-pre>upstream-repo</code></li>
-                                  </ul>
-                                  <p><strong>If pushing a branch you created locally to the remote for the <em>first time</em></strong>, add the <code v-pre>-u</code> flag to get the local branch to track the new upstream branch:<br>
-                                    e.g., <code v-pre>git push -u origin add-intro</code></p>
-                                  <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> See <a href="https://git-scm.com/docs/git-push">git-scm.com/docs/git-push</a> for details of the <code v-pre>push</code> command.</p>
-                                </tab>
-                              </tabs>
-                              <p></p>
-                            </div>
-                          </b-modal>
-                          <p><strong>5. Initiate the PR creation:</strong></p>
-                          <ol>
-                            <li>
-                              <p>Go to your fork.</p>
-                            </li>
-                            <li>
-                              <p>Click on the <span class="tab"><span class="dimmed"><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
-                                      <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" />
-                                    </svg></span> Pull requests</span> tab followed by the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">New pull request</span> <strong>button</strong>. This will bring you to the 'Comparing changes' page.</p>
-                            </li>
-                            <li>
-                              <p>Set the appropriate target repo and the branch that should receive your PR, using the <code v-pre>base repository</code> and <code v-pre>base</code> dropdowns. e.g.,<br>
-                                <span class="btn btn-light border">base repository: <strong>se-edu/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                                  </svg></span> <span class="btn btn-light border">base: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                                  </svg></span><br>
-                              </p>
-                              <box type="info" seamless>
-                                <p>Normally, the default value shown in the dropdown is what you want but in case your fork has <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">e.g., the repo you forked from is also a fork of a another repo, which means both of those are considered upstream repos of your fork</span>multiple upstream repos</span>, the default may not be what you want.</p>
-                              </box>
-                            </li>
-                            <li>
-                              <p>Indicate which repo:branch contains your proposed code, using the <code v-pre>head repository</code> and <code v-pre>compare</code> dropdowns. e.g.,<br>
-                                <span class="btn btn-light border">head repository: <strong>myrepo/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                                  </svg></span> <span class="btn btn-light border">compare: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                    <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                                  </svg></span><br>
-                              </p>
-                            </li>
-                          </ol>
-                          <p><strong>6. Verify the proposed code</strong>: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">commit the new code and push to the branch</span>update the branch</span> as necessary.</p>
-                          <p><strong>7. Submit the PR:</strong></p>
-                          <span id="submit-the-pr">
-                            <ol>
-                              <li>
-                                <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true">
-                                        <path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z" />
-                                      </svg></span> Create pull request</span> button.</p>
-                              </li>
-                              <li>
-                                <p>Fill in the PR name and description e.g.,<br>
-                                  Name: <code v-pre>Add an introduction to the README.md</code><br>
-                                  Description:</p>
-                                <pre><code class="no-line-numbers hljs" v-pre><span>Add some paragraph to the README.md to explain ...<br></span><span>Also add a heading ...<br></span></code></pre>
-                              </li>
-                              <li>
-                                <p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                      <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                                    </svg></span> button and choose <code v-pre>Create draft pull request</code> option.</p>
-                              </li>
-                              <li>
-                                <p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true">
-                                      <path fill-rule="evenodd" d="M0 5l6 6 6-6H0z" />
-                                    </svg></span> button to create the PR.<br></p>
-                              </li>
-                              <li>
-                                <p>Go to the receiving repo to verify your PR appears there in the <code v-pre>Pull requests</code> tab.
-                                </p>
-                              </li>
-                            </ol>
-                          </span>
-                          <p></p>
+<div id="content-wrapper">
+<div class="website-content">
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w4.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Week 4</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w6.html"><span>iP: Week 6 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
+<br>
+<h1 id="ip-week-5"><span class="display-4">iP: Week 5</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="ip-week-5" class="anchor"></span><a class="fa fa-anchor" href="#ip-week-5" onclick="event.stopPropagation()"></a></h1>
+<div id="main">
+<div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
+<ol>
+<li><span>Generate a new jar file</span></li>
+<li>Add Increments as PRs: <code v-pre>A-Assertions</code>, <code v-pre>A-CodeQuality</code>, <code v-pre>A-Lambdas</code>, <code v-pre>A-Streams</code></li>
+<li>Add Increment: <code v-pre>A-CI</code></li>
+<li><span>Add an extension</span></li></ol></div>
+<div id="body">
+<div></div>
+<p></p>
+<h4 id="1-generate-a-new-jar-file"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Generate a new jar file</span><span id="1-generate-a-new-jar-file" class="anchor"></span><a class="fa fa-anchor" href="#1-generate-a-new-jar-file" onclick="event.stopPropagation()"></a></h4>
+<div>
+<ul>
+<li>We recommend that you re-generate a new jar file again and ensure it works. Note that you might have to use Gradle to generate the jar file this time as you need to bundle the JavaFX third-party library into the jar file. Refer to the <a href="https://se-education.org/guides/tutorials/gradle.html#creating-a-jar-file"><em>Gradle tutorial</em> @SE-EDU/guides</a> to find how.<br>
+<mark>If the <code v-pre>.jar</code>  file is smaller than 10Mb</mark>, most likely JavaFX libraries are not inside it.</li>
+<li>There is no need to create a release in GitHub with this jar file (although you are welcome to).</li></ul></div>
+<p></p>
+<h4 id="2-add-increments-as-prs-a-assertions-a-codequality-a-lambdas-a-streams"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Add Increments as PRs: <code v-pre>A-Assertions</code>, <code v-pre>A-CodeQuality</code>, <code v-pre>A-Lambdas</code>, <code v-pre>A-Streams</code><span id="2-add-increments-as-prs-a-assertions-a-codequality-a-lambdas-a-streams" class="anchor"></span><a class="fa fa-anchor" href="#2-add-increments-as-prs-a-assertions-a-codequality-a-lambdas-a-streams" onclick="event.stopPropagation()"></a></h4>
+<div>
+<span tags="m--cs2103">
+<div>
+<ul>
+<li><strong>Note how to merge PRs</strong>:</li></ul>
+<div class="indented-level2">
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Merging PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<p>Let's look at the steps involved in merging a PR, assuming the PR has been reviewed, refined, and approved for merging already.</p>
+<p>Preparation: If you would like to try merging a PR yourself, you can create a dummy PR in the following manner.</p>
+<ol>
+<li>Fork any repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>).</li>
+<li>Clone in to your computer.</li>
+<li>Create a new branch e.g., (<code v-pre>feature1</code>) and add some commits to it.</li>
+<li>Push the new branch to the fork.</li>
+<li>Create a PR from that branch to the <code v-pre>master</code> branch in your fork. Yes, it is possible to create a PR within the same repo.</li></ol>
+<p><strong>1. Locate the PR</strong> to be merged in your repo's GitHub page.</p>
+<p><strong>2. Click on the <span class="tab"><span aria-hidden="true" class="far fa-comments"></span> Conversation</span> tab</strong> and scroll to the bottom. You'll see a panel containing the PR status summary.<br>
+<img src="/website/book/gitAndGithub/managePRs/images/mergePr.png" width="800"></p>
+<p><strong>3. If the PR is not merge-able in the current state</strong>, the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> will not be green. Here are the possible reasons and remedies:</p>
+<ul>
+<li><strong>Problem: The PR code is out-of-date</strong>, indicated by the message <strong><span class="dimmed">This branch is out-of-date with the base branch</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated.
+<ul>
+<li>If the PR author has allowed you to update the PR and you have sufficient permissions, GitHub will allow you to update the PR simply by clicking the <span class="btn btn-light pl-1 pr-1 pb-0 pt-0 border">Update branch</span> on the right side of the 'out-of-date' error message.
+If that option is not available, post a message in the PR requesting the PR author to update the PR.</li></ul></li>
+<li><strong>Problem: There are merge conflicts</strong>, indicated by the message <strong><span class="dimmed">This branch has conflicts that must be resolved</span></strong>. That means the repo's <code v-pre>master</code> branch has been updated since the PR code was last updated, in a way that the PR code conflicts with the current <code v-pre>master</code> branch. Those <span trigger="click" for="modal:managePRs-mergeConflics" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:managePRs-mergeConflics'].show()" class="trigger-click">conflicts must be resolved</span>  before the PR can be merged.
+<ul>
+<li>If the conflicts are simple, GitHub might allow you to resolve them using the Web interface.</li>
+<li>If that option is not available, post a message in the PR requesting the PR author to update the PR.</li></ul></li></ul>
+<b-modal id="modal:managePRs-mergeConflics" hide-footer size="lg" modal-class="mb-zoom" ref="modal:managePRs-mergeConflics" class="algolia-no-index"><template slot="modal-title">Tools → Git &amp; GitHub → Merge Conflicts</template>
+  <div>
+<div></div><p></p>
+<p><span class="dimmed"><strong><span>Tools → Git and GitHub →
+</span></strong></span></p>
+<div id="title-and-body">
+<div><h4 id="dealing-with-merge-conflicts"><span>Dealing with merge conflicts</span><span id="dealing-with-merge-conflicts" class="anchor"></span><a class="fa fa-anchor" href="#dealing-with-merge-conflicts" onclick="event.stopPropagation()"></a></h4></div>
+<div id="main">
+<div>
+<p><strong>Merge conflicts happen when you try to combine two incompatible versions</strong> (e.g., merging a branch to another but each branch changed the same part of the code in a different way).</p>
+<p>Here are the steps to simulate a merge conflict and use it to learn how to resolve merge conflicts.</p>
+<p><strong>0. Create an empty repo or clone an existing repo</strong>, to be used for this activity.</p>
+<p><strong>1. Start a branch named <code v-pre>fix1</code> in the repo. Create a commit</strong> that adds a line with some text to one of the files.</p>
+<p><strong>2. Switch back to <code v-pre>master</code> branch. Create a commit with a conflicting change</strong> i.e. it adds a line with some different text in the exact location the previous line was added.</p>
+<img src="/website/book/gitAndGithub/mergeConflicts/images/sourcetree_1.png" height="350">
+<p></p>
+<p><strong>3. Try to merge the <code v-pre>fix1</code> branch onto the <code v-pre>master</code> branch.</strong> Git will pause mid-way during the merge and report a merge conflict. If you open the conflicted file, you will see something like this:</p>
+<pre><code class="hljs" v-pre><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span class="highlighted">=======<br></span><span>green<br></span><span class="highlighted">&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span><span>white<br></span></code></pre><p><strong>4. Observe how the conflicted part is marked</strong> between a line starting with <code v-pre>&lt;&lt;&lt;&lt;&lt;&lt; </code> and a line starting with <code v-pre>&gt;&gt;&gt;&gt;&gt;&gt;</code>, separated by another line starting with <code v-pre>=======</code>.</p>
+<p>Highlighted below is the conflicting part that is coming from the <code v-pre>master</code> branch:</p>
+<pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span class="highlighted">black<br></span><span>=======<br></span><span>green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre><p>This is the conflicting part that is coming from the <code v-pre>fix1</code> branch:</p>
+<pre><code style="counter-reset: line 2;" class="hljs" v-pre><span>blue<br></span><span>&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br></span><span>black<br></span><span>=======<br></span><span class="highlighted">green<br></span><span>&gt;&gt;&gt;&gt;&gt;&gt; fix1<br></span><span>red<br></span></code></pre><p><strong>5. Resolve the conflict by editing the file</strong>. Let us assume you want to keep both lines in the merged version. You can modify the file to be like this:</p>
+<pre><code class="hljs" v-pre><span>COLORS<br></span><span>------<br></span><span>blue<br></span><span class="highlighted">black<br></span><span class="highlighted">green<br></span><span>red<br></span><span>white<br></span></code></pre><p><strong>6. Stage the changes, and commit.</strong></p></div>
+<div></div></div></div></div></b-modal>
+<p><strong>3. Merge the PR</strong> by clicking on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button, followed by the <code v-pre>Confirm merge</code> button. You should see a <code v-pre>Pull request successfully merged and closed</code> message after the PR is merged.<br></p>
+<ul>
+<li>You can choose between three merging options by clicking on the down-arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Merge pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button. If you are new to Git and GitHub, the <code v-pre>Create merge commit</code> options are recommended.</li></ul>
+<p><strong>Next, sync your local repos (and forks).</strong> Merging a PR simply merges the code in the upstream remote repository in which it was merged. The PR author (and other members of the repo) needs to pull the merged code from the upstream repo to their local repos and push the new code to their respective forks to syn the fork with the upstream repo.</p></div></panel></div><p></p>
+<ul>
+<li><strong>Practice using parallel git branches <em>and</em> PRs</strong>, as explained below:</li></ul>
+<ol>
+<li>First, do each increment as a parallel branch (follow the branch naming convention you followed earlier <code v-pre>branch-Level-8</code> etc.), but do not merge any.</li>
+<li>Then, push each branch to your fork, and create a PR <ins>within your fork</ins> (i.e., from the increment branch to the <code v-pre>master</code> branch). <mark>Be careful not to create a PR to <a href="https://github.com/nus-cs2103-AY2021S1/ip">the upstream repo</a>.</mark> <span class="dimmed">If you did create such a PR by mistake, no worries, just close it yourself.</span></li></ol>
+<div class="indented-level2">
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Creating PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<p>Suppose you want to propose some changes to a GitHub repo (e.g., <a href="https://github.com/se-edu/samplerepo-pr-practice">samplerepo-pr-practice</a>) as a <span trigger="click" for="modal:githubPullRequests-rcsPullRequests" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:githubPullRequests-rcsPullRequests'].show()" class="trigger-click">pull request (PR)</span>. Here is a scenario you can try in order to learn how to create PRs:</p>
+<b-modal id="modal:githubPullRequests-rcsPullRequests" hide-footer size="lg" modal-class="mb-zoom" ref="modal:githubPullRequests-rcsPullRequests" class="algolia-no-index"><template slot="modal-title">Project Management → Revision Control → Remote Repositories →</template>
+  <div>
+<p><strong>A <mark><em>pull request</em></mark> (PR for short) is mechanism for contributing code to a remote repo.</strong> i.e., &quot;I'm <em>requesting</em> you to <em>pull</em> my proposed changes to your repo&quot;. For this to work, the two repos must have a shared history. The most common case is sending PRs from a fork to its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a repo you forked from</span>upstream</span> repo.</p></div></b-modal>
+<p><strong>1. Fork</strong> the repo onto your GitHub account.</p>
+<p><strong>2. Clone</strong> it onto your computer.</p>
+<p><strong>3. Commit</strong> your changes e.g., add a new file with some contents and commit it.</p>
+<ul>
+<li><strong>Option A - Commit changes to the <code v-pre>master</code> branch</strong></li>
+<li><strong>Option B - Commit to a new branch</strong> e.g., create a branch named <code v-pre>add-intro</code> (remember to switch to the <code v-pre>master</code> branch before creating a new branch) and add your commit to it.</li></ul>
+<p><strong>4. Push</strong> the branch you updated (i.e., <code v-pre>master</code> branch or the new branch) to your fork, as explained <span trigger="click" for="modal:createPr-pushBranch" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:createPr-pushBranch'].show()" class="trigger-click">here </span>.</p>
+<b-modal id="modal:createPr-pushBranch" hide-footer size="lg" modal-class="mb-zoom" ref="modal:createPr-pushBranch" class="algolia-no-index"><template slot="modal-title">Git &amp; GitHub → Branch →</template>
+  <div>
+<h5 id="pushing-a-branch-to-a-remote-repo">Pushing a branch to a remote repo<span id="pushing-a-branch-to-a-remote-repo" class="anchor"></span><a class="fa fa-anchor" href="#pushing-a-branch-to-a-remote-repo" onclick="event.stopPropagation()"></a></h5>
+<p>Here's how to push a branch to a remote repo:</p>
+<tabs>
+  <tab><template slot="_header">SourceTree</template>
+<p>Here's how to push a branch named <code v-pre>add-intro</code> to your own fork of a repo named <code v-pre>samplerepo-pr-practice</code>:</p>
+<img src="/website/book/gitAndGithub/branch/images/pushBranchToFork.png" height="300">
+<p></p></tab>
+  <tab class="algolia-no-index"><template slot="_header">CLI</template>
+<p>Normally: <code v-pre>git push {remote repository} {branch}</code>. Examples:<br></p>
+<ul>
+<li><code v-pre>git push origin master</code> pushes the <code v-pre>master</code> branch to the repo named <code v-pre>origin</code> (i.e., the repo you cloned from)</li>
+<li><code v-pre>git push upstream-repo add-intro</code> pushes the <code v-pre>add-intro</code> branch to the repo named <code v-pre>upstream-repo</code></li></ul>
+<p><strong>If pushing a branch you created locally to the remote for the <em>first time</em></strong>, add the <code v-pre>-u</code> flag to get the local branch to track the new upstream branch:<br>
+e.g., <code v-pre>git push -u origin add-intro</code></p>
+<p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> See <a href="https://git-scm.com/docs/git-push">git-scm.com/docs/git-push</a> for details of the <code v-pre>push</code> command.</p></tab></tabs>
+<p></p></div></b-modal>
+<p><strong>5. Initiate the PR creation:</strong></p>
+<ol>
+<li>
+<p>Go to your fork.</p></li>
+<li>
+<p>Click on the <span class="tab"><span class="dimmed"><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg></span> Pull requests</span> tab followed by the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">New pull request</span> <strong>button</strong>. This will bring you to the 'Comparing changes' page.</p></li>
+<li>
+<p>Set the appropriate target repo and the branch that should receive your PR, using the <code v-pre>base repository</code> and <code v-pre>base</code> dropdowns. e.g.,<br>
+<span class="btn btn-light border">base repository: <strong>se-edu/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> <span class="btn btn-light border">base: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span><br></p>
+<box type="info" seamless>
+<p>Normally, the default value shown in the dropdown is what you want but in case your fork has <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">e.g., the repo you forked from is also a fork of a another repo, which means both of those are considered upstream repos of your fork</span>multiple upstream repos</span>, the default may not be what you want.</p></box></li>
+<li>
+<p>Indicate which repo:branch contains your proposed code, using the <code v-pre>head repository</code> and <code v-pre>compare</code> dropdowns. e.g.,<br>
+<span class="btn btn-light border">head repository: <strong>myrepo/samplerepo-pr-practice</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> <span class="btn btn-light border">compare: <strong>master</strong> <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span><br></p></li></ol>
+<p><strong>6. Verify the proposed code</strong>: Verify that the diff view in the page shows the exact change you intend to propose. If it doesn't, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">commit the new code and push to the branch</span>update the branch</span> as necessary.</p>
+<p><strong>7. Submit the PR:</strong></p>
+<span id="submit-the-pr">
+<ol>
+<li>
+<p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"><span><svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-git-pull-request" aria-hidden="true"><path fill-rule="evenodd" d="M11 11.28V5c-.03-.78-.34-1.47-.94-2.06C9.46 2.35 8.78 2.03 8 2H7V0L4 3l3 3V4h1c.27.02.48.11.69.31.21.2.3.42.31.69v6.28A1.993 1.993 0 0010 15a1.993 1.993 0 001-3.72zm-1 2.92c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zM4 3c0-1.11-.89-2-2-2a1.993 1.993 0 00-1 3.72v6.56A1.993 1.993 0 002 15a1.993 1.993 0 001-3.72V4.72c.59-.34 1-.98 1-1.72zm-.8 10c0 .66-.55 1.2-1.2 1.2-.65 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2zM2 4.2C1.34 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg></span> Create pull request</span> button.</p></li>
+<li>
+<p>Fill in the PR name and description e.g.,<br>
+Name: <code v-pre>Add an introduction to the README.md</code><br>
+Description:</p>
+<pre><code class="no-line-numbers hljs" v-pre><span>Add some paragraph to the README.md to explain ...<br></span><span>Also add a heading ...<br></span></code></pre></li>
+<li>
+<p>If you want to indicate that the PR you are about to create is 'still work in progress, not yet ready', click on the dropdown arrow in the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button and choose <code v-pre>Create draft pull request</code> option.</p></li>
+<li>
+<p>Click the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0"> Create pull request <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button to create the PR.<br></p></li>
+<li>
+<p>Go to the receiving repo to verify your PR appears there in the <code v-pre>Pull requests</code> tab.
+</p></li></ol></span><p></p>
 
 
-                          <p><strong>The next step of the PR life cycle is the PR <em>review</em>.</strong> The members of the repo that received your PR can now review your proposed changes.</p>
-                          <ul>
-                            <li>If they like the changes, they can <em>merge</em> the changes to their repo, which also closes the PR automatically.</li>
-                            <li>If they don't like it at all, they can simply close the PR too i.e., they reject your proposed change.</li>
-                            <li>In most cases, they will add comments to the PR to suggest further changes. When that happens, GitHub will notify you.</li>
-                          </ul>
-                          <p><strong>You can update the PR along the way too.</strong> Suppose PR reviewers suggested a certain improvement to your proposed code. To update your PR as per the suggestion, you can simply modify the code in your local repo, commit the updated code to the same <code v-pre>master</code> branch, and push to your fork as you did earlier. The PR will auto-update accordingly.</p>
-                          <p><strong>Sending PRs using the <code v-pre>master</code> branch is less common</strong> than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the <code v-pre>master</code> branch only, both fixes (and any other change you do in the <code v-pre>master</code> branch) will appear in the PRs you create from it.</p>
-                          <p><strong>To create another PR</strong> while the current PR is still under review, create a new branch (remember to <mark>switch back to the <code v-pre>master</code> first</mark>), add your new proposed change in that branch, and create a new PR following the steps given above.</p>
-                          <p><strong>It is possible to create PRs within the same repo</strong> e.g., you can create a PR from branch <code v-pre>feature-x</code> to the <code v-pre>master</code> branch, within the same repo. Doing so will allow the code to be reviewed by other developers (using PR review mechanism) before it is merged.</p>
-                          <panel expanded><template slot="_header">
-                              <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
-                            </template>
-                            <ul>
-                              <li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li>
-                            </ul>
-                          </panel>
-                        </div>
-                      </panel>
-                    </div>
-                    <p></p>
-                    <ol start="3">
-                      <li>Now, merge one of the PRs and update the remaining PRs accordingly, as given below:
-                        <ol>
-                          <li>Merge one of the PRs on GitHub e.g., Level-8. Remember to choose the <code v-pre>Create merge commit</code> option when merging.</li>
-                          <li>Pull the updated <code v-pre>master</code> branch from your fork to your Computer.</li>
-                          <li>Note how the remaining un-merged branches are no longer in sync with the latest <code v-pre>master</code>. To rectify, merge the <code v-pre>master</code> branch to each of them. Resolve merge conflicts, if any.</li>
-                          <li>Push the updated branches to your fork. The PRs will update automatically to reflect the updated branch.</li>
-                          <li>As before, tag the merge commit in the master branch and push the tag to your fork.</li>
-                        </ol>
-                      </li>
-                      <li>Merge the remaining PRs using a procedure similar to the above.</li>
-                    </ol>
-                  </div>
-                </span>
-              </div>
-              <div></div>
-              <div>
-                <div class="indented">
-                  <div class="indented border">
-                    <panel type="seamless" no-close class="algolia-no-index">
-                      <div></div>
-                      <div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-Assertions</code>: Use Assertions</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
-                      <div></div>
-                      <div>
-                        <div>
-                          <div></div>
-                          <h3 id="a-assertions"><span class="badge badge-pill badge-primary">A-Assertions</span><span id="a-assertions" class="anchor"></span><a class="fa fa-anchor" href="#a-assertions" onclick="event.stopPropagation()"></a></h3>
-                          <p>     <big>↳</big> <strong>Use Assertions</strong></p>
-                        </div>
-                        <p>Use <code v-pre>assert</code> feature (not JUnit assertions) to document important assumptions that should hold at various points in the code.</p>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-              <div></div>
-              <div></div>
-              <div>
-                <div class="indented">
-                  <div class="indented border">
-                    <panel type="seamless" no-close class="algolia-no-index">
-                      <div></div>
-                      <div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-CodeQuality</code>: Improve Code Quality</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
-                      <div></div>
-                      <div>
-                        <div>
-                          <div></div>
-                          <h3 id="a-codequality"><span class="badge badge-pill badge-primary">A-CodeQuality</span><span id="a-codequality" class="anchor"></span><a class="fa fa-anchor" href="#a-codequality" onclick="event.stopPropagation()"></a></h3>
-                          <p>     <big>↳</big> <strong>Improve code quality</strong></p>
-                        </div>
-                        <p>Critically examines the code and refactor to improve the code quality where necessary.</p>
-                        <p>
-                          <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> When adding this increment, follow closely the 'Code Quality' topics you have learned so far, rather than merely follow your own intuition about code quality.
-                        </p>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-              <div></div>
-              <div></div>
-              <div>
-                <div class="indented">
-                  <div class="indented border">
-                    <panel type="seamless" no-close class="algolia-no-index">
-                      <div></div>
-                      <div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-Lambdas</code>: Use Lambdas</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
-                      <div></div>
-                      <div>
-                        <div>
-                          <div></div>
-                          <h3 id="a-lambdas"><span class="badge badge-pill badge-primary">A-Lambdas</span><span id="a-lambdas" class="anchor"></span><a class="fa fa-anchor" href="#a-lambdas" onclick="event.stopPropagation()"></a></h3>
-                          <p>     <big>↳</big> <strong>Use Lambdas</strong></p>
-                        </div>
-                        <p>Use the Lambdas feature of Java in your code, if applicable.</p>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-              <div></div>
-              <div></div>
-              <div>
-                <div class="indented">
-                  <div class="indented border">
-                    <panel type="seamless" no-close class="algolia-no-index">
-                      <div></div>
-                      <div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-Streams</code>: Use Streams</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
-                      <div></div>
-                      <div>
-                        <div>
-                          <div></div>
-                          <h3 id="a-streams"><span class="badge badge-pill badge-primary">A-Streams</span><span id="a-streams" class="anchor"></span><a class="fa fa-anchor" href="#a-streams" onclick="event.stopPropagation()"></a></h3>
-                          <p>     <big>↳</big> <strong>Use Streams</strong></p>
-                        </div>
-                        <p>Use the Streams feature of Java in your code, if applicable.</p>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-              <div></div>
-              <p></p>
-              <h4 id="3-add-increment-a-ci"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Add Increment: <code v-pre>A-CI</code><span id="3-add-increment-a-ci" class="anchor"></span><a class="fa fa-anchor" href="#3-add-increment-a-ci" onclick="event.stopPropagation()"></a></h4>
-              <div>
-                <ul>
-                  <li>We recommend that <mark>at least one member</mark> of the team attempt the following.</li>
-                </ul>
-              </div>
-              <div></div>
-              <div>
-                <div class="indented">
-                  <div class="indented border">
-                    <panel type="seamless" no-close class="algolia-no-index">
-                      <div></div>
-                      <div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-CI</code>: Set up CI</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
-                      <div></div>
-                      <div>
-                        <div>
-                          <div></div>
-                          <h3 id="a-ci"><span class="badge badge-pill badge-primary">A-CI</span><span id="a-ci" class="anchor"></span><a class="fa fa-anchor" href="#a-ci" onclick="event.stopPropagation()"></a></h3>
-                          <p>     <big>↳</big> <strong>Set up CI</strong></p>
-                        </div>
-                        <p>Use GitHub Actions to set up Continuous Integration (CI).</p>
-                        <p>The workflow specified by <a href="https://github.com/se-edu/duke/blob/full-template/.github/workflows/gradle.yml">this <code v-pre>.yml</code> file</a> is a good candidate for this project. The last three segments are related to I/O redirection tests; can be deleted if not applicable to your project.</p>
-                        <p>Refer to the <a href="https://se-education.org/guides/tutorials/githubActions.html"><em>Using GitHub Actions</em> @SE-EDU/guides</a> to learn how to use that <code v-pre>.yml</code> file to set up GitHub actions.</p>
-                      </div>
-                    </panel>
-                  </div>
-                </div>
-              </div>
-              <div></div>
-              <p></p>
-              <h4 id="4-add-an-extension"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span>Add an extension</span><span id="4-add-an-extension" class="anchor"></span><a class="fa fa-anchor" href="#4-add-an-extension" onclick="event.stopPropagation()"></a></h4>
-              <div>
-                <ul>
-                  <li>Add at least one extension of your choice, selected from <a href="/website/se-book-adapted/projectDuke/index.html#extensions-category-b">category B, C, or D</a> i.e., pick just one item from one category e.g., <code v-pre>B-DoWithinPeriodTasks</code> or <code v-pre>C-Sort</code> or <code v-pre>D-Places</code></li>
-                  <li>Recommended to add the extension via a branch (branch name is up to you). Optional to add it via a PR.</li>
-                  <li>Add a tag named <code v-pre>BCD-Extension</code> to the corresponding commit.</li>
-                </ul>
-                <div class="indented-level2">
-                  <p>
-                    <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Discuss with your team members to ensure that each member picks a different extension.
-                  </p>
-                  <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You may want to pick an extension that is relevant to your tP so that the code can be reused in the tP later.</p>
-                </div>
-              </div>
-              <p></p>
-            </div>
-          </div>
-          <br>
-          <p><span class="float-left algolia-no-index">
-              <b-btn variant="light" href="/website/admin/ip-w4.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Week 4</span></b-btn>
-            </span><span class="float-right algolia-no-index">
-              <b-btn variant="light" href="/website/admin/ip-w6.html"><span>iP: Week 6 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn>
-            </span></p>
-        </div>
-      </div>
+<p><strong>The next step of the PR life cycle is the PR <em>review</em>.</strong> The members of the repo that received your PR can now review your proposed changes.</p>
+<ul>
+<li>If they like the changes, they can <em>merge</em> the changes to their repo, which also closes the PR automatically.</li>
+<li>If they don't like it at all, they can simply close the PR too i.e., they reject your proposed change.</li>
+<li>In most cases, they will add comments to the PR to suggest further changes. When that happens, GitHub will notify you.</li></ul>
+<p><strong>You can update the PR along the way too.</strong> Suppose PR reviewers suggested a certain improvement to your proposed code. To update your PR as per the suggestion, you can simply modify the code in your local repo, commit the updated code to the same <code v-pre>master</code> branch, and push to your fork as you did earlier. The PR will auto-update accordingly.</p>
+<p><strong>Sending PRs using the <code v-pre>master</code> branch is less common</strong> than sending PRs using separate branches. For example, suppose you wanted to propose two bug fixes that are not related to each other. In that case, it is more appropriate to send two separate PRs so that each fix can be reviewed, refined, and merged independently. But if you send PRs using the <code v-pre>master</code> branch only, both fixes (and any other change you do in the <code v-pre>master</code> branch) will appear in the PRs you create from it.</p>
+<p><strong>To create another PR</strong> while the current PR is still under review, create a new branch (remember to <mark>switch back to the <code v-pre>master</code> first</mark>), add your new proposed change in that branch, and create a new PR following the steps given above.</p>
+<p><strong>It is possible to create PRs within the same repo</strong> e.g., you can create a PR from branch <code v-pre>feature-x</code> to the <code v-pre>master</code> branch, within the same repo. Doing so will allow the code to be reviewed by other developers (using PR review mechanism) before it is merged.</p>
+<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
+<ul>
+<li><a href="https://help.github.com/articles/creating-a-pull-request/">GitHub's own documentation on creating a PR</a></li></ul></panel></div></panel></div><p></p>
+<ol start="3">
+<li>Now, merge one of the PRs and update the remaining PRs accordingly, as given below:
+<ol>
+<li>Merge one of the PRs on GitHub e.g., Level-8. Remember to choose the <code v-pre>Create merge commit</code> option when merging.</li>
+<li>Pull the updated <code v-pre>master</code> branch from your fork to your Computer.</li>
+<li>Note how the remaining un-merged branches are no longer in sync with the latest <code v-pre>master</code>. To rectify, merge the <code v-pre>master</code> branch to each of them. Resolve merge conflicts, if any.</li>
+<li>Push the updated branches to your fork. The PRs will update automatically to reflect the updated branch.</li>
+<li>As before, tag the merge commit in the master branch and push the tag to your fork.</li></ol></li>
+<li>Merge the remaining PRs using a procedure similar to the above.</li></ol></div></span></div>
+<div></div>
+<div>
+<div class="indented">
+<div class="indented border">
+<panel type="seamless" no-close class="algolia-no-index">
+<div></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-Assertions</code>: Use Assertions</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+<div></div>
+<div>
+<div>
+<div></div>
+<h3 id="a-assertions"><span class="badge badge-pill badge-primary">A-Assertions</span><span id="a-assertions" class="anchor"></span><a class="fa fa-anchor" href="#a-assertions" onclick="event.stopPropagation()"></a></h3>
+<p>     <big>↳</big> <strong>Use Assertions</strong></p></div>
+<p>Use <code v-pre>assert</code> feature (not JUnit assertions) to document important assumptions that should hold at various points in the code.</p></div></panel></div></div></div>
+<div></div>
+<div></div>
+<div>
+<div class="indented">
+<div class="indented border">
+<panel type="seamless" no-close class="algolia-no-index">
+<div></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-CodeQuality</code>: Improve Code Quality</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+<div></div>
+<div>
+<div>
+<div></div>
+<h3 id="a-codequality"><span class="badge badge-pill badge-primary">A-CodeQuality</span><span id="a-codequality" class="anchor"></span><a class="fa fa-anchor" href="#a-codequality" onclick="event.stopPropagation()"></a></h3>
+<p>     <big>↳</big> <strong>Improve code quality</strong></p></div>
+<p>Critically examines the code and refactor to improve the code quality where necessary.</p>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> When adding this increment, follow closely the 'Code Quality' topics you have learned so far, rather than merely follow your own intuition about code quality.</p></div></panel></div></div></div>
+<div></div>
+<div></div>
+<div>
+<div class="indented">
+<div class="indented border">
+<panel type="seamless" no-close class="algolia-no-index">
+<div></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-Lambdas</code>: Use Lambdas</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
+<div></div>
+<div>
+<div>
+<div></div>
+<h3 id="a-lambdas"><span class="badge badge-pill badge-primary">A-Lambdas</span><span id="a-lambdas" class="anchor"></span><a class="fa fa-anchor" href="#a-lambdas" onclick="event.stopPropagation()"></a></h3>
+<p>     <big>↳</big> <strong>Use Lambdas</strong></p></div>
+<p>Use the Lambdas feature of Java in your code, if applicable.</p></div></panel></div></div></div>
+<div></div>
+<div></div>
+<div>
+<div class="indented">
+<div class="indented border">
+<panel type="seamless" no-close class="algolia-no-index">
+<div></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-Streams</code>: Use Streams</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
+<div></div>
+<div>
+<div>
+<div></div>
+<h3 id="a-streams"><span class="badge badge-pill badge-primary">A-Streams</span><span id="a-streams" class="anchor"></span><a class="fa fa-anchor" href="#a-streams" onclick="event.stopPropagation()"></a></h3>
+<p>     <big>↳</big> <strong>Use Streams</strong></p></div>
+<p>Use the Streams feature of Java in your code, if applicable.</p></div></panel></div></div></div>
+<div></div>
+<p></p>
+<h4 id="3-add-increment-a-ci"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Add Increment: <code v-pre>A-CI</code><span id="3-add-increment-a-ci" class="anchor"></span><a class="fa fa-anchor" href="#3-add-increment-a-ci" onclick="event.stopPropagation()"></a></h4>
+<div>
+<ul>
+<li>We recommend that <mark>at least one member</mark> of the team attempt the following.</li></ul></div>
+<div></div>
+<div>
+<div class="indented">
+<div class="indented border">
+<panel type="seamless" no-close class="algolia-no-index">
+<div></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-CI</code>: Set up CI</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
+<div></div>
+<div>
+<div>
+<div></div>
+<h3 id="a-ci"><span class="badge badge-pill badge-primary">A-CI</span><span id="a-ci" class="anchor"></span><a class="fa fa-anchor" href="#a-ci" onclick="event.stopPropagation()"></a></h3>
+<p>     <big>↳</big> <strong>Set up CI</strong></p></div>
+<p>Use GitHub Actions to set up Continuous Integration (CI).</p>
+<p>The workflow specified by <a href="https://github.com/se-edu/duke/blob/full-template/.github/workflows/gradle.yml">this <code v-pre>.yml</code> file</a> is a good candidate for this project. The last three segments are related to I/O redirection tests; can be deleted if not applicable to your project.</p>
+<p>Refer to the <a href="https://se-education.org/guides/tutorials/githubActions.html"><em>Using GitHub Actions</em> @SE-EDU/guides</a> to learn how to use that <code v-pre>.yml</code> file to set up GitHub actions.</p></div></panel></div></div></div>
+<div></div>
+<p></p>
+<h4 id="4-add-an-extension"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span>Add an extension</span><span id="4-add-an-extension" class="anchor"></span><a class="fa fa-anchor" href="#4-add-an-extension" onclick="event.stopPropagation()"></a></h4>
+<div>
+<ul>
+<li>Add at least one extension of your choice, selected from <a href="/website/se-book-adapted/projectDuke/index.html#extensions-category-b">category B, C, or D</a> i.e., pick just one item from one category e.g., <code v-pre>B-DoWithinPeriodTasks</code> or <code v-pre>C-Sort</code> or <code v-pre>D-Places</code></li>
+<li>Recommended to add the extension via a branch (branch name is up to you). Optional to add it via a PR.</li>
+<li>Add a tag named <code v-pre>BCD-Extension</code> to the corresponding commit.</li></ul>
+<div class="indented-level2">
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Discuss with your team members to ensure that each member picks a different extension.</p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You may want to pick an extension that is relevant to your tP so that the code can be reused in the tP later.</p></div></div>
+<p></p></div></div>
+<br>
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w4.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Week 4</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w6.html"><span>iP: Week 6 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div>
 
-      <nav id="page-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
 
-          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#ip-week-5">iP: Week 5 &#x200E;</a>
-            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#1-generate-a-new-jar-file">1 Generate a new jar file&#x200E;</a>
-              <a class="nav-link py-1" href="#2-add-increments-as-prs-a-assertions-a-codequality-a-lambdas-a-streams">2 Add Increments as PRs: A-Assertions, A-CodeQuality, A-Lambdas, A-Streams&#x200E;</a>
-              <a class="nav-link py-1" href="#3-add-increment-a-ci">3 Add Increment: A-CI&#x200E;</a>
-              <a class="nav-link py-1" href="#4-add-an-extension">4 Add an extension&#x200E;</a>
-            </nav>
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#ip-week-5">iP: Week 5 &#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#1-generate-a-new-jar-file">1 Generate a new jar file&#x200E;</a>
+<a class="nav-link py-1" href="#2-add-increments-as-prs-a-assertions-a-codequality-a-lambdas-a-streams">2 Add Increments as PRs: A-Assertions, A-CodeQuality, A-Lambdas, A-Streams&#x200E;</a>
+<a class="nav-link py-1" href="#3-add-increment-a-ci">3 Add Increment: A-CI&#x200E;</a>
+<a class="nav-link py-1" href="#4-add-an-extension">4 Add an extension&#x200E;</a>
+</nav>
 
-          </nav>
-        </div>
-      </nav>
-    </div>
+</nav>
+</div>
+</nav>
+</div>
     <footer>
-
-      <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sat, 24 Oct 2020, 21:14:45 GMT+8]</small>
-      </div>
-    </footer>
-  </div>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 28 Oct 2020, 0:40:42 GMT+8]</small></div></footer></div>
 </body>
 <script src="../markbind/js/vue.min.js"></script>
 <script src="../markbind/js/components.min.js"></script>
@@ -726,34 +432,28 @@
   const enableSearch = true
 </script>
 <script src="../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-122519234-1');
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+        indexName: "nus-cs2103-ay1920s1",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-122519234-1');
+    </script>
 <script src="../markbind/layouts/default/scripts.js"></script>
-
 </html>

@@ -1,1105 +1,684 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CS2103/T - Week 6 - Topics</title>
-  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/page-nav.css">
-  <link rel="stylesheet" href="/website/book/css/textbook.css">
-  <link rel="stylesheet" href="/website/css/main.css">
-  <link rel="stylesheet" href="/website/css/schedule.css">
-  <link rel="icon" href="/website/favicon.ico">
-</head>
-
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
-  <div id="app">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T - Week 6 - Topics</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
     <header fixed>
-      <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
-        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
-          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
-          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
-          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
-          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
-          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
-          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
-          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
-          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
-          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
-          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
-          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
-          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
-          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
-        </dropdown>
-        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-        <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span><strong>Dashboards</strong></span></a></li>
-        <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Project Links</strong></template>
-          <span><strong> Individual Project (iP):</strong></span>
-          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="/website/admin/ip-showcase.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
-          <hr>
-          <span><strong> Team Project (tP):</strong></span>
-          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
-          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
-        </dropdown>
-        <div class="nav-link temp-dropdown-placeholder">**Other Links**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
-          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
-          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
-          <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+  <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span><strong>Dashboards</strong></span></a></li>
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Project Links</strong></template>
+    <span><strong> Individual Project (iP):</strong></span>
+    <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+    <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+    <li><a href="/website/admin/ip-showcase.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+    <hr>
+    <span><strong> Team Project (tP):</strong></span>
+    <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+    <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
+    <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+    <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+    <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
+    <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+    
+    <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+    <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+    <li tags="m--cs2103 m--cs2113"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+<div id="content-wrapper">
+<div class="website-content">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/website/schedule/week5"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week6/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week6/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+<li class="page-item active"><a class="page-link" href="/website/schedule/week6/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week6/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week6/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week7"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-6-fri-sep-11th-topics">Week 6 <small><small><span class="dimmed">[Fri, Sep 11th]</span> - Topics</small></small><span id="week-6-fri-sep-11th-topics" class="anchor"></span><a class="fa fa-anchor" href="#week-6-fri-sep-11th-topics" onclick="event.stopPropagation()"></a></h1>
+<div></div>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p></template>
+<span id="toc">
+<ul>
+<li>[<a href="/website/schedule/week6/topics.html#W6-1">W6.1</a>] <strong>Modeling: Sequence Diagrams</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1a">W6.1a</a>] <span>Design → Modelling → Modelling Behaviors
+</span></span> <span>Sequence diagrams - basic</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1b">W6.1b</a>] <span>Design → Modelling → Modelling Behaviors
+</span></span> <span>Sequence diagrams - intermediate</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1c">W6.1c</a>] <span>Tools → UML → Sequence Diagrams →
+</span></span> <span>Reference frames</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1d">W6.1d</a>] <span>Tools → UML → Sequence Diagrams →
+</span></span> <span>Parallel paths</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<ul>
+<li>[<a href="/website/schedule/week6/topics.html#W6-2">W6.2</a>] <strong>Architecture Diagrams</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2a">W6.2a</a>] <span>Design → Architecture → Introduction →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2b">W6.2b</a>] <span>Design → Architecture → Architecture Diagrams →
+</span></span> <span>Reading</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2c">W6.2c</a>] <span>Design → Introduction →
+</span></span> <span>Multi-level design</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<p></p>
+<ul>
+<li>[<a href="/website/schedule/week6/topics.html#W6-3">W6.3</a>] <strong>IDEs: Intermediate Features</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3a">W6.3a</a>] <span>Implementation → IDEs → Debugging →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3b">W6.3b</a>] <span>Tools → Intellij IDEA →
+</span></span> <span>Debugging: Basic</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3c">W6.3c</a>] <span>Tools → Intellij IDEA →
+</span></span> <span>Code navigation</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<ul>
+<li>[<a href="/website/schedule/week6/topics.html#W6-4">W6.4</a>] <strong>Logging</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
+<div class="indented-level2">
+<small>
+<ul>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-4a">W6.4a</a>] <span>Implementation → Error Handling → Logging →
+</span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+<li>
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-4b">W6.4b</a>] <span>Implementation → Error Handling → Logging →
+</span></span> <span>How</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+<p></p></span></panel>
+<hr style="border: 1px dotted #cccccc;">
+<p><span id="W6-1"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>The next UML model we'll be learning is <em>sequence diagrams</em>. As before, <strong>focus on learning how to <em>interpret</em> these diagrams</strong> as you'll need to interpret some sequence diagrams in tP documentation pretty soon. <em>Drawing</em> sequence diagrams will be covered in a future week.</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w6-1-modeling-sequence-diagrams">
+<span slot="header" class="card-title"><div><h2 id="w6-1-modeling-sequence-diagrams"><span class="dimmed">[W6.1]</span> <strong>Modeling: Sequence Diagrams</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-1-modeling-sequence-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#w6-1-modeling-sequence-diagrams" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W6-1a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic" id="design-modelling-modelling-behaviors-sequence-diagrams-basic">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.1a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="design-modelling-modelling-behaviors-sequence-diagrams-basic"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Behaviors</span></span></small> <strong><span>Sequence diagrams - basic</span></strong><span id="design-modelling-modelling-behaviors-sequence-diagrams-basic" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-behaviors-sequence-diagrams-basic" onclick="event.stopPropagation()"></a></h4></span>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=7aefe728-a7ad-4871-86b8-ac3000bcf7d1&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw basic sequence diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><panel type="seamless" src="/website/book/uml/sequenceDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Introduction</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SequenceDiagrams</p></template></panel></p>
+<p><panel type="seamless" src="/website/book/uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Basic Notation</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Basic</p></template></panel></p>
+<p><panel type="seamless" src="/website/book/uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Loops</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Loops</p></template></panel>
+<panel type="seamless" src="/website/book/uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Object Creation</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Creation</p></template></panel></p>
+<p><panel type="seamless" src="/website/book/uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Minimal Notation</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Minimal</p></template></panel></p></div>
+<div>
+  <div>
+<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<div>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram about Machine</p></template>
+<question>
+<p>Explain in your own words the interactions illustrated by this Sequence Diagram:</p>
+<img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="500"></question></panel></div>
+<div>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw a Sequence Diagram for the code (<code v-pre>PersonList</code>, <code v-pre>Person</code>, <code v-pre>Tag</code>)</p></template>
+<question>
+<p>Consider the code below:</p>
+<div class="row">
+  <div class="col-sm-7">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{<br></span><span>    Tag tag;<br></span><span>    String name;<br></span><span><br></span><span>    Person(String personName, String tagName){<br></span><span>        name = personName;<br></span><span>        tag = <span class="hljs-keyword">new</span> Tag(tagName);<br></span><span>    }<br></span><span>}<br></span></code></pre></div>
+  <div class="col-sm-5">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{<br></span><span>    Tag(String value){<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonList</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addPerson</span><span class="hljs-params">(Person p)</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre></div></div>
+<p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
+<pre><code class="hljs java" v-pre><span>PersonList personList = <span class="hljs-keyword">new</span> PersonList();<br></span><span><span class="hljs-keyword">while</span> (hasRoom){<br></span><span>    Person p = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Adam"</span>, <span class="hljs-string">"friend"</span>);<br></span><span>    personList.addPerson(p);<br></span><span>}<br></span></code></pre></question></panel></div>
+<div>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find notation errors in sequence diagram</p></template>
+<question>
+<p>Find notation mistakes in the sequence diagram below:</p>
+<img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500"></question></panel></div></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-1b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate" id="design-modelling-modelling-behaviors-sequence-diagrams-intermediate">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.1b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="design-modelling-modelling-behaviors-sequence-diagrams-intermediate"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Behaviors</span></span></small> <strong><span>Sequence diagrams - intermediate</span></strong><span id="design-modelling-modelling-behaviors-sequence-diagrams-intermediate" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-behaviors-sequence-diagrams-intermediate" onclick="event.stopPropagation()"></a></h4></span>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=f76680f0-7375-431b-a15a-ac3000bcf7a5&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw intermediate-level sequence diagrams</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><panel type="seamless" src="/website/book/uml/sequenceDiagrams/objectDeletion/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Object Deletion</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Deletion</p></template></panel>
+<panel type="seamless" src="/website/book/uml/sequenceDiagrams/selfInvocation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Self-Invocation</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Self-Invocation</p></template></panel>
+<panel type="seamless" src="/website/book/uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Alternative Paths</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Alternative</p></template></panel>
+<panel type="seamless" src="/website/book/uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Optional Paths</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Optional</p></template></panel></p>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Calls to Static Methods</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/StaticMethods</p></template>
+<div>
+<div>
+<p>Method calls to <code v-pre>static</code> i.e., class-level method are received by the class itself, not an instance of that class. You can use the <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code v-pre>m</code> calls the static method <code v-pre>Person.getMaxAge()</code> and also the <code v-pre>setAge()</code> method of a <code v-pre>Person</code> object <code v-pre>p</code>.</p>
+<p><pic src="/website/book/uml/sequenceDiagrams/staticMethods/images/staticMethodCall.png"></pic></p>
+<p></p>
+<p>Here is the <code v-pre>Person</code> class, for reference:<br>
+<pic src="/website/book/uml/sequenceDiagrams/staticMethods/images/personClass.png"></pic></p></box><p></p></div>
+<div></div></div></panel></div>
+<div>
+<div>
+<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<div>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What’s going on here?</p></template>
+<question>
+<p>What’s going on here?</p>
+<img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
+<p></p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. <code v-pre>Logic</code> object is executing a parallel thread.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. <code v-pre>Logic</code> object is executing a loop.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. <code v-pre>Logic</code> object  is creating another <code v-pre>Logic</code> instance.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code v-pre>Logic</code> object’s methods is calling another of its methods.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. <code v-pre>Minefield</code> object is calling a method of <code v-pre>Logic</code>.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(d)</p></div></question></panel></div>
+<div>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram (<code v-pre>ParserFactory</code>)</p></template>
+<question>
+<p>Explain the interactions depicted in this sequence diagram.</p>
+<img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
+<p></p>
+<div slot="hint" class="algolia-no-index">
+<p>First, the <code v-pre>createParser()</code> method of an existing <code v-pre>ParserFactory</code> object is called. Then, ...</p></div></question></panel></div>
+<div>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Sequence Diagram for printing a quote</p></template>
+<question>
+<p>Draw a sequence diagram to represent this code snippet.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isFirstPage) {<br></span><span>    <span class="hljs-keyword">new</span> Quote().print();<br></span><span>}<br></span></code></pre><p>The <code v-pre>Quote</code> class:</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{<br></span><span><br></span><span>    String q;<br></span><span><br></span><span>    Quote(){<br></span><span>        q = generate();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{<br></span><span>        System.out.println(q);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre><div slot="hint" class="algolia-no-index">
+<ul>
+<li>Show <code v-pre>new Quote().print();</code> as two method calls.</li>
+<li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code v-pre>print()</code> method is called.</li></ul></div></question></panel></div></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-1c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/uml/sequenceDiagrams/referenceFrames" id="tools-uml-sequence-diagrams-reference-frames">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.1c</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-sequence-diagrams-reference-frames"><small><span class="font-weight-bold text-muted"><span>Tools → UML → Sequence Diagrams →</span></span></small> <strong><span>Reference frames</span></strong><span id="tools-uml-sequence-diagrams-reference-frames" class="anchor"></span><a class="fa fa-anchor" href="#tools-uml-sequence-diagrams-reference-frames" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with reference frames</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>UML uses <em>ref frame</em> to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.</strong> Reference frames help you to break complicated sequence diagrams into multiple parts or simply to omit details you are not interested in showing.</p>
+<p>Notation:</p>
+<img src="/website/book/uml/sequenceDiagrams/referenceFrames/images/notation.png" height="100">
+<p></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The details of the <code v-pre>get minefield appearance</code> interactions have been omitted from the diagram.</p>
+<img src="/website/book/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250">
+<p></p>
+<p>Those details are shown in a separate sequence diagram given below.<br>
+<img src="/website/book/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170"></p>
+<p></p></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-1d"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/uml/sequenceDiagrams/parallelPaths" id="tools-uml-sequence-diagrams-parallel-paths">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.1d</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-uml-sequence-diagrams-parallel-paths"><small><span class="font-weight-bold text-muted"><span>Tools → UML → Sequence Diagrams →</span></span></small> <strong><span>Parallel paths</span></strong><span id="tools-uml-sequence-diagrams-parallel-paths" class="anchor"></span><a class="fa fa-anchor" href="#tools-uml-sequence-diagrams-parallel-paths" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with parallel paths</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>UML uses <code v-pre>par</code> frames to indicate parallel paths.</strong></p>
+<p>Notation:</p>
+<img src="/website/book/uml/sequenceDiagrams/parallelPaths/images/notation.png" height="100">
+<p></p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Logic</code> is calling methods <code v-pre>CloudServer#poll()</code> and <code v-pre>LocalServer#poll()</code> in parallel.</p>
+<img src="/website/book/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150">
+<p></p>
+<box>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you show parallel paths in a sequence diagram, the corresponding Java implementation is likely to be <em>multi-threaded</em> <span class="dimmed">because a normal Java program cannot do multiple things at the same time</span>.</p></box></box></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>The tP developer guide also has something called an <em>architecture diagram</em>. Let's learn how to <em>interpret</em> them too (<em>drawing</em> them will be covered in a future week).</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w6-2-architecture-diagrams">
+<span slot="header" class="card-title"><div><h2 id="w6-2-architecture-diagrams"><span class="dimmed">[W6.2]</span> <strong>Architecture Diagrams</strong> <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-2-architecture-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#w6-2-architecture-diagrams" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=78d19b38-cd7c-453e-86e1-ac3000d6984c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p>
+<div class="indented-level1">
+<p><span id="W6-2a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/architecture/introduction/what" id="design-architecture-introduction-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2a</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="design-architecture-introduction-what"><small><span class="font-weight-bold text-muted"><span>Design → Architecture → Introduction →</span></span></small> <strong><span>What</span></strong><span id="design-architecture-introduction-what" class="anchor"></span><a class="fa fa-anchor" href="#design-architecture-introduction-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain Software Architecture</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<blockquote>
+<p>The software architecture of a program or computing system is the structure or structures of the system, which comprise software elements, the externally visible properties of those elements, and the relationships among them. Architecture is concerned with the public side of interfaces; private details of elements—details having to do solely with internal implementation—are not architectural.
+<sub>-- <em>Software Architecture in Practice (2nd edition)</em>, Bass, Clements, and Kazman</sub></p></blockquote>
+<p><strong>The software architecture shows the overall organization of the system and can be viewed as a very high-level design.</strong> It usually consists of a set of interacting components that fit together to achieve the required functionality. It should be a simple and technically viable structure that is well-understood and agreed-upon by everyone in the development team, and it forms the basis for the implementation.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A possible architecture for a <em>Minesweeper</em> game</p>
+<table>
+<tr>
+<td><img src="/website/book/architecture/introduction/what/images/minesweeper.png" height="220"></td>
+<td width="10px"></td>
+<td><img src="/website/book/architecture/introduction/what/images/minesweeperArchitecture.png" height="160"></td></tr></table>
+<p></p>
+<p>Main components:</p>
+<ul>
+<li><code v-pre>GUI</code>: Graphical user interface</li>
+<li><code v-pre>TextUi</code>: Textual user interface</li>
+<li><code v-pre>ATD</code>: An automated test driver used for testing the game logic</li>
+<li><code v-pre>Logic</code>: computation and logic of the game</li>
+<li><code v-pre>Store</code>: storage and retrieval of game data (high scores etc.)</li></ul></box>
+<p><strong>The architecture is typically designed by the <em>software architect</em></strong>, who provides the technical vision of the system and makes high-level (i.e. architecture-level) technical decisions about the project.</p>
+</div>
+<div>
+<div>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about architecture</p></template>
+<question>
+<p>Choose the correct statement</p>
+<ul class="contains-task-list">
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. The architecture of a system should be simple enough for all team members to understand it.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. The architecture is primarily a high-level design of the system.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. The architecture is usually decided by the project manager.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. The architecture can contain details private to a component.</li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)(b)</p>
+<p><s>(c)</s> Reason: Architecture is usually designed by the Architect</p>
+<p><s>(d)</s> Reason:</p>
+<blockquote>
+<p>... private details of elements—details having to do solely with internal implementation—are not architectural.</p></blockquote></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/architecture/architectureDiagrams/reading" id="design-architecture-architecture-diagrams-reading">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2b</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="design-architecture-architecture-diagrams-reading"><small><span class="font-weight-bold text-muted"><span>Design → Architecture → Architecture Diagrams →</span></span></small> <strong><span>Reading</span></strong><span id="design-architecture-architecture-diagrams-reading" class="anchor"></span><a class="fa fa-anchor" href="#design-architecture-architecture-diagrams-reading" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div>
+<p><panel src="/website/book/architecture/introduction/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/architecture/introduction/what" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Architecture → Introduction → What</span></p></template></panel></p></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret an architecture diagram</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Architecture diagrams are free-form diagrams.</strong> There is no universally adopted standard notation for architecture diagrams. Any symbol that reasonably describes the architecture may be used.</p>
+<div v-closeable alt="architecture diagram examples" id="architecture-diagram-examples">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example architecture diagrams:</p>
+<tabs> 
+  <tab><template slot="_header">TEAMMATES</template>
+<p><img src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"><br></p></tab>
+  <tab class="algolia-no-index"><template slot="_header">se-edu/addressbook-level3</template>
+<p><img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"><br></p></tab>
+  <tab class="algolia-no-index"><template slot="_header">Example 1</template>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"><br>
+<sub><a href="https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png">source: https://commons.wikimedia.org</a></sub></p></tab>
+  <tab class="algolia-no-index"><template slot="_header">Example 2</template>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"><br>
+<sub><a href="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png">source: https://commons.wikimedia.org</a></sub></p></tab>
+  <tab class="algolia-no-index"><template slot="_header">Example 3</template>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"><br>
+<sub><a href="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg">source: https://commons.wikimedia.org</a></sub></p></tab></tabs></box></div></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-2c"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>As the tP is bigger than the iP, it's not possible to work with its entire design at the same time. The next topic explains a technique that can help when dealing with the design of a bigger system.</p></div></div></div></div>
+<panel type="seamless" expanded popup-url="/website/book/designApproaches/multilevelDesign/what" id="design-introduction-multi-level-design">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.2c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="design-introduction-multi-level-design"><small><span class="font-weight-bold text-muted"><span>Design → Introduction →</span></span></small> <strong><span>Multi-level design</span></strong><span id="design-introduction-multi-level-design" class="anchor"></span><a class="fa fa-anchor" href="#design-introduction-multi-level-design" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain multi-level design</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>In a smaller system, design of the entire system can be shown in one place.</p>
+<div v-closeable alt="single-level design example">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This class diagram of <a href="https://se-education.org/addressbook-level2">se-edu/addressbook-level2</a> depicts the design of the entire software.</p>
+<img src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600"></box></div>
+<p><strong>Design of bigger systems needs to be done/shown at multiple levels.</strong></p>
+<div v-closeable alt="multi-level design example">
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This architecture diagram of <a href="https://se-education.org/addressbook-level3">se-edu/addressbook-level3</a> depicts the high-level design of the software.</p>
+<img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300">
+<p>Here are examples of lower level designs of some components of the same software:</p>
+<tabs> 
+  <tab><template slot="_header">UI</template>
+<img src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700"></tab>
+  <tab class="algolia-no-index"><template slot="_header">Logic</template>
+<img src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="800"></tab>
+  <tab class="algolia-no-index"><template slot="_header">Storage</template>
+<img src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="700"></tab></tabs></box></div></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p>
+<p><span id="W6-3"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>It's time to push our IDEs to do more for us. The features given below can often make the IDEs worth the trouble.</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w6-3-ides-intermediate-features">
+<span slot="header" class="card-title"><div><h2 id="w6-3-ides-intermediate-features"><span class="dimmed">[W6.3]</span> <strong>IDEs: Intermediate Features</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-3-ides-intermediate-features" class="anchor"></span><a class="fa fa-anchor" href="#w6-3-ides-intermediate-features" onclick="event.stopPropagation()"></a></h2></div></span>
+<div class="indented-level1">
+<p><span id="W6-3a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/ides/debugging/what" id="implementation-ides-debugging-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.3a</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-ides-debugging-what"><small><span class="font-weight-bold text-muted"><span>Implementation → IDEs → Debugging →</span></span></small> <strong><span>What</span></strong><span id="implementation-ides-debugging-what" class="anchor"></span><a class="fa fa-anchor" href="#implementation-ides-debugging-what" onclick="event.stopPropagation()"></a></h4></span>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=4a778a0b-e16a-4318-a1c4-ac2800e20e48&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain debugging</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Debugging</em> is the process of discovering defects in the program.</strong> Here are some approaches to debugging:</p>
+<ul>
+<li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. <code v-pre>Exiting process() method, x is 5.347</code>. This approach is not recommended due to these reasons.
+<ul>
+<li>Incurs extra effort when inserting and removing the print statements.</li>
+<li>These extraneous program modifications increases the risk of introducing errors into the program.</li>
+<li>These print statements, if not removed promptly after the debugging, may even appear unexpectedly in the production version.</li></ul></li>
+<li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach doesn't have the cons of the previous approach, but it too is not recommended (other than as a 'quick try') due to these reasons:
+<ul>
+<li>It is difficult, time consuming, and error-prone technique.</li>
+<li>If you didn't spot the error while writing code, you might not spot the error when reading code too.</li></ul></li>
+<li><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> -- <strong>Using a debugger</strong>:  A debugger tool allows you to pause the execution, then step through one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. <strong>This is the recommended approach for debugging</strong>.</li></ul></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-3b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/intellij/debuggingBasic" id="tools-intellij-idea-debugging-basic">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.3b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-intellij-idea-debugging-basic"><small><span class="font-weight-bold text-muted"><span>Tools → Intellij IDEA →</span></span></small> <strong><span>Debugging: Basic</span></strong><span id="tools-intellij-idea-debugging-basic" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-debugging-basic" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can step through a program using a debugger</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<div v-closeable alt="video: debugging in Intellij">
+<p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
+<ul>
+<li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li></ul></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-3c"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/intellij/codeNavigation" id="tools-intellij-idea-code-navigation">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.3c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="tools-intellij-idea-code-navigation"><small><span class="font-weight-bold text-muted"><span>Tools → Intellij IDEA →</span></span></small> <strong><span>Code navigation</span></strong><span id="tools-intellij-idea-code-navigation" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-code-navigation" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can navigate code effectively using IDE features</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p>Some useful navigation shortcuts:</p>
+<ol>
+<li>Quickly locate a file by name.</li>
+<li>Go to the definition of a method from where it is used.</li>
+<li>Go back to the previous location.</li>
+<li>View the documentation of a method from where the method is being used, without navigating to the method itself.</li>
+<li>Find where a method/field is being used.</li></ol>
+<panel expanded><template slot="_header"><p>Intellij IDEA Code Navigation</p></template>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1UHsJyCq1SU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></div>
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-4"></span></p>
+<div>
+<div>
+<div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
+<p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
+<div class="indented">
+<p>The tP uses logging as one of its error handing strategies. As you'll be reading tP code soon, let's make sure you can recognize logging code when you see them.</p></div></div></div></div>
+<panel type="seamless" no-close expandable="true" expanded id="w6-4-logging">
+<span slot="header" class="card-title"><div><h2 id="w6-4-logging"><span class="dimmed">[W6.4]</span> <strong>Logging</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-4-logging" class="anchor"></span><a class="fa fa-anchor" href="#w6-4-logging" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" class="algolia-no-index">
+  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
+<iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=2c02102e-1a30-4d51-aab6-ac3000c5553d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
+<p></p>
+<div class="indented-level1">
+<p><span id="W6-4a"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/errorHandling/logging/what" id="implementation-error-handling-logging-what">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.4a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-error-handling-logging-what"><small><span class="font-weight-bold text-muted"><span>Implementation → Error Handling → Logging →</span></span></small> <strong><span>What</span></strong><span id="implementation-error-handling-logging-what" class="anchor"></span><a class="fa fa-anchor" href="#implementation-error-handling-logging-what" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain logging</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed">e.g. into a database or a remote server</span>.</p>
+<p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed">e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
+<div v-closeable alt="blackbox photo">
+<box>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>A log file is like the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">flight data recorder</span>black box</span> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
+<div class="non-printable">
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
+<sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p></div></box></div></div>
+<div>
+  <div>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+  <div>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Logging vs blackbox</p></template>
+<question>
+<p>Why is logging like having the 'black box' in an airplane?</p>
+<ul radio-group="6f5b0" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> d. Because they are hard to open by normal users.</label></li></ul>
+<div slot="answer" class="algolia-no-index">
+<p>(a)</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p><span id="W6-4b"></span></p>
+<div></div>
+<panel type="seamless" expanded popup-url="/website/book/errorHandling/logging/how" id="implementation-error-handling-logging-how">
+<span slot="header" class="card-title">
+<span class="badge badge-pill badge-light text-mute">W6.4b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
+<h4 id="implementation-error-handling-logging-how"><small><span class="font-weight-bold text-muted"><span>Implementation → Error Handling → Logging →</span></span></small> <strong><span>How</span></strong><span id="implementation-error-handling-logging-how" class="anchor"></span><a class="fa fa-anchor" href="#implementation-error-handling-logging-how" onclick="event.stopPropagation()"></a></h4></span>
+  <div>
+<div class="indented">
+<div></div><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use logging</span></span></span></span></p><p></p><p></p>
+<p></p>
+<div>
+<p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">how much information to record</span>intensity</span>.</p>
+<box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sample Java code uses Java’s default logging mechanism.</p>
+<p>First, import the relevant Java package:</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;<br></span></code></pre><p>Next, create a <code v-pre>Logger</code>:</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);<br></span></code></pre><p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span>  for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);<br></span><span><span class="hljs-comment">//...</span><br></span><span>processInput();<br></span><span><span class="hljs-keyword">if</span>(error){<br></span><span>    <span class="hljs-comment">//log a message at WARNING level</span><br></span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);<br></span><span>}<br></span><span><span class="hljs-comment">//...</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);<br></span></code></pre></box></div>
+<div>
+  <div>
+<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template> 
+<p><strong>Tutorials</strong>:</p>
+<ul>
+<li><a href="http://www.vogella.com/tutorials/Logging/article.html"><strong>Java Logging API - Tutorial</strong></a> -- A tutorial by <em>Lars Vogella</em></li>
+<li><a href="http://tutorials.jenkov.com/java-logging/index.html"><strong>Java Logging Tutorial</strong></a> -- An alternative tutorial by <em>Jakob Jenkov</em></li></ul>
+<div v-closeable alt="video:logging">
+<ul>
+<li>A video tutorial by <em>SimplyCoded</em>:<br></li></ul>
+<div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/W0_Man88Z3Q" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
+<p><strong>Best Practices</strong>:</p>
+<ul>
+<li><a href="https://www.javacodegeeks.com/2011/01/10-tips-proper-application-logging.html"><strong>10 Tips for Proper Application Logging</strong></a> -- by <em>Tomasz Nurkiewicz</em></li>
+<li><a href="http://commons.apache.org/proper/commons-logging/guide.html#Message_PrioritiesLevels"><strong>What each logging level means</strong></a> -- conventions recommended by <em>Apache Project</em></li></ul></panel></div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div></div></panel>
+<p></p>
+<div class="indented">
+<div></div></div>
+<p></p></div></div>
 
-          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
-          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
-          <li tags="m--cs2103 m--cs2113"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
-        </dropdown>
-        <li slot="right" class="nav-link">
-          <form class="navbar-form">
-            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
-    <div id="flex-body">
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
 
-      <div id="content-wrapper">
-        <div class="website-content">
-          <nav>
-            <ul class="pagination mt-2">
-              <li class="page-item"><a class="page-link" href="/website/schedule/week5"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
-              <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week6/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week6/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
-              <li class="page-item active"><a class="page-link" href="/website/schedule/week6/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week6/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week6/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
-              <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
-              <li class="page-item"><a class="page-link" href="/website/schedule/week7"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
-            </ul>
-          </nav>
-          <p></p>
-          <h1 id="week-6-fri-sep-11th-topics">Week 6 <small><small><span class="dimmed">[Fri, Sep 11th]</span> - Topics</small></small><span id="week-6-fri-sep-11th-topics" class="anchor"></span><a class="fa fa-anchor" href="#week-6-fri-sep-11th-topics" onclick="event.stopPropagation()"></a></h1>
-          <div></div>
-          <panel type="seamless" class="algolia-no-index"><template slot="_header">
-              <p><span class="dimmed"><span aria-hidden="true" class="fas fa-list-ol"></span> Detailed Table of Contents</span></p>
-            </template>
-            <span id="toc">
-              <ul>
-                <li>[<a href="/website/schedule/week6/topics.html#W6-1">W6.1</a>] <strong>Modeling: Sequence Diagrams</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
-              </ul>
-              <div class="indented-level2">
-                <small>
-                  <ul>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1a">W6.1a</a>] <span>Design → Modelling → Modelling Behaviors
-                          </span></span> <span>Sequence diagrams - basic</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1b">W6.1b</a>] <span>Design → Modelling → Modelling Behaviors
-                          </span></span> <span>Sequence diagrams - intermediate</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1c">W6.1c</a>] <span>Tools → UML → Sequence Diagrams →
-                          </span></span> <span>Reference frames</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-1d">W6.1d</a>] <span>Tools → UML → Sequence Diagrams →
-                          </span></span> <span>Parallel paths</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                  </ul>
-                </small>
-              </div>
-              <ul>
-                <li>[<a href="/website/schedule/week6/topics.html#W6-2">W6.2</a>] <strong>Architecture Diagrams</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
-              </ul>
-              <div class="indented-level2">
-                <small>
-                  <ul>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2a">W6.2a</a>] <span>Design → Architecture → Introduction →
-                          </span></span> <span>What</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2b">W6.2b</a>] <span>Design → Architecture → Architecture Diagrams →
-                          </span></span> <span>Reading</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-2c">W6.2c</a>] <span>Design → Introduction →
-                          </span></span> <span>Multi-level design</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                  </ul>
-                </small>
-              </div>
-              <p></p>
-              <ul>
-                <li>[<a href="/website/schedule/week6/topics.html#W6-3">W6.3</a>] <strong>IDEs: Intermediate Features</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
-              </ul>
-              <div class="indented-level2">
-                <small>
-                  <ul>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3a">W6.3a</a>] <span>Implementation → IDEs → Debugging →
-                          </span></span> <span>What</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3b">W6.3b</a>] <span>Tools → Intellij IDEA →
-                          </span></span> <span>Debugging: Basic</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3c">W6.3c</a>] <span>Tools → Intellij IDEA →
-                          </span></span> <span>Code navigation</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                  </ul>
-                </small>
-              </div>
-              <ul>
-                <li>[<a href="/website/schedule/week6/topics.html#W6-4">W6.4</a>] <strong>Logging</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li>
-              </ul>
-              <div class="indented-level2">
-                <small>
-                  <ul>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-4a">W6.4a</a>] <span>Implementation → Error Handling → Logging →
-                          </span></span> <span>What</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                    <li>
-                      <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-4b">W6.4b</a>] <span>Implementation → Error Handling → Logging →
-                          </span></span> <span>How</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p>
-                    </li>
-                  </ul>
-                </small>
-              </div>
-              <p></p>
-            </span>
-          </panel>
-          <hr style="border: 1px dotted #cccccc;">
-          <p><span id="W6-1"></span></p>
-          <div>
-            <div>
-              <div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
-                <p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
-                <div class="indented">
-                  <p>The next UML model we'll be learning is <em>sequence diagrams</em>. As before, <strong>focus on learning how to <em>interpret</em> these diagrams</strong> as you'll need to interpret some sequence diagrams in tP documentation pretty soon. <em>Drawing</em> sequence diagrams will be covered in a future week.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <panel type="seamless" no-close expandable="true" expanded id="w6-1-modeling-sequence-diagrams">
-            <span slot="header" class="card-title">
-              <div>
-                <h2 id="w6-1-modeling-sequence-diagrams"><span class="dimmed">[W6.1]</span> <strong>Modeling: Sequence Diagrams</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-1-modeling-sequence-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#w6-1-modeling-sequence-diagrams" onclick="event.stopPropagation()"></a></h2>
-              </div>
-            </span>
-            <div class="indented-level1">
-              <p><span id="W6-1a"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic" id="design-modelling-modelling-behaviors-sequence-diagrams-basic">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.1a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="design-modelling-modelling-behaviors-sequence-diagrams-basic"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Behaviors</span></span></small> <strong><span>Sequence diagrams - basic</span></strong><span id="design-modelling-modelling-behaviors-sequence-diagrams-basic" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-behaviors-sequence-diagrams-basic" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <panel type="seamless" class="algolia-no-index">
-                  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
-                  <iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=7aefe728-a7ad-4871-86b8-ac3000bcf7d1&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-                </panel>
-                <p></p>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw basic sequence diagrams</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/introduction/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Introduction</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SequenceDiagrams</p>
-                          </template></panel>
-                      </p>
-                      <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/basic/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Basic Notation</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Basic</p>
-                          </template></panel>
-                      </p>
-                      <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/loops/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Loops</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Loops</p>
-                          </template></panel>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/objectCreation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Object Creation</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Creation</p>
-                          </template></panel>
-                      </p>
-                      <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/minimalNotation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Minimal Notation</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Minimal</p>
-                          </template></panel>
-                      </p>
-                    </div>
-                    <div>
-                      <div>
-                        <panel expanded><template slot="_header">
-                            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                          </template>
-                          <div>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram about Machine</p>
-                                </template>
-                                <question>
-                                  <p>Explain in your own words the interactions illustrated by this Sequence Diagram:</p>
-                                  <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="500">
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw a Sequence Diagram for the code (<code v-pre>PersonList</code>, <code v-pre>Person</code>, <code v-pre>Tag</code>)</p>
-                                </template>
-                                <question>
-                                  <p>Consider the code below:</p>
-                                  <div class="row">
-                                    <div class="col-sm-7">
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span></span>{<br></span><span>    Tag tag;<br></span><span>    String name;<br></span><span><br></span><span>    Person(String personName, String tagName){<br></span><span>        name = personName;<br></span><span>        tag = <span class="hljs-keyword">new</span> Tag(tagName);<br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                    </div>
-                                    <div class="col-sm-5">
-                                      <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tag</span></span>{<br></span><span>    Tag(String value){<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonList</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">addPerson</span><span class="hljs-params">(Person p)</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre>
-                                    </div>
-                                  </div>
-                                  <p>Draw a sequence diagram to illustrate the object interactions that happen in the code snippet below:</p>
-                                  <pre><code class="hljs java" v-pre><span>PersonList personList = <span class="hljs-keyword">new</span> PersonList();<br></span><span><span class="hljs-keyword">while</span> (hasRoom){<br></span><span>    Person p = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">"Adam"</span>, <span class="hljs-string">"friend"</span>);<br></span><span>    personList.addPerson(p);<br></span><span>}<br></span></code></pre>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find notation errors in sequence diagram</p>
-                                </template>
-                                <question>
-                                  <p>Find notation mistakes in the sequence diagram below:</p>
-                                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsBasic/images/notationMistakes.png" width="500">
-                                </question>
-                              </panel>
-                            </div>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-              <p><span id="W6-1b"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate" id="design-modelling-modelling-behaviors-sequence-diagrams-intermediate">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.1b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="design-modelling-modelling-behaviors-sequence-diagrams-intermediate"><small><span class="font-weight-bold text-muted"><span>Design → Modelling → Modelling Behaviors</span></span></small> <strong><span>Sequence diagrams - intermediate</span></strong><span id="design-modelling-modelling-behaviors-sequence-diagrams-intermediate" class="anchor"></span><a class="fa fa-anchor" href="#design-modelling-modelling-behaviors-sequence-diagrams-intermediate" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <panel type="seamless" class="algolia-no-index">
-                  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
-                  <iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=f76680f0-7375-431b-a15a-ac3000bcf7a5&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-                </panel>
-                <p></p>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw intermediate-level sequence diagrams</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/objectDeletion/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Object Deletion</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Deletion</p>
-                          </template></panel>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/selfInvocation/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Self-Invocation</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Self-Invocation</p>
-                          </template></panel>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/alternativePaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Alternative Paths</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Alternative</p>
-                          </template></panel>
-                        <panel type="seamless" src="/website/book/uml/sequenceDiagrams/optionalPaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Optional Paths</p>
-                          </template><template slot="_alt">
-                            <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/Optional</p>
-                          </template></panel>
-                      </p>
-                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                          <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Calls to Static Methods</p>
-                        </template><template slot="_alt">
-                          <p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/StaticMethods</p>
-                        </template>
-                        <div>
-                          <div>
-                            <p>Method calls to <code v-pre>static</code> i.e., class-level method are received by the class itself, not an instance of that class. You can use the <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
-                            <box>
-                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code v-pre>m</code> calls the static method <code v-pre>Person.getMaxAge()</code> and also the <code v-pre>setAge()</code> method of a <code v-pre>Person</code> object <code v-pre>p</code>.</p>
-                              <p>
-                                <pic src="/website/book/uml/sequenceDiagrams/staticMethods/images/staticMethodCall.png"></pic>
-                              </p>
-                              <p></p>
-                              <p>Here is the <code v-pre>Person</code> class, for reference:<br>
-                                <pic src="/website/book/uml/sequenceDiagrams/staticMethods/images/personClass.png"></pic>
-                              </p>
-                            </box>
-                            <p></p>
-                          </div>
-                          <div></div>
-                        </div>
-                      </panel>
-                    </div>
-                    <div>
-                      <div>
-                        <panel expanded><template slot="_header">
-                            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                          </template>
-                          <div>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What’s going on here?</p>
-                                </template>
-                                <question>
-                                  <p>What’s going on here?</p>
-                                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/exerciseDiagram.png" height="170">
-                                  <p></p>
-                                  <ul class="contains-task-list">
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. <code v-pre>Logic</code> object is executing a parallel thread.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. <code v-pre>Logic</code> object is executing a loop.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. <code v-pre>Logic</code> object is creating another <code v-pre>Logic</code> instance.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. One of <code v-pre>Logic</code> object’s methods is calling another of its methods.</li>
-                                    <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. <code v-pre>Minefield</code> object is calling a method of <code v-pre>Logic</code>.</li>
-                                  </ul>
-                                  <div slot="answer" class="algolia-no-index">
-                                    <p>(d)</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram (<code v-pre>ParserFactory</code>)</p>
-                                </template>
-                                <question>
-                                  <p>Explain the interactions depicted in this sequence diagram.</p>
-                                  <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
-                                  <p></p>
-                                  <div slot="hint" class="algolia-no-index">
-                                    <p>First, the <code v-pre>createParser()</code> method of an existing <code v-pre>ParserFactory</code> object is called. Then, ...</p>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                            <div>
-                              <panel class="algolia-no-index"><template slot="_header">
-                                  <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Draw Sequence Diagram for printing a quote</p>
-                                </template>
-                                <question>
-                                  <p>Draw a sequence diagram to represent this code snippet.</p>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isFirstPage) {<br></span><span>    <span class="hljs-keyword">new</span> Quote().print();<br></span><span>}<br></span></code></pre>
-                                  <p>The <code v-pre>Quote</code> class:</p>
-                                  <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{<br></span><span><br></span><span>    String q;<br></span><span><br></span><span>    Quote(){<br></span><span>        q = generate();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{<br></span><span>        System.out.println(q);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre>
-                                  <div slot="hint" class="algolia-no-index">
-                                    <ul>
-                                      <li>Show <code v-pre>new Quote().print();</code> as two method calls.</li>
-                                      <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code v-pre>print()</code> method is called.</li>
-                                    </ul>
-                                  </div>
-                                </question>
-                              </panel>
-                            </div>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-              <p><span id="W6-1c"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/uml/sequenceDiagrams/referenceFrames" id="tools-uml-sequence-diagrams-reference-frames">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.1c</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="tools-uml-sequence-diagrams-reference-frames"><small><span class="font-weight-bold text-muted"><span>Tools → UML → Sequence Diagrams →</span></span></small> <strong><span>Reference frames</span></strong><span id="tools-uml-sequence-diagrams-reference-frames" class="anchor"></span><a class="fa fa-anchor" href="#tools-uml-sequence-diagrams-reference-frames" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with reference frames</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>UML uses <em>ref frame</em> to allow a segment of the interaction to be omitted and shown as a separate sequence diagram.</strong> Reference frames help you to break complicated sequence diagrams into multiple parts or simply to omit details you are not interested in showing.</p>
-                      <p>Notation:</p>
-                      <img src="/website/book/uml/sequenceDiagrams/referenceFrames/images/notation.png" height="100">
-                      <p></p>
-                      <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The details of the <code v-pre>get minefield appearance</code> interactions have been omitted from the diagram.</p>
-                        <img src="/website/book/uml/sequenceDiagrams/referenceFrames/images/playerTextLogic.png" height="250">
-                        <p></p>
-                        <p>Those details are shown in a separate sequence diagram given below.<br>
-                          <img src="/website/book/uml/sequenceDiagrams/referenceFrames/images/textLogic.png" height="170">
-                        </p>
-                        <p></p>
-                      </box>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-              <p><span id="W6-1d"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/uml/sequenceDiagrams/parallelPaths" id="tools-uml-sequence-diagrams-parallel-paths">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.1d</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="tools-uml-sequence-diagrams-parallel-paths"><small><span class="font-weight-bold text-muted"><span>Tools → UML → Sequence Diagrams →</span></span></small> <strong><span>Parallel paths</span></strong><span id="tools-uml-sequence-diagrams-parallel-paths" class="anchor"></span><a class="fa fa-anchor" href="#tools-uml-sequence-diagrams-parallel-paths" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with parallel paths</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>UML uses <code v-pre>par</code> frames to indicate parallel paths.</strong></p>
-                      <p>Notation:</p>
-                      <img src="/website/book/uml/sequenceDiagrams/parallelPaths/images/notation.png" height="100">
-                      <p></p>
-                      <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Logic</code> is calling methods <code v-pre>CloudServer#poll()</code> and <code v-pre>LocalServer#poll()</code> in parallel.</p>
-                        <img src="/website/book/uml/sequenceDiagrams/parallelPaths/images/logicServerData.png" height="150">
-                        <p></p>
-                        <box>
-                          <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you show parallel paths in a sequence diagram, the corresponding Java implementation is likely to be <em>multi-threaded</em> <span class="dimmed">because a normal Java program cannot do multiple things at the same time</span>.</p>
-                        </box>
-                      </box>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-            </div>
-          </panel>
-          <p></p>
-          <div class="indented">
-            <div></div>
-          </div>
-          <p><span id="W6-2"></span></p>
-          <div>
-            <div>
-              <div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
-                <p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
-                <div class="indented">
-                  <p>The tP developer guide also has something called an <em>architecture diagram</em>. Let's learn how to <em>interpret</em> them too (<em>drawing</em> them will be covered in a future week).</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <panel type="seamless" no-close expandable="true" expanded id="w6-2-architecture-diagrams">
-            <span slot="header" class="card-title">
-              <div>
-                <h2 id="w6-2-architecture-diagrams"><span class="dimmed">[W6.2]</span> <strong>Architecture Diagrams</strong> <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-2-architecture-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#w6-2-architecture-diagrams" onclick="event.stopPropagation()"></a></h2>
-              </div>
-            </span>
-            <panel type="seamless" class="algolia-no-index">
-              <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
-              <iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=78d19b38-cd7c-453e-86e1-ac3000d6984c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-            </panel>
-            <p></p>
-            <div class="indented-level1">
-              <p><span id="W6-2a"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/architecture/introduction/what" id="design-architecture-introduction-what">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.2a</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="design-architecture-introduction-what"><small><span class="font-weight-bold text-muted"><span>Design → Architecture → Introduction →</span></span></small> <strong><span>What</span></strong><span id="design-architecture-introduction-what" class="anchor"></span><a class="fa fa-anchor" href="#design-architecture-introduction-what" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain Software Architecture</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <blockquote>
-                        <p>The software architecture of a program or computing system is the structure or structures of the system, which comprise software elements, the externally visible properties of those elements, and the relationships among them. Architecture is concerned with the public side of interfaces; private details of elements—details having to do solely with internal implementation—are not architectural.
-                          <sub>-- <em>Software Architecture in Practice (2nd edition)</em>, Bass, Clements, and Kazman</sub>
-                        </p>
-                      </blockquote>
-                      <p><strong>The software architecture shows the overall organization of the system and can be viewed as a very high-level design.</strong> It usually consists of a set of interacting components that fit together to achieve the required functionality. It should be a simple and technically viable structure that is well-understood and agreed-upon by everyone in the development team, and it forms the basis for the implementation.</p>
-                      <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A possible architecture for a <em>Minesweeper</em> game</p>
-                        <table>
-                          <tr>
-                            <td><img src="/website/book/architecture/introduction/what/images/minesweeper.png" height="220"></td>
-                            <td width="10px"></td>
-                            <td><img src="/website/book/architecture/introduction/what/images/minesweeperArchitecture.png" height="160"></td>
-                          </tr>
-                        </table>
-                        <p></p>
-                        <p>Main components:</p>
-                        <ul>
-                          <li><code v-pre>GUI</code>: Graphical user interface</li>
-                          <li><code v-pre>TextUi</code>: Textual user interface</li>
-                          <li><code v-pre>ATD</code>: An automated test driver used for testing the game logic</li>
-                          <li><code v-pre>Logic</code>: computation and logic of the game</li>
-                          <li><code v-pre>Store</code>: storage and retrieval of game data (high scores etc.)</li>
-                        </ul>
-                      </box>
-                      <p><strong>The architecture is typically designed by the <em>software architect</em></strong>, who provides the technical vision of the system and makes high-level (i.e. architecture-level) technical decisions about the project.</p>
-                    </div>
-                    <div>
-                      <div>
-                        <panel expandable class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                          </template>
-                          <div>
-                            <panel class="algolia-no-index"><template slot="_header">
-                                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about architecture</p>
-                              </template>
-                              <question>
-                                <p>Choose the correct statement</p>
-                                <ul class="contains-task-list">
-                                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. The architecture of a system should be simple enough for all team members to understand it.</li>
-                                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. The architecture is primarily a high-level design of the system.</li>
-                                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. The architecture is usually decided by the project manager.</li>
-                                  <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. The architecture can contain details private to a component.</li>
-                                </ul>
-                                <div slot="answer" class="algolia-no-index">
-                                  <p>(a)(b)</p>
-                                  <p><s>(c)</s> Reason: Architecture is usually designed by the Architect</p>
-                                  <p><s>(d)</s> Reason:</p>
-                                  <blockquote>
-                                    <p>... private details of elements—details having to do solely with internal implementation—are not architectural.</p>
-                                  </blockquote>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-              <p><span id="W6-2b"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/architecture/architectureDiagrams/reading" id="design-architecture-architecture-diagrams-reading">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.2b</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="design-architecture-architecture-diagrams-reading"><small><span class="font-weight-bold text-muted"><span>Design → Architecture → Architecture Diagrams →</span></span></small> <strong><span>Reading</span></strong><span id="design-architecture-architecture-diagrams-reading" class="anchor"></span><a class="fa fa-anchor" href="#design-architecture-architecture-diagrams-reading" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div>
-                      <p>
-                        <panel src="/website/book/architecture/introduction/what/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/architecture/introduction/what" class="algolia-no-index"><template slot="_header">
-                            <p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Design → Architecture → Introduction → What</span></p>
-                          </template></panel>
-                      </p>
-                    </div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret an architecture diagram</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>Architecture diagrams are free-form diagrams.</strong> There is no universally adopted standard notation for architecture diagrams. Any symbol that reasonably describes the architecture may be used.</p>
-                      <div v-closeable alt="architecture diagram examples" id="architecture-diagram-examples">
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example architecture diagrams:</p>
-                          <tabs>
-                            <tab><template slot="_header">TEAMMATES</template>
-                              <p><img src="https://github.com/TEAMMATES/teammates/raw/master/docs/images/highlevelArchitecture.png" width="700"><br></p>
-                            </tab>
-                            <tab class="algolia-no-index"><template slot="_header">se-edu/addressbook-level3</template>
-                              <p><img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300"><br></p>
-                            </tab>
-                            <tab class="algolia-no-index"><template slot="_header">Example 1</template>
-                              <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Accelerator_Architecture.png" width="700"><br>
-                                <sub><a href="https://commons.wikimedia.org/wiki/File:Accelerator_Architecture.png">source: https://commons.wikimedia.org</a></sub>
-                              </p>
-                            </tab>
-                            <tab class="algolia-no-index"><template slot="_header">Example 2</template>
-                              <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png" width="700"><br>
-                                <sub><a href="https://upload.wikimedia.org/wikipedia/commons/b/b8/Firefox_OS_Architecture_diagram.png">source: https://commons.wikimedia.org</a></sub>
-                              </p>
-                            </tab>
-                            <tab class="algolia-no-index"><template slot="_header">Example 3</template>
-                              <p><img src="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg" width="700"><br>
-                                <sub><a href="https://upload.wikimedia.org/wikipedia/commons/0/06/SOA_Metamodel.svg">source: https://commons.wikimedia.org</a></sub>
-                              </p>
-                            </tab>
-                          </tabs>
-                        </box>
-                      </div>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-              <p><span id="W6-2c"></span></p>
-              <div>
-                <div>
-                  <div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
-                    <p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
-                    <div class="indented">
-                      <p>As the tP is bigger than the iP, it's not possible to work with its entire design at the same time. The next topic explains a technique that can help when dealing with the design of a bigger system.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <panel type="seamless" expanded popup-url="/website/book/designApproaches/multilevelDesign/what" id="design-introduction-multi-level-design">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.2c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="design-introduction-multi-level-design"><small><span class="font-weight-bold text-muted"><span>Design → Introduction →</span></span></small> <strong><span>Multi-level design</span></strong><span id="design-introduction-multi-level-design" class="anchor"></span><a class="fa fa-anchor" href="#design-introduction-multi-level-design" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain multi-level design</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p>In a smaller system, design of the entire system can be shown in one place.</p>
-                      <div v-closeable alt="single-level design example">
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This class diagram of <a href="https://se-education.org/addressbook-level2">se-edu/addressbook-level2</a> depicts the design of the entire software.</p>
-                          <img src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600">
-                        </box>
-                      </div>
-                      <p><strong>Design of bigger systems needs to be done/shown at multiple levels.</strong></p>
-                      <div v-closeable alt="multi-level design example">
-                        <box>
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This architecture diagram of <a href="https://se-education.org/addressbook-level3">se-edu/addressbook-level3</a> depicts the high-level design of the software.</p>
-                          <img src="https://se-education.org/addressbook-level3/images/ArchitectureDiagram.png" width="300">
-                          <p>Here are examples of lower level designs of some components of the same software:</p>
-                          <tabs>
-                            <tab><template slot="_header">UI</template>
-                              <img src="https://se-edu.github.io/addressbook-level3/images/UiClassDiagram.png" width="700">
-                            </tab>
-                            <tab class="algolia-no-index"><template slot="_header">Logic</template>
-                              <img src="https://se-edu.github.io/addressbook-level3/images/LogicClassDiagram.png" width="800">
-                            </tab>
-                            <tab class="algolia-no-index"><template slot="_header">Storage</template>
-                              <img src="https://se-edu.github.io/addressbook-level3/images/StorageClassDiagram.png" width="700">
-                            </tab>
-                          </tabs>
-                        </box>
-                      </div>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-            </div>
-          </panel>
-          <p></p>
-          <div class="indented">
-            <div></div>
-          </div>
-          <p></p>
-          <p><span id="W6-3"></span></p>
-          <div>
-            <div>
-              <div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
-                <p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
-                <div class="indented">
-                  <p>It's time to push our IDEs to do more for us. The features given below can often make the IDEs worth the trouble.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <panel type="seamless" no-close expandable="true" expanded id="w6-3-ides-intermediate-features">
-            <span slot="header" class="card-title">
-              <div>
-                <h2 id="w6-3-ides-intermediate-features"><span class="dimmed">[W6.3]</span> <strong>IDEs: Intermediate Features</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-3-ides-intermediate-features" class="anchor"></span><a class="fa fa-anchor" href="#w6-3-ides-intermediate-features" onclick="event.stopPropagation()"></a></h2>
-              </div>
-            </span>
-            <div class="indented-level1">
-              <p><span id="W6-3a"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/ides/debugging/what" id="implementation-ides-debugging-what">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.3a</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="implementation-ides-debugging-what"><small><span class="font-weight-bold text-muted"><span>Implementation → IDEs → Debugging →</span></span></small> <strong><span>What</span></strong><span id="implementation-ides-debugging-what" class="anchor"></span><a class="fa fa-anchor" href="#implementation-ides-debugging-what" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <panel type="seamless" class="algolia-no-index">
-                  <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
-                  <iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=4a778a0b-e16a-4318-a1c4-ac2800e20e48&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-                </panel>
-                <p></p>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain debugging</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong><em>Debugging</em> is the process of discovering defects in the program.</strong> Here are some approaches to debugging:</p>
-                      <ul>
-                        <li>
-                          <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. <code v-pre>Exiting process() method, x is 5.347</code>. This approach is not recommended due to these reasons.
-                          <ul>
-                            <li>Incurs extra effort when inserting and removing the print statements.</li>
-                            <li>These extraneous program modifications increases the risk of introducing errors into the program.</li>
-                            <li>These print statements, if not removed promptly after the debugging, may even appear unexpectedly in the production version.</li>
-                          </ul>
-                        </li>
-                        <li>
-                          <font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach doesn't have the cons of the previous approach, but it too is not recommended (other than as a 'quick try') due to these reasons:
-                          <ul>
-                            <li>It is difficult, time consuming, and error-prone technique.</li>
-                            <li>If you didn't spot the error while writing code, you might not spot the error when reading code too.</li>
-                          </ul>
-                        </li>
-                        <li>
-                          <font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> -- <strong>Using a debugger</strong>: A debugger tool allows you to pause the execution, then step through one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. <strong>This is the recommended approach for debugging</strong>.
-                        </li>
-                      </ul>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-              <p><span id="W6-3b"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/intellij/debuggingBasic" id="tools-intellij-idea-debugging-basic">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.3b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="tools-intellij-idea-debugging-basic"><small><span class="font-weight-bold text-muted"><span>Tools → Intellij IDEA →</span></span></small> <strong><span>Debugging: Basic</span></strong><span id="tools-intellij-idea-debugging-basic" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-debugging-basic" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can step through a program using a debugger</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <div v-closeable alt="video: debugging in Intellij">
-                        <p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
-                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                      </div>
-                      <ul>
-                        <li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li>
-                      </ul>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-              <p><span id="W6-3c"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/intellij/codeNavigation" id="tools-intellij-idea-code-navigation">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.3c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="tools-intellij-idea-code-navigation"><small><span class="font-weight-bold text-muted"><span>Tools → Intellij IDEA →</span></span></small> <strong><span>Code navigation</span></strong><span id="tools-intellij-idea-code-navigation" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-code-navigation" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can navigate code effectively using IDE features</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p>Some useful navigation shortcuts:</p>
-                      <ol>
-                        <li>Quickly locate a file by name.</li>
-                        <li>Go to the definition of a method from where it is used.</li>
-                        <li>Go back to the previous location.</li>
-                        <li>View the documentation of a method from where the method is being used, without navigating to the method itself.</li>
-                        <li>Find where a method/field is being used.</li>
-                      </ol>
-                      <panel expanded><template slot="_header">
-                          <p>Intellij IDEA Code Navigation</p>
-                        </template>
-                        <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1UHsJyCq1SU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                      </panel>
-                    </div>
-                    <div></div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-            </div>
-          </panel>
-          <p></p>
-          <div class="indented">
-            <div></div>
-          </div>
-          <p><span id="W6-4"></span></p>
-          <div>
-            <div>
-              <div class="border border-success pt-0 pl-1 pb-1 pr-1 border-bottom-0 rounded-top" style="background-color: #e6fff2">
-                <p><span class="text-success"><small><strong><span aria-hidden="true" class="far fa-hand-point-down"></span></strong> Guidance for the item(s) below:</small></span><br></p>
-                <div class="indented">
-                  <p>The tP uses logging as one of its error handing strategies. As you'll be reading tP code soon, let's make sure you can recognize logging code when you see them.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <panel type="seamless" no-close expandable="true" expanded id="w6-4-logging">
-            <span slot="header" class="card-title">
-              <div>
-                <h2 id="w6-4-logging"><span class="dimmed">[W6.4]</span> <strong>Logging</strong> <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="w6-4-logging" class="anchor"></span><a class="fa fa-anchor" href="#w6-4-logging" onclick="event.stopPropagation()"></a></h2>
-              </div>
-            </span>
-            <panel type="seamless" class="algolia-no-index">
-              <div slot="header"><span class="badge badge-pill badge-danger"><big><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Video</big></span> <span></span></div>
-              <iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=2c02102e-1a30-4d51-aab6-ac3000c5553d&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
-            </panel>
-            <p></p>
-            <div class="indented-level1">
-              <p><span id="W6-4a"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/errorHandling/logging/what" id="implementation-error-handling-logging-what">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.4a</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="implementation-error-handling-logging-what"><small><span class="font-weight-bold text-muted"><span>Implementation → Error Handling → Logging →</span></span></small> <strong><span>What</span></strong><span id="implementation-error-handling-logging-what" class="anchor"></span><a class="fa fa-anchor" href="#implementation-error-handling-logging-what" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain logging</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed">e.g. into a database or a remote server</span>.</p>
-                      <p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed">e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
-                      <div v-closeable alt="blackbox photo">
-                        <box>
-                          <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>A log file is like the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">flight data recorder</span>black box</span> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
-                          <div class="non-printable">
-                            <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
-                              <sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub>
-                            </p>
-                          </div>
-                        </box>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <panel expandable class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p>
-                          </template>
-                          <div>
-                            <panel class="algolia-no-index"><template slot="_header">
-                                <p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Logging vs blackbox</p>
-                              </template>
-                              <question>
-                                <p>Why is logging like having the 'black box' in an airplane?</p>
-                                <ul radio-group="6f5b0" class="radio-list">
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
-                                  <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> d. Because they are hard to open by normal users.</label></li>
-                                </ul>
-                                <div slot="answer" class="algolia-no-index">
-                                  <p>(a)</p>
-                                </div>
-                              </question>
-                            </panel>
-                          </div>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-              <p><span id="W6-4b"></span></p>
-              <div></div>
-              <panel type="seamless" expanded popup-url="/website/book/errorHandling/logging/how" id="implementation-error-handling-logging-how">
-                <span slot="header" class="card-title">
-                  <span class="badge badge-pill badge-light text-mute">W6.4b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-                  <h4 id="implementation-error-handling-logging-how"><small><span class="font-weight-bold text-muted"><span>Implementation → Error Handling → Logging →</span></span></small> <strong><span>How</span></strong><span id="implementation-error-handling-logging-how" class="anchor"></span><a class="fa fa-anchor" href="#implementation-error-handling-logging-how" onclick="event.stopPropagation()"></a></h4>
-                </span>
-                <div>
-                  <div class="indented">
-                    <div></div>
-                    <p></p>
-                    <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use logging</span></span></span></span></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <div>
-                      <p><strong>Most programming environments come with logging systems that allow sophisticated forms of logging.</strong> They have features such as the ability to enable and disable logging easily or to change the logging <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">how much information to record</span>intensity</span>.</p>
-                      <box>
-                        <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sample Java code uses Java’s default logging mechanism.</p>
-                        <p>First, import the relevant Java package:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;<br></span></code></pre>
-                        <p>Next, create a <code v-pre>Logger</code>:</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);<br></span></code></pre>
-                        <p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span> for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
-                        <pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);<br></span><span><span class="hljs-comment">//...</span><br></span><span>processInput();<br></span><span><span class="hljs-keyword">if</span>(error){<br></span><span>    <span class="hljs-comment">//log a message at WARNING level</span><br></span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);<br></span><span>}<br></span><span><span class="hljs-comment">//...</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);<br></span></code></pre>
-                      </box>
-                    </div>
-                    <div>
-                      <div>
-                        <panel expanded><template slot="_header">
-                            <p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p>
-                          </template>
-                          <p><strong>Tutorials</strong>:</p>
-                          <ul>
-                            <li><a href="http://www.vogella.com/tutorials/Logging/article.html"><strong>Java Logging API - Tutorial</strong></a> -- A tutorial by <em>Lars Vogella</em></li>
-                            <li><a href="http://tutorials.jenkov.com/java-logging/index.html"><strong>Java Logging Tutorial</strong></a> -- An alternative tutorial by <em>Jakob Jenkov</em></li>
-                          </ul>
-                          <div v-closeable alt="video:logging">
-                            <ul>
-                              <li>A video tutorial by <em>SimplyCoded</em>:<br></li>
-                            </ul>
-                            <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/W0_Man88Z3Q" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
-                          </div>
-                          <p><strong>Best Practices</strong>:</p>
-                          <ul>
-                            <li><a href="https://www.javacodegeeks.com/2011/01/10-tips-proper-application-logging.html"><strong>10 Tips for Proper Application Logging</strong></a> -- by <em>Tomasz Nurkiewicz</em></li>
-                            <li><a href="http://commons.apache.org/proper/commons-logging/guide.html#Message_PrioritiesLevels"><strong>What each logging level means</strong></a> -- conventions recommended by <em>Apache Project</em></li>
-                          </ul>
-                        </panel>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </panel>
-              <p></p>
-              <div class="indented">
-                <div></div>
-              </div>
-            </div>
-          </panel>
-          <p></p>
-          <div class="indented">
-            <div></div>
-          </div>
-          <p></p>
-        </div>
-      </div>
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-6-fri-sep-11th-topics">Week 6 [Fri, Sep 11th] - Topics&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#w6-1-modeling-sequence-diagrams">[W6.1] Modeling: Sequence Diagrams &#x200E;</a>
+<a class="nav-link py-1" href="#w6-2-architecture-diagrams">[W6.2] Architecture Diagrams &#x200E;</a>
+<a class="nav-link py-1" href="#w6-3-ides-intermediate-features">[W6.3] IDEs: Intermediate Features &#x200E;</a>
+<a class="nav-link py-1" href="#w6-4-logging">[W6.4] Logging &#x200E;</a>
+</nav>
 
-      <nav id="page-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-left-grey nav-inner position-sticky slim-scroll">
-
-          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#week-6-fri-sep-11th-topics">Week 6 [Fri, Sep 11th] - Topics&#x200E;</a>
-            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#w6-1-modeling-sequence-diagrams">[W6.1] Modeling: Sequence Diagrams &#x200E;</a>
-              <a class="nav-link py-1" href="#w6-2-architecture-diagrams">[W6.2] Architecture Diagrams &#x200E;</a>
-              <a class="nav-link py-1" href="#w6-3-ides-intermediate-features">[W6.3] IDEs: Intermediate Features &#x200E;</a>
-              <a class="nav-link py-1" href="#w6-4-logging">[W6.4] Logging &#x200E;</a>
-            </nav>
-
-          </nav>
-        </div>
-      </nav>
-    </div>
+</nav>
+</div>
+</nav>
+</div>
     <footer>
-
-      <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sat, 24 Oct 2020, 21:14:45 GMT+8]</small>
-      </div>
-    </footer>
-  </div>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 28 Oct 2020, 0:40:42 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>
@@ -1111,34 +690,28 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-122519234-1');
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+        indexName: "nus-cs2103-ay1920s1",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-122519234-1');
+    </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
-
 </html>

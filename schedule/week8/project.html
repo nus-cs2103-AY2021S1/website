@@ -1,788 +1,526 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.15.2">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CS2103/T - Week 8 - Project</title>
-  <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../../markbind/css/github.min.css">
-  <link rel="stylesheet" href="../../markbind/css/markbind.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css">
-  <link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../../markbind/layouts/default/styles.css">
-  <link rel="stylesheet" href="../../markbind/css/page-nav.css">
-  <link rel="stylesheet" href="/website/book/css/textbook.css">
-  <link rel="stylesheet" href="/website/css/main.css">
-  <link rel="stylesheet" href="/website/css/schedule.css">
-  <link rel="icon" href="/website/favicon.ico">
-</head>
-
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
-  <div id="app">
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS2103/T - Week 8 - Project</title>
+    <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
+<body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
+<div id="app">
     <header fixed>
-      <navbar placement="top" type="dark" class="temp-navbar">
-        <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
-        <div class="nav-link temp-dropdown-placeholder">**Schedule**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
-          <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
-          <li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
-          <li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
-          <li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
-          <li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
-          <li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
-          <li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
-          <li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
-          <li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
-          <li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
-          <li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
-          <li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
-          <li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
-          <li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li>
-        </dropdown>
-        <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
-        <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
-        <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span><strong>Dashboards</strong></span></a></li>
-        <div class="nav-link temp-dropdown-placeholder">**Project Links**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Project Links</strong></template>
-          <span><strong> Individual Project (iP):</strong></span>
-          <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
-          <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
-          <li><a href="/website/admin/ip-showcase.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
-          <hr>
-          <span><strong> Team Project (tP):</strong></span>
-          <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
-          <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
-          <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li>
-        </dropdown>
-        <div class="nav-link temp-dropdown-placeholder">**Other Links**</div>
-        <dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
-          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
-          <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
-          <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
-          <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
-          <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
-          <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+<navbar placement="top" type="dark" class="temp-navbar">
+<a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
+  <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
+  <li><a href="/website/schedule/timeline.html" class="dropdown-item"><span><strong>Full Timeline</strong></span></a></li>
+<li><a href="/website/schedule/week1/index.html" class="dropdown-item"> <span><strong>Week 1</strong> [Mon, Aug 10th] </span></a></li>
+<li><a href="/website/schedule/week2/index.html" class="dropdown-item"> <span><strong>Week 2</strong> [Fri, Aug 14th] </span></a></li>
+<li><a href="/website/schedule/week3/index.html" class="dropdown-item"> <span><strong>Week 3</strong> [Fri, Aug 21st] </span></a></li>
+<li><a href="/website/schedule/week4/index.html" class="dropdown-item"> <span><strong>Week 4</strong> [Fri, Aug 28th] </span></a></li>
+<li><a href="/website/schedule/week5/index.html" class="dropdown-item"> <span><strong>Week 5</strong> [Fri, Sep 4th] </span></a></li>
+<li><a href="/website/schedule/week6/index.html" class="dropdown-item"> <span><strong>Week 6</strong> [Fri, Sep 11th] </span></a></li>
+<li><a href="/website/schedule/week7/index.html" class="dropdown-item"> <span><strong>Week 7</strong> [Fri, Sep 18th] </span></a></li>
+<li><a href="/website/schedule/week8/index.html" class="dropdown-item"> <span><strong>Week 8</strong> [Fri, Oct 2nd] </span></a></li>
+<li><a href="/website/schedule/week9/index.html" class="dropdown-item"> <span><strong>Week 9</strong> [Fri, Oct 9th] </span></a></li>
+<li><a href="/website/schedule/week10/index.html" class="dropdown-item"> <span><strong>Week 10</strong> [Fri, Oct 16th] </span></a></li>
+<li><a href="/website/schedule/week11/index.html" class="dropdown-item"> <span><strong>Week 11</strong> [Fri, Oct 23rd] </span></a></li>
+<li><a href="/website/schedule/week12/index.html" class="dropdown-item"> <span><strong>Week 12</strong> [Fri, Oct 30th] </span></a></li>
+<li><a href="/website/schedule/week13/index.html" class="dropdown-item"> <span><strong>Week 13</strong> [Fri, Nov 6th] </span></a></li></dropdown>
+  <li><a href="/website/se-book-adapted/index.html" class="nav-link"><span><strong>Textbook</strong></span></a></li>
+  <li><a href="/website/admin/index.html" class="nav-link"><span><strong>Admin Info</strong></span></a></li>
+  <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards" target="_blank" class="nav-link"><span><strong>Dashboards</strong></span></a></li>
+  <div class="nav-link temp-dropdown-placeholder">**Project Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Project Links</strong></template>
+    <span><strong> Individual Project (iP):</strong></span>
+    <li><a href="/website/admin/ip-overview.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Individual Project Info</span></a></li>
+    <li><a href="https://github.com/nus-cs2103-AY2021S1/ip" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> iP Upstream Repo</span></a></li>
+    <li><a href="/website/admin/ip-showcase.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> iP Showcase</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&groupSelect=groupByAuthors" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> iP Code Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> iP Progress Dashboard</span></a></li>
+    <hr>
+    <span><strong> Team Project (tP):</strong></span>
+    <li><a href="/website/admin/tp-expectations.html" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span> Team Project Info</span></a></li>
+    <li tags="m--cs2103"><a href="https://github.com/nus-cs2103-AY2021S1/tp" target="_blank" class="dropdown-item"><span><span><span aria-hidden="true" class="fas fa-code-branch"></span></span> Addressbook-level3</span></a></li>
+    <li><a href="/website/admin/teamList.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-list-alt"></span> Team List</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-chart-area"></span> tP Code Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/tp-progress.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> tP Progress Dashboard</span></a></li></dropdown>
+  <div class="nav-link temp-dropdown-placeholder">**Other Links**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Other Links</strong></template>
+    <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-bug"></span> Report Bugs</span></a></li>
+    <li><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-comment"></span> Forum</span></a></li>
+    <li tags="m--cs2113 m--cs2103 m--tic4001"><a href="https://gitter.im/nus-cs2103-AY2021S1/community" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter (Chat)</span></a></li>
+    <li><a href="/website/admin/instructors.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-user-tie"></span> Instructors</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/announcements/active" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-bullhorn"></span> Announcements</span></a></li>
+    <li><a href="https://luminus.nus.edu.sg/modules/5aee78b3-3927-432e-85a5-27be5f6a00fd/files" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-file-upload"></span> Files</span></a></li>
+    <li tags="m--cs2113 m--cs2103"><a href="/website/admin/tutorials.html" class="dropdown-item"><span><span aria-hidden="true" class="glyphicon glyphicon-calendar"></span> Tutorial Schedule</span></a></li>
+    
+    <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
+    <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
+    <li tags="m--cs2103 m--cs2113"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
+    <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
+  <li slot="right" class="nav-link">
+    <form class="navbar-form">
+      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+        
+<div id="content-wrapper">
+<nav>
+<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/website/schedule/week7"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week8/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week8/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week8/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
+<li class="page-item active"><a class="page-link" href="/website/schedule/week8/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
+<li class="page-item"><a class="page-link" href="/website/schedule/week8/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
+<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week9"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
+<p></p>
+<h1 id="week-8-fri-oct-2nd-project">Week 8 <small><small><span class="dimmed">[Fri, Oct 2nd]</span> - Project</small></small><span id="week-8-fri-oct-2nd-project" class="anchor"></span><a class="fa fa-anchor" href="#week-8-fri-oct-2nd-project" onclick="event.stopPropagation()"></a></h1>
+<div id="summary" class="lead border-left ml-3 mb-3 pl-2" style="color: purple;">
+<p><strong>iP:</strong></p>
+<div>
+<ol>
+<li><span>Evaluate two peer iPs</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Sat, Oct 10th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<p><strong>tP:</strong></p>
+<div>
+<ol>
+<li><span><span class="dimmed"><span><span aria-hidden="true" class="fas fa-user"></span></span> Ensure you know tP expectations</span></span></li>
+<li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start proper milestone management</span></li>
+<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Add the first functionality increment</span></li></ol></div></div>
+<h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="ip">iP<span id="ip" class="anchor"></span><a class="fa fa-anchor" href="#ip" onclick="event.stopPropagation()"></a></h2>
+<div>
+<div></div>
+<p></p>
+<h4 id="1-evaluate-two-peer-ips-sat-oct-10th-2359"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Evaluate two peer iPs</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Sat, Oct 10th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-evaluate-two-peer-ips-sat-oct-10th-2359" class="anchor"></span><a class="fa fa-anchor" href="#1-evaluate-two-peer-ips-sat-oct-10th-2359" onclick="event.stopPropagation()"></a></h4>
+<div>
+<div class="indented-level2">
+<box type="info">
+<p>This activity is worth <code v-pre>2x2=4</code> participation points.
+</p></box><p></p></div>
+<ol>
+<li><strong>Wait for the email notifying you which iPs are allocated for you to evaluate</strong>. When the email is sent out, it will also be announced via module announcements.</li>
+<li><strong>Download the <em>latest</em> JAR file</strong> of the first iP by following the link provided.</li>
+<li><strong>Locate the User Guide</strong> of the app by following the link provided.</li>
+<li><strong>Open the LumiNUS survey</strong> (the one named <code v-pre>iP Peer Evaluation 1</code>) that you will be using to submit your evaluation and take note of the things you need to evaluate.</li>
+<li><strong>Do a light testing of the app</strong> (not more than 10 minutes) to ensure the claimed features actually exist.<br>
+<font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Make sure you are using Java 11 to run the jar file (use <code v-pre>java -version</code> command to confirm).<br>
+<span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If double-clicking the jar file doesn't work, use the <code v-pre>java -jar {file_name}</code> command to open it.</li>
+<li><strong>Do a quick examination of the code</strong> (~ 5 minutes) by following the provided link.</li>
+<li><strong>Submit your evaluation</strong> using the survey.</li>
+<li><strong>Repeat the above steps for the 2nd iP</strong> allocated to you (use the survey <code v-pre>iP Peer Evaluation 2</code>).</li></ol></div>
+<p></p></div>
+<h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="tp-mid-v1-2">tP: mid-v1.2<span id="tp-mid-v1-2" class="anchor"></span><a class="fa fa-anchor" href="#tp-mid-v1-2" onclick="event.stopPropagation()"></a></h2>
+<div>
+<div>
+<box>
+<p><strong>Reminder:</strong></p>
+<div>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Milestone requirements are cumulative</strong>. The recommended progress for the mid-milestone is an implicit requirement for the actual milestone unless a milestone requirement overrides a mid-milestone requirement <span class="dimmed">e.g., mid-milestone requires a document to be in a temp format while the actual milestone requires it to be in the proper format</span>. Similarly, a requirement for milestone <code v-pre>n</code> is also an implicit requirement for milestone <code v-pre>n+1</code> unless <code v-pre>n+1</code> overrides the <code v-pre>n</code> requirement. This means <mark>if you miss some requirement at milestone <code v-pre>n</code>, you should try to achieve it before milestone <code v-pre>n+1</code></mark> or else it could be noted again as a 'missed requirement' at milestone <code v-pre>n+1</code>.</p></div></box>
+<div class="indented-level1">
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Supervision (Extract) → <strong>Tutor's role in making project decisions</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<p><strong>Note that tutors are not allowed to contribute to graded components of your project work.</strong> For example, if you are faced with a design decision in your project, the tutor is not allowed to make that decision for you.<br>
+<span class="dimmed">Reason: to ensure fairness across teams, and to ensure the work you submit for grading is entirely your own</span></p>
+<p>Following from the above, <strong>don't expect the tutor to answer questions that are specific to graded deliverables</strong> (e.g., ask which design alternative is better -- that's a decision you need to make yourself). At best, the tutor can channel the question to the professor. However, you can raise such questions in the module forum where the professor can answer the question in a general way that's not unfair to other teams (and other teams can benefit from the answer as well).</p>
+<box type="tip" seamless>
+<p><strong>How to make project decisions</strong> (given your tutor is not going to make them for you)? Here are some tips:</p>
+<ul>
+<li><strong>Quickly try out the alternatives</strong>. Rather than get into a <em>analysis-paralysis</em> state, quickly prototype the alternatives to figure out which works better.</li>
+<li><strong>Go with the team consensus/majority.</strong> As most project components are graded by peers, the majority view within the team is a good approximation of how the result will be judged.</li>
+<li><strong>Go with the simpler alternative</strong> that's good enough for the current iteration. That way, if the decision was the wrong one, you'll find out sooner and the cost will be less. A common rookie pitfall is the temptation to look for an <em>ideal</em> future-proof solution -- usually, there is no such thing. Most alternatives can get the job done, it's just that costs and benefits vary.</li>
+<li><strong>Look at what other teams are doing.</strong> That will help you detect if you are going in the wrong direction entirely, and also might lead you to more alternatives to consider.</li>
+<li><strong>Keep an eye on the results</strong>: e.g., Did the design alternative you chose make the code more complex, harder to test, easier to break, harder to modify etc. This will help you decide if you made the right choice.</li>
+<li><strong>If you realized you picked the wrong alternative,</strong> change if you can. Often, the choice you picked may still be good enough to survive the project. In that case, leave it be, but make a mental note about it (you can even document it in the Developer Guide) for future reference -- that's how you build up <em>experience</em>.</li></ul></box></div></panel></div><p></p></div>
+<p></p>
+<h4 id="1-ensure-you-know-tp-expectations"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span class="dimmed"><span><span aria-hidden="true" class="fas fa-user"></span></span> Ensure you know tP expectations</span></span><span id="1-ensure-you-know-tp-expectations" class="anchor"></span><a class="fa fa-anchor" href="#1-ensure-you-know-tp-expectations" onclick="event.stopPropagation()"></a></h4>
+<div>
+<ul>
+<li>If you haven't done so already, make sure you know individual and team expectations of the tP</li></ul>
+<div class="indented-level2">
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Functionality Expectations <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
 
-          <li tags="m--cs2103 m--cs2113 m--tic2002 m--tic4001"><a href="https://se-education.org/guides/conventions/java/intermediate.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-code"></span> Java Coding Standard</span></a></li>
-          <li tags="m--cs2103 m--cs2113 m--tic4001"><a href="https://se-education.org/guides/conventions/git.html" target="_blank" class="dropdown-item"><span><span aria-hidden="true" class="fab fa-git-square"></span> Git Conventions</span></a></li>
-          <li tags="m--cs2103 m--cs2113"><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/forum-activities.html" class="dropdown-item"><span><span aria-hidden="true" class="fas fa-trophy"></span> Forum Activities Dashboard</span></a></li>
-          <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li>
-        </dropdown>
-        <li slot="right" class="nav-link">
-          <form class="navbar-form">
-            <searchbar placeholder="Search" algolia menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
-    <div id="flex-body">
+<h2 class="text-white bg-danger p-1" id="functionality-expectations">Functionality Expectations<span id="functionality-expectations" class="anchor"></span><a class="fa fa-anchor" href="#functionality-expectations" onclick="event.stopPropagation()"></a></h2>
+<div tags="m--cs2103">
+<p><strong>The expected level of <em>functionality</em> to be added by a 5-person team is roughly the <mark>equivalent effort taken to create AB3 <em>functionality</em></mark></strong>. Furthermore, we expect a team to reach that level if each member puts in an effort equivalent to the effort they put into the iP. Some examples meeting that criterion:</p>
+<ul>
+<li>Example 1: A fictional contact management app optimized for a specific target user group:
+<ul>
+<li>Existing AB3 features are optimized to the new target user group.</li>
+<li>Person objects are enhanced to contain more details.</li>
+<li>There are a 4-5 new functionality that are specific to the target user group.</li></ul></li>
+<li>Example 2: a FooBar app that keeps track of two different types of entities <em>Foo</em> entities and <em>Bar</em> entities.
+<ul>
+<li>Foo and Bar entities are tightly-connected e.g., a Foo entity can contain Bar entities. Each type is similar to AB3 Person objects in terms of complexity.</li>
+<li>In addition to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Creat Read Update Delete</span>CRUD</span> for Foo and Bar entities, there are a 4-5 FooBar-specific functionality, some of which involves both Foo and Bar entities e.g., link a Foo entity to a Bar entity.</li></ul></li></ul></div>
 
-      <div id="content-wrapper">
-        <nav>
-          <ul class="pagination mt-2">
-            <li class="page-item"><a class="page-link" href="/website/schedule/week7"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
-            <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week8/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week8/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week8/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
-            <li class="page-item active"><a class="page-link" href="/website/schedule/week8/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week8/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
-            <li class="page-item">&nbsp;&nbsp;&nbsp;</li>
-            <li class="page-item"><a class="page-link" href="/website/schedule/week9"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li>
-          </ul>
-        </nav>
-        <p></p>
-        <h1 id="week-8-fri-oct-2nd-project">Week 8 <small><small><span class="dimmed">[Fri, Oct 2nd]</span> - Project</small></small><span id="week-8-fri-oct-2nd-project" class="anchor"></span><a class="fa fa-anchor" href="#week-8-fri-oct-2nd-project" onclick="event.stopPropagation()"></a></h1>
-        <div id="summary" class="lead border-left ml-3 mb-3 pl-2" style="color: purple;">
-          <p><strong>iP:</strong></p>
-          <div>
-            <ol>
-              <li><span>Evaluate two peer iPs</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Sat, Oct 10th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
-            </ol>
-          </div>
-          <p><strong>tP:</strong></p>
-          <div>
-            <ol>
-              <li><span><span class="dimmed"><span><span aria-hidden="true" class="fas fa-user"></span></span> Ensure you know tP expectations</span></span></li>
-              <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start proper milestone management</span></li>
-              <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Add the first functionality increment</span></li>
-            </ol>
-          </div>
-        </div>
-        <h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="ip">iP<span id="ip" class="anchor"></span><a class="fa fa-anchor" href="#ip" onclick="event.stopPropagation()"></a></h2>
-        <div>
-          <div></div>
-          <p></p>
-          <h4 id="1-evaluate-two-peer-ips-sat-oct-10th-2359"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Evaluate two peer iPs</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Sat, Oct 10th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-evaluate-two-peer-ips-sat-oct-10th-2359" class="anchor"></span><a class="fa fa-anchor" href="#1-evaluate-two-peer-ips-sat-oct-10th-2359" onclick="event.stopPropagation()"></a></h4>
-          <div>
-            <div class="indented-level2">
-              <box type="info">
-                <p>This activity is worth <code v-pre>2x2=4</code> participation points.
-                </p>
-              </box>
-              <p></p>
-            </div>
-            <ol>
-              <li><strong>Wait for the email notifying you which iPs are allocated for you to evaluate</strong>. When the email is sent out, it will also be announced via module announcements.</li>
-              <li><strong>Download the <em>latest</em> JAR file</strong> of the first iP by following the link provided.</li>
-              <li><strong>Locate the User Guide</strong> of the app by following the link provided.</li>
-              <li><strong>Open the LumiNUS survey</strong> (the one named <code v-pre>iP Peer Evaluation 1</code>) that you will be using to submit your evaluation and take note of the things you need to evaluate.</li>
-              <li><strong>Do a light testing of the app</strong> (not more than 10 minutes) to ensure the claimed features actually exist.<br>
-                <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Make sure you are using Java 11 to run the jar file (use <code v-pre>java -version</code> command to confirm).<br>
-                <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If double-clicking the jar file doesn't work, use the <code v-pre>java -jar {file_name}</code> command to open it.
-              </li>
-              <li><strong>Do a quick examination of the code</strong> (~ 5 minutes) by following the provided link.</li>
-              <li><strong>Submit your evaluation</strong> using the survey.</li>
-              <li><strong>Repeat the above steps for the 2nd iP</strong> allocated to you (use the survey <code v-pre>iP Peer Evaluation 2</code>).</li>
-            </ol>
-          </div>
-          <p></p>
-        </div>
-        <h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="tp-mid-v1-2">tP: mid-v1.2<span id="tp-mid-v1-2" class="anchor"></span><a class="fa fa-anchor" href="#tp-mid-v1-2" onclick="event.stopPropagation()"></a></h2>
-        <div>
-          <div>
-            <box>
-              <p><strong>Reminder:</strong></p>
-              <div>
-                <p>
-                  <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Milestone requirements are cumulative</strong>. The recommended progress for the mid-milestone is an implicit requirement for the actual milestone unless a milestone requirement overrides a mid-milestone requirement <span class="dimmed">e.g., mid-milestone requires a document to be in a temp format while the actual milestone requires it to be in the proper format</span>. Similarly, a requirement for milestone <code v-pre>n</code> is also an implicit requirement for milestone <code v-pre>n+1</code> unless <code v-pre>n+1</code> overrides the <code v-pre>n</code> requirement. This means <mark>if you miss some requirement at milestone <code v-pre>n</code>, you should try to achieve it before milestone <code v-pre>n+1</code></mark> or else it could be noted again as a 'missed requirement' at milestone <code v-pre>n+1</code>.
-                </p>
-              </div>
-            </box>
-            <div class="indented-level1">
-              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Supervision (Extract) → <strong>Tutor's role in making project decisions</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
-                  <p><strong>Note that tutors are not allowed to contribute to graded components of your project work.</strong> For example, if you are faced with a design decision in your project, the tutor is not allowed to make that decision for you.<br>
-                    <span class="dimmed">Reason: to ensure fairness across teams, and to ensure the work you submit for grading is entirely your own</span>
-                  </p>
-                  <p>Following from the above, <strong>don't expect the tutor to answer questions that are specific to graded deliverables</strong> (e.g., ask which design alternative is better -- that's a decision you need to make yourself). At best, the tutor can channel the question to the professor. However, you can raise such questions in the module forum where the professor can answer the question in a general way that's not unfair to other teams (and other teams can benefit from the answer as well).</p>
-                  <box type="tip" seamless>
-                    <p><strong>How to make project decisions</strong> (given your tutor is not going to make them for you)? Here are some tips:</p>
-                    <ul>
-                      <li><strong>Quickly try out the alternatives</strong>. Rather than get into a <em>analysis-paralysis</em> state, quickly prototype the alternatives to figure out which works better.</li>
-                      <li><strong>Go with the team consensus/majority.</strong> As most project components are graded by peers, the majority view within the team is a good approximation of how the result will be judged.</li>
-                      <li><strong>Go with the simpler alternative</strong> that's good enough for the current iteration. That way, if the decision was the wrong one, you'll find out sooner and the cost will be less. A common rookie pitfall is the temptation to look for an <em>ideal</em> future-proof solution -- usually, there is no such thing. Most alternatives can get the job done, it's just that costs and benefits vary.</li>
-                      <li><strong>Look at what other teams are doing.</strong> That will help you detect if you are going in the wrong direction entirely, and also might lead you to more alternatives to consider.</li>
-                      <li><strong>Keep an eye on the results</strong>: e.g., Did the design alternative you chose make the code more complex, harder to test, easier to break, harder to modify etc. This will help you decide if you made the right choice.</li>
-                      <li><strong>If you realized you picked the wrong alternative,</strong> change if you can. Often, the choice you picked may still be good enough to survive the project. In that case, leave it be, but make a mental note about it (you can even document it in the Developer Guide) for future reference -- that's how you build up <em>experience</em>.</li>
-                    </ul>
-                  </box>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-          </div>
-          <p></p>
-          <h4 id="1-ensure-you-know-tp-expectations"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span class="dimmed"><span><span aria-hidden="true" class="fas fa-user"></span></span> Ensure you know tP expectations</span></span><span id="1-ensure-you-know-tp-expectations" class="anchor"></span><a class="fa fa-anchor" href="#1-ensure-you-know-tp-expectations" onclick="event.stopPropagation()"></a></h4>
-          <div>
-            <ul>
-              <li>If you haven't done so already, make sure you know individual and team expectations of the tP</li>
-            </ul>
-            <div class="indented-level2">
-              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Functionality Expectations <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
+<p><mark>You will get full marks for implementation effort</mark> if you meet the expectation stated above. There are no extra marks for exceeding that bar. You are better off spending that effort in improving other aspects of the project.</p>
+<box tags="m--cs2103">
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you wish to add the following features to your app, we recommend (but not require) you to follow similar features in AB4 in order to reduce the effort required.</p>
+<ul>
+<li><a href="https://se-education.org/addressbook-level4/DeveloperGuide.html#undo-redo-feature">Undo/redo</a></li>
+<li><a href="https://se-education.org/addressbook-level4/Testing.html#types-of-tests">Automated GUI tests</a></li></ul></box>
 
-                  <h2 class="text-white bg-danger p-1" id="functionality-expectations">Functionality Expectations<span id="functionality-expectations" class="anchor"></span><a class="fa fa-anchor" href="#functionality-expectations" onclick="event.stopPropagation()"></a></h2>
-                  <div tags="m--cs2103">
-                    <p><strong>The expected level of <em>functionality</em> to be added by a 5-person team is roughly the <mark>equivalent effort taken to create AB3 <em>functionality</em></mark></strong>. Furthermore, we expect a team to reach that level if each member puts in an effort equivalent to the effort they put into the iP. Some examples meeting that criterion:</p>
-                    <ul>
-                      <li>Example 1: A fictional contact management app optimized for a specific target user group:
-                        <ul>
-                          <li>Existing AB3 features are optimized to the new target user group.</li>
-                          <li>Person objects are enhanced to contain more details.</li>
-                          <li>There are a 4-5 new functionality that are specific to the target user group.</li>
-                        </ul>
-                      </li>
-                      <li>Example 2: a FooBar app that keeps track of two different types of entities <em>Foo</em> entities and <em>Bar</em> entities.
-                        <ul>
-                          <li>Foo and Bar entities are tightly-connected e.g., a Foo entity can contain Bar entities. Each type is similar to AB3 Person objects in terms of complexity.</li>
-                          <li>In addition to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Creat Read Update Delete</span>CRUD</span> for Foo and Bar entities, there are a 4-5 FooBar-specific functionality, some of which involves both Foo and Bar entities e.g., link a Foo entity to a Bar entity.</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
+<box type="important" tags="m--cs2103 m--cs2113" seamless>
+<div tags="m--cs2103 m--cs2113">
+<p>One semester ago, we reduced the tP functionality expectations by about 40-50% compared to the previous semesters, in order to reduce your workload. Keep that in mind in case you receive advice about project from seniors who did this module more than one semester ago.</p></div>
+</box></div></panel></div><p></p>
+<div class="indented-level2">
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Individual Expectations <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
 
-                  <p><mark>You will get full marks for implementation effort</mark> if you meet the expectation stated above. There are no extra marks for exceeding that bar. You are better off spending that effort in improving other aspects of the project.</p>
-                  <box tags="m--cs2103">
-                    <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you wish to add the following features to your app, we recommend (but not require) you to follow similar features in AB4 in order to reduce the effort required.</p>
-                    <ul>
-                      <li><a href="https://se-education.org/addressbook-level4/DeveloperGuide.html#undo-redo-feature">Undo/redo</a></li>
-                      <li><a href="https://se-education.org/addressbook-level4/Testing.html#types-of-tests">Automated GUI tests</a></li>
-                    </ul>
-                  </box>
+<h2 class="text-white bg-info p-1" id="fas-user-individual-expectations"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual Expectations<span id="fas-user-individual-expectations" class="anchor"></span><a class="fa fa-anchor" href="#fas-user-individual-expectations" onclick="event.stopPropagation()"></a></h2>
+<h4 id="individual-expectations-on-implementation"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Implementation</span><span id="individual-expectations-on-implementation" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-implementation" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Contribute to the functional code of the product.</strong></span>
+<ul>
+<li>User-visible features are preferred, but it is not a strict requirement.:</li>
+<li><strong>The enhancement(s) should fit with the rest of the software</strong> (and the target user profile) and should have the consent of the team members. <span class="dimmed">You will lose marks if you go 'rogue' and add things that don't fit with the product.</span></li></ul></li></ul>
+<div tags="m--cs2103" class="indented-level4">
+<p>Some examples:</p>
+<panel type="seamless" minimized class="algolia-no-index"><template slot="_header"><p>Example enhancements</p></template>
+<ul>
+<li>Add a new feature <span class="dimmed">e.g. add the ability to view statistics</span></li>
+<li>Enhance an existing features in a major way <span class="dimmed">e.g. make the command syntax more user friendly and closer to natural language</span></li>
+<li>A redesign of the GUI <span class="dimmed">e.g. make it work like a chat application (note: chat is a form of CLI)</span></li>
+<li>A redesign of the code <span class="dimmed">e.g. Improve the design to improve the code quality.</span></li></ul>
+<p></p></panel><p></p><p></p></div>
+<ul>
+<li>
+<p><strong>Tip: Contribute to all aspects of the project</strong> e.g. write backend code, frontend code, test code, user documentation, and developer documentation. <span class="dimmed">Reason: If you limit yourself to certain aspects only, you could lose marks allocated for the aspects you did not do. In addition, the final exam assumes that you are familiar with all aspects of the project.</span></p></li>
+<li>
+<p><strong>Tip: Do <em>all</em> the work related to your enhancement yourself.</strong> <span class="dimmed">Reason: If there is no clear division of who did which enhancement, it will be difficult to divide project credit (or assign responsibility for bugs detected by testers) later.</span></p></li></ul>
+<div tags="m--cs2103">
+<ul>
+<li><strong>Tip: Divide the components of the product among team members</strong>. Notwithstanding the above, you are still recommended to divide the components of the product among team members so that each team member is <em>in charge</em> of one or more components. While others will be modifying those components to fit their features, your role as the <em>in charge</em> of a component is to guide others modifying that component <span class="dimmed">(reason: you are supposed to be the most knowledgeable about that component)</span> and protect that component from degrading <span class="dimmed">e.g., you can review others' changes to your component and suggest possible changes</span>.</li></ul></div>
+<h4 id="individual-expectations-on-documentation"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Documentation</span><span id="individual-expectations-on-documentation" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-documentation" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li><strong>Objective:</strong> showcase your ability to write both <em>user-facing documentation</em> and <em>developer-facing documentation</em>.</li>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Update the User Guide (UG) and the Developer Guide (DG) parts</strong></span> that are related to the enhancements you added. The minimum requirement is given below. <span class="dimmed">(Reason: Evaluators will not be able to give you marks unless there is sufficient evidence of your documentation skills.)</span>
+<ul>
+<li>UG: 1 or more pages</li>
+<li>DG: 3 or more pages</li></ul></li>
+<li><strong>Tip: If the UG/DG updates for your enhancements are not enough to reach the above requirements</strong>, you can make up the shortfall by documenting 'proposed' features and alternative designs/implementations.</li>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Use at least 2 types of UML diagrams in your DG updates</strong></span> i.e., diagrams you added yourself or those you modified significantly.</li></ul>
+<h4 id="individual-expectations-on-testing"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Testing</span><span id="individual-expectations-on-testing" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-testing" onclick="event.stopPropagation()"></a></h4>
+<div id="testing-expectations">
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Write <em>some</em> automated tests</strong></span> so that we can evaluate your ability to write tests.</li></ul>
+<div class="indented">
+<box>
+<p><strong>🤔 How much testings is enough?</strong> We expect you to decide. You learned different types of testing and what they try to achieve. Based on that, you should decide how much of each type is required. Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the effort required.<br>
+There is no requirement for a minimum coverage level. Note that in a production environment you are often required to have at least 90% of the code covered by tests. In this project, it can be less. <mark>The weaker your tests are, the higher the risk of bugs, which will cost marks if not fixed before the final submission.</mark></p></box><p></p></div></div>
+<h4 id="individual-expectations-on-teamwork"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Teamwork</span><span id="individual-expectations-on-teamwork" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-teamwork" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Do an equal share of the <em>team-tasks</em></strong>.</span></li></ul>
+<div id="team-tasks" class="indented-level2">
+<box>
+<p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p></template>
+<span id="example-team-tasks">
+<p>Here is a non-exhaustive list of team-tasks:</p>
+<ol>
+<li>Setting up the GitHub team org/repo</li>
+<li>Necessary general code enhancements e.g.,
+<ol>
+<li>Work related to renaming the product</li>
+<li>Work related to changing the product icon</li>
+<li>Morphing the product into a different product</li></ol></li>
+<li>Setting up tools e.g., GitHub, Gradle</li>
+<li>Maintaining the issue tracker</li>
+<li>Release management</li>
+<li>Updating user/developer docs that are not specific to a feature <span class="dimmed">e.g. documenting the target user profile</span></li>
+<li>Incorporating more useful tools/libraries/frameworks into the product or the project workflow <span class="dimmed">(e.g. automate more aspects of the project workflow using a GitHub plugin)</span></li></ol></span></panel><p></p></box></div>
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Carry an equal share of project roles and responsibilities</strong>.</span></li></ul>
+<div class="indented-level2">
+<box>
+<span id="roles">
+<p><em>Roles</em> indicate aspects you are in charge of and responsible for. <span class="dimmed">E.g., if you are in charge of documentation, you are the person who should allocate which parts of the documentation is to be done by who, ensure the document is in right format, ensure consistency etc.</span></p>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Recommended roles and responsibilities</p></template>
+<p>This is a non-exhaustive list; you may define additional roles.</p>
+<ul>
+<li><em>Team lead</em>: Responsible for overall project coordination.</li>
+<li><em>Documentation</em> (short for ‘in charge of documentation’): Responsible for the quality of various project documents.</li>
+<li><em>Testing</em>: Ensures the testing of the project is done properly and on time.</li>
+<li><em>Code quality</em>: Looks after code quality, ensures adherence to coding standards, etc.</li>
+<li><em>Deliverables and deadlines</em>: Ensure project deliverables are done on time and in the right format.</li>
+<li><em>Integration</em>: In charge of versioning of the code, maintaining the code repository, integrating various parts of the software to create a whole.</li>
+<li><em>Scheduling and tracking</em>: In charge of defining, assigning, and tracking project tasks.</li>
+<li><em>[Tool ABC] expert</em>: <span class="dimmed">e.g. Intellij expert, Git expert, etc.</span> Helps other team member with matters related to the specific tool.</li></ul>
+<div tags="m--cs2103">
+<ul>
+<li><em>In charge of[Component XYZ]</em>: <span class="dimmed">e.g. In charge of <code v-pre>Model</code>, <code v-pre>UI</code>, <code v-pre>Storage</code>, etc.</span> If you are in charge of a component, you are expected to know that component well, and review changes done to that component in v1.3-v1.4.</li></ul></div>
+</panel><p></p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Ensure each of the important roles are assigned to one person in the team. It is OK to have a 'backup' for each role, but <strong>for each aspect there should be one person who is unequivocally the person responsible for it</strong>. <span class="dimmed">Reason: when <em>everyone is responsible for everything</em>, no one is.</span></p></span></box><p></p></div>
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Review each others work</strong>.</span> <span class="dimmed">Reason: reviewing skills is a learning outcome, and it is mutually beneficial.</span></li></ul></div></panel></div><p></p>
+<div class="indented-level2">
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Team Expectations <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
 
-                  <box type="important" tags="m--cs2103 m--cs2113" seamless>
-                    <div tags="m--cs2103 m--cs2113">
-                      <p>One semester ago, we reduced the tP functionality expectations by about 40-50% compared to the previous semesters, in order to reduce your workload. Keep that in mind in case you receive advice about project from seniors who did this module more than one semester ago.</p>
-                    </div>
-                  </box>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-            <div class="indented-level2">
-              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Individual Expectations <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
+<h2 class="text-white bg-success p-1" id="fas-users-team-expectations"><span><span aria-hidden="true" class="fas fa-users"></span></span> Team Expectations<span id="fas-users-team-expectations" class="anchor"></span><a class="fa fa-anchor" href="#fas-users-team-expectations" onclick="event.stopPropagation()"></a></h2>
+<ul>
+<li><span class="badge badge-success">Expectation</span> <span class="text-success"><strong>Preserve <em>product integrity</em></strong></span> i.e. ensure,
+<ol>
+<li>features fit together to form a cohesive product,</li>
+<li>documentation follows a consistent style and presents a cohesive picture to the reader, and</li>
+<li>final project demo presents a cohesive picture to the audience.</li></ol></li>
+<li><span class="badge badge-success">Expectation</span> <span class="text-success"><strong>Maintain product quality</strong></span> i.e. prevent breaking other parts of the product as it evolves. <span tags="m--cs2103 m--cs2113">Note that bugs local to a specific feature will be counted against the author of that feature. However, if a new enhancement breaks the entire product, the whole team will have to share the penalty.</span></li>
+<li><span class="badge badge-success">Expectation</span> <span class="text-success"><strong>Manage the project</strong></span> i.e. ensure workflow, code maintenance, integration, releases, etc. are done smoothly.
+</li></ul>
+<span id="individualExpectations">
 
-                  <h2 class="text-white bg-info p-1" id="fas-user-individual-expectations"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual Expectations<span id="fas-user-individual-expectations" class="anchor"></span><a class="fa fa-anchor" href="#fas-user-individual-expectations" onclick="event.stopPropagation()"></a></h2>
-                  <h4 id="individual-expectations-on-implementation"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Implementation</span><span id="individual-expectations-on-implementation" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-implementation" onclick="event.stopPropagation()"></a></h4>
-                  <ul>
-                    <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Contribute to the functional code of the product.</strong></span>
-                      <ul>
-                        <li>User-visible features are preferred, but it is not a strict requirement.:</li>
-                        <li><strong>The enhancement(s) should fit with the rest of the software</strong> (and the target user profile) and should have the consent of the team members. <span class="dimmed">You will lose marks if you go 'rogue' and add things that don't fit with the product.</span></li>
-                      </ul>
-                    </li>
-                  </ul>
-                  <div tags="m--cs2103" class="indented-level4">
-                    <p>Some examples:</p>
-                    <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
-                        <p>Example enhancements</p>
-                      </template>
-                      <ul>
-                        <li>Add a new feature <span class="dimmed">e.g. add the ability to view statistics</span></li>
-                        <li>Enhance an existing features in a major way <span class="dimmed">e.g. make the command syntax more user friendly and closer to natural language</span></li>
-                        <li>A redesign of the GUI <span class="dimmed">e.g. make it work like a chat application (note: chat is a form of CLI)</span></li>
-                        <li>A redesign of the code <span class="dimmed">e.g. Improve the design to improve the code quality.</span></li>
-                      </ul>
-                      <p></p>
-                    </panel>
-                    <p></p>
-                    <p></p>
-                  </div>
-                  <ul>
-                    <li>
-                      <p><strong>Tip: Contribute to all aspects of the project</strong> e.g. write backend code, frontend code, test code, user documentation, and developer documentation. <span class="dimmed">Reason: If you limit yourself to certain aspects only, you could lose marks allocated for the aspects you did not do. In addition, the final exam assumes that you are familiar with all aspects of the project.</span></p>
-                    </li>
-                    <li>
-                      <p><strong>Tip: Do <em>all</em> the work related to your enhancement yourself.</strong> <span class="dimmed">Reason: If there is no clear division of who did which enhancement, it will be difficult to divide project credit (or assign responsibility for bugs detected by testers) later.</span></p>
-                    </li>
-                  </ul>
-                  <div tags="m--cs2103">
-                    <ul>
-                      <li><strong>Tip: Divide the components of the product among team members</strong>. Notwithstanding the above, you are still recommended to divide the components of the product among team members so that each team member is <em>in charge</em> of one or more components. While others will be modifying those components to fit their features, your role as the <em>in charge</em> of a component is to guide others modifying that component <span class="dimmed">(reason: you are supposed to be the most knowledgeable about that component)</span> and protect that component from degrading <span class="dimmed">e.g., you can review others' changes to your component and suggest possible changes</span>.</li>
-                    </ul>
-                  </div>
-                  <h4 id="individual-expectations-on-documentation"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Documentation</span><span id="individual-expectations-on-documentation" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-documentation" onclick="event.stopPropagation()"></a></h4>
-                  <ul>
-                    <li><strong>Objective:</strong> showcase your ability to write both <em>user-facing documentation</em> and <em>developer-facing documentation</em>.</li>
-                    <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Update the User Guide (UG) and the Developer Guide (DG) parts</strong></span> that are related to the enhancements you added. The minimum requirement is given below. <span class="dimmed">(Reason: Evaluators will not be able to give you marks unless there is sufficient evidence of your documentation skills.)</span>
-                      <ul>
-                        <li>UG: 1 or more pages</li>
-                        <li>DG: 3 or more pages</li>
-                      </ul>
-                    </li>
-                    <li><strong>Tip: If the UG/DG updates for your enhancements are not enough to reach the above requirements</strong>, you can make up the shortfall by documenting 'proposed' features and alternative designs/implementations.</li>
-                    <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Use at least 2 types of UML diagrams in your DG updates</strong></span> i.e., diagrams you added yourself or those you modified significantly.</li>
-                  </ul>
-                  <h4 id="individual-expectations-on-testing"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Testing</span><span id="individual-expectations-on-testing" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-testing" onclick="event.stopPropagation()"></a></h4>
-                  <div id="testing-expectations">
-                    <ul>
-                      <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Write <em>some</em> automated tests</strong></span> so that we can evaluate your ability to write tests.</li>
-                    </ul>
-                    <div class="indented">
-                      <box>
-                        <p><strong>🤔 How much testings is enough?</strong> We expect you to decide. You learned different types of testing and what they try to achieve. Based on that, you should decide how much of each type is required. Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the effort required.<br>
-                          There is no requirement for a minimum coverage level. Note that in a production environment you are often required to have at least 90% of the code covered by tests. In this project, it can be less. <mark>The weaker your tests are, the higher the risk of bugs, which will cost marks if not fixed before the final submission.</mark></p>
-                      </box>
-                      <p></p>
-                    </div>
-                  </div>
-                  <h4 id="individual-expectations-on-teamwork"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Teamwork</span><span id="individual-expectations-on-teamwork" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-teamwork" onclick="event.stopPropagation()"></a></h4>
-                  <ul>
-                    <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Do an equal share of the <em>team-tasks</em></strong>.</span></li>
-                  </ul>
-                  <div id="team-tasks" class="indented-level2">
-                    <box>
-                      <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                      <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                          <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
-                        </template>
-                        <span id="example-team-tasks">
-                          <p>Here is a non-exhaustive list of team-tasks:</p>
-                          <ol>
-                            <li>Setting up the GitHub team org/repo</li>
-                            <li>Necessary general code enhancements e.g.,
-                              <ol>
-                                <li>Work related to renaming the product</li>
-                                <li>Work related to changing the product icon</li>
-                                <li>Morphing the product into a different product</li>
-                              </ol>
-                            </li>
-                            <li>Setting up tools e.g., GitHub, Gradle</li>
-                            <li>Maintaining the issue tracker</li>
-                            <li>Release management</li>
-                            <li>Updating user/developer docs that are not specific to a feature <span class="dimmed">e.g. documenting the target user profile</span></li>
-                            <li>Incorporating more useful tools/libraries/frameworks into the product or the project workflow <span class="dimmed">(e.g. automate more aspects of the project workflow using a GitHub plugin)</span></li>
-                          </ol>
-                        </span>
-                      </panel>
-                      <p></p>
-                    </box>
-                  </div>
-                  <ul>
-                    <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Carry an equal share of project roles and responsibilities</strong>.</span></li>
-                  </ul>
-                  <div class="indented-level2">
-                    <box>
-                      <span id="roles">
-                        <p><em>Roles</em> indicate aspects you are in charge of and responsible for. <span class="dimmed">E.g., if you are in charge of documentation, you are the person who should allocate which parts of the documentation is to be done by who, ensure the document is in right format, ensure consistency etc.</span></p>
-                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Recommended roles and responsibilities</p>
-                          </template>
-                          <p>This is a non-exhaustive list; you may define additional roles.</p>
-                          <ul>
-                            <li><em>Team lead</em>: Responsible for overall project coordination.</li>
-                            <li><em>Documentation</em> (short for ‘in charge of documentation’): Responsible for the quality of various project documents.</li>
-                            <li><em>Testing</em>: Ensures the testing of the project is done properly and on time.</li>
-                            <li><em>Code quality</em>: Looks after code quality, ensures adherence to coding standards, etc.</li>
-                            <li><em>Deliverables and deadlines</em>: Ensure project deliverables are done on time and in the right format.</li>
-                            <li><em>Integration</em>: In charge of versioning of the code, maintaining the code repository, integrating various parts of the software to create a whole.</li>
-                            <li><em>Scheduling and tracking</em>: In charge of defining, assigning, and tracking project tasks.</li>
-                            <li><em>[Tool ABC] expert</em>: <span class="dimmed">e.g. Intellij expert, Git expert, etc.</span> Helps other team member with matters related to the specific tool.</li>
-                          </ul>
-                          <div tags="m--cs2103">
-                            <ul>
-                              <li><em>In charge of[Component XYZ]</em>: <span class="dimmed">e.g. In charge of <code v-pre>Model</code>, <code v-pre>UI</code>, <code v-pre>Storage</code>, etc.</span> If you are in charge of a component, you are expected to know that component well, and review changes done to that component in v1.3-v1.4.</li>
-                            </ul>
-                          </div>
-                        </panel>
-                        <p></p>
-                        <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Ensure each of the important roles are assigned to one person in the team. It is OK to have a 'backup' for each role, but <strong>for each aspect there should be one person who is unequivocally the person responsible for it</strong>. <span class="dimmed">Reason: when <em>everyone is responsible for everything</em>, no one is.</span></p>
-                      </span>
-                    </box>
-                    <p></p>
-                  </div>
-                  <ul>
-                    <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Review each others work</strong>.</span> <span class="dimmed">Reason: reviewing skills is a learning outcome, and it is mutually beneficial.</span></li>
-                  </ul>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-            <div class="indented-level2">
-              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Team Expectations <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
+<h2 class="text-white bg-info p-1" id="fas-user-individual-expectations-2"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual Expectations<span id="fas-user-individual-expectations-2" class="anchor"></span><a class="fa fa-anchor" href="#fas-user-individual-expectations-2" onclick="event.stopPropagation()"></a></h2>
+<h4 id="individual-expectations-on-implementation-2"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Implementation</span><span id="individual-expectations-on-implementation-2" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-implementation-2" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Contribute to the functional code of the product.</strong></span>
+<ul>
+<li>User-visible features are preferred, but it is not a strict requirement.:</li>
+<li><strong>The enhancement(s) should fit with the rest of the software</strong> (and the target user profile) and should have the consent of the team members. <span class="dimmed">You will lose marks if you go 'rogue' and add things that don't fit with the product.</span></li></ul></li></ul>
+<div tags="m--cs2103" class="indented-level4">
+<p>Some examples:</p>
+<panel type="seamless" minimized class="algolia-no-index"><template slot="_header"><p>Example enhancements</p></template>
+<ul>
+<li>Add a new feature <span class="dimmed">e.g. add the ability to view statistics</span></li>
+<li>Enhance an existing features in a major way <span class="dimmed">e.g. make the command syntax more user friendly and closer to natural language</span></li>
+<li>A redesign of the GUI <span class="dimmed">e.g. make it work like a chat application (note: chat is a form of CLI)</span></li>
+<li>A redesign of the code <span class="dimmed">e.g. Improve the design to improve the code quality.</span></li></ul>
+<p></p></panel><p></p><p></p></div>
+<ul>
+<li>
+<p><strong>Tip: Contribute to all aspects of the project</strong> e.g. write backend code, frontend code, test code, user documentation, and developer documentation. <span class="dimmed">Reason: If you limit yourself to certain aspects only, you could lose marks allocated for the aspects you did not do. In addition, the final exam assumes that you are familiar with all aspects of the project.</span></p></li>
+<li>
+<p><strong>Tip: Do <em>all</em> the work related to your enhancement yourself.</strong> <span class="dimmed">Reason: If there is no clear division of who did which enhancement, it will be difficult to divide project credit (or assign responsibility for bugs detected by testers) later.</span></p></li></ul>
+<div tags="m--cs2103">
+<ul>
+<li><strong>Tip: Divide the components of the product among team members</strong>. Notwithstanding the above, you are still recommended to divide the components of the product among team members so that each team member is <em>in charge</em> of one or more components. While others will be modifying those components to fit their features, your role as the <em>in charge</em> of a component is to guide others modifying that component <span class="dimmed">(reason: you are supposed to be the most knowledgeable about that component)</span> and protect that component from degrading <span class="dimmed">e.g., you can review others' changes to your component and suggest possible changes</span>.</li></ul></div>
+<h4 id="individual-expectations-on-documentation-2"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Documentation</span><span id="individual-expectations-on-documentation-2" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-documentation-2" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li><strong>Objective:</strong> showcase your ability to write both <em>user-facing documentation</em> and <em>developer-facing documentation</em>.</li>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Update the User Guide (UG) and the Developer Guide (DG) parts</strong></span> that are related to the enhancements you added. The minimum requirement is given below. <span class="dimmed">(Reason: Evaluators will not be able to give you marks unless there is sufficient evidence of your documentation skills.)</span>
+<ul>
+<li>UG: 1 or more pages</li>
+<li>DG: 3 or more pages</li></ul></li>
+<li><strong>Tip: If the UG/DG updates for your enhancements are not enough to reach the above requirements</strong>, you can make up the shortfall by documenting 'proposed' features and alternative designs/implementations.</li>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Use at least 2 types of UML diagrams in your DG updates</strong></span> i.e., diagrams you added yourself or those you modified significantly.</li></ul>
+<h4 id="individual-expectations-on-testing-2"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Testing</span><span id="individual-expectations-on-testing-2" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-testing-2" onclick="event.stopPropagation()"></a></h4>
+<div id="testing-expectations">
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Write <em>some</em> automated tests</strong></span> so that we can evaluate your ability to write tests.</li></ul>
+<div class="indented">
+<box>
+<p><strong>🤔 How much testings is enough?</strong> We expect you to decide. You learned different types of testing and what they try to achieve. Based on that, you should decide how much of each type is required. Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the effort required.<br>
+There is no requirement for a minimum coverage level. Note that in a production environment you are often required to have at least 90% of the code covered by tests. In this project, it can be less. <mark>The weaker your tests are, the higher the risk of bugs, which will cost marks if not fixed before the final submission.</mark></p></box><p></p></div></div>
+<h4 id="individual-expectations-on-teamwork-2"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Teamwork</span><span id="individual-expectations-on-teamwork-2" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-teamwork-2" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Do an equal share of the <em>team-tasks</em></strong>.</span></li></ul>
+<div id="team-tasks" class="indented-level2">
+<box>
+<p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p></template>
+<span id="example-team-tasks">
+<p>Here is a non-exhaustive list of team-tasks:</p>
+<ol>
+<li>Setting up the GitHub team org/repo</li>
+<li>Necessary general code enhancements e.g.,
+<ol>
+<li>Work related to renaming the product</li>
+<li>Work related to changing the product icon</li>
+<li>Morphing the product into a different product</li></ol></li>
+<li>Setting up tools e.g., GitHub, Gradle</li>
+<li>Maintaining the issue tracker</li>
+<li>Release management</li>
+<li>Updating user/developer docs that are not specific to a feature <span class="dimmed">e.g. documenting the target user profile</span></li>
+<li>Incorporating more useful tools/libraries/frameworks into the product or the project workflow <span class="dimmed">(e.g. automate more aspects of the project workflow using a GitHub plugin)</span></li></ol></span></panel><p></p></box></div>
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Carry an equal share of project roles and responsibilities</strong>.</span></li></ul>
+<div class="indented-level2">
+<box>
+<span id="roles">
+<p><em>Roles</em> indicate aspects you are in charge of and responsible for. <span class="dimmed">E.g., if you are in charge of documentation, you are the person who should allocate which parts of the documentation is to be done by who, ensure the document is in right format, ensure consistency etc.</span></p>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Recommended roles and responsibilities</p></template>
+<p>This is a non-exhaustive list; you may define additional roles.</p>
+<ul>
+<li><em>Team lead</em>: Responsible for overall project coordination.</li>
+<li><em>Documentation</em> (short for ‘in charge of documentation’): Responsible for the quality of various project documents.</li>
+<li><em>Testing</em>: Ensures the testing of the project is done properly and on time.</li>
+<li><em>Code quality</em>: Looks after code quality, ensures adherence to coding standards, etc.</li>
+<li><em>Deliverables and deadlines</em>: Ensure project deliverables are done on time and in the right format.</li>
+<li><em>Integration</em>: In charge of versioning of the code, maintaining the code repository, integrating various parts of the software to create a whole.</li>
+<li><em>Scheduling and tracking</em>: In charge of defining, assigning, and tracking project tasks.</li>
+<li><em>[Tool ABC] expert</em>: <span class="dimmed">e.g. Intellij expert, Git expert, etc.</span> Helps other team member with matters related to the specific tool.</li></ul>
+<div tags="m--cs2103">
+<ul>
+<li><em>In charge of[Component XYZ]</em>: <span class="dimmed">e.g. In charge of <code v-pre>Model</code>, <code v-pre>UI</code>, <code v-pre>Storage</code>, etc.</span> If you are in charge of a component, you are expected to know that component well, and review changes done to that component in v1.3-v1.4.</li></ul></div>
+</panel><p></p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Ensure each of the important roles are assigned to one person in the team. It is OK to have a 'backup' for each role, but <strong>for each aspect there should be one person who is unequivocally the person responsible for it</strong>. <span class="dimmed">Reason: when <em>everyone is responsible for everything</em>, no one is.</span></p></span></box><p></p></div>
+<ul>
+<li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Review each others work</strong>.</span> <span class="dimmed">Reason: reviewing skills is a learning outcome, and it is mutually beneficial.</span></li></ul></span></div></panel></div><p></p></div>
+<p></p>
+<h4 id="2-start-proper-milestone-management"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start proper milestone management</span><span id="2-start-proper-milestone-management" class="anchor"></span><a class="fa fa-anchor" href="#2-start-proper-milestone-management" onclick="event.stopPropagation()"></a></h4>
+<div>
+<ul>
+<li><strong>Set up the issue tracker</strong> as described in the panel below, if you haven't done so already.</li></ul>
+<div class="indented-level2">
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E(extract): <strong>Setting up the issue tracker</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<h2 id="tp-issue-tracker-setup">tP Issue Tracker Setup<span id="tp-issue-tracker-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-issue-tracker-setup" onclick="event.stopPropagation()"></a></h2>
+<p>We recommend you configure the issue tracker of the tP team repo as follows:</p>
+<ul>
+<li>Delete existing labels and add the following labels.<br>
+<span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Issue type</strong> labels are useful from the beginning of the project. The other labels are needed only when you start implementing the features.</li></ul>
+<box>
+<p><strong>Issue type</strong> labels:</p>
+<ul>
+<li><code v-pre>type.Epic</code> : A big feature which can be broken down into smaller stories e.g. search</li>
+<li><code v-pre>type.Story</code> : A user story</li>
+<li><code v-pre>type.Enhancement</code>: An enhancement to an existing story</li>
+<li><code v-pre>type.Task</code> (or <code v-pre>type.Chore</code>) : Something that needs to be done, but not a story, bug, or an epic. e.g. Move testing code into a new folder)</li>
+<li><code v-pre>type.Bug</code> : A bug</li></ul></box>
+<box>
+<p><strong>Priority</strong> labels:</p>
+<ul>
+<li><code v-pre>priority.High</code> : Must do</li>
+<li><code v-pre>priority.Medium</code> : Nice to have</li>
+<li><code v-pre>priority.Low</code> : Unlikely to do</li></ul></box>
+<span id="bug-severity">
+<box>
+<p><strong>Bug Severity</strong> labels:</p>
+<ul>
+<li><code v-pre>severity.VeryLow</code> : A flaw that is purely cosmetic and does not affect usage e.g., a typo/spacing/layout/color/font issues in the docs or the UI that doesn't affect usage.</li>
+<li><code v-pre>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
+<li><code v-pre>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
+<li><code v-pre>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li></ul></box></span>
+<ul>
+<li>
+<p>Create following milestones : <span tags="m--cs2103"><code v-pre>v1.1</code>, </span><code v-pre>v1.2</code>, <code v-pre>v1.3</code>, <code v-pre>v1.4</code></p></li>
+<li>
+<p>You may configure other project settings as you wish. e.g. more labels, more milestones</p></li></ul></div></panel></div><p></p>
+<ul>
+<li><strong>Start proper schedule tracking and milestone management</strong> as explained in the panel below.</li></ul>
+<div class="indented-level2">
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E(extract): <strong>Project schedule tracking</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<div>
+<h2 id="tp-project-schedule-tracking">tP Project Schedule Tracking<span id="tp-project-schedule-tracking" class="anchor"></span><a class="fa fa-anchor" href="#tp-project-schedule-tracking" onclick="event.stopPropagation()"></a></h2>
+<p>In general, use the issue tracker (Milestones, Issues, PRs, Tags, Releases, and Labels) for assigning, scheduling, and tracking <em>all</em> noteworthy project tasks, including user stories. Update the issue tracker regularly to reflect the current status of the project. You can also use GitHub's <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU">Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.</p>
 
-                  <h2 class="text-white bg-success p-1" id="fas-users-team-expectations"><span><span aria-hidden="true" class="fas fa-users"></span></span> Team Expectations<span id="fas-users-team-expectations" class="anchor"></span><a class="fa fa-anchor" href="#fas-users-team-expectations" onclick="event.stopPropagation()"></a></h2>
-                  <ul>
-                    <li><span class="badge badge-success">Expectation</span> <span class="text-success"><strong>Preserve <em>product integrity</em></strong></span> i.e. ensure,
-                      <ol>
-                        <li>features fit together to form a cohesive product,</li>
-                        <li>documentation follows a consistent style and presents a cohesive picture to the reader, and</li>
-                        <li>final project demo presents a cohesive picture to the audience.</li>
-                      </ol>
-                    </li>
-                    <li><span class="badge badge-success">Expectation</span> <span class="text-success"><strong>Maintain product quality</strong></span> i.e. prevent breaking other parts of the product as it evolves. <span tags="m--cs2103 m--cs2113">Note that bugs local to a specific feature will be counted against the author of that feature. However, if a new enhancement breaks the entire product, the whole team will have to share the penalty.</span></li>
-                    <li><span class="badge badge-success">Expectation</span> <span class="text-success"><strong>Manage the project</strong></span> i.e. ensure workflow, code maintenance, integration, releases, etc. are done smoothly.
-                    </li>
-                  </ul>
-                  <span id="individualExpectations">
+<h4 id="using-issues">Using Issues:<span id="using-issues" class="anchor"></span><a class="fa fa-anchor" href="#using-issues" onclick="event.stopPropagation()"></a></h4>
+<ul>
+<li><strong>Record each of the user stories you plan to deliver as an issue in the issue tracker.</strong> e.g.,</li></ul>
+<div class="indented-level2">
+<div>
+<p>You can break the user story into issue subject and description in this way:</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>title</th>
+<th><code v-pre>As a user I can add a deadline</code></th></tr></thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td><code v-pre>... so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800"></p><p></p><p></p>
+<p>Alternatively, you can put the entire user story in the description.</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>title</th>
+<th><code v-pre>Add deadline</code></th></tr></thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td><code v-pre>As a user I can so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p>In both cases, apply the <span class="badge badge-pill badge-info">type.Story</span> label.</p></div></div>
+<ul>
+<li>
+<p><strong>Assign the <code v-pre>type.*</code> and <code v-pre>priority.*</code> labels to those issues.</strong></p></li>
+<li>
+<p><strong>Formalize the project plan</strong> by assigning relevant issues to the corresponding milestone.</p></li>
+<li>
+<p><strong>Define project tasks as issues</strong>. When you start implementing a user story (or a feature), break it down to smaller tasks if necessary. Define reasonable sized, standalone tasks.  <mark>Create issues for each</mark> of those tasks so that they can be tracked.</p>
+<ul>
+<li>
+<p>A typical task should be small enough for one person to do in a few hours. <span class="dimmed">eg.,</span></p>
+<ul>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad (reasons: not a one-person task, not small enough): <code v-pre>Write the Developer Guide</code></span></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good: <code v-pre>Update class diagram in the Developer Guide for v1.4</code></span></li></ul></li>
+<li>
+<p>There is no need to break things into VERY small tasks. Keep them as big as possible, but they should be no bigger than what you are going to assign a single person to do within a week. <span class="dimmed">eg.,</span></p>
+<ul>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad:<code v-pre>Implementing parser </code> (reason: too big).</span></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good:<code v-pre>Implementing parser support for adding of floating tasks</code></span></li></ul></li>
+<li>
+<p>Do not track things taken for granted. <span class="dimmed">e.g., <code v-pre>push code to repo</code> should not be a task to track. In the example given under the previous point, it is taken for granted that the owner will also (a) test the code and (b) push to the repo when it is ready. Those two need not be tracked as separate tasks.</span></p></li>
+<li>
+<p>Write a descriptive title for the issue. <span class="dimmed">e.g. <code v-pre>Add support for the 'undo' command to the parser</code></span></p>
+<ul>
+<li>Omit redundant details. In some cases, the issue title is enough to describe the task. In that case, no need to repeat it in the issue description. There is no need for well-crafted and detailed descriptions for tasks. A minimal description is enough. Similarly, labels such as <code v-pre>priority</code> can be omitted if you think they don't help you.<br><br></li></ul></li></ul></li>
+<li>
+<p><strong>Assign tasks (i.e., issues) to the corresponding team members using the <code v-pre>assignees</code> field.</strong> <mark>Normally, there should be some ongoing tasks and some pending tasks against each team member at any point</mark>.</p></li></ul>
 
-                    <h2 class="text-white bg-info p-1" id="fas-user-individual-expectations-2"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual Expectations<span id="fas-user-individual-expectations-2" class="anchor"></span><a class="fa fa-anchor" href="#fas-user-individual-expectations-2" onclick="event.stopPropagation()"></a></h2>
-                    <h4 id="individual-expectations-on-implementation-2"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Implementation</span><span id="individual-expectations-on-implementation-2" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-implementation-2" onclick="event.stopPropagation()"></a></h4>
-                    <ul>
-                      <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Contribute to the functional code of the product.</strong></span>
-                        <ul>
-                          <li>User-visible features are preferred, but it is not a strict requirement.:</li>
-                          <li><strong>The enhancement(s) should fit with the rest of the software</strong> (and the target user profile) and should have the consent of the team members. <span class="dimmed">You will lose marks if you go 'rogue' and add things that don't fit with the product.</span></li>
-                        </ul>
-                      </li>
-                    </ul>
-                    <div tags="m--cs2103" class="indented-level4">
-                      <p>Some examples:</p>
-                      <panel type="seamless" minimized class="algolia-no-index"><template slot="_header">
-                          <p>Example enhancements</p>
-                        </template>
-                        <ul>
-                          <li>Add a new feature <span class="dimmed">e.g. add the ability to view statistics</span></li>
-                          <li>Enhance an existing features in a major way <span class="dimmed">e.g. make the command syntax more user friendly and closer to natural language</span></li>
-                          <li>A redesign of the GUI <span class="dimmed">e.g. make it work like a chat application (note: chat is a form of CLI)</span></li>
-                          <li>A redesign of the code <span class="dimmed">e.g. Improve the design to improve the code quality.</span></li>
-                        </ul>
-                        <p></p>
-                      </panel>
-                      <p></p>
-                      <p></p>
-                    </div>
-                    <ul>
-                      <li>
-                        <p><strong>Tip: Contribute to all aspects of the project</strong> e.g. write backend code, frontend code, test code, user documentation, and developer documentation. <span class="dimmed">Reason: If you limit yourself to certain aspects only, you could lose marks allocated for the aspects you did not do. In addition, the final exam assumes that you are familiar with all aspects of the project.</span></p>
-                      </li>
-                      <li>
-                        <p><strong>Tip: Do <em>all</em> the work related to your enhancement yourself.</strong> <span class="dimmed">Reason: If there is no clear division of who did which enhancement, it will be difficult to divide project credit (or assign responsibility for bugs detected by testers) later.</span></p>
-                      </li>
-                    </ul>
-                    <div tags="m--cs2103">
-                      <ul>
-                        <li><strong>Tip: Divide the components of the product among team members</strong>. Notwithstanding the above, you are still recommended to divide the components of the product among team members so that each team member is <em>in charge</em> of one or more components. While others will be modifying those components to fit their features, your role as the <em>in charge</em> of a component is to guide others modifying that component <span class="dimmed">(reason: you are supposed to be the most knowledgeable about that component)</span> and protect that component from degrading <span class="dimmed">e.g., you can review others' changes to your component and suggest possible changes</span>.</li>
-                      </ul>
-                    </div>
-                    <h4 id="individual-expectations-on-documentation-2"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Documentation</span><span id="individual-expectations-on-documentation-2" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-documentation-2" onclick="event.stopPropagation()"></a></h4>
-                    <ul>
-                      <li><strong>Objective:</strong> showcase your ability to write both <em>user-facing documentation</em> and <em>developer-facing documentation</em>.</li>
-                      <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Update the User Guide (UG) and the Developer Guide (DG) parts</strong></span> that are related to the enhancements you added. The minimum requirement is given below. <span class="dimmed">(Reason: Evaluators will not be able to give you marks unless there is sufficient evidence of your documentation skills.)</span>
-                        <ul>
-                          <li>UG: 1 or more pages</li>
-                          <li>DG: 3 or more pages</li>
-                        </ul>
-                      </li>
-                      <li><strong>Tip: If the UG/DG updates for your enhancements are not enough to reach the above requirements</strong>, you can make up the shortfall by documenting 'proposed' features and alternative designs/implementations.</li>
-                      <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Use at least 2 types of UML diagrams in your DG updates</strong></span> i.e., diagrams you added yourself or those you modified significantly.</li>
-                    </ul>
-                    <h4 id="individual-expectations-on-testing-2"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Testing</span><span id="individual-expectations-on-testing-2" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-testing-2" onclick="event.stopPropagation()"></a></h4>
-                    <div id="testing-expectations">
-                      <ul>
-                        <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Write <em>some</em> automated tests</strong></span> so that we can evaluate your ability to write tests.</li>
-                      </ul>
-                      <div class="indented">
-                        <box>
-                          <p><strong>🤔 How much testings is enough?</strong> We expect you to decide. You learned different types of testing and what they try to achieve. Based on that, you should decide how much of each type is required. Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the effort required.<br>
-                            There is no requirement for a minimum coverage level. Note that in a production environment you are often required to have at least 90% of the code covered by tests. In this project, it can be less. <mark>The weaker your tests are, the higher the risk of bugs, which will cost marks if not fixed before the final submission.</mark></p>
-                        </box>
-                        <p></p>
-                      </div>
-                    </div>
-                    <h4 id="individual-expectations-on-teamwork-2"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Teamwork</span><span id="individual-expectations-on-teamwork-2" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-teamwork-2" onclick="event.stopPropagation()"></a></h4>
-                    <ul>
-                      <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Do an equal share of the <em>team-tasks</em></strong>.</span></li>
-                    </ul>
-                    <div id="team-tasks" class="indented-level2">
-                      <box>
-                        <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-                        <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                            <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p>
-                          </template>
-                          <span id="example-team-tasks">
-                            <p>Here is a non-exhaustive list of team-tasks:</p>
-                            <ol>
-                              <li>Setting up the GitHub team org/repo</li>
-                              <li>Necessary general code enhancements e.g.,
-                                <ol>
-                                  <li>Work related to renaming the product</li>
-                                  <li>Work related to changing the product icon</li>
-                                  <li>Morphing the product into a different product</li>
-                                </ol>
-                              </li>
-                              <li>Setting up tools e.g., GitHub, Gradle</li>
-                              <li>Maintaining the issue tracker</li>
-                              <li>Release management</li>
-                              <li>Updating user/developer docs that are not specific to a feature <span class="dimmed">e.g. documenting the target user profile</span></li>
-                              <li>Incorporating more useful tools/libraries/frameworks into the product or the project workflow <span class="dimmed">(e.g. automate more aspects of the project workflow using a GitHub plugin)</span></li>
-                            </ol>
-                          </span>
-                        </panel>
-                        <p></p>
-                      </box>
-                    </div>
-                    <ul>
-                      <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Carry an equal share of project roles and responsibilities</strong>.</span></li>
-                    </ul>
-                    <div class="indented-level2">
-                      <box>
-                        <span id="roles">
-                          <p><em>Roles</em> indicate aspects you are in charge of and responsible for. <span class="dimmed">E.g., if you are in charge of documentation, you are the person who should allocate which parts of the documentation is to be done by who, ensure the document is in right format, ensure consistency etc.</span></p>
-                          <panel type="seamless" class="algolia-no-index"><template slot="_header">
-                              <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Recommended roles and responsibilities</p>
-                            </template>
-                            <p>This is a non-exhaustive list; you may define additional roles.</p>
-                            <ul>
-                              <li><em>Team lead</em>: Responsible for overall project coordination.</li>
-                              <li><em>Documentation</em> (short for ‘in charge of documentation’): Responsible for the quality of various project documents.</li>
-                              <li><em>Testing</em>: Ensures the testing of the project is done properly and on time.</li>
-                              <li><em>Code quality</em>: Looks after code quality, ensures adherence to coding standards, etc.</li>
-                              <li><em>Deliverables and deadlines</em>: Ensure project deliverables are done on time and in the right format.</li>
-                              <li><em>Integration</em>: In charge of versioning of the code, maintaining the code repository, integrating various parts of the software to create a whole.</li>
-                              <li><em>Scheduling and tracking</em>: In charge of defining, assigning, and tracking project tasks.</li>
-                              <li><em>[Tool ABC] expert</em>: <span class="dimmed">e.g. Intellij expert, Git expert, etc.</span> Helps other team member with matters related to the specific tool.</li>
-                            </ul>
-                            <div tags="m--cs2103">
-                              <ul>
-                                <li><em>In charge of[Component XYZ]</em>: <span class="dimmed">e.g. In charge of <code v-pre>Model</code>, <code v-pre>UI</code>, <code v-pre>Storage</code>, etc.</span> If you are in charge of a component, you are expected to know that component well, and review changes done to that component in v1.3-v1.4.</li>
-                              </ul>
-                            </div>
-                          </panel>
-                          <p></p>
-                          <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Ensure each of the important roles are assigned to one person in the team. It is OK to have a 'backup' for each role, but <strong>for each aspect there should be one person who is unequivocally the person responsible for it</strong>. <span class="dimmed">Reason: when <em>everyone is responsible for everything</em>, no one is.</span></p>
-                        </span>
-                      </box>
-                      <p></p>
-                    </div>
-                    <ul>
-                      <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Review each others work</strong>.</span> <span class="dimmed">Reason: reviewing skills is a learning outcome, and it is mutually beneficial.</span></li>
-                    </ul>
-                  </span>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-          </div>
-          <p></p>
-          <h4 id="2-start-proper-milestone-management"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Start proper milestone management</span><span id="2-start-proper-milestone-management" class="anchor"></span><a class="fa fa-anchor" href="#2-start-proper-milestone-management" onclick="event.stopPropagation()"></a></h4>
-          <div>
-            <ul>
-              <li><strong>Set up the issue tracker</strong> as described in the panel below, if you haven't done so already.</li>
-            </ul>
-            <div class="indented-level2">
-              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E(extract): <strong>Setting up the issue tracker</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
-                  <h2 id="tp-issue-tracker-setup">tP Issue Tracker Setup<span id="tp-issue-tracker-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-issue-tracker-setup" onclick="event.stopPropagation()"></a></h2>
-                  <p>We recommend you configure the issue tracker of the tP team repo as follows:</p>
-                  <ul>
-                    <li>Delete existing labels and add the following labels.<br>
-                      <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Issue type</strong> labels are useful from the beginning of the project. The other labels are needed only when you start implementing the features.
-                    </li>
-                  </ul>
-                  <box>
-                    <p><strong>Issue type</strong> labels:</p>
-                    <ul>
-                      <li><code v-pre>type.Epic</code> : A big feature which can be broken down into smaller stories e.g. search</li>
-                      <li><code v-pre>type.Story</code> : A user story</li>
-                      <li><code v-pre>type.Enhancement</code>: An enhancement to an existing story</li>
-                      <li><code v-pre>type.Task</code> (or <code v-pre>type.Chore</code>) : Something that needs to be done, but not a story, bug, or an epic. e.g. Move testing code into a new folder)</li>
-                      <li><code v-pre>type.Bug</code> : A bug</li>
-                    </ul>
-                  </box>
-                  <box>
-                    <p><strong>Priority</strong> labels:</p>
-                    <ul>
-                      <li><code v-pre>priority.High</code> : Must do</li>
-                      <li><code v-pre>priority.Medium</code> : Nice to have</li>
-                      <li><code v-pre>priority.Low</code> : Unlikely to do</li>
-                    </ul>
-                  </box>
-                  <span id="bug-severity">
-                    <box>
-                      <p><strong>Bug Severity</strong> labels:</p>
-                      <ul>
-                        <li><code v-pre>severity.VeryLow</code> : A flaw that is purely cosmetic and does not affect usage e.g., a typo/spacing/layout/color/font issues in the docs or the UI that doesn't affect usage.</li>
-                        <li><code v-pre>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
-                        <li><code v-pre>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
-                        <li><code v-pre>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li>
-                      </ul>
-                    </box>
-                  </span>
-                  <ul>
-                    <li>
-                      <p>Create following milestones : <span tags="m--cs2103"><code v-pre>v1.1</code>, </span><code v-pre>v1.2</code>, <code v-pre>v1.3</code>, <code v-pre>v1.4</code></p>
-                    </li>
-                    <li>
-                      <p>You may configure other project settings as you wish. e.g. more labels, more milestones</p>
-                    </li>
-                  </ul>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-            <ul>
-              <li><strong>Start proper schedule tracking and milestone management</strong> as explained in the panel below.</li>
-            </ul>
-            <div class="indented-level2">
-              <panel type class="embedding algolia-no-index" minimized><template slot="_header">
-                  <p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E(extract): <strong>Project schedule tracking</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p>
-                </template>
-                <div>
-                  <h2 id="tp-project-schedule-tracking">tP Project Schedule Tracking<span id="tp-project-schedule-tracking" class="anchor"></span><a class="fa fa-anchor" href="#tp-project-schedule-tracking" onclick="event.stopPropagation()"></a></h2>
-                  <p>In general, use the issue tracker (Milestones, Issues, PRs, Tags, Releases, and Labels) for assigning, scheduling, and tracking <em>all</em> noteworthy project tasks, including user stories. Update the issue tracker regularly to reflect the current status of the project. You can also use GitHub's <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU">Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.</p>
+<div id="using-milestones">
+<h4 id="using-milestones">Using Milestones:<span id="using-milestones" class="anchor"></span><a class="fa fa-anchor" href="#using-milestones" onclick="event.stopPropagation()"></a></h4>
+<p><mark>Given below are the conditions to satisfy for a milestone to be considered <em>properly managed</em></mark>:</p>
+<p><strong>Planning a Milestone</strong> (to do within the first week of the iteration):<br></p>
+<ul>
+<li>
+<p><strong>Issues assigned to the milestone, team members assigned to issues</strong>: Used <a href="https://help.github.com/articles/about-milestones/">GitHub milestones</a> to indicate which issues are to be handled for which milestone by assigning issues to suitable milestones. Ensured issues are assigned to team members. <span class="dimmed">Note that you can change the milestone plan along the way as necessary.</span></p></li>
+<li>
+<p><strong>Deadline set for the milestones</strong> (in the GitHub milestone). <span class="dimmed">Your internal milestones can be set earlier than the deadlines we have set, to give you a buffer.</span></p></li></ul>
+<p><strong>Wrapping up a Milestone</strong>:<br></p>
+<ul>
+<li>
+<p><strong>A working product tagged</strong> with the correct tag (e.g. <code v-pre>v1.3</code>) and is pushed to the main repo or a <strong>product <em>release</em> done on GitHub</strong> (<a href="https://github.com/se-edu/addressbook-level3/releases/">example</a>).</p></li>
+<li>
+<p><strong>CI passing</strong> for the version tagged/released.</p></li>
+<li>
+<p><strong>Milestone updated to match the product</strong> i.e. all issues completed and PRs merged for the milestone should be assigned to the milestone. Incomplete issues/PRs should be moved to a future milestone.<br>
+<img src="/website/admin/images/assigningIssuesToMilestones.png" width="700"></p></li>
+<li>
+<p><strong>Milestone closed.</strong><br>
+<img src="/website/admin/images/closingMilestones.png" width="700"></p></li></ul></div></div></panel></div><p></p>
+<div class="indented">
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Try to achieve all milestone requirements, but do not fret if you miss a few</strong>.  You will get full marks as long as you achieve about 60% of the milestone requirements on average. Yes, that's a pretty low bar, but we have set it low in order to reduce workload and stress. Ideally, you should achieve close to 80-90%.</p></div></div>
+<p></p>
+<h4 id="3-add-the-first-functionality-increment"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Add the first functionality increment</span><span id="3-add-the-first-functionality-increment" class="anchor"></span><a class="fa fa-anchor" href="#3-add-the-first-functionality-increment" onclick="event.stopPropagation()"></a></h4>
+<div>
+<ul>
+<li>
+<p>Add functionality in small steps, aiming to deliver the first working version of your product by the mid-milestone (i.e., in one week), and v1.2 at the end of this iteration (i.e., in two weeks).<br>
+<strong>If you split the iteration into two smaller iterations</strong> of one-week each (recommended), name the first one <code v-pre>v1.2</code> and the second one <code v-pre>v1.2b</code> so that the dashboard can track them accurately.</p></li>
+<li>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>From this point onwards each member is expected to contribute <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">the amount of code does not matter; even small contributions are acceptable</span>some</span> code to each <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">v1.3, v1.4</span> milestone</span>, preferably each week; only merged code is considered as contributions</strong> <span class="dimmed"><span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">The ability to deliver code incrementally is an important learning outcome of this module because incremental delivery, among other things, improves the <em>visibility</em> of your work.</span>(Reason)</span></span>. <br></p></li></ul></div>
+<p></p></div></div>
 
-                  <h4 id="using-issues">Using Issues:<span id="using-issues" class="anchor"></span><a class="fa fa-anchor" href="#using-issues" onclick="event.stopPropagation()"></a></h4>
-                  <ul>
-                    <li><strong>Record each of the user stories you plan to deliver as an issue in the issue tracker.</strong> e.g.,</li>
-                  </ul>
-                  <div class="indented-level2">
-                    <div>
-                      <p>You can break the user story into issue subject and description in this way:</p>
-                      <div class="table-responsive">
-                        <table class="markbind-table table table-bordered table-striped">
-                          <thead>
-                            <tr>
-                              <th>title</th>
-                              <th><code v-pre>As a user I can add a deadline</code></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Description</td>
-                              <td><code v-pre>... so that I can keep track of my deadlines</code></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800"></p>
-                      <p></p>
-                      <p></p>
-                      <p>Alternatively, you can put the entire user story in the description.</p>
-                      <div class="table-responsive">
-                        <table class="markbind-table table table-bordered table-striped">
-                          <thead>
-                            <tr>
-                              <th>title</th>
-                              <th><code v-pre>Add deadline</code></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td>Description</td>
-                              <td><code v-pre>As a user I can so that I can keep track of my deadlines</code></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <p>In both cases, apply the <span class="badge badge-pill badge-info">type.Story</span> label.</p>
-                    </div>
-                  </div>
-                  <ul>
-                    <li>
-                      <p><strong>Assign the <code v-pre>type.*</code> and <code v-pre>priority.*</code> labels to those issues.</strong></p>
-                    </li>
-                    <li>
-                      <p><strong>Formalize the project plan</strong> by assigning relevant issues to the corresponding milestone.</p>
-                    </li>
-                    <li>
-                      <p><strong>Define project tasks as issues</strong>. When you start implementing a user story (or a feature), break it down to smaller tasks if necessary. Define reasonable sized, standalone tasks. <mark>Create issues for each</mark> of those tasks so that they can be tracked.</p>
-                      <ul>
-                        <li>
-                          <p>A typical task should be small enough for one person to do in a few hours. <span class="dimmed">eg.,</span></p>
-                          <ul>
-                            <li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad (reasons: not a one-person task, not small enough): <code v-pre>Write the Developer Guide</code></span></li>
-                            <li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good: <code v-pre>Update class diagram in the Developer Guide for v1.4</code></span></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <p>There is no need to break things into VERY small tasks. Keep them as big as possible, but they should be no bigger than what you are going to assign a single person to do within a week. <span class="dimmed">eg.,</span></p>
-                          <ul>
-                            <li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad:<code v-pre>Implementing parser </code> (reason: too big).</span></li>
-                            <li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good:<code v-pre>Implementing parser support for adding of floating tasks</code></span></li>
-                          </ul>
-                        </li>
-                        <li>
-                          <p>Do not track things taken for granted. <span class="dimmed">e.g., <code v-pre>push code to repo</code> should not be a task to track. In the example given under the previous point, it is taken for granted that the owner will also (a) test the code and (b) push to the repo when it is ready. Those two need not be tracked as separate tasks.</span></p>
-                        </li>
-                        <li>
-                          <p>Write a descriptive title for the issue. <span class="dimmed">e.g. <code v-pre>Add support for the 'undo' command to the parser</code></span></p>
-                          <ul>
-                            <li>Omit redundant details. In some cases, the issue title is enough to describe the task. In that case, no need to repeat it in the issue description. There is no need for well-crafted and detailed descriptions for tasks. A minimal description is enough. Similarly, labels such as <code v-pre>priority</code> can be omitted if you think they don't help you.<br><br></li>
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <p><strong>Assign tasks (i.e., issues) to the corresponding team members using the <code v-pre>assignees</code> field.</strong> <mark>Normally, there should be some ongoing tasks and some pending tasks against each team member at any point</mark>.</p>
-                    </li>
-                  </ul>
+        <nav id="page-nav" class="navbar navbar-light bg-transparent">
+<div class="border-left-grey nav-inner position-sticky slim-scroll">
 
-                  <div id="using-milestones">
-                    <h4 id="using-milestones">Using Milestones:<span id="using-milestones" class="anchor"></span><a class="fa fa-anchor" href="#using-milestones" onclick="event.stopPropagation()"></a></h4>
-                    <p><mark>Given below are the conditions to satisfy for a milestone to be considered <em>properly managed</em></mark>:</p>
-                    <p><strong>Planning a Milestone</strong> (to do within the first week of the iteration):<br></p>
-                    <ul>
-                      <li>
-                        <p><strong>Issues assigned to the milestone, team members assigned to issues</strong>: Used <a href="https://help.github.com/articles/about-milestones/">GitHub milestones</a> to indicate which issues are to be handled for which milestone by assigning issues to suitable milestones. Ensured issues are assigned to team members. <span class="dimmed">Note that you can change the milestone plan along the way as necessary.</span></p>
-                      </li>
-                      <li>
-                        <p><strong>Deadline set for the milestones</strong> (in the GitHub milestone). <span class="dimmed">Your internal milestones can be set earlier than the deadlines we have set, to give you a buffer.</span></p>
-                      </li>
-                    </ul>
-                    <p><strong>Wrapping up a Milestone</strong>:<br></p>
-                    <ul>
-                      <li>
-                        <p><strong>A working product tagged</strong> with the correct tag (e.g. <code v-pre>v1.3</code>) and is pushed to the main repo or a <strong>product <em>release</em> done on GitHub</strong> (<a href="https://github.com/se-edu/addressbook-level3/releases/">example</a>).</p>
-                      </li>
-                      <li>
-                        <p><strong>CI passing</strong> for the version tagged/released.</p>
-                      </li>
-                      <li>
-                        <p><strong>Milestone updated to match the product</strong> i.e. all issues completed and PRs merged for the milestone should be assigned to the milestone. Incomplete issues/PRs should be moved to a future milestone.<br>
-                          <img src="/website/admin/images/assigningIssuesToMilestones.png" width="700">
-                        </p>
-                      </li>
-                      <li>
-                        <p><strong>Milestone closed.</strong><br>
-                          <img src="/website/admin/images/closingMilestones.png" width="700">
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </panel>
-            </div>
-            <p></p>
-            <div class="indented">
-              <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Try to achieve all milestone requirements, but do not fret if you miss a few</strong>. You will get full marks as long as you achieve about 60% of the milestone requirements on average. Yes, that's a pretty low bar, but we have set it low in order to reduce workload and stress. Ideally, you should achieve close to 80-90%.</p>
-            </div>
-          </div>
-          <p></p>
-          <h4 id="3-add-the-first-functionality-increment"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Add the first functionality increment</span><span id="3-add-the-first-functionality-increment" class="anchor"></span><a class="fa fa-anchor" href="#3-add-the-first-functionality-increment" onclick="event.stopPropagation()"></a></h4>
-          <div>
-            <ul>
-              <li>
-                <p>Add functionality in small steps, aiming to deliver the first working version of your product by the mid-milestone (i.e., in one week), and v1.2 at the end of this iteration (i.e., in two weeks).<br>
-                  <strong>If you split the iteration into two smaller iterations</strong> of one-week each (recommended), name the first one <code v-pre>v1.2</code> and the second one <code v-pre>v1.2b</code> so that the dashboard can track them accurately.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>From this point onwards each member is expected to contribute <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">the amount of code does not matter; even small contributions are acceptable</span>some</span> code to each <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">v1.3, v1.4</span> milestone</span>, preferably each week; only merged code is considered as contributions</strong> <span class="dimmed"><span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">The ability to deliver code incrementally is an important learning outcome of this module because incremental delivery, among other things, improves the <em>visibility</em> of your work.</span>(Reason)</span></span>. <br>
-                </p>
-              </li>
-            </ul>
-          </div>
-          <p></p>
-        </div>
-      </div>
+<nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+<a class="nav-link py-1" href="#week-8-fri-oct-2nd-project">Week 8 [Fri, Oct 2nd] - Project&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#ip">iP&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#1-evaluate-two-peer-ips-sat-oct-10th-2359">1 Evaluate two peer iPs  Sat, Oct 10th 2359 counted for participation&#x200E;</a>
+</nav>
+<a class="nav-link py-1" href="#tp-mid-v1-2">tP: mid-v1.2&#x200E;</a>
+<nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+<a class="nav-link py-1" href="#1-ensure-you-know-tp-expectations">1  Ensure you know tP expectations&#x200E;</a>
+<a class="nav-link py-1" href="#2-start-proper-milestone-management">2  Start proper milestone management&#x200E;</a>
+<a class="nav-link py-1" href="#3-add-the-first-functionality-increment">3  Add the first functionality increment&#x200E;</a>
+</nav>
+</nav>
 
-      <nav id="page-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-left-grey nav-inner position-sticky slim-scroll">
-
-          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#week-8-fri-oct-2nd-project">Week 8 [Fri, Oct 2nd] - Project&#x200E;</a>
-            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#ip">iP&#x200E;</a>
-              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                <a class="nav-link py-1" href="#1-evaluate-two-peer-ips-sat-oct-10th-2359">1 Evaluate two peer iPs Sat, Oct 10th 2359 counted for participation&#x200E;</a>
-              </nav>
-              <a class="nav-link py-1" href="#tp-mid-v1-2">tP: mid-v1.2&#x200E;</a>
-              <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-                <a class="nav-link py-1" href="#1-ensure-you-know-tp-expectations">1 Ensure you know tP expectations&#x200E;</a>
-                <a class="nav-link py-1" href="#2-start-proper-milestone-management">2 Start proper milestone management&#x200E;</a>
-                <a class="nav-link py-1" href="#3-add-the-first-functionality-increment">3 Add the first functionality increment&#x200E;</a>
-              </nav>
-            </nav>
-
-          </nav>
-        </div>
-      </nav>
-    </div>
+</nav>
+</div>
+</nav>
+</div>
     <footer>
-
-      <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sat, 24 Oct 2020, 21:14:45 GMT+8]</small>
-      </div>
-    </footer>
-  </div>
+  
+  <div class="text-center">
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 28 Oct 2020, 0:40:42 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>
@@ -794,34 +532,28 @@
   const enableSearch = true
 </script>
 <script src="../../markbind/js/setup.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
-<script>
-  function initAlgolia() {
-    docsearch({
-      apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
-      indexName: "nus-cs2103-ay1920s1",
-      inputSelector: "#algolia-search-input",
-      algoliaOptions: {
-        "hitsPerPage": 10
-      },
-      debug: false,
-    });
-  }
-  MarkBind.afterSetup(initAlgolia);
-</script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag('js', new Date());
-
-  gtag('config', 'UA-122519234-1');
-</script>
+    <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
+    <script>
+    function initAlgolia() {
+      docsearch({
+        apiKey: "0b1e4ae12d54a6114a4c5d131a850c2b",
+        indexName: "nus-cs2103-ay1920s1",
+        inputSelector: "#algolia-search-input",
+        algoliaOptions: {"hitsPerPage":10},
+        debug: false,
+      });
+    }
+    MarkBind.afterSetup(initAlgolia);
+  </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122519234-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-122519234-1');
+    </script>
 <script src="../../markbind/layouts/default/scripts.js"></script>
-
 </html>

@@ -210,7 +210,7 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <p></p>
 <h4 id="4-update-the-dg-with-design-details"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Update the DG with design details</span><span id="4-update-the-dg-with-design-details" class="anchor"></span><a class="fa fa-anchor" href="#4-update-the-dg-with-design-details" onclick="event.stopPropagation()"></a></h4>
 <div>
-<div class="indented-level2">
+<div class="indented-level2" tags="m--cs2103">
 <panel type="info" minimized class="algolia-no-index"><template slot="_header"><p>Why the hurry to update documents? Why not wait till the implementation is finalized?</p></template>
 <ul>
 <li>
@@ -245,9 +245,9 @@ For an example, see <a href="https://nus-cs2103-ay2021s1.github.io/tp/DeveloperG
 <p>AB3 uses PlantUML (see the guide <a href="https://se-education.org/guides/tutorials/plantUml.html"><em>Using PlantUML</em> @SE-EDU/guides</a> for more info).<br></p></li>
 <li>
 <p>You may use any other tool too (e.g., PowerPoint). But if you do, note the following:<br>
-<mark>Choose a diagramming tool that allows incremental updates</mark> to diagrams <span class="dimmed">(reason: because diagrams need to be updated multiple times as the product evolves)</span>. For example, if you use PowerPoint to draw diagrams, also commit the source PowerPoint files so that they can be reused when updating diagrams later.</p></li>
+<mark>Choose a diagramming tool that has some 'source' format that can be version-controlled using git and updated incrementally</mark> <span class="dimmed">(reason: because diagrams need to evolve with the code that is already being version controlled using git)</span>. For example, if you use PowerPoint to draw diagrams, also commit the source PowerPoint files so that they can be reused when updating diagrams later.</p></li>
 <li>
-<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Can IDE-generated UML diagrams be used in project submissions? Not a good idea. Given are three reasons each of which can be reported by evaluators as 'bugs' in your diagrams, costing you marks:</p>
+<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Can <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., automatically reverse engineered from the Java code</span>IDE-generated</span> UML diagrams be used in project submissions? Not a good idea. Given are three reasons each of which can be reported by evaluators as 'bugs' in your diagrams, costing you marks:</p>
 <ul>
 <li>They often don't follow the standard UML notation (e.g., they add extra icons).</li>
 <li>They tend to include <em>every</em> little detail whereas we want to limit UML diagrams to important details only, to improve readability.</li>
@@ -268,9 +268,9 @@ Ways to simplify diagrams:
 <li>You can use <code v-pre>ref</code> frames to break sequence diagrams to multiple diagrams. Similarly, <code v-pre>rake</code>s can be used to divide activity diagrams.</li></ul></li>
 <li><strong>Stay at the highest level of abstraction</strong> possible e.g., note how <span trigger="click" for="modal:ipWeek10-archiSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-archiSd'].show()" class="trigger-click">this sequence diagram</span> shows only the interactions between architectural components, abstracting away the interactions that happen inside each component.</li>
 <li><strong>Use visual representations</strong> as much as possible. E.g., show associations and navigabilities using lines and arrows connecting classes, rather than adding a variable in one of the classes.</li>
-<li>For some more examples, see <span trigger="click" for="modal:ipWeek10-umlExamples" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-umlExamples'].show()" class="trigger-click">here</span>.</li></ul></li>
+<li>For some more examples of what NOT to do, see <span trigger="click" for="modal:ipWeek10-umlExamples" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-umlExamples'].show()" class="trigger-click">here</span>.</li></ul></li>
 <li><strong>Integrate diagrams into the description.</strong> Place the diagram close to where it is being described.</li>
-<li><strong>Use code snippets sparingly.</strong> The more you use code snippets in the DG, and longer the code snippet, the higher the risk of it getting outdated quickly. Instead, use code snippets only when necessary and cite only the strictly relevant parts only.</li>
+<li><strong>Use code snippets sparingly.</strong> The more you use code snippets in the DG, and longer the code snippet, the higher the risk of it getting outdated quickly. Instead, use code snippets only when necessary and cite only the strictly relevant parts only. You can also use pseudo code instead of actual programming code.</li>
 <li><strong>Resize diagrams</strong> so that the text size in the diagram matches the the text size of the main text of the diagram. See <span trigger="click" for="modal:ipWeek10-diagramSizeNegative" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-diagramSizeNegative'].show()" class="trigger-click">example</span>.</li></ul>
 <b-modal id="modal:ipWeek10-umlExamples" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-umlExamples" class="algolia-no-index"><template slot="modal-title">UML Diagrams: Negative Examples </template>
 <p>These class diagrams seem to have lot of member details, which can get outdated pretty quickly:<br>
@@ -355,7 +355,7 @@ If the app asks for public repo access permissions, grant it (just go with the d
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 28 Oct 2020, 21:12:01 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, 29 Oct 2020, 15:59:45 GMT+8]</small></div></footer></div>
 </body>
 <script src="../markbind/js/vue.min.js"></script>
 <script src="../markbind/js/components.min.js"></script>

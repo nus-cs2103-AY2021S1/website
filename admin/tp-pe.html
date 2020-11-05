@@ -154,7 +154,7 @@
 <ul>
 <li>The primary objective of the PE is to <mark>increase the rigor of project grading</mark>. Assessing most aspects of the project involves an element subjectivity. As the project counts for a large percentage of the final grade, it is not prudent to rely on evaluations of tutors alone as there can be significant variations between how different tutors assess projects. That is why we collect more data points via the PE so as to minimize the chance of your project being affected by evaluator-bias.</li>
 <li>PE is also <mark>used to evaluate your manual testing skills, product evaluation skills, effort estimation skills</mark> etc.</li>
-<li>Note that significant project components are <mark>not graded solely based on peer ratings</mark>. Rather, PE data are mostly used to cross-validate tutors' grades and identify cases that need further investigation. When peer inputs are used for grading, they are usually combined with tutor evaluations with appropriate weight for each. In some cases ratings from team members are given a higher weight compared to ratings from other peers, if that is appropriate.</li>
+<li>Note that significant project components are <mark>not graded solely based on peer ratings</mark>. Rather, PE data are cross-validated with tutors' grades to identify cases that need further investigation. When peer inputs are used for grading, they are usually combined with tutors' grades with appropriate weight for each. In some cases ratings from team members are given a higher weight compared to ratings from other peers, if that is appropriate.</li>
 <li>PE is <mark>not a means of <em>pitting you against each other</em></mark>. Developers and testers play for the same side; they need to push each other to improve the quality of their work -- not bring down each other.</li></ul>
 <p><strong>Grading</strong>:</p>
 <ul>
@@ -176,7 +176,7 @@
 <li>If the team you tested has a low bug count i.e., total bugs found by all testers is low, we will fall back on other means <span class="dimmed">(e.g., performance in PE dry run)</span> to calculate your marks for system/acceptance testing.</li>
 <li>Your marks for developer testing depends on the <em>bug density</em> rather than total bug count. Here's an example:
 <ul>
-<li><code v-pre>n</code> bugs found in your feature; it is a difficult feature consisting of lot of code → 4/5 marks</li>
+<li><code v-pre>n</code> bugs found in your feature; it is a big feature consisting of lot of code → 4/5 marks</li>
 <li><code v-pre>n</code> bugs found in your feature; it is a small feature with a small amount of code → 1/5 marks</li></ul></li>
 <li>You don't need to find <em>all</em> bugs in the product to get full marks. For example, finding half of the bugs of that product or 4 bugs, whichever the lower, could earn you full marks.</li>
 <li>Excessive incorrect downgrading/rejecting/<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">marking as duplicates</span>duplicate-flagging</span>, if deemed an attempt to <em>game the system</em>, will be penalized.</li></ul></div></panel></div></span>
@@ -217,7 +217,7 @@
 <p><strong>Type</strong> labels:</p>
 <ul>
 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance-testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li></ul></box></div>
 <p></p></panel><p></p><p></p></div>
 <ul>
@@ -238,27 +238,19 @@
 </div></panel></div>
 <p></p>
 <h4 id="pe-phase-1-bug-reporting"><span class="badge badge-success">PE</span> <span class="text-success">Phase 1: Bug Reporting</span><span id="pe-phase-1-bug-reporting" class="anchor"></span><a class="fa fa-anchor" href="#pe-phase-1-bug-reporting" onclick="event.stopPropagation()"></a></h4>
-<box type="important" light icon-size="2x"><template slot="icon"><span aria-hidden="true" class="fas fa-exclamation-circle"></span></template>
-<p><strong>PE Phase 1 is an 'exam', to be done under exam conditions:</strong></p>
+<box type="important" seamless><template slot="icon"><span aria-hidden="true" class="fas fa-exclamation-circle"></span></template>
+<p><strong>PE Phase 1 will conducted under exam conditions. <mark>We will be following the <a href="https://mysoc.nus.edu.sg/academic/e-exam-sop-for-students/">SoC's E-Exam SOP</a></mark></strong>, combined with the deviations/refinements given below. Any non-compliance will be dealt with similar to a non-compliance in the final exam.</p>
 <ul>
-<li>You are not allowed to communicate with others (except the invigilators).</li>
-<li>You are not allowed to share your work with others.</li>
-<li>Violators will be reported to the university for disciplinary action.</li></ul></box>
-<box type="info" light>
-<p><strong>Online channels used for the PE</strong>:</p>
+<li><strong>Proctoring will be done via Zoom.</strong> No admission if the requirements are not met (e.g., display name, camera placement).</li>
+<li><strong>Recording the screen is not required.</strong></li>
+<li><strong>Only one screen is allowed.</strong></li>
+<li><strong>Do not use the public chat channel to ask questions</strong> from the prof. If you do, you might accidentally reveal which team you are testing.</li>
+<li><strong>Use MS Teams (not Zoom) private messages to communicate with the prof.</strong> Fall back on Zoom chat only if you didn't receive a reply via MST.</li>
+<li><strong>Do not view video Zoom feeds of others</strong> while the testing is ongoing. Keep the video view minimized.</li>
+<li><strong>Do not visit any website other than LumiNUS.</strong> In particular, do not visit GitHub. If you need to visit a website, please ask for permission first.</li>
+<li><strong>Do not use any other software running</strong> in the background e.g., telegram chat</li></ul></box>
 <ul>
-<li><strong><strong>Gitter</strong></strong>:
-<ul>
-<li>Prof will be online in <a href="https://gitter.im/nus-cs2103-AY2021S1/community">Gitter</a>.</li>
-<li><mark>Direct all your queries to prof as private messages to <code v-pre>@damithc</code>. <span class="text-danger">Do not use the public chat channel</span> .</mark> If you use the main channel, you might accidentally reveal which team you are testing.</li></ul></li>
-<li><strong><strong>Zoom</strong></strong>:
-<ul>
-<li>There will be a Zoom meeting (details will be announced later) to provide you with audio announcements.</li>
-<li>Join it and <strong>keep the speaker</strong> on during the PE session so that you can hear our announcements.</li>
-<li>You can use it to chat with the prof (but Gitter is preferred for chatting as it's harder to post screenshots in Zoom chats).</li>
-<li>You will not be able to share your screen, share your cam, or talk to us.</li></ul></li></ul></box>
-<ul>
-<li><strong>When, where</strong>: Week 13 lecture slot</li></ul>
+<li><strong>When, where</strong>: Week 13 lecture slot. Use the same Zoom link used for the regular lecture.</li></ul>
 <h5 id="pe-phase-1-part-i-product-testing-60-minutes"><span class="badge badge-success">PE Phase 1 - Part I</span> <span class="text-success">Product Testing [60 minutes]</span><span id="pe-phase-1-part-i-product-testing-60-minutes" class="anchor"></span><a class="fa fa-anchor" href="#pe-phase-1-part-i-product-testing-60-minutes" onclick="event.stopPropagation()"></a></h5>
 <p><strong>Test the product and report bugs</strong> as described below. You may report both product bugs and documentation bugs during this period.</p>
 <div>
@@ -281,7 +273,7 @@
 <li>Put the downloaded jar file <mark>in an empty folder</mark>.</li>
 <li>Open a command window. Run the <code v-pre>java -version</code> command to ensure you are using Java 11.</li>
 <li>Launch the jar file <mark>using the <code v-pre>java -jar</code> command</mark> (do not use double-clicking).</li>
-<li><strong>If the product doesn't work at all:</strong> If the product fails catastrophically <span class="dimmed">e.g., cannot even launch, or even the basic commands crash the app</span>, contact the invigilator (via Gitter or Zoom chat) to receive a <em>fallback</em> team to test.</li></ul>
+<li><strong>If the product doesn't work at all:</strong> If the product fails catastrophically <span class="dimmed">e.g., cannot even launch, or even the basic commands crash the app</span>, contact the invigilator (via MS Teams, and failing that, via Zoom chat) to receive a <em>fallback</em> team to test.</li></ul>
 <h6 id="b-what-to-test"><div class="text-white bg-secondary p-1">b) What to test</div><span id="b-what-to-test" class="anchor"></span><a class="fa fa-anchor" href="#b-what-to-test" onclick="event.stopPropagation()"></a></h6>
 <tabs active="1">
 <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
@@ -358,7 +350,7 @@
 <span aria-hidden="true" class="fas fa-bug"></span> A legitimate user behavior is not handled <span class="dimmed">e.g. incorrect commands, extra parameters</span><br>
 <span aria-hidden="true" class="fas fa-bug"></span> Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span><br></p></div></panel></div><p></p>
 <ul>
-<li>Do not post suggestions but if a feature is missing a critical functionality that makes the feature less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li></ul>
+<li>Do not post suggestions but if the product is missing a critical functionality that makes the product less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li></ul>
 <div class="indented-level2">
 <panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
@@ -452,7 +444,7 @@
 <p><strong>Type</strong> labels:</p>
 <ul>
 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance-testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li></ul></box></div></div></box></div>
 <h5 id="pe-phase-1-part-ii-evaluating-documents-30-minutes"><span class="badge badge-success">PE Phase 1 - Part II</span> <span class="text-success">Evaluating Documents [30 minutes]</span><span id="pe-phase-1-part-ii-evaluating-documents-30-minutes" class="anchor"></span><a class="fa fa-anchor" href="#pe-phase-1-part-ii-evaluating-documents-30-minutes" onclick="event.stopPropagation()"></a></h5>
 <ul>
@@ -715,7 +707,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <p><strong>Type</strong> labels:</p>
 <ul>
 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance-testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li></ul></box></div>
 <ul>
 <li><strong>If you disagree with the original severity assigned to the bug</strong>, you may change it to the correct level.</li></ul>
@@ -855,7 +847,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <p><strong>Type</strong> labels:</p>
 <ul>
 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance-testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li></ul></box></div>
 <p></p></panel><p></p><p></p></div>
 <ul>
@@ -899,7 +891,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <li>Put the downloaded jar file <mark>in an empty folder</mark>.</li>
 <li>Open a command window. Run the <code v-pre>java -version</code> command to ensure you are using Java 11.</li>
 <li>Launch the jar file <mark>using the <code v-pre>java -jar</code> command</mark> (do not use double-clicking).</li>
-<li><strong>If the product doesn't work at all:</strong> If the product fails catastrophically <span class="dimmed">e.g., cannot even launch, or even the basic commands crash the app</span>, contact the invigilator (via Gitter or Zoom chat) to receive a <em>fallback</em> team to test.</li></ul>
+<li><strong>If the product doesn't work at all:</strong> If the product fails catastrophically <span class="dimmed">e.g., cannot even launch, or even the basic commands crash the app</span>, contact the invigilator (via MS Teams, and failing that, via Zoom chat) to receive a <em>fallback</em> team to test.</li></ul>
 <h6 id="b-what-to-test-2"><div class="text-white bg-secondary p-1">b) What to test</div><span id="b-what-to-test-2" class="anchor"></span><a class="fa fa-anchor" href="#b-what-to-test-2" onclick="event.stopPropagation()"></a></h6>
 <tabs active="0">
 <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
@@ -976,7 +968,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <span aria-hidden="true" class="fas fa-bug"></span> A legitimate user behavior is not handled <span class="dimmed">e.g. incorrect commands, extra parameters</span><br>
 <span aria-hidden="true" class="fas fa-bug"></span> Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span><br></p></div></panel></div><p></p>
 <ul>
-<li>Do not post suggestions but if a feature is missing a critical functionality that makes the feature less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li></ul>
+<li>Do not post suggestions but if the product is missing a critical functionality that makes the product less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li></ul>
 <div class="indented-level2">
 <panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
@@ -1070,7 +1062,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <p><strong>Type</strong> labels:</p>
 <ul>
 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance-testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li></ul></box></div></div></box></div>
 <b-modal id="modal:v1.3-ppp" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v1.3-ppp" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project →</template>
   <div>
@@ -1174,7 +1166,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <ul>
 <li>The primary objective of the PE is to <mark>increase the rigor of project grading</mark>. Assessing most aspects of the project involves an element subjectivity. As the project counts for a large percentage of the final grade, it is not prudent to rely on evaluations of tutors alone as there can be significant variations between how different tutors assess projects. That is why we collect more data points via the PE so as to minimize the chance of your project being affected by evaluator-bias.</li>
 <li>PE is also <mark>used to evaluate your manual testing skills, product evaluation skills, effort estimation skills</mark> etc.</li>
-<li>Note that significant project components are <mark>not graded solely based on peer ratings</mark>. Rather, PE data are mostly used to cross-validate tutors' grades and identify cases that need further investigation. When peer inputs are used for grading, they are usually combined with tutor evaluations with appropriate weight for each. In some cases ratings from team members are given a higher weight compared to ratings from other peers, if that is appropriate.</li>
+<li>Note that significant project components are <mark>not graded solely based on peer ratings</mark>. Rather, PE data are cross-validated with tutors' grades to identify cases that need further investigation. When peer inputs are used for grading, they are usually combined with tutors' grades with appropriate weight for each. In some cases ratings from team members are given a higher weight compared to ratings from other peers, if that is appropriate.</li>
 <li>PE is <mark>not a means of <em>pitting you against each other</em></mark>. Developers and testers play for the same side; they need to push each other to improve the quality of their work -- not bring down each other.</li></ul>
 <p><strong>Grading</strong>:</p>
 <ul>
@@ -1196,7 +1188,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <li>If the team you tested has a low bug count i.e., total bugs found by all testers is low, we will fall back on other means <span class="dimmed">(e.g., performance in PE dry run)</span> to calculate your marks for system/acceptance testing.</li>
 <li>Your marks for developer testing depends on the <em>bug density</em> rather than total bug count. Here's an example:
 <ul>
-<li><code v-pre>n</code> bugs found in your feature; it is a difficult feature consisting of lot of code → 4/5 marks</li>
+<li><code v-pre>n</code> bugs found in your feature; it is a big feature consisting of lot of code → 4/5 marks</li>
 <li><code v-pre>n</code> bugs found in your feature; it is a small feature with a small amount of code → 1/5 marks</li></ul></li>
 <li>You don't need to find <em>all</em> bugs in the product to get full marks. For example, finding half of the bugs of that product or 4 bugs, whichever the lower, could earn you full marks.</li>
 <li>Excessive incorrect downgrading/rejecting/<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">marking as duplicates</span>duplicate-flagging</span>, if deemed an attempt to <em>game the system</em>, will be penalized.</li></ul></div></panel></div></span>
@@ -1237,7 +1229,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <p><strong>Type</strong> labels:</p>
 <ul>
 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance-testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li></ul></box></div>
 <p></p></panel><p></p><p></p></div>
 <ul>
@@ -1258,27 +1250,19 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 </div></panel></div>
 <p></p>
 <h4 id="pe-phase-1-bug-reporting-2"><span class="badge badge-success">PE</span> <span class="text-success">Phase 1: Bug Reporting</span><span id="pe-phase-1-bug-reporting-2" class="anchor"></span><a class="fa fa-anchor" href="#pe-phase-1-bug-reporting-2" onclick="event.stopPropagation()"></a></h4>
-<box type="important" light icon-size="2x"><template slot="icon"><span aria-hidden="true" class="fas fa-exclamation-circle"></span></template>
-<p><strong>PE Phase 1 is an 'exam', to be done under exam conditions:</strong></p>
+<box type="important" seamless><template slot="icon"><span aria-hidden="true" class="fas fa-exclamation-circle"></span></template>
+<p><strong>PE Phase 1 will conducted under exam conditions. <mark>We will be following the <a href="https://mysoc.nus.edu.sg/academic/e-exam-sop-for-students/">SoC's E-Exam SOP</a></mark></strong>, combined with the deviations/refinements given below. Any non-compliance will be dealt with similar to a non-compliance in the final exam.</p>
 <ul>
-<li>You are not allowed to communicate with others (except the invigilators).</li>
-<li>You are not allowed to share your work with others.</li>
-<li>Violators will be reported to the university for disciplinary action.</li></ul></box>
-<box type="info" light>
-<p><strong>Online channels used for the PE</strong>:</p>
+<li><strong>Proctoring will be done via Zoom.</strong> No admission if the requirements are not met (e.g., display name, camera placement).</li>
+<li><strong>Recording the screen is not required.</strong></li>
+<li><strong>Only one screen is allowed.</strong></li>
+<li><strong>Do not use the public chat channel to ask questions</strong> from the prof. If you do, you might accidentally reveal which team you are testing.</li>
+<li><strong>Use MS Teams (not Zoom) private messages to communicate with the prof.</strong> Fall back on Zoom chat only if you didn't receive a reply via MST.</li>
+<li><strong>Do not view video Zoom feeds of others</strong> while the testing is ongoing. Keep the video view minimized.</li>
+<li><strong>Do not visit any website other than LumiNUS.</strong> In particular, do not visit GitHub. If you need to visit a website, please ask for permission first.</li>
+<li><strong>Do not use any other software running</strong> in the background e.g., telegram chat</li></ul></box>
 <ul>
-<li><strong><strong>Gitter</strong></strong>:
-<ul>
-<li>Prof will be online in <a href="https://gitter.im/nus-cs2103-AY2021S1/community">Gitter</a>.</li>
-<li><mark>Direct all your queries to prof as private messages to <code v-pre>@damithc</code>. <span class="text-danger">Do not use the public chat channel</span> .</mark> If you use the main channel, you might accidentally reveal which team you are testing.</li></ul></li>
-<li><strong><strong>Zoom</strong></strong>:
-<ul>
-<li>There will be a Zoom meeting (details will be announced later) to provide you with audio announcements.</li>
-<li>Join it and <strong>keep the speaker</strong> on during the PE session so that you can hear our announcements.</li>
-<li>You can use it to chat with the prof (but Gitter is preferred for chatting as it's harder to post screenshots in Zoom chats).</li>
-<li>You will not be able to share your screen, share your cam, or talk to us.</li></ul></li></ul></box>
-<ul>
-<li><strong>When, where</strong>: Week 13 lecture slot</li></ul>
+<li><strong>When, where</strong>: Week 13 lecture slot. Use the same Zoom link used for the regular lecture.</li></ul>
 <h5 id="pe-phase-1-part-i-product-testing-60-minutes-2"><span class="badge badge-success">PE Phase 1 - Part I</span> <span class="text-success">Product Testing [60 minutes]</span><span id="pe-phase-1-part-i-product-testing-60-minutes-2" class="anchor"></span><a class="fa fa-anchor" href="#pe-phase-1-part-i-product-testing-60-minutes-2" onclick="event.stopPropagation()"></a></h5>
 <p><strong>Test the product and report bugs</strong> as described below. You may report both product bugs and documentation bugs during this period.</p>
 <div>
@@ -1301,7 +1285,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <li>Put the downloaded jar file <mark>in an empty folder</mark>.</li>
 <li>Open a command window. Run the <code v-pre>java -version</code> command to ensure you are using Java 11.</li>
 <li>Launch the jar file <mark>using the <code v-pre>java -jar</code> command</mark> (do not use double-clicking).</li>
-<li><strong>If the product doesn't work at all:</strong> If the product fails catastrophically <span class="dimmed">e.g., cannot even launch, or even the basic commands crash the app</span>, contact the invigilator (via Gitter or Zoom chat) to receive a <em>fallback</em> team to test.</li></ul>
+<li><strong>If the product doesn't work at all:</strong> If the product fails catastrophically <span class="dimmed">e.g., cannot even launch, or even the basic commands crash the app</span>, contact the invigilator (via MS Teams, and failing that, via Zoom chat) to receive a <em>fallback</em> team to test.</li></ul>
 <h6 id="b-what-to-test-3"><div class="text-white bg-secondary p-1">b) What to test</div><span id="b-what-to-test-3" class="anchor"></span><a class="fa fa-anchor" href="#b-what-to-test-3" onclick="event.stopPropagation()"></a></h6>
 <tabs active="1">
 <tab><template slot="_header">PE Dry Run (at <strong>v1.3</strong>)</template>
@@ -1378,7 +1362,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <span aria-hidden="true" class="fas fa-bug"></span> A legitimate user behavior is not handled <span class="dimmed">e.g. incorrect commands, extra parameters</span><br>
 <span aria-hidden="true" class="fas fa-bug"></span> Behavior is not specified and differs from normal expectations <span class="dimmed">e.g. error message does not match the error</span><br></p></div></panel></div><p></p>
 <ul>
-<li>Do not post suggestions but if a feature is missing a critical functionality that makes the feature less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li></ul>
+<li>Do not post suggestions but if the product is missing a critical functionality that makes the product less useful to the intended user, it can be reported as a bug of type <code v-pre>Type.FeatureFlaw</code>.</li></ul>
 <div class="indented-level2">
 <panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → <strong>Feature Flaws</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
@@ -1472,7 +1456,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <p><strong>Type</strong> labels:</p>
 <ul>
 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance-testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li></ul></box></div></div></box></div>
 <h5 id="pe-phase-1-part-ii-evaluating-documents-30-minutes-2"><span class="badge badge-success">PE Phase 1 - Part II</span> <span class="text-success">Evaluating Documents [30 minutes]</span><span id="pe-phase-1-part-ii-evaluating-documents-30-minutes-2" class="anchor"></span><a class="fa fa-anchor" href="#pe-phase-1-part-ii-evaluating-documents-30-minutes-2" onclick="event.stopPropagation()"></a></h5>
 <ul>
@@ -1735,7 +1719,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <p><strong>Type</strong> labels:</p>
 <ul>
 <li><code v-pre>type.FunctionalityBug</code>: A functionality does not work as specified/expected.</li>
-<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
+<li><code v-pre>type.FeatureFlaw</code>: Some functionality missing from a feature delivered in v1.4 in a way that the feature becomes less useful to the intended target user for <em>normal</em> usage. i.e., the feature is not 'complete'. In other words, an acceptance-testing bug that falls within the scope of v1.4 features. These issues are counted against the <em>product design</em> aspect of the project.</li>
 <li><code v-pre>type.DocumentationBug</code>: A flaw in the documentation <span class="dimmed">e.g., a missing step, a wrong instruction, typos</span></li></ul></box></div>
 <ul>
 <li><strong>If you disagree with the original severity assigned to the bug</strong>, you may change it to the correct level.</li></ul>
@@ -1866,7 +1850,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, 5 Nov 2020, 11:24:36 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Thu, 5 Nov 2020, 15:36:54 GMT+8]</small></div></footer></div>
 </body>
 <script src="../markbind/js/vue.min.js"></script>
 <script src="../markbind/js/components.min.js"></script>

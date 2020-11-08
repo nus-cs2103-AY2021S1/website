@@ -194,7 +194,7 @@
 <li>The three types (i.e., <code v-pre>type.FunctionalityBug</code>, <code v-pre>type.DocumentationBug</code>, <code v-pre>type.FeatureFlaw</code>) are counted for three different grade components. The penalty/credit can vary based on the bug type. <span class="dimmed">Given that you are not told which type has a bigger impact on the grade, always choose the most suitable type for a bug rather than try to choose a type that benefits your grade.</span></li>
 <li>The penalty for a bug is divided equally among assignees.</li>
 <li>Developers are not penalized for duplicate bug reports they received but the testers earn credit for duplicate bug reports they submitted as long as the duplicates are not submitted by the same tester.</li>
-<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., the same bug reported by many testers</span><em>Obvious</em> bugs</span> earn less credit for the tester and slightly penalty for the developer.</li>
+<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., the same bug reported by many testers</span><em>Obvious</em> bugs</span> earn less credit for the tester and slightly higher penalty for the developer.</li>
 <li>If the team you tested has a low bug count i.e., total bugs found by all testers is low, we will fall back on other means <span class="dimmed">(e.g., performance in PE dry run)</span> to calculate your marks for system/acceptance testing.</li>
 <li>Your marks for developer testing depends on the <em>bug density</em> rather than total bug count. Here's an example:
 <ul>
@@ -269,8 +269,14 @@
 <li><strong>Do not use the public chat channel to ask questions</strong> from the prof. If you do, you might accidentally reveal which team you are testing.</li>
 <li><strong>Use MS Teams (not Zoom) private messages to communicate with the prof.</strong> Fall back on Zoom chat only if you didn't receive a reply via MST.</li>
 <li><strong>Do not view video Zoom feeds of others</strong> while the testing is ongoing. Keep the video view minimized.</li>
-<li><strong>Do not visit any website other than LumiNUS.</strong> In particular, do not visit GitHub. If you need to visit a website, please ask for permission first.</li>
-<li><strong>Do not use any other software running</strong> in the background e.g., telegram chat</li></ul></box>
+<li><strong>During the bug reporting periods (i.e., <span class="badge badge-success">PE Phase 1 - part I</span> and <span class="badge badge-success">PE Phase 1 - part II</span>), do not visit websites and use software other than the following.</strong> In particular, <mark>do not visit GitHub</mark>. If you need to visit a different website or use another software, please ask for permission first.
+<ul>
+<li>Website: LumiNUS</li>
+<li>Website: Module website <span class="dimmed">(e.g., to look up PE info)</span></li>
+<li>Software: CATcher, any text editor, any screen grab software</li>
+<li>Software: PDF reader <span class="dimmed">(to read the UG/DG or other references such as the textbook)</span></li></ul></li>
+<li><strong>Do not use any other software running</strong> in the background e.g., telegram chat</li>
+<li><strong>This is a <em>manual</em> testing session</strong>. Do not use any test automation tools or custom scripts.</li></ul></box>
 <ul>
 <li><strong>When, where</strong>: Week 13 lecture slot. Use the same Zoom link used for the regular lecture.</li></ul>
 <h5 id="pe-phase-1-part-i-product-testing-60-minutes"><span class="badge badge-success">PE Phase 1 - Part I</span> <span class="text-success">Product Testing [60 minutes]</span><span id="pe-phase-1-part-i-product-testing-60-minutes" class="anchor"></span><a class="fa fa-anchor" href="#pe-phase-1-part-i-product-testing-60-minutes" onclick="event.stopPropagation()"></a></h5>
@@ -305,7 +311,7 @@
 <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
 <ul>
 <li>Test <mark>based on the Developer Guide</mark> (Appendix named <em>Instructions for Manual Testing</em>) <mark>and the User Guide</mark>. The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.</li>
-<li>As before, do both <mark>system testing and acceptance testing</mark> but give priority to system testing as system-testing bugs can earn you more credit.</li></ul></tab></tabs>
+<li>As before, do both <mark><em>system testing</em> and <em>acceptance testing</em></mark> but give priority to system testing as those bugs can earn you more credit.</li></ul></tab></tabs>
 <p></p>
 <h6 id="c-what-bugs-to-report"><div class="text-white bg-secondary p-1">c) What bugs to report?</div><span id="c-what-bugs-to-report" class="anchor"></span><a class="fa fa-anchor" href="#c-what-bugs-to-report" onclick="event.stopPropagation()"></a></h6>
 <tabs active="1">
@@ -447,7 +453,7 @@
 <li>Each bug should be a separate issue.</li>
 <li>Write good quality bug reports; <mark>poor quality or incorrect bug reports will not earn credit</mark>.</li>
 <li>Use a descriptive title.</li>
-<li>Give a good description of the bug with <mark>steps to reproduce and screenshots</mark>. If the receiving team cannot reproduce the bug, you will not be able to get credit for it.</li>
+<li>Give a good description of the bug with <mark>steps to reproduce, expected, actual, and screenshots</mark>. If the receiving team cannot reproduce the bug, you will not be able to get credit for it.</li>
 <li>Assign exactly one <code v-pre>severity.*</code> label to the bug report. Bug report without a severity label are considered <code v-pre>severity.Low</code> (lower severity bugs earn lower credit)<br></li></ul>
 <div class="indented-level2">
 <div>
@@ -923,7 +929,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <tab class="algolia-no-index"><template slot="_header">PE (at <strong>v1.4</strong>)</template>
 <ul>
 <li>Test <mark>based on the Developer Guide</mark> (Appendix named <em>Instructions for Manual Testing</em>) <mark>and the User Guide</mark>. The testing instructions in the Developer Guide can provide you some guidance but if you follow those instructions strictly, you are unlikely to find many bugs. You can deviate from the instructions to probe areas that are more likely to have bugs.</li>
-<li>As before, do both <mark>system testing and acceptance testing</mark> but give priority to system testing as system-testing bugs can earn you more credit.</li></ul></tab></tabs>
+<li>As before, do both <mark><em>system testing</em> and <em>acceptance testing</em></mark> but give priority to system testing as those bugs can earn you more credit.</li></ul></tab></tabs>
 <p></p>
 <h6 id="c-what-bugs-to-report-2"><div class="text-white bg-secondary p-1">c) What bugs to report?</div><span id="c-what-bugs-to-report-2" class="anchor"></span><a class="fa fa-anchor" href="#c-what-bugs-to-report-2" onclick="event.stopPropagation()"></a></h6>
 <tabs active="0">
@@ -1065,7 +1071,7 @@ Omitting optional notations is not a bug as long it doesn't hinder understanding
 <li>Each bug should be a separate issue.</li>
 <li>Write good quality bug reports; <mark>poor quality or incorrect bug reports will not earn credit</mark>.</li>
 <li>Use a descriptive title.</li>
-<li>Give a good description of the bug with <mark>steps to reproduce and screenshots</mark>. If the receiving team cannot reproduce the bug, you will not be able to get credit for it.</li>
+<li>Give a good description of the bug with <mark>steps to reproduce, expected, actual, and screenshots</mark>. If the receiving team cannot reproduce the bug, you will not be able to get credit for it.</li>
 <li>Assign exactly one <code v-pre>severity.*</code> label to the bug report. Bug report without a severity label are considered <code v-pre>severity.Low</code> (lower severity bugs earn lower credit)<br></li></ul>
 <div class="indented-level2">
 <div>
@@ -1452,7 +1458,7 @@ e.g.</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sat, 7 Nov 2020, 14:23:06 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Sun, 8 Nov 2020, 15:18:52 GMT+8]</small></div></footer></div>
 </body>
 <script src="../markbind/js/vue.min.js"></script>
 <script src="../markbind/js/components.min.js"></script>

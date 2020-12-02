@@ -42,7 +42,7 @@
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Classes and objects in an example scenario</p>
 <p>Consider the example of writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy.</p>
-<p>Instructions for creating objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code> will be very similar because they are all of the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code v-pre>name</code>, <code v-pre>dateOfBrith</code>, etc.), and the same kind of behavior (i.e. <code v-pre>getAge(Date)</code>, <code v-pre>getName()</code>, etc.). Therefore, you can have a class called <code v-pre>Person</code> containing instructions on how to create <code v-pre>Person</code> objects and use that class to instantiate objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code>.</p>
+<p>Instructions for creating objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code> will be very similar because they are all of the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code v-pre>name</code>, <code v-pre>dateOfBirth</code>, etc.), and the same kind of behavior (i.e. <code v-pre>getAge(Date)</code>, <code v-pre>getName()</code>, etc.). Therefore, you can have a class called <code v-pre>Person</code> containing instructions on how to create <code v-pre>Person</code> objects and use that class to instantiate objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code>.</p>
 <p>Similarly, you need classes <code v-pre>AgeList</code>, <code v-pre>Calculator</code>, and <code v-pre>Main</code> classes to instantiate one each of <code v-pre>AgeList</code>, <code v-pre>Calculator</code>, and <code v-pre>Main</code> objects.</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -70,7 +70,7 @@
 <question>
 <p>Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use?</p>
 <box>
-<p>A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p></box>
+<p>A customer (name: John) gave a cheque to the cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p></box>
 <div slot="answer" class="algolia-no-index">
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -103,9 +103,9 @@
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain class-level members</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
+<p>While all objects of a class have the same attributes, each object has its own copy of the attribute value.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code v-pre>Person</code> objects have the <code v-pre>Name</code> attribute but the value of that attribute varies between <code v-pre>Person</code> objects.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code v-pre>Person</code> objects have the <code v-pre>name</code> attribute but the value of that attribute varies between <code v-pre>Person</code> objects.</p></box>
 <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class-level attributes</em></mark></strong>.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The attribute <code v-pre>totalPersons</code> should be maintained centrally and shared by all <code v-pre>Person</code> objects rather than copied at each <code v-pre>Person</code> object.</p></box>
@@ -120,7 +120,7 @@
   <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as a class-level variables</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as class-level variables</p></template>
 <question>
 <p>Which of these are suitable as class-level variables?</p>
 <ul class="contains-task-list">
@@ -130,7 +130,7 @@
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code v-pre>ArrayList</code>, variable: <code v-pre>total</code> (i.e., total items in a given <code v-pre>ArrayList</code> object)</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(c)</p>
-<p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p></div></question></panel></div></panel></div></div></div></panel></div>
+<p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and is therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p></div></question></panel></div></panel></div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="enumerations">
   <span slot="header" class="card-title"><div><h4 id="enumerations"><span>Enumerations</span><a class="fa fa-anchor" href="#enumerations" onclick="event.stopPropagation()"></a></h4></div></span>

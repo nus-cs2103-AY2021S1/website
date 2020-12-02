@@ -159,11 +159,11 @@
   <div>
 <p>While you may be tempted to use many libraries/frameworks/platform that seem to crop up on a regular basis and promise to bring great benefits, note that <strong>there are costs associated with reuse</strong>. Here are some:</p>
 <ul>
-<li>The reused code <strong>may be an overkill</strong> (think <em>using a sledgehammer to crack a nut</em>) increasing the size of, or/and degrading the performance of, your software.</li>
+<li>The reused code <strong>may be an overkill</strong> (think <em>using a sledgehammer to crack a nut</em>), increasing the size of, and/or degrading the performance of, your software.</li>
 <li>The reused software <strong>may not be mature/stable enough</strong> to be used in an important product. That means the software can change drastically and rapidly, possibly in ways that break your software.</li>
 <li>Non-mature software has the <strong>risk of dying off</strong> as fast as they emerged, leaving you with a dependency that is no longer maintained.</li>
 <li>The license of the reused software (or its dependencies) <strong>restrict how you can use/develop your software</strong>.</li>
-<li>The reused software <strong>might have bugs, missing features, or security vulnerabilities</strong> that are important to your product but not so important to the maintainers of that software, which means those flaws will not get fixed as fast as you need them to.</li>
+<li>The reused software <strong>might have bugs, missing features, or security vulnerabilities</strong> that are important to your product, but not so important to the maintainers of that software, which means those flaws will not get fixed as fast as you need them to.</li>
 <li><strong>Malicious code can sneak into your product</strong> via compromised dependencies.</li></ul></div>
   <div>
 <div>
@@ -176,14 +176,14 @@
 <p>Pros</p>
 <ul>
 <li>The potential to create a much better product by reusing the framework.</li>
-<li>Learning a new framework is good for the future job prospects.</li></ul>
+<li>Learning a new framework is good for future job prospects.</li></ul>
 <p>Cons</p>
 <ul>
 <li>Learning curve may be steep.</li>
-<li>May not be stable (it was recently released).</li>
+<li>May not be stable (as it was recently released).</li>
 <li>May not allow you to do exactly what you want. While frameworks allow customization, such customization can be limited.</li>
 <li>Performance penalties.</li>
-<li>Might interfere with learning objectives of the module.</li></ul>
+<li>Might interfere with the learning objectives of the module.</li></ul>
 <p>Note that having more cons does not mean you should not use this framework. Further investigation is required before you can make a final decision.</p></div></question></panel></div></panel></div></div></div></panel></panel>
 <panel type="seamless" expanded id="apis">
   <span slot="header" class="card-title"><div><h2 id="apis"><span>APIs</span><span id="apis" class="anchor"></span><a class="fa fa-anchor" href="#apis" onclick="event.stopPropagation()"></a></h2></div></span>
@@ -196,7 +196,7 @@
 <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code v-pre>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code v-pre>str</code> class</a>) which is a collection of public methods that you can invoke to make use of the class.</p>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. You can write a program that interacts with GitHub through that API.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of web request formats that the GitHub server accepts and their corresponding responses. You can write a program that interacts with GitHub through that API.</p></box>
 <p>When developing large systems, if you define the API of each components early, the development team can develop the components in parallel <span class="dimmed">because the future behavior of the other components are now more predictable</span>.</p></div>
   <div>
 <div>
@@ -245,7 +245,7 @@
 <li><code v-pre>getWidth:int</code></li>
 <li><code v-pre>getHeight():int</code></li>
 <li><code v-pre>getRemainingMineCount():int</code></li></ul>
-<p>More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with this class.</p>
+<p>More details can be included to increase the precision of the method definitions before coding. Such precision is important to avoid misunderstandings between the developer of the class and developers of other classes that interact with the class.</p>
 <ul>
 <li><strong>Operation</strong>: <em>newGame(): void</em></li>
 <li><strong>Description</strong>: Generates a new <em>WxH</em> minefield with <em>M</em> mines. Any existing minefield will be overwritten.</li>
@@ -254,10 +254,10 @@
 <p>Preconditions are the conditions that must be true before calling this operation. Postconditions describe the system after the operation is complete. Note that post conditions do not say what happens during the operation.  Here is another example:</p>
 <ul>
 <li><strong>Operation</strong>: <em>clearCellAt(int x, int y): void</em></li>
-<li><strong>Description</strong>: Records the cell at x,y as cleared.</li>
+<li><strong>Description</strong>: Records the cell at x, y as cleared.</li>
 <li><strong>Parameters</strong>: x, y coordinates of the cell</li>
 <li><strong>Preconditions</strong>: game state is READY or IN_PLAY.  x and y are in 0..(H-1) and 0..(W-1), respectively.</li>
-<li><strong>Postconditions</strong>: Cell at x,y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.</li></ul></box></div>
+<li><strong>Postconditions</strong>: Cell at x, y changes state to ZERO, ONE, TWO, THREE, …, EIGHT, or INCORRECTLY_CLEARED. Game state changes to IN_PLAY, WON or LOST as appropriate.</li></ul></box></div>
   <div></div></div></panel></panel>
 <panel type="seamless" expanded id="libraries">
   <span slot="header" class="card-title"><div><h2 id="libraries"><span>Libraries</span><span id="libraries" class="anchor"></span><a class="fa fa-anchor" href="#libraries" onclick="event.stopPropagation()"></a></h2></div></span>
@@ -282,12 +282,12 @@
   <span><span class="dimmed"><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can make use of a library</span></span></span></span><p></p>
   <div>
-<p>These are the typical steps required to use a library.</p>
+<p>These are the typical steps required to use a library:</p>
 <ol>
-<li>Read the documentation to confirm that its functionality fits your needs</li>
+<li>Read the documentation to confirm that its functionality fits your needs.</li>
 <li>Check the license to confirm that it allows reuse in the way you plan to reuse it. For example, some libraries might allow non-commercial use only.</li>
 <li>Download the library and make it accessible to your project. Alternatively, you can configure your <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g. <em>Gradle</em> (for Java) and <em>Pipenv</em> (for Python)</span>dependency management tool</span> to do it for you.</li>
-<li>Call the library API from your code where you need to use the library functionality.</li></ol></div>
+<li>Call the library API from your code where you need to use the library's functionality.</li></ol></div>
   <div></div></div></panel></panel>
 <panel type="seamless" expanded id="frameworks">
   <span slot="header" class="card-title"><div><h2 id="frameworks"><span>Frameworks</span><span id="frameworks" class="anchor"></span><a class="fa fa-anchor" href="#frameworks" onclick="event.stopPropagation()"></a></h2></div></span>
@@ -312,15 +312,16 @@
 <p><strong>A framework facilitates the adaptation and customization of some desired functionality.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Running example:</p>
-<p>Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse. E.g. <a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">https://marketplace.eclipse.org/content/pydev-python-ide-eclipse</a></p></box>
-<p>Some frameworks cover only a specific components or an aspect.</p>
+<p>The Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse.</p>
+<p>E.g. <a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">https://marketplace.eclipse.org/content/pydev-python-ide-eclipse</a></p></box>
+<p>Some frameworks cover only a specific component or an aspect.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> JavaFx a framework for creating Java GUIs. TkInter is a GUI framework for Python.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> JavaFX is a framework for creating Java GUIs. Tkinter is a GUI framework for Python.</p></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> More examples of frameworks</p>
 <ul>
-<li>Frameworks for Web-based applications: Drupal(PHP), Django(Python), Ruby on Rails (Ruby), Spring (Java)</li>
-<li>Frameworks for testing: JUnit (Java), unittest (Python), Jest (Java Script)</li></ul></box></div>
+<li>Frameworks for web-based applications: Drupal (PHP), Django (Python), Ruby on Rails (Ruby), Spring (Java)</li>
+<li>Frameworks for testing: JUnit (Java), unittest (Python), Jest (JavaScript)</li></ul></box></div>
   <div></div></div></panel>
 <panel type="seamless" expanded id="frameworks-vs-libraries"><template slot="_header"><h4 id="frameworks-vs-libraries">Frameworks vs Libraries<span id="frameworks-vs-libraries" class="anchor"></span><a class="fa fa-anchor" href="#frameworks-vs-libraries" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
@@ -344,19 +345,19 @@
 <question>
 <p>Choose correct statements about software frameworks.</p>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the hollywood principle, otherwise known as ‘inversion of control’</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementation.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the Hollywood principle, otherwise known as ‘inversion of control’.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementations.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. They are more concrete than patterns or principles.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. They are often configurable.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. They are similar to reusable libraries but bigger.</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
-<p>Explanation: While both libraries and frameworks are reuse mechanisms, and both more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p></div></question></panel></div>
+<p>Explanation: While both libraries and frameworks are reuse mechanisms, and both are more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p></div></question></panel></div>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are frameworks?</p></template>
 <question>
-<p>Which one of these are frameworks ?</p>
+<p>Which of these are frameworks?</p>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. JUnit</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Eclipse</li>
@@ -375,15 +376,15 @@
   <div>
 <p><strong>A <em>platform</em> provides a runtime environment for applications.</strong> A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic of a software platform is the presence of a runtime environment.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile apps.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile applications.</p></box>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <strong>Two well-known examples of platforms are JavaEE and .NET</strong>, both of which sit above Operating systems layer, and are used to develop <span for="modal:enterprise-application" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:enterprise-application'].show()" class="trigger-click">enterprise applications</span>. Infrastructure services such as connection pooling, load balancing, remote code execution, transaction management, authentication, security, messaging etc. are done similarly in most enterprise applications. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <strong>Two well-known examples of platforms are JavaEE and .NET</strong>, both of which sit above the operating systems layer, and are used to develop <span for="modal:enterprise-application" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:enterprise-application'].show()" class="trigger-click">enterprise applications</span>. Infrastructure services such as connection pooling, load balancing, remote code execution, transaction management, authentication, security, messaging etc. are done similarly in most enterprise applications. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
 <ul>
 <li>JavaEE (Java Enterprise Edition) is both a framework and a platform for writing enterprise applications. The runtime used by the JavaEE applications is the JVM (Java Virtual Machine) that can run on different Operating Systems.</li>
-<li>.NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and usually used on Windows machines.</li></ul></box>
+<li>.NET is a similar platform and framework. Its runtime is called CLR (Common Language Runtime) and it is usually used on Windows machines.</li></ul></box>
 <b-modal id="modal:enterprise-application" hide-footer size modal-class="mb-zoom" ref="modal:enterprise-application" class="algolia-no-index"><template slot="modal-title"><strong>Enterprise Applications</strong></template>
   <div>
-<p><strong>Enterprise application</strong>: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.</p></div></b-modal></div>
+<p><strong>Enterprise application</strong>: ‘enterprise applications’ refer to software applications used by organizations and therefore have to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.</p></div></b-modal></div>
   <div></div></div></panel></panel>
 <panel type="seamless" expanded id="cloud-computing">
   <span slot="header" class="card-title"><div><h2 id="cloud-computing"><span>Cloud computing</span><span id="cloud-computing" class="anchor"></span><a class="fa fa-anchor" href="#cloud-computing" onclick="event.stopPropagation()"></a></h2></div></span>
@@ -402,20 +403,20 @@
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can distinguish between IaaS, PaaS, and SaaS</span></span></span></span><p></p>
   <div>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Cloud_computing.svg" height="500"><br></p>
-<p><sub>source:<a href="https://en.wikipedia.org/wiki/Cloud_computing">https://commons.wikimedia.org</a></sub></p>
+<p><sub>source: <a href="https://en.wikipedia.org/wiki/Cloud_computing">https://commons.wikimedia.org</a></sub></p>
 <p>Cloud computing can deliver computing services at three levels:</p>
 <ol>
 <li>
 <p><strong>Infrastructure as a service (IaaS) delivers computer infrastructure as a service.</strong> For example, a user can deploy virtual servers on the cloud instead of buying physical hardware and installing server software on them. Another example would be a customer using storage space on the cloud for off-site storage of data. <span class="dimmed">Rackspace is an example of an IaaS cloud provider. Amazon Elastic Compute Cloud (Amazon EC2) is another one.</span></p></li>
 <li>
-<p><strong>Platform as a service (PaaS) provides a platform on which developers can build applications.</strong> Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required when using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. <span class="dimmed">A PaaS example is the Google App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy application written in any language on their virtual servers.</span></p></li>
+<p><strong>Platform as a service (PaaS) provides a platform on which developers can build applications.</strong> Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required when using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. <span class="dimmed">A PaaS example is the Google App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy applications written in any language on their virtual servers.</span></p></li>
 <li>
 <p><strong>Software as a service (SaaS) allows applications to be accessed over the network</strong> instead of installing them on a local machine. <span class="dimmed">For example, Google Docs is an SaaS word processing software, while Microsoft Word is a traditional word processing software.</span></p></li></ol></div>
   <div>
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Google Calendar in which category?</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Google Calendar is in which category?</p></template>
 <question>
 <p>Google Calendar belongs to which category of cloud computing services?</p>
 <ul radio-group="7ed92" class="radio-list">
@@ -470,7 +471,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

@@ -127,10 +127,10 @@
 <p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3a">W6.3a</a>] <span>Implementation → IDEs → Debugging →
 </span></span> <span>What</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
-<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3b">W6.3b</a>] <span>Tools → Intellij IDEA →
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3b">W6.3b</a>] <span>Tools → IntelliJ IDEA →
 </span></span> <span>Debugging: Basic</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
-<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3c">W6.3c</a>] <span>Tools → Intellij IDEA →
+<p><span class="dimmed">[<a href="/website/schedule/week6/topics.html#W6-3c">W6.3c</a>] <span>Tools → IntelliJ IDEA →
 </span></span> <span>Code navigation</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
 <ul>
 <li>[<a href="/website/schedule/week6/topics.html#W6-4">W6.4</a>] <strong>Logging</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -227,7 +227,7 @@
 <panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Calls to Static Methods</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/StaticMethods</p></template>
 <div>
 <div>
-<p>Method calls to <code v-pre>static</code> i.e., class-level method are received by the class itself, not an instance of that class. You can use the <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
+<p>Method calls to <code v-pre>static</code> (i.e., class-level) methods are received by the class itself, not an instance of that class. You can use <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code v-pre>m</code> calls the static method <code v-pre>Person.getMaxAge()</code> and also the <code v-pre>setAge()</code> method of a <code v-pre>Person</code> object <code v-pre>p</code>.</p>
 <p><pic src="/website/book/uml/sequenceDiagrams/staticMethods/images/staticMethodCall.png"></pic></p>
@@ -266,7 +266,7 @@
 <question>
 <p>Draw a sequence diagram to represent this code snippet.</p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isFirstPage) {<br></span><span>    <span class="hljs-keyword">new</span> Quote().print();<br></span><span>}<br></span></code></pre><p>The <code v-pre>Quote</code> class:</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{<br></span><span><br></span><span>    String q;<br></span><span><br></span><span>    Quote(){<br></span><span>        q = generate();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{<br></span><span>        System.out.println(q);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre><div slot="hint" class="algolia-no-index">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span> </span>{<br></span><span><br></span><span>    String q;<br></span><span><br></span><span>    Quote() {<br></span><span>        q = generate();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(q);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre><div slot="hint" class="algolia-no-index">
 <ul>
 <li>Show <code v-pre>new Quote().print();</code> as two method calls.</li>
 <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code v-pre>print()</code> method is called.</li></ul></div></question></panel></div></div></panel></div></div></div></div></panel>
@@ -449,12 +449,12 @@
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain multi-level design</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<p>In a smaller system, design of the entire system can be shown in one place.</p>
+<p>In a smaller system, the design of the entire system can be shown in one place.</p>
 <div v-closeable alt="single-level design example">
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This class diagram of <a href="https://se-education.org/addressbook-level2">se-edu/addressbook-level2</a> depicts the design of the entire software.</p>
 <img src="https://se-education.org/addressbook-level2/images/mainClassDiagram.png" width="600"></box></div>
-<p><strong>Design of bigger systems needs to be done/shown at multiple levels.</strong></p>
+<p><strong>The design of bigger systems needs to be done/shown at multiple levels.</strong></p>
 <div v-closeable alt="multi-level design example">
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This architecture diagram of <a href="https://se-education.org/addressbook-level3">se-edu/addressbook-level3</a> depicts the high-level design of the software.</p>
@@ -506,12 +506,12 @@
 <li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By inserting temporary print statements</strong>: This is an ad-hoc approach in which print statements are inserted in the program to print information relevant to debugging, such as variable values. e.g. <code v-pre>Exiting process() method, x is 5.347</code>. This approach is not recommended due to these reasons.
 <ul>
 <li>Incurs extra effort when inserting and removing the print statements.</li>
-<li>These extraneous program modifications increases the risk of introducing errors into the program.</li>
+<li>These extraneous program modifications increase the risk of introducing errors into the program.</li>
 <li>These print statements, if not removed promptly after the debugging, may even appear unexpectedly in the production version.</li></ul></li>
 <li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> -- <strong>By manually tracing through the code</strong>: Otherwise known as ‘eye-balling’, this approach doesn't have the cons of the previous approach, but it too is not recommended (other than as a 'quick try') due to these reasons:
 <ul>
-<li>It is difficult, time consuming, and error-prone technique.</li>
-<li>If you didn't spot the error while writing code, you might not spot the error when reading code too.</li></ul></li>
+<li>It is a difficult, time consuming, and error-prone technique.</li>
+<li>If you didn't spot the error while writing the code, you might not spot the error when reading the code either.</li></ul></li>
 <li><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> -- <strong>Using a debugger</strong>:  A debugger tool allows you to pause the execution, then step through one statement at a time while examining the internal state if necessary. Most IDEs come with an inbuilt debugger. <strong>This is the recommended approach for debugging</strong>.</li></ul></div>
 <div></div></div></div></panel>
 <p></p>
@@ -522,18 +522,18 @@
 <panel type="seamless" expanded popup-url="/website/book/intellij/debuggingBasic" id="tools-intellij-idea-debugging-basic">
 <span slot="header" class="card-title">
 <span class="badge badge-pill badge-light text-mute">W6.3b</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-<h4 id="tools-intellij-idea-debugging-basic"><small><span class="font-weight-bold text-muted"><span>Tools → Intellij IDEA →</span></span></small> <strong><span>Debugging: Basic</span></strong><span id="tools-intellij-idea-debugging-basic" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-debugging-basic" onclick="event.stopPropagation()"></a></h4></span>
+<h4 id="tools-intellij-idea-debugging-basic"><small><span class="font-weight-bold text-muted"><span>Tools → IntelliJ IDEA →</span></span></small> <strong><span>Debugging: Basic</span></strong><span id="tools-intellij-idea-debugging-basic" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-debugging-basic" onclick="event.stopPropagation()"></a></h4></span>
   <div>
 <div class="indented">
 <div></div><p></p>
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can step through a program using a debugger</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<div v-closeable alt="video: debugging in Intellij">
-<p>This video (from LaunchCode) gives a pretty good explanation of how to use the Intellij IDEA debugger.</p>
+<div v-closeable alt="video: debugging in IntelliJ">
+<p>This video (from LaunchCode) gives a pretty good explanation of how to use the IntelliJ IDEA debugger.</p>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1bCgzjatcr4" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div>
 <ul>
-<li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">Intellij IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li></ul></div>
+<li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">IntelliJ IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li></ul></div>
 <div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -543,7 +543,7 @@
 <panel type="seamless" expanded popup-url="/website/book/intellij/codeNavigation" id="tools-intellij-idea-code-navigation">
 <span slot="header" class="card-title">
 <span class="badge badge-pill badge-light text-mute">W6.3c</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>
-<h4 id="tools-intellij-idea-code-navigation"><small><span class="font-weight-bold text-muted"><span>Tools → Intellij IDEA →</span></span></small> <strong><span>Code navigation</span></strong><span id="tools-intellij-idea-code-navigation" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-code-navigation" onclick="event.stopPropagation()"></a></h4></span>
+<h4 id="tools-intellij-idea-code-navigation"><small><span class="font-weight-bold text-muted"><span>Tools → IntelliJ IDEA →</span></span></small> <strong><span>Code navigation</span></strong><span id="tools-intellij-idea-code-navigation" class="anchor"></span><a class="fa fa-anchor" href="#tools-intellij-idea-code-navigation" onclick="event.stopPropagation()"></a></h4></span>
   <div>
 <div class="indented">
 <div></div><p></p>
@@ -557,7 +557,7 @@
 <li>Go back to the previous location.</li>
 <li>View the documentation of a method from where the method is being used, without navigating to the method itself.</li>
 <li>Find where a method/field is being used.</li></ol>
-<panel expanded><template slot="_header"><p>Intellij IDEA Code Navigation</p></template>
+<panel expanded><template slot="_header"><p>IntelliJ IDEA Code Navigation</p></template>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1UHsJyCq1SU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></div>
 <div></div></div></div></panel>
 <p></p>
@@ -593,13 +593,13 @@
 <p></p>
 <div>
 <p><strong><em>Logging</em> is the deliberate recording of certain information during a program execution for future reference.</strong> Logs are typically written to a log file but it is also possible to log information in other ways <span class="dimmed">e.g. into a database or a remote server</span>.</p>
-<p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed">e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and action can then be taken to prevent it from happening again.</p>
+<p><strong><em>Logging</em> can be useful for troubleshooting problems</strong>. A good logging system records some system information regularly. When bad things happen to a system <span class="dimmed">e.g. an unanticipated failure</span>, their associated log files may provide indications of what went wrong and actions can then be taken to prevent it from happening again.</p>
 <div v-closeable alt="blackbox photo">
 <box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>A log file is like the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">flight data recorder</span>black box</span> of an airplane</strong>; they don't prevent problems but they can be helpful in understanding what went wrong after the fact.</p>
 <div class="non-printable">
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG" width="250"><br>
-<sub>source:<a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p></div></box></div></div>
+<sub>source: <a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flight_data_recorder_displayed_at_HAL_Museum_7893.JPG">https://commons.wikimedia.org</a></sub></p></div></box></div></div>
 <div>
   <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
@@ -610,7 +610,7 @@
 <ul radio-group="6f5b0" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> a. Because they can be used to find more info about how the system behaved before/during an ‘incident’.</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> b. Because they are hidden from the view of normal users.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they both can be in hardcopy form or digital form.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> c. Because they can both be in hardcopy form or digital form.</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="6f5b0" type="radio"> d. Because they are hard to open by normal users.</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(a)</p></div></question></panel></div></panel></div></div></div></div></panel>
@@ -634,8 +634,8 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This sample Java code uses Java’s default logging mechanism.</p>
 <p>First, import the relevant Java package:</p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.logging.*;<br></span></code></pre><p>Next, create a <code v-pre>Logger</code>:</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);<br></span></code></pre><p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span>  for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);<br></span><span><span class="hljs-comment">//...</span><br></span><span>processInput();<br></span><span><span class="hljs-keyword">if</span>(error){<br></span><span>    <span class="hljs-comment">//log a message at WARNING level</span><br></span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);<br></span><span>}<br></span><span><span class="hljs-comment">//...</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);<br></span></code></pre></box></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> Logger logger = Logger.getLogger(<span class="hljs-string">"Foo"</span>);<br></span></code></pre><p>Now, you can use the <code v-pre>Logger</code> object to log information. Note the use of a <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content"><code v-pre>INFO</code>, <code v-pre>WARNING</code> etc.</span>logging level</span>  for each message. When running the code, the logging level can be set to <code v-pre>WARNING</code> so that log messages specified as having <code v-pre>INFO</code> level (which is a lower level than <code v-pre>WARNING</code>) will not be written to the log file at all.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// log a message at INFO level</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"going to start processing"</span>);<br></span><span><span class="hljs-comment">// ...</span><br></span><span>processInput();<br></span><span><span class="hljs-keyword">if</span> (error) {<br></span><span>    <span class="hljs-comment">// log a message at WARNING level</span><br></span><span>    logger.log(Level.WARNING, <span class="hljs-string">"processing error"</span>, ex);<br></span><span>}<br></span><span><span class="hljs-comment">// ...</span><br></span><span>logger.log(Level.INFO, <span class="hljs-string">"end of processing"</span>);<br></span></code></pre></box></div>
 <div>
   <div>
 <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template> 
@@ -678,7 +678,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

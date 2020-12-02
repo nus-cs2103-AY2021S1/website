@@ -41,7 +41,7 @@
 <li>Modify information about an item</li>
 <li>View all available accessories for a given appliance</li>
 <li>List all items in the store</li></ul>
-<p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about current stock status.  User authentication is not required for the current version, but may be required in the future.</p>
+<p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in the store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about the current stock status. User authentication is not required for the current version, but may be required in the future.</p>
 <p>A step by step explanation of the design is given below. Note that this is one out of many possible designs.  Design patterns are also applied where appropriate.</p>
 <p>A <code v-pre>StockItem</code> can be an Appliance or an Accessory.</p>
 <img src="/website/book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100">
@@ -64,7 +64,7 @@
 <p>As UI consists of multiple views, the  MVC pattern is applied here.</p>
 <img src="/website/book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270">
 <p></p>
-<p>Some views need to be updated when the data change; apply the Observer pattern here.</p>
+<p>Some views need to be updated when the data changes; apply the Observer pattern here.</p>
 <img src="/website/book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270">
 <p></p>
 <p>In addition, the Singleton pattern can be applied to the façade class.</p></box></div>

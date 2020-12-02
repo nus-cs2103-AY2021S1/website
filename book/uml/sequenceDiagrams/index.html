@@ -60,7 +60,7 @@
 <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
 <p>Note that unlike in object diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
 <box>
-<p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code v-pre>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
+<p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method has returned. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code v-pre>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
 <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
 <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code v-pre>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
 <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120"></box></div>
@@ -90,7 +90,7 @@
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret sequence diagrams with object deletion</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p><strong>UML uses an <code v-pre>X</code> at the end of the lifeline of an object to show it's deletion.</strong></p>
+<p><strong>UML uses an <code v-pre>X</code> at the end of the lifeline of an object to show its deletion.</strong></p>
 <box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Although object deletion is not that important in languages such as Java that support automatic memory management, you can still show object deletion in UML diagrams to indicate the point at which the object ceases to be used.</p></box>
 <p>Notation:</p>
@@ -147,7 +147,7 @@
 <img src="/website/book/uml/sequenceDiagrams/alternativePaths/images/notation.png" height="100">
 <p></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Minefield</code> calls the <code v-pre>Cell#setMine</code> if the cell is supposed to be a mined cell, and calls the <code v-pre>Cell:setMineCount(...)</code> method otherwise.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Minefield</code> calls the <code v-pre>Cell#setMine</code> method if the cell is supposed to be a mined cell, and calls the <code v-pre>Cell:setMineCount(...)</code> method otherwise.</p>
 <img src="/website/book/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180">
 <p></p></box></div>
   <div></div></div></panel></div>
@@ -225,7 +225,7 @@
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can show calls to static methods</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p>Method calls to <code v-pre>static</code> i.e., class-level method are received by the class itself, not an instance of that class. You can use the <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
+<p>Method calls to <code v-pre>static</code> (i.e., class-level) methods are received by the class itself, not an instance of that class. You can use <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code v-pre>m</code> calls the static method <code v-pre>Person.getMaxAge()</code> and also the <code v-pre>setAge()</code> method of a <code v-pre>Person</code> object <code v-pre>p</code>.</p>
 <p><pic src="/website/book/uml/sequenceDiagrams/staticMethods/images/staticMethodCall.png"></pic></p>

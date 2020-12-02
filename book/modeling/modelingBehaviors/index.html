@@ -39,7 +39,7 @@ Understanding such workflows is important for the success of the software projec
 <box>
 <p>Some examples in which a certain workflow is relevant to software project:</p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A software that automates the work of an insurance company needs to take into account the workflow of processing an insurance claim.</p>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The algorithm of a price of code represents the workflow (i.e. the execution flow) of the code.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The algorithm of a piece of code represents the workflow (i.e. the execution flow) of the code.</p></box>
 <p><panel type="seamless" src="/website/book/uml/activityDiagrams/introduction/what/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Activity Diagrams → Introduction → What</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AD/Intro</p></template></panel></p><p></p><p></p>
 <p><panel type="seamless" src="/website/book/uml/activityDiagrams/basicNotations/linearPaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Activity Diagrams → Basic Notation → Linear Paths</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AD/LinearPaths</p></template></panel></p>
 <p><panel type="seamless" src="/website/book/uml/activityDiagrams/basicNotations/alternatePaths/unit-inElsewhere-asFlat._include_.html#main" fragment="main" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Activity Diagrams → Basic Notation → Alternate Paths</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/AD/AlternatePaths</p></template></panel></p>
@@ -135,7 +135,7 @@ Understanding such workflows is important for the success of the software projec
 <panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Sequence Diagrams → Calls to Static Methods</p></template><template slot="_alt"><p><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> UML/SD/StaticMethods</p></template>
 <div>
 <div>
-<p>Method calls to <code v-pre>static</code> i.e., class-level method are received by the class itself, not an instance of that class. You can use the <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
+<p>Method calls to <code v-pre>static</code> (i.e., class-level) methods are received by the class itself, not an instance of that class. You can use <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code v-pre>m</code> calls the static method <code v-pre>Person.getMaxAge()</code> and also the <code v-pre>setAge()</code> method of a <code v-pre>Person</code> object <code v-pre>p</code>.</p>
 <p><pic src="/website/book/uml/sequenceDiagrams/staticMethods/images/staticMethodCall.png"></pic></p>
@@ -174,7 +174,7 @@ Understanding such workflows is important for the success of the software projec
 <question>
 <p>Draw a sequence diagram to represent this code snippet.</p>
 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isFirstPage) {<br></span><span>    <span class="hljs-keyword">new</span> Quote().print();<br></span><span>}<br></span></code></pre><p>The <code v-pre>Quote</code> class:</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span></span>{<br></span><span><br></span><span>    String q;<br></span><span><br></span><span>    Quote(){<br></span><span>        q = generate();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span></span>{<br></span><span>        System.out.println(q);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre><div slot="hint" class="algolia-no-index">
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Quote</span> </span>{<br></span><span><br></span><span>    String q;<br></span><span><br></span><span>    Quote() {<br></span><span>        q = generate();<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function">String <span class="hljs-title">generate</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">print</span><span class="hljs-params">()</span> </span>{<br></span><span>        System.out.println(q);<br></span><span>    }<br></span><span><br></span><span>}<br></span></code></pre><div slot="hint" class="algolia-no-index">
 <ul>
 <li>Show <code v-pre>new Quote().print();</code> as two method calls.</li>
 <li>As the created Quote object is not assigned to a variable, it can be considered as 'deleted' soon after its <code v-pre>print()</code> method is called.</li></ul></div></question></panel></div></div></panel></div></div></div></panel></div>
@@ -206,7 +206,7 @@ Understanding such workflows is important for the success of the software projec
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain timing diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p><strong>A <em>timing diagram</em> focus on timing constraints.</strong></p>
+<p><strong>A <em>timing diagram</em> focuses on timing constraints.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example timing diagram:</p>
 <img src="/website/book/modeling/modelingBehaviors/timingDiagrams/images/diagram.png" height="280">
@@ -220,12 +220,12 @@ Understanding such workflows is important for the success of the software projec
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain interaction overview diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p><strong>An <em>Interaction overview</em> diagrams is a combination of activity diagrams and sequence diagrams</strong>.</p>
+<p><strong><em>Interaction overview</em> diagrams are a combination of activity diagrams and sequence diagrams</strong>.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example:</p>
 <img src="/website/book/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420">
 <p></p>
-<p><sub>source:<a href="https://en.wikipedia.org/wiki/Interaction_overview_diagram">https://commons.wikimedia.org</a></sub></p></box></div>
+<p><sub>source: <a href="https://en.wikipedia.org/wiki/Interaction_overview_diagram">https://commons.wikimedia.org</a></sub></p></box></div>
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="communication-diagrams">
@@ -234,7 +234,7 @@ Understanding such workflows is important for the success of the software projec
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain communication diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p><strong>A <em>Communication diagrams</em> are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.</strong></p>
+<p><strong><em>Communication diagrams</em> are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example:</p>
 <img src="/website/book/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300">
@@ -259,8 +259,8 @@ Understanding such workflows is important for the success of the software projec
 <li>If the CD tray is already in the process of closing (closed half-way), it waits until the CD tray is fully closed and opens it immediately afterwards.</li></ul>
 <p>What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state. Such a behavior is called a <em>state-dependent behavior</em>.</p></box>
 <p>Often, state-dependent behavior displayed by an object in a system is simple enough that it needs no extra attention; such a behavior can be as simple as a <em>conditional</em> behavior like <code v-pre>if x&gt;y, then x=x-y</code>.
-Occasionally, objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured into a separate model. Such state-dependent behavior can be modelled using UML <em>state machine diagrams</em> (SMD for short, sometimes also called ‘state charts’, ‘state diagrams’ or ‘state machines’).</p>
-<p>An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern.  An SMD captures information such as the states an object can be in, during its lifetime, and how the object responds to various events while in each state and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over its full life cycle.</p>
+Occasionally, objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured in a separate model. Such state-dependent behavior can be modeled using UML <em>state machine diagrams</em> (SMD for short, sometimes also called ‘state charts’, ‘state diagrams’ or ‘state machines’).</p>
+<p>An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern. SMDs capture information such as the states an object can be in during its lifetime, how the object responds to various events while in each state, and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over its full life-cycle.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An SMD for the Minesweeper game.</p>
 <img src="/website/book/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200">

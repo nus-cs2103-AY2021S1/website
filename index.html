@@ -6,16 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CS2103/T - Schedule</title>
+    <title>CS2103/T - Admin: CS2103/T: Software Engineering</title>
     <link rel="stylesheet" href="markbind/css/bootstrap.min.css">
     <link rel="stylesheet" href="markbind/css/bootstrap-vue.min.css">
     <link rel="stylesheet" href="markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="markbind/css/octicons.css">
     <link rel="stylesheet" href="markbind/css/github.min.css">
-    <link rel="stylesheet" href="markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="markbind/layouts/default/styles.css"><link rel="stylesheet" href="markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
-    <link rel="stylesheet" href="/website/css/main.css">
-    <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="markbind/layouts/default/styles.css"><link rel="stylesheet" href="markbind/css/site-nav.css"><link rel="stylesheet" href="markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
@@ -69,56 +68,159 @@
   <li slot="right" class="nav-link">
     <form class="navbar-form">
       <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
-        
-<div id="content-wrapper">
-<div>
+        <nav id="site-nav" class="navbar navbar-light bg-transparent">
+<div class="border-right-grey nav-inner position-sticky slim-scroll">
+<ul class="site-nav-list site-nav-list-root">
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleOverview.html">Module Overview</a></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/usingThisWebsite.html"><mark>Using this Website</mark></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/moduleExpectations.html">Module Expectations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Module Structure 
+<i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/weeklySchedule.html"><small>Weekly Schedule</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/lectures.html"><small>Lectures</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tutorials.html"><small>Tutorials</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/instructors.html">Instructors</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/textbooks.html">Textbooks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/programmingLanguages.html">Programming Language</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/standardsAndConventions.html">Standards/Conventions</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Individual Project (iP)
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-overview.html"><small>iP (Individual Project): Overview</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w2.html"><small>iP: Week 2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w3.html"><small>iP: Week 3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w4.html"><small>iP: Week 4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w5.html"><small>iP: Week 5</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w6.html"><small>iP: Week 6</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w7.html"><small>iP: Week 7</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-w8.html"><small>iP: Week 8</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/ip-grading.html"><small>iP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Team Project (tP)
+<i class="site-nav-dropdown-btn-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-expectations.html"><small>tP (team project): Expectations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-timeline.html"><small>tP: Timeline</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-constraints.html"><small>tP: Constraints</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-teams.html"><small>tP: Forming Teams</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w3.html"><small>tP week 3: Kickoff</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w4.html"><small>tP week 4: Set direction</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w5.html"><small>tP week 5: Gather requirements</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w6.html"><small>tP week 6: Conceptualize the product</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w7.html"><small>tP week 7: Get ready for iterations</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w8.html"><small>tP week 8: mid-v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w9.html"><small>tP week 9: v1.2</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w10.html"><small>tP week 10: mid-v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w11.html"><small>tP week 11: v1.3</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w12.html"><small>tP week 12: mid-v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-w13.html"><small>tP week 13: v1.4</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-deliverables.html"><small>tP: Deliverables</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-pe.html"><small>tP: Practical Exam</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-grading.html"><small>tP: Grading</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/tp-supervision.html"><small>tP: Supervision</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/peerEvaluations.html">Peer Evaluations</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/tools.html">Tools</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-info">3<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/exams.html">Exams</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/participation.html">Participation Marks</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/website/admin/gradeBreakdown.html">Grade Breakdown</a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)">Appendices 
+<i class="site-nav-dropdown-btn-icon site-nav-rotate-icon" onclick="handleSiteNavClick(this.parentNode, false); event.stopPropagation();">
+<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></div><ul class="site-nav-dropdown-container site-nav-dropdown-container-open site-nav-list">
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixA-principles.html"><small>Apdx A: Module Principles</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixB-policies.html"><small>Apdx B: Module Policies</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixC-faq.html"><small>Apdx C: FAQ</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixD-help.html"><small>Apdx D: Getting Help</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-warning">2<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
+<li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
+<div id="content-wrapper">
+<div id="website-content">
 <div>
 <div class="website-content">
-<nav>
-<ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/website/schedule/week12"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
-<li class="page-item">&nbsp;&nbsp;&nbsp;</li>
-<li class="page-item active"><a class="page-link" href="/website/schedule/week13/index.html"><span><span><span aria-hidden="true" class="fas fa-bell"></span></span></span> Summary</a></li>
-<li class="page-item"><a class="page-link" href="/website/schedule/week13/admin.html"><span><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span> Admin Info</a></li>
-<li class="page-item"><a class="page-link" href="/website/schedule/week13/topics.html"><span><span><span aria-hidden="true" class="fas fa-book"></span></span></span> Topics</a></li>
-<li class="page-item"><a class="page-link" href="/website/schedule/week13/project.html"><span><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span> Project</a></li>
-<li class="page-item"><a class="page-link" href="/website/schedule/week13/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
-<li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item disabled"><a class="page-link" href="/website/schedule/week14"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
-<p></p>
-<h1 id="week-13-fri-nov-6th-summary">Week 13 <small><small><span class="dimmed">[Fri, Nov 6th]</span> - Summary</small></small><span id="week-13-fri-nov-6th-summary" class="anchor"></span><a class="fa fa-anchor" href="#week-13-fri-nov-6th-summary" onclick="event.stopPropagation()"></a></h1>
-<div></div>
-<span id="summary">
-<div class="container">
-  <div class="row">
-  <div class="col-sm border-right">
-<p><strong>Topics:</strong></p>
+<p><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/usingThisWebsite.html"><span>Using this Website <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
+<br>
+<h1 id="cs2103-t-software-engineering"><span class="display-4">CS2103/T: Software Engineering</span> <span style="font-size:15px" class="text-muted text-light"></span><span id="cs2103-t-software-engineering" class="anchor"></span><a class="fa fa-anchor" href="#cs2103-t-software-engineering" onclick="event.stopPropagation()"></a></h1>
+<div id="admin-moduleOverview-anchor"></div>
+<div id="admin-moduleOverview">
+  <div>
+
+<span tags="m--cs2103">
+<big><p class="lead text-secondary">A balanced, iterative, and brown-field introduction to Software Engineering...</p></big>
+<img src="/website/images/growingPlant.png" width="700">
+<p class="lead"><span>CS2103/T is an introductory Software Engineering module. It has <strong>a 50-50 balance of basic SE theory knowledge and practical skills</strong> that you need to gain before industry internships or <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., CS3203, CS3216/7, CS3281&amp;2, etc.</span>higher-level project modules</span>. The module follows an <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">going through SE topics several times while increasing depth, as opposed to going through topics sequentially</span><strong>iterative approach</strong></span> to covering topics. It is also one of the rare SE modules that includes a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., working in an existing project</span><strong>brown-field</strong> project</span>, in addition to a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., a project that is started from scratch</span><strong>green-field</strong> project</span>.</span></p>
 <ul>
 <li>
-<p><span class="dimmed">No topic allocated to this week.</span></p></li></ul></div>
-<div class="col-sm">
+<p><strong>On the theory side,</strong> this module is supported by a customized online textbook <a href="/website/se-book-adapted/index.html"><em>Software Engineering for Self-Directed Learners</em></a>, integrated into this module website.</p></li>
+<li>
+<p><strong>The practice side,</strong> you will first ramp up your technical skills by doing a small individual project (green-field) in which you will develop a personal assistant chatbot called <a href="/website/se-book-adapted/projectDuke/index.html">Duke</a>. Then, you will move to a team project (brown-field) in which you will take over an existing project <a href="https://se-edu.github.io/addressbook-level3/">AddressBook-Level3 (AB3)</a> -- a relatively small yet non-trivial (6 KLoC) generic product -- and enhance it into a better product or evolve it into a different product.</p></li></ul>
+<div id="meaning-of-iterative-topics">
+<box>
+<p><strong><strong>What does mean to 'follow an iterative approach in covering topics'?</strong></strong></p>
+<p><strong>It means, we cover a little bit of <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., requirements, design, testing, project management, ...</span>all SE aspects</span> at first and then iteratively go deeper into them later</strong>, revisiting each aspect many time over the course of the semester. In contrast, a <em>sequential</em> approach would have covered one SE aspect before moving to the next (e.g., teach the <em>requirements</em> aspect completely before moving to the <em>design</em> aspect).</p>
+<p><strong>The choice of which topics are covered each week is driven by the project</strong> i.e., we give priority to topics that you'll need to apply soon in the project that you will be doing in parallel.</p>
+<p><strong>This way of 'jumping around' topics feels chaotic but consider the benefits</strong>:</p>
+<ul>
+<li>It allows you to start doing SE projects early, and iteratively too. That is, you can start with a small project from the very start and make it bigger progressively, learning from earlier mistakes, and getting multiple chances improve on previous attempts.</li>
+<li>Important SE aspects such as testing can be practiced from the very beginning. If we followed a sequential approach, you an only learn it near the end of the semester.</li>
+<li>Lower risk of missing out some SE aspects altogether. For example, suppose your schedule got heavier in the second half of the semester and you could barely follow the module during that half. You still go away with the basic knowledge of <em>all</em> SE aspects rather than knowing some aspects fully and missing some other aspects altogether.</li></ul>
+<p><strong>To help you cope with the non-sequential progression of topics,</strong> this module website contains two versions of the topics. In the <a href="/website/schedule/index.html">Schedule page</a>, you'll find the topics organized into the order we cover them in each week. In the <a href="/website/se-book-adapted/index.html">Textbook page</a>, you'll find the topics in their natural sequential order. This format is suitable for exam reference.
+</p></box><p></p></div>
+<p>Given below is a summary of what the module covers and does not cover.</p>
+<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
+<tr>
+<th>Topic</th>
+<th><span style="color:green"><span><span aria-hidden="true" class="fas fa-check"></span></span></span> Covered</th>
+<th><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> Not covered</th></tr></thead>
+<tbody>
+<tr>
+<td>Java</td>
+<td>Used heavily, but not taught</td>
+<td>syntax <span class="dimmed">(reason: expected prerequisite knowledge)</span></td></tr>
+<tr>
+<td>OOP</td>
+<td>Used in a non-trivial project, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., Single Responsibility Principle, Open-Closed Principle</span>intermediate OOP principles</span></td>
+<td>basics <span class="dimmed">(reason: expected prerequisite knowledge)</span></td></tr>
+<tr>
+<td>SE tools/practices</td>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., revision control, continuous integration, practices, test automation, code reviews, pull requests</span>those typically used in a mature, high-rigor SE project</span></td>
+<td>those specific to start-ups</td></tr>
+<tr>
+<td>Modeling</td>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., class diagrams, sequence diagrams, activity diagrams</span>Some UML notations</span> (sufficient to be able to describe SE artifacts using models, such as seen in <a href="https://se-edu.github.io/addressbook-level3/DeveloperGuide.html#design">this Developer Guide of AB3</a>)</td>
+<td>intensive <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">creating detailed UML models before starting to code</span>upfront design modeling</span></td></tr>
+<tr>
+<td>Requirements</td>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., user stories, use cases</span>Some lightweight techniques</span> to gather and document project requirements</td>
+<td>rapid prototyping, heavy UI design, designing a product from scratch</td></tr>
+<tr>
+<td>Documentation</td>
+<td>Documentation targeting end users (<a href="https://se-edu.github.io/addressbook-level3/UserGuide.html">example</a>) as well as those targeting developers (<a href="https://se-edu.github.io/addressbook-level3/DeveloperGuide.html">example</a>)</td>
+<td>Marketing materials</td></tr>
+<tr>
+<td>Project Management</td>
+<td>Iterative delivery of a product, working collaboratively with team members, on-site as well as remotely</td>
+<td>Setting up project infrastructure from scratch</td></tr>
+<tr>
+<td>Testing</td>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., automated unit/integration/system testing</span>basic developer testing</span> and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., acceptance testing</span>user testing</span></td>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., security testing, performance testing, usability testing</span>testing for non-functional aspects</span></td></tr>
+<tr>
+<td>Applications domains</td>
+<td>Cross-platform desktop applications</td>
+<td>Web programming, Mobile programming, Database programming</td></tr></tbody></table></div><br>
+<panel src="/website/admin/appendixC-faq._include_.html#admin-faq-tVsNonT" class="embedding algolia-no-index" minimized fragment="admin-faq-tVsNonT"><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>FAQ: What are the differences between CS2103 and CS2103T?</strong></p></template></panel></span>
 
+<p></p>
 
-<p><strong>Admin:</strong></p>
-<div>
-<ol>
-<li><span>Submit Final Peer Evaluation on TEAMMATES</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Nov 12th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
-<div>
-<p><strong>tP:</strong> <span class="border rounded text-success border-success pr-1 pl-1"><span aria-hidden="true" class="fas fa-tag"></span> <strong>v1.4</strong></span></p>
-<div>
-<ol>
-<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Do final tweaks to the feature</span></li>
-<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span><span><span aria-hidden="true" class="fas fa-users"></span></span> Submit deliverables</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Mon, Nov 9th 2359</span></span></li>
-<li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Wrap up the milestone</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Wed, Nov 11th 2359</span></span></li>
-<li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Submit the demo video</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Wed, Nov 11th 2359</span></span></li>
-<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Prepare for the practical exam</span></li>
-<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Attend the practical exam</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during lecture on Fri, Nov 13th 2359</span></span></li></ol></div></div></div></div></div></span>
-<br></div></div></div></div>
+</div></div>
+<br>
+<p><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/usingThisWebsite.html"><span>Using this Website <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div></div></div>
 
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
 <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-<a class="nav-link py-1" href="#week-13-fri-nov-6th-summary">Week 13 [Fri, Nov 6th] - Summary&#x200E;</a>
+<a class="nav-link py-1" href="#cs2103-t-software-engineering">CS2103/T: Software Engineering &#x200E;</a>
 
 </nav>
 </div>
@@ -127,7 +229,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="markbind/js/vue.min.js"></script>
 <script src="markbind/js/components.min.js"></script>

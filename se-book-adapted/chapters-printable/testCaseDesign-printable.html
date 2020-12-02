@@ -54,22 +54,22 @@
 <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high percentage of existing bugs <span class="dimmed">e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p></li>
 <li>
 <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed">a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p></li></ul>
-<p><strong>For testing to be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Efficient and Effective</span>E&amp;E</span>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve E&amp;E of testing.</p></div></div></div></div>
+<p><strong>For testing to be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Efficient and Effective</span>E&amp;E</span>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve the E&amp;E of testing.</p></div></div></div></div>
 <div class="indented-less">
 <h4 id="positive-vs-negative-test-cases">Positive vs Negative Test Cases <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#positive-vs-negative-test-cases" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong>A <em>positive test case</em> is when the test is designed to produce an expected/valid behavior. A negative test case is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.</strong></p>
+<p><strong>A <em>positive test case</em> is when the test is designed to produce an expected/valid behavior. On the other hand, a <em>negative test case</em> is designed to produce a behavior that indicates an invalid/unexpected situation, such as an error message.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider testing of the method <code v-pre>print(Integer i)</code> which prints the value of <code v-pre>i</code>.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the testing of the method <code v-pre>print(Integer i)</code> which prints the value of <code v-pre>i</code>.</p>
 <ul>
-<li>A positive test case: <code v-pre>i == new Integer(50)</code></li>
+<li>A positive test case: <code v-pre>i == new Integer(50);</code></li>
 <li>A negative test case: <code v-pre>i == null;</code></li></ul></box></div></div></div>
 <div class="indented-less">
 <h4 id="black-box-vs-glass-box">Black Box vs Glass Box <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#black-box-vs-glass-box" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong>Test case design can be of three types, based on how much of SUT internal details are considered when designing test cases:</strong></p>
+<p><strong>Test case design can be of three types, based on how much of the SUT's internal details are considered when designing test cases:</strong></p>
 <ul>
 <li>
 <p><strong><em>Black-box</em> (aka <em>specification-based or responsibility-based</em>) approach</strong>: test cases are designed exclusively based on the SUT’s specified external behavior.</p></li>
@@ -96,7 +96,7 @@
 <box>
 <div id="isValidMonth">
 <p><code v-pre>isValidMonth(m)</code> : returns <code v-pre>true</code> if <code v-pre>m</code> (and <code v-pre>int</code>) is in the range [1..12]</p></div></box>
-<p>It is inefficient and impractical to test this method for all integer values <code v-pre>[-MIN_INT to MAX_INT]</code>.  Fortunately, there is no need to test all possible input values. For example, if the input value <code v-pre>233</code> failed to produce the correct result, the input <code v-pre>234</code> is likely to fail too; there is no need to test both.</p>
+<p>It is inefficient and impractical to test this method for all integer values <code v-pre>[-MIN_INT to MAX_INT]</code>.  Fortunately, there is no need to test all possible input values. For example, if the input value <code v-pre>233</code> fails to produce the correct result, the input <code v-pre>234</code> is likely to fail too; there is no need to test both.</p>
 <p>In general, <strong>most SUTs do not treat each input in a unique way. Instead, they process all possible inputs in a small number of distinct ways.</strong> That means a range of inputs is treated the same way inside the SUT.
 <strong><em>Equivalence partitioning (EP)</em> is a test case design technique that uses the above observation to improve the E&amp;E of testing.</strong></p>
 <box type="definition" seamless>
@@ -114,9 +114,9 @@
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> These could be EPs for the <span for="pop:epBasic-isValidMonth" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:epBasic-isValidMonth'].show()" class="trigger">isValidMonth</span> example:</p>
 <ul>
-<li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li>
-<li>[1 … 12] : the range that produces <code v-pre>true</code></li>
-<li>[13 … MAX_INT] : <strong>above</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li></ul></box>
+<li>[MIN_INT ... 0]: <strong>below</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li>
+<li>[1 … 12]: the range that produces <code v-pre>true</code></li>
+<li>[13 … MAX_INT]: <strong>above</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li></ul></box>
 <span id="pop:epBasic-isValidMonth" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header"><code v-pre>isValidMonth</code></span>
   <div data-mb-html-for="content">
     <div>
@@ -141,15 +141,15 @@
 <ul>
 <li>prime numbers</li>
 <li>non-prime numbers</li></ul></box>
-<p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases you have to consider each value as a partition by itself.</p>
+<p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases, you have to consider each value as a partition by itself.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code v-pre>showStatusMessage(GameStatus s): String</code> that returns a unique <code v-pre>String</code> for each of the possible value of s (<code v-pre>GameStatus</code> is an <code v-pre>enum</code>). In this case, each possible value for <code v-pre>s</code> will have to be considered as a partition.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code v-pre>showStatusMessage(GameStatus s): String</code> that returns a unique <code v-pre>String</code> for each of the possible values of s (<code v-pre>GameStatus</code> is an <code v-pre>enum</code>). In this case, each possible value of <code v-pre>s</code> will have to be considered as a partition.</p></box>
 <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method EPs given above for the <code v-pre>isValidMonth</code>. A different tester might use these EPs instead:</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the EPs given above for the method <code v-pre>isValidMonth</code>. A different tester might use these EPs instead:</p>
 <ul>
-<li>[1 … 12] : the range that produces <code v-pre>true</code></li>
-<li>[all other integers] : the range that produces <code v-pre>false</code></li></ul></box>
+<li>[1 … 12]: the range that produces <code v-pre>true</code></li>
+<li>[all other integers]: the range that produces <code v-pre>false</code></li></ul></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some more examples:</p>
 <table class="table">
@@ -159,13 +159,13 @@
   <tr>
   <td>
 <p><code v-pre>isValidFlag(String s): boolean</code><br>
-Returns <code v-pre>true</code> if s is one of [<code v-pre>&quot;F&quot;</code>, <code v-pre>&quot;T&quot;</code>, <code v-pre>&quot;D&quot;</code>]. The comparison is case-sensitive.</p></td>
+Returns <code v-pre>true</code> if <code v-pre>s</code> is one of [<code v-pre>&quot;F&quot;</code>, <code v-pre>&quot;T&quot;</code>, <code v-pre>&quot;D&quot;</code>]. The comparison is case-sensitive.</p></td>
   <td>
 <p>[<code v-pre>&quot;F&quot;</code>] [<code v-pre>&quot;T&quot;</code>] [<code v-pre>&quot;D&quot;</code>] [<code v-pre>&quot;f&quot;</code>, <code v-pre>&quot;t&quot;</code>, <code v-pre>&quot;d&quot;</code>] [any other string][null]</p></td></tr>
   <tr>
   <td>
 <p><code v-pre>squareRoot(String s): int</code><br>
-Pre-conditions: s represents a positive integer<br>
+Pre-conditions: <code v-pre>s</code> represents a positive integer.<br>
 Returns the square root of <code v-pre>s</code> if the square root is an integer; returns <code v-pre>0</code> otherwise.</p></td>
   <td>
 <p>[<code v-pre>s</code> is not a valid number] [<code v-pre>s</code> is a negative integer] [<code v-pre>s</code> has an integer square root] [<code v-pre>s</code> does not have an integer square root]</p></td></tr></table></box></div></div></div>
@@ -173,21 +173,21 @@ Returns the square root of <code v-pre>s</code> if the square root is an integer
 <h4 id="intermediate">Intermediate <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p>When deciding EPs of OOP methods, you need to identify EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
+<p>When deciding EPs of OOP methods, you need to identify the EPs of all data participants that can potentially influence the behaviour of the method, such as,</p>
 <ul>
 <li>the target object of the method call</li>
 <li>input parameters of the method call</li>
-<li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented)</li></ul>
+<li>other data/objects accessed by the method such as global variables. This category may not be applicable if using the black box approach (because the test case designer using the black box approach will not know how the method is implemented).</li></ul>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this method in the <code v-pre>DataStack</code> class:
 <code v-pre>push(Object o): boolean</code></p>
 <ul>
-<li>Adds o to the top of the stack if the stack is not full.</li>
-<li>returns <code v-pre>true</code> if the push operation was a success.</li>
-<li>throws
+<li>Adds <code v-pre>o</code> to the top of the stack if the stack is not full.</li>
+<li>Returns <code v-pre>true</code> if the push operation was a success.</li>
+<li>Throws
 <ul>
 <li><code v-pre>MutabilityException</code> if the global flag <code v-pre>FREEZE==true</code>.</li>
-<li><code v-pre>InvalidValueException</code> if  o is null.</li></ul></li></ul>
+<li><code v-pre>InvalidValueException</code> if <code v-pre>o</code> is null.</li></ul></li></ul>
 <p>EPs:</p>
 <ul>
 <li><code v-pre>DataStack</code> object: [full] [not full]</li>
@@ -196,13 +196,13 @@ Returns the square root of <code v-pre>s</code> if the square root is an integer
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider a simple Minesweeper app. What are the EPs for the <code v-pre>newGame()</code> method of the <code v-pre>Logic</code> component?</p>
 <p>As <code v-pre>newGame()</code> does not have any parameters, the only obvious participant is the <code v-pre>Logic</code> object itself.</p>
-<p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, <code v-pre>Minefield</code> object can be considered as another participant of the <code v-pre>newGame()</code> method. Here, the black-box approach is assumed.</p>
+<p>Note that if the glass-box or the grey-box approach is used, other associated objects that are involved in the method might also be included as participants. For example, the <code v-pre>Minefield</code> object can be considered as another participant of the <code v-pre>newGame()</code> method. Here, the black-box approach is assumed.</p>
 <p>Next, let us identify equivalence partitions for each participant. Will the <code v-pre>newGame()</code> method behave differently for different <code v-pre>Logic</code> objects? If yes, how will it differ? In this case, yes, it might behave differently based on the game state. Therefore, the equivalence partitions are:</p>
 <ul>
-<li><code v-pre>PRE_GAME</code> : before the game starts, minefield does not exist yet</li>
-<li><code v-pre>READY</code> : a new minefield has been created and waiting for player’s first move</li>
-<li><code v-pre>IN_PLAY</code> : the current minefield is already in use</li>
-<li><code v-pre>WON</code>, <code v-pre>LOST</code> : let us assume the <code v-pre>newGame</code> behaves the same way for these two values</li></ul></box>
+<li><code v-pre>PRE_GAME</code>: before the game starts, minefield does not exist yet</li>
+<li><code v-pre>READY</code>: a new minefield has been created and the app is waiting for the player’s first move</li>
+<li><code v-pre>IN_PLAY</code>: the current minefield is already in use</li>
+<li><code v-pre>WON</code>, <code v-pre>LOST</code>: let us assume that <code v-pre>newGame()</code> behaves the same way for these two values</li></ul></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the <code v-pre>Logic</code> component of the Minesweeper application. What are the EPs for the <code v-pre>markCellAt(int x, int y)</code> method?. The partitions in <strong>bold</strong> represent valid inputs.</p>
 <ul>
@@ -216,9 +216,9 @@ Returns the square root of <code v-pre>s</code> if the square root is an integer
 <h4 id="what-3">What <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong><em>Boundary Value Analysis (BVA)</em> is test case design heuristic that is based on the observation that bugs often result from incorrect handling of boundaries of equivalence partitions.</strong> This is not surprising, as the end points of the boundary are often used in branching instructions etc. where the programmer can make mistakes.</p>
+<p><strong><em>Boundary Value Analysis (BVA)</em> is a test case design heuristic that is based on the observation that bugs often result from incorrect handling of boundaries of equivalence partitions.</strong> This is not surprising, as the end points of boundaries are often used in branching instructions, etc., where the programmer can make mistakes.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>markCellAt(int x, int y)</code> operation could contain code such as if <code v-pre>(x &gt; 0 &amp;&amp; x &lt;= (W-1))</code> which involves boundaries of x’s equivalence partitions.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>markCellAt(int x, int y)</code> operation could contain code such as <code v-pre>if (x &gt; 0 &amp;&amp; x &lt;= (W-1))</code> which involves the boundaries of x’s equivalence partitions.</p></box>
 <p><strong>BVA suggests that when picking test inputs from an equivalence partition, values near boundaries (i.e. boundary values) are more likely to find bugs.</strong></p>
 <p>Boundary values are sometimes called <em>corner cases</em>.</p></div></div></div>
 <div class="indented-less">
@@ -273,14 +273,14 @@ No specific boundary</p></td></tr>
 <div>
 <p><strong>An SUT can take multiple inputs.</strong> You can select values for each input (using equivalence partitioning, boundary value analysis, or some other technique).</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> an SUT that takes multiple inputs and some values chosen as values for each input:</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An SUT that takes multiple inputs and some values chosen for each input:</p>
 <ul>
 <li>Method to test: <code v-pre>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
 <li>Values to test:<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>Input</th>
-<th>valid values to test</th>
-<th>invalid values to test</th></tr></thead>
+<th>Valid values to test</th>
+<th>Invalid values to test</th></tr></thead>
 <tbody>
 <tr>
 <td>participation</td>
@@ -298,15 +298,15 @@ No specific boundary</p></td></tr>
 <td>examScore</td>
 <td>0, 1, 69, 70,</td>
 <td>71, 72</td></tr></tbody></table></div></li></ul></box>
-<p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective) but the number of test cases can be too high (i.e. not efficient). Therefore, <strong>you need smarter ways to combine test inputs that are both effective and efficient.</strong></p></div></div></div>
+<p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective) but the number of test cases will be too high (i.e. not efficient). Therefore, <strong>you need smarter ways to combine test inputs that are both effective and efficient.</strong></p></div></div></div>
 <div class="indented-less">
 <h4 id="test-input-combination-strategies">Test Input Combination Strategies <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#test-input-combination-strategies" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p>Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.</p>
+<p>Given below are some basic strategies for generating a set of test cases by combining multiple test inputs.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
-<p>SUT: <code v-pre>foo(p1 char, p2 int, p3 boolean)</code></p>
+<p>SUT: <code v-pre>foo(char p1, int p2, boolean p3)</code></p>
 <p>Values to test:</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -324,7 +324,7 @@ No specific boundary</p></td></tr>
 <td style="text-align:center">T, F</td></tr></tbody></table></div></box>
 <p><strong>The <em>all combinations</em> strategy generates test cases for each unique combination of test inputs.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> the strategy generates 3x3x2=18 test cases</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 3x3x2=18 test cases.</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th style="text-align:center">Test Case</th>
@@ -359,7 +359,7 @@ No specific boundary</p></td></tr>
 <td style="text-align:center">F</td></tr></tbody></table></div></box>
 <p><strong>The <em>at least once</em> strategy includes each test input at least once.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 3 test cases.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 3 test cases.</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th style="text-align:center">Test Case</th>
@@ -382,10 +382,10 @@ No specific boundary</p></td></tr>
 <td style="text-align:center">c</td>
 <td style="text-align:center">3</td>
 <td style="text-align:center">VV/IV</td></tr></tbody></table></div><p>VV/IV = Any Valid Value / Any Invalid Value</p></box>
-<p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
+<p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observation that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 9 test cases:</p>
-<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>see steps</p></template>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 9 test cases:</p>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>See steps</p></template>
 <p>Let's first consider inputs p1 and p2:</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -410,8 +410,8 @@ No specific boundary</p></td></tr>
 <tr>
 <td style="text-align:center">p3</td>
 <td style="text-align:center">T, F</td></tr></tbody></table></div><p>These values can generate <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">(a,T)(a,F)(b,T)(b,F),...</span>3x2=6 combinations</span>, and the test cases should cover all of them.</p>
-<p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
-<p>The 9 test cases given below covers all those 9+6+6 combinations.</p></panel>
+<p>Similarly, inputs p2 and p3 generate another 6 combinations.</p>
+<p>The 9 test cases given below cover all the above 9+6+6 combinations.</p></panel>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th style="text-align:center">Test Case</th>
@@ -504,7 +504,7 @@ No specific boundary</p></td></tr>
 <td style="text-align:center">c</td>
 <td style="text-align:center">VV/IV</td>
 <td style="text-align:center">F</td></tr></tbody></table></div></box>
-<p><strong>The <em>random</em> strategy generates test cases using one of the other strategies and then pick a subset randomly</strong> (presumably because the original set of test cases is too big).</p>
+<p><strong>The <em>random</em> strategy generates test cases using one of the other strategies and then picks a subset randomly</strong> (presumably because the original set of test cases is too big).</p>
 <p><strong>There are other strategies that can be used too.</strong></p></div></div></div>
 <div class="indented-less">
 <h4 id="heuristic-each-valid-input-at-least-once-in-a-positive-test-case">Heuristic: Each Valid Input at Least Once in a Positive Test Case <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#heuristic-each-valid-input-at-least-once-in-a-positive-test-case" onclick="event.stopPropagation()"></a></h4>
@@ -512,7 +512,7 @@ No specific boundary</p></td></tr>
 <div>
 <p>Consider the following scenario.</p>
 <box>
-<p>SUT:  <code v-pre>printLabel(fruitName String, unitPrice int)</code></p>
+<p>SUT:  <code v-pre>printLabel(String fruitName, int unitPrice)</code></p>
 <p><strong>Selected values for</strong> <code v-pre>fruitName</code> (invalid values are <ins>underlined</ins> ):</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -577,11 +577,11 @@ No specific boundary</p></td></tr>
 <td style="text-align:center"><ins>Dog</ins></td>
 <td style="text-align:center"><ins>-1</ins></td>
 <td style="text-align:center">Error message “invalid fruit&quot;</td></tr></tbody></table></div></box>
-<p>It looks like the test cases were created using the <em>at least once</em> strategy. After running these tests, can you confirm that square-format label printing is done correctly?</p>
+<p>It looks like the test cases were created using the <em>at least once</em> strategy. After running these tests, can you confirm that the square-format label printing is done correctly?</p>
 <ul>
 <li>Answer: No.</li>
 <li>Reason: <code v-pre>Cherry</code> -- the only input that can produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</li></ul>
-<p>In this case a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code v-pre>Cherry</code> is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.</p>
+<p>In this case, a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code v-pre>Cherry</code> is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.</p>
 <box>
 <div id="heuristic-valid-test-case">
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
@@ -655,11 +655,11 @@ No specific boundary</p></td></tr>
 <td style="text-align:center"><ins>Dog</ins></td>
 <td style="text-align:center"><ins>-1</ins></td>
 <td style="text-align:center">Error message “invalid fruit&quot;</td></tr></tbody></table></div><p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p></div></b-modal>
-<p>After running these test cases can you be sure that the error message “invalid price” is shown for negative prices?</p>
+<p>After running these test cases, can you be sure that the error message “invalid price” is shown for negative prices?</p>
 <ul>
 <li>Answer: No.</li>
-<li>Reason: <code v-pre>-1</code>  -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li></ul>
-<p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, you get the following test cases.</p>
+<li>Reason: <code v-pre>-1</code> -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li></ul>
+<p>In this case, a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, you get the following test cases.</p>
 <box>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -991,7 +991,7 @@ No specific boundary</p></td></tr>
 <div class="indented-less">
 <div>
 <p><strong>Use cases can be used for system testing and acceptance testing</strong>. For example, the main success scenario can be one test case while each variation (due to extensions) can form another test case. However, note that use cases do not specify the exact data entered into the system. Instead, it might say something like <code v-pre>user enters his personal data into the system</code>. Therefore, the tester has to choose data by considering equivalence partitions and boundary values. The combinations of these could result in one use case producing many test cases.</p>
-<p>To increase <span trigger="click" for="modal:usebaseBased-EandE" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:usebaseBased-EandE'].show()" class="trigger-click">E&amp;E of testing</span>, high-priority use cases are given more attention. For example, a <span trigger="click" for="modal:usecaseBased-scripted" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:usecaseBased-scripted'].show()" class="trigger-click">scripted approach</span> can be used to test high priority test cases, while an exploratory approach is used to test other areas of concern that could emerge during testing.</p>
+<p>To increase the <span trigger="click" for="modal:usebaseBased-EandE" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:usebaseBased-EandE'].show()" class="trigger-click">E&amp;E of testing</span>, high-priority use cases are given more attention. For example, a <span trigger="click" for="modal:usecaseBased-scripted" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:usecaseBased-scripted'].show()" class="trigger-click">scripted approach</span> can be used to test high-priority test cases, while an exploratory approach is used to test other areas of concern that could emerge during testing.</p>
 <b-modal id="modal:usebaseBased-EandE" hide-footer size="lg" modal-class="mb-zoom" ref="modal:usebaseBased-EandE" class="algolia-no-index"><template slot="modal-title">Quality Assurance → Test Case Design → Introduction → (extract) E&amp;E of testing</template>
   <div>
 <p><strong>Every test case adds to the cost of testing.</strong> In some systems, a single test case can cost thousands of dollars <span class="dimmed">e.g. on-field testing of flight-control software</span>. Therefore, <strong>test cases need to be designed to make the best use of testing resources.</strong>  In particular:</p>
@@ -1000,7 +1000,7 @@ No specific boundary</p></td></tr>
 <p><strong>Testing should be <em>effective</em></strong> i.e., it finds a high percentage of existing bugs <span class="dimmed">e.g., a set of test cases that finds 60 defects is more effective than a set that finds only 30 defects in the same system</span>.</p></li>
 <li>
 <p><strong>Testing should be <em>efficient</em></strong> i.e., it has a high rate of success (bugs found/test cases) <span class="dimmed">a set of 20 test cases that finds 8 defects is more efficient than another set of 40 test cases that finds the same 8 defects</span>.</p></li></ul>
-<p><strong>For testing to be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Efficient and Effective</span>E&amp;E</span>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve E&amp;E of testing.</p></div></b-modal>
+<p><strong>For testing to be <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Efficient and Effective</span>E&amp;E</span>, each new test you add should be targeting a potential fault that is not already targeted by existing test cases.</strong> There are test case design techniques that can help us improve the E&amp;E of testing.</p></div></b-modal>
 <b-modal id="modal:usecaseBased-scripted" hide-footer size="lg" modal-class="mb-zoom" ref="modal:usecaseBased-scripted" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
   <div>
 <div></div><p></p>
@@ -1026,12 +1026,12 @@ But before that, you should give a good test run to feature y because users can 
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p></box>
 <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
   <div>
-<p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a>  -- James Bach is an industry thought leader in software testing).</p></div></b-modal></div>
+<p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a>  -- James Bach is an industry thought leader in software testing.</p></div></b-modal></div>
 <div>
   <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about exploratory and scripted testing</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about exploratory and scripted testing</p></template>
 <question>
 <p>Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
 <ul radio-group="db31a" class="radio-list">
@@ -1044,12 +1044,12 @@ But before that, you should give a good test run to feature y because users can 
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which testing technique is better?</p></template>
 <question>
 <p>Which testing technique is better?</p>
-<ul radio-group="9fd35" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> a. error guessing</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> b. bug hunting</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> c. attack-based testing</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> d. reactive testing</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> e. These are different names used to describe exploratory testing.</label></li></ul>
+<ul radio-group="ae1b1" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> a. Error guessing</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> b. Bug hunting</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> c. Attack-based testing</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> d. Reactive testing</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> e. These are different names used to describe exploratory testing.</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(e)</p></div></question></panel></div>
   <div>
@@ -1057,13 +1057,13 @@ But before that, you should give a good test run to feature y because users can 
 <question has-input="true">
 <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
 <div slot="answer" class="algolia-no-index">
-<p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p></div></question></panel></div></panel></div></div></div></div></div></b-modal></div></div></div></div></div></div>
+<p>When we test Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p></div></question></panel></div></panel></div></div></div></div></div></b-modal></div></div></div></div></div></div>
 
         </div>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

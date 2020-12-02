@@ -297,17 +297,17 @@
 <ul>
 <li><em>View</em>: Displays data, interacts with the user, and pulls data from the model if necessary.</li>
 <li><em>Controller</em>: Detects UI events such as mouse clicks, button pushes and takes follow up action. Updates/changes the model/view when necessary.</li>
-<li><em>Model</em>: Stores and maintains data. Updates views if necessary.</li></ul>
-<p>The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of view and controller.</p>
+<li><em>Model</em>: Stores and maintains data. Updates the view if necessary.</li></ul>
+<p>The relationship between the components can be observed in the diagram below. Typically, the UI is the combination of <em>View</em> and <em>Controller</em>.</p>
 <img src="/website/book/designPatterns/modelViewController/what/images/classDiagram.png" width="400">
 <p></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving data of one student.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Given below is a concrete example of MVC applied to a student management system. In this scenario, the user is retrieving the data of a student.</p>
 <img src="/website/book/designPatterns/modelViewController/what/images/sequenceDiagram.png" width="500">
 <p></p>
 <p>In the diagram above, when the user clicks on a button using the UI, the ‘click’ event is caught and handled by the <code v-pre>UiController</code>. The <code v-pre>ref</code> frame indicates that the interactions within that frame have been extracted out to another separate sequence diagram.</p></box>
-<p>Note that in a simple UI where there’s only one view, Controller and View can be combined as one class.</p>
-<p>There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a Web application.</p></div>
+<p>Note that in a simple UI where there’s only one view, <em>Controller</em> and <em>View</em> can be combined as one class.</p>
+<p>There are many variations of the MVC model used in different domains. For example, the one used in a desktop GUI could be different from the one used in a web application.</p></div>
 <div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -329,9 +329,9 @@
 <p></p>
 <div>
 <p><strong>Context</strong></p>
-<p>An object (possibly, more than one) is interested to get notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
+<p>An object (possibly more than one) is interested in being notified when a change happens to another object. That is, some objects want to ‘observe’ another object.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this scenario from the a student management system where the user is adding a new student to the system.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider this scenario from a student management system where the user is adding a new student to the system.</p>
 <img src="/website/book/designPatterns/observer/what/images/sequenceDiagram.png" height="330">
 <p></p>
 <p>Now, assume the system has two additional views used in parallel by different users:</p>
@@ -354,41 +354,41 @@
 <ol>
 <li>
 <p>First, create the relevant objects.</p>
-<pre><code class="hljs java" v-pre><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();<br></span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();<br></span><span>StudentStatusUi statusUi = <span class="hljs-keyword">new</span> StudentStatsUi();<br></span></code></pre></li>
+<pre><code class="hljs java" v-pre><span>StudentList studentList = <span class="hljs-keyword">new</span> StudentList();<br></span><span>StudentListUi listUi = <span class="hljs-keyword">new</span> StudentListUi();<br></span><span>StudentStatsUi statsUi = <span class="hljs-keyword">new</span> StudentStatsUi();<br></span></code></pre></li>
 <li>
 <p>Next, the two UIs indicate to the <code v-pre>StudentList</code> that they are interested in being updated whenever <code v-pre>StudentList</code> changes. This is also known as ‘subscribing for updates’.</p>
-<pre><code class="hljs java" v-pre><span>studentList.addUi(listUi);<br></span><span>studentList.addUi(statusUi);<br></span></code></pre></li>
+<pre><code class="hljs java" v-pre><span>studentList.addUi(listUi);<br></span><span>studentList.addUi(statsUi);<br></span></code></pre></li>
 <li>
-<p>Within the <code v-pre>addUi</code> operation of <code v-pre>StudentList</code>, all Observer objects subscribers are added to an internal data structure called <code v-pre>observerList</code>.</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{<br></span><span>    observerList.add(o);<br></span><span>}<br></span></code></pre></li></ol>
+<p>Within the <code v-pre>addUi</code> operation of <code v-pre>StudentList</code>, all Observer object subscribers are added to an internal data structure called <code v-pre>observerList</code>.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addUi</span><span class="hljs-params">(Observer o)</span> </span>{<br></span><span>    observerList.add(o);<br></span><span>}<br></span></code></pre></li></ol>
 <p><strong>Now, whenever the data in <code v-pre>StudentList</code> changes</strong> (e.g. when a new student is added to the <code v-pre>StudentList</code>),</p>
 <ol>
 <li>
 <p>All interested observers are updated by calling the <code v-pre>notifyUIs</code> operation.</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">//for each observer in the list</span><br></span><span>    <span class="hljs-keyword">for</span>(Observer o: observerList){<br></span><span>        o.update();<br></span><span>    }<br></span><span>}<br></span></code></pre></li>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// StudentList class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">notifyUIs</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">// for each observer in the list</span><br></span><span>    <span class="hljs-keyword">for</span> (Observer o: observerList) {<br></span><span>        o.update();<br></span><span>    }<br></span><span>}<br></span></code></pre></li>
 <li>
 <p>UIs can then pull data from the <code v-pre>StudentList</code> whenever the <code v-pre>update</code> operation is called.</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//StudentListUI class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">//refresh UI by pulling data from StudentList</span><br></span><span>}<br></span></code></pre><p>Note that <code v-pre>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p></li></ol></box>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// StudentListUI class</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">update</span><span class="hljs-params">()</span> </span>{<br></span><span>    <span class="hljs-comment">// refresh UI by pulling data from StudentList</span><br></span><span>}<br></span></code></pre><p>Note that <code v-pre>StudentList</code> is unaware of the exact nature of the two UIs but still manages to communicate with them via an intermediary.</p></li></ol></box>
 <p>Here is the generic description of the observer pattern:</p>
 <img src="/website/book/designPatterns/observer/what/images/observableInterfaceDiagram.png" height="100">
 <p></p>
 <ul>
 <li><code v-pre>&lt;&lt;Observer&gt;&gt;</code> is an interface: any class that implements it can observe an <code v-pre>&lt;&lt;Observable&gt;&gt;</code>. Any number of <code v-pre>&lt;&lt;Observer&gt;&gt;</code> objects can observe (i.e. listen to changes of) the <code v-pre>&lt;&lt;Observable&gt;&gt;</code> object.</li>
-<li>The <code v-pre>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code v-pre>&lt;&lt;Observer&gt;&gt;</code> objects. <code v-pre>addObserver(Observer)</code> operation adds a new <code v-pre>&lt;&lt;Observer&gt;&gt;</code> to the list of <code v-pre>&lt;&lt;Observer&gt;&gt;</code>'s.</li>
-<li>Whenever there is a change in the <code v-pre>&lt;&lt;Observable&gt;&gt;</code>, the <code v-pre>notifyObservers()</code> operation is called that will call the <code v-pre>update()</code> operation of all <code v-pre>&lt;&lt;Observer&gt;&gt;</code>'s in the list.</li></ul>
+<li>The <code v-pre>&lt;&lt;Observable&gt;&gt;</code> maintains a list of <code v-pre>&lt;&lt;Observer&gt;&gt;</code> objects. <code v-pre>addObserver(Observer)</code> operation adds a new <code v-pre>&lt;&lt;Observer&gt;&gt;</code> to the list of <code v-pre>&lt;&lt;Observer&gt;&gt;</code>s.</li>
+<li>Whenever there is a change in the <code v-pre>&lt;&lt;Observable&gt;&gt;</code>, the <code v-pre>notifyObservers()</code> operation is called that will call the <code v-pre>update()</code> operation of all <code v-pre>&lt;&lt;Observer&gt;&gt;</code>s in the list.</li></ul>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX has inbuilt support for the Observer pattern.</p></box></div>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In a GUI application, how is the Controller notified when the “save” button is clicked? UI frameworks such as JavaFX have inbuilt support for the Observer pattern.</p></box></div>
 <div>
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> polymorphism and Observer pattern.</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Polymorphism and the Observer pattern</p></template>
 <question has-input="true">
 <p>Explain how polymorphism is used in the Observer pattern.</p>
 <div slot="answer" class="algolia-no-index">
 <img src="/website/book/designPatterns/observer/what/images/observableInterfaceNotation.png" height="90">
 <p></p>
-<p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code v-pre>notifyObservers()</code> method, it is treating all <code v-pre>ConcreteObserver</code> objects as a general type called <code v-pre>Observer</code> and calling the <code v-pre>update()</code> method of each of them. However, the <code v-pre>update()</code> method of each <code v-pre>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, <code v-pre>update()</code> method shows polymorphic behavior.</p>
+<p>With respect to the general form of the Observer pattern given above, when the Observable object invokes the <code v-pre>notifyObservers()</code> method, it is treating all <code v-pre>ConcreteObserver</code> objects as a general type called <code v-pre>Observer</code> and calling the <code v-pre>update()</code> method of each of them. However, the <code v-pre>update()</code> method of each <code v-pre>ConcreteObserver</code> could potentially show different behavior based on its actual type. That is, the <code v-pre>update()</code> method shows polymorphic behavior.</p>
 <p>In the example given below, the <code v-pre>notifyUIs</code> operation can result in <code v-pre>StudentListUi</code> and <code v-pre>StudentStatsUi</code> changing their views in two different ways.</p>
 <img src="/website/book/designPatterns/observer/what/images/studentListStudentListObserver.png" height="190">
 <p></p></div></question></panel></div>
@@ -460,7 +460,7 @@
 <li>Modify information about an item</li>
 <li>View all available accessories for a given appliance</li>
 <li>List all items in the store</li></ul>
-<p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about current stock status.  User authentication is not required for the current version, but may be required in the future.</p>
+<p>SIS can be accessed using multiple terminals. Shop assistants use their own terminals to access SIS, while the shop manager’s terminal continuously displays a list of all items in the store. In the future, it is expected that suppliers of items use their own applications to connect to SIS to get real-time information about the current stock status. User authentication is not required for the current version, but may be required in the future.</p>
 <p>A step by step explanation of the design is given below. Note that this is one out of many possible designs.  Design patterns are also applied where appropriate.</p>
 <p>A <code v-pre>StockItem</code> can be an Appliance or an Accessory.</p>
 <img src="/website/book/designPatterns/more/combiningDesignPatterns/images/stockItem.png" height="100">
@@ -483,7 +483,7 @@
 <p>As UI consists of multiple views, the  MVC pattern is applied here.</p>
 <img src="/website/book/designPatterns/more/combiningDesignPatterns/images/withMVC.png" height="270">
 <p></p>
-<p>Some views need to be updated when the data change; apply the Observer pattern here.</p>
+<p>Some views need to be updated when the data changes; apply the Observer pattern here.</p>
 <img src="/website/book/designPatterns/more/combiningDesignPatterns/images/withObserver.png" height="270">
 <p></p>
 <p>In addition, the Singleton pattern can be applied to the façade class.</p></box></div>
@@ -503,7 +503,7 @@
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain pros and cons of design patterns</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<p><strong>Design pattern provides a high-level vocabulary to talk about design.</strong></p>
+<p><strong>Design patterns provide a high-level vocabulary to talk about design.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Someone can say 'apply Observer pattern here' instead of having to describe the mechanics of the solution in detail.</p></box>
 <p><strong>Knowing more patterns is a way to become more ‘experienced’.</strong> Aim to learn at least the context and the problem of patterns <span class="dimmed">so that when you encounter those problems you know where to look for a solution</span>.</p>
@@ -542,7 +542,7 @@
   <div>
 <div class="indented">
 <div></div><p></p>
-<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how patterns exist beyond software design domain</span></span></span></span></p><p></p><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how patterns exist beyond the domain of software design</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
 <p>The notion of capturing design ideas as &quot;patterns&quot; is usually attributed to <a href="https://en.wikipedia.org/wiki/Christopher_Alexander">Christopher Alexander</a>. He is a building architect noted for his theories about design. His book <em>Timeless way of building</em> talks about &quot;design patterns&quot; for constructing buildings.</p>
@@ -554,7 +554,7 @@ and toward the other focus at the same time. If you rearrange the furniture, so 
 room is much more “comfortable”</p></blockquote>
 <p>Apparently, patterns and anti-patterns are found in the field of building architecture. This is because they are general concepts applicable to any domain, not just software design. In software engineering, there are many general types of patterns: Analysis patterns, Design patterns, Testing patterns, Architectural patterns, Project management patterns, and so on.</p>
 <p>In fact, the abstraction occurrence pattern is more of an analysis pattern than a design pattern, while MVC is more of an architectural pattern.</p>
-<p>New patterns can be created too. If a common problem needs to be solved frequently that leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel; the pattern might already exist.</p></div>
+<p>New patterns can be created too. If a common problem that needs to be solved frequently leads to a non-obvious and better solution, it can be formulated as a pattern so that it can be reused by others. However, don’t reinvent the wheel; the pattern might already exist.</p></div>
 <div>
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
@@ -649,7 +649,7 @@ room is much more “comfortable”</p></blockquote>
 <img src="/website/book/architecture/architecturalStyles/clientServer/what/images/clientServer.png" height="120">
 <p></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The online game and the Web application below uses the client-server style.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The online game and the web application below use the client-server style.</p>
 <img src="/website/book/architecture/architecturalStyles/clientServer/what/images/clientServerExamples.png" height="200"></box></div>
 <div></div></div></div></panel>
 <p></p>
@@ -670,7 +670,7 @@ room is much more “comfortable”</p></blockquote>
 <p><strong><em>Event-driven</em> style controls the flow of the application by detecting <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">An event is a notable occurrence that happens inside or outside the software, such as the user clicking a button, a timer running out, minimizing a window, etc.</span>events</span> from event <em>emitters</em> and communicating those events to interested event <em>consumers</em> .</strong> This architectural style is often used in GUIs.</p>
 <img src="/website/book/architecture/architecturalStyles/eventDriven/what/images/eventDriven.png" width="450">
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> When the ‘button clicked’ event occurs in a GUI, that event can be transmitted to components that are interested in reacting to that event. Similarly, events detected at a Printer port can be transmitted to components related to operating the Printer. The same event can be sent to multiple consumers too.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> When the ‘button clicked’ event occurs in a GUI, that event can be transmitted to components that are interested in reacting to that event. Similarly, events detected at a printer port can be transmitted to components related to operating the printer. The same event can be sent to multiple consumers too.</p>
 <img src="/website/book/architecture/architecturalStyles/eventDriven/what/images/eventDrivenExamples.png" width="450"></box></div>
 <div></div></div></div></panel>
 <p></p>
@@ -691,7 +691,7 @@ room is much more “comfortable”</p></blockquote>
 <p><strong>The <em>transaction processing</em> style divides the workload of the system down to a number of <em>transactions</em> which are then given to a <em>dispatcher</em> that controls the execution of each transaction.</strong> Task queuing, ordering, undo etc. are handled by the dispatcher.</p>
 <img src="/website/book/architecture/architecturalStyles/transactionProcessing/what/images/transactionProcessing.png" height="120">
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example from a Banking system, transactions are generated by the terminals used by <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">employees of a bank who deals directly with customers</span>tellers</span> which are then sent to a central dispatching unit which in turn dispatches the transactions to various other units to execute.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example from a banking system, transactions are generated by the terminals used by <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">employees of a bank who deal directly with customers</span>tellers</span>, which are then sent to a central dispatching unit, which in turn dispatches the transactions to various other units to execute.</p>
 <img src="/website/book/architecture/architecturalStyles/transactionProcessing/what/images/transactionProcessingExamples.png" height="120"></box></div>
 <div></div></div></div></panel>
 <p></p>
@@ -732,7 +732,7 @@ room is much more “comfortable”</p></blockquote>
 <div>
 <p><strong>Most applications use a mix of these architectural styles.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An application can use a client-server architecture where the server component comprises several layers, i.e. it uses the n-Tier architecture.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An application can use a client-server architecture where the server component comprises several layers, i.e. it uses the n-tier architecture.</p>
 </box></div>
 <div>
 <div>
@@ -751,8 +751,8 @@ room is much more “comfortable”</p></blockquote>
 <ol>
 <li>Client-server – Clients can be the game UI running on player PCs. The server can be the game logic running on one machine.</li>
 <li>Transaction-processing – Each player action can be packaged as transactions (by the client component running on the player PC) and sent to the server. Server processes them in the order they are received.</li>
-<li>SOA – The game can access a remote web services for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.</li>
-<li>Multi-layer – The server component can have two layers: logic layer and the storage layer.</li></ol>
+<li>SOA – The game can access a remote web service for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.</li>
+<li>Multi-layer – The server component can have two layers: the logic layer and the storage layer.</li></ol>
 <img src="/website/book/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300">
 <p></p></div></question></panel></div></panel></div></div></div></div></panel>
 <p></p>
@@ -770,7 +770,7 @@ room is much more “comfortable”</p></blockquote>
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can name several other architecture styles</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<p><strong>Other well-known architectural styles include the <em>pipes-and-filters architectures</em>, the <em>broker architectures</em>, the <em>peer-to-peer architectures</em>, and the <em>message-oriented architectures</em>.</strong></p></div>
+<p><strong>Other well-known architectural styles include the <em>pipes-and-filters architecture</em>, the <em>broker architecture</em>, the <em>peer-to-peer architecture</em>, and the <em>message-oriented architecture</em>.</strong></p></div>
 <div>
   <div>
 <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template> 
@@ -827,14 +827,14 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <div>
 <p><strong>An SUT can take multiple inputs.</strong> You can select values for each input (using equivalence partitioning, boundary value analysis, or some other technique).</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> an SUT that takes multiple inputs and some values chosen as values for each input:</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An SUT that takes multiple inputs and some values chosen for each input:</p>
 <ul>
 <li>Method to test: <code v-pre>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
 <li>Values to test:<div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>Input</th>
-<th>valid values to test</th>
-<th>invalid values to test</th></tr></thead>
+<th>Valid values to test</th>
+<th>Invalid values to test</th></tr></thead>
 <tbody>
 <tr>
 <td>participation</td>
@@ -852,7 +852,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <td>examScore</td>
 <td>0, 1, 69, 70,</td>
 <td>71, 72</td></tr></tbody></table></div></li></ul></box>
-<p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective) but the number of test cases can be too high (i.e. not efficient). Therefore, <strong>you need smarter ways to combine test inputs that are both effective and efficient.</strong></p></div>
+<p><strong>Testing all possible combinations is effective but not efficient.</strong> If you test all possible combinations for the above example, you need to test 6x5x2x6=360 cases. Doing so has a higher chance of discovering bugs (i.e. effective) but the number of test cases will be too high (i.e. not efficient). Therefore, <strong>you need smarter ways to combine test inputs that are both effective and efficient.</strong></p></div>
 <div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -869,10 +869,10 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain some basic test input combination strategies</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<p>Given below are some basic strategies for generating a set of test cases by combining multiple test input combination strategies.</p>
+<p>Given below are some basic strategies for generating a set of test cases by combining multiple test inputs.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Let's assume the SUT has the following three inputs and you have selected the given values for testing:</p>
-<p>SUT: <code v-pre>foo(p1 char, p2 int, p3 boolean)</code></p>
+<p>SUT: <code v-pre>foo(char p1, int p2, boolean p3)</code></p>
 <p>Values to test:</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -890,7 +890,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <td style="text-align:center">T, F</td></tr></tbody></table></div></box>
 <p><strong>The <em>all combinations</em> strategy generates test cases for each unique combination of test inputs.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> the strategy generates 3x3x2=18 test cases</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 3x3x2=18 test cases.</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th style="text-align:center">Test Case</th>
@@ -925,7 +925,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <td style="text-align:center">F</td></tr></tbody></table></div></box>
 <p><strong>The <em>at least once</em> strategy includes each test input at least once.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 3 test cases.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 3 test cases.</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th style="text-align:center">Test Case</th>
@@ -948,10 +948,10 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <td style="text-align:center">c</td>
 <td style="text-align:center">3</td>
 <td style="text-align:center">VV/IV</td></tr></tbody></table></div><p>VV/IV = Any Valid Value / Any Invalid Value</p></box>
-<p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observations that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
+<p><strong>The <em>all pairs</em> strategy creates test cases so that for any given pair of inputs, all combinations between them are tested.</strong> It is based on the observation that a bug is rarely the result of more than two interacting factors. The resulting number of test cases is lower than the <em>all combinations</em> strategy, but higher than the <em>at least once</em> approach.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> this strategy generates 9 test cases:</p>
-<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>see steps</p></template>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This strategy generates 9 test cases:</p>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>See steps</p></template>
 <p>Let's first consider inputs p1 and p2:</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -976,8 +976,8 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <tr>
 <td style="text-align:center">p3</td>
 <td style="text-align:center">T, F</td></tr></tbody></table></div><p>These values can generate <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">(a,T)(a,F)(b,T)(b,F),...</span>3x2=6 combinations</span>, and the test cases should cover all of them.</p>
-<p>Similarly, inputs p2 and p3 generates another 6 combinations.</p>
-<p>The 9 test cases given below covers all those 9+6+6 combinations.</p></panel>
+<p>Similarly, inputs p2 and p3 generate another 6 combinations.</p>
+<p>The 9 test cases given below cover all the above 9+6+6 combinations.</p></panel>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th style="text-align:center">Test Case</th>
@@ -1070,7 +1070,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <td style="text-align:center">c</td>
 <td style="text-align:center">VV/IV</td>
 <td style="text-align:center">F</td></tr></tbody></table></div></box>
-<p><strong>The <em>random</em> strategy generates test cases using one of the other strategies and then pick a subset randomly</strong> (presumably because the original set of test cases is too big).</p>
+<p><strong>The <em>random</em> strategy generates test cases using one of the other strategies and then picks a subset randomly</strong> (presumably because the original set of test cases is too big).</p>
 <p><strong>There are other strategies that can be used too.</strong></p></div>
 <div></div></div></div></panel>
 <p></p>
@@ -1090,7 +1090,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <div>
 <p>Consider the following scenario.</p>
 <box>
-<p>SUT:  <code v-pre>printLabel(fruitName String, unitPrice int)</code></p>
+<p>SUT:  <code v-pre>printLabel(String fruitName, int unitPrice)</code></p>
 <p><strong>Selected values for</strong> <code v-pre>fruitName</code> (invalid values are <ins>underlined</ins> ):</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -1155,11 +1155,11 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <td style="text-align:center"><ins>Dog</ins></td>
 <td style="text-align:center"><ins>-1</ins></td>
 <td style="text-align:center">Error message “invalid fruit&quot;</td></tr></tbody></table></div></box>
-<p>It looks like the test cases were created using the <em>at least once</em> strategy. After running these tests, can you confirm that square-format label printing is done correctly?</p>
+<p>It looks like the test cases were created using the <em>at least once</em> strategy. After running these tests, can you confirm that the square-format label printing is done correctly?</p>
 <ul>
 <li>Answer: No.</li>
 <li>Reason: <code v-pre>Cherry</code> -- the only input that can produce a square-format label -- is in a negative test case which produces an error message instead of a label. If there is a bug in the code that prints labels in square-format, these tests cases will not trigger that bug.</li></ul>
-<p>In this case a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code v-pre>Cherry</code> is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.</p>
+<p>In this case, a useful heuristic to apply is <strong>each valid input must appear at least once in a positive test case</strong>. <code v-pre>Cherry</code> is a valid test input and you must ensure that it appears at least once in a positive test case. Here are the updated test cases after applying that heuristic.</p>
 <box>
 <div id="heuristic-valid-test-case">
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
@@ -1246,11 +1246,11 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <td style="text-align:center"><ins>Dog</ins></td>
 <td style="text-align:center"><ins>-1</ins></td>
 <td style="text-align:center">Error message “invalid fruit&quot;</td></tr></tbody></table></div><p>VV/IV = Any Invalid or Valid Value VV=Any Valid Value</p></div></b-modal>
-<p>After running these test cases can you be sure that the error message “invalid price” is shown for negative prices?</p>
+<p>After running these test cases, can you be sure that the error message “invalid price” is shown for negative prices?</p>
 <ul>
 <li>Answer: No.</li>
-<li>Reason: <code v-pre>-1</code>  -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li></ul>
-<p>In this case a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, you get the following test cases.</p>
+<li>Reason: <code v-pre>-1</code> -- the only input that is a negative price -– is in a test case that produces the error message “invalid fruit”.</li></ul>
+<p>In this case, a useful heuristic to apply is <strong>no more than one invalid input in a test case</strong>. After applying that, you get the following test cases.</p>
 <box>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -1301,7 +1301,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <li class="radio-list-item"><label><input class="radio-list-input" name="a7d7f" type="radio"> False</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>False</p>
-<p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give you precise number of test cases.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p>Explanation: These heuristics are, well, heuristics only. They will help you to make better decisions about test case design. However, they are speculative in nature (especially, when testing in black-box fashion) and cannot give you the precise number of test cases.</p></div></question></panel></div></panel></div></div></div></div></panel>
 <p></p>
 <div class="indented">
 <div></div></div>
@@ -1604,7 +1604,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
 <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about test input combinations</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about test input combinations</p></template>
 <question>
 <p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
 <ul radio-group="1da4e" class="radio-list">
@@ -1618,7 +1618,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code v-pre>consume</code> method</p></template>
 <question>
-<p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>underlines</ins> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
+<p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>Underlines</ins> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
    <box>
 <p>SUT: <code v-pre>consume(food, drink)</code></p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
@@ -1695,12 +1695,12 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <ol>
 <li>Validation: are you <em>building the right system</em> i.e., are the requirements correct?</li>
 <li>Verification: are you <em>building the system right</em> i.e., are the requirements implemented correctly?</li></ol>
-<p>Whether something belongs under validation or verification is not that important. What is more important is both are done, instead of limiting to verification (i.e., remember that the requirements can be wrong too).</p></div>
+<p>Whether something belongs under validation or verification is not that important. What is more important is that both are done, instead of limiting to only verification (i.e., remember that the requirements can be wrong too).</p></div>
 <div>
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about validation and verification.</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about validation and verification</p></template>
 <question>
 <p>Choose the correct statements about validation and verification.</p>
 <ul class="contains-task-list">
@@ -1714,8 +1714,8 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
 <p>Explanation:</p>
 <p>Whether something belongs under validation or verification is not that important. What is more important is that we do both.</p>
-<p>Developer testing is more about bugs in code, rather than bugs in the requirements.</p>
-<p>In QA, system testing is more about verification (does the system follow the specification?) and acceptance testings is more about validation (does the system solve the user’s problem?).</p>
+<p>Developer testing is more about finding bugs in the code, rather than bugs in the requirements.</p>
+<p>In QA, system testing is more about verification (does the system follow the specification?) and acceptance testing is more about validation (does the system solve the user’s problem?).</p>
 <p>A system crash is more likely to be a bug in the code, not in the requirements.</p></div></question></panel></div></panel></div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -1743,7 +1743,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p></p></panel><p></p><p></p>
 <p>Advantages:</p>
 <ul>
-<li><strong>Formal verification can be used to prove the absence of errors</strong>. In contrast, testing can only prove the presence of error, not their absence.</li></ul>
+<li><strong>Formal verification can be used to prove the absence of errors</strong>. In contrast, testing can only prove the presence of errors, not their absence.</li></ul>
 <p>Disadvantages:</p>
 <ul>
 <li>It only proves the compliance with the specification, but not the actual utility of the software.</li>
@@ -1760,7 +1760,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <li class="radio-list-item"><label><input class="radio-list-input" name="cefed" type="radio"> False</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>True</p>
-<p>Explanation: While using formal methods is more expensive than testing, it indeed can prove the correctness of a piece of software conclusively, in certain contexts. Getting such proof via testing requires exhaustive testing, which is not practical to do in most cases.</p></div></question></panel></div></panel></div></div></div></div></panel>
+<p>Explanation: While using formal methods is more expensive than testing, it can indeed prove the correctness of a piece of software conclusively, in certain contexts. Getting such proof via testing requires exhaustive testing, which is not practical to do in most cases.</p></div></question></panel></div></panel></div></div></div></div></panel>
 <p></p>
 <div class="indented">
 <div></div></div></div></panel>
@@ -1818,11 +1818,11 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <div>
 <p>While you may be tempted to use many libraries/frameworks/platform that seem to crop up on a regular basis and promise to bring great benefits, note that <strong>there are costs associated with reuse</strong>. Here are some:</p>
 <ul>
-<li>The reused code <strong>may be an overkill</strong> (think <em>using a sledgehammer to crack a nut</em>) increasing the size of, or/and degrading the performance of, your software.</li>
+<li>The reused code <strong>may be an overkill</strong> (think <em>using a sledgehammer to crack a nut</em>), increasing the size of, and/or degrading the performance of, your software.</li>
 <li>The reused software <strong>may not be mature/stable enough</strong> to be used in an important product. That means the software can change drastically and rapidly, possibly in ways that break your software.</li>
 <li>Non-mature software has the <strong>risk of dying off</strong> as fast as they emerged, leaving you with a dependency that is no longer maintained.</li>
 <li>The license of the reused software (or its dependencies) <strong>restrict how you can use/develop your software</strong>.</li>
-<li>The reused software <strong>might have bugs, missing features, or security vulnerabilities</strong> that are important to your product but not so important to the maintainers of that software, which means those flaws will not get fixed as fast as you need them to.</li>
+<li>The reused software <strong>might have bugs, missing features, or security vulnerabilities</strong> that are important to your product, but not so important to the maintainers of that software, which means those flaws will not get fixed as fast as you need them to.</li>
 <li><strong>Malicious code can sneak into your product</strong> via compromised dependencies.</li></ul></div>
 <div>
 <div>
@@ -1835,14 +1835,14 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p>Pros</p>
 <ul>
 <li>The potential to create a much better product by reusing the framework.</li>
-<li>Learning a new framework is good for the future job prospects.</li></ul>
+<li>Learning a new framework is good for future job prospects.</li></ul>
 <p>Cons</p>
 <ul>
 <li>Learning curve may be steep.</li>
-<li>May not be stable (it was recently released).</li>
+<li>May not be stable (as it was recently released).</li>
 <li>May not allow you to do exactly what you want. While frameworks allow customization, such customization can be limited.</li>
 <li>Performance penalties.</li>
-<li>Might interfere with learning objectives of the module.</li></ul>
+<li>Might interfere with the learning objectives of the module.</li></ul>
 <p>Note that having more cons does not mean you should not use this framework. Further investigation is required before you can make a final decision.</p></div></question></panel></div></panel></div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -1886,12 +1886,12 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can make use of a library</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<p>These are the typical steps required to use a library.</p>
+<p>These are the typical steps required to use a library:</p>
 <ol>
-<li>Read the documentation to confirm that its functionality fits your needs</li>
+<li>Read the documentation to confirm that its functionality fits your needs.</li>
 <li>Check the license to confirm that it allows reuse in the way you plan to reuse it. For example, some libraries might allow non-commercial use only.</li>
 <li>Download the library and make it accessible to your project. Alternatively, you can configure your <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g. <em>Gradle</em> (for Java) and <em>Pipenv</em> (for Python)</span>dependency management tool</span> to do it for you.</li>
-<li>Call the library API from your code where you need to use the library functionality.</li></ol></div>
+<li>Call the library API from your code where you need to use the library's functionality.</li></ol></div>
 <div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -1911,7 +1911,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p><strong>An <em>Application Programming Interface (API)</em> specifies the interface through which other programs can interact with a software component.</strong> It is a contract between the component and its clients.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A class has an API (e.g., <a href="https://docs.oracle.com/javase/9/docs/api/java/lang/String.html">API of the Java <code v-pre>String</code> class</a>, <a href="https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str">API of the Python <code v-pre>str</code> class</a>) which is a collection of public methods that you can invoke to make use of the class.</p>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of Web request formats GitHub server accepts and the corresponding responses. You can write a program that interacts with GitHub through that API.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <a href="https://developer.github.com/v3/">GitHub API</a> is a collection of web request formats that the GitHub server accepts and their corresponding responses. You can write a program that interacts with GitHub through that API.</p></box>
 <p>When developing large systems, if you define the API of each components early, the development team can develop the components in parallel <span class="dimmed">because the future behavior of the other components are now more predictable</span>.</p></div>
 <div>
 <div>
@@ -1972,15 +1972,16 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p><strong>A framework facilitates the adaptation and customization of some desired functionality.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Running example:</p>
-<p>Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse. E.g. <a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">https://marketplace.eclipse.org/content/pydev-python-ide-eclipse</a></p></box>
-<p>Some frameworks cover only a specific components or an aspect.</p>
+<p>The Eclipse plugin system can be used to create an IDE for different programming languages while reusing most of the existing IDE features of Eclipse.</p>
+<p>E.g. <a href="https://marketplace.eclipse.org/content/pydev-python-ide-eclipse">https://marketplace.eclipse.org/content/pydev-python-ide-eclipse</a></p></box>
+<p>Some frameworks cover only a specific component or an aspect.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> JavaFx a framework for creating Java GUIs. TkInter is a GUI framework for Python.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> JavaFX is a framework for creating Java GUIs. Tkinter is a GUI framework for Python.</p></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> More examples of frameworks</p>
 <ul>
-<li>Frameworks for Web-based applications: Drupal(PHP), Django(Python), Ruby on Rails (Ruby), Spring (Java)</li>
-<li>Frameworks for testing: JUnit (Java), unittest (Python), Jest (Java Script)</li></ul></box></div>
+<li>Frameworks for web-based applications: Drupal (PHP), Django (Python), Ruby on Rails (Ruby), Spring (Java)</li>
+<li>Frameworks for testing: JUnit (Java), unittest (Python), Jest (JavaScript)</li></ul></box></div>
 <div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -2013,19 +2014,19 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <question>
 <p>Choose correct statements about software frameworks.</p>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the hollywood principle, otherwise known as ‘inversion of control’</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementation.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the Hollywood principle, otherwise known as ‘inversion of control’.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementations.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. They are more concrete than patterns or principles.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. They are often configurable.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. They are reuse mechanisms.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. They are similar to reusable libraries but bigger.</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
-<p>Explanation: While both libraries and frameworks are reuse mechanisms, and both more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p></div></question></panel></div>
+<p>Explanation: While both libraries and frameworks are reuse mechanisms, and both are more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p></div></question></panel></div>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are frameworks?</p></template>
 <question>
-<p>Which one of these are frameworks ?</p>
+<p>Which of these are frameworks?</p>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. JUnit</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Eclipse</li>
@@ -2054,15 +2055,15 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <div>
 <p><strong>A <em>platform</em> provides a runtime environment for applications.</strong> A platform is often bundled with various libraries, tools, frameworks, and technologies in addition to a runtime environment but the defining characteristic of a software platform is the presence of a runtime environment.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile apps.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Technically, an operating system can be called a platform. For example, Windows PC is a platform for desktop applications while iOS is a platform for mobile applications.</p></box>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <strong>Two well-known examples of platforms are JavaEE and .NET</strong>, both of which sit above Operating systems layer, and are used to develop <span for="modal:enterprise-application" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:enterprise-application'].show()" class="trigger-click">enterprise applications</span>. Infrastructure services such as connection pooling, load balancing, remote code execution, transaction management, authentication, security, messaging etc. are done similarly in most enterprise applications. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <strong>Two well-known examples of platforms are JavaEE and .NET</strong>, both of which sit above the operating systems layer, and are used to develop <span for="modal:enterprise-application" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:enterprise-application'].show()" class="trigger-click">enterprise applications</span>. Infrastructure services such as connection pooling, load balancing, remote code execution, transaction management, authentication, security, messaging etc. are done similarly in most enterprise applications. Both JavaEE and .NET provide these services to applications in a customizable way without developers having to implement them from scratch every time.</p>
 <ul>
 <li>JavaEE (Java Enterprise Edition) is both a framework and a platform for writing enterprise applications. The runtime used by the JavaEE applications is the JVM (Java Virtual Machine) that can run on different Operating Systems.</li>
-<li>.NET is a similar platform and a framework. Its runtime is called CLR (Common Language Runtime) and usually used on Windows machines.</li></ul></box>
+<li>.NET is a similar platform and framework. Its runtime is called CLR (Common Language Runtime) and it is usually used on Windows machines.</li></ul></box>
 <b-modal id="modal:enterprise-application" hide-footer size modal-class="mb-zoom" ref="modal:enterprise-application" class="algolia-no-index"><template slot="modal-title"><strong>Enterprise Applications</strong></template>
   <div>
-<p><strong>Enterprise application</strong>: ‘enterprise applications’ means software applications used at organizations level and therefore has to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.</p></div></b-modal></div>
+<p><strong>Enterprise application</strong>: ‘enterprise applications’ refer to software applications used by organizations and therefore have to meet much higher demands (such as in scalability, security, performance, and robustness) than software meant for individual use.</p></div></b-modal></div>
 <div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -2111,20 +2112,20 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p></p>
 <div>
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/Cloud_computing.svg" height="500"><br></p>
-<p><sub>source:<a href="https://en.wikipedia.org/wiki/Cloud_computing">https://commons.wikimedia.org</a></sub></p>
+<p><sub>source: <a href="https://en.wikipedia.org/wiki/Cloud_computing">https://commons.wikimedia.org</a></sub></p>
 <p>Cloud computing can deliver computing services at three levels:</p>
 <ol>
 <li>
 <p><strong>Infrastructure as a service (IaaS) delivers computer infrastructure as a service.</strong> For example, a user can deploy virtual servers on the cloud instead of buying physical hardware and installing server software on them. Another example would be a customer using storage space on the cloud for off-site storage of data. <span class="dimmed">Rackspace is an example of an IaaS cloud provider. Amazon Elastic Compute Cloud (Amazon EC2) is another one.</span></p></li>
 <li>
-<p><strong>Platform as a service (PaaS) provides a platform on which developers can build applications.</strong> Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required when using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. <span class="dimmed">A PaaS example is the Google App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy application written in any language on their virtual servers.</span></p></li>
+<p><strong>Platform as a service (PaaS) provides a platform on which developers can build applications.</strong> Developers do not have to worry about infrastructure issues such as deploying servers or load balancing as is required when using IaaS. Those aspects are automatically taken care of by the platform. The price to pay is reduced flexibility; applications written on PaaS are limited to facilities provided by the platform. <span class="dimmed">A PaaS example is the Google App Engine where developers can build applications using Java, Python, PHP, or Go whereas Amazon EC2 allows users to deploy applications written in any language on their virtual servers.</span></p></li>
 <li>
 <p><strong>Software as a service (SaaS) allows applications to be accessed over the network</strong> instead of installing them on a local machine. <span class="dimmed">For example, Google Docs is an SaaS word processing software, while Microsoft Word is a traditional word processing software.</span></p></li></ol></div>
 <div>
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Google Calendar in which category?</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Google Calendar is in which category?</p></template>
 <question>
 <p>Google Calendar belongs to which category of cloud computing services?</p>
 <ul radio-group="7ed92" class="radio-list">
@@ -2164,7 +2165,7 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain communication diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<p><strong>A <em>Communication diagrams</em> are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.</strong></p>
+<p><strong><em>Communication diagrams</em> are like sequence diagrams but emphasize the data links between the various participants in the interaction rather than the sequence of interactions.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example:</p>
 <img src="/website/book/modeling/modelingBehaviors/communicationDiagrams/images/diagram.png" height="300">
@@ -2197,8 +2198,8 @@ Earlier, you learned <span data-mb-component-type="tooltip" v-b-tooltip.hover.to
 <li>If the CD tray is already in the process of closing (closed half-way), it waits until the CD tray is fully closed and opens it immediately afterwards.</li></ul>
 <p>What this means is that the CD player’s response to pushing the “eject CD” button depends on what it was doing at the time of the event. More generally, the CD player’s response to the event received depends on its internal state. Such a behavior is called a <em>state-dependent behavior</em>.</p></box>
 <p>Often, state-dependent behavior displayed by an object in a system is simple enough that it needs no extra attention; such a behavior can be as simple as a <em>conditional</em> behavior like <code v-pre>if x&gt;y, then x=x-y</code>.
-Occasionally, objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured into a separate model. Such state-dependent behavior can be modelled using UML <em>state machine diagrams</em> (SMD for short, sometimes also called ‘state charts’, ‘state diagrams’ or ‘state machines’).</p>
-<p>An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern.  An SMD captures information such as the states an object can be in, during its lifetime, and how the object responds to various events while in each state and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over its full life cycle.</p>
+Occasionally, objects may exhibit state-dependent behavior that is complex enough such that it needs to be captured in a separate model. Such state-dependent behavior can be modeled using UML <em>state machine diagrams</em> (SMD for short, sometimes also called ‘state charts’, ‘state diagrams’ or ‘state machines’).</p>
+<p>An SMD views the life-cycle of an object as consisting of a finite number of states where each state displays a unique behavior pattern. SMDs capture information such as the states an object can be in during its lifetime, how the object responds to various events while in each state, and how the object transits from one state to another. In contrast to sequence diagrams that capture object behavior one scenario at a time, SMDs capture the object’s behavior over its full life-cycle.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An SMD for the Minesweeper game.</p>
 <img src="/website/book/modeling/modelingBehaviors/stateMachineDiagrams/images/minesweeper.png" height="200">
@@ -2305,7 +2306,7 @@ Occasionally, objects may exhibit state-dependent behavior that is complex enoug
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain timing diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<p><strong>A <em>timing diagram</em> focus on timing constraints.</strong></p>
+<p><strong>A <em>timing diagram</em> focuses on timing constraints.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example timing diagram:</p>
 <img src="/website/book/modeling/modelingBehaviors/timingDiagrams/images/diagram.png" height="280">
@@ -2327,12 +2328,12 @@ Occasionally, objects may exhibit state-dependent behavior that is complex enoug
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain interaction overview diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
 <div>
-<p><strong>An <em>Interaction overview</em> diagrams is a combination of activity diagrams and sequence diagrams</strong>.</p>
+<p><strong><em>Interaction overview</em> diagrams are a combination of activity diagrams and sequence diagrams</strong>.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example:</p>
 <img src="/website/book/modeling/modelingBehaviors/interactionOverviewDiagrams/images/diagram.png" height="420">
 <p></p>
-<p><sub>source:<a href="https://en.wikipedia.org/wiki/Interaction_overview_diagram">https://commons.wikimedia.org</a></sub></p></box></div>
+<p><sub>source: <a href="https://en.wikipedia.org/wiki/Interaction_overview_diagram">https://commons.wikimedia.org</a></sub></p></box></div>
 <div></div></div></div></panel>
 <p></p>
 <div class="indented">
@@ -2370,7 +2371,7 @@ Occasionally, objects may exhibit state-dependent behavior that is complex enoug
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

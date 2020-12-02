@@ -179,7 +179,7 @@
 <p><strong><em>Big-bang integration</em>: integrate all components at the same time.</strong></p>
 <box type="wrong">
 <p>Big-bang is not recommended because it will uncover too many problems at the same time which could make debugging and bug-fixing more complex than when problems are uncovered incrementally.</p></box>
-<p><strong><em>Incremental integration</em>: integrate few components at a time.</strong> This approach is better than the big-bang integration because it surfaces integration problems in a more manageable way.</p>
+<p><strong><em>Incremental integration</em>: integrate a few components at a time.</strong> This approach is better than big-bang integration because it surfaces integration problems in a more manageable way.</p>
 <div v-closeable alt="slideshow: comparison" class="non-printable">
 <p>Here is an animation that compares the two approaches:</p>
 <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>
@@ -211,7 +211,7 @@
 <img src="/website/book/integration/approaches/topDownVsBottomUp/images/approaches.png" height="100">
 <p></p>
 <p><strong>Based on the order in which components are integrated, incremental integration can be done in three ways.</strong></p>
-<p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <span for="pop:topdown-stub" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:topdown-stub'].show()" class="trigger">stubs</span> in place of lower level components until the real lower-level components are integrated to the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
+<p><strong><em>Top-down</em> integration: higher-level components are integrated before bringing in the lower-level components.</strong> One advantage of this approach is that higher-level problems can be discovered early. One disadvantage is that this requires the use of <span for="pop:topdown-stub" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:topdown-stub'].show()" class="trigger">stubs</span> in place of lower level components until the real lower-level components are integrated into the system. Otherwise, higher-level components cannot function as they depend on lower level ones.</p>
 <span id="pop:topdown-stub" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></span>
   <div data-mb-html-for="content">
     <div>
@@ -227,13 +227,13 @@
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suggest an integration strategy</p></template>
 <question has-input="true">
-<p>Suggest an integration strategy for the system represented by following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
-<p>Also take into account the following facts in your test strategy.</p>
+<p>Suggest an integration strategy for the system represented by the following diagram. You need not follow a strict top-down, bottom-up, sandwich, or big bang approach. Dashed arrows represent dependencies between classes.</p>
+<p>Also take into account the following facts in your test strategy:</p>
 <ul>
 <li><code v-pre>HospitalUI</code> will be developed early, so as to get customer feedback early.</li>
-<li><code v-pre>HospitalFacade</code> shields the UI from complexities of the application layer. It simply redirects the method calls received to the appropriate classes below</li>
-<li><code v-pre>IO_Helper</code> is to be reused from an earlier project, with minor modifications</li>
-<li>Development of <code v-pre>OutPatient</code> component has been outsourced, and the delivery is not expected until the 2nd half of the project.</li></ul>
+<li><code v-pre>HospitalFacade</code> shields the UI from the complexities of the application layer. It simply redirects the method calls received to the appropriate classes below.</li>
+<li><code v-pre>IO_Helper</code> is to be reused from an earlier project, with minor modifications.</li>
+<li>Development of the <code v-pre>OutPatient</code> component has been outsourced, and its delivery is not expected until the 2nd half of the project.</li></ul>
 <img src="/website/book/integration/approaches/topDownVsBottomUp/images/hospital.png" height="250">
 <p></p>
 <div slot="answer" class="algolia-no-index">
@@ -244,7 +244,7 @@
 <li>Because <code v-pre>IO_Helper</code> is to be reused from an earlier project, you can finish it early. This is especially suitable since there are many classes that use it. Therefore <code v-pre>IO_Helper</code> can be integrated with the dependent classes in bottom-up fashion.</li>
 <li>Because <code v-pre>OutPatient</code> class may be delayed, you may have to integrate <code v-pre>PatientMgr</code> using a stub.</li>
 <li><code v-pre>TypeA</code>, <code v-pre>TypeB</code>, and <code v-pre>TypeC</code> seem to be tightly coupled. It may be a good idea to test them together.</li></ul>
-<p>Given below is one possible integration test strategy. Relative positioning also indicates a rough timeline.</p>
+<p>Given below is one possible integration test strategy. The relative positioning of items is used to indicate a rough timeline.</p>
 <img src="/website/book/integration/approaches/topDownVsBottomUp/images/hospitalIntegration.png" height="250">
 <p></p></div></question></panel></div>
   <div>
@@ -254,7 +254,7 @@
 <p>a)	top-down
 b)	bottom-up
 c)	sandwich</p>
-<p>Note that dashed arrows show dependencies (e.g. A depend on B, C, D and therefore, higher-level than B, C and D).</p>
+<p>Note that dashed arrows show dependencies (e.g. A depends on B, C and D, and is therefore higher-level than B, C and D).</p>
 <img src="/website/book/integration/approaches/topDownVsBottomUp/images/abc.png" height="190">
 <p></p>
 <div slot="answer" class="algolia-no-index">
@@ -276,20 +276,20 @@ c)	sandwich</p>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain build automation tools</span></span></span></span><p></p>
   <div>
 <p><strong>Build automation tools automate the steps of the build process, usually by means of build scripts.</strong></p>
-<p>In a non-trivial project, building a product from source code can be a complex multi-step process. <span class="dimmed">For example, it can include steps such as to pull code from the revision control system, compile, link, run automated tests, automatically update release documents (e.g. build number), package into a distributable, push to repo, deploy to a server, delete temporary files created during building/testing, email developers of the new build, and so on. Furthermore, this build process can be done ‘on demand’, it can be scheduled (e.g. every day at midnight) or it can be triggered by various events (e.g. triggered by a code push to the revision control system).</span></p>
-<p>Some of these build steps such as to compile, link and package are already automated in most modern IDEs. <span class="dimmed">For example, several steps happen automatically when the ‘build’ button of the IDE is clicked. Some IDEs even allow customization to this build process to some extent.</span></p>
+<p>In a non-trivial project, building a product from its source code can be a complex multi-step process. <span class="dimmed">For example, it can include steps such as: pull code from the revision control system, compile, link, run automated tests, automatically update release documents (e.g. build number), package into a distributable, push to repo, deploy to a server, delete temporary files created during building/testing, email developers of the new build, and so on. Furthermore, this build process can be done ‘on demand’, it can be scheduled (e.g. every day at midnight) or it can be triggered by various events (e.g. triggered by a code push to the revision control system).</span></p>
+<p>Some of these build steps such as compiling, linking and packaging, are already automated in most modern IDEs. <span class="dimmed">For example, several steps happen automatically when the ‘build’ button of the IDE is clicked. Some IDEs even allow customization of this build process to some extent.</span></p>
 <p>However, most big projects use specialized build tools to automate complex build processes.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some popular build tools relevant to Java developers: <a href="https://gradle.org/">Gradle</a>, <a href="http://maven.apache.org/">Maven</a>, <a href="http://ant.apache.org/">Apache Ant</a>, <a href="http://www.gnu.org/software/make/">GNU Make</a></p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <span class="dimmed">Some other build tools : Grunt (JavaScript), Rake (Ruby)</span></p></box>
-<p><strong>Some build tools also serve as <em>dependency management tools</em></strong>. Modern software projects often depend on third party libraries that evolve constantly. That means developers need to download the correct version of the required libraries and update them regularly. Therefore, dependency management is an important part of build automation. Dependency Management tools can automate that aspect of a project.</p>
+<p><strong>Some build tools also serve as <em>dependency management tools</em></strong>. Modern software projects often depend on third party libraries that evolve constantly. That means developers need to download the correct version of the required libraries and update them regularly. Therefore, dependency management is an important part of build automation. Dependency management tools can automate that aspect of a project.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.</p></box></div>
   <div>
 <div>
 <panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template> 
 <ul>
-<li><a href="https://gradle.org/docs/#getting-started"><strong>Getting Started with Gradle</strong></a> -- Documentation from Gradle</li>
+<li><a href="https://gradle.org/docs/#getting-started"><strong>Getting Started with Gradle</strong></a> -- documentation from Gradle</li>
 <li><a href="http://www.tutorialspoint.com/gradle/"><strong>Gradle Tutorial</strong></a> -- from <a href="http://tutorialspoint.com">tutorialspoint.com</a></li></ul>
 <panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Working With Gradle in Intellij IDEA (6 minutes)</p></template>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/JwPYjnhah3g" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></panel></div>
@@ -298,7 +298,7 @@ c)	sandwich</p>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> <em>Gradle</em> is a tool for ...</p></template>
 <question>
-<p>Gradle_is used used for,</p>
+<p><em>Gradle</em> is used for,</p>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. better revision control</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. build automation</li>
@@ -348,7 +348,7 @@ c)	sandwich</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

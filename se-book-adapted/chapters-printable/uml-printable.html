@@ -32,7 +32,7 @@
 <h4 id="what">What <span class="badge badge-light"><small><small><font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong>UML <em>class diagrams</em> describe the structure (but not the behavior) of an OOP solution.</strong> These are possibly the most often used diagrams in the industry and an indispensable tool for an OO programmer.</p>
+<p><strong>UML <em>class diagrams</em> describe the structure (but not the behavior) of an OOP solution.</strong> These are possibly the most often used diagrams in the industry and are an indispensable tool for an OO programmer.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example class diagram:</p>
 <img src="/website/book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="600"></box></div></div></div></div>
@@ -54,7 +54,7 @@
 <p></p>
 <panel type="seamless" class="algolia-no-index"><template slot="_header"><p>The equivalent code</p></template>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span></span>{<br></span><span><br></span><span>    Integer number;<br></span><span>    Chair[] chairs = <span class="hljs-keyword">null</span>;<br></span><span>    <br></span><span>    <span class="hljs-function">Integer <span class="hljs-title">getNumber</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setNumber</span><span class="hljs-params">(Integer n)</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span> </span>{<br></span><span><br></span><span>    Integer number;<br></span><span>    Chair[] chairs = <span class="hljs-keyword">null</span>;<br></span><span>    <br></span><span>    <span class="hljs-function">Integer <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setNumber</span><span class="hljs-params">(Integer n)</span> </span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span>:</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.number = <span class="hljs-number">0</span><br></span><span>    self.chairs = []<br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_number</span><span class="hljs-params">(self)</span>:</span><br></span><span>    <span class="hljs-comment"># ...</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_number</span><span class="hljs-params">(self, n)</span>:</span><br></span><span>    <span class="hljs-comment"># ...</span><br></span></code></pre></div></panel></box>
 <p><strong>The 'Operations' compartment and/or the 'Attributes' compartment may be omitted</strong> if such details are not important for the task at hand. 'Attributes' always appear above the 'Operations' compartment. All operations should be in one compartment rather than each operation in a separate compartment. Same goes for attributes.</p>
@@ -98,7 +98,7 @@
 <p></p>
 <panel type="seamless" class="algolia-no-index"><template slot="_header"><p>The equivalent code</p></template>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span></span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> Integer number;<br></span><span>    <span class="hljs-keyword">private</span> Chair[] chairs = <span class="hljs-keyword">null</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Integer <span class="hljs-title">getNumber</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setNumber</span><span class="hljs-params">(Integer n)</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span> </span>{<br></span><span><br></span><span>    <span class="hljs-keyword">private</span> Integer number;<br></span><span>    <span class="hljs-keyword">private</span> Chair[] chairs = <span class="hljs-keyword">null</span>;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> Integer <span class="hljs-title">getNumber</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setNumber</span><span class="hljs-params">(Integer n)</span> </span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Table</span>:</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.__number = <span class="hljs-number">0</span><br></span><span>    self.__chairs = []<br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_number</span><span class="hljs-params">(self)</span>:</span><br></span><span>    <span class="hljs-comment"># ...</span><br></span><span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_number</span><span class="hljs-params">(self, n)</span>:</span><br></span><span>    <span class="hljs-comment"># ...</span><br></span></code></pre></div></panel></box></div></div></div></div>
 <div class="indented-less">
@@ -123,7 +123,7 @@
 <img src="/website/book/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40">
 <div>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{<br></span><span>    Minefield minefield;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{<br></span><span>    ...<br></span><span>}<br></span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    Minefield minefield;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{<br></span><span>    ...<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span><br></span><span>    self.minefield = minefield<br></span><span>    <br></span><span>  <span class="hljs-comment"># ...</span><br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span><br></span><span>  <span class="hljs-comment"># ...</span><br></span></code></pre></div></div>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a bidirectional navigability; each class is aware of the other.</p><p></p>
@@ -144,7 +144,7 @@
 <p></p>
 <p>Note how the variable names match closely with the association roles.</p>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span></span>{<br></span><span>    Woman wife;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span></span>{<br></span><span>    Man husband;<br></span><span>}<br></span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{<br></span><span>    Woman wife;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{<br></span><span>    Man husband;<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span>:</span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.wife = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Woman object</span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span>:</span><br></span><span>   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>     self.husband = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Man object</span><br></span></code></pre></div></box>
 <box>
@@ -152,7 +152,7 @@
 <img src="/website/book/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70">
 <p></p>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span></span>{<br></span><span>    List&lt;Student&gt; charges;<br></span><span>}<br></span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> </span>{<br></span><span>    List&lt;Student&gt; charges;<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span>:</span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.charges = [] <span class="hljs-comment"># list of Student objects</span><br></span></code></pre></div></box></div></div></div>
 <div class="indented-less">
@@ -176,12 +176,12 @@
 <p></p>
 <p>Commonly used multiplicities:</p>
 <ul>
-<li><code v-pre>0..1</code> : <em>optional</em>, can be linked to 0 or 1 objects</li>
+<li><code v-pre>0..1</code> : <em>optional</em>, can be linked to 0 or 1 objects.</li>
 <li><code v-pre>1</code> : <em>compulsory</em>, must be linked to one object at all times.</li>
 <li><code v-pre>*</code> : can be linked to 0 or more objects.</li>
-<li><code v-pre>n..m</code> : the number of linked objects must be <code v-pre>n</code> to <code v-pre>m</code> inclusive</li></ul>
+<li><code v-pre>n..m</code> : the number of linked objects must be within <code v-pre>n</code> to <code v-pre>m</code> inclusive.</li></ul>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below, an <code v-pre>Admin</code> object administers (in charge of) any number of students but a <code v-pre>Student</code> object must always be under the charge of exactly one <code v-pre>Admin</code> object</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below, an <code v-pre>Admin</code> object administers (is in charge of) any number of students but a <code v-pre>Student</code> object must always be under the charge of exactly one <code v-pre>Admin</code> object.</p>
 <img src="/website/book/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300"></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below,</p>
@@ -210,7 +210,7 @@
 <div class="indented-less">
 <div>
 <p><strong>An association can be shown as an attribute instead of a line.</strong></p>
-<p>Association multiplicities and the default value too can be shown as part of the attribute using the following notation. Both are optional.</p>
+<p>Association multiplicities and the default value can be shown as part of the attribute using the following notation. Both are optional.</p>
 <p><code v-pre>name: type [multiplicity]  = default value</code></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The diagram below depicts a multi-player <em>Square Game</em> being played on a board comprising of 100 squares. Each of the squares may be occupied with any number of pieces, each belonging to a certain player.</p>
@@ -241,7 +241,7 @@
 <div>
 <p>In UML class diagrams, <strong>underlines denote class-level attributes and variables.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the class below, <code v-pre>totalStudents</code> attribute and the <code v-pre>getTotalStudents</code> method are class-level.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the class diagram below, the <code v-pre>totalStudents</code> attribute and the <code v-pre>getTotalStudents</code> method are class-level.</p>
 <img src="/website/book/uml/classDiagrams/classLevelMembers/what/images/student.png" height="120">
 <p></p></box></div></div></div></div>
 <div class="indented-less">
@@ -276,7 +276,7 @@
 <h4 id="what-10">What <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-10" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong>UML uses a hollow diamond is used to indicate an aggregation.</strong></p>
+<p><strong>UML uses a hollow diamond to indicate an aggregation.</strong></p>
 <p>Notation:</p>
 <img src="/website/book/uml/classDiagrams/aggregation/what/images/notation.png" height="45">
 <box>
@@ -353,7 +353,7 @@
 <p><strong>Arrows representing method calls should be solid arrows while those representing method returns should be dashed arrows</strong>.</p>
 <p>Note that unlike in object diagrams, the <strong>class/object name is not underlined in sequence diagrams</strong>.</p>
 <box>
-<p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method had returned. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code v-pre>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
+<p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>[Common notation error] Activation bar too long:</strong> The activation bar of a method cannot start before the method call arrives and a method cannot remain active after the method has returned. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar starts <em>before</em> the method <code v-pre>Foo#xyz()</code> is called and remains active <em>after</em> the method returns.</span></p>
 <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-activationBarTooLong.png" height="120">
 <p><span style="color:red"><span><span aria-hidden="true" class="fas fa-times"></span></span></span> <strong>[Common notation error] Broken activation bar:</strong> The activation bar should remain unbroken from the point the method is called until the method returns. <span class="dimmed">In the two sequence diagrams below, the one on the left commits this error because the activation bar for the method <code v-pre>Foo#abc()</code> is not contiguous, but appears as two pieces instead.</span></p>
 <img src="/website/book/uml/sequenceDiagrams/basic/images/commonError-brokenActivationBar.png" height="120"></box></div></div></div>
@@ -375,7 +375,7 @@
 <h4 id="object-deletion">Object Deletion <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#object-deletion" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong>UML uses an <code v-pre>X</code> at the end of the lifeline of an object to show it's deletion.</strong></p>
+<p><strong>UML uses an <code v-pre>X</code> at the end of the lifeline of an object to show its deletion.</strong></p>
 <box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Although object deletion is not that important in languages such as Java that support automatic memory management, you can still show object deletion in UML diagrams to indicate the point at which the object ceases to be used.</p></box>
 <p>Notation:</p>
@@ -420,7 +420,7 @@
 <img src="/website/book/uml/sequenceDiagrams/alternativePaths/images/notation.png" height="100">
 <p></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Minefield</code> calls the <code v-pre>Cell#setMine</code> if the cell is supposed to be a mined cell, and calls the <code v-pre>Cell:setMineCount(...)</code> method otherwise.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Minefield</code> calls the <code v-pre>Cell#setMine</code> method if the cell is supposed to be a mined cell, and calls the <code v-pre>Cell:setMineCount(...)</code> method otherwise.</p>
 <img src="/website/book/uml/sequenceDiagrams/alternativePaths/images/minefieldCell.png" height="180">
 <p></p></box></div></div></div>
 <div class="indented-less">
@@ -468,7 +468,7 @@
 <h4 id="calls-to-static-methods">Calls to Static Methods <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#calls-to-static-methods" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p>Method calls to <code v-pre>static</code> i.e., class-level method are received by the class itself, not an instance of that class. You can use the <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
+<p>Method calls to <code v-pre>static</code> (i.e., class-level) methods are received by the class itself, not an instance of that class. You can use <code v-pre>&lt;&lt;class&gt;&gt;</code> to show that a participant is the class itself.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, <code v-pre>m</code> calls the static method <code v-pre>Person.getMaxAge()</code> and also the <code v-pre>setAge()</code> method of a <code v-pre>Person</code> object <code v-pre>p</code>.</p>
 <p><pic src="/website/book/uml/sequenceDiagrams/staticMethods/images/staticMethodCall.png"></pic></p>
@@ -529,10 +529,10 @@
 <h4 id="what-14">What <span class="badge badge-light"><small><small><font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-14" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong><span trigger="click" for="modal:modelingAd-uml" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:modelingAd-uml'].show()" class="trigger-click">UML</span> <em> activity diagrams</em> (AD) can model workflows. </strong> <span class="dimmed"><em>Flow charts</em> is another type of diagrams that can model workflows. Activity diagrams are the UML equivalent of flow charts.</span></p>
+<p><strong><span trigger="click" for="modal:modelingAd-uml" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:modelingAd-uml'].show()" class="trigger-click">UML</span> <em> activity diagrams</em> (AD) can model workflows. </strong> <span class="dimmed"><em>Flow charts</em> are another type of diagram that can model workflows. Activity diagrams are the UML equivalent of flow charts.</span></p>
 <b-modal id="modal:modelingAd-uml" hide-footer size modal-class="mb-zoom" ref="modal:modelingAd-uml" class="algolia-no-index"><template slot="modal-title"><strong>Unified Modeling Language (UML)</strong></template>
   <div>
-<p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p></div></b-modal>
+<p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them had developed their own notation for modeling software systems before joining forces to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p></div></b-modal>
 <div v-closeable alt>
 <p>An example activity diagram:<br>
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Activity_conducting.svg"><br>
@@ -543,7 +543,7 @@
 <h4 id="linear-paths">Linear Paths <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#linear-paths" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p>An activity diagram (AD) captures an <em>activity</em> of <em>actions</em> and <em>control flows</em> that makes up the activity.</p>
+<p>An activity diagram (AD) captures an <em>activity</em> through the <em>actions</em> and <em>control flows</em> that make up the activity.</p>
 <ul>
 <li>An <em>action</em> is a single step in an activity. It is shown as a rectangle with <mark>rounded corners</mark>.</li>
 <li>A <em>control flow</em> shows the flow of control from one action to the next. It is shown by drawing a line with an arrow-head to show the direction of the flow.</li></ul>
@@ -556,7 +556,7 @@
 <h4 id="alternate-paths">Alternate Paths <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#alternate-paths" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong>A <em>branch node</em> shows the start of alternate paths.</strong> Each control flow exiting a branch node has a <em>guard condition</em> : a boolean condition that should be true for execution to take that path. Only one of the guard condition can be true at any time.</p>
+<p><strong>A <em>branch node</em> shows the start of alternate paths.</strong> Each control flow exiting a branch node has a <em>guard condition</em>: a boolean condition that should be true for execution to take that path. Only one of the guard conditions can be true at any time.</p>
 <p><strong>A <em>merge node</em> shows the end of alternate paths.</strong></p>
 <p>Both branch nodes and merge nodes are <mark>diamond shapes</mark>. Guard conditions must be in <mark>square brackets</mark>.</p>
 <img src="/website/book/uml/activityDiagrams/basicNotations/alternatePaths/images/notation.png" height="180">
@@ -614,9 +614,9 @@
 <h4 id="object-vs-class-diagrams">Object vs Class Diagrams <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#object-vs-class-diagrams" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p>Compared to the notation for a class diagrams, object diagrams differ in the following ways:</p>
+<p>Compared to the notation for class diagrams, object diagrams differ in the following ways:</p>
 <ul>
-<li>Shows objects instead of classes:
+<li>Show objects instead of classes:
 <ul>
 <li>Instance name may be shown</li>
 <li>There is a <code v-pre>:</code> before the class name</li>
@@ -635,7 +635,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

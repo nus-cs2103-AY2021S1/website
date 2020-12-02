@@ -31,9 +31,9 @@
 <div><h4 id="class-level-members"><span>Class-level members</span><a class="fa fa-anchor" href="#class-level-members" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
+<p>While all objects of a class have the same attributes, each object has its own copy of the attribute value.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code v-pre>Person</code> objects have the <code v-pre>Name</code> attribute but the value of that attribute varies between <code v-pre>Person</code> objects.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code v-pre>Person</code> objects have the <code v-pre>name</code> attribute but the value of that attribute varies between <code v-pre>Person</code> objects.</p></box>
 <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class-level attributes</em></mark></strong>.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The attribute <code v-pre>totalPersons</code> should be maintained centrally and shared by all <code v-pre>Person</code> objects rather than copied at each <code v-pre>Person</code> object.</p></box>
@@ -48,7 +48,7 @@
   <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as a class-level variables</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as class-level variables</p></template>
 <question>
 <p>Which of these are suitable as class-level variables?</p>
 <ul class="contains-task-list">
@@ -58,7 +58,7 @@
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code v-pre>ArrayList</code>, variable: <code v-pre>total</code> (i.e., total items in a given <code v-pre>ArrayList</code> object)</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(c)</p>
-<p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p></div></question></panel></div></panel></div></div></div></div></div></div></div></div>
+<p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and is therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p></div></question></panel></div></panel></div></div></div></div></div></div></div></div>
         </div>
     </div>
 </body>

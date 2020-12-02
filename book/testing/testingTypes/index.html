@@ -46,7 +46,7 @@
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here are the code skeletons for a <code v-pre>Foo</code> class containing two methods and a <code v-pre>FooTest</code> class that contains unit tests for those two methods.</p>
 <div class="alt-java">
   <div>
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{<br></span><span>    <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String input)</span></span>{<br></span><span>        <span class="hljs-comment">//...</span><br></span><span>    }<br></span><span>    <br></span><span>}<br></span></code></pre><pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span></span>{<br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//a unit test for Foo#read() method</span><br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_emptyInput_exceptionThrown</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//a unit tests for Foo#write(String) method</span><br></span><span>    }  <br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_normalInput_writtenCorrectly</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-comment">//another unit tests for Foo#write(String) method</span><br></span><span>    }<br></span><span>}<br></span></code></pre></div></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{<br></span><span>    <span class="hljs-function">String <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">(String input)</span> </span>{<br></span><span>        <span class="hljs-comment">// ...</span><br></span><span>    }<br></span><span>    <br></span><span>}<br></span></code></pre><pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span> </span>{<br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// a unit test for Foo#read() method</span><br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_emptyInput_exceptionThrown</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// a unit tests for Foo#write(String) method</span><br></span><span>    }  <br></span><span>    <br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write_normalInput_writtenCorrectly</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// another unit tests for Foo#write(String) method</span><br></span><span>    }<br></span><span>}<br></span></code></pre></div></div>
 <div class="alt-python">
   <div>
 <pre><code class="hljs python" v-pre><span><span class="hljs-keyword">import</span> unittest<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">read</span><span class="hljs-params">(self)</span>:</span><br></span><span>      <span class="hljs-comment"># ...</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">write</span><span class="hljs-params">(self, input)</span>:</span><br></span><span>      <span class="hljs-comment"># ...</span><br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">FooTest</span><span class="hljs-params">(unittest.TestCase)</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_read</span><span class="hljs-params">(sefl)</span>:</span><br></span><span>      <span class="hljs-comment"># a unit test for read() method</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_emptyIntput_ignored</span><span class="hljs-params">(self)</span>:</span><br></span><span>      <span class="hljs-comment"># a unit tests for write(string) method</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_write_normalInput_writtenCorrectly</span><span class="hljs-params">(self)</span>:</span><br></span><span>      <span class="hljs-comment"># another unit tests for write(string) method</span><br></span></code></pre></div></div></box></div>
@@ -110,9 +110,9 @@ How unit testing (and other good coding practices) could have prevented a major 
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain integration testing</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding of what the parts are supposed to do vs what the parts are actually doing.</p>
+<p><strong><em>Integration testing</em> : testing whether different parts of the software <em>work together</em> (i.e. integrates) as expected.</strong> Integration tests aim to discover bugs in the 'glue code' related to how components interact with each other. These bugs are often the result of misunderstanding what the parts are supposed to do vs what the parts are actually doing.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose a class <code v-pre>Car</code> users classes <code v-pre>Engine</code> and <code v-pre>Wheel</code>. If the <code v-pre>Car</code> class assumed a <code v-pre>Wheel</code> can support 200 mph speed but the actual <code v-pre>Wheel</code> can only support 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p></box></div>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose a class <code v-pre>Car</code> uses classes <code v-pre>Engine</code> and <code v-pre>Wheel</code>. If the <code v-pre>Car</code> class assumed a <code v-pre>Wheel</code> can support a speed of up to 200 mph but the actual <code v-pre>Wheel</code> can only support a speed of up to 150 mph, it is the integration test that is supposed to uncover this discrepancy.</p></box></div>
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="how">
@@ -126,13 +126,13 @@ How unit testing (and other good coding practices) could have prevented a major 
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose a class <code v-pre>Car</code> uses classes <code v-pre>Engine</code> and <code v-pre>Wheel</code>. Here is how you would go about doing pure integration tests:</p>
 <p>a) First, unit test <code v-pre>Engine</code> and <code v-pre>Wheel</code>.<br>
 b) Next, unit test <code v-pre>Car</code> in isolation of <code v-pre>Engine</code> and <code v-pre>Wheel</code>, <mark>using stubs for <code v-pre>Engine</code> and <code v-pre>Wheel</code></mark>.<br>
-c) After that, do an integration test for <code v-pre>Car</code> using it together with the <code v-pre>Engine</code> and <code v-pre>Wheel</code> classes to ensure the <code v-pre>Car</code> integrates properly with the <code v-pre>Engine</code> and the <code v-pre>Wheel</code>.</p></box>
+c) After that, do an integration test for <code v-pre>Car</code> by using it together with the <code v-pre>Engine</code> and <code v-pre>Wheel</code> classes to ensure that <code v-pre>Car</code> integrates properly with the <code v-pre>Engine</code> and the <code v-pre>Wheel</code>.</p></box>
 <p><strong>In practice, developers often use a hybrid of unit+integration tests to minimize the need for stubs.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here's how a hybrid unit+integration approach could be applied to the same example used above:</p>
 <p>(a) First, unit test <code v-pre>Engine</code> and <code v-pre>Wheel</code>.<br>
 <s>(b) Next, unit test <code v-pre>Car</code> in isolation of <code v-pre>Engine</code> and <code v-pre>Wheel</code>, using stubs for <code v-pre>Engine</code> and <code v-pre>Wheel</code>.</s><br>
-(c) After that, do an integration test for <code v-pre>Car</code> using it together with the <code v-pre>Engine</code> and <code v-pre>Wheel</code> classes to ensure the <code v-pre>Car</code> integrates properly with the <code v-pre>Engine</code> and the <code v-pre>Wheel</code>.  <mark>This step should include test cases that are meant to test the unit <code v-pre>Car</code></mark> (i.e. test cases used in the step (b) of the example above) as well as test cases that are meant to test the integration of <code v-pre>Car</code> with <code v-pre>Wheel</code> and <code v-pre>Engine</code> (i.e. pure integration test cases used of the step (c) in the example above).</p>
+(c) After that, do an integration test for <code v-pre>Car</code> by using it together with the <code v-pre>Engine</code> and <code v-pre>Wheel</code> classes to ensure that <code v-pre>Car</code> integrates properly with the <code v-pre>Engine</code> and the <code v-pre>Wheel</code>.  <mark>This step should include test cases that are meant to unit test <code v-pre>Car</code></mark> (i.e. test cases used in the step (b) of the example above) as well as test cases that are meant to test the integration of <code v-pre>Car</code> with <code v-pre>Wheel</code> and <code v-pre>Engine</code> (i.e. pure integration test cases used of the step (c) in the example above).</p>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that you no longer need stubs for <code v-pre>Engine</code> and <code v-pre>Wheel</code>. The downside is that <code v-pre>Car</code> is never tested in isolation of its dependencies. Given that its dependencies are already unit tested, the risk of bugs in <code v-pre>Engine</code> and <code v-pre>Wheel</code> affecting the testing of <code v-pre>Car</code> can be considered minimal.</p></box></div>
   <div></div></div></panel></div></div></panel></div>
 <div>
@@ -150,11 +150,11 @@ c) After that, do an integration test for <code v-pre>Car</code> using it togeth
 <div>
 <p><strong><em>System testing</em>: take the <em>whole system</em> and test it <em>against the system specification</em>.</strong></p></div></box>
 <p>System testing is typically done by a testing team (also called a QA team).</p>
-<p><strong>System test cases are based on the specified external behavior of the system.</strong> Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails 'gracefully' having pushed beyond its limits.</p>
+<p><strong>System test cases are based on the specified external behavior of the system.</strong> Sometimes, system tests go beyond the bounds defined in the specification. This is useful when testing that the system fails 'gracefully' when pushed beyond its limits.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the SUT is a browser supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose the SUT is a browser that is supposedly capable of handling web pages containing up to 5000 characters. Given below is a test case to test if the SUT fails gracefully if pushed beyond its limits.</p>
 <pre><code class="hljs" v-pre><span>Test case: load a web page that is too big<br></span><span>* Input: load a web page containing more than 5000 characters. <br></span><span>* Expected behavior: abort the loading of the page and show a meaningful error message. <br></span></code></pre><p>This test case would fail if the browser attempted to load the large file anyway and crashed.</p></box>
-<p><strong>System testing includes testing against non-functional requirements too.</strong> Here are some examples.</p>
+<p><strong>System testing includes testing against non-functional requirements too.</strong> Here are some examples:</p>
 <ul>
 <li><em>Performance testing</em> –  to ensure the system responds quickly.</li>
 <li><em>Load testing</em> (also called <em>stress testing</em> or <em>scalability testing</em>) – to ensure the system can work under heavy load.</li>
@@ -189,7 +189,7 @@ c) After that, do an integration test for <code v-pre>Car</code> using it togeth
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain dogfooding</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p><strong><em>Eating your own dog food</em> (aka dogfooding), is a creators of a product use their own product to test the product.</strong></p></div>
+<p><strong><em>Eating your own dog food</em> (aka dogfooding), is when creators use their own product so as to test the product.</strong></p></div>
   <div>
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
@@ -224,10 +224,10 @@ c) After that, do an integration test for <code v-pre>Car</code> using it togeth
   <div>
 <p><strong>Delaying testing until the full product is complete has a number of disadvantages:</strong></p>
 <ul>
-<li><strong>Locating the cause of such a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.</li>
-<li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated during the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
+<li><strong>Locating the cause of a test case failure is difficult due to a large search space;</strong> in a large system, the search space could be millions of lines of code, written by hundreds of developers! The failure may also be due to multiple inter-related bugs.</li>
+<li><strong>Fixing a bug found during such testing could result in major rework</strong>, especially if the bug originated from the design or during requirements specification <span class="dimmed">i.e. a faulty design or faulty requirements</span>.</li>
 <li><strong>One bug might 'hide' other bugs</strong>, which could emerge only after the first bug is fixed.</li>
-<li><strong>The delivery may have to be delayed</strong> if too many bugs were found during testing.</li></ul>
+<li><strong>The delivery may have to be delayed</strong> if too many bugs are found during testing.</li></ul>
 <p><strong>Therefore, it is better to do early testing</strong>, as hinted by the popular rule of thumb given below, also illustrated by the graph below it.</p>
 <blockquote>
 <p>The earlier a bug is found, the easier and cheaper to have it fixed.</p></blockquote>
@@ -238,20 +238,20 @@ c) After that, do an integration test for <code v-pre>Car</code> using it togeth
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> implications of developers testing their own code</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Implications of developers testing their own code</p></template>
 <question has-input="true">
-<p>Discuss pros and cons of developers testing their own code.</p>
+<p>Discuss the pros and cons of developers testing their own code.</p>
 <div slot="answer" class="algolia-no-index">
 <p>Pros:</p>
 <ul>
 <li>Can be done early (the earlier we find a bug, the cheaper it is to fix).</li>
-<li>Can be done at lower levels, for examples, at operation and class level (testers usually test the system at UI level).</li>
+<li>Can be done at lower levels, for example, at the operation and class levels (testers usually test the system at the UI level).</li>
 <li>It is possible to do more thorough testing because developers know the expected external behavior as well as the internal structure of the component.</li>
 <li>It forces developers to take responsibility for their own work (they cannot claim that &quot;testing is the job of the testers&quot;).</li></ul>
 <p>Cons:</p>
 <ul>
-<li>A developer may subconsciously test only situations that he knows to work (i.e. test it too 'gently').</li>
-<li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing code, it is possible for him to miss it again during testing).</li>
+<li>A developer may subconsciously only test situations that he knows to work (i.e. test it too 'gently').</li>
+<li>A developer may be blind to his own mistakes (if he did not consider a certain combination of input while writing the code, it is possible for him to miss it again during testing).</li>
 <li>A developer may have misunderstood what the SUT is supposed to do in the first place.</li>
 <li>A developer may lack the testing expertise.</li></ul></div></question></panel></div>
   <div>
@@ -294,12 +294,12 @@ But before that, you should give a good test run to feature y because users can 
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Exploratory testing is also known as <em>reactive testing, error guessing technique, attack-based testing,</em> and <em>bug hunting</em>.</strong></p></box>
 <b-modal id="modal:exploratoryWhat-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:exploratoryWhat-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
   <div>
-<p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a>  -- James Bach is an industry thought leader in software testing).</p></div></b-modal></div>
+<p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a>  -- James Bach is an industry thought leader in software testing.</p></div></b-modal></div>
   <div>
   <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about exploratory and scripted testing</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about exploratory and scripted testing</p></template>
 <question>
 <p>Scripted testing requires tests to be written in a scripting language; Manual testing is called exploratory testing.</p>
 <ul radio-group="db31a" class="radio-list">
@@ -312,12 +312,12 @@ But before that, you should give a good test run to feature y because users can 
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which testing technique is better?</p></template>
 <question>
 <p>Which testing technique is better?</p>
-<ul radio-group="9fd35" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> a. error guessing</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> b. bug hunting</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> c. attack-based testing</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> d. reactive testing</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="9fd35" type="radio"> e. These are different names used to describe exploratory testing.</label></li></ul>
+<ul radio-group="ae1b1" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> a. Error guessing</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> b. Bug hunting</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> c. Attack-based testing</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> d. Reactive testing</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="ae1b1" type="radio"> e. These are different names used to describe exploratory testing.</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(e)</p></div></question></panel></div>
   <div>
@@ -325,7 +325,7 @@ But before that, you should give a good test run to feature y because users can 
 <question has-input="true">
 <p>Explain the concept of exploratory testing using Minesweeper as an example.</p>
 <div slot="answer" class="algolia-no-index">
-<p>When we test the Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p></div></question></panel></div></panel></div></div></div></panel></div>
+<p>When we test Minesweeper by simply playing it in various ways, especially trying out those that are likely to be buggy, that would be exploratory testing.</p></div></question></panel></div></panel></div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="when">
   <span slot="header" class="card-title"><div><h4 id="when"><span>When</span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4></div></span>
@@ -341,7 +341,7 @@ But before that, you should give a good test run to feature y because users can 
 --<span trigger="click" for="modal:ExploratoryWhen-bach-et-explained" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ExploratoryWhen-bach-et-explained'].show()" class="trigger-click">[source: bach-et-explained]</span></p></blockquote>
 <b-modal id="modal:ExploratoryWhen-bach-et-explained" hide-footer size modal-class="mb-zoom" ref="modal:ExploratoryWhen-bach-et-explained" class="algolia-no-index"><template slot="modal-title">bach-et-explained <span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></template>
   <div>
-<p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a>  -- James Bach is an industry thought leader in software testing).</p></div></b-modal></div>
+<p><a href="http://www.satisfice.com/articles/et-article.pdf"><em><strong>Exploratory Testing Explained</strong></em></a>, an online article by <a href="http://www.satisfice.com/aboutjames.shtml">James Bach</a>  -- James Bach is an industry thought leader in software testing.</p></div></b-modal></div>
   <div>
  <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
@@ -354,7 +354,7 @@ But before that, you should give a good test run to feature y because users can 
 <li class="radio-list-item"><label><input class="radio-list-input" name="7d3ff" type="radio"> False</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>False</p>
-<p>Explanation: Each has pros and cons. Relying on only one is not recommended. A combination is better.</p></div></question></panel></div></panel></div></div></div></panel></div></div></panel></div>
+<p>Explanation: Each has its pros and cons. Relying on only one is not recommended. A combination is better.</p></div></question></panel></div></panel></div></div></div></panel></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="acceptance-testing">
   <span slot="header" class="card-title"><div><h2 id="acceptance-testing"><span>Acceptance testing</span><a class="fa fa-anchor" href="#acceptance-testing" onclick="event.stopPropagation()"></a></h2></div></span>
@@ -410,7 +410,7 @@ But before that, you should give a good test run to feature y because users can 
 <td style="text-align:left">can also include details on how it will fail gracefully when pushed beyond limits, how to recover, etc. specification</td></tr>
 <tr>
 <td style="text-align:left">written in terms of problems that need to be solved (e.g. provide a method to locate an email quickly)</td>
-<td style="text-align:left">written in terms of how the system solve those problems (e.g. explain the email search feature)</td></tr>
+<td style="text-align:left">written in terms of how the system solves those problems (e.g. explain the email search feature)</td></tr>
 <tr>
 <td style="text-align:left">specifies the interface available for intended end-users</td>
 <td style="text-align:left">could contain additional APIs not available for end-users (for the use of developers/testers)</td></tr></tbody></table></div><p>However, <strong>in many cases one document serves as both a requirement specification and a system specification.</strong></p></box>
@@ -422,7 +422,7 @@ But before that, you should give a good test run to feature y because users can 
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about system testing and acceptance testing.</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about system testing and acceptance testing</p></template>
 <question>
 <p>Choose the correct statements about system testing and acceptance testing.</p>
 <ul class="contains-task-list">
@@ -455,7 +455,7 @@ But before that, you should give a good test run to feature y because users can 
  <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Regression Testing defintion T/F?</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Regression Testing definition: T/F?</p></template>
 <question>
 <p>Regression testing is the automated re-testing of a software after it has been modified.</p>
 <ul radio-group="63d56" class="radio-list">

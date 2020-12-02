@@ -33,7 +33,7 @@
 <pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {<br></span><span>    total = price * <span class="hljs-number">0.95</span>;<br></span><span>    send();<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    total = price * <span class="hljs-number">0.98</span>;<br></span><span>    send();<br></span><span>}<br></span></code></pre></td>
   <td valign="center">&nbsp;→&nbsp;</td>
   <td valign="top">
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()){<br></span><span>    total = price * <span class="hljs-number">0.95</span>;<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    total = price * <span class="hljs-number">0.98</span>;<br></span><span>}<br></span><span>send();<br></span><span><br></span></code></pre></td></tr></table></div></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {<br></span><span>    total = price * <span class="hljs-number">0.95</span>;<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    total = price * <span class="hljs-number">0.98</span>;<br></span><span>}<br></span><span>send();<br></span><span><br></span></code></pre></td></tr></table></div></div>
 <div class="alt-python">
 <div>
 <table> 
@@ -56,7 +56,7 @@
   <div>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span><br></span><span>    print_banner()<br></span><span><br></span><span>    //<span class="hljs-keyword">print</span> details<br></span><span>    print(<span class="hljs-string">"name:	"</span> + name)<br></span><span>    print(<span class="hljs-string">"amount	"</span> + get_outstanding())<br></span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
 <pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span><br></span><span>    print_banner()<br></span><span>    print_details(get_outstanding())<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span><br></span><span>    print(<span class="hljs-string">"name:	"</span> + name)<br></span><span>    print(<span class="hljs-string">"amount	"</span> + amount)<br></span></code></pre></div></div></box>
-<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have built in support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have builtin support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
 <p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p></div>
 <div>
 <div>
@@ -74,7 +74,7 @@
 <p>a, b, c, d</p>
 <p>Explanation:</p>
 <ul>
-<li>(a, b, c) Although the primary aim of refactoring is to improve internal code structure, there are other secondary benefits.</li>
+<li>(a, b, c) Although the primary aim of refactoring is to improve the internal code structure, there are other secondary benefits.</li>
 <li>(d) Some refactorings result in adding/removing methods/classes.</li></ul></div></question></panel></div>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Do you agree with the following statement? Refactoring and regression testing</p></template>

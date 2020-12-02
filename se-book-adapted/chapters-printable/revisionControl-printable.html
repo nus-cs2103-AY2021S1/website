@@ -61,7 +61,7 @@
 <p><strong>Repository</strong> (<em>repo</em> for short):  The database of the history of a directory being tracked by an RCS software (e.g. Git).</p></div></box>
 <tabs>
   <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
-<p><strong>The <em>repository</em> is the database where the meta-data about the revision history are stored.</strong> Suppose you want to apply revision control on files in a directory called <code v-pre>ProjectFoo</code>. In that case you need to set up a <em>repo</em> (short for repository) in <code v-pre>ProjectFoo</code> directory, which is referred to as the <em>working directory</em> of the repo.  For example, Git uses a hidden folder named <code v-pre>.git</code> inside the working directory.</p>
+<p><strong>The <em>repository</em> is the database where the meta-data about the revision history are stored.</strong> Suppose you want to apply revision control on files in a directory called <code v-pre>ProjectFoo</code>. In that case, you need to set up a <em>repo</em> (short for repository) in the <code v-pre>ProjectFoo</code> directory, which is referred to as the <em>working directory</em> of the repo. For example, Git uses a hidden folder named <code v-pre>.git</code> inside the working directory.</p>
 <p><strong>You can have multiple repos in your computer</strong>, each repo revision-controlling files of a different working directory, for examples, files of different projects.</p></tab>
   <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/mLnxwlCEIb8" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></tab></tabs></div></div></div>
@@ -96,10 +96,10 @@
 <h4 id="remote-repositories">Remote Repositories <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#remote-repositories" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
-<p><strong>Remote repositories are repos that are hosted on remote computers</strong> and allows remote access. They are especially useful for sharing the revision history of a codebase among team members of a multi-person project. <span class="dimmed">They can also serve as a remote backup of your code base.</span></p>
+<p><strong>Remote repositories are repos that are hosted on remote computers</strong> and allow remote access. They are especially useful for sharing the revision history of a codebase among team members of a multi-person project. <span class="dimmed">They can also serve as a remote backup of your codebase.</span></p>
 <p><strong>It is possible to set up your own remote repo on a server</strong>, but the easier option is to use a remote repo hosting service such as GitHub or BitBucket.</p>
 <div id="section-cloning">
-<p><strong>You can <mark><em>clone</em></mark> a repo</strong> to create a copy of that repo on another location in your computer. The copy will have even the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br></p></div>
+<p><strong>You can <mark><em>clone</em></mark> a repo</strong> to create a copy of that repo in another location on your computer. The copy will even have the revision history of the original repo i.e., identical to the original repo. For example, you can clone a remote repo onto your computer to create a local copy of the remote repo.<br></p></div>
 <p><strong>When you clone from a repo, the original repo is commonly referred to as the <mark><em>upstream</em></mark> repo.</strong> A repo can have multiple upstream repos. For example, let's say a repo <code v-pre>repo1</code> was cloned as <code v-pre>repo2</code> which was then cloned as <code v-pre>repo3</code> In this case <code v-pre>repo1</code> and <code v-pre>repo2</code> are upstream repos of <code v-pre>repo3</code>.</p>
 <div id="section-pulling">
 <p><strong>You can <mark><em>pull</em></mark> from a repo to another, to receive new commits in the second repo</strong>, if the repos have a shared history. Let's say some new commits were added to the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>upstream</em> repo is a term used to refer to the repo you cloned from</span>upstream repo</span> after you cloned it and you would like to copy over those new commits to your own clone i.e., <mark>sync</mark> your clone with the upstream repo. In that case you pull from the upstream repo to  your clone.</p></div>
@@ -123,7 +123,7 @@
 <p><strong>A branch can be <mark><em>merged</em></mark> into another branch.</strong> Merging usually result in a new commit that represents the changes done in the branch being merged.</p>
 <pic src="/website/book/revisionControl/branching/images/diagram.png" height="180">
   <strong>Branching and merging</strong></pic>
-<p><strong><mark><em>Merge conflicts</em></mark> happen when you try to merge two branches that had changed the same part of the code</strong> and the RCS software cannot decide which changes to keep. In those cases you have to ‘resolve’ those conflicts manually.</p></div></div></div>
+<p><strong><mark><em>Merge conflicts</em></mark> happen when you try to merge two branches that had changed the same part of the code</strong> and the <span for="pop:rcs" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:rcs'].show()" class="trigger">RCS</span> cannot decide which changes to keep. In those cases, you have to ‘resolve’ the conflicts manually.</p></div></div></div>
 <div class="indented-less">
 <h4 id="drcs-vs-crcs">DRCS vs CRCS <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#drcs-vs-crcs" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
@@ -158,7 +158,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

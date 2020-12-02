@@ -37,7 +37,7 @@
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Matric numbers</p></template>
 <question has-input="true">
-<p>Assume students are given matriculation number according to the following format:</p>
+<p>Assume that students are given a matriculation number according to the following format:</p>
 <p>[Faculty Alphabet] [Gender Alphabet] [Serial Number] [Check Alphabet]</p>
 <p>E.g. CF1234X</p>
 <p>The valid value(s) for each part of the matriculation number is given below:</p>
@@ -57,19 +57,19 @@
 <ul>
 <li>Single capital alphabet</li>
 <li>Only 'K', 'H', 'S', 'X' and 'Z' are valid</li></ul>
-<p>Assume you are testing the operation isValidMatric(String matric):boolen. Identify equivalence partitions and boundary values for the matriculation number.</p>
+<p>Assume you are testing the operation <code v-pre>isValidMatric(String matric): boolean</code>. Identify equivalence partitions and boundary values for the matriculation number.</p>
 <div slot="answer" class="algolia-no-index">
 <p>String length: (less than 7 characters), (7 characters), (more than 7 characters)</p>
 <p>For those with 7 characters,</p>
 <ul>
 <li>[Faculty Alphabet]: (‘C’, ‘G’), (‘c’, ‘g’), (any other character)</li>
 <li>[Gender Alphabet]: (‘F’, ‘M’), (‘f’, ‘m’), (any other character)</li>
-<li>[Serial Number]: (1000-9999), (0000-0999), (any other 4- characters string)</li>
+<li>[Serial Number]: (1000-9999), (0000-0999), (any other 4-characters string)</li>
 <li>[Check Alphabet]: ('K', 'H', 'S', ‘X’, 'Z'), ('k', 'h', ’s’, ‘x’, 'z'), (any other character)</li></ul></div></question></panel></div>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> isValidDate</p></template>
 <question has-input="true">
-<p>Identify a set of equivalence partitions for testing isValidDate(String date) method. The method checks if the parameter date is a day that falls in the period 1880/01/01 to 2030/12/31 (both inclusive). The date is given in the format yyyy/mm/dd.</p>
+<p>Identify a set of equivalence partitions for testing the <code v-pre>isValidDate(String date)</code> method. The method checks if the parameter <code v-pre>date</code> is a day that falls in the period 1880/01/01 to 2030/12/31 (both inclusive). The date is given in the format yyyy/mm/dd.</p>
 <div slot="answer" class="algolia-no-index">
 <p><strong>Initial partitions</strong>: [null] [10 characters long] [shorter than 10 characters] [longer than 10 characters]</p>
 <p>For 10-character strings:</p>
@@ -83,11 +83,11 @@
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Dispatch resources</p></template>
 <question has-input="true">
-<p>Given below is the overview of the method dispatch(Resource, Task), from an emergency management system (e.g. a system used by those who handle emergency calls from the public about incidents such as fires, possible burglaries, domestic disturbances, etc.). A task might need multiple resources of multiple types. For example, the task ‘fire at Clementi MRT’ might need two fire engines and one ambulance.</p>
+<p>Given below is the overview of the method <code v-pre>dispatch(Resource, Task)</code>, from an emergency management system (e.g. a system used by those who handle emergency calls from the public about incidents such as fires, possible burglaries, domestic disturbances, etc.). A task might need multiple resources of multiple types. For example, the task ‘fire at Clementi MRT’ might need two fire engines and one ambulance.</p>
 <ul>
-<li>dispatch(Resource r, Task t):void</li>
-<li>Overview: This method dispatches the Resource r to the Task t. Since this can dispatch only one resource, it needs to be used multiple times should the task need multiple resources.</li></ul>
-<p>Imagine you are designing test cases to test the method dispatch(Resource,Task). Taking into account equivalence partitions and boundary values, which different inputs will you combine to test the method?</p>
+<li><code v-pre>dispatch(Resource r, Task t): void</code></li>
+<li>Overview: This method dispatches the Resource <code v-pre>r</code> to the Task <code v-pre>t</code>. Since this can dispatch only one resource, it needs to be used multiple times should the task need multiple resources.</li></ul>
+<p>Imagine you are designing test cases to test the method <code v-pre>dispatch(Resource, Task)</code>. Taking into account equivalence partitions and boundary values, which different inputs will you combine to test the method?</p>
 <div slot="answer" class="algolia-no-index">
 <table class="table">
   <tr>
@@ -104,29 +104,29 @@
       <ul>
         <li>A fully dispatched task</li>
         <li>A task requiring one more resource</li>
-        <li>A task with no resource dispatched</li></ul>
+        <li>A task with no resources dispatched</li></ul>
       Considering the resource types required
       <ul>
-        <li>A task requiring only one type of resources</li>
+        <li>A task requiring only one type of resource</li>
         <li>A task requiring multiple types of resource</li>
         <li>null</li></ul></td></tr></table></div></question></panel></div>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> transferTable</p></template>
 <question has-input="true">
-<p>Given below is an operation description taken from a restaurant booking system. Use equivalence partitions and boundary value analysis technique to design a set of test cases for it.</p>
+<p>Given below is an operation description taken from a restaurant booking system. Use equivalence partitions and the boundary value analysis technique to design a set of test cases for it.</p>
 <ul>
-<li>boolean transferTable (Booking b, Table t)</li>
-<li>Description:  Used to transfer a Booking b to Table t, if t has enough room.</li>
-<li>Preconditions:  t has room for b , b.getTable() != t</li>
-<li>Postconditions:  b.getTable() == t</li></ul>
+<li><code v-pre>boolean transferTable(Booking b, Table t)</code></li>
+<li>Description: Used to transfer a Booking <code v-pre>b</code> to Table <code v-pre>t</code>, if <code v-pre>t</code> has enough room.</li>
+<li>Preconditions: <code v-pre>t</code> has room for <code v-pre>b</code>, <code v-pre>b.getTable() != t</code></li>
+<li>Postconditions: <code v-pre>b.getTable() == t</code></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p><strong>Equivalence partitions</strong></p>
 <ul>
 <li>
 <p>Booking:</p>
 <ul>
-<li>Invalid: null, not null and b.getTable==t</li>
-<li>Valid: not null and b.getTable != t</li></ul></li>
+<li>Invalid: null, not null and <code v-pre>b.getTable == t</code></li>
+<li>Valid: not null and <code v-pre>b.getTable != t</code></li></ul></li>
 <li>
 <p>Table:</p>
 <ul>
@@ -137,8 +137,8 @@
 <li>
 <p>Booking:</p>
 <ul>
-<li>Invalid: null, not null and b.getTable==t</li>
-<li>Valid:not null and b.getTable != t</li></ul></li>
+<li>Invalid: null, not null and <code v-pre>b.getTable == t</code></li>
+<li>Valid: not null and <code v-pre>b.getTable != t</code></li></ul></li>
 <li>
 <p>Table:</p>
 <ul>
@@ -182,39 +182,39 @@
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> add(Item)</p></template>
 <question has-input="true">
-<p>Assume you are testing the add(Item) method specified below.</p>
+<p>Assume you are testing the <code v-pre>add(Item)</code> method specified below.</p>
 <img src="/website/book/testCaseDesign/summary/exercises/images/itemList.png" height="100">
 <p></p>
-<p>Assume i to be the Item being added.</p>
+<p>Assume <code v-pre>i</code> to be the Item being added.</p>
 <p><strong>Preconditions:</strong></p>
 <ul>
-<li>i != null [throws InvalidItemException if i == null ]</li>
-<li>contains(i) == false [throws DuplicateItemException if contains(i) == true]</li>
-<li>count() &lt; 10 [throws ListFullException if count() == 10]</li></ul>
+<li><code v-pre>i != null</code> [throws <code v-pre>InvalidItemException</code> if <code v-pre>i == null</code>]</li>
+<li><code v-pre>contains(i) == false</code> [throws <code v-pre>DuplicateItemException</code> if <code v-pre>contains(i) == true</code>]</li>
+<li><code v-pre>count() &lt; 10</code> [throws <code v-pre>ListFullException</code> if <code v-pre>count() == 10</code>]</li></ul>
 <p><strong>Postconditions:</strong></p>
 <ul>
-<li>contains(i) == true;</li>
-<li>new count() == old count()+1</li></ul>
+<li><code v-pre>contains(i) == true</code></li>
+<li><code v-pre>new count() == old count() + 1</code></li></ul>
 <p><strong>Invariants:</strong> (an “invariant” is true before and after the method invocation).</p>
 <ul>
-<li>0 &lt; = count() &lt; = 10</li></ul>
-<p>(a) What are the equivalence partitions relevant to testing the add(Item) method?</p>
-<p>(b) What are the boundary and non-boundary values you will use to test the add(Item) method?</p>
-<p>(c) Design a set of test cases to test the add(Item) method by considering the equivalence partitions and boundary values from your answers to (a) and (b) above.</p>
+<li><code v-pre>0 &lt;= count() &lt;= 10</code></li></ul>
+<p>(a) What are the equivalence partitions relevant to testing the <code v-pre>add(Item)</code> method?</p>
+<p>(b) What are the boundary and non-boundary values you will use to test the <code v-pre>add(Item)</code> method?</p>
+<p>(c) Design a set of test cases to test the <code v-pre>add(Item)</code> method by considering the equivalence partitions and boundary values from your answers to (a) and (b) above.</p>
 <div slot="answer" class="algolia-no-index">
 <p>(a)</p>
-<p>i: i != null, i == null
-list: contains(i)==true, contains(i)==false, count() &lt; 10, count() == 10
-list == null should NOT be considered.</p>
+<p><code v-pre>i</code>: <code v-pre>i != null</code>, <code v-pre>i == null</code>
+<code v-pre>list</code>: <code v-pre>contains(i) == true</code>, <code v-pre>contains(i) == false</code>, <code v-pre>count() &lt; 10</code>, <code v-pre>count() == 10</code></p>
+<p><code v-pre>list == null</code> should NOT be considered.</p>
 <p>(b)</p>
-<p>list: count() == 0, count() == 9, count() == 10; count() == [1|2|3|4|5|6|7|8] (1 preferred)</p>
+<p><code v-pre>list</code>: <code v-pre>count() == 0</code>, <code v-pre>count() == 9</code>, <code v-pre>count() == 10</code>; <code v-pre>count() == [1|2|3|4|5|6|7|8]</code> (1 preferred)</p>
 <p>(c)</p>
 <img src="/website/book/testCaseDesign/summary/exercises/images/count.png" height="250">
 <p></p></div></question></panel></div>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> setWife</p></template>
 <question has-input="true">
-<p>Use equivalence partitions and boundary values to choose test inputs for testing the setWife operation in the Man class.</p>
+<p>Use equivalence partitions and boundary values to choose test inputs for testing the <code v-pre>setWife</code> operation in the <code v-pre>Man</code> class.</p>
 <img src="/website/book/testCaseDesign/summary/exercises/images/manWoman.png" height="90">
 <p></p>
 <div slot="answer" class="algolia-no-index">
@@ -235,28 +235,28 @@ list == null should NOT be considered.</p>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. black-box scripted testing</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>c</p>
-<p>Explanation: Since it is an executable only, you are unlikely to have a knowledge of its internal workings. Therefore, your testing is most likely to be black-box testing. A ‘test drive’ sounds like exploratory testing rather than scripted testing.</p></div></question></panel></div>
+<p>Explanation: Since it is an executable only, you are unlikely to have knowledge of its internal workings. Therefore, your testing is most likely to be black-box testing. A ‘test drive’ sounds like exploratory testing rather than scripted testing.</p></div></question></panel></div>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> True or False?</p></template>
 <question>
-<p>We can apply equivalence partitioning technique in white-box fashion.</p>
-<ul radio-group="d409c" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="d409c" type="radio"> True</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="d409c" type="radio"> False</label></li></ul>
+<p>We can apply the equivalence partitioning technique in white-box fashion.</p>
+<ul radio-group="e3b2b" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="e3b2b" type="radio"> True</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="e3b2b" type="radio"> False</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>True</p>
-<p>Explanation: In fact, when we know about how the SUT is implemented, we can make more informed decisions about partitioning test input into equivalence partitions. White-box equivalence partitioning is less speculative than black-box equivalence partitioning.</p></div></question></panel></div>
+<p>Explanation: In fact, when we know about how the SUT is implemented, we can make more informed decisions about partitioning test inputs into equivalence partitions. White-box equivalence partitioning is less speculative than black-box equivalence partitioning.</p></div></question></panel></div>
   <div>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Design test cases for the <code v-pre>day</code> parameter</p></template>
 <question>
 <ol>
 <li>
 <p>What are the <em>equivalence partitions</em> for the parameter <code v-pre>day</code> of this method?</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment"> * Returns true if the three values represent a valid day</span><br></span><span><span class="hljs-comment"> */</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isValidDay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> year, <span class="hljs-keyword">int</span> month, <span class="hljs-keyword">int</span> day)</span></span>{<br></span><span><br></span><span>} <br></span></code></pre></li>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment"> * Returns true if the three values represent a valid day</span><br></span><span><span class="hljs-comment"> */</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isValidDay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> year, <span class="hljs-keyword">int</span> month, <span class="hljs-keyword">int</span> day)</span> </span>{<br></span><span><br></span><span>} <br></span></code></pre></li>
 <li>
 <p>What are the <em>boundary values</em> for the parameter <code v-pre>day</code> in the question above?</p></li>
 <li>
-<p>Give 10 test inputs you would use for parameter <code v-pre>day</code> in the question above.</p></li></ol></question></panel></div></panel></div></div></div></div></div></div></div></div>
+<p>Give 10 test inputs you would use for the parameter <code v-pre>day</code> in the question above.</p></li></ol></question></panel></div></panel></div></div></div></div></div></div></div></div>
         </div>
     </div>
 </body>

@@ -92,7 +92,7 @@ Extensions:
 <p>In the example on the right, note how use cases are shown as ovals and user roles relevant to each use case are shown as stick figures connected to the corresponding ovals.</p>
 <b-modal id="modal:uml" hide-footer size modal-class="mb-zoom" ref="modal:uml" class="algolia-no-index"><template slot="modal-title"><strong>Unified Modeling Language (UML)</strong></template>
   <div>
-<p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them has developed their own notation for modeling software systems before joining force to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p></div></b-modal></box>
+<p><a href="http://www.uml.org/#UML2.0"><strong>Unified Modeling Language (UML)</strong></a> is a graphical notation to describe various aspects of a software system. UML is the brainchild of three software modeling specialists James Rumbaugh, Grady Booch and Ivar Jacobson (also known as the Three Amigos). Each of them had developed their own notation for modeling software systems before joining forces to create a unified modeling language (hence, the term ‘Unified’ in UML). UML is currently the <em>de facto</em> modeling notation used in the software industry.</p></div></b-modal></box>
 <p><strong>Use cases capture the <em>functional requirements</em> of a system.</strong></p></div>
   <div></div></div></panel></div>
 <div>
@@ -117,7 +117,7 @@ Extensions:
 <div class="text-monospace">
 <ul>
 <li>Software System: LearnSys</li>
-<li>Use case: UC01 conduct survey</li>
+<li>Use case: UC01 Conduct Survey</li>
 <li>Actors: <mark>Staff, Student</mark></li></ul></div></box>
 <p><strong>An actor can be involved in many use cases.</strong></p>
 <box>
@@ -125,7 +125,7 @@ Extensions:
 <ul>
 <li>Software System: LearnSys</li>
 <li>Actor: Staff</li>
-<li>Use cases: <mark>UC01 conduct survey, UC02 Set Up Course Schedule, UC03 Email Class, ...</mark></li></ul></div></box>
+<li>Use cases: <mark>UC01 Conduct Survey, UC02 Set Up Course Schedule, UC03 Email Class, ...</mark></li></ul></div></box>
 <p><strong>A single person/system can play many roles.</strong></p>
 <box>
 <div class="text-monospace">
@@ -154,7 +154,7 @@ c. Answer survey question</li></ul></div></box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> While modeling user-system interactions,</p>
 <ul>
 <li>Start with high level use cases and progressively work toward lower level use cases.</li>
-<li>Be mindful at which level of details you are working on and not to mix use cases of different levels.</li></ul></div>
+<li>Be mindful of which level of detail you are working at and not to mix use cases of different levels.</li></ul></div>
   <div>
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
@@ -171,15 +171,15 @@ c. Answer survey question</li></ul></div></box>
 <panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Use case diagram for QA system</p></template>
 <question has-input="false">
 <p>A software house wishes to automate its Quality Assurance division.</p>
-<p>The system is to be used by Testers, Programmers and System Administrators. Only an administrator can create new users and assign tasks to programmers. Any tester can create a bug report, as well as set the status of a bug report as ‘closed’. Only a programmer can set the state of a bug report to ‘fixed’, but a programmer cannot set the status of a bug report to ‘closed’. Each tester is assigned just one task at a time. A task involves testing of a particular component for a particular customer. Tester must document the bugs they find. Each bug is given a unique identifier. Other information recorded about the bug is component id, severity, date and time reported, programmer who is assigned to fix it, date fixed, date retested and date closed. The system keeps track of which bugs are assigned to which programmer at any given time. It should be able to generate reports on the number of bugs found, fixed and closed e.g. number of bugs per component and per customer; number of bugs found by a particular tester ; number of bugs awaiting to be fixed; number of bugs awaiting to be retested; number of bugs awaiting to be assigned to programmers etc.</p>
+<p>The system is to be used by Testers, Programmers and System Administrators. Only an administrator can create new users and assign tasks to programmers. Any tester can create a bug report, as well as set the status of a bug report as ‘closed’. Only a programmer can set the state of a bug report to ‘fixed’, but a programmer cannot set the status of a bug report to ‘closed’. Each tester is assigned just one task at a time. A task involves testing of a particular component for a particular customer. Tester must document the bugs they find. Each bug is given a unique identifier. Other information recorded about the bug is component id, severity, date and time reported, programmer who is assigned to fix it, date fixed, date retested and date closed. The system keeps track of which bugs are assigned to which programmer at any given time. It should be able to generate reports on the number of bugs found, fixed and closed e.g. number of bugs per component and per customer; number of bugs found by a particular tester; number of bugs awaiting to be fixed; number of bugs awaiting to be retested; number of bugs awaiting to be assigned to programmers etc.</p>
 <p><strong>Develop a use case diagram to capture their requirements given below.</strong></p>
 <div slot="answer" class="algolia-no-index">
 <img src="/website/book/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" width="400">
 <p></p>
 <p><strong>Explanation</strong>: The given description contains information not relevant to use case modeling. Furthermore, the description is not enough to complete the use case diagram All these are realities of real projects. However, the process of trying to create this use case diagram prompts us to investigate issues such as:</p>
 <ul>
-<li>Is ‘edit bug report’ a use case or editing the bug report is covered by other use cases such as those for setting the status of bug reports? If it is indeed a separate use case, who are the actors of that use case?</li>
-<li>Does ‘assign task’ simply means ‘assign bug report’ or is there any other type of tasks?</li>
+<li>Is ‘edit bug report’ a use case or is editing the bug report covered by other use cases such as those for setting the status of bug reports? If it is indeed a separate use case, who are the actors of that use case?</li>
+<li>Does ‘assign task’ simply mean ‘assign bug report’ or are there other types of tasks?</li>
 <li>There was some mention about Customers and Components. Does the system have to support use cases for creating and maintaining details about those entities? For example, should we have a ‘create customer record’ use case?</li>
 <li>Which actors can perform the ‘generate report’ use case? Are reports generated automatically by the system at a specific time or generated ‘on demand’ when users request to view them? Do we have to treat different types of reports as different use cases (in case some types of reports are restricted to some types of users)? The above diagram assumes (just for illustration) that the report is generated on demand and only the system admin can generate any report.</li></ul></div></question></panel></div></panel></div></div></div></panel></div>
 <div>
@@ -192,7 +192,7 @@ c. Answer survey question</li></ul></div></box>
 <p><strong>Writing use case steps</strong></p>
 <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
-<p><strong>The main body of the use case is the sequence of steps that describes the interaction between the system and the actors.</strong> Each step is given as a simple statement describing <em>who does what</em>.</p>
+<p><strong>The main body of the use case is a sequence of steps that describes the interaction between the system and the actors.</strong> Each step is given as a simple statement describing <em>who does what</em>.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of the main body of a use case.</p>
 <div class="text-monospace">
@@ -209,7 +209,7 @@ c. Answer survey question</li></ul></div></box>
 <li>LMS <mark>saves the file into the cache</mark> and indicates success.</li></ol></div></box>
 <p><strong>A step gives the intention of the actor (not the mechanics).</strong> That means UI details are usually omitted. The idea is to leave as much flexibility to the UI designer as possible. That is, the use case specification should be as general as possible (less specific) about the UI.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The first example below is not a good use case step because contains UI-specific details. The second one is better because it omits UI-specific details.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The first example below is not a good use case step because it contains UI-specific details. The second one is better because it omits UI-specific details.</p>
 <div class="indented">
 <p><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> : User right-clicks the text box and chooses ‘clear’</p>
 <p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> : User clears the input</p></div></box>
@@ -237,7 +237,7 @@ Actors: Player (multiple players)</p>
 <link rel="stylesheet" href="/website/book/css/common.css">
 <p><strong>The <mark><em>Main Success Scenario (MSS)</em></mark> describes the most straightforward interaction for a given use case, which assumes that nothing goes wrong.</strong> This is also called the <em>Basic Course of Action</em> or the <em>Main Flow of Events</em> of a use case.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how the MSS in the example below assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. <span class="dimmed">For example, MSS does not tell us what happens if the user enters an incorrect data.</span></p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Note how the MSS in the example below assumes that all entered details are correct and ignores problems such as timeouts, network outages etc. <span class="dimmed">For example, the MSS does not tell us what happens if the user enters incorrect data.</span></p>
 <div class="text-monospace">
 <p>System: Online Banking System (OBS)<br>
 Use case: UC23 - Transfer Money<br>
@@ -319,7 +319,7 @@ Use case ends.</li></ol></li></ul></div></box>
 <ul>
 <li>when you don't want to clutter a use case with too many low-level steps.</li>
 <li>when a set of steps is repeated in multiple use cases.</li></ul>
-<p>You use a dotted arrow and a <code v-pre>&lt;&lt;include&gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code v-pre>&lt;&lt;extend&gt;&gt;</code> arrows.</p>
+<p>You use a dotted arrow and an <code v-pre>&lt;&lt;include&gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code v-pre>&lt;&lt;extend&gt;&gt;</code> arrows.</p>
 <p><img src="/website/book/specifyingRequirements/useCases/details/images/inclusion.png" height="250"></p><p></p><p></p></div>
 <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
@@ -569,7 +569,7 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 <li>They decouple user intention from mechanism (note that use cases should not include UI-specific details), allowing the system designers more freedom to optimize how a functionality is provided to a user.</li>
 <li>Identifying all possible extensions encourages us to consider all situations that a software product might face during its operation.</li>
 <li>Separating typical scenarios from special cases encourages us to optimize the typical scenarios.</li></ul>
-<p><strong>One of the main disadvantages of use cases is that they are not good for capturing requirements that does not involve a user interacting with the system.</strong> Hence, they should not be used as the sole means to specify requirements.</p></div>
+<p><strong>One of the main disadvantages of use cases is that they are not good for capturing requirements that do not involve a user interacting with the system.</strong> Hence, they should not be used as the sole means to specify requirements.</p></div>
   <div>
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
@@ -578,7 +578,7 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 <question>
 <p>What are the advantages of using use cases (the textual form) for requirements modelling?</p>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They can be fairly detailed but still natural enough for users for users to understand and give feedback.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They can be fairly detailed but still natural enough for users to understand and give feedback.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. The UI-independent nature of use case specification allows the system designers more freedom to decide how a functionality is provided to a user.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Extensions encourage us to consider all situations a software product might face during its operations.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. They encourage us to identify and optimize the typical scenario of usage over exceptional usage scenarios.</li></ul>
@@ -589,7 +589,7 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 <question>
 <p>Which of these are correct?</p>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Use case are not very suitable for capturing non-functional requirements.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. Use cases are not very suitable for capturing non-functional requirements.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. Use case diagrams are less detailed than textual use cases.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. Use cases are better than user stories.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Use cases can be expressed at different levels of abstraction.</li></ul>

@@ -35,9 +35,9 @@
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> These could be EPs for the <span for="pop:epBasic-isValidMonth" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:epBasic-isValidMonth'].show()" class="trigger">isValidMonth</span> example:</p>
 <ul>
-<li>[MIN_INT ... 0] : <strong>below</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li>
-<li>[1 … 12] : the range that produces <code v-pre>true</code></li>
-<li>[13 … MAX_INT] : <strong>above</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li></ul></box>
+<li>[MIN_INT ... 0]: <strong>below</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li>
+<li>[1 … 12]: the range that produces <code v-pre>true</code></li>
+<li>[13 … MAX_INT]: <strong>above</strong> the range that produces <code v-pre>true</code> (produces <code v-pre>false</code>)</li></ul></box>
 <span id="pop:epBasic-isValidMonth" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header"><code v-pre>isValidMonth</code></span>
   <div data-mb-html-for="content">
     <div>
@@ -62,15 +62,15 @@
 <ul>
 <li>prime numbers</li>
 <li>non-prime numbers</li></ul></box>
-<p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases you have to consider each value as a partition by itself.</p>
+<p>Some inputs have only a small number of possible values and a potentially unique behavior for each value. In those cases, you have to consider each value as a partition by itself.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code v-pre>showStatusMessage(GameStatus s): String</code> that returns a unique <code v-pre>String</code> for each of the possible value of s (<code v-pre>GameStatus</code> is an <code v-pre>enum</code>). In this case, each possible value for <code v-pre>s</code> will have to be considered as a partition.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method <code v-pre>showStatusMessage(GameStatus s): String</code> that returns a unique <code v-pre>String</code> for each of the possible values of s (<code v-pre>GameStatus</code> is an <code v-pre>enum</code>). In this case, each possible value of <code v-pre>s</code> will have to be considered as a partition.</p></box>
 <p>Note that the EP technique is merely a heuristic and not an exact science, especially when applied manually (as opposed to using an automated program analysis tool to derive EPs). The partitions derived depend on how one ‘speculates’ the SUT to behave internally. Applying EP under a glass-box or gray-box approach can yield more precise partitions.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the method EPs given above for the <code v-pre>isValidMonth</code>. A different tester might use these EPs instead:</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the EPs given above for the method <code v-pre>isValidMonth</code>. A different tester might use these EPs instead:</p>
 <ul>
-<li>[1 … 12] : the range that produces <code v-pre>true</code></li>
-<li>[all other integers] : the range that produces <code v-pre>false</code></li></ul></box>
+<li>[1 … 12]: the range that produces <code v-pre>true</code></li>
+<li>[all other integers]: the range that produces <code v-pre>false</code></li></ul></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some more examples:</p>
 <table class="table">
@@ -80,13 +80,13 @@
   <tr>
   <td>
 <p><code v-pre>isValidFlag(String s): boolean</code><br>
-Returns <code v-pre>true</code> if s is one of [<code v-pre>&quot;F&quot;</code>, <code v-pre>&quot;T&quot;</code>, <code v-pre>&quot;D&quot;</code>]. The comparison is case-sensitive.</p></td>
+Returns <code v-pre>true</code> if <code v-pre>s</code> is one of [<code v-pre>&quot;F&quot;</code>, <code v-pre>&quot;T&quot;</code>, <code v-pre>&quot;D&quot;</code>]. The comparison is case-sensitive.</p></td>
   <td>
 <p>[<code v-pre>&quot;F&quot;</code>] [<code v-pre>&quot;T&quot;</code>] [<code v-pre>&quot;D&quot;</code>] [<code v-pre>&quot;f&quot;</code>, <code v-pre>&quot;t&quot;</code>, <code v-pre>&quot;d&quot;</code>] [any other string][null]</p></td></tr>
   <tr>
   <td>
 <p><code v-pre>squareRoot(String s): int</code><br>
-Pre-conditions: s represents a positive integer<br>
+Pre-conditions: <code v-pre>s</code> represents a positive integer.<br>
 Returns the square root of <code v-pre>s</code> if the square root is an integer; returns <code v-pre>0</code> otherwise.</p></td>
   <td>
 <p>[<code v-pre>s</code> is not a valid number] [<code v-pre>s</code> is a negative integer] [<code v-pre>s</code> has an integer square root] [<code v-pre>s</code> does not have an integer square root]</p></td></tr></table></box></div>
@@ -98,14 +98,14 @@ Returns the square root of <code v-pre>s</code> if the square root is an integer
 <question>
 <p>Consider this SUT:</p>
 <box>
-<p><code v-pre>isValidName (String s): boolean</code></p>
+<p><code v-pre>isValidName(String s): boolean</code></p>
 <p>Description: returns true if <code v-pre>s</code> is not <code v-pre>null</code> and not longer than 50 characters.</p></box>
-<p>A. Which one of these is least likely to be an equivalence partition for the parameter s of the isValidName method given below?</p>
-<ul radio-group="4c6ed" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> a. null.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> b. strings having more than 50 characters.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> c. strings having 50 or fewer characters.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="4c6ed" type="radio"> d. strings consisting of numbers instead of letters.</label></li></ul>
+<p>A. Which one of these is least likely to be an equivalence partition for the parameter <code v-pre>s</code> of the <code v-pre>isValidName</code> method given above?</p>
+<ul radio-group="63042" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="63042" type="radio"> a. null.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="63042" type="radio"> b. strings having more than 50 characters.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="63042" type="radio"> c. strings having 50 or fewer characters.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="63042" type="radio"> d. strings consisting of numbers instead of letters.</label></li></ul>
 <p>B. If you had to choose 3 test cases from the 4 given below, which one will you leave out based on the EP technique?</p>
 <ul radio-group="f35e9" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="f35e9" type="radio"> a. A string that is 50 characters long</label></li>

@@ -31,11 +31,11 @@
 <panel type="seamless" expanded id="introduction">
   <span slot="header" class="card-title"><div><h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
-<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how modelling can be used before implementation</span></span></span></span></p><p></p><p></p>
+<p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain how modeling can be used before implementation</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p><strong>You can use models to analyze and design a software before you start coding.</strong></p>
-<p>Suppose You are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
+<p><strong>You can use models to analyze and design software before you start coding.</strong></p>
+<p>Suppose you are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
 <img src="/website/book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
 <p></p>
 <p>Before jumping into coding, you may want to find out things such as,</p>
@@ -43,7 +43,7 @@
 <li>Is this class structure able to produce the behavior you want?</li>
 <li>What API should each class have?</li>
 <li>Do you need more classes?</li></ul>
-<p>To answer those questions, you can analyze the how the objects of these classes will interact with each other to produce the behavior you want.</p></div>
+<p>To answer these questions, you can analyze how the objects of these classes will interact with each other to produce the behavior you want.</p></div>
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="basic">
@@ -52,7 +52,7 @@
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use simple class diagrams and sequence diagrams to model an OO solution</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p>As mentioned in [<span trigger="click" for="modal:basicModelling-modelingIntro" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:basicModelling-modelingIntro'].show()" class="trigger-click">Design → Modeling → Modeling a Solutions → Introduction</span>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
+<p>As mentioned in [<span trigger="click" for="modal:basicModelling-modelingIntro" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:basicModelling-modelingIntro'].show()" class="trigger-click">Design → Modeling → Modeling a Solution → Introduction</span>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
 <b-modal id="modal:basicModelling-modelingIntro" hide-footer size="lg" modal-class="mb-zoom" ref="modal:basicModelling-modelingIntro" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
   <div>
 <div></div><p></p>
@@ -62,8 +62,8 @@
 <div><h4 id="introduction-2"><span>Introduction</span><a class="fa fa-anchor" href="#introduction-2" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p><strong>You can use models to analyze and design a software before you start coding.</strong></p>
-<p>Suppose You are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
+<p><strong>You can use models to analyze and design software before you start coding.</strong></p>
+<p>Suppose you are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
 <img src="/website/book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
 <p></p>
 <p>Before jumping into coding, you may want to find out things such as,</p>
@@ -71,35 +71,35 @@
 <li>Is this class structure able to produce the behavior you want?</li>
 <li>What API should each class have?</li>
 <li>Do you need more classes?</li></ul>
-<p>To answer those questions, you can analyze the how the objects of these classes will interact with each other to produce the behavior you want.</p></div>
+<p>To answer these questions, you can analyze how the objects of these classes will interact with each other to produce the behavior you want.</p></div>
 <div></div></div></div></div></b-modal>
 <img src="/website/book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
 <p></p>
-<p>Let us start by modelling a sample interaction between the person playing the game and the <code v-pre>TextUi</code> object.</p>
+<p>Let us start by modeling a sample interaction between the person playing the game and the <code v-pre>TextUi</code> object.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/playerText.png" height="300">
 <p></p>
 <p><code v-pre>newgame</code> and <code v-pre>clear x y</code> represent commands typed by the <code v-pre>Player</code> on the <code v-pre>TextUi</code>.</p></box>
-<p>How does the <code v-pre>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code v-pre>Logic</code> class is the one that controls the game logic, the <code v-pre>TextUi</code> needs to collaborate with <code v-pre>Logic</code> to fulfill the <code v-pre>newgame</code> request. Let us extend the model to capture that interaction.</p>
+<p>How does the <code v-pre>TextUi</code> object carry out the requests it has received from the player? It would need to interact with other objects of the system. Because the <code v-pre>Logic</code> class is the one that controls the game logic, the <code v-pre>TextUi</code> needs to collaborate with <code v-pre>Logic</code> to fulfill the <code v-pre>newgame</code> request. Let us extend the model to capture that interaction.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
 <p></p>
 <p><code v-pre>W</code> = Width of the minefield; <code v-pre>H</code> =  Height of the minefield</p></box>
-<p>The above diagram assumes that <code v-pre>W</code> and <code v-pre>H</code> are the only information <code v-pre>TextUi</code> requires to display the minefield to the <code v-pre>Player</code>. Note that there could be other ways of doing this.<br>
-The <code v-pre>Logic</code> methods you conceptualized in our modelling so far are:</p>
+<p>The above diagram assumes that <code v-pre>W</code> and <code v-pre>H</code> are the only information <code v-pre>TextUi</code> requires to display the minefield to the <code v-pre>Player</code>. Note that there could be other ways of doing this.</p>
+<p>The <code v-pre>Logic</code> methods you conceptualized in our modeling so far are:</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></box>
 <p>Now, let us look at what other objects and interactions are needed to support the <code v-pre>newGame()</code> operation.  It is likely that a new <code v-pre>Minefield</code> object is created when the <code v-pre>newGame()</code> method is called.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></box>
 <p>Note that the behavior of the <code v-pre>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
-<p>Given below are the interactions between the player and the Text UI for the whole game.</p>
+<p>Given below are the interactions between the player and the <code v-pre>TextUi</code> for the whole game.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300">
 <p></p>
 <p></p></box><p></p>
 <box>
-<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">using sequence diagramsn</span>a similar technique</span> can be used when discovering/defining the architecture-level APIs.</p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">using sequence diagrams</span>a similar technique</span> can be used when discovering/defining the architecture-level APIs.</p>
 <div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
 <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Defining the architecture-level APIs for a small Tic-Tac-Toe game:</p>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Un80XoRT1ME" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></box>
@@ -112,7 +112,7 @@ The <code v-pre>Logic</code> methods you conceptualized in our modelling so far 
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use intermediate class diagram and sequence diagram concepts to model an OO design</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p>Continuing with the example in [<span trigger="click" for="modal:conceptualingIntermediate-basic" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conceptualingIntermediate-basic'].show()" class="trigger-click">Design → Modeling → Modeling a Solution → Basic</span>], next let us model how the TextUi interacts with the Logic to support the mark or clear operations until the game is won or lost.</p>
+<p>Continuing with the example in [<span trigger="click" for="modal:conceptualingIntermediate-basic" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conceptualingIntermediate-basic'].show()" class="trigger-click">Design → Modeling → Modeling a Solution → Basic</span>], next let us model how the <code v-pre>TextUi</code> interacts with the <code v-pre>Logic</code> to support the mark and clear operations until the game is won or lost.</p>
 <b-modal id="modal:conceptualingIntermediate-basic" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conceptualingIntermediate-basic" class="algolia-no-index"><template slot="modal-title"></template>
   <div>
 <div>
@@ -124,7 +124,7 @@ The <code v-pre>Logic</code> methods you conceptualized in our modelling so far 
 <div><h4 id="basic-2"><span>Basic</span><a class="fa fa-anchor" href="#basic-2" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>As mentioned in [<span trigger="click" for="modal:basicModelling-modelingIntro" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:basicModelling-modelingIntro'].show()" class="trigger-click">Design → Modeling → Modeling a Solutions → Introduction</span>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
+<p>As mentioned in [<span trigger="click" for="modal:basicModelling-modelingIntro" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:basicModelling-modelingIntro'].show()" class="trigger-click">Design → Modeling → Modeling a Solution → Introduction</span>], this is the Minesweeper design you have come up with so far. Our objective is to analyze, evaluate, and refine that design.</p>
 <b-modal id="modal:basicModelling-modelingIntro" hide-footer size="lg" modal-class="mb-zoom" ref="modal:basicModelling-modelingIntro" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
   <div>
 <div></div><p></p>
@@ -134,8 +134,8 @@ The <code v-pre>Logic</code> methods you conceptualized in our modelling so far 
 <div><h4 id="introduction-3"><span>Introduction</span><a class="fa fa-anchor" href="#introduction-3" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p><strong>You can use models to analyze and design a software before you start coding.</strong></p>
-<p>Suppose You are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
+<p><strong>You can use models to analyze and design software before you start coding.</strong></p>
+<p>Suppose you are planning to implement a simple minesweeper game that has a text based UI and a GUI. Given below is a possible OOP design for the game.</p>
 <img src="/website/book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
 <p></p>
 <p>Before jumping into coding, you may want to find out things such as,</p>
@@ -143,35 +143,35 @@ The <code v-pre>Logic</code> methods you conceptualized in our modelling so far 
 <li>Is this class structure able to produce the behavior you want?</li>
 <li>What API should each class have?</li>
 <li>Do you need more classes?</li></ul>
-<p>To answer those questions, you can analyze the how the objects of these classes will interact with each other to produce the behavior you want.</p></div>
+<p>To answer these questions, you can analyze how the objects of these classes will interact with each other to produce the behavior you want.</p></div>
 <div></div></div></div></div></b-modal>
 <img src="/website/book/modeling/modelingASolution/introduction/images/textLogicMinefieldCell.png" height="50">
 <p></p>
-<p>Let us start by modelling a sample interaction between the person playing the game and the <code v-pre>TextUi</code> object.</p>
+<p>Let us start by modeling a sample interaction between the person playing the game and the <code v-pre>TextUi</code> object.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/playerText.png" height="300">
 <p></p>
 <p><code v-pre>newgame</code> and <code v-pre>clear x y</code> represent commands typed by the <code v-pre>Player</code> on the <code v-pre>TextUi</code>.</p></box>
-<p>How does the <code v-pre>TextUi</code> object carry out the requests it has received from player? It would need to interact with other objects of the system. Because the <code v-pre>Logic</code> class is the one that controls the game logic, the <code v-pre>TextUi</code> needs to collaborate with <code v-pre>Logic</code> to fulfill the <code v-pre>newgame</code> request. Let us extend the model to capture that interaction.</p>
+<p>How does the <code v-pre>TextUi</code> object carry out the requests it has received from the player? It would need to interact with other objects of the system. Because the <code v-pre>Logic</code> class is the one that controls the game logic, the <code v-pre>TextUi</code> needs to collaborate with <code v-pre>Logic</code> to fulfill the <code v-pre>newgame</code> request. Let us extend the model to capture that interaction.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/playerTextLogic.png" height="280">
 <p></p>
 <p><code v-pre>W</code> = Width of the minefield; <code v-pre>H</code> =  Height of the minefield</p></box>
-<p>The above diagram assumes that <code v-pre>W</code> and <code v-pre>H</code> are the only information <code v-pre>TextUi</code> requires to display the minefield to the <code v-pre>Player</code>. Note that there could be other ways of doing this.<br>
-The <code v-pre>Logic</code> methods you conceptualized in our modelling so far are:</p>
+<p>The above diagram assumes that <code v-pre>W</code> and <code v-pre>H</code> are the only information <code v-pre>TextUi</code> requires to display the minefield to the <code v-pre>Player</code>. Note that there could be other ways of doing this.</p>
+<p>The <code v-pre>Logic</code> methods you conceptualized in our modeling so far are:</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/textLogicMinefieldCell.png" height="115"></box>
 <p>Now, let us look at what other objects and interactions are needed to support the <code v-pre>newGame()</code> operation.  It is likely that a new <code v-pre>Minefield</code> object is created when the <code v-pre>newGame()</code> method is called.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/logicMinefield.png" height="150"></box>
 <p>Note that the behavior of the <code v-pre>Minefield</code> constructor has been abstracted away. It can be designed at a later stage.</p>
-<p>Given below are the interactions between the player and the Text UI for the whole game.</p>
+<p>Given below are the interactions between the player and the <code v-pre>TextUi</code> for the whole game.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/basic/images/playerTextLoop.png" height="300">
 <p></p>
 <p></p></box><p></p>
 <box>
-<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">using sequence diagramsn</span>a similar technique</span> can be used when discovering/defining the architecture-level APIs.</p>
+<p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Note that <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">using sequence diagrams</span>a similar technique</span> can be used when discovering/defining the architecture-level APIs.</p>
 <div v-closeable alt="Tic-Tac-Toe Video" class="non-printable">
 <p><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span> Defining the architecture-level APIs for a small Tic-Tac-Toe game:</p>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Un80XoRT1ME" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></box>
@@ -181,15 +181,15 @@ The <code v-pre>Logic</code> methods you conceptualized in our modelling so far 
 <img src="/website/book/modeling/modelingASolution/intermediate/images/playerTextLogicRef.png" height="250">
 <p></p>
 <img src="/website/book/modeling/modelingASolution/intermediate/images/textLogicSd.png" height="210"></box>
-<p>This interaction adds the following methods to the <code v-pre>Logic</code> class</p>
+<p>This interaction adds the following methods to the <code v-pre>Logic</code> class:</p>
 <ul>
 <li><code v-pre>clearCellAt(int x, int y)</code></li>
 <li><code v-pre>markCellAt(int x, int y)</code></li>
-<li><code v-pre>getGameState() :GAME_STATE (GAME_STATE: READY, IN_PLAY, WON, LOST, …)</code></li></ul>
+<li><code v-pre>getGameState(): GAME_STATE (GAME_STATE: READY, IN_PLAY, WON, LOST, …)</code></li></ul>
 <p>And it adds the following operation to Logic API:</p>
 <ul>
-<li><code v-pre>getAppearanceOfCellAt(int,int):CELL_APPEARANCE (CELL_APPEARANCE: HIDDEN, ZERO, ONE, TWO, THREE, …, MARKED, INCORRECTLY_MARKED, INCORRECTLY_CLEARED)</code></li></ul>
-<p>In the above design, <code v-pre>TextUi</code> does not access <code v-pre>Cell</code> objects directly. Instead, it gets values of type <code v-pre>CELL_APPEARANCE</code> from <code v-pre>Logic</code> to be displayed as a minefield to the player. Alternatively, each cell or the entire Minefield can be passed directly to <code v-pre>TextUi</code>.</p>
+<li><code v-pre>getAppearanceOfCellAt(int,int): CELL_APPEARANCE (CELL_APPEARANCE: HIDDEN, ZERO, ONE, TWO, THREE, …, MARKED, INCORRECTLY_MARKED, INCORRECTLY_CLEARED)</code></li></ul>
+<p>In the above design, <code v-pre>TextUi</code> does not access <code v-pre>Cell</code> objects directly. Instead, it gets values of type <code v-pre>CELL_APPEARANCE</code> from <code v-pre>Logic</code> to be displayed as a minefield to the player. Alternatively, each cell or the entire minefield can be passed directly to <code v-pre>TextUi</code>.</p>
 <p>Here is the updated class diagram:</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/intermediate/images/textLogicMinefieldCell.png" height="200"></box>
@@ -211,17 +211,17 @@ Suppose <code v-pre>Logic</code> supports a <code v-pre>reset()</code> operation
 <p>The updated class diagram:</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/intermediate/images/textLogicMinefieldCellConfigGenerator.png" height="250"></box>
-<p>How is <code v-pre>getGameState()</code> operation supported? Given below are two ways (there could be other ways):</p>
+<p>How is the <code v-pre>getGameState()</code> operation supported? Given below are two ways (there could be other ways):</p>
 <ol>
 <li><code v-pre>Minefield</code> class knows the state of the game at any time. <code v-pre>Logic</code> class retrieves it from the <code v-pre>Minefield</code> class as and when required.</li>
 <li><code v-pre>Logic</code> class maintains the state of the game at all times.</li></ol>
 <p>Here’s the SD for option 1.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/intermediate/images/logicMinefieldGetGameState.png" height="180"></box>
-<p>Here’s the SD for option 2. Here, assume that the game state is updated after every mark/clear action.</p>
+<p>Here’s the SD for option 2. Assume that the game state is updated after every mark/clear action.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/intermediate/images/logicMinefieldUpdateState.png" height="250"></box>
-<p>It is now time to explore what happens inside the <code v-pre>Minefield</code> constructor? One way is to design it as follows.</p>
+<p>It is now time to explore what happens inside the <code v-pre>Minefield</code> constructor. One way is to design it as follows.</p>
 <box>
 <img src="/website/book/modeling/modelingASolution/intermediate/images/minefieldCellAlt.png" height="200"></box>
 <p>Now let us assume that <code v-pre>Minesweeper</code> supports a ‘timing’ feature.</p>

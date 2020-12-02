@@ -41,10 +41,10 @@
 <p><strong><mark><em>Control abstraction</em></mark>: abstracting away details of the actual control flow to focus on tasks at a higher level</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p></box>
-<p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
+<p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstraction</em>.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code v-pre>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code v-pre>execute(Game)</code> is at a higher level than <code v-pre>print(Char)</code> which is at a higher than an Assembly language instruction <code v-pre>MOV</code>.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code v-pre>execute(Game)</code> is at a higher level than <code v-pre>print(Char)</code> which is at a higher level than an Assembly language instruction <code v-pre>MOV</code>.</p></box>
 <p><strong>Abstraction is a general concept that is not limited to just data or control abstractions.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some more general examples of abstraction:</p>
@@ -75,7 +75,7 @@
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If <code v-pre>Foo</code> class calls the method <code v-pre>Bar#read()</code>, <code v-pre>Foo</code> is coupled to <code v-pre>Bar</code> because a change to <code v-pre>Bar</code> can potentially (but not always) require a change in the <code v-pre>Foo</code> class <span class="dimmed">e.g. if the signature of the <code v-pre>Bar#read()</code> is changed, <code v-pre>Foo</code> needs to change as well, but a change to the <code v-pre>Bar#write()</code> method may not require a change in the <code v-pre>Foo</code> class because <code v-pre>Foo</code> does not call <code v-pre>Bar#write()</code></span>.</p>
 <panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">code for the above example</span></p></template>
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{<br></span><span>    ...<br></span><span>    <span class="hljs-keyword">new</span> Bar().read();<br></span><span>    ...<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span></span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre></panel></box>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{<br></span><span>    ...<br></span><span>    <span class="hljs-keyword">new</span> Bar().read();<br></span><span>    ...<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre></panel></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of coupling: <code v-pre>A</code> is coupled to <code v-pre>B</code> if,</p>
 <ul>
@@ -95,7 +95,7 @@
 <p><strong>Higher cohesion is better.</strong> Disadvantages of low cohesion (aka <em>weak</em> cohesion):</p>
 <ul>
 <li>Lowers the understandability of modules as it is difficult to express module functionalities at a higher level.</li>
-<li>Lowers maintainability because a module can be modified due to unrelated causes <span class="dimmed">(reason: the module contains code unrelated to each other)</span> or many many modules may need to be modified to achieve a small change in behavior <span class="dimmed">(reason: because the code related to that change is not localized to a single module)</span>.</li>
+<li>Lowers maintainability because a module can be modified due to unrelated causes <span class="dimmed">(reason: the module contains code unrelated to each other)</span> or many modules may need to be modified to achieve a small change in behavior <span class="dimmed">(reason: because the code related to that change is not localized to a single module)</span>.</li>
 <li>Lowers reusability of modules because they do not represent logical units of functionality.</li></ul></div></div></div>
 <div class="indented-less">
 <h4 id="how-2">How <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#how-2" onclick="event.stopPropagation()"></a></h4>
@@ -113,7 +113,7 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

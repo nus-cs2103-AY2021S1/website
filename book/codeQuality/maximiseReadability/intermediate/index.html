@@ -75,12 +75,12 @@ Sometimes, the correctness of your code does not depend on the order in which yo
 <p><strong>Optimizing code prematurely has several drawbacks</strong>:</p>
 <ul>
 <li><strong>You may not know which parts are the real performance bottlenecks</strong>. This is especially the case when the code undergoes transformations (e.g. compiling, minifying, transpiling, etc.) before it becomes an executable. Ideally, you should use a profiler tool to identify the actual bottlenecks of the code first, and optimize only those parts.</li>
-<li><strong>Optimizing can complicate the code</strong>, affecting correctness and understandability</li>
-<li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> (the simpler the code, the easier for the compiler to optimize it). In many cases a compiler can do a better job of optimizing the runtime code if you don't get in the way by trying to hand-optimize the source code.</li></ul>
-<p>A popular saying in the industry is <strong><em>make it work, make it right, make it fast</em></strong> which means in most cases getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly, it has no value no matter how fast/efficient it is.</p>
+<li><strong>Optimizing can complicate the code</strong>, affecting correctness and understandability.</li>
+<li><strong>Hand-optimized code can be harder for the compiler to optimize</strong> (the simpler the code, the easier it is for the compiler to optimize). In many cases, a compiler can do a better job of optimizing the runtime code if you don't get in the way by trying to hand-optimize the source code.</li></ul>
+<p>A popular saying in the industry is <strong><em>make it work, make it right, make it fast</em></strong> which means in most cases, getting the code to perform correctly should take priority over optimizing it. If the code doesn't work correctly, it has no value no matter how fast/efficient it is.</p>
 <blockquote>
 <p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Premature optimization is the root of all evil in programming.  <sub>--<a href="https://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a></sub></p></blockquote>
-<p>Note that <strong>there are cases where optimizing takes priority over other things</strong> <span class="dimmed">e.g. when writing code for resource-constrained environments</span>. This guideline simply a caution that you should optimize only when it is really needed.</p></div>
+<p>Note that <strong>there are cases where optimizing takes priority over other things</strong> <span class="dimmed">e.g. when writing code for resource-constrained environments</span>. This guideline is simply a caution that you should optimize only when it is really needed.</p></div>
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="slap-hard">
@@ -115,10 +115,10 @@ Note: The <em>Productive Programmer</em> (by Neal Ford) calls this the <em>SLAP 
 <p><strong><mark><em>Control abstraction</em></mark>: abstracting away details of the actual control flow to focus on tasks at a higher level</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p></box>
-<p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstractions</em>.</strong></p>
+<p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstraction</em>.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code v-pre>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code v-pre>execute(Game)</code> is at a higher level than <code v-pre>print(Char)</code> which is at a higher than an Assembly language instruction <code v-pre>MOV</code>.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code v-pre>execute(Game)</code> is at a higher level than <code v-pre>print(Char)</code> which is at a higher level than an Assembly language instruction <code v-pre>MOV</code>.</p></box>
 <p><strong>Abstraction is a general concept that is not limited to just data or control abstractions.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some more general examples of abstraction:</p>

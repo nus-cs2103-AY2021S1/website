@@ -178,7 +178,7 @@
 <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> statements about OOP</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about OOP</p></template>
 <question>
 <p>A) Choose the correct statements</p>
 <ul class="contains-task-list">
@@ -200,7 +200,7 @@
 <p>(a)<s>(b)</s>(c)(d)</p>
 <p>Explanation: C follows the procedural paradigm. Yes, we can write procedural code using OO languages e.g., AddressBook-level1.</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> procedural vs OOP</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Procedural vs OOP</p></template>
 <question>
 <p>OO is a higher level mechanism than the procedural paradigm.</p>
 <ul radio-group="07027" class="radio-list">
@@ -208,7 +208,7 @@
 <li class="radio-list-item"><label><input class="radio-list-input" name="07027" type="radio"> False</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>True.</p>
-<p>Explanation: Procedural languages work at simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p></div></question></panel></div></panel></div></div></div></panel></panel>
+<p>Explanation: Procedural languages work at the simple data structures (e.g., integers, arrays) and functions level. Because an object is an abstraction over data+related functions, OO works at a higher level.</p></div></question></panel></div></panel></div></div></div></panel></panel>
 <panel type="seamless" expanded id="objects">
   <span slot="header" class="card-title"><div><h2 id="objects"><span>Objects</span><span id="objects" class="anchor"></span><a class="fa fa-anchor" href="#objects" onclick="event.stopPropagation()"></a></h2></div></span>
 <panel type="seamless" expanded id="what-2"><template slot="_header"><h4 id="what-2">What<span id="what-2" class="anchor"></span><a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4></template>
@@ -359,7 +359,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <p>Interacting objects in the scenario: <code v-pre>Tom</code>, <code v-pre>SE Textbook</code> (<code v-pre>Book</code> for short), <code v-pre>Text</code>, (possibly) <code v-pre>Highlighter</code></p>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> objects usually match nouns in the description</p>
 <blockquote>
-<p>[2]Every object has both state (data) and behavior (operations on data).</p></blockquote>
+<p>[2] Every object has both state (data) and behavior (operations on data).</p></blockquote>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>Object</th>
@@ -380,7 +380,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <td>get highlighted</td></tr></tbody></table></div><blockquote>
 <p>[3] Every object has an interface and an implementation.</p></blockquote>
 <ul>
-<li>Interface of an object consists of how other objects interact with it i.e., what other objects can do to that object</li>
+<li>Interface of an object consists of how other objects interact with it i.e., what other objects can do to that object.</li>
 <li>Implementation consist of internals of the object that facilitate the interactions but not visible to other objects.</li></ul>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -391,7 +391,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <tr>
 <td><code v-pre>Tom</code></td>
 <td>receive reading assignment</td>
-<td>understand/memorize the text read, remember the reading assignment</td></tr>
+<td>understand/memorize the text, read, remember the reading assignment</td></tr>
 <tr>
 <td><code v-pre>Book</code></td>
 <td>show text, turn page</td>
@@ -403,7 +403,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <p>[4] Objects interact by sending messages.</p></blockquote>
 <p>Examples:</p>
 <ul>
-<li><code v-pre>Tom</code> sends message <code v-pre>turn page</code> to the <code v-pre>Book</code></li>
+<li><code v-pre>Tom</code> sends message <code v-pre>turn page</code> to the <code v-pre>Book</code>.</li>
 <li><code v-pre>Tom</code> sends message <code v-pre>show text</code> to the <code v-pre>Book</code>. When the <code v-pre>Book</code> shows the <code v-pre>Text</code>, <code v-pre>Tom</code> sends the message <code v-pre>read</code> to the <code v-pre>Text</code> which returns the text content to <code v-pre>Tom</code>.</li>
 <li><code v-pre>Tom</code> sends message <code v-pre>highlight</code> to the <code v-pre>Highlighter</code> while specifying which <code v-pre>Text</code> to highlight. Then the <code v-pre>Highlighter</code> sends the message <code v-pre>highlight</code> to the specified <code v-pre>Text</code>.</li></ul>
 <blockquote>
@@ -467,7 +467,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Classes and objects in an example scenario</p>
 <p>Consider the example of writing an OOP program to calculate the average age of Adam, Beth, Charlie, and Daisy.</p>
-<p>Instructions for creating objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code> will be very similar because they are all of the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code v-pre>name</code>, <code v-pre>dateOfBrith</code>, etc.), and the same kind of behavior (i.e. <code v-pre>getAge(Date)</code>, <code v-pre>getName()</code>, etc.). Therefore, you can have a class called <code v-pre>Person</code> containing instructions on how to create <code v-pre>Person</code> objects and use that class to instantiate objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code>.</p>
+<p>Instructions for creating objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code> will be very similar because they are all of the same kind: they all represent ‘persons’ with the same interface, the same kind of data (i.e. <code v-pre>name</code>, <code v-pre>dateOfBirth</code>, etc.), and the same kind of behavior (i.e. <code v-pre>getAge(Date)</code>, <code v-pre>getName()</code>, etc.). Therefore, you can have a class called <code v-pre>Person</code> containing instructions on how to create <code v-pre>Person</code> objects and use that class to instantiate objects <code v-pre>Adam</code>, <code v-pre>Beth</code>, <code v-pre>Charlie</code>, and <code v-pre>Daisy</code>.</p>
 <p>Similarly, you need classes <code v-pre>AgeList</code>, <code v-pre>Calculator</code>, and <code v-pre>Main</code> classes to instantiate one each of <code v-pre>AgeList</code>, <code v-pre>Calculator</code>, and <code v-pre>Main</code> objects.</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -495,7 +495,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <question>
 <p>Consider the following scenario. If you were to simulate this in an OOP program, what are the classes and the objects you would use?</p>
 <box>
-<p>A customer (name: John) gave a cheque to the Cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p></box>
+<p>A customer (name: John) gave a cheque to the cashier (name: Peter) to pay for the LoTR and GoT books he bought.</p></box>
 <div slot="answer" class="algolia-no-index">
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -527,9 +527,9 @@ components of real systems, but equally as well fulfill assigned roles as compon
   <span><span class="dimmed"><span aria-hidden="true" class="glyphicon glyphicon-education"></span>: <span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain class-level members</span></span></span></span><p></p>
   <div>
-<p>While all objects of a class has the same attributes, each object has its own copy of the attribute value.</p>
+<p>While all objects of a class have the same attributes, each object has its own copy of the attribute value.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code v-pre>Person</code> objects have the <code v-pre>Name</code> attribute but the value of that attribute varies between <code v-pre>Person</code> objects.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> All <code v-pre>Person</code> objects have the <code v-pre>name</code> attribute but the value of that attribute varies between <code v-pre>Person</code> objects.</p></box>
 <p>However, some attributes are not suitable to be maintained by individual objects. Instead, they should be maintained centrally, shared by all objects of the class. They are like ‘global variables’ but attached to a specific class. Such <strong>variables whose value is shared by all instances of a class are called <mark><em>class-level attributes</em></mark></strong>.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The attribute <code v-pre>totalPersons</code> should be maintained centrally and shared by all <code v-pre>Person</code> objects rather than copied at each <code v-pre>Person</code> object.</p></box>
@@ -544,7 +544,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
   <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as a class-level variables</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Suitable as class-level variables</p></template>
 <question>
 <p>Which of these are suitable as class-level variables?</p>
 <ul class="contains-task-list">
@@ -554,7 +554,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. system: any, class: <code v-pre>ArrayList</code>, variable: <code v-pre>total</code> (i.e., total items in a given <code v-pre>ArrayList</code> object)</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(c)</p>
-<p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p></div></question></panel></div></panel></div></div></div></panel>
+<p>Explanation: <code v-pre>totalPendingTasks</code> should not be managed by individual <code v-pre>Task</code> objects and is therefore suitable to be maintained as a class-level variable. The other variables should be managed at instance level as their value varies from instance to instance. e.g., <code v-pre>totalStudents</code> for one <code v-pre>Course</code> object will differ from <code v-pre>totalStudents</code> of another.</p></div></question></panel></div></panel></div></div></div></panel>
 <panel type="seamless" expanded id="enumerations"><template slot="_header"><h4 id="enumerations">Enumerations<span id="enumerations" class="anchor"></span><a class="fa fa-anchor" href="#enumerations" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
@@ -609,7 +609,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, the <code v-pre>Logic</code> class has a variable that can hold <code v-pre>0..1</code> <span class="dimmed">i.e., zero or one</span> <code v-pre>Minefield</code> objects.</p>
 <div>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span></span>{<br></span><span>    Minefield minefield;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span></span>{<br></span><span>    ...<br></span><span>}<br></span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    Minefield minefield;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{<br></span><span>    ...<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span><br></span><span>    self.minefield = minefield<br></span><span>    <br></span><span>  <span class="hljs-comment"># ...</span><br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span><br></span><span>  <span class="hljs-comment"># ...</span><br></span></code></pre></div></div></box>
 <p><strong>A variable can be used to implement a <code v-pre>1</code> multiplicity too</strong> (also called <em>compulsory associations</em>).</p>
@@ -647,7 +647,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, <code v-pre>Foo</code> has a dependency on <code v-pre>Bar</code> but it is not an association because it is only a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">temporary</span>transient</span> interaction and there is no long term relationship between a <code v-pre>Foo</code> object and a <code v-pre>Bar</code> object. <span class="dimmed">i.e. the <code v-pre>Foo</code> object does not keep the <code v-pre>Bar</code> object it receives as a parameter</span>.</p>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span></span>{<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> bar.getValue();<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span></span>{<br></span><span>    <span class="hljs-keyword">int</span> value;<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span></span>{<br></span><span>        <span class="hljs-keyword">return</span> value;<br></span><span>    }<br></span><span>}<br></span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">calculate</span><span class="hljs-params">(Bar bar)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> bar.getValue();<br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> value;<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">getValue</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> value;<br></span><span>    }<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
 <pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span>:</span><br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate</span><span class="hljs-params">(self, bar)</span>:</span><br></span><span>        <span class="hljs-keyword">return</span> bar.value;<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span>:</span><br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, value)</span>:</span><br></span><span>      self.value = value<br></span></code></pre></div></box></div>
   <div></div></div></panel>
@@ -662,7 +662,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <code v-pre>Board</code> (used for playing board games) consists of <code v-pre>Square</code> objects.</p></box>
 <p><strong>Composition also implies that there cannot be cyclical links</strong>.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code v-pre>Folder</code> objects is a composition type association. That means if the <code v-pre>Folder</code> object <code v-pre>foo</code> is a sub folder of <code v-pre>Folder</code> object <code v-pre>bar</code>, <code v-pre>bar</code> cannot be a sub-folder of <code v-pre>foo</code>.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The ‘sub-folder’ association between <code v-pre>Folder</code> objects is a composition type association. That means if the <code v-pre>Folder</code> object <code v-pre>foo</code> is a sub-folder of <code v-pre>Folder</code> object <code v-pre>bar</code>, <code v-pre>bar</code> cannot be a sub-folder of <code v-pre>foo</code>.</p></box>
 <p><strong>Whether a relationship is a composition can depend on the context</strong>.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Is the relationship between <code v-pre>Email</code> and <code v-pre>EmailSubject</code> composition? That is, is the email subject <em>part</em> of an email to the extent that an email subject cannot exist without an email?</p>
@@ -693,7 +693,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <h5 id="implementing-aggregation">Implementing aggregation<span id="implementing-aggregation" class="anchor"></span><a class="fa fa-anchor" href="#implementing-aggregation" onclick="event.stopPropagation()"></a></h5>
 <p>Implementation is similar to that of composition except the <em>containee</em> object can exist even after the <em>container</em> object is deleted.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, there is an aggregation association between the <code v-pre>Team</code> class and the <code v-pre>Person</code> in that a <code v-pre>Team</code> contains <code v-pre>Person</code> a object who is the leader of the team.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the code below, there is an aggregation association between the <code v-pre>Team</code> class and the <code v-pre>Person</code> class in that a <code v-pre>Team</code> contains a <code v-pre>Person</code> object who is the leader of the team.</p>
 <div class="alt-java">
 <pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Team</span> </span>{<br></span><span>    Person leader;<br></span><span>    ...<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">setLeader</span><span class="hljs-params">(Person p)</span> </span>{<br></span><span>        leader = p;<br></span><span>    }<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
@@ -748,7 +748,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <p><strong>A superclass is said to be <em>more general</em> than the subclass.</strong> Conversely, a subclass is said to be more <em>specialized</em> than the superclass.</p>
 <p><strong>Applying inheritance on a group of similar classes can result in the common parts among classes being extracted into more general classes.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Man</code> and <code v-pre>Woman</code> behaves the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code v-pre>Person</code> because of the need to distinguish between <code v-pre>Man</code> and <code v-pre>Woman</code> for certain other things. A solution is to add the <code v-pre>Person</code> class as a superclass (to contain the code common to men and women) and let <code v-pre>Man</code> and <code v-pre>Woman</code> inherit from <code v-pre>Person</code> class.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Man</code> and <code v-pre>Woman</code> behave the same way for certain things. However, the two classes cannot be simply replaced with a more general class <code v-pre>Person</code> because of the need to distinguish between <code v-pre>Man</code> and <code v-pre>Woman</code> for certain other things. A solution is to add the <code v-pre>Person</code> class as a superclass (to contain the code common to men and women) and let <code v-pre>Man</code> and <code v-pre>Woman</code> inherit from <code v-pre>Person</code> class.</p></box>
 <p><strong>Inheritance implies the derived class can be considered as a <em>sub-type</em> of the base class (and the base class is a <em>super-type</em> of the derived class), resulting in an <em>is a</em> relationship.</strong></p>
 <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Inheritance does not necessarily mean a sub-type relationship exists. However, the two often go hand-in-hand. For simplicity, at this point let us assume inheritance implies a sub-type relationship.</span></p>
 <box>
@@ -763,13 +763,13 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <p></p></box>
 <p><strong><em>Multiple Inheritance</em> is when a class inherits <em>directly</em> from multiple classes.</strong> Multiple inheritance among classes is allowed in some languages (e.g., Python, C++) but not in other languages (e.g., Java, C#).</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Honey</code> class inherits from the <code v-pre>Food</code> class <em>and</em> the <code v-pre>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>. Similarly, a <code v-pre>Car</code> is an <code v-pre>Vehicle</code>, an <code v-pre>Asset</code> and a <code v-pre>Liability</code>.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Honey</code> class inherits from the <code v-pre>Food</code> class <em>and</em> the <code v-pre>Medicine</code> class <span class="dimmed">because honey can be consumed as a food as well as a medicine (in some oriental medicine practices)</span>. Similarly, a <code v-pre>Car</code> is a <code v-pre>Vehicle</code>, an <code v-pre>Asset</code> and a <code v-pre>Liability</code>.</p>
 <img src="/website/book/oop/inheritance/what/images/multipleInheritanceExamples.png" width="440"></box></div>
   <div>
  <div>
 <panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statements are correct</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statements are correct?</p></template>
 <question>
 <p>Which of these are correct?</p>
 <ul class="contains-task-list">
@@ -925,7 +925,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
 <p><strong>Abstract class</strong>: A class declared as an <em>abstract class</em> cannot be instantiated, but it can be subclassed.</p></div></box>
 <p><strong>You can declare a class as <em>abstract</em> when a class is merely a representation of commonalities among its subclasses</strong> in which case it does not make sense to instantiate objects of that class.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Animal</code> class that exist as a generalization of its subclasses <code v-pre>Cat</code>, <code v-pre>Dog</code>, <code v-pre>Horse</code>, <code v-pre>Tiger</code> etc. can be declared as abstract because it does not make sense to instantiate an <code v-pre>Animal</code> object.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>Animal</code> class that exists as a generalization of its subclasses <code v-pre>Cat</code>, <code v-pre>Dog</code>, <code v-pre>Horse</code>, <code v-pre>Tiger</code> etc. can be declared as abstract because it does not make sense to instantiate an <code v-pre>Animal</code> object.</p></box>
 <box type="definition" seamless>
 <div>
 <p><strong>Abstract method</strong>: An <em>abstract method</em> is a method signature without a method implementation.</p></div></box>
@@ -955,7 +955,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
   <div>
 <box type="definition" seamless>
   <div>
-<p><strong>Dynamic binding</strong> (<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document</span>aka late binding</span>) : a mechanism where method calls in code are <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">deciding which method implementation to execure</span>resolved</span> at <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">at the moment the method call is executed</span>runtime</span>, rather than at compile time.</p></div></box>
+<p><strong>Dynamic binding</strong> (<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">There are subtle differences between late binding and dynamic binding, but they are beyond the scope of this document</span>aka late binding</span>): a mechanism where method calls in code are <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">deciding which method implementation to execute</span>resolved</span> at <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">at the moment the method call is executed</span>runtime</span>, rather than at compile time.</p></div></box>
 <p><strong><span trigger="click" for="modal:dynamicAndStatic-overriding" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:dynamicAndStatic-overriding'].show()" class="trigger-click">Overridden methods</span> are resolved using dynamic binding, and therefore resolves to the implementation in the actual type of the object.</strong></p>
 <b-modal id="modal:dynamicAndStatic-overriding" hide-footer size="lg" modal-class="mb-zoom" ref="modal:dynamicAndStatic-overriding" class="algolia-no-index"><template slot="modal-title">Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
   <div>
@@ -1125,7 +1125,7 @@ components of real systems, but equally as well fulfill assigned roles as compon
   <div>
 <p><strong>Three concepts combine to achieve polymorphism: <em>substitutability, operation overriding, and dynamic binding</em>.</strong></p>
 <ul>
-<li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects object of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
+<li><strong>Substitutability:</strong> Because of substitutability, you can write code that expects objects of a parent class and yet use that code with objects of child classes. That is how polymorphism is able to <em>treat objects of different types as one type</em>.</li>
 <li><strong>Overriding:</strong> To get polymorphic behavior from an operation, the operation in the superclass needs to be overridden in each of the subclasses. That is how overriding allows objects of different subclasses to <em>display different behaviors in response to the same method call</em>.</li>
 <li><strong>Dynamic binding</strong>: Calls to overridden methods are bound to the implementation of the actual object's class dynamically during the runtime. That is how the polymorphic code can call the method of the parent class and yet execute the implementation of the child class.</li></ul></div>
   <div>
@@ -1186,7 +1186,7 @@ In the context of OOP, what is the relationship between abstraction and encapsul
 <p>c</p>
 <p>Explanation: We can have abstraction without encapsulation. For example, we can <em>think</em> in terms of student entities when we code in C (a procedural language). But when we use a language that has encapsulation too (e.g., in Java/C++/C#), we can package all student related data and functions into one construct (i.e. a class). This makes the ‘student’ abstraction stronger because now we can not only think in terms of students, the program can perform actions using objects that represent student entities.</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these do not belong to four main OO principles?</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these do not belong to the four main OO principles?</p></template>
 <panel expandable expanded><template slot="_header"><p><span class="dimmed">Prerequisites</span></p></template>
   <panel src="/website/book/oop/objects/abstraction/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header"><p>OOP: Objects: Abstraction</p></template></panel>
   <panel src="/website/book/oop/objects/encapsulation/unit-inElsewhere-asFlat._include_.html" class="algolia-no-index"><template slot="_header"><p>OOP: Objects: Encapsulation</p></template></panel>
@@ -1266,7 +1266,7 @@ Which of these do not belong to four main OO principles?
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Tue, 1 Dec 2020, 22:33:31 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
 </body>
 <script src="../../markbind/js/vue.min.js"></script>
 <script src="../../markbind/js/components.min.js"></script>

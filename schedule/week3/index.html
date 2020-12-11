@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Week 3 - Summary</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~cs2103">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -70,6 +73,8 @@
     <form class="navbar-form">
       <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
+
+
 <div id="content-wrapper">
 <div class="website-content">
 <nav>
@@ -82,7 +87,7 @@
 <li class="page-item"><a class="page-link" href="/website/schedule/week3/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
 <li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week4"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
 <p></p>
-<h1 id="week-3-fri-aug-21st-summary">Week 3 <small><small><span class="dimmed">[Fri, Aug 21st]</span> - Summary</small></small><span id="week-3-fri-aug-21st-summary" class="anchor"></span><a class="fa fa-anchor" href="#week-3-fri-aug-21st-summary" onclick="event.stopPropagation()"></a></h1>
+<h1 id="week-3-fri-aug-21st-summary"><span id="week-3-fri-aug-21st-summary" class="anchor"></span>Week 3 <small><small><span class="dimmed">[Fri, Aug 21st]</span> - Summary</small></small><a class="fa fa-anchor" href="#week-3-fri-aug-21st-summary" onclick="event.stopPropagation()"></a></h1>
 <div>
 <div>
 <box type="warning" dismissible>
@@ -111,7 +116,7 @@
 <li>
 <p>[<a href="/website/schedule/week3/topics.html#W3-6">W3.6</a>] <strong>Unit Testing</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week3/topics.html#W3-1">W3.1</a>] <strong>RCS: Branching</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -123,7 +128,7 @@
 </span></span> <span>Branching</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week3/topics.html#W3-1b">W3.1b</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code v-pre>branch</code>: Doing multiple parallel changes</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code class="hljs inline no-lang" v-pre>branch</code>: Doing multiple parallel changes</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week3/topics.html#W3-1c">W3.1c</a>] <span>Tools → Git and GitHub →
 </span></span> <span>Dealing with merge conflicts</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
@@ -206,7 +211,7 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>[CS2103 students only] Form teams during the tutorial</span></li></ol></div>
 <div>
 <p><strong>iP:</strong></p>
@@ -214,16 +219,16 @@
 <ol>
 <li><span>Do any leftover iP tasks from the previous week</span></li>
 <li><span>Create a PR to the upstream repo</span></li>
-<li>Add Increments as parallel branches: <code v-pre>Level-7</code>, <code v-pre>Level-8</code></li>
-<li>Add Increments: <code v-pre>A-MoreOOP</code>, <code v-pre>A-Packages</code>, <code v-pre>A-JUnit</code>, <code v-pre>A-Jar</code></li>
-<li>Add Increments as parallel branches: <code v-pre>A-JavaDoc</code>, <code v-pre>A-CodingStandard</code>, <code v-pre>Level-9</code></li></ol></div>
+<li>Add Increments as parallel branches: <code class="hljs inline no-lang" v-pre>Level-7</code>, <code class="hljs inline no-lang" v-pre>Level-8</code></li>
+<li>Add Increments: <code class="hljs inline no-lang" v-pre>A-MoreOOP</code>, <code class="hljs inline no-lang" v-pre>A-Packages</code>, <code class="hljs inline no-lang" v-pre>A-JUnit</code>, <code class="hljs inline no-lang" v-pre>A-Jar</code></li>
+<li>Add Increments as parallel branches: <code class="hljs inline no-lang" v-pre>A-JavaDoc</code>, <code class="hljs inline no-lang" v-pre>A-CodingStandard</code>, <code class="hljs inline no-lang" v-pre>Level-9</code></li></ol></div>
 <p><strong>tP:</strong></p>
 <div>
 <ol>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Get familiar with AB3 features</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Set up a project meeting time</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> by the end of the tutorial</span></span></li></ol></div></div></div></div></div></span>
-<br></div></div>
-
+<br></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -237,18 +242,13 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -272,5 +272,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

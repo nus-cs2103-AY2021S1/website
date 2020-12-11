@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Coding Best Practices: [Practice] Nouns and Verbs as Names</title>
     <link rel="stylesheet" href="../../../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../../markbind/css/markbind.min.css"><script src="../../../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../../../markbind/js/vue.min.js"></script>
+    <script src="../../../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -28,11 +30,11 @@
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Naming → Basic →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="use-nouns-for-things-and-verbs-for-actions"><span>Use nouns for things and verbs for actions</span><a class="fa fa-anchor" href="#use-nouns-for-things-and-verbs-for-actions" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="use-nouns-for-things-and-verbs-for-actions"><span id="use-nouns-for-things-and-verbs-for-actions" class="anchor"></span><span>Use nouns for things and verbs for actions</span><a class="fa fa-anchor" href="#use-nouns-for-things-and-verbs-for-actions" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <blockquote>
-<p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span><br><sub>― Robert C. Martin, <em>Clean Code: A Handbook of Agile Software Craftsmanship</em></sub></p></blockquote>
+<p><span><span aria-hidden="true" class="fas fa-quote-left"></span></span> Every system is built from a domain-specific language designed by the programmers to describe that system. Functions are the verbs of that language, and classes are the nouns. <span><span aria-hidden="true" class="fas fa-quote-right"></span></span><br><sub>-- Robert C. Martin, <em>Clean Code: A Handbook of Agile Software Craftsmanship</em></sub></p></blockquote>
 <p><strong>Use nouns for classes/variables and verbs for methods/functions.</strong></p>
 <box>
 <p>Examples:</p>
@@ -44,35 +46,35 @@
 <tbody>
 <tr>
 <td>Class</td>
-<td><code v-pre>CheckLimit</code></td>
-<td><code v-pre>LimitChecker</code></td></tr>
+<td><code class="hljs inline no-lang" v-pre>CheckLimit</code></td>
+<td><code class="hljs inline no-lang" v-pre>LimitChecker</code></td></tr>
 <tr>
-<td>method</td>
-<td><code v-pre>result()</code></td>
-<td><code v-pre>calculate()</code></td></tr></tbody></table></div></box>
+<td>Method</td>
+<td><code class="hljs inline no-lang" v-pre>result()</code></td>
+<td><code class="hljs inline no-lang" v-pre>calculate()</code></td></tr></tbody></table></div></box>
 <p><strong>Distinguish clearly between single-valued and multi-valued variables.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples:</p>
 <div class="alt-java">
 <p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
-<pre><code class="hljs java" v-pre><span>Person student;<br></span><span>ArrayList&lt;Person&gt; students;<br></span></code></pre></div>
+<pre><code class="hljs java" v-pre><span>Person student;
+</span><span>ArrayList&lt;Person&gt; students;
+</span></code></pre></div>
 <div class="alt-python">
 <p><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font></p>
-<pre><code class="hljs python" v-pre><span>name = <span class="hljs-string">'Jim'</span><br></span><span>names = [<span class="hljs-string">'Jim'</span>, <span class="hljs-string">'Alice'</span>]<br></span></code></pre></div></box></div>
-<div></div></div></div></div></div></div></div>
+<pre><code class="hljs python" v-pre><span>name = <span class="hljs-string">'Jim'</span>
+</span><span>names = [<span class="hljs-string">'Jim'</span>, <span class="hljs-string">'Alice'</span>]
+</span></code></pre></div></box></div>
+<div></div></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../../../markbind/js/vue.min.js"></script>
-<script src="../../../../../markbind/js/components.min.js"></script>
 <script src="../../../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -96,5 +98,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

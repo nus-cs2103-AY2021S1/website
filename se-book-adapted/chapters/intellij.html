@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Textbook Chapter : Intellij IDEA</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/site-nav.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~cs2103">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -135,19 +138,21 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/definitions.html">List of Definitions</a></div></li></ul></li></ul></div></nav>
 
+
+
 <div id="content-wrapper">
 <link rel="stylesheet" href="/website/book/css/textbook.css">
 <div class="website-content">
 <p><span class="dimmed"><strong><span></span></strong></span></p>
 <div id="title">
-<div><h1 id="intellij-idea"><span>IntelliJ IDEA</span><span id="intellij-idea" class="anchor"></span><a class="fa fa-anchor" href="#intellij-idea" onclick="event.stopPropagation()"></a></h1></div></div>
-<panel type="seamless" expanded id="project-setup"><template slot="_header"><h4 id="project-setup">Project Setup<span id="project-setup" class="anchor"></span><a class="fa fa-anchor" href="#project-setup" onclick="event.stopPropagation()"></a></h4></template>
+<div><h1 id="intellij-idea"><span id="intellij-idea" class="anchor"></span><span>IntelliJ IDEA</span><a class="fa fa-anchor" href="#intellij-idea" onclick="event.stopPropagation()"></a></h1></div></div>
+<panel type="seamless" expanded id="project-setup"><template slot="header"><h4 id="project-setup"><span id="project-setup" class="anchor"></span>Project Setup<a class="fa fa-anchor" href="#project-setup" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="Crimson"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can setup a project in an IDE</span></span></span></span><p></p>
   <div>
-<h5 id="running-intellij-idea-for-the-first-time">Running IntelliJ IDEA for the First Time<span id="running-intellij-idea-for-the-first-time" class="anchor"></span><a class="fa fa-anchor" href="#running-intellij-idea-for-the-first-time" onclick="event.stopPropagation()"></a></h5>
+<h5 id="running-intellij-idea-for-the-first-time"><span id="running-intellij-idea-for-the-first-time" class="anchor"></span>Running IntelliJ IDEA for the First Time<a class="fa fa-anchor" href="#running-intellij-idea-for-the-first-time" onclick="event.stopPropagation()"></a></h5>
 <tabs> 
   <tab><template slot="_header"><span><span aria-hidden="true" class="far fa-file-alt"></span></span></template>
 <ul>
@@ -161,10 +166,10 @@
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/S764o0mAXhg" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></tab></tabs>
 <br></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="code-navigation"><template slot="_header"><h4 id="code-navigation">Code Navigation<span id="code-navigation" class="anchor"></span><a class="fa fa-anchor" href="#code-navigation" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="code-navigation"><template slot="header"><h4 id="code-navigation"><span id="code-navigation" class="anchor"></span>Code Navigation<a class="fa fa-anchor" href="#code-navigation" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can navigate code effectively using IDE features</span></span></span></span><p></p>
   <div>
 <p>Some useful navigation shortcuts:</p>
@@ -174,23 +179,23 @@
 <li>Go back to the previous location.</li>
 <li>View the documentation of a method from where the method is being used, without navigating to the method itself.</li>
 <li>Find where a method/field is being used.</li></ol>
-<panel expanded><template slot="_header"><p>IntelliJ IDEA Code Navigation</p></template>
+<panel expanded><template slot="header"><p>IntelliJ IDEA Code Navigation</p></template>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/1UHsJyCq1SU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="productivity-shortcuts"><template slot="_header"><h4 id="productivity-shortcuts">Productivity Shortcuts<span id="productivity-shortcuts" class="anchor"></span><a class="fa fa-anchor" href="#productivity-shortcuts" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="productivity-shortcuts"><template slot="header"><h4 id="productivity-shortcuts"><span id="productivity-shortcuts" class="anchor"></span>Productivity Shortcuts<a class="fa fa-anchor" href="#productivity-shortcuts" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="ForestGreen"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font></span></span></span>
+  <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use some useful IDE productivity shortcuts</span></span></span></span><p></p>
   <div>
 <div v-closeable alt="video: Intellij shortcuts">
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/KsVWdGOnHZU" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/EvXpgL2iho4" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="debugging-basic"><template slot="_header"><h4 id="debugging-basic">Debugging: Basic<span id="debugging-basic" class="anchor"></span><a class="fa fa-anchor" href="#debugging-basic" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="debugging-basic"><template slot="header"><h4 id="debugging-basic"><span id="debugging-basic" class="anchor"></span>Debugging: Basic<a class="fa fa-anchor" href="#debugging-basic" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can step through a program using a debugger</span></span></span></span><p></p>
   <div>
 <div v-closeable alt="video: debugging in IntelliJ">
@@ -199,21 +204,21 @@
 <ul>
 <li><a href="https://www.jetbrains.com/help/idea/debugger-basics.html">IntelliJ IDEA Documentation: Debugging Basics</a> - Can be used as a reference document when you want to recall how to use a debugging feature.</li></ul></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="refactoring"><template slot="_header"><h4 id="refactoring">Refactoring<span id="refactoring" class="anchor"></span><a class="fa fa-anchor" href="#refactoring" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="refactoring"><template slot="header"><h4 id="refactoring"><span id="refactoring" class="anchor"></span>Refactoring<a class="fa fa-anchor" href="#refactoring" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use automated refactoring features of the IDE</span></span></span></span><p></p>
   <div>
 <div v-closeable alt="Videos: Automated refactoring using IDE">
-<p>This video explains how to automate the 'Extract parameter' refactoring using IntelliJ IDEA. Most other refactorings available work similarly. i.e. <code v-pre>select the code to refactor</code> → <code v-pre>find the refactoring in the context menu</code> or <code v-pre>use the keyboard shortcut</code>.</p>
+<p>This video explains how to automate the 'Extract parameter' refactoring using IntelliJ IDEA. Most other refactorings available work similarly. i.e. <code class="hljs inline no-lang" v-pre>select the code to refactor</code> → <code class="hljs inline no-lang" v-pre>find the refactoring in the context menu</code> or <code class="hljs inline no-lang" v-pre>use the keyboard shortcut</code>.</p>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/fg3Q5pt4E80" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 <p>Here's another video explaining how to change a method signature as part of refactoring.</p>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/p6Tsw_3cXow" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div><p></p>
 <ul>
 <li><a href="https://www.jetbrains.com/help/idea/introduction-to-refactoring.html">Introduction to Refactoring (in IntelliJ IDEA)</a>: An article on the refactorings available in IntelliJ IDEA.</li></ul></div>
-  <div></div></div></panel></div></div>
-
+  <div></div></div></panel></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -234,18 +239,13 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -269,5 +269,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

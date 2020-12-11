@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Textbook Chapter : Design Fundamentals</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/site-nav.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~cs2103">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -135,34 +138,36 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/definitions.html">List of Definitions</a></div></li></ul></li></ul></div></nav>
 
+
+
 <div id="content-wrapper">
 <link rel="stylesheet" href="/website/book/css/textbook.css">
 <div class="website-content">
 <p><span class="dimmed"><strong><span></span></strong></span></p>
 <div id="title">
-<div><h1 id="design-fundamentals"><span>Design fundamentals</span><span id="design-fundamentals" class="anchor"></span><a class="fa fa-anchor" href="#design-fundamentals" onclick="event.stopPropagation()"></a></h1></div></div>
+<div><h1 id="design-fundamentals"><span id="design-fundamentals" class="anchor"></span><span>Design fundamentals</span><a class="fa fa-anchor" href="#design-fundamentals" onclick="event.stopPropagation()"></a></h1></div></div>
 <panel type="seamless" expanded id="abstraction">
-  <span slot="header" class="card-title"><div><h2 id="abstraction"><span>Abstraction</span><span id="abstraction" class="anchor"></span><a class="fa fa-anchor" href="#abstraction" onclick="event.stopPropagation()"></a></h2></div></span>
-<panel type="seamless" expanded id="what"><template slot="_header"><h4 id="what">What<span id="what" class="anchor"></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></template>
+  <span slot="header" class="card-title"><div><h2 id="abstraction"><span id="abstraction" class="anchor"></span><span>Abstraction</span><a class="fa fa-anchor" href="#abstraction" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="what"><template slot="header"><h4 id="what"><span id="what" class="anchor"></span>What<a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain abstraction</span></span></span></span><p></p>
   <div>
 <box type="definition" seamless>
 <div>
 <p><strong>Abstraction</strong> is a technique for dealing with complexity. It works by establishing a level of complexity we are interested in, and suppressing the more complex details below that level.</p></div></box>
-<p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand needs to be considered.</strong> As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
+<p><strong>The guiding principle of abstraction is that only details that are relevant to the current perspective or the task at hand need to be considered.</strong> As most programs are written to solve complex problems involving large amounts of intricate details, it is impossible to deal with all these details at the same time. That is where abstraction can help.</p>
 <p><strong><mark><em>Data abstraction</em></mark>: abstracting away the lower level data items and thinking in terms of bigger entities</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Within a certain software component, you might deal with a <em>user</em> data type, while ignoring the details contained in the user data item such as <em>name</em>, and <em>date of birth</em>. These details have been ‘abstracted away’ as they do not affect the task of that software component.</p></box>
 <p><strong><mark><em>Control abstraction</em></mark>: abstracting away details of the actual control flow to focus on tasks at a higher level</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>print(“Hello”)</code> is an abstraction of the actual output mechanism within the computer.</p></box>
 <p><strong>Abstraction can be applied repeatedly to obtain progressively <em>higher levels of abstraction</em>.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code v-pre>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code v-pre>execute(Game)</code> is at a higher level than <code v-pre>print(Char)</code> which is at a higher level than an Assembly language instruction <code v-pre>MOV</code>.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of data abstraction: a <code class="hljs inline no-lang" v-pre>File</code> is a data item that is at a higher level than an array and an array is at a higher level than a bit.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of different levels of control abstraction: <code class="hljs inline no-lang" v-pre>execute(Game)</code> is at a higher level than <code class="hljs inline no-lang" v-pre>print(Char)</code> which is at a higher level than an Assembly language instruction <code class="hljs inline no-lang" v-pre>MOV</code>.</p></box>
 <p><strong>Abstraction is a general concept that is not limited to just data or control abstractions.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some more general examples of abstraction:</p>
@@ -172,11 +177,11 @@
 <li>Models (e.g., UML models) are abstractions of some aspect of reality.</li></ul></box></div>
   <div></div></div></panel></panel>
 <panel type="seamless" expanded id="coupling">
-  <span slot="header" class="card-title"><div><h2 id="coupling"><span>Coupling</span><span id="coupling" class="anchor"></span><a class="fa fa-anchor" href="#coupling" onclick="event.stopPropagation()"></a></h2></div></span>
-<panel type="seamless" expanded id="what-2"><template slot="_header"><h4 id="what-2">What<span id="what-2" class="anchor"></span><a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4></template>
+  <span slot="header" class="card-title"><div><h2 id="coupling"><span id="coupling" class="anchor"></span><span>Coupling</span><a class="fa fa-anchor" href="#coupling" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="what-2"><template slot="header"><h4 id="what-2"><span id="what-2" class="anchor"></span>What<a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain coupling</span></span></span></span><p></p>
   <div>
 <p><strong><em>Coupling</em> is a measure of the degree of <em>dependence</em></strong> between components, classes, methods, etc. Low coupling indicates that a component is less dependent on other components. <strong>High coupling (aka <em>tight</em> coupling or <em>strong</em> coupling) is discouraged</strong> due to the following disadvantages:</p>
@@ -185,35 +190,35 @@
 <li><strong>Integration is harder</strong> because multiple components coupled with each other have to be integrated at the same time.</li>
 <li><strong>Testing and reuse of the module is harder</strong> due to its dependence on other modules.</li></ul>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, design <code v-pre>A</code> appears to have a more coupling between the components than design <code v-pre>B</code>.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the example below, design <code class="hljs inline no-lang" v-pre>A</code> appears to have more coupling between the components than design <code class="hljs inline no-lang" v-pre>B</code>.</p>
 <img src="/website/book/designFundamentals/coupling/what/images/playerPuzzleManager.png" height="220">
 <p></p></box></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling levels of alternative designs</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling levels of alternative designs</p></template>
 <question has-input="true">
 <p>Discuss the coupling levels of alternative designs <em>x</em> and <em>y</em>.</p>
 <box>
 <img src="/website/book/designFundamentals/coupling/what/images/alternativeDesigns.png" height="180">
 <p></p></box>
 <div slot="answer" class="algolia-no-index">
-<p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be stronger than the others.). However, in <em>x</em>, <code v-pre>A</code> is highly-coupled to the rest of the system while <code v-pre>B</code>, <code v-pre>C</code>, <code v-pre>D</code>, and <code v-pre>E</code> are standalone (do not depend on anything else). In <em>y</em>, no component is as highly-coupled as <code v-pre>A</code> of <em>x</em>. However, only <code v-pre>D</code> and <code v-pre>E</code> are standalone.</p></div></question></panel></div>
+<p>Overall coupling levels in <em>x</em> and <em>y</em> seem to be similar (neither has more dependencies than the other). (Note that the number of dependency links is not a definitive measure of the level of coupling. Some links may be stronger than the others.). However, in <em>x</em>, <code class="hljs inline no-lang" v-pre>A</code> is highly-coupled to the rest of the system while <code class="hljs inline no-lang" v-pre>B</code>, <code class="hljs inline no-lang" v-pre>C</code>, <code class="hljs inline no-lang" v-pre>D</code>, and <code class="hljs inline no-lang" v-pre>E</code> are standalone (do not depend on anything else). In <em>y</em>, no component is as highly-coupled as <code class="hljs inline no-lang" v-pre>A</code> of <em>x</em>. However, only <code class="hljs inline no-lang" v-pre>D</code> and <code class="hljs inline no-lang" v-pre>E</code> are standalone.</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Regressions and coupling</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Regressions and coupling</p></template>
 <question has-input="true">
 <p>Explain the link (if any) between regressions and coupling.</p>
 <div slot="answer" class="algolia-no-index">
-<p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed">e.g. when component <code v-pre>A</code> is modified, all components ‘coupled’ to component <code v-pre>A</code> risk ‘unintended behavioral changes’</span>.</p></div></question></panel></div>
+<p>When the system is highly-coupled, the risk of regressions is higher too <span class="dimmed">e.g. when component <code class="hljs inline no-lang" v-pre>A</code> is modified, all components ‘coupled’ to component <code class="hljs inline no-lang" v-pre>A</code> risk ‘unintended behavioral changes’</span>.</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling and testability</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Coupling and testability</p></template>
 <question has-input="true">
-<p>Discuss the relationship between coupling and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">a measure of how easily a given component can be tested</span>testability</span>.</p>
+<p>Discuss the relationship between coupling and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">a measure of how easily a given component can be tested</span>testability</span>.</p>
 <div slot="answer" class="algolia-no-index">
-<p>Coupling decreases testability because if the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Software Under Test</span>SUT</span> is coupled to many other components, it becomes difficult to test the SUT in isolation of its dependencies.</p></div></question></panel></div>
+<p>Coupling decreases testability because if the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Software Under Test</span>SUT</span> is coupled to many other components, it becomes difficult to test the SUT in isolation of its dependencies.</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about coupling</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about coupling</p></template>
 <question>
 <p>Choose the correct statements.</p>
 <ul class="contains-task-list">
@@ -225,47 +230,62 @@
 <div slot="answer" class="algolia-no-index">
 <p>(a)(b)(c)<s>(d)</s>(e)</p>
 <p>Explanation: High coupling means either more components are required to be integrated at once in a big-bang fashion (increasing the risk of things going wrong) or more drivers and stubs are required when integrating incrementally.</p></div></question></panel></div></panel></div></div></div></panel>
-<panel type="seamless" expanded id="how"><template slot="_header"><h4 id="how">How<span id="how" class="anchor"></span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="how"><template slot="header"><h4 id="how"><span id="how" class="anchor"></span>How<a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can reduce coupling</span></span></span></span><p></p>
   <div>
 <p><strong>X is <em>coupled</em> to Y if a change to Y can <mark>potentially</mark> require a change in X</strong>.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If <code v-pre>Foo</code> class calls the method <code v-pre>Bar#read()</code>, <code v-pre>Foo</code> is coupled to <code v-pre>Bar</code> because a change to <code v-pre>Bar</code> can potentially (but not always) require a change in the <code v-pre>Foo</code> class <span class="dimmed">e.g. if the signature of the <code v-pre>Bar#read()</code> is changed, <code v-pre>Foo</code> needs to change as well, but a change to the <code v-pre>Bar#write()</code> method may not require a change in the <code v-pre>Foo</code> class because <code v-pre>Foo</code> does not call <code v-pre>Bar#write()</code></span>.</p>
-<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">code for the above example</span></p></template>
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{<br></span><span>    ...<br></span><span>    <span class="hljs-keyword">new</span> Bar().read();<br></span><span>    ...<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{<br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span>    <br></span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span> </span>{<br></span><span>        ...<br></span><span>    }<br></span><span>}<br></span></code></pre></panel></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> If the <code class="hljs inline no-lang" v-pre>Foo</code> class calls the method <code class="hljs inline no-lang" v-pre>Bar#read()</code>, <code class="hljs inline no-lang" v-pre>Foo</code> is coupled to <code class="hljs inline no-lang" v-pre>Bar</code> because a change to <code class="hljs inline no-lang" v-pre>Bar</code> can potentially (but not always) require a change in the <code class="hljs inline no-lang" v-pre>Foo</code> class <span class="dimmed">e.g. if the signature of <code class="hljs inline no-lang" v-pre>Bar#read()</code> is changed, <code class="hljs inline no-lang" v-pre>Foo</code> needs to change as well, but a change to the <code class="hljs inline no-lang" v-pre>Bar#write()</code> method may not require a change in the <code class="hljs inline no-lang" v-pre>Foo</code> class because <code class="hljs inline no-lang" v-pre>Foo</code> does not call <code class="hljs inline no-lang" v-pre>Bar#write()</code></span>.</p>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">code for the above example</span></p></template>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Foo</span> </span>{
+</span><span>    ...
+</span><span>    <span class="hljs-keyword">new</span> Bar().read();
+</span><span>    ...
+</span><span>}
+</span><span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Bar</span> </span>{
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">read</span><span class="hljs-params">()</span> </span>{
+</span><span>        ...
+</span><span>    }
+</span><span>    
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">write</span><span class="hljs-params">()</span> </span>{
+</span><span>        ...
+</span><span>    }
+</span><span>}
+</span></code></pre></panel></box>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of coupling: <code v-pre>A</code> is coupled to <code v-pre>B</code> if,</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of coupling: <code class="hljs inline no-lang" v-pre>A</code> is coupled to <code class="hljs inline no-lang" v-pre>B</code> if,</p>
 <ul>
-<li><code v-pre>A</code> has access to the internal structure of <code v-pre>B</code> (this results in a very high level of coupling)</li>
-<li><code v-pre>A</code> and <code v-pre>B</code> depend on the same global variable</li>
-<li><code v-pre>A</code> calls <code v-pre>B</code></li>
-<li><code v-pre>A</code> receives an object of <code v-pre>B</code> as a parameter or a return value</li>
-<li><code v-pre>A</code> inherits from <code v-pre>B</code></li>
-<li><code v-pre>A</code> and <code v-pre>B</code> are required to follow the same data format or communication protocol</li></ul></box></div>
+<li><code class="hljs inline no-lang" v-pre>A</code> has access to the internal structure of <code class="hljs inline no-lang" v-pre>B</code> (this results in a very high level of coupling)</li>
+<li><code class="hljs inline no-lang" v-pre>A</code> and <code class="hljs inline no-lang" v-pre>B</code> depend on the same global variable</li>
+<li><code class="hljs inline no-lang" v-pre>A</code> calls <code class="hljs inline no-lang" v-pre>B</code></li>
+<li><code class="hljs inline no-lang" v-pre>A</code> receives an object of <code class="hljs inline no-lang" v-pre>B</code> as a parameter or a return value</li>
+<li><code class="hljs inline no-lang" v-pre>A</code> inherits from <code class="hljs inline no-lang" v-pre>B</code></li>
+<li><code class="hljs inline no-lang" v-pre>A</code> and <code class="hljs inline no-lang" v-pre>B</code> are required to follow the same data format or communication protocol</li></ul></box></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which indicate coupling?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which indicate coupling?</p></template>
 <question>
-<p>Which of these indicate a coupling between components A and B?</p>
+<p>Which of these indicate coupling between components A and B?</p>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to internal structure of component B.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. component A and B are written by the same developer.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. component A has access to the internal structure of component B.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. components A and B are written by the same developer.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. component A calls component B.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. component A receives an object of component B as a parameter.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. component A inherits from component B.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> f. components A and B have to follow the same data format or communication protocol.</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(a)<s>(b)</s>(c)(d)(e)(f)</p>
-<p>Explanation: Being written by the same developer does not imply a coupling.</p></div></question></panel></div></panel></div></div></div></panel>
-<panel type="seamless" expanded id="types-of-coupling"><template slot="_header"><h4 id="types-of-coupling">Types of Coupling<span id="types-of-coupling" class="anchor"></span><a class="fa fa-anchor" href="#types-of-coupling" onclick="event.stopPropagation()"></a></h4></template>
+<p>Explanation: Being written by the same developer does not imply coupling.</p></div></question></panel></div></panel></div></div></div></panel>
+<panel type="seamless" expanded id="types-of-coupling"><template slot="header"><h4 id="types-of-coupling"><span id="types-of-coupling" class="anchor"></span>Types of Coupling<a class="fa fa-anchor" href="#types-of-coupling" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="ForestGreen"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font></span></span></span>
+  <span><span class="dimmed"><font color="ForestGreen"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can identify types of coupling</span></span></span></span><p></p>
   <div>
 <p>Some examples of different coupling types:</p>
@@ -279,11 +299,11 @@
 <li><strong>Temporal coupling</strong>: two actions are bundled together just because they happen to occur at the same time <span class="dimmed">e.g. extracting a contiguous block of code as a method although the code block contains statements unrelated to each other</span></li></ul></div>
   <div></div></div></panel></panel>
 <panel type="seamless" expanded id="cohesion">
-  <span slot="header" class="card-title"><div><h2 id="cohesion"><span>Cohesion</span><span id="cohesion" class="anchor"></span><a class="fa fa-anchor" href="#cohesion" onclick="event.stopPropagation()"></a></h2></div></span>
-<panel type="seamless" expanded id="what-3"><template slot="_header"><h4 id="what-3">What<span id="what-3" class="anchor"></span><a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4></template>
+  <span slot="header" class="card-title"><div><h2 id="cohesion"><span id="cohesion" class="anchor"></span><span>Cohesion</span><a class="fa fa-anchor" href="#cohesion" onclick="event.stopPropagation()"></a></h2></div></span>
+<panel type="seamless" expanded id="what-3"><template slot="header"><h4 id="what-3"><span id="what-3" class="anchor"></span>What<a class="fa fa-anchor" href="#what-3" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DarkOrange"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain cohesion</span></span></span></span><p></p>
   <div>
 <p><strong><em>Cohesion</em> is a measure of how strongly-related and focused the various responsibilities of a component are.</strong> A highly-cohesive component keeps related functionalities together while keeping out all other unrelated things.</p>
@@ -293,30 +313,69 @@
 <li>Lowers maintainability because a module can be modified due to unrelated causes <span class="dimmed">(reason: the module contains code unrelated to each other)</span> or many modules may need to be modified to achieve a small change in behavior <span class="dimmed">(reason: because the code related to that change is not localized to a single module)</span>.</li>
 <li>Lowers reusability of modules because they do not represent logical units of functionality.</li></ul></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="how-2"><template slot="_header"><h4 id="how-2">How<span id="how-2" class="anchor"></span><a class="fa fa-anchor" href="#how-2" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="how-2"><template slot="header"><h4 id="how-2"><span id="how-2" class="anchor"></span>How<a class="fa fa-anchor" href="#how-2" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can increase cohesion</span></span></span></span><p></p>
   <div>
 <p><strong>Cohesion can be present in many forms</strong>. Some examples:</p>
 <ul>
-<li>Code related to a single concept is kept together, e.g. the <code v-pre>Student</code> component handles everything related to students.</li>
+<li>Code related to a single concept is kept together, e.g. the <code class="hljs inline no-lang" v-pre>Student</code> component handles everything related to students.</li>
 <li>Code that is invoked close together in time is kept together, e.g. all code related to initializing the system is kept together.</li>
-<li>Code that manipulates the same data structure is kept together, e.g. the <code v-pre>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li></ul>
+<li>Code that manipulates the same data structure is kept together, e.g. the <code class="hljs inline no-lang" v-pre>GameArchive</code> component handles everything related to the storage and retrieval of game sessions.</li></ul>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span>  Suppose a Payroll application contains a class that deals with writing data to the database. If the class include some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.</p></box></div>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span>  Suppose a Payroll application contains a class that deals with writing data to the database. If the class includes some code to show an error dialog to the user if the database is unreachable, that class is not cohesive because it seems to be interacting with the user as well as the database.</p></box></div>
   <div>
   <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which class is more cohesive?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which class is more cohesive?</p></template>
 <question has-input="true">
-<p>Compare the cohesion of the following two versions of the <code v-pre>EmailMessage</code> class. Which one is more cohesive and why?</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// version-1</span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> String sendTo;<br></span><span>    <span class="hljs-keyword">private</span> String subject;<br></span><span>    <span class="hljs-keyword">private</span> String message;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;<br></span><span>        <span class="hljs-keyword">this</span>.subject = subject;<br></span><span>        <span class="hljs-keyword">this</span>.message = message;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span><br></span><span>    }<br></span><span>}<br></span><span><br></span><span><span class="hljs-comment">// version-2</span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{<br></span><span>    <span class="hljs-keyword">private</span> String sendTo;<br></span><span>    <span class="hljs-keyword">private</span> String subject;<br></span><span>    <span class="hljs-keyword">private</span> String message;<br></span><span>    <span class="hljs-keyword">private</span> String username;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;<br></span><span>        <span class="hljs-keyword">this</span>.subject = subject;<br></span><span>        <span class="hljs-keyword">this</span>.message = message;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span><br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.username = username;<br></span><span>        <span class="hljs-comment">// code to login</span><br></span><span>    }<br></span><span>}<br></span></code></pre><div slot="answer" class="algolia-no-index">
+<p>Compare the cohesion of the following two versions of the <code class="hljs inline no-lang" v-pre>EmailMessage</code> class. Which one is more cohesive and why?</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">// version-1</span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> String sendTo;
+</span><span>    <span class="hljs-keyword">private</span> String subject;
+</span><span>    <span class="hljs-keyword">private</span> String message;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;
+</span><span>        <span class="hljs-keyword">this</span>.subject = subject;
+</span><span>        <span class="hljs-keyword">this</span>.message = message;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span>
+</span><span>    }
+</span><span>}
+</span><span>
+</span><span><span class="hljs-comment">// version-2</span>
+</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">EmailMessage</span> </span>{
+</span><span>    <span class="hljs-keyword">private</span> String sendTo;
+</span><span>    <span class="hljs-keyword">private</span> String subject;
+</span><span>    <span class="hljs-keyword">private</span> String message;
+</span><span>    <span class="hljs-keyword">private</span> String username;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">EmailMessage</span><span class="hljs-params">(String sendTo, String subject, String message)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.sendTo = sendTo;
+</span><span>        <span class="hljs-keyword">this</span>.subject = subject;
+</span><span>        <span class="hljs-keyword">this</span>.message = message;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sendMessage</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-comment">// sends message using sendTo, subject and message</span>
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">login</span><span class="hljs-params">(String username, String password)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.username = username;
+</span><span>        <span class="hljs-comment">// code to login</span>
+</span><span>    }
+</span><span>}
+</span></code></pre><div slot="answer" class="algolia-no-index">
 <p>Version 2 is less cohesive.</p>
-<p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, you can improve the cohesion of both versions by removing the sendMessage functionality. Although sending message is related to emails, this class is supposed to represent an email message, not an email server.</p></div></question></panel></div></panel></div></div></div></panel></panel></div></div>
-
+<p>Explanation: Version 2 is handling functionality related to login, which is not directly related to the concept of ‘email message’ that the class is supposed to represent. On a related note, you can improve the cohesion of both versions by removing the sendMessage functionality. Although sending messages is related to emails, this class is supposed to represent an email message, not an email server.</p></div></question></panel></div></panel></div></div></div></panel></panel></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -347,18 +406,13 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -382,5 +436,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

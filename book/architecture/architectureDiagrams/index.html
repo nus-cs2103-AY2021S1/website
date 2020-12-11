@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Software Architecture: Architecture Diagrams</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../markbind/js/vue.min.js"></script>
+    <script src="../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -24,17 +26,17 @@
 <p><span class="dimmed"><strong><span>Design → Architecture →
 </span></strong></span></p>
 <div id="title">
-<h1 id="architecture-diagrams"><span>Architecture diagrams</span><a class="fa fa-anchor" href="#architecture-diagrams" onclick="event.stopPropagation()"></a></h1></div>
+<h1 id="architecture-diagrams"><span id="architecture-diagrams" class="anchor"></span><span>Architecture diagrams</span><a class="fa fa-anchor" href="#architecture-diagrams" onclick="event.stopPropagation()"></a></h1></div>
 <div id="main">
 <div>
 <div>
 <panel type="seamless" expanded id="reading">
-  <span slot="header" class="card-title"><div><h4 id="reading"><span>Reading</span><a class="fa fa-anchor" href="#reading" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="reading"><span id="reading" class="anchor"></span><span>Reading</span><a class="fa fa-anchor" href="#reading" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret an architecture diagram</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
-<p><strong>Architecture diagrams are free-form diagrams.</strong> There is no universally adopted standard notation for architecture diagrams. Any symbol that reasonably describes the architecture may be used.</p>
+<p><strong>Architecture diagrams are free-form diagrams.</strong> There is no universally adopted standard notation for architecture diagrams. Any symbols that reasonably describe the architecture may be used.</p>
 <div v-closeable alt="architecture diagram examples" id="architecture-diagram-examples">
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example architecture diagrams:</p>
@@ -55,7 +57,7 @@
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="drawing">
-  <span slot="header" class="card-title"><div><h4 id="drawing"><span>Drawing</span><a class="fa fa-anchor" href="#drawing" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="drawing"><span id="drawing" class="anchor"></span><span>Drawing</span><a class="fa fa-anchor" href="#drawing" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can draw an architecture diagram</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -67,23 +69,19 @@
 <li>
 <p>Avoid the indiscriminate use of double-headed arrows to show interactions between components.</p></li></ul>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the two architecture diagrams of the same software given below. Because <code v-pre>Diagram 2</code> uses double headed arrows, the important fact that GUI has a bi-directional dependency with the Logic component is no longer captured.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Consider the two architecture diagrams of the same software given below. Because <code class="hljs inline no-lang" v-pre>Diagram 2</code> uses double-headed arrows, the important fact that GUI has a bi-directional dependency with the Logic component is no longer captured.</p>
 <img src="/website/book/architecture/architectureDiagrams/drawing/images/tip.png" height="190">
 <p></p></box></div>
-  <div></div></div></panel></div></div></div></div></div></div>
+  <div></div></div></panel></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -107,5 +105,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

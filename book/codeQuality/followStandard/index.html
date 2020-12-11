@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Code Quality: [Guideline] Follow a Standard</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../markbind/js/vue.min.js"></script>
+    <script src="../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -24,12 +26,12 @@
 <p><span class="dimmed"><strong><span>Implementation → Code Quality →
 </span></strong></span></p>
 <div id="title">
-<h1 id="guideline-follow-a-standard"><span>Guideline: Follow a standard</span><a class="fa fa-anchor" href="#guideline-follow-a-standard" onclick="event.stopPropagation()"></a></h1></div>
+<h1 id="guideline-follow-a-standard"><span id="guideline-follow-a-standard" class="anchor"></span><span>Guideline: Follow a standard</span><a class="fa fa-anchor" href="#guideline-follow-a-standard" onclick="event.stopPropagation()"></a></h1></div>
 <div id="main">
 <div>
 <div>
 <panel type="seamless" expanded id="introduction">
-  <span slot="header" class="card-title"><div><h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="introduction"><span id="introduction" class="anchor"></span><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the need for following a standard</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -39,9 +41,9 @@
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> IDEs can help to enforce some parts of a coding standard e.g. indentation rules.</p></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What is the recommended approach regarding coding standards?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What is the recommended approach regarding coding standards?</p></template>
 <question>
 <p>What is the recommended approach regarding coding standards?</p>
 <ul radio-group="5c5a1" class="radio-list">
@@ -52,12 +54,12 @@
 <div slot="answer" class="algolia-no-index">
 <p>c</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> What is the aim? What is the value?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> What is the aim? What is the value?</p></template>
 <question has-input>
 <p>What is the aim of using a coding standard? How does it help?</p></question></panel></div></panel></div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="what">
-  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can follow simple mechanical style rules</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -68,23 +70,47 @@
 <p>Sample coding standard: <a href="https://www.python.org/dev/peps/pep-0008/">PEP 8 <strong>Python</strong> Style Guide -- by Python.org</a></p></div></div>
   <div>
   <div>
-<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
 <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p></template>
 <question>
 <p>Consider the code given below:</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;<br></span><span>    <span class="hljs-keyword">private</span> String description;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;<br></span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{<br></span><span>      <span class="hljs-keyword">this</span>.description = d;<br></span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())<br></span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }<br></span><span><br></span><span>    <span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment">     * Print the description as a string.</span><br></span><span><span class="hljs-comment">     */</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }<br></span><span>}<br></span></code></pre><p>In what ways do the code violate the coding standard you are expected to follow?</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+</span><span>    <span class="hljs-keyword">private</span> String description;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+</span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+</span><span>      <span class="hljs-keyword">this</span>.description = d;
+</span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())
+</span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+</span><span>
+</span><span>    <span class="hljs-comment">/**</span>
+</span><span><span class="hljs-comment">     * Print the description as a string.</span>
+</span><span><span class="hljs-comment">     */</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+</span><span>}
+</span></code></pre><p>In what ways do the code violate the coding standard you are expected to follow?</p>
 <div slot="hint" class="algolia-no-index">
 <p>Here are three:</p>
 <ul>
-<li><code v-pre>descriptionPrefix</code> is a constant and should be named <code v-pre>DESCRIPTION_PREFIX</code></li>
-<li>method name <code v-pre>printingDescription()</code> should be named as <code v-pre>printDescription()</code></li>
-<li>boolean variable <code v-pre>important</code> should be named to sound boolean e.g., <code v-pre>isImportant</code></li></ul>
+<li><code class="hljs inline no-lang" v-pre>descriptionPrefix</code> is a constant and should be named <code class="hljs inline no-lang" v-pre>DESCRIPTION_PREFIX</code></li>
+<li>method name <code class="hljs inline no-lang" v-pre>printingDescription()</code> should be named as <code class="hljs inline no-lang" v-pre>printDescription()</code></li>
+<li>boolean variable <code class="hljs inline no-lang" v-pre>important</code> should be named to sound boolean e.g., <code class="hljs inline no-lang" v-pre>isImportant</code></li></ul>
 <p>There are many more.</p></div></question></panel></div></div></panel></div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="intermediate">
-  <span slot="header" class="card-title"><div><h4 id="intermediate"><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="intermediate"><span id="intermediate" class="anchor"></span><span>Intermediate</span><a class="fa fa-anchor" href="#intermediate" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can follow intermediate style rules</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -92,55 +118,75 @@
 <p>Go through the <a href="https://se-education.org/guides/conventions/java/intermediate.html">Java coding standard at @SE-EDU</a> and learn the <em>intermediate</em> style rules.</p></div>
   <div>
 <div>
-<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
 <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Unsuitable variable name</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Unsuitable variable name</p></template>
 <question>
 <p>According to the given Java coding standard, which one of these is not a good name?</p>
 <ul radio-group="d008b" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code v-pre>totalPeople</code></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code v-pre>checkWeight</code></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code v-pre>getPeopleCount</code></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code v-pre>isValidAddress</code></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code v-pre>description</code></label></li></ul>
+<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> a. integer variable name: <code class="hljs inline no-lang" v-pre>totalPeople</code></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> b. boolean variable name: <code class="hljs inline no-lang" v-pre>checkWeight</code></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> c. method name (returns integer): <code class="hljs inline no-lang" v-pre>getPeopleCount</code></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> d. method name (returns boolean): <code class="hljs inline no-lang" v-pre>isValidAddress</code></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="d008b" type="radio"> e. String variable name: <code class="hljs inline no-lang" v-pre>description</code></label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>b</p>
-<p>Explanation: <code v-pre>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code v-pre>isWeightValid</code> may be a better name.</p></div></question></panel></div>
+<p>Explanation: <code class="hljs inline no-lang" v-pre>checkWeight</code> is an action. Naming variables as actions makes the code harder to follow. <code class="hljs inline no-lang" v-pre>isWeightValid</code> may be a better name.</p></div></question></panel></div>
 <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find intermediate coding standard violations</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find intermediate coding standard violations</p></template>
 <question>
 <p>Repeat the exercise in the panel below but also find violations of <em>intermediate</em> level guidelines.</p>
 <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Find basic coding standard violations</p></template>
 <question>
 <p>Consider the code given below:</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{<br></span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;<br></span><span>    <span class="hljs-keyword">private</span> String description;<br></span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;<br></span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span><br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{<br></span><span>      <span class="hljs-keyword">this</span>.description = d;<br></span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())<br></span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }<br></span><span><br></span><span>    <span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment">     * Print the description as a string.</span><br></span><span><span class="hljs-comment">     */</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }<br></span><span>}<br></span></code></pre><p>In what ways do the code violate the coding standard you are expected to follow?</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> java.util.*;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Task</span> </span>{
+</span><span>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String descriptionPrefix = <span class="hljs-string">"description: "</span>;
+</span><span>    <span class="hljs-keyword">private</span> String description;
+</span><span>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> important;
+</span><span>    List&lt;String&gt; pastDescription = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;(); <span class="hljs-comment">// a list of past descriptions</span>
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Task</span><span class="hljs-params">(String d)</span> </span>{
+</span><span>      <span class="hljs-keyword">this</span>.description = d;
+</span><span>      <span class="hljs-keyword">if</span> (!d.isEmpty())
+</span><span>          <span class="hljs-keyword">this</span>.important = <span class="hljs-keyword">true</span>;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">getAsXML</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;task&gt;"</span>+description+<span class="hljs-string">"&lt;/task&gt;"</span>; }
+</span><span>
+</span><span>    <span class="hljs-comment">/**</span>
+</span><span><span class="hljs-comment">     * Print the description as a string.</span>
+</span><span><span class="hljs-comment">     */</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">printingDescription</span><span class="hljs-params">()</span></span>{ System.out.println(<span class="hljs-keyword">this</span>); }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{ <span class="hljs-keyword">return</span> descriptionPrefix + description; }
+</span><span>}
+</span></code></pre><p>In what ways do the code violate the coding standard you are expected to follow?</p>
 <div slot="hint" class="algolia-no-index">
 <p>Here are three:</p>
 <ul>
-<li><code v-pre>descriptionPrefix</code> is a constant and should be named <code v-pre>DESCRIPTION_PREFIX</code></li>
-<li>method name <code v-pre>printingDescription()</code> should be named as <code v-pre>printDescription()</code></li>
-<li>boolean variable <code v-pre>important</code> should be named to sound boolean e.g., <code v-pre>isImportant</code></li></ul>
+<li><code class="hljs inline no-lang" v-pre>descriptionPrefix</code> is a constant and should be named <code class="hljs inline no-lang" v-pre>DESCRIPTION_PREFIX</code></li>
+<li>method name <code class="hljs inline no-lang" v-pre>printingDescription()</code> should be named as <code class="hljs inline no-lang" v-pre>printDescription()</code></li>
+<li>boolean variable <code class="hljs inline no-lang" v-pre>important</code> should be named to sound boolean e.g., <code class="hljs inline no-lang" v-pre>isImportant</code></li></ul>
 <p>There are many more.</p></div></question></panel></div>
 <div slot="hint" class="algolia-no-index">
 <p>Here's one you are more likely to miss:</p>
 <ul>
-<li><code v-pre>* Print the description as a string.</code> → <code v-pre>* Prints the description as a string.</code></li></ul>
-<p>There are more.</p></div></question></panel></div></div></panel></div></div></div></panel></div></div></div></div></div></div>
+<li><code class="hljs inline no-lang" v-pre>* Print the description as a string.</code> → <code class="hljs inline no-lang" v-pre>* Prints the description as a string.</code></li></ul>
+<p>There are more.</p></div></question></panel></div></div></panel></div></div></div></panel></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -164,5 +210,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

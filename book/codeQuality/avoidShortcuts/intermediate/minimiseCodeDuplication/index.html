@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Coding Best Practices: [Practice] Minimize Code Duplication</title>
     <link rel="stylesheet" href="../../../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../../markbind/css/markbind.min.css"><script src="../../../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../../../markbind/js/vue.min.js"></script>
+    <script src="../../../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -28,42 +30,38 @@
 <p><span class="dimmed"><strong><span>Implementation → Code Quality → Error-Prone Practices → Intermediate →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="minimize-code-duplication"><span>Minimize code duplication</span><a class="fa fa-anchor" href="#minimize-code-duplication" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="minimize-code-duplication"><span id="minimize-code-duplication" class="anchor"></span><span>Minimize code duplication</span><a class="fa fa-anchor" href="#minimize-code-duplication" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>Code duplication, especially when you copy-paste-modify code, often indicates a poor quality implementation.</strong> While it may not be possible to have zero duplication, always think twice before duplicating code; most often there is a better alternative.</p>
-<p>This guideline is closely related to the <span for="modal:duplication-dry" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:duplication-dry'].show()" class="trigger-click">DRY Principle<span v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['undefined'].show()" class="trigger">.</span></span></p>
+<p>This guideline is closely related to the <trigger for="modal:duplication-dry" trigger="click">DRY Principle<trigger>.</trigger></trigger></p>
 <b-modal id="modal:duplication-dry" hide-footer size modal-class="mb-zoom" ref="modal:duplication-dry" class="algolia-no-index"><template slot="modal-title"><strong><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span> DRY Principle</strong></template>
   <div>
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="dry-principle"><span>DRY principle</span><a class="fa fa-anchor" href="#dry-principle" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="dry-principle"><span id="dry-principle" class="anchor"></span><span>DRY principle</span><a class="fa fa-anchor" href="#dry-principle" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <box type="definition" seamless>
 <div>
-<p><strong>DRY (Don't Repeat Yourself) principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system <sub><em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p></div></box>
-<p>This principle guards against duplication of information.</p>
+<p><strong>DRY (Don't Repeat Yourself) principle</strong>: Every piece of knowledge must have a single, unambiguous, authoritative representation within a system. <sub>-- <em>The Pragmatic Programmer</em>, by Andy Hunt and Dave Thomas</sub></p></div></box>
+<p>This principle guards against the duplication of information.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A functionality being implemented twice is a violation of the DRY principle even if the two implementations are different.</p>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The value of a system-wide timeout being defined in multiple places is a violation of DRY.</p></box></div>
 <div></div></div></div></div></b-modal>
 <p></p></div>
-<div></div></div></div></div></div></div></div>
+<div></div></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../../../markbind/js/vue.min.js"></script>
-<script src="../../../../../markbind/js/components.min.js"></script>
 <script src="../../../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -87,5 +85,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

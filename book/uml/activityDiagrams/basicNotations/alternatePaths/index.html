@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - UML: Activity Diagrams: Basic Notation: Alternate Paths</title>
     <link rel="stylesheet" href="../../../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../../markbind/css/markbind.min.css"><script src="../../../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../../../markbind/js/vue.min.js"></script>
+    <script src="../../../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -28,7 +30,7 @@
 <p><span class="dimmed"><strong><span>Tools → UML → Activity Diagrams →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="alternate-paths"><span>Alternate paths</span><a class="fa fa-anchor" href="#alternate-paths" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="alternate-paths"><span id="alternate-paths" class="anchor"></span><span>Alternate paths</span><a class="fa fa-anchor" href="#alternate-paths" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>A <em>branch node</em> shows the start of alternate paths.</strong> Each control flow exiting a branch node has a <em>guard condition</em>: a boolean condition that should be true for execution to take that path. Only one of the guard conditions can be true at any time.</p>
@@ -41,9 +43,9 @@
 <p></p></box></div>
 <div>
   <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which activity diagrams are correct?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which activity diagrams are correct?</p></template>
 <question>
 <p>Which of these activity diagrams use the correct UML notation?</p>
 <ul class="contains-task-list">
@@ -58,25 +60,21 @@
 <p></p>
 <div slot="answer" class="algolia-no-index">
 <ul>
-<li>i : 👍 Correct. There can be more than two alternate paths.</li>
-<li>ii : 👍 Correct. An alternate path can divide into more branches.</li>
-<li>iii : 👍 Correct. A branch can join other branches.</li>
-<li>iv : Incorrect. At <code v-pre>x=5</code> both guard conditions become true.</li>
-<li>v : 👍 Correct. It is fine for a branch to form a loop by going back to the original branch node.</li>
-<li>iv : Incorrect. Guard conditions should be given in square brackets.</li></ul></div></question></panel></div></panel></div></div></div></div></div></div></div></div>
+<li>i: 👍 Correct. There can be more than two alternate paths.</li>
+<li>ii: 👍 Correct. An alternate path can divide into more branches.</li>
+<li>iii: 👍 Correct. A branch can join other branches.</li>
+<li>iv: Incorrect. At <code class="hljs inline no-lang" v-pre>x = 5</code> both guard conditions become true.</li>
+<li>v: 👍 Correct. It is fine for a branch to form a loop by going back to the original branch node.</li>
+<li>iv: Incorrect. Guard conditions should be given in square brackets.</li></ul></div></question></panel></div></panel></div></div></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../../../markbind/js/vue.min.js"></script>
-<script src="../../../../../markbind/js/components.min.js"></script>
 <script src="../../../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -100,5 +98,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

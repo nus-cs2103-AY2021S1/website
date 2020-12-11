@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Admin: tP week 9: v1.2</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -12,12 +12,15 @@
     <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
+    <script src="../markbind/js/vue.min.js"></script>
+    <script src="../markbind/js/markbind.min.js"></script>
+    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~cs2103">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -133,11 +136,13 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
+
+
 <div id="content-wrapper">
 <div class="website-content">
 <p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/tp-w8.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> tP week 8: mid-v1.2</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-w10.html"><span>tP week 10: mid-v1.3 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
 <br>
-<h1 id="tp-week-9-v1-2"><span class="display-4">tP week 9: v1.2</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="tp-week-9-v1-2" class="anchor"></span><a class="fa fa-anchor" href="#tp-week-9-v1-2" onclick="event.stopPropagation()"></a></h1>
+<h1 id="tp-week-9-v1-2"><span id="tp-week-9-v1-2" class="anchor"></span><span class="display-4">tP week 9: v1.2</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><a class="fa fa-anchor" href="#tp-week-9-v1-2" onclick="event.stopPropagation()"></a></h1>
 <div id="main">
 <div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
 <ol>
@@ -147,24 +152,24 @@
 <div id="body">
 <div></div>
 <p></p>
-<h4 id="1-deliver-v1-2"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Deliver v1.2</span><span id="1-deliver-v1-2" class="anchor"></span><a class="fa fa-anchor" href="#1-deliver-v1-2" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-deliver-v1-2"><span id="1-deliver-v1-2" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Deliver v1.2</span><a class="fa fa-anchor" href="#1-deliver-v1-2" onclick="event.stopPropagation()"></a></h4>
 <div>
 <div tags="m--cs2103">
 <ul>
 <li>The product must be working although the functionality is basic.</li></ul></div>
 </div>
 <p></p>
-<h4 id="2-wrap-up-v1-2"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Wrap up v1.2</span><span id="2-wrap-up-v1-2" class="anchor"></span><a class="fa fa-anchor" href="#2-wrap-up-v1-2" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-wrap-up-v1-2"><span id="2-wrap-up-v1-2" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Wrap up v1.2</span><a class="fa fa-anchor" href="#2-wrap-up-v1-2" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li><span><span aria-hidden="true" class="fas fa-users"></span></span> <strong>Manage the milestone</strong> v1.2 as explained in the panel below.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E(extract): <strong>Project schedule tracking</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E(extract): <strong>Project schedule tracking</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h2 id="tp-project-schedule-tracking-2">tP Project Schedule Tracking<span id="tp-project-schedule-tracking-2" class="anchor"></span><a class="fa fa-anchor" href="#tp-project-schedule-tracking-2" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tp-project-schedule-tracking-2"><span id="tp-project-schedule-tracking-2" class="anchor"></span>tP Project Schedule Tracking<a class="fa fa-anchor" href="#tp-project-schedule-tracking-2" onclick="event.stopPropagation()"></a></h2>
 <p>In general, use the issue tracker (Milestones, Issues, PRs, Tags, Releases, and Labels) for assigning, scheduling, and tracking <em>all</em> noteworthy project tasks, including user stories. Update the issue tracker regularly to reflect the current status of the project. You can also use GitHub's <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU">Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.</p>
 
-<h4 id="using-issues-2">Using Issues:<span id="using-issues-2" class="anchor"></span><a class="fa fa-anchor" href="#using-issues-2" onclick="event.stopPropagation()"></a></h4>
+<h4 id="using-issues-2"><span id="using-issues-2" class="anchor"></span>Using Issues:<a class="fa fa-anchor" href="#using-issues-2" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Record each of the user stories you plan to deliver as an issue in the issue tracker.</strong> e.g.,</li></ul>
 <div class="indented-level2">
@@ -173,23 +178,23 @@
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>title</th>
-<th><code v-pre>As a user I can add a deadline</code></th></tr></thead>
+<th><code class="hljs inline no-lang" v-pre>As a user I can add a deadline</code></th></tr></thead>
 <tbody>
 <tr>
 <td>Description</td>
-<td><code v-pre>... so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800"></p><p></p><p></p>
+<td><code class="hljs inline no-lang" v-pre>... so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800"></p><p></p><p></p>
 <p>Alternatively, you can put the entire user story in the description.</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>title</th>
-<th><code v-pre>Add deadline</code></th></tr></thead>
+<th><code class="hljs inline no-lang" v-pre>Add deadline</code></th></tr></thead>
 <tbody>
 <tr>
 <td>Description</td>
-<td><code v-pre>As a user I can so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p>In both cases, apply the <span class="badge badge-pill badge-info">type.Story</span> label.</p></div></div>
+<td><code class="hljs inline no-lang" v-pre>As a user I can so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p>In both cases, apply the <span class="badge badge-pill badge-info">type.Story</span> label.</p></div></div>
 <ul>
 <li>
-<p><strong>Assign the <code v-pre>type.*</code> and <code v-pre>priority.*</code> labels to those issues.</strong></p></li>
+<p><strong>Assign the <code class="hljs inline no-lang" v-pre>type.*</code> and <code class="hljs inline no-lang" v-pre>priority.*</code> labels to those issues.</strong></p></li>
 <li>
 <p><strong>Formalize the project plan</strong> by assigning relevant issues to the corresponding milestone.</p></li>
 <li>
@@ -198,24 +203,24 @@
 <li>
 <p>A typical task should be small enough for one person to do in a few hours. <span class="dimmed">eg.,</span></p>
 <ul>
-<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad (reasons: not a one-person task, not small enough): <code v-pre>Write the Developer Guide</code></span></li>
-<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good: <code v-pre>Update class diagram in the Developer Guide for v1.4</code></span></li></ul></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad (reasons: not a one-person task, not small enough): <code class="hljs inline no-lang" v-pre>Write the Developer Guide</code></span></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good: <code class="hljs inline no-lang" v-pre>Update class diagram in the Developer Guide for v1.4</code></span></li></ul></li>
 <li>
 <p>There is no need to break things into VERY small tasks. Keep them as big as possible, but they should be no bigger than what you are going to assign a single person to do within a week. <span class="dimmed">eg.,</span></p>
 <ul>
-<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad:<code v-pre>Implementing parser </code> (reason: too big).</span></li>
-<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good:<code v-pre>Implementing parser support for adding of floating tasks</code></span></li></ul></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad:<code class="hljs inline no-lang" v-pre>Implementing parser </code> (reason: too big).</span></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good:<code class="hljs inline no-lang" v-pre>Implementing parser support for adding of floating tasks</code></span></li></ul></li>
 <li>
-<p>Do not track things taken for granted. <span class="dimmed">e.g., <code v-pre>push code to repo</code> should not be a task to track. In the example given under the previous point, it is taken for granted that the owner will also (a) test the code and (b) push to the repo when it is ready. Those two need not be tracked as separate tasks.</span></p></li>
+<p>Do not track things taken for granted. <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>push code to repo</code> should not be a task to track. In the example given under the previous point, it is taken for granted that the owner will also (a) test the code and (b) push to the repo when it is ready. Those two need not be tracked as separate tasks.</span></p></li>
 <li>
-<p>Write a descriptive title for the issue. <span class="dimmed">e.g. <code v-pre>Add support for the 'undo' command to the parser</code></span></p>
+<p>Write a descriptive title for the issue. <span class="dimmed">e.g. <code class="hljs inline no-lang" v-pre>Add support for the 'undo' command to the parser</code></span></p>
 <ul>
-<li>Omit redundant details. In some cases, the issue title is enough to describe the task. In that case, no need to repeat it in the issue description. There is no need for well-crafted and detailed descriptions for tasks. A minimal description is enough. Similarly, labels such as <code v-pre>priority</code> can be omitted if you think they don't help you.<br><br></li></ul></li></ul></li>
+<li>Omit redundant details. In some cases, the issue title is enough to describe the task. In that case, no need to repeat it in the issue description. There is no need for well-crafted and detailed descriptions for tasks. A minimal description is enough. Similarly, labels such as <code class="hljs inline no-lang" v-pre>priority</code> can be omitted if you think they don't help you.<br><br></li></ul></li></ul></li>
 <li>
-<p><strong>Assign tasks (i.e., issues) to the corresponding team members using the <code v-pre>assignees</code> field.</strong> <mark>Normally, there should be some ongoing tasks and some pending tasks against each team member at any point</mark>.</p></li></ul>
+<p><strong>Assign tasks (i.e., issues) to the corresponding team members using the <code class="hljs inline no-lang" v-pre>assignees</code> field.</strong> <mark>Normally, there should be some ongoing tasks and some pending tasks against each team member at any point</mark>.</p></li></ul>
 
 <div id="using-milestones">
-<h4 id="using-milestones-2">Using Milestones:<span id="using-milestones-2" class="anchor"></span><a class="fa fa-anchor" href="#using-milestones-2" onclick="event.stopPropagation()"></a></h4>
+<h4 id="using-milestones-2"><span id="using-milestones-2" class="anchor"></span>Using Milestones:<a class="fa fa-anchor" href="#using-milestones-2" onclick="event.stopPropagation()"></a></h4>
 <p><mark>Given below are the conditions to satisfy for a milestone to be considered <em>properly managed</em></mark>:</p>
 <p><strong>Planning a Milestone</strong> (to do within the first week of the iteration):<br></p>
 <ul>
@@ -226,7 +231,7 @@
 <p><strong>Wrapping up a Milestone</strong>:<br></p>
 <ul>
 <li>
-<p><strong>A working product tagged</strong> with the correct tag (e.g. <code v-pre>v1.3</code>) and is pushed to the main repo or a <strong>product <em>release</em> done on GitHub</strong> (<a href="https://github.com/se-edu/addressbook-level3/releases/">example</a>).</p></li>
+<p><strong>A working product tagged</strong> with the correct tag (e.g. <code class="hljs inline no-lang" v-pre>v1.3</code>) and is pushed to the main repo or a <strong>product <em>release</em> done on GitHub</strong> (<a href="https://github.com/se-edu/addressbook-level3/releases/">example</a>).</p></li>
 <li>
 <p><strong>CI passing</strong> for the version tagged/released.</p></li>
 <li>
@@ -236,24 +241,24 @@
 <p><strong>Milestone closed.</strong><br>
 <img src="/website/admin/images/closingMilestones.png" width="700"></p></li></ul></div></div></panel></div><p></p>
 <ul>
-<li><strong>Wrap up the milestone</strong> using a git tag <code v-pre>v1.2</code>. When the milestone deadline is near (e.g., 0.5 days before the deadline), if you think some of the ongoing work intended for the current milestone may not finish in time, reassign them to a future milestone.</li></ul>
+<li><strong>Wrap up the milestone</strong> using a git tag <code class="hljs inline no-lang" v-pre>v1.2</code>. When the milestone deadline is near (e.g., 0.5 days before the deadline), if you think some of the ongoing work intended for the current milestone may not finish in time, reassign them to a future milestone.</li></ul>
 <div tags="m--cs2103">
 <ul>
 <li>Do a release on GitHub. Uploading a JAR file to GitHub is optional.</li></ul></div></div>
 <p></p>
-<h4 id="3-do-an-informal-demo-of-v1-2-before-the-tutorial"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Do an informal demo of v1.2</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span><span id="3-do-an-informal-demo-of-v1-2-before-the-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#3-do-an-informal-demo-of-v1-2-before-the-tutorial" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-do-an-informal-demo-of-v1-2-before-the-tutorial"><span id="3-do-an-informal-demo-of-v1-2-before-the-tutorial" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Do an informal demo of v1.2</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span><a class="fa fa-anchor" href="#3-do-an-informal-demo-of-v1-2-before-the-tutorial" onclick="event.stopPropagation()"></a></h4>
 <div>
 <div id="demo">
 <div tags="m--cs2103 m--cs2113">
 
 <ul>
 <li>As we don't have in-class tutorials this semester, do the following in lieu of a live demo:<br>
-[one member] Run your app using the latest released version <code v-pre>v1.2</code> <span tags="m--cs2103">(or <code v-pre>v1.2b</code>, if applicable)</span>. Take screenshots of each available feature in action. Add those screenshots to your <em>collaborative project notes</em> document with an appropriate heading e.g., <code v-pre>v1.2 features demo</code>. Alternatively, you can screen-record a demo, upload it to somewhere, and post the link in the project notes document.</li></ul></div>
+[one member] Run your app using the latest released version <code class="hljs inline no-lang" v-pre>v1.2</code> <span tags="m--cs2103">(or <code class="hljs inline no-lang" v-pre>v1.2b</code>, if applicable)</span>. Take screenshots of each available feature in action. Add those screenshots to your <em>collaborative project notes</em> document with an appropriate heading e.g., <code class="hljs inline no-lang" v-pre>v1.2 features demo</code>. Alternatively, you can screen-record a demo, upload it to somewhere, and post the link in the project notes document.</li></ul></div>
 </div></div>
 <p></p></div></div>
 <br>
-<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/tp-w8.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> tP week 8: mid-v1.2</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-w10.html"><span>tP week 10: mid-v1.3 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div>
-
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/tp-w8.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> tP week 8: mid-v1.2</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-w10.html"><span>tP week 10: mid-v1.3 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -272,18 +277,13 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
 </body>
-<script src="../markbind/js/vue.min.js"></script>
-<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../markbind/js/polyfill.min.js"></script>
-<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -307,5 +307,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../markbind/layouts/default/scripts.js"></script>
+<script src="../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

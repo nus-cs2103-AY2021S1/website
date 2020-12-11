@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Reuse: Frameworks</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../markbind/js/vue.min.js"></script>
+    <script src="../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -24,12 +26,12 @@
 <p><span class="dimmed"><strong><span>Implementation → Reuse →
 </span></strong></span></p>
 <div id="title">
-<h1 id="frameworks"><span>Frameworks</span><a class="fa fa-anchor" href="#frameworks" onclick="event.stopPropagation()"></a></h1></div>
+<h1 id="frameworks"><span id="frameworks" class="anchor"></span><span>Frameworks</span><a class="fa fa-anchor" href="#frameworks" onclick="event.stopPropagation()"></a></h1></div>
 <div id="main">
 <div>
 <div>
 <panel type="seamless" expanded id="what">
-  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain frameworks</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -62,7 +64,7 @@
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="frameworks-versus-libraries">
-  <span slot="header" class="card-title"><div><h4 id="frameworks-versus-libraries"><span>Frameworks versus libraries</span><a class="fa fa-anchor" href="#frameworks-versus-libraries" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="frameworks-versus-libraries"><span id="frameworks-versus-libraries" class="anchor"></span><span>Frameworks versus libraries</span><a class="fa fa-anchor" href="#frameworks-versus-libraries" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can differentiate between frameworks and libraries</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -77,11 +79,11 @@
 <strong>Frameworks use a technique called <em>inversion of control</em>, aka the “Hollywood principle”</strong> (i.e. don’t call us, we’ll call you!). That is, you write code that will be called by the framework, <span class="dimmed">e.g. writing test methods that will be called by the JUnit framework.</span> In the case of libraries, your code calls libraries.</p></li></ul></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statement about software frameworks</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statement about software frameworks</p></template>
 <question>
-<p>Choose correct statements about software frameworks.</p>
+<p>Choose the correct statements about software frameworks.</p>
 <ul class="contains-task-list">
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. They follow the Hollywood principle, otherwise known as ‘inversion of control’.</li>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. They come with full or partial implementations.</li>
@@ -93,7 +95,7 @@
 <p>(a)(b)(c)(d)(e)<s>(f)</s></p>
 <p>Explanation: While both libraries and frameworks are reuse mechanisms, and both are more concrete than principles and patterns, libraries differ from frameworks in some key ways. One of them is the ‘inversion of control’ used by frameworks but not libraries. Furthermore, frameworks do not have to be bigger than libraries all the time.</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are frameworks?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which are frameworks?</p></template>
 <question>
 <p>Which of these are frameworks?</p>
 <ul class="contains-task-list">
@@ -103,20 +105,16 @@
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Ruby on Rails</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(a)(b)(c)(d)</p>
-<p>Explanation: These are frameworks.</p></div></question></panel></div></panel></div></div></div></panel></div></div></div></div></div></div>
+<p>Explanation: These are all frameworks.</p></div></question></panel></div></panel></div></div></div></panel></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -140,5 +138,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

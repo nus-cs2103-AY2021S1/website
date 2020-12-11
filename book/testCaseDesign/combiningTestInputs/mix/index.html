@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Test Case Design: Combining Test Inputs: Mix</title>
     <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../markbind/css/markbind.min.css"><script src="../../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../../markbind/js/vue.min.js"></script>
+    <script src="../../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -28,13 +30,13 @@
 <p><span class="dimmed"><strong><span>Quality Assurance → Test Case Design → Combining Test Inputs →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="mix"><span>Mix</span><a class="fa fa-anchor" href="#mix" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="mix"><span id="mix" class="anchor"></span><span>Mix</span><a class="fa fa-anchor" href="#mix" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>Consider the calculateGrade scenario given below:</p>
 <box>
 <ul>
-<li>SUT : <code v-pre>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
+<li>SUT: <code class="hljs inline no-lang" v-pre>calculateGrade(participation, projectGrade, isAbsent, examScore)</code></li>
 <li>Values to test: invalid values are <ins>underlined</ins>
 <ul>
 <li>participation: 0, 1, 19, 20, <ins>21</ins>, <ins>22</ins></li>
@@ -95,7 +97,7 @@
 <td style="text-align:center">VV/IV</td>
 <td style="text-align:center"><ins>72</ins></td>
 <td style="text-align:center">Err Msg</td></tr></tbody></table></div><p>VV/IV = Any Valid or Invalid Value, Err Msg = Error Message</p></box>
-<p>Next, let’s apply the <em>each valid input at least once in a positive test case</em> heuristic. Test case 5 has a valid value for <code v-pre>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1 and 5.2 to rectify that.</p>
+<p>Next, let’s apply the <em>each valid input at least once in a positive test case</em> heuristic. Test case 5 has a valid value for <code class="hljs inline no-lang" v-pre>projectGrade=F</code> that doesn't appear in any other positive test case. Let's replace test case 5 with 5.1 and 5.2 to rectify that.</p>
 <box>
 <p><strong>Test cases for calculateGrade V2</strong></p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
@@ -231,7 +233,7 @@
 <td style="text-align:center">VV</td>
 <td style="text-align:center"><ins>72</ins></td>
 <td style="text-align:center">Err Msg</td></tr></tbody></table></div></box>
-<p>Next, you can assume that there is a dependency between the inputs <code v-pre>examScore</code> and <code v-pre>isAbsent</code> such that an absent student can only have <code v-pre>examScore=0</code>. To cater for the hidden invalid case arising from this, you can add a new test case where <code v-pre>isAbsent=true</code> and <code v-pre>examScore!=0</code>. In addition, test cases 3-6.2 should have <code v-pre>isAbsent=false</code> so that the input remains valid.</p>
+<p>Next, you can assume that there is a dependency between the inputs <code class="hljs inline no-lang" v-pre>examScore</code> and <code class="hljs inline no-lang" v-pre>isAbsent</code> such that an absent student can only have <code class="hljs inline no-lang" v-pre>examScore=0</code>. To cater for the hidden invalid case arising from this, you can add a new test case where <code class="hljs inline no-lang" v-pre>isAbsent=true</code> and <code class="hljs inline no-lang" v-pre>examScore!=0</code>. In addition, test cases 3-6.2 should have <code class="hljs inline no-lang" v-pre>isAbsent=false</code> so that the input remains valid.</p>
 <box>
 <p><strong>Test cases for calculateGrade V4</strong></p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
@@ -315,26 +317,26 @@
 <td style="text-align:center"><mark>Err Msg</mark></td></tr></tbody></table></div></box></div>
 <div>
  <div>
-<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
 <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about test input combinations</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about test input combinations</p></template>
 <question>
-<p>Which of these contradict the heuristics recommended when creating test cases with multiple inputs?</p>
-<ul radio-group="1da4e" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> a. All invalid test inputs must be tested together.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> b. It is ok to combine valid values for different inputs.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="1da4e" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li></ul>
+<p>Which one of these contradicts the heuristics recommended when creating test cases with multiple inputs?</p>
+<ul radio-group="63fa5" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> a. All invalid test inputs must be tested together.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> b. It is OK to combine valid values for different inputs.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> c. No more than one invalid test input should be in a given test case.</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="63fa5" type="radio"> d. Each valid test input should appear at least once in a test case that doesn’t have any invalid inputs.</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>a</p>
-<p>Explanation: If you test all invalid test inputs together, you will not know if each one of the invalid inputs are handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p></div></question></panel></div>
+<p>Explanation: If you test all invalid test inputs together, you will not know if each of the invalid inputs is handled correctly by the SUT. This is because most SUTs return an error message upon encountering the first invalid input.</p></div></question></panel></div>
 <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code v-pre>consume</code> method</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code class="hljs inline no-lang" v-pre>consume</code> method</p></template>
 <question>
 <p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>Underlines</ins> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
    <box>
-<p>SUT: <code v-pre>consume(food, drink)</code></p>
+<p>SUT: <code class="hljs inline no-lang" v-pre>consume(food, drink)</code></p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>Test case</th>
@@ -352,20 +354,16 @@
 <tr>
 <td>TC3</td>
 <td><ins>rock</ins></td>
-<td><ins>acid</ins></td></tr></tbody></table></div></box></question></panel></div></div></panel></div></div></div></div></div></div></div></div>
+<td><ins>acid</ins></td></tr></tbody></table></div></box></question></panel></div></div></panel></div></div></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../../markbind/js/vue.min.js"></script>
-<script src="../../../../markbind/js/components.min.js"></script>
 <script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -389,5 +387,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

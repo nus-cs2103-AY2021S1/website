@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Architectural Styles: More: Using Architectural Styles</title>
     <link rel="stylesheet" href="../../../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../../markbind/css/markbind.min.css"><script src="../../../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../../../markbind/js/vue.min.js"></script>
+    <script src="../../../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -28,7 +30,7 @@
 <p><span class="dimmed"><strong><span>Design → Architecture → Styles →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="using-styles"><span>Using styles</span><a class="fa fa-anchor" href="#using-styles" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="using-styles"><span id="using-styles" class="anchor"></span><span>Using styles</span><a class="fa fa-anchor" href="#using-styles" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>Most applications use a mix of these architectural styles.</strong></p>
@@ -37,9 +39,9 @@
 </box></div>
 <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Comment on how to use architecture styles in Minesweeper.</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Comment on how to use architecture styles in Minesweeper.</p></template>
 <question has-input="true">
 <p>Assume you are designing a multiplayer version of the Minesweeper game where any number of players can play the same Minefield. Players use their own PCs to play the game. A player scores by deducing a cell correctly before any of the other players do. Once a cell is correctly deduced, it appears as either marked or cleared for all players.</p>
 <p>Comment on how each of the following architectural styles could be potentially useful when designing the architecture for this game.</p>
@@ -55,20 +57,16 @@
 <li>SOA – The game can access a remote web service for things such as getting new puzzles, validating puzzles, charging players subscription fees, etc.</li>
 <li>Multi-layer – The server component can have two layers: the logic layer and the storage layer.</li></ol>
 <img src="/website/book/architecture/architecturalStyles/more/usingStyles/images/minesweeperExample.png" height="300">
-<p></p></div></question></panel></div></panel></div></div></div></div></div></div></div></div>
+<p></p></div></question></panel></div></panel></div></div></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../../../markbind/js/vue.min.js"></script>
-<script src="../../../../../markbind/js/components.min.js"></script>
 <script src="../../../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -92,5 +90,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

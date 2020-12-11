@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Software Design Patterns: Facade</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../markbind/js/vue.min.js"></script>
+    <script src="../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -24,12 +26,12 @@
 <p><span class="dimmed"><strong><span>Design → Design Patterns →
 </span></strong></span></p>
 <div id="title">
-<h1 id="facade-pattern"><span>Facade pattern</span><a class="fa fa-anchor" href="#facade-pattern" onclick="event.stopPropagation()"></a></h1></div>
+<h1 id="facade-pattern"><span id="facade-pattern" class="anchor"></span><span>Facade pattern</span><a class="fa fa-anchor" href="#facade-pattern" onclick="event.stopPropagation()"></a></h1></div>
 <div id="main">
 <div>
 <div>
 <panel type="seamless" expanded id="what">
-  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain the Facade design pattern</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -37,22 +39,22 @@
 <p><strong>Context</strong></p>
 <p>Components need to access functionality deep inside other components.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code v-pre>UI</code> component of a <code v-pre>Library</code> system might want to access functionality of the <code v-pre>Book</code> class contained inside the <code v-pre>Logic</code> component.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The <code class="hljs inline no-lang" v-pre>UI</code> component of a <code class="hljs inline no-lang" v-pre>Library</code> system might want to access functionality of the <code class="hljs inline no-lang" v-pre>Book</code> class contained inside the <code class="hljs inline no-lang" v-pre>Logic</code> component.</p>
 <img src="/website/book/designPatterns/facade/what/images/textBook.png" height="120">
 <p></p></box>
 <p><strong>Problem</strong></p>
-<p>Access to the component should be allowed without exposing its internal details. <span class="dimmed">e.g.  the <code v-pre>UI</code> component should access the functionality of the <code v-pre>Logic</code> component without knowing that it contains a <code v-pre>Book</code> class within it.</span></p>
+<p>Access to the component should be allowed without exposing its internal details. <span class="dimmed">e.g.  the <code class="hljs inline no-lang" v-pre>UI</code> component should access the functionality of the <code class="hljs inline no-lang" v-pre>Logic</code> component without knowing that it contains a <code class="hljs inline no-lang" v-pre>Book</code> class within it.</span></p>
 <p><strong>Solution</strong></p>
-<p>Include a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">a French word that means 'front of a building'</span>Façade</span> class that sits between the component internals and users of the component such that all access to the component happens through the Facade class.</p>
+<p>Include a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">a French word that means 'front of a building'</span>Façade</span> class that sits between the component internals and users of the component such that all access to the component happens through the Facade class.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following class diagram applies the Façade pattern to the <code v-pre>Library System</code> example. The <code v-pre>LibraryLogic</code> class is the Facade class.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following class diagram applies the Facade pattern to the <code class="hljs inline no-lang" v-pre>Library System</code> example. The <code class="hljs inline no-lang" v-pre>LibraryLogic</code> class is the Facade class.</p>
 <img src="/website/book/designPatterns/facade/what/images/textLibraryBook.png" height="120">
 <p></p></box></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this Facade?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Is this Facade?</p></template>
 <question>
 <p>Is the design below likely to use the Facade pattern?</p>
 <img src="/website/book/designPatterns/facade/what/images/textStorage.png" height="150">
@@ -62,20 +64,16 @@
 <li class="radio-list-item"><label><input class="radio-list-input" name="cdd35" type="radio"> False</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>True.</p>
-<p>Facade is clearly visible (Storage is the <code v-pre>&lt;&lt;Facade&gt;&gt;</code> class).</p></div></question></panel></div></panel></div></div></div></panel></div></div></div></div></div></div>
+<p>Facade is clearly visible (Storage is the <code class="hljs inline no-lang" v-pre>&lt;&lt;Facade&gt;&gt;</code> class).</p></div></question></panel></div></panel></div></div></div></panel></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -99,5 +97,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

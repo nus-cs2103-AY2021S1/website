@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - JUnit: Basic</title>
     <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../markbind/css/markbind.min.css"><script src="../../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../../markbind/js/vue.min.js"></script>
+    <script src="../../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -28,20 +30,71 @@
 <p><span class="dimmed"><strong><span>C++ to Java → JUnit →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="junit-basic"><span>JUnit: Basic</span><a class="fa fa-anchor" href="#junit-basic" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="junit-basic"><span id="junit-basic" class="anchor"></span><span>JUnit: Basic</span><a class="fa fa-anchor" href="#junit-basic" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>When writing JUnit tests for a class <code v-pre>Foo</code>, the common practice is to create a <code v-pre>FooTest</code> class, which will contain various test methods.</p>
+<p>When writing JUnit tests for a class <code class="hljs inline no-lang" v-pre>Foo</code>, the common practice is to create a <code class="hljs inline no-lang" v-pre>FooTest</code> class, which will contain various test methods.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose we want to write tests for the <code v-pre>IntPair</code> class below.</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPair</span> </span>{<br></span><span>    <span class="hljs-keyword">int</span> first;<br></span><span>    <span class="hljs-keyword">int</span> second;<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">IntPair</span><span class="hljs-params">(<span class="hljs-keyword">int</span> first, <span class="hljs-keyword">int</span> second)</span> </span>{<br></span><span>        <span class="hljs-keyword">this</span>.first = first;<br></span><span>        <span class="hljs-keyword">this</span>.second = second;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">intDivision</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        <span class="hljs-keyword">if</span> (second == <span class="hljs-number">0</span>){<br></span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"Divisor is zero"</span>);<br></span><span>        }<br></span><span>        <span class="hljs-keyword">return</span> first/second;<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> first + <span class="hljs-string">","</span> + second;<br></span><span>    }<br></span><span>}<br></span></code></pre><p>Here's a <code v-pre>IntPairTest</code> class to match (using JUnit 5).</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> org.junit.jupiter.api.Test;<br></span><span><br></span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.assertEquals;<br></span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.fail;<br></span><span><br></span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPairTest</span> </span>{<br></span><span><br></span><span><br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testStringConversion</span><span class="hljs-params">()</span> </span>{<br></span><span>        assertEquals(<span class="hljs-string">"4,7"</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">7</span>).toString());<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">intDivision_nonZeroDivisor_success</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{<br></span><span>        assertEquals(<span class="hljs-number">2</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>).intDivision());<br></span><span>        assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>).intDivision());<br></span><span>        assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>).intDivision());<br></span><span>    }<br></span><span><br></span><span>    <span class="hljs-meta">@Test</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">intDivision_zeroDivisor_exceptionThrown</span><span class="hljs-params">()</span> </span>{<br></span><span>        <span class="hljs-keyword">try</span> {<br></span><span>            assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>).intDivision());<br></span><span>            fail(); <span class="hljs-comment">// the test should not reach this line</span><br></span><span>        } <span class="hljs-keyword">catch</span> (Exception e) {<br></span><span>            assertEquals(<span class="hljs-string">"Divisor is zero"</span>, e.getMessage());<br></span><span>        }<br></span><span>    }<br></span><span>}<br></span></code></pre></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Suppose we want to write tests for the <code class="hljs inline no-lang" v-pre>IntPair</code> class below.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPair</span> </span>{
+</span><span>    <span class="hljs-keyword">int</span> first;
+</span><span>    <span class="hljs-keyword">int</span> second;
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">IntPair</span><span class="hljs-params">(<span class="hljs-keyword">int</span> first, <span class="hljs-keyword">int</span> second)</span> </span>{
+</span><span>        <span class="hljs-keyword">this</span>.first = first;
+</span><span>        <span class="hljs-keyword">this</span>.second = second;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">intDivision</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        <span class="hljs-keyword">if</span> (second == <span class="hljs-number">0</span>){
+</span><span>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> Exception(<span class="hljs-string">"Divisor is zero"</span>);
+</span><span>        }
+</span><span>        <span class="hljs-keyword">return</span> first/second;
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Override</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">return</span> first + <span class="hljs-string">","</span> + second;
+</span><span>    }
+</span><span>}
+</span></code></pre><p>Here's a <code class="hljs inline no-lang" v-pre>IntPairTest</code> class to match (using JUnit 5).</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">import</span> org.junit.jupiter.api.Test;
+</span><span>
+</span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.assertEquals;
+</span><span><span class="hljs-keyword">import</span> <span class="hljs-keyword">static</span> org.junit.jupiter.api.Assertions.fail;
+</span><span>
+</span><span><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">IntPairTest</span> </span>{
+</span><span>
+</span><span>
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">testStringConversion</span><span class="hljs-params">()</span> </span>{
+</span><span>        assertEquals(<span class="hljs-string">"4,7"</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">7</span>).toString());
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">intDivision_nonZeroDivisor_success</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> Exception </span>{
+</span><span>        assertEquals(<span class="hljs-number">2</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">4</span>, <span class="hljs-number">2</span>).intDivision());
+</span><span>        assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>).intDivision());
+</span><span>        assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">0</span>, <span class="hljs-number">5</span>).intDivision());
+</span><span>    }
+</span><span>
+</span><span>    <span class="hljs-meta">@Test</span>
+</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">intDivision_zeroDivisor_exceptionThrown</span><span class="hljs-params">()</span> </span>{
+</span><span>        <span class="hljs-keyword">try</span> {
+</span><span>            assertEquals(<span class="hljs-number">0</span>, <span class="hljs-keyword">new</span> IntPair(<span class="hljs-number">1</span>, <span class="hljs-number">0</span>).intDivision());
+</span><span>            fail(); <span class="hljs-comment">// the test should not reach this line</span>
+</span><span>        } <span class="hljs-keyword">catch</span> (Exception e) {
+</span><span>            assertEquals(<span class="hljs-string">"Divisor is zero"</span>, e.getMessage());
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre></box>
 <p>Notes:</p>
 <ul>
-<li>Each test method is marked with a <code v-pre>@Test</code> annotation.</li>
-<li>Tests use <code v-pre>Assert.assertEquals(expected, actual)</code> methods to compare the expected output with the actual output. If they do not match, the test will fail. JUnit comes with other similar methods such as <code v-pre>Assert.assertNull</code> and <code v-pre>Assert.assertTrue</code>.</li>
-<li>Java code normally use camelCase for method names e.g., <code v-pre>testStringConversion</code> but when writing test methods, sometimes another convention is used: <code v-pre>whatIsBeingTested_descriptionOfTestInputs_expectedOutcome</code> e.g., <code v-pre>intDivision_zeroDivisor_exceptionThrown</code></li>
-<li>There are <a href="https://howtodoinjava.com/junit5/expected-exception-example/">several ways to verify the code throws the correct exception</a>. The third test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the <code v-pre>catch</code> block. But if it is not thrown as expected, the test will reach <code v-pre>Assert.fail()</code> line and will fail as a result.</li>
+<li>Each test method is marked with a <code class="hljs inline no-lang" v-pre>@Test</code> annotation.</li>
+<li>Tests use <code class="hljs inline no-lang" v-pre>Assert.assertEquals(expected, actual)</code> methods to compare the expected output with the actual output. If they do not match, the test will fail. JUnit comes with other similar methods such as <code class="hljs inline no-lang" v-pre>Assert.assertNull</code> and <code class="hljs inline no-lang" v-pre>Assert.assertTrue</code>.</li>
+<li>Java code normally use camelCase for method names e.g., <code class="hljs inline no-lang" v-pre>testStringConversion</code> but when writing test methods, sometimes another convention is used: <code class="hljs inline no-lang" v-pre>whatIsBeingTested_descriptionOfTestInputs_expectedOutcome</code> e.g., <code class="hljs inline no-lang" v-pre>intDivision_zeroDivisor_exceptionThrown</code></li>
+<li>There are <a href="https://howtodoinjava.com/junit5/expected-exception-example/">several ways to verify the code throws the correct exception</a>. The third test method in the example above shows one of the simpler methods. If the exception is thrown, it will be caught and further verified inside the <code class="hljs inline no-lang" v-pre>catch</code> block. But if it is not thrown as expected, the test will reach <code class="hljs inline no-lang" v-pre>Assert.fail()</code> line and will fail as a result.</li>
 <li>The easiest way to run JUnit tests is to do it via the IDE. For example, in Intellij you can right-click the folder containing test classes and choose 'Run all tests...'</li></ul>
 <div v-closeable alt="Junit tutorial video" class="non-printable">
 <box>
@@ -49,26 +102,22 @@
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/Z8V7rnvDeB4" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></box></div></div>
 <div>
   <div>
-<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
+<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
 <ul>
 <li><a href="https://junit.org/junit5/docs/current/user-guide/">JUnit Official User Guide</a></li>
 <li><a href="https://www.testingexcellence.com/junit-5-annotations/">JUnit 5 Tutorial – Common Annotations With Examples</a> - a short tutorial</li>
 <li>How to test private methods in Java?
 [ <a href="http://stackoverflow.com/questions/34571/whats-the-proper-way-to-test-a-class-with-private-methods-using-junit">short answer</a> ]
-[ <a href="http://www.artima.com/suiterunner/private.html">long answer</a> ]</li></ul></panel></div></div></div></div></div></div></div></div>
+[ <a href="http://www.artima.com/suiterunner/private.html">long answer</a> ]</li></ul></panel></div></div></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../../markbind/js/vue.min.js"></script>
-<script src="../../../../markbind/js/components.min.js"></script>
 <script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -92,5 +141,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

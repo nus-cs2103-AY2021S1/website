@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Specifying Requirements: Use Cases</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../markbind/js/vue.min.js"></script>
+    <script src="../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -24,26 +26,26 @@
 <p><span class="dimmed"><strong><span>Requirements → Specifying Requirements →
 </span></strong></span></p>
 <div id="title">
-<h1 id="use-cases"><span>Use cases</span><a class="fa fa-anchor" href="#use-cases" onclick="event.stopPropagation()"></a></h1></div>
+<h1 id="use-cases"><span id="use-cases" class="anchor"></span><span>Use cases</span><a class="fa fa-anchor" href="#use-cases" onclick="event.stopPropagation()"></a></h1></div>
 <div id="main">
 <div>
 <div>
 <panel type="seamless" expanded id="introduction">
-  <span slot="header" class="card-title"><div><h4 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="introduction"><span id="introduction" class="anchor"></span><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain use cases</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
 <box type="definition" seamless>
 <div>
-<p><strong>Use case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <span for="pop:actor" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:actor'].show()" class="trigger">actor</span>.[ 📖 : <span effect="fade" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger">uml-user-guide<span data-mb-html-for="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span></span>]</p>
-<span id="pop:actor" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></span>
-  <div data-mb-html-for="content">
+<p><strong>Use case</strong>: A description of a set of sequences of actions, including variants, that a system performs to yield an observable result of value to an <trigger for="pop:actor">actor</trigger>.[ 📖 : <span effect="fade" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger">uml-user-guide<span data-mb-slot-name="content"><span><em><strong>The Unified Modeling Language User Guide</strong></em>, 2e, G Booch, J Rumbaugh, and I Jacobson </span></span></span>]</p>
+<span id="pop:actor" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"><span><span aria-hidden="true" class="glyphicon glyphicon-eye-open"></span></span></span>
+  <div data-mb-slot-name="content">
     <div>
 <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user.  An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p></div></div></span></div></box>
 <p><strong>A use case describes an <em>interaction between the user and the system</em> for a <em>specific functionality</em> of the system.</strong></p>
 <box>
-<panel type="seamless" expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example 1: 'transfer money' use case for an online banking system</p></template>
+<panel type="seamless" expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example 1: 'transfer money' use case for an online banking system</p></template>
 <pre>
 System: Online Banking System (OBS)
 Use case: UC23 - Transfer Money
@@ -60,10 +62,10 @@ MSS:
 <pre>
 Extensions:
   3a. OBS detects an error in the entered data.
-    3a1. OBS requests for the correct data.
-    3a2. User enters new data
-    Steps 3a1-3a2 are repeated until the data entered are correct.
-    Use case resumes from step 4.
+      3a1. OBS requests for the correct data.
+      3a2. User enters new data.
+      Steps 3a1-3a2 are repeated until the data entered are correct.
+      Use case resumes from step 4.
   
   3b. User requests to effect the transfer in a future date.
       3b1. OBS requests for confirmation.
@@ -75,7 +77,7 @@ Extensions:
       *a2. User confirms the cancellation.
       Use case ends.
 </pre></panel>
-<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example 2: 'upload file' use case of an LMS</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example 2: 'upload file' use case of an LMS</span></p></template>
 <div class="text-monospace">
 <ul>
 <li>System: A Learning Management System (LMS)</li>
@@ -88,7 +90,7 @@ Extensions:
 <li>LMS uploads the file</li></ol></li></ul></div></panel></box>
 <box background-color="white" border-color="white">
 <img class="float-right ml-5" src="/website/book/specifyingRequirements/useCases/introduction/images/ticketMachine.png" width="300">
-<p><strong><span for="modal:uml" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:uml'].show()" class="trigger-click">UML</span> includes a diagram type called use case diagrams that can illustrate use cases of a system visually</strong>, providing a visual ‘table of contents’ of the use cases of a system.</p>
+<p><strong><trigger for="modal:uml" trigger="click">UML</trigger> includes a diagram type called use case diagrams that can illustrate use cases of a system visually</strong>, providing a visual ‘table of contents’ of the use cases of a system.</p>
 <p>In the example on the right, note how use cases are shown as ovals and user roles relevant to each use case are shown as stick figures connected to the corresponding ovals.</p>
 <b-modal id="modal:uml" hide-footer size modal-class="mb-zoom" ref="modal:uml" class="algolia-no-index"><template slot="modal-title"><strong>Unified Modeling Language (UML)</strong></template>
   <div>
@@ -97,7 +99,7 @@ Extensions:
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="identifying">
-  <span slot="header" class="card-title"><div><h4 id="identifying"><span>Identifying</span><a class="fa fa-anchor" href="#identifying" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="identifying"><span id="identifying" class="anchor"></span><span>Identifying</span><a class="fa fa-anchor" href="#identifying" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can use use cases to list functional requirements of a simple system</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -108,10 +110,10 @@ Extensions:
 <div>
 <p><strong>Actor</strong>: An actor (in a use case) is a role played by a user.  An actor can be a human or another system. Actors are not part of the system; they reside outside the system.</p></div></box>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example actors for a Learning Management System</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some example actors for a Learning Management System:</p>
 <div class="text-monospace">
 <ul>
-<li>Actors: Guest, Student, Staff, Admin, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">an exam management system</span>ExamSys</span>, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">a library management system</span>LibSys</span>.</li></ul></div></box>
+<li>Actors: Guest, Student, Staff, Admin, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">an exam management system</span>ExamSys</span>, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">a library management system</span>LibSys</span>.</li></ul></div></box>
 <p><strong>A use case can involve multiple actors.</strong></p>
 <box>
 <div class="text-monospace">
@@ -138,8 +140,8 @@ Extensions:
 <div class="text-monospace">
 <ul>
 <li>Software System: LearnSys</li>
-<li>Actor(or role) : Student</li>
-<li>Persons that can play this role : <mark>undergraduate student, graduate student, a staff member doing a part-time course, exchange student</mark></li></ul></div></box>
+<li>Actor (or role): Student</li>
+<li>Persons that can play this role: <mark>undergraduate student, graduate student, a staff member doing a part-time course, exchange student</mark></li></ul></div></box>
 
 <p><strong>Use cases can be specified at <em>various levels of detail</em>.</strong></p>
 <box>
@@ -157,9 +159,9 @@ c. Answer survey question</li></ul></div></box>
 <li>Be mindful of which level of detail you are working at and not to mix use cases of different levels.</li></ul></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Use case diagram for a ticket vending machine</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Use case diagram for a ticket vending machine</p></template>
 <question has-input="false">
 <p>Consider a simple movie ticket vending machine application. Every week, the theatre staff will enter the weekly schedule as well as ticket price for each show.  A customer sees the schedule and the ticket price displayed at the machine. There is a slot to insert money, a keypad to enter a code for a movie, a code for the show time, and the number of tickets.  A display shows the customer's balance inside the machine.  A customer may choose to cancel a transaction before pressing the “buy” button. Printed tickets can be collected from a slot at the bottom of the machine.  The machine also displays messages such as &quot;Please enter more money”, “Request fewer tickets&quot; or &quot;SOLD OUT!”.  Finally, a &quot;Return Change&quot; button allows the customer to get back his unspent money.</p>
 <p><strong>Draw a use case diagram for the above requirements.</strong></p>
@@ -168,7 +170,7 @@ c. Answer survey question</li></ul></div></box>
 <p></p>
 <p>Note that most of the details in the description are better given as part of the use case description rather than as low-level use cases in the diagram.</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Use case diagram for QA system</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Use case diagram for QA system</p></template>
 <question has-input="false">
 <p>A software house wishes to automate its Quality Assurance division.</p>
 <p>The system is to be used by Testers, Programmers and System Administrators. Only an administrator can create new users and assign tasks to programmers. Any tester can create a bug report, as well as set the status of a bug report as ‘closed’. Only a programmer can set the state of a bug report to ‘fixed’, but a programmer cannot set the status of a bug report to ‘closed’. Each tester is assigned just one task at a time. A task involves testing of a particular component for a particular customer. Tester must document the bugs they find. Each bug is given a unique identifier. Other information recorded about the bug is component id, severity, date and time reported, programmer who is assigned to fix it, date fixed, date retested and date closed. The system keeps track of which bugs are assigned to which programmer at any given time. It should be able to generate reports on the number of bugs found, fixed and closed e.g. number of bugs per component and per customer; number of bugs found by a particular tester; number of bugs awaiting to be fixed; number of bugs awaiting to be retested; number of bugs awaiting to be assigned to programmers etc.</p>
@@ -176,7 +178,7 @@ c. Answer survey question</li></ul></div></box>
 <div slot="answer" class="algolia-no-index">
 <img src="/website/book/specifyingRequirements/useCases/identifying/images/qaSystem.jpg" width="400">
 <p></p>
-<p><strong>Explanation</strong>: The given description contains information not relevant to use case modeling. Furthermore, the description is not enough to complete the use case diagram All these are realities of real projects. However, the process of trying to create this use case diagram prompts us to investigate issues such as:</p>
+<p><strong>Explanation</strong>: The given description contains information not relevant to use case modeling. Furthermore, the description is not enough to complete the use case diagram. All these are realities of real projects. However, the process of trying to create this use case diagram prompts us to investigate issues such as:</p>
 <ul>
 <li>Is ‘edit bug report’ a use case or is editing the bug report covered by other use cases such as those for setting the status of bug reports? If it is indeed a separate use case, who are the actors of that use case?</li>
 <li>Does ‘assign task’ simply mean ‘assign bug report’ or are there other types of tasks?</li>
@@ -184,7 +186,7 @@ c. Answer survey question</li></ul></div></box>
 <li>Which actors can perform the ‘generate report’ use case? Are reports generated automatically by the system at a specific time or generated ‘on demand’ when users request to view them? Do we have to treat different types of reports as different use cases (in case some types of reports are restricted to some types of users)? The above diagram assumes (just for illustration) that the report is generated on demand and only the system admin can generate any report.</li></ul></div></question></panel></div></panel></div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="details">
-  <span slot="header" class="card-title"><div><h4 id="details"><span>Details</span><a class="fa fa-anchor" href="#details" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="details"><span id="details" class="anchor"></span><span>Details</span><a class="fa fa-anchor" href="#details" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can specify details of a use case in a structured format</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -217,21 +219,21 @@ c. Answer survey question</li></ul></div></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of how you can show a loop:</p>
 <div class="text-monospace">
-<p>Software System: Square game<br>
-Use case:  <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">Each use case can be given a unique identification for easier cross reference.</span> UC02 </span>  - Play a Game<br>
+<p>Software System: SquareGame<br>
+Use case:  <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content">Each use case can be given a unique identification for easier cross reference.</span> UC02 </span>  - Play a Game<br>
 Actors: Player (multiple players)</p>
 <ol>
 <li>A Player starts the game.</li>
 <li>SquareGame asks for player names.</li>
 <li>Each Player enters his own name.</li>
 <li>SquareGame shows the order of play.</li>
-<li>SquareGame prompts for the current Player to throw die.</li>
+<li>SquareGame prompts for the current Player to throw a die.</li>
 <li>Current Player adjusts the throw speed.</li>
 <li>Current Player triggers the die throw.</li>
-<li>Square Game shows the face value of the die.</li>
-<li>Square Game moves the Player's piece accordingly.<br>
+<li>SquareGame shows the face value of the die.</li>
+<li>SquareGame moves the Player's piece accordingly.<br>
 <mark>Steps 5-9 are repeated for each Player, and for as many rounds as required until a Player reaches the 100th square.</mark></li>
-<li>Square Game shows the Winner.</li></ol>
+<li>SquareGame shows the Winner.</li></ol>
 <p>Use case ends.</p></div></box></div>
 <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
@@ -241,7 +243,7 @@ Actors: Player (multiple players)</p>
 <div class="text-monospace">
 <p>System: Online Banking System (OBS)<br>
 Use case: UC23 - Transfer Money<br>
-Actor: User
+Actor: User<br>
 MSS:</p>
 <ol>
 <li>User chooses to transfer money.</li>
@@ -270,10 +272,10 @@ MSS:
 <pre>
 Extensions:
   3a. OBS detects an error in the entered data.
-    3a1. OBS requests for the correct data.
-    3a2. User enters new data
-    Steps 3a1-3a2 are repeated until the data entered are correct.
-    Use case resumes from step 4.
+      3a1. OBS requests for the correct data.
+      3a2. User enters new data.
+      Steps 3a1-3a2 are repeated until the data entered are correct.
+      Use case resumes from step 4.
   
   3b. User requests to effect the transfer in a future date.
       3b1. OBS requests for confirmation.
@@ -292,13 +294,13 @@ Extensions:
 </pre></box>
 <p>Note that the numbering style is not a universal rule but a widely used convention. Based on that convention,</p>
 <ul>
-<li>either of the extensions marked <code v-pre>3a.</code> and <code v-pre>3b.</code> can happen just after step <code v-pre>3</code> of the MSS.</li>
-<li>the extension marked as <code v-pre>*a.</code> can happen at any step (hence, the <code v-pre>*</code>).</li></ul>
+<li>either of the extensions marked <code class="hljs inline no-lang" v-pre>3a.</code> and <code class="hljs inline no-lang" v-pre>3b.</code> can happen just after step <code class="hljs inline no-lang" v-pre>3</code> of the MSS.</li>
+<li>the extension marked as <code class="hljs inline no-lang" v-pre>*a.</code> can happen at any step (hence, the <code class="hljs inline no-lang" v-pre>*</code>).</li></ul>
 <p>When separating extensions from the MSS, keep in mind that the <strong>MSS should be self-contained</strong>. That is, the MSS should give us a complete usage scenario.</p>
 <p>Also note that it is not useful to mention events such as power failures or system crashes as extensions because the system cannot function beyond such catastrophic failures.</p>
 <img src="/website/book/specifyingRequirements/useCases/details/images/extension.png" height="250">
 <p></p>
-<p>In use case diagrams you can use the <code v-pre>&lt;&lt;extend&gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p></div>
+<p>In use case diagrams you can use the <code class="hljs inline no-lang" v-pre>&lt;&lt;extend&gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p></div>
 <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
 <p><strong>A use case can <mark>include</mark> another use case.</strong> <ins>Underlined text</ins> is commonly used to show an inclusion of a use case.</p>
@@ -319,7 +321,7 @@ Use case ends.</li></ol></li></ul></div></box>
 <ul>
 <li>when you don't want to clutter a use case with too many low-level steps.</li>
 <li>when a set of steps is repeated in multiple use cases.</li></ul>
-<p>You use a dotted arrow and an <code v-pre>&lt;&lt;include&gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code v-pre>&lt;&lt;extend&gt;&gt;</code> arrows.</p>
+<p>You use a dotted arrow and an <code class="hljs inline no-lang" v-pre>&lt;&lt;include&gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code class="hljs inline no-lang" v-pre>&lt;&lt;extend&gt;&gt;</code> arrows.</p>
 <p><img src="/website/book/specifyingRequirements/useCases/details/images/inclusion.png" height="250"></p><p></p><p></p></div>
 <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
@@ -347,7 +349,7 @@ Actor: User<br>
 Preconditions: User is logged in.<br>
 <mark>Guarantees:</mark></p>
 <ul>
-<li>Money will be deducted from the source account only if the transfer to the destination account is successful</li>
+<li>Money will be deducted from the source account only if the transfer to the destination account is successful.</li>
 <li>The transfer will not result in the account balance going below the minimum balance required.</li></ul>
 <p>MSS:</p>
 <ol>
@@ -357,23 +359,23 @@ Preconditions: User is logged in.<br>
 <p></p></div></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> EZ-Link top-up use case</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> EZ-Link top-up use case</p></template>
 <question has-input="true">
-<p>Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing  <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">A type of a cash card topup machine</span>EZ-Link machine</span> operates because it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.</p>
+<p>Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing  <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">A type of a cash card topup machine</span>EZ-Link machine</span> operates because it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.</p>
 <box>
 <ul>
 <li>System: EZ-Link machine</li>
-<li>Use case: UC2 top-up EZ-Link card</li>
+<li>Use case: UC01 top-up EZ-Link card</li>
 <li>Actor: EZ-Link card user</li></ul></box>
 <div slot="answer" class="algolia-no-index">
 <box>
   <div>
     <ul>
       <li>System: EZ-Link machine (those found at MRTs)</li>
-      <li>Use case: UC2 top-up EZ-Link card</li>
+      <li>Use case: UC01 top-up EZ-Link card</li>
       <li>Actor: EZ-Link card user</li>
       <li>Preconditions: All hardware in working order.</li>
       <li>Guarantees: MSS → the card will be topped-up.</li>
@@ -434,7 +436,7 @@ Preconditions: User is logged in.<br>
 <p>Note: UC02 can be written along similar lines.</p></box></div></question></panel></div>
   <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LearnSys – reply to post use case</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LearnSys – reply to post use case</p></template>
 <question has-input="true">
 <p>Complete the following use case (MSS, extensions, etc.).</p>
 <box>
@@ -488,7 +490,7 @@ Preconditions: User is logged in.<br>
             <ol class="custom-bullet-list">
               <li>...</li></ol></li></ol></li></ul></div></box></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Parts of a use case descriptions</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Parts of a use case description</p></template>
 <question>
 <p>Which of these cannot appear as part of a use case description?</p>
 <ul class="contains-task-list">
@@ -505,13 +507,13 @@ Preconditions: User is logged in.<br>
 <p>Explanation: Performance requirements are non-functional requirements. They are not captured in use cases.</p></div></question></panel></div>
   <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What’s wrong with this use case?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What’s wrong with this use case?</p></template>
 <question>
 <p>Identify problems with this use case description.</p>
 <div>
   <ul>
     <li>System: EZ-Link machine (those found at MRTs)</li>
-    <li>Use case: UC2 top-up EZ-Link card</li>
+    <li>Use case: UC01 top-up EZ-Link card</li>
     <li>Actor: EZ-Link card user</li>
     <li>Preconditions: All hardware in working order.</li>
     <li>Guarantees: If MSS completes at least until step 7, the card will be topped-up.</li>
@@ -545,24 +547,24 @@ Preconditions: User is logged in.<br>
 <p>Explanation: Catastrophic failures such as ‘system crash’ need not be included in a use case. A use case is not supposed to contain UI details. Post conditions are optional. It is not a problem to have multiple exit points for a use case.</p></div></question></panel></div></panel></div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="usage">
-  <span slot="header" class="card-title"><div><h4 id="usage"><span>Usage</span><a class="fa fa-anchor" href="#usage" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="usage"><span id="usage" class="anchor"></span><span>Usage</span><a class="fa fa-anchor" href="#usage" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can optimize the use of use cases</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
 <p><strong>You can use actor generalization in use case diagrams</strong> using a symbol similar to that of UML notation for inheritance.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, actor <code v-pre>Blogger</code> can do all the use cases the actor <code v-pre>Guest</code> can do, as a result of the actor generalization relationship given in the diagram.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In this example, actor <code class="hljs inline no-lang" v-pre>Blogger</code> can do all the use cases the actor <code class="hljs inline no-lang" v-pre>Guest</code> can do, as a result of the actor generalization relationship given in the diagram.</p>
 <img src="/website/book/specifyingRequirements/useCases/usage/images/actorGeneralisation.png" height="250"></box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Do not over-complicate use case diagrams by trying to include everything possible. A use case diagram is a brief summary of the use cases that is used as a starting point. Details of the use cases can be given in the use case descriptions.</p>
 <p><strong>Some include ‘System’ as an actor to indicate that something is done by the system itself without being initiated by a user or an external system.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The diagram below can be used to indicate that the system generates daily reports at midnight.</p>
 <img src="/website/book/specifyingRequirements/useCases/usage/images/systemAsActor.jpg" height="200"></box>
-<p>However, others argue that only use cases providing value to an external user/system should be shown in the use case diagram. For example, they argue that ‘view daily report’ should be the use case and  <code v-pre>generate daily report</code> is not to be shown in the use case diagram because it is simply something the system has to do to support the <code v-pre>view daily report</code> use case.</p>
+<p>However, others argue that only use cases providing value to an external user/system should be shown in the use case diagram. For example, they argue that <code class="hljs inline no-lang" v-pre>view daily report</code> should be the use case and <code class="hljs inline no-lang" v-pre>generate daily report</code> is not to be shown in the use case diagram because it is simply something the system has to do to support the <code class="hljs inline no-lang" v-pre>view daily report</code> use case.</p>
 <p>You are recommended to follow the latter view (i.e. not to use System as a user). Limit use cases for modeling behaviors that involve an external actor.</p>
-<p><strong>UML is not very specific about the text contents of a use case.</strong> Hence, there are many styles for writing use cases. For example, the steps can be written as a continuous paragraph.
-Use cases should be easy to read. Note that there is no strict rule about writing all details of all steps or a need to use all the elements of a use case.</p>
+<p><strong>UML is not very specific about the text contents of a use case.</strong> Hence, there are many styles for writing use cases. For example, the steps can be written as a continuous paragraph.</p>
+<p>Use cases should be easy to read. Note that there is no strict rule about writing all details of all steps or a need to use all the elements of a use case.</p>
 <p><strong>There are some advantages of documenting system requirements as use cases:</strong></p>
 <ul>
 <li>Because they use a simple notation and plain English descriptions, they are easy for users to understand and give feedback.</li>
@@ -572,9 +574,9 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 <p><strong>One of the main disadvantages of use cases is that they are not good for capturing requirements that do not involve a user interacting with the system.</strong> Hence, they should not be used as the sole means to specify requirements.</p></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Advantages of use cases</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Advantages of use cases</p></template>
 <question>
 <p>What are the advantages of using use cases (the textual form) for requirements modelling?</p>
 <ul class="contains-task-list">
@@ -585,7 +587,7 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 <div slot="answer" class="algolia-no-index">
 <p>(a) (b) (c) (d)</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about use cases</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about use cases</p></template>
 <question>
 <p>Which of these are correct?</p>
 <ul class="contains-task-list">
@@ -595,20 +597,16 @@ Use cases should be easy to read. Note that there is no strict rule about writin
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. Use cases can be expressed at different levels of abstraction.</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(a)(b)(d)</p>
-<p>Explanation: It is not correct to say one format is better than the other. It depends on the context.</p></div></question></panel></div></panel></div></div></div></panel></div></div></div></div></div></div>
+<p>Explanation: It is not correct to say one format is better than the other. It depends on the context.</p></div></question></panel></div></panel></div></div></div></panel></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -632,5 +630,5 @@ Use cases should be easy to read. Note that there is no strict rule about writin
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

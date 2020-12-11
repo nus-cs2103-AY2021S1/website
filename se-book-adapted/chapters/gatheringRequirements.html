@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Textbook Chapter : Gathering Requirements</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,11 +12,14 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/site-nav.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
+    <script src="../../markbind/js/vue.min.js"></script>
+    <script src="../../markbind/js/markbind.min.js"></script>
+    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
+<div class="w-100 p-1 bg-warning text-center"><span><strong>This site is from a past semester! The current version will be <a href="http://www.comp.nus.edu.sg/~cs2103">here</a> when the new semester starts.</strong></span></div>
 <navbar placement="top" type="dark" class="temp-navbar">
 <a slot="brand" href="/website/index.html" title="Home" class="navbar-brand"><span class="badge badge-pill badge-success">CS2103/T <small>2020 Aug-Dec</small></span></a>
   <div class="nav-link temp-dropdown-placeholder">**Schedule**</div><dropdown class="nav-link temp-dropdown algolia-no-index"><template slot="_header"><strong>Schedule</strong></template>
@@ -135,16 +138,18 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/definitions.html">List of Definitions</a></div></li></ul></li></ul></div></nav>
 
+
+
 <div id="content-wrapper">
 <link rel="stylesheet" href="/website/book/css/textbook.css">
 <div class="website-content">
 <p><span class="dimmed"><strong><span></span></strong></span></p>
 <div id="title">
-<div><h1 id="gathering-requirements"><span>Gathering requirements</span><span id="gathering-requirements" class="anchor"></span><a class="fa fa-anchor" href="#gathering-requirements" onclick="event.stopPropagation()"></a></h1></div></div>
-<panel type="seamless" expanded id="brainstorming"><template slot="_header"><h4 id="brainstorming">Brainstorming<span id="brainstorming" class="anchor"></span><a class="fa fa-anchor" href="#brainstorming" onclick="event.stopPropagation()"></a></h4></template>
+<div><h1 id="gathering-requirements"><span id="gathering-requirements" class="anchor"></span><span>Gathering requirements</span><a class="fa fa-anchor" href="#gathering-requirements" onclick="event.stopPropagation()"></a></h1></div></div>
+<panel type="seamless" expanded id="brainstorming"><template slot="header"><h4 id="brainstorming"><span id="brainstorming" class="anchor"></span>Brainstorming<a class="fa fa-anchor" href="#brainstorming" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain brainstorming</span></span></span></span><p></p>
   <div>
 <box type="definition" seamless>
@@ -153,50 +158,50 @@
 <p><strong>In a brainstorming session there are no &quot;bad&quot; ideas. The aim is to <em>generate ideas; not to validate</em> them.</strong> Brainstorming encourages you to &quot;think outside the box&quot; and put &quot;crazy&quot; ideas on the table without fear of rejection.</p></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Characteristic of brainstorming</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Characteristic of brainstorming</p></template>
 <question>
 <p>What is the key characteristic about brainstorming?</p>
 <ul radio-group="11d89" class="radio-list">
 <li class="radio-list-item"><label><input class="radio-list-input" name="11d89" type="radio"> a. There should be at least 5 participants.</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="11d89" type="radio"> b. All ideas are welcome. There are no <em>bad</em> ideas.</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="11d89" type="radio"> c. Only the best people in the team should take part.</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="11d89" type="radio"> d. They are a good way to eliminate <em>bad</em> ideas.</label></li></ul>
+<li class="radio-list-item"><label><input class="radio-list-input" name="11d89" type="radio"> d. It is a good way to eliminate <em>bad</em> ideas.</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(b)</p></div></question></panel></div></panel></div></div></div></panel>
-<panel type="seamless" expanded id="user-surveys"><template slot="_header"><h4 id="user-surveys">User Surveys<span id="user-surveys" class="anchor"></span><a class="fa fa-anchor" href="#user-surveys" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="user-surveys"><template slot="header"><h4 id="user-surveys"><span id="user-surveys" class="anchor"></span>User Surveys<a class="fa fa-anchor" href="#user-surveys" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain user surveys</span></span></span></span><p></p>
   <div>
 <p><strong>Surveys can be used to <em>solicit responses and opinions</em> from a large number of stakeholders</strong> regarding a current product or a new product.</p></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="observation"><template slot="_header"><h4 id="observation">Observation<span id="observation" class="anchor"></span><a class="fa fa-anchor" href="#observation" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="observation"><template slot="header"><h4 id="observation"><span id="observation" class="anchor"></span>Observation<a class="fa fa-anchor" href="#observation" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain observation</span></span></span></span><p></p>
   <div>
 <p><strong>Observing users in their natural work environment can uncover product requirements.</strong> Usage data of an existing system can also be used to gather information about how an existing system is being used, which can help in building a better replacement <span class="dimmed">e.g. to find the situations where the user makes mistakes when using the current system</span>.</p></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="interviews"><template slot="_header"><h4 id="interviews">Interviews<span id="interviews" class="anchor"></span><a class="fa fa-anchor" href="#interviews" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="interviews"><template slot="header"><h4 id="interviews"><span id="interviews" class="anchor"></span>Interviews<a class="fa fa-anchor" href="#interviews" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain interviews</span></span></span></span><p></p>
   <div>
-<p><strong>Interviewing stakeholders and <span for="pop:interviews-domainExpert" v-b-popover.hover.top.html="popoverGenerator" v-b-tooltip.hover.top.html="tooltipContentGetter" v-on:mouseover="$refs['pop:interviews-domainExpert'].show()" class="trigger">domain experts</span> can produce useful information about project requirements.</strong></p>
-<span id="pop:interviews-domainExpert" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header"></span>
-  <div data-mb-html-for="content">
+<p><strong>Interviewing stakeholders and <trigger for="pop:interviews-domainExpert">domain experts</trigger> can produce useful information about project requirements.</strong></p>
+<span id="pop:interviews-domainExpert" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header"></span>
+  <div data-mb-slot-name="content">
     <div>
-<p><strong>Domain expert</strong> : An expert of a discipline to which the product is connected <span class="dimmed">e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting</span>.</p></div></div></span></div>
+<p><strong>Domain expert</strong>: An expert of a discipline to which the product is connected <span class="dimmed">e.g., for a software used for Accounting, a domain expert is someone who is an expert of Accounting</span>.</p></div></div></span></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="focus-groups"><template slot="_header"><h4 id="focus-groups">Focus Groups<span id="focus-groups" class="anchor"></span><a class="fa fa-anchor" href="#focus-groups" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="focus-groups"><template slot="header"><h4 id="focus-groups"><span id="focus-groups" class="anchor"></span>Focus Groups<a class="fa fa-anchor" href="#focus-groups" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain focus groups</span></span></span></span><p></p>
   <div>
 <div v-closeable alt="focus group photo" class="non-printable">
@@ -207,10 +212,10 @@
   <span slot="header"><span><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span>: How do focus groups work? - Hector Lanz <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span></span></span></span>
 <div class="block-embed block-embed-service-youtube"><iframe type="text/html" src="//www.youtube.com/embed/3TwgVQIZPsw" frameborder="0" width="640" height="390" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></panel></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="prototyping"><template slot="_header"><h4 id="prototyping">Prototyping<span id="prototyping" class="anchor"></span><a class="fa fa-anchor" href="#prototyping" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="prototyping"><template slot="header"><h4 id="prototyping"><span id="prototyping" class="anchor"></span>Prototyping<a class="fa fa-anchor" href="#prototyping" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain prototyping</span></span></span></span><p></p>
   <div>
 <box type="definition" seamless>
@@ -229,18 +234,18 @@
 <p></p>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Prototyping can be used for <em>discovering</em> as well as <em>specifying</em> requirements <span class="dimmed">e.g. a UI prototype can serve as a specification of what to build</span>.</p></div>
   <div></div></div></panel>
-<panel type="seamless" expanded id="product-surveys"><template slot="_header"><h4 id="product-surveys">Product Surveys<span id="product-surveys" class="anchor"></span><a class="fa fa-anchor" href="#product-surveys" onclick="event.stopPropagation()"></a></h4></template>
+<panel type="seamless" expanded id="product-surveys"><template slot="header"><h4 id="product-surveys"><span id="product-surveys" class="anchor"></span>Product Surveys<a class="fa fa-anchor" href="#product-surveys" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain product surveys</span></span></span></span><p></p>
   <div>
 <p><strong>Studying existing products can unearth shortcomings of existing solutions that can be addressed by a new product.</strong> Product manuals and other forms of documentation of an existing system can tell us how the existing solutions work.</p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> When developing a game for a mobile device, a look at a similar PC game can give insight into the kind of features and interactions the mobile game can offer.
 </p></box><p></p></div>
-  <div></div></div></panel></div></div>
-
+  <div></div></div></panel></div>
+<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -263,18 +268,13 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Wed, 2 Dec 2020, 21:31:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
 </body>
-<script src="../../markbind/js/vue.min.js"></script>
-<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../markbind/js/polyfill.min.js"></script>
-<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -298,5 +298,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script>
+<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

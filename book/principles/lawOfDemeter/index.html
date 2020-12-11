@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Principles: Law of Demeter</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../markbind/js/vue.min.js"></script>
+    <script src="../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -27,7 +29,7 @@
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="law-of-demeter"><span>Law of Demeter</span><a class="fa fa-anchor" href="#law-of-demeter" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="law-of-demeter"><span id="law-of-demeter" class="anchor"></span><span>Law of Demeter</span><a class="fa fa-anchor" href="#law-of-demeter" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <box type="definition" seamless>
@@ -40,46 +42,54 @@
 <ul>
 <li>Don’t talk to strangers.</li>
 <li>Principle of least knowledge</li></ul></div></box>
-<p>More concretely, a method <code v-pre>m</code> of an object <code v-pre>O</code> should invoke only the methods of the following kinds of objects:</p>
+<p>More concretely, a method <code class="hljs inline no-lang" v-pre>m</code> of an object <code class="hljs inline no-lang" v-pre>O</code> should invoke only the methods of the following kinds of objects:</p>
 <ul>
-<li>The object <code v-pre>O</code> itself</li>
-<li>Objects passed as parameters of <code v-pre>m</code></li>
-<li>Objects created/instantiated in <code v-pre>m</code> (directly or indirectly)</li>
-<li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">objects that are held by instance variables of</span>direct association of</span> <code v-pre>O</code></li></ul>
+<li>The object <code class="hljs inline no-lang" v-pre>O</code> itself</li>
+<li>Objects passed as parameters of <code class="hljs inline no-lang" v-pre>m</code></li>
+<li>Objects created/instantiated in <code class="hljs inline no-lang" v-pre>m</code> (directly or indirectly)</li>
+<li>Objects from the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">objects that are held by instance variables of</span>direct association of</span> <code class="hljs inline no-lang" v-pre>O</code></li></ul>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the reason: while <code v-pre>b</code> is a ‘friend’ of <code v-pre>foo</code> (because it receives it as a parameter), <code v-pre>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code v-pre>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g = b.getGoo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre></box>
-<p><strong>LoD aims to prevent objects navigating internal structures of other objects.</strong></p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The following code fragment violates LoD due to the following reason: while <code class="hljs inline no-lang" v-pre>b</code> is a ‘friend’ of <code class="hljs inline no-lang" v-pre>foo</code> (because it receives it as a parameter), <code class="hljs inline no-lang" v-pre>g</code> is a ‘friend of a friend’ (which should be considered a ‘stranger’), and <code class="hljs inline no-lang" v-pre>g.doSomething()</code> is analogous to ‘talking to a stranger’.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+</span><span>    Goo g = b.getGoo();
+</span><span>    g.doSomething();
+</span><span>}
+</span></code></pre></box>
+<p><strong>LoD aims to prevent objects from navigating the internal structures of other objects.</strong></p>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An analogy for LoD can be drawn from Facebook. If Facebook followed LoD, you would not be allowed to see posts of friends of friends, unless they are your friends as well. If Jake is your friend and Adam is Jake’s friend, you should not be allowed to see Adam’s posts unless Adam is a friend of yours as well.</p></box></div>
 <div>
   <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Examples for LoD</p></template>
 <question has-input="true">
 <p>Explain the Law of Demeter using code examples. You are to make up your own code examples. Take Minesweeper as the basis for your code examples.</p>
 <div slot="answer" class="algolia-no-index">
-<p>Let us take the <code v-pre>Logic</code> class as an example.  Assume that it has the following operation.</p>
-<p><code v-pre>setMinefield(Minefield mf):void</code></p>
-<p>Consider the following that can happen inside this operation.</p>
+<p>Let us take the <code class="hljs inline no-lang" v-pre>Logic</code> class as an example.  Assume that it has the following operation.</p>
+<p><code class="hljs inline no-lang" v-pre>setMinefield(Minefield mf): void</code></p>
+<p>Consider the following that can happen inside this operation:</p>
 <ul>
-<li><code v-pre>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
-<li><code v-pre>mf.getCell(1,3).clear();</code>: //this violates LoD because <code v-pre>Logic</code> is handling <code v-pre>Cell</code> objects deep inside <code v-pre>Minefield</code>. Instead, it should be <code v-pre>mf.clearCellAt(1,3);</code></li>
-<li><code v-pre>timer.start();</code>: //this does not violate LoD because <code v-pre>timer</code> appears to be an internal component (i.e. a variable) of <code v-pre>Logic</code> itself.</li>
-<li><code v-pre>Cell c = new Cell();</code> <code v-pre>c.init();</code>: // this does not violate LoD because <code v-pre>c</code> was created inside the operation.</li></ul></div></question></panel></div>
+<li><code class="hljs inline no-lang" v-pre>mf.init();</code>: this does not violate LoD since LoD allows calling operations of parameters received.</li>
+<li><code class="hljs inline no-lang" v-pre>mf.getCell(1, 3).clear();</code>: this violates LoD because <code class="hljs inline no-lang" v-pre>Logic</code> is handling <code class="hljs inline no-lang" v-pre>Cell</code> objects deep inside <code class="hljs inline no-lang" v-pre>Minefield</code>. Instead, it should be <code class="hljs inline no-lang" v-pre>mf.clearCellAt(1, 3);</code>.</li>
+<li><code class="hljs inline no-lang" v-pre>timer.start();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>timer</code> appears to be an internal component (i.e. a variable) of <code class="hljs inline no-lang" v-pre>Logic</code> itself.</li>
+<li><code class="hljs inline no-lang" v-pre>Cell c = new Cell();</code> <code class="hljs inline no-lang" v-pre>c.init();</code>: this does not violate LoD because <code class="hljs inline no-lang" v-pre>c</code> was created inside the operation.</li></ul></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LoD violation?</p></template>
 <question>
-<p>This violates Law of Demeter.</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{<br></span><span>    Goo g =  <span class="hljs-keyword">new</span> Goo();<br></span><span>    g.doSomething();<br></span><span>}<br></span></code></pre><ul radio-group="3cf8e" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> True</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="3cf8e" type="radio"> False</label></li></ul>
+<p>This violates the Law of Demeter.</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">foo</span><span class="hljs-params">(Bar b)</span> </span>{
+</span><span>    Goo g = <span class="hljs-keyword">new</span> Goo();
+</span><span>    g.doSomething();
+</span><span>}
+</span></code></pre><ul radio-group="b573e" class="radio-list">
+<li class="radio-list-item"><label><input class="radio-list-input" name="b573e" type="radio"> True</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="b573e" type="radio"> False</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>False</p>
-<p>Explanation: The line <code v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p></div></question></panel></div>
+<p>Explanation: The line <code class="hljs inline no-lang" v-pre>g.doSomething()</code> does not violate LoD because it is OK to invoke methods of objects created within a method.</p></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Odd one out</p></template>
 <question>
 <p>Pick the odd one out.</p>
 <ul class="contains-task-list">
@@ -90,20 +100,16 @@
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. Coupling.</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(b)</p>
-<p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p></div></question></panel></div></panel></div></div></div></div></div></div></div></div>
+<p>Explanation: Law of Demeter, which aims to reduce coupling, is also known as ‘Don’t talk to strangers’ and ‘Principle of least knowledge’.</p></div></question></panel></div></panel></div></div></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../markbind/js/vue.min.js"></script>
-<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -127,5 +133,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

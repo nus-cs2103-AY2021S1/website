@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.15.2">
+    <meta name="generator" content="MarkBind 2.17.0">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Specifying Requirements: Use Cases: Writing Detailed Use Cases</title>
     <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
@@ -12,8 +12,10 @@
     <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
-    <link rel="stylesheet" href="../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../markbind/css/markbind.min.css"><script src="../../../../markbind/js/polyfill.min.js"></script>
+    <script src="../../../../markbind/js/vue.min.js"></script>
+    <script src="../../../../markbind/js/markbind.min.js"></script>
+    <script src="../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -25,12 +27,12 @@
 <p></p>
 <div>
 <div>
-<p><panel src="/website/book/specifyingRequirements/useCases/introduction/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/specifyingRequirements/useCases/introduction" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Requirements → Specifying Requirements → Use Cases → Introduction</span></p></template></panel>
-<panel src="/website/book/specifyingRequirements/useCases/identifying/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/specifyingRequirements/useCases/identifying" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Requirements → Specifying Requirements → Use Cases → Identifying</span></p></template></panel></p></div><p></p>
+<p><panel src="/website/book/specifyingRequirements/useCases/introduction/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/specifyingRequirements/useCases/introduction" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Requirements → Specifying Requirements → Use Cases → Introduction</span></p></template></panel>
+<panel src="/website/book/specifyingRequirements/useCases/identifying/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/specifyingRequirements/useCases/identifying" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Requirements → Specifying Requirements → Use Cases → Identifying</span></p></template></panel></p></div><p></p>
 <p><span class="dimmed"><strong><span>Requirements → Specifying Requirements → Use Cases →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="details"><span>Details</span><a class="fa fa-anchor" href="#details" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="details"><span id="details" class="anchor"></span><span>Details</span><a class="fa fa-anchor" href="#details" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>Writing use case steps</strong></p>
@@ -61,21 +63,21 @@
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> An example of how you can show a loop:</p>
 <div class="text-monospace">
-<p>Software System: Square game<br>
-Use case:  <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">Each use case can be given a unique identification for easier cross reference.</span> UC02 </span>  - Play a Game<br>
+<p>Software System: SquareGame<br>
+Use case:  <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content">Each use case can be given a unique identification for easier cross reference.</span> UC02 </span>  - Play a Game<br>
 Actors: Player (multiple players)</p>
 <ol>
 <li>A Player starts the game.</li>
 <li>SquareGame asks for player names.</li>
 <li>Each Player enters his own name.</li>
 <li>SquareGame shows the order of play.</li>
-<li>SquareGame prompts for the current Player to throw die.</li>
+<li>SquareGame prompts for the current Player to throw a die.</li>
 <li>Current Player adjusts the throw speed.</li>
 <li>Current Player triggers the die throw.</li>
-<li>Square Game shows the face value of the die.</li>
-<li>Square Game moves the Player's piece accordingly.<br>
+<li>SquareGame shows the face value of the die.</li>
+<li>SquareGame moves the Player's piece accordingly.<br>
 <mark>Steps 5-9 are repeated for each Player, and for as many rounds as required until a Player reaches the 100th square.</mark></li>
-<li>Square Game shows the Winner.</li></ol>
+<li>SquareGame shows the Winner.</li></ol>
 <p>Use case ends.</p></div></box></div>
 <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
@@ -85,7 +87,7 @@ Actors: Player (multiple players)</p>
 <div class="text-monospace">
 <p>System: Online Banking System (OBS)<br>
 Use case: UC23 - Transfer Money<br>
-Actor: User
+Actor: User<br>
 MSS:</p>
 <ol>
 <li>User chooses to transfer money.</li>
@@ -114,10 +116,10 @@ MSS:
 <pre>
 Extensions:
   3a. OBS detects an error in the entered data.
-    3a1. OBS requests for the correct data.
-    3a2. User enters new data
-    Steps 3a1-3a2 are repeated until the data entered are correct.
-    Use case resumes from step 4.
+      3a1. OBS requests for the correct data.
+      3a2. User enters new data.
+      Steps 3a1-3a2 are repeated until the data entered are correct.
+      Use case resumes from step 4.
   
   3b. User requests to effect the transfer in a future date.
       3b1. OBS requests for confirmation.
@@ -136,13 +138,13 @@ Extensions:
 </pre></box>
 <p>Note that the numbering style is not a universal rule but a widely used convention. Based on that convention,</p>
 <ul>
-<li>either of the extensions marked <code v-pre>3a.</code> and <code v-pre>3b.</code> can happen just after step <code v-pre>3</code> of the MSS.</li>
-<li>the extension marked as <code v-pre>*a.</code> can happen at any step (hence, the <code v-pre>*</code>).</li></ul>
+<li>either of the extensions marked <code class="hljs inline no-lang" v-pre>3a.</code> and <code class="hljs inline no-lang" v-pre>3b.</code> can happen just after step <code class="hljs inline no-lang" v-pre>3</code> of the MSS.</li>
+<li>the extension marked as <code class="hljs inline no-lang" v-pre>*a.</code> can happen at any step (hence, the <code class="hljs inline no-lang" v-pre>*</code>).</li></ul>
 <p>When separating extensions from the MSS, keep in mind that the <strong>MSS should be self-contained</strong>. That is, the MSS should give us a complete usage scenario.</p>
 <p>Also note that it is not useful to mention events such as power failures or system crashes as extensions because the system cannot function beyond such catastrophic failures.</p>
 <img src="/website/book/specifyingRequirements/useCases/details/images/extension.png" height="250">
 <p></p>
-<p>In use case diagrams you can use the <code v-pre>&lt;&lt;extend&gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p></div>
+<p>In use case diagrams you can use the <code class="hljs inline no-lang" v-pre>&lt;&lt;extend&gt;&gt;</code> arrows to show extensions. Note the direction of the arrow is from the extension to the use case it extends and the arrow uses a dashed line.</p></div>
 <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
 <p><strong>A use case can <mark>include</mark> another use case.</strong> <ins>Underlined text</ins> is commonly used to show an inclusion of a use case.</p>
@@ -163,7 +165,7 @@ Use case ends.</li></ol></li></ul></div></box>
 <ul>
 <li>when you don't want to clutter a use case with too many low-level steps.</li>
 <li>when a set of steps is repeated in multiple use cases.</li></ul>
-<p>You use a dotted arrow and an <code v-pre>&lt;&lt;include&gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code v-pre>&lt;&lt;extend&gt;&gt;</code> arrows.</p>
+<p>You use a dotted arrow and an <code class="hljs inline no-lang" v-pre>&lt;&lt;include&gt;&gt;</code> annotation to show use case inclusions in a use case diagram. Note how the arrow direction is different from the <code class="hljs inline no-lang" v-pre>&lt;&lt;extend&gt;&gt;</code> arrows.</p>
 <p><img src="/website/book/specifyingRequirements/useCases/details/images/inclusion.png" height="250"></p><p></p><p></p></div>
 <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
@@ -191,7 +193,7 @@ Actor: User<br>
 Preconditions: User is logged in.<br>
 <mark>Guarantees:</mark></p>
 <ul>
-<li>Money will be deducted from the source account only if the transfer to the destination account is successful</li>
+<li>Money will be deducted from the source account only if the transfer to the destination account is successful.</li>
 <li>The transfer will not result in the account balance going below the minimum balance required.</li></ul>
 <p>MSS:</p>
 <ol>
@@ -201,23 +203,23 @@ Preconditions: User is logged in.<br>
 <p></p></div></div>
 <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> EZ-Link top-up use case</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> EZ-Link top-up use case</p></template>
 <question has-input="true">
-<p>Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing  <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">A type of a cash card topup machine</span>EZ-Link machine</span> operates because it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.</p>
+<p>Complete the following use case (MSS, extensions, etc.). Note that you should not blindly follow how the existing  <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">A type of a cash card topup machine</span>EZ-Link machine</span> operates because it will prevent you from designing a better system.  You should consider all possible extensions without complicating the use case too much.</p>
 <box>
 <ul>
 <li>System: EZ-Link machine</li>
-<li>Use case: UC2 top-up EZ-Link card</li>
+<li>Use case: UC01 top-up EZ-Link card</li>
 <li>Actor: EZ-Link card user</li></ul></box>
 <div slot="answer" class="algolia-no-index">
 <box>
   <div>
     <ul>
       <li>System: EZ-Link machine (those found at MRTs)</li>
-      <li>Use case: UC2 top-up EZ-Link card</li>
+      <li>Use case: UC01 top-up EZ-Link card</li>
       <li>Actor: EZ-Link card user</li>
       <li>Preconditions: All hardware in working order.</li>
       <li>Guarantees: MSS → the card will be topped-up.</li>
@@ -278,7 +280,7 @@ Preconditions: User is logged in.<br>
 <p>Note: UC02 can be written along similar lines.</p></box></div></question></panel></div>
   <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LearnSys – reply to post use case</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> LearnSys – reply to post use case</p></template>
 <question has-input="true">
 <p>Complete the following use case (MSS, extensions, etc.).</p>
 <box>
@@ -332,7 +334,7 @@ Preconditions: User is logged in.<br>
             <ol class="custom-bullet-list">
               <li>...</li></ol></li></ol></li></ul></div></box></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Parts of a use case descriptions</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Parts of a use case description</p></template>
 <question>
 <p>Which of these cannot appear as part of a use case description?</p>
 <ul class="contains-task-list">
@@ -349,13 +351,13 @@ Preconditions: User is logged in.<br>
 <p>Explanation: Performance requirements are non-functional requirements. They are not captured in use cases.</p></div></question></panel></div>
   <div>
 <link rel="stylesheet" href="/website/book/css/common.css">
-<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What’s wrong with this use case?</p></template>
+<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What’s wrong with this use case?</p></template>
 <question>
 <p>Identify problems with this use case description.</p>
 <div>
   <ul>
     <li>System: EZ-Link machine (those found at MRTs)</li>
-    <li>Use case: UC2 top-up EZ-Link card</li>
+    <li>Use case: UC01 top-up EZ-Link card</li>
     <li>Actor: EZ-Link card user</li>
     <li>Preconditions: All hardware in working order.</li>
     <li>Guarantees: If MSS completes at least until step 7, the card will be topped-up.</li>
@@ -386,20 +388,16 @@ Preconditions: User is logged in.<br>
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> e. ‘Use case ends’ is duplicated.</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>None.</p>
-<p>Explanation: Catastrophic failures such as ‘system crash’ need not be included in a use case. A use case is not supposed to contain UI details. Post conditions are optional. It is not a problem to have multiple exit points for a use case.</p></div></question></panel></div></panel></div></div></div></div></div></div></div></div>
+<p>Explanation: Catastrophic failures such as ‘system crash’ need not be included in a use case. A use case is not supposed to contain UI details. Post conditions are optional. It is not a problem to have multiple exit points for a use case.</p></div></question></panel></div></panel></div></div></div></div></div></div></div>
+<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
         </div>
     </div>
 </body>
-<script src="../../../../markbind/js/vue.min.js"></script>
-<script src="../../../../markbind/js/components.min.js"></script>
 <script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
-<script src="../../../../markbind/js/polyfill.min.js"></script>
-<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  const enableSearch = true
+  MarkBind.setupWithSearch()
 </script>
-<script src="../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -423,5 +421,5 @@ Preconditions: User is logged in.<br>
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../markbind/layouts/default/scripts.js"></script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
 </html>

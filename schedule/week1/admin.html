@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Week 1 - Admin Info</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
-    <script src="../../markbind/js/vue.min.js"></script>
-    <script src="../../markbind/js/markbind.min.js"></script>
-    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
@@ -71,10 +69,8 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <nav>
@@ -87,27 +83,27 @@
 <li class="page-item"><a class="page-link" href="/website/schedule/week1/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
 <li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week2"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
 <p></p>
-<h1 id="week-1-mon-aug-10th-admin-info"><span id="week-1-mon-aug-10th-admin-info" class="anchor"></span>Week 1 <small><small><span class="dimmed">[Mon, Aug 10th]</span> - Admin Info</small></small><a class="fa fa-anchor" href="#week-1-mon-aug-10th-admin-info" onclick="event.stopPropagation()"></a></h1>
+<h1 id="week-1-mon-aug-10th-admin-info">Week 1 <small><small><span class="dimmed">[Mon, Aug 10th]</span> - Admin Info</small></small><span id="week-1-mon-aug-10th-admin-info" class="anchor"></span><a class="fa fa-anchor" href="#week-1-mon-aug-10th-admin-info" onclick="event.stopPropagation()"></a></h1>
 <box type="info" dismissible>
 <p>Admin info relevant to the week will appear in this tab.
 </p></box><p></p>
 <div id="main">
 <div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
 <ol>
-<li><span>Submit pre-lecture quiz</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Mon, Aug 17th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit pre-lecture quiz</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Mon, Aug 17th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>Set up the tools</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the lecture</span></span></li>
-<li><span>Submit the pre-module survey</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Fri, Aug 14th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit the pre-module survey</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Fri, Aug 14th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>Learn about the module</span></li>
 <li><span>Attend the first lecture</span></li></ol></div>
 <div id="body">
 <div></div>
 <p></p>
-<h4 id="1-submit-pre-lecture-quiz-mon-aug-17th-2359"><span id="1-submit-pre-lecture-quiz-mon-aug-17th-2359" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Submit pre-lecture quiz</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Mon, Aug 17th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><a class="fa fa-anchor" href="#1-submit-pre-lecture-quiz-mon-aug-17th-2359" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-submit-pre-lecture-quiz-mon-aug-17th-2359"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Submit pre-lecture quiz</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Mon, Aug 17th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-submit-pre-lecture-quiz-mon-aug-17th-2359" class="anchor"></span><a class="fa fa-anchor" href="#1-submit-pre-lecture-quiz-mon-aug-17th-2359" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
-<li><strong>Read prerequisite  <a href="/website/schedule/week1/topics.html"><span class="border bg-white"> <span><span aria-hidden="true" class="fas fa-book"></span></span> Topics </span></a></strong> allocated for week 1. <strong>Submit <code class="hljs inline no-lang" v-pre>Week 1 Quiz</code></strong> (on LumiNUS) to test your knowledge of those topics. Ideally, finish the quiz before the first lecture, latest by the given deadline. The quiz is counted for participation.</li></ul>
+<li><strong>Read prerequisite  <a href="/website/schedule/week1/topics.html"><span class="border bg-white"> <span><span aria-hidden="true" class="fas fa-book"></span></span> Topics </span></a></strong> allocated for week 1. <strong>Submit <code v-pre>Week 1 Quiz</code></strong> (on LumiNUS) to test your knowledge of those topics. Ideally, finish the quiz before the first lecture, latest by the given deadline. The quiz is counted for participation.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Participation</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Participation</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><strong>To receive full 5 marks allocated for participation, meet the criteria <span class="badge badge-pill badge-info p-2"><big><big>A</big></big></span>, <span class="badge badge-pill badge-info p-2"><big><big>B</big></big></span>, and <span class="badge badge-pill badge-info p-2"><big><big>C</big></big></span>.</strong></p>
 <p><strong><strong><span class="badge badge-pill badge-info p-2"><big><big>A</big></big></span> Earned more than half of weekly participation points in at least 10 weeks.</strong></strong></p>
@@ -139,14 +135,14 @@
 <ul>
 <li>-1 for each <em>professional conduct</em> criterion in which you score below average (based on the average of ratings received).</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Conduct) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Conduct) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' conduct in the project and during tutorials,</strong></p>
 <ul>
-<li>Evaluated based on the following criteria, on a scale <code class="hljs inline no-lang" v-pre>Poor</code>/<code class="hljs inline no-lang" v-pre>Below Average</code>/<code class="hljs inline no-lang" v-pre>Average</code>/<code class="hljs inline no-lang" v-pre>Good</code>/<code class="hljs inline no-lang" v-pre>Excellent</code>:</li></ul>
+<li>Evaluated based on the following criteria, on a scale <code v-pre>Poor</code>/<code v-pre>Below Average</code>/<code v-pre>Average</code>/<code v-pre>Good</code>/<code v-pre>Excellent</code>:</li></ul>
 <div class="indented-level2">
 <box background-color="white" border-color="grey" border-left-color="#28a745">
-<h4 id="peer-evaluation-criteria-professional-conduct"><span id="peer-evaluation-criteria-professional-conduct" class="anchor"></span>Peer Evaluation Criteria: Professional Conduct<a class="fa fa-anchor" href="#peer-evaluation-criteria-professional-conduct" onclick="event.stopPropagation()"></a></h4>
+<h4 id="peer-evaluation-criteria-professional-conduct">Peer Evaluation Criteria: Professional Conduct<span id="peer-evaluation-criteria-professional-conduct" class="anchor"></span><a class="fa fa-anchor" href="#peer-evaluation-criteria-professional-conduct" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Professional Communication</strong> :
 <ul>
@@ -165,15 +161,15 @@
 <ul>
 <li>No penalty for scoring low on <em>competency criteria</em>.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Competency) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Competency) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The competency of the team member demonstrated in the project and during the tutorials,</strong></p>
 <ul>
 <li>Considered only for bonus marks, A+ grades, and tutor recruitment</li>
-<li>Evaluated based on the following criteria, on a scale <code class="hljs inline no-lang" v-pre>Poor</code>/<code class="hljs inline no-lang" v-pre>Below Average</code>/<code class="hljs inline no-lang" v-pre>Average</code>/<code class="hljs inline no-lang" v-pre>Good</code>/<code class="hljs inline no-lang" v-pre>Excellent</code>:</li></ul>
+<li>Evaluated based on the following criteria, on a scale <code v-pre>Poor</code>/<code v-pre>Below Average</code>/<code v-pre>Average</code>/<code v-pre>Good</code>/<code v-pre>Excellent</code>:</li></ul>
 <div class="indented-level2">
 <box background-color="white" border-color="grey" border-left-color="#28a745">
-<h4 id="peer-evaluation-criteria-competency"><span id="peer-evaluation-criteria-competency" class="anchor"></span>Peer Evaluation Criteria: Competency<a class="fa fa-anchor" href="#peer-evaluation-criteria-competency" onclick="event.stopPropagation()"></a></h4>
+<h4 id="peer-evaluation-criteria-competency">Peer Evaluation Criteria: Competency<span id="peer-evaluation-criteria-competency" class="anchor"></span><a class="fa fa-anchor" href="#peer-evaluation-criteria-competency" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Technical Competency</strong>: Able to gain competency in all the required tools and techniques.</li>
 <li><strong>Mentoring skills</strong>: Helps others when possible. Able to mentor others well.</li>
@@ -186,7 +182,7 @@
 <p><strong><strong><span class="badge badge-pill badge-info p-2"><big><big>C</big></big></span> Tutorial attendance/participation not too low</strong></strong></p>
 <div class="indented">
 <p>Low attendance/participation can affect participation marks directly (i.e., attended fewer than 7) or indirectly (i.e., it might result in low peer evaluation ratings).</p></div>
-<panel type="info" expanded no-close no-switch><template slot="header"><p><strong>+ Bonus Marks</strong></p></template>
+<panel type="info" expanded no-close no-switch><template slot="_header"><p><strong>+ Bonus Marks</strong></p></template>
 <p>In addition, you can receive bonus marks in the following ways. Bonus marks can be used to top up your participation marks <mark>but only if your marks from the above falls below 5</mark>.</p>
 <ul>
 <li>[For lecture participation] Participated in lecture activities (e.g., in lecture polls/quizzes) in at least 10 lectures: 1 mark</li>
@@ -198,16 +194,16 @@
 <li>Alicia earned 1/2, 3/5, <ins>2/5</ins>, 5/5, 5/5, 5/5, 5/5, 5/5, 5/5, 5/5, 4/5, 5/5 in the first 12 weeks. As she received at least half of the points in 11 of the weeks, she gets 5 participation marks. Bonus marks are not applicable as she has full marks already.</li>
 <li>Benjamin managed to get at least half of the participation points in 9 weeks only, which gives him 5-1 = 4 participation marks. But he participated in 10 lectures, and hence get a bonus mark to make it 5/5.</li>
 <li>Chun Ming met the participation points bar in 8 weeks only, giving him 5-2 = 3 marks. He lost 2 more marks because he received multiple negative ratings for two criteria, giving him 1/5 participation marks.</li></ul>
-<panel type="info" expanded no-close no-switch id="where-to-find-your-participation-marks-progress"><template slot="header"><h5 id="where-to-find-your-participation-marks-progress"><span id="where-to-find-your-participation-marks-progress" class="anchor"></span>Where to find your participation marks progress<a class="fa fa-anchor" href="#where-to-find-your-participation-marks-progress" onclick="event.stopPropagation()"></a></h5></template>
+<panel type="info" expanded no-close no-switch id="where-to-find-your-participation-marks-progress"><template slot="_header"><h5 id="where-to-find-your-participation-marks-progress">Where to find your participation marks progress<span id="where-to-find-your-participation-marks-progress" class="anchor"></span><a class="fa fa-anchor" href="#where-to-find-your-participation-marks-progress" onclick="event.stopPropagation()"></a></h5></template>
 <p><strong>Your participation progress can be tracked in <a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html">this page</a></strong> from week 3 onward.
 </p></panel><p></p></div></panel></div><p></p></div>
 <p></p>
-<h4 id="2-set-up-the-tools-before-the-lecture"><span id="2-set-up-the-tools-before-the-lecture" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span>Set up the tools</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the lecture</span></span><a class="fa fa-anchor" href="#2-set-up-the-tools-before-the-lecture" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-set-up-the-tools-before-the-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span>Set up the tools</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the lecture</span></span><span id="2-set-up-the-tools-before-the-lecture" class="anchor"></span><a class="fa fa-anchor" href="#2-set-up-the-tools-before-the-lecture" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li>Follow the <span class="border pr-1 pl-1" style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation</strong></span> instructions of the following tools.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Programming Language</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Programming Language</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <table class="two-column-content">
 <tr>
@@ -226,14 +222,14 @@ The exam expects you to know Java to the extent that you should be familiar with
 <p>We require you to use <strong>Java 11</strong> (the Oracle version or the OpenJDK version) for all module work. It is your duty to ensure the code you write (and executables you produce) are compatible with that version of Java. <mark>Any incompatibilities will be considered as bugs</mark>.
 </p></box><p></p></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - GitHub</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - GitHub</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h2 id="tool-github-for-code-hosting"><span id="tool-github-for-code-hosting" class="anchor"></span>Tool: GitHub (for code hosting)<a class="fa fa-anchor" href="#tool-github-for-code-hosting" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tool-github-for-code-hosting">Tool: GitHub (for code hosting)<span id="tool-github-for-code-hosting" class="anchor"></span><a class="fa fa-anchor" href="#tool-github-for-code-hosting" onclick="event.stopPropagation()"></a></h2>
 <p>You are <mark><em>required to</em> use GitHub</mark> as the hosting and collaboration platform of your project (i.e., to hold the Code repository, Issue Tracker, etc.).</p>
 <box>
 <p><span style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation</strong>:</span></p>
 <p>Create a GitHub account (if you don't have one yet), as explained in the panel below.</p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Appendix E - GitHub: Creating an Account</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Appendix E - GitHub: Creating an Account</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p>Create a personal GitHub account if you don't have one yet.</p>
 <ol>
@@ -243,8 +239,8 @@ The exam expects you to know Java to the extent that you should be familiar with
 <p>Strongly recommended: Complete your GitHub profile. In particular,</p>
 <ul>
 <li>Specify your full name.</li>
-<li>Upload a profile photo that matches <trigger trigger="click" for="modal:creatingGitHubAccount-photoCriteria">our requirements</trigger>.</li></ul>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Why am I being encouraged to complete my GitHub profile?</span></p></template>
+<li>Upload a profile photo that matches <span trigger="click" for="modal:creatingGitHubAccount-photoCriteria" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:creatingGitHubAccount-photoCriteria'].show()" class="trigger-click">our requirements</span>.</li></ul>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Why am I being encouraged to complete my GitHub profile?</span></p></template>
 <p>The GitHub profile is useful for the tutors and classmates to identify you. If you are reluctant to share your info in your long-term GitHub account, you can remove those details after the module is over or create a separate GitHub account just for the module.</p></panel></li>
 <li>
 <p><mark>You are discouraged from changing your GitHub username during the semester/exam/grading period</mark> as it can cause our auto-grading scripts to miss your GitHub activities. If you do change your GitHub username during that period, please let us know immediately.</p></li></ol>
@@ -255,26 +251,26 @@ The exam expects you to know Java to the extent that you should be familiar with
 <p>If you are uncomfortable posting your photo due to security reasons, you can post a lower resolution image so that it is hard for someone to misuse that image for fraudulent purposes. If you are concerned about privacy, you may use <a href="https://en.wikipedia.org/wiki/File:Portrait_placeholder.png">a placeholder image</a> in place of the photo in module-related documents that are publicly visible.</p></div></b-modal></div></panel></box>
 <p><strong>More info</strong>: See <a href="/website/admin/appendixE-gitHub.html">Appendix E - Using GitHub</a>.</p></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - RCS</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - RCS</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h2 id="tool-git-for-revision-control"><span id="tool-git-for-revision-control" class="anchor"></span>Tool: Git (for revision control)<a class="fa fa-anchor" href="#tool-git-for-revision-control" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tool-git-for-revision-control">Tool: Git (for revision control)<span id="tool-git-for-revision-control" class="anchor"></span><a class="fa fa-anchor" href="#tool-git-for-revision-control" onclick="event.stopPropagation()"></a></h2>
 <p>You are <mark><em>required to</em> use Git</mark>. Other revision control software are not allowed. The recommended GUI client for Git is <a href="https://www.sourcetreeapp.com/">SourceTree</a>, but you may use any other, or none.</p>
 <box>
 <p><span style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation:</strong></span></p>
 <p><strong>Install Git and a Git GUI client</strong> on your computer.<br>
 <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> SourceTree comes bundled with Git i.e., if you install SourceTree, you get both Git and a GUI client in one shot. If you are already comfortable using Git command line, you need not install/use a GUI client.</p>
 <div id="git-username">
-<p><strong>Set Git <code class="hljs inline no-lang" v-pre>user.name</code></strong>: We use various tools to analyze your code. For us to be able to identify your commits, we encourage you to <mark>set your Git <code class="hljs inline no-lang" v-pre>user.name</code> in all computers you use</mark> to a sensible string that uniquely identifies you. For example, <mark>you can set it to your GitHub username or your full name</mark>. If this user name is not set properly or if you use multiple usernames for Git, our grading scripts might miss some of your work.</p>
+<p><strong>Set Git <code v-pre>user.name</code></strong>: We use various tools to analyze your code. For us to be able to identify your commits, we encourage you to <mark>set your Git <code v-pre>user.name</code> in all computers you use</mark> to a sensible string that uniquely identifies you. For example, <mark>you can set it to your GitHub username or your full name</mark>. If this user name is not set properly or if you use multiple usernames for Git, our grading scripts might miss some of your work.</p>
 <p>After installing Git in a computer, you can set the Git username as follows:</p>
 <ol>
 <li>Open a command window that can run Git commands (e.g., Git bash window)</li>
-<li>Run the command <code class="hljs inline no-lang" v-pre>git config --global user.name YOUR_GITHUB_USERNAME</code> (omit the <code class="hljs inline no-lang" v-pre>--global</code> flag to limit the setting to the current repo only)<br>
-e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name JohnDoe</code></li></ol>
+<li>Run the command <code v-pre>git config --global user.name YOUR_GITHUB_USERNAME</code> (omit the <code v-pre>--global</code> flag to limit the setting to the current repo only)<br>
+e.g., <code v-pre>git config --global user.name JohnDoe</code></li></ol>
 <p>More info about setting Git username is <a href="https://help.github.com/articles/setting-your-username-in-git/">here</a>.</p></div></box></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - IDE</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - IDE</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h2 id="tool-intellij-ide"><span id="tool-intellij-ide" class="anchor"></span>Tool: Intellij IDE<a class="fa fa-anchor" href="#tool-intellij-ide" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tool-intellij-ide">Tool: Intellij IDE<span id="tool-intellij-ide" class="anchor"></span><a class="fa fa-anchor" href="#tool-intellij-ide" onclick="event.stopPropagation()"></a></h2>
 <p>You are recommended to use <a href="https://www.jetbrains.com/idea/">Intellij IDEA</a> for module-related programming work. While the use of Intellij is not compulsory, note that module materials are optimized for Intellij. Use other IDEs at your own risk.</p>
 <box>
 <p><span style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation:</strong></span></p>
@@ -283,20 +279,20 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li>If you have an older version of the IDE, we recommend updating to the latest version.
 </li></ul></box></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - Communication</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Tools - Communication</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h2 id="tools-for-communication"><span id="tools-for-communication" class="anchor"></span>Tools: for communication<a class="fa fa-anchor" href="#tools-for-communication" onclick="event.stopPropagation()"></a></h2>
-<h5 id="forum-for-longer-running-discussions"><span id="forum-for-longer-running-discussions" class="anchor"></span><span aria-hidden="true" class="fas fa-comment"></span> Forum <span class="dimmed">(for longer-running discussions)</span><a class="fa fa-anchor" href="#forum-for-longer-running-discussions" onclick="event.stopPropagation()"></a></h5>
+<h2 id="tools-for-communication">Tools: for communication<span id="tools-for-communication" class="anchor"></span><a class="fa fa-anchor" href="#tools-for-communication" onclick="event.stopPropagation()"></a></h2>
+<h5 id="forum-for-longer-running-discussions"><span aria-hidden="true" class="fas fa-comment"></span> Forum <span class="dimmed">(for longer-running discussions)</span><span id="forum-for-longer-running-discussions" class="anchor"></span><a class="fa fa-anchor" href="#forum-for-longer-running-discussions" onclick="event.stopPropagation()"></a></h5>
 <ul>
-<li><strong>The preferred channels for module-related communication is the <code class="hljs inline no-lang" v-pre>forum</code> on GitHub</strong> <mark><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">https://github.com/nus-cs2103-AY2021S1/forum/issues</a></mark> (not the LumiNUS forum)</li>
+<li><strong>The preferred channels for module-related communication is the <code v-pre>forum</code> on GitHub</strong> <mark><a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">https://github.com/nus-cs2103-AY2021S1/forum/issues</a></mark> (not the LumiNUS forum)</li>
 <li>When communicating with instructors, use the forum. Use private channels (e.g., emails, private messages, face-to-face, private chat groups) only when the forum is not suitable. <span class="dimmed">Rationale: 1. More classmates can benefit from the discussions, 2. It is also safer because the prof can monitor information you receive for accuracy</span>.</li></ul>
 <div tags="m--cs2103 m-cs2113">
 <ul>
-<li>You are encouraged to help others in the forum (e.g., share tips, help with technical problems). <mark>We consider such sharing when giving out <code class="hljs inline no-lang" v-pre>A+</code> grades and when recruiting tutors.</mark></li></ul></div>
+<li>You are encouraged to help others in the forum (e.g., share tips, help with technical problems). <mark>We consider such sharing when giving out <code v-pre>A+</code> grades and when recruiting tutors.</mark></li></ul></div>
 <box>
 <p><span style="color:purple"><strong><span aria-hidden="true" class="fas fa-hard-hat"></span> Preparation:</strong></span></p>
 <p>We encourage all to <mark><em>watch</em> <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">the forum</a></mark> to get alerts when new issues/comments are posted <a href="https://user-images.githubusercontent.com/1673303/44647915-0c761a80-aa12-11e8-98ac-2deb50532643.png" target="_self"><img src="https://user-images.githubusercontent.com/1673303/44647915-0c761a80-aa12-11e8-98ac-2deb50532643.png" alt class="img-fluid"></a></p></box><p></p>
-<h5 id="gitter-for-quick-chats"><span id="gitter-for-quick-chats" class="anchor"></span><span aria-hidden="true" class="fab fa-gitter"></span> Gitter <span class="dimmed">(for quick chats)</span><a class="fa fa-anchor" href="#gitter-for-quick-chats" onclick="event.stopPropagation()"></a></h5>
+<h5 id="gitter-for-quick-chats"><span aria-hidden="true" class="fab fa-gitter"></span> Gitter <span class="dimmed">(for quick chats)</span><span id="gitter-for-quick-chats" class="anchor"></span><a class="fa fa-anchor" href="#gitter-for-quick-chats" onclick="event.stopPropagation()"></a></h5>
 <ul>
 <li>The module Gitter channel is <a href="https://gitter.im/nus-cs2103-AY2021S1/community">https://gitter.im/nus-cs2103-AY2021S1/community</a>.</li>
 <li>We opted to use Gitter because it is GitHub-friendly <span class="dimmed">(you can use your GitHub account to access Gitter)</span> and programmer-friendly <span class="dimmed">(e.g., supports code syntax highlighting)</span>.</li>
@@ -309,18 +305,18 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 </li></ul></box></div></panel></div><p></p>
 </div>
 <p></p>
-<h4 id="3-submit-the-pre-module-survey-fri-aug-14th-2359"><span id="3-submit-the-pre-module-survey-fri-aug-14th-2359" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span>Submit the pre-module survey</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Fri, Aug 14th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><a class="fa fa-anchor" href="#3-submit-the-pre-module-survey-fri-aug-14th-2359" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-submit-the-pre-module-survey-fri-aug-14th-2359"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span>Submit the pre-module survey</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Fri, Aug 14th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="3-submit-the-pre-module-survey-fri-aug-14th-2359" class="anchor"></span><a class="fa fa-anchor" href="#3-submit-the-pre-module-survey-fri-aug-14th-2359" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li><strong>Submit the pre-module survey <mark>(compulsory)</mark></strong><br>
 <em>Pre-Module Survey</em> will be available on LumiNUS <strong>Week 1 Monday - Friday 2359</strong>. <span class="dimmed">We need all of you to submit it because it tells us some important information about you, especially your GitHub username.</span></li></ul></div>
 <p></p>
-<h4 id="4-learn-about-the-module"><span id="4-learn-about-the-module" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span>Learn about the module</span><a class="fa fa-anchor" href="#4-learn-about-the-module" onclick="event.stopPropagation()"></a></h4>
+<h4 id="4-learn-about-the-module"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span>Learn about the module</span><span id="4-learn-about-the-module" class="anchor"></span><a class="fa fa-anchor" href="#4-learn-about-the-module" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li>Read the following admin info about the module.</li></ul>
 <div class="indented-level2">
-<panel type="danger" class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module expectations and the <mark>star rating system</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="danger" class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module expectations and the <mark>star rating system</mark></strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p class="lead">Here are some important expectations of the module from you.</p>
 
@@ -330,8 +326,8 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <p>In particular, you may want to <strong>have a look at the new Java 8 features</strong> such as <em>streams</em>, <em>lambdas</em>, <em>Optionals</em>, that may not have been covered in previous Java modules.</p>
 <p>CS2103 students: <mark>This module assumes a reasonable prior knowledge of Java and OOP</mark> because most students taking this module have taken two Java modules before. If you are totally new to Java, you may be better off switching to CS2113 (Software Engineering &amp; Object-Oriented Programming) instead.
 </p></span><p></p>
-<h2 id="workload"><span id="workload" class="anchor"></span>Workload<a class="fa fa-anchor" href="#workload" onclick="event.stopPropagation()"></a></h2>
-<p>As 70% of this module is based on CA (see <trigger trigger="click" for="modal:expectations-gradeBreakdown">grade breakdown</trigger>), it can appear to be <em>heavy</em>. However, <strong>it is not expected that you will spend more time on this module than its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., if this module is core for you, it should not take more time than other core modules at the same level in your program</span>peer modules</span></strong>.</p>
+<h2 id="workload">Workload<span id="workload" class="anchor"></span><a class="fa fa-anchor" href="#workload" onclick="event.stopPropagation()"></a></h2>
+<p>As 70% of this module is based on CA (see <span trigger="click" for="modal:expectations-gradeBreakdown" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:expectations-gradeBreakdown'].show()" class="trigger-click">grade breakdown</span>), it can appear to be <em>heavy</em>. However, <strong>it is not expected that you will spend more time on this module than its <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., if this module is core for you, it should not take more time than other core modules at the same level in your program</span>peer modules</span></strong>.</p>
 <ul>
 <li>Note that the <strong>module contains more things than a typical students can do</strong>, in order to provide enough things for even the strongest students to learn as much as they wish to.</li>
 <li>This means it is <mark>perfectly OK if you don't have time to learn everything the module offers</mark>. Control your workload based on time you spend for the module in a week e.g., 1-1.5 days per week.</li>
@@ -339,7 +335,7 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <b-modal id="modal:expectations-gradeBreakdown" hide-footer size="lg" modal-class="mb-zoom" ref="modal:expectations-gradeBreakdown" class="algolia-no-index"><template slot="modal-title">Grade breakdown</template>
   <pic src="/website/admin/gradeBreakdown.png"></pic></b-modal>
 <div id="starRatingSystem">
-<h4 id="star-rating-system"><span id="star-rating-system" class="anchor"></span>Star Rating System<a class="fa fa-anchor" href="#star-rating-system" onclick="event.stopPropagation()"></a></h4>
+<h4 id="star-rating-system">Star Rating System<span id="star-rating-system" class="anchor"></span><a class="fa fa-anchor" href="#star-rating-system" onclick="event.stopPropagation()"></a></h4>
 <div class="indented">
 <p class="lead"><span>We use a <em>star rating system</em> to indicate the importance of module components. <strong>Start with things that are rated one-star and progress to things with more stars.</strong> Things rated four stars are optional.</span></p>
 <p><strong>Star ratings for topics</strong> (and textbook sections):</p>
@@ -347,7 +343,7 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li><strong>One-star topics</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> are essential to keep up with the module. We recommend you to <mark>learn these topics if you want to pass the module</mark> (i.e. up to a <strong>C</strong> grade).</li>
 <li><strong>Two-stars topics</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> can get you up to a <strong>B+</strong>.</li>
 <li><strong>Three-stars topics</strong> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> can get you up to an <strong>A</strong>.</li>
-<li><strong>Four-stars topics</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span> can push you beyond the limits of the module, and help you get into a level above those who merely limit themselves to the topics of the module. They <mark>are not <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content"><em>examinable</em> here means <em>can affect the grade</em> during evaluation of various components, not necessarily limited to the final exam (if any)</span>examinable</span></mark>.</li></ul>
+<li><strong>Four-stars topics</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span> can push you beyond the limits of the module, and help you get into a level above those who merely limit themselves to the topics of the module. They <mark>are not <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content"><em>examinable</em> here means <em>can affect the grade</em> during evaluation of various components, not necessarily limited to the final exam (if any)</span>examinable</span></mark>.</li></ul>
 <span tags="m--cs2103 m--tic2002 m--tic4001">
 <ul>
 <li>Topics marked with two <span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> icons e.g., <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>,<span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>,<span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> are relevant topics you are expected to have learned in prerequisite modules. They are given for reference, but <mark>are examinable</mark>. The number of stars indicates the progression of topics, similar to the star rating system above i.e., one-star prerequisite topics are the most basic and the most important. four-star pre-requisite topics can be ignored without affecting CAP.
@@ -357,25 +353,25 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <ul>
 <li>The module uses a similar star rating system to indicate the importance of other info in this website. i.e., information rated as one-star are the most essential. <mark>Info rated four stars are non-essential and can be ignored</mark> without affecting your ability to follow the module.</li></ul></div></div></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type="danger" class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Using this website [essential info]</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="danger" class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Using this website [essential info]</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> The <span><a href="/website/schedule/index.html">Schedule page</a></span> is your main source of information for CS2103/T. You will need to refer to it weekly. For an overview of the full schedule, refer to the <a href="/website/schedule/timeline.html">Full Timeline</a> page.</p>
 <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> More details for the upcoming weeks will be added as the weeks progress. In general, <mark>information given for more than 1 week into the future should be treated as <em>tentative</em></mark>.</p>
 <div>
-<h3 id="browser-compatibility"><span id="browser-compatibility" class="anchor"></span>Browser compatibility<a class="fa fa-anchor" href="#browser-compatibility" onclick="event.stopPropagation()"></a></h3>
+<h3 id="browser-compatibility">Browser compatibility<span id="browser-compatibility" class="anchor"></span><a class="fa fa-anchor" href="#browser-compatibility" onclick="event.stopPropagation()"></a></h3>
 <p>Most of this will work on most mainstream Browsers, but <mark>embedded slides are best viewed using Chrome</mark>.</p></div>
 <div>
-<h3 id="information-layers"><span id="information-layers" class="anchor"></span>Information layers<a class="fa fa-anchor" href="#information-layers" onclick="event.stopPropagation()"></a></h3>
+<h3 id="information-layers">Information layers<span id="information-layers" class="anchor"></span><a class="fa fa-anchor" href="#information-layers" onclick="event.stopPropagation()"></a></h3>
 <p>This book tries to <em>layer</em> information so that readers can decide to omit less important layers if they wish to.</p>
 <p><strong>More important information are in bold</strong> or <mark>highlighted</mark> while <span class="dimmed">less important information are dimmed</span> or in collapsed panels such as the below.</p>
 <box>
-<panel minimized class="algolia-no-index"><template slot="header"><p>Some less important info in a minimized panel</p></template>
+<panel minimized class="algolia-no-index"><template slot="_header"><p>Some less important info in a minimized panel</p></template>
 <p>Less important info</p>
 <p></p></panel><p></p><p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Some less important info in a boarder-less panel</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Some less important info in a boarder-less panel</span></p></template>
 <p>Less important info</p>
 <p></p></panel><p></p><p></p>
-<panel class="algolia-no-index"><template slot="header"><p><span class="dimmed">Some less important info in a panel</span></p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Some less important info in a panel</span></p></template>
 <p>Less important info</p>
 <p></p></panel><p></p><p></p></box>
 <p><strong>Tabs indicate alternative formats of the same content</strong> (e.g. video vs text). You can choose the one you like and ignore the other tabs.</p>
@@ -385,18 +381,18 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <p>Some textual description of X</p></tab>
   <tab class="algolia-no-index"><template slot="_header"><span><span aria-hidden="true" class="glyphicon glyphicon-facetime-video"></span></span></template>
 <p>Video describing X</p></tab></tabs></box>
-<p><strong>Dotted underlines indicate <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content">some additional info</span>tool tips</span></strong> (activated by hovering over it) and <strong>dashed underlines indicate <trigger for="modal:modal-example" trigger="click">modal windows</trigger></strong> (activated by clicking) containing additional information.</p>
-<span id="pop:tooltip-example" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="header">Tooltip Example</span>
-  <div data-mb-slot-name="content">
+<p><strong>Dotted underlines indicate <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content">some additional info</span>tool tips</span></strong> (activated by hovering over it) and <strong>dashed underlines indicate <span for="modal:modal-example" trigger="click" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:modal-example'].show()" class="trigger-click">modal windows</span></strong> (activated by clicking) containing additional information.</p>
+<span id="pop:tooltip-example" placement="top" data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="header">Tooltip Example</span>
+  <div data-mb-html-for="content">
     Additional information
   </div></span>
 <b-modal id="modal:modal-example" hide-footer size modal-class="mb-zoom" ref="modal:modal-example" class="algolia-no-index"><template slot="modal-title">Modal Example</template>
   Additional information
 </b-modal></div>
 <p>This website <mark>uses a star rating system</mark> to indicate the priority level of contents.</p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Module Expectations → Star Rating System</p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Module Expectations → Star Rating System</p></template>
 <div>
-<h4 id="star-rating-system-2"><span id="star-rating-system-2" class="anchor"></span>Star Rating System<a class="fa fa-anchor" href="#star-rating-system-2" onclick="event.stopPropagation()"></a></h4>
+<h4 id="star-rating-system-2">Star Rating System<span id="star-rating-system-2" class="anchor"></span><a class="fa fa-anchor" href="#star-rating-system-2" onclick="event.stopPropagation()"></a></h4>
 <div class="indented">
 <p class="lead"><span>We use a <em>star rating system</em> to indicate the importance of module components. <strong>Start with things that are rated one-star and progress to things with more stars.</strong> Things rated four stars are optional.</span></p>
 <p><strong>Star ratings for topics</strong> (and textbook sections):</p>
@@ -404,7 +400,7 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li><strong>One-star topics</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> are essential to keep up with the module. We recommend you to <mark>learn these topics if you want to pass the module</mark> (i.e. up to a <strong>C</strong> grade).</li>
 <li><strong>Two-stars topics</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> can get you up to a <strong>B+</strong>.</li>
 <li><strong>Three-stars topics</strong> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> can get you up to an <strong>A</strong>.</li>
-<li><strong>Four-stars topics</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span> can push you beyond the limits of the module, and help you get into a level above those who merely limit themselves to the topics of the module. They <mark>are not <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGetters" class="trigger"><span data-mb-slot-name="content"><em>examinable</em> here means <em>can affect the grade</em> during evaluation of various components, not necessarily limited to the final exam (if any)</span>examinable</span></mark>.</li></ul>
+<li><strong>Four-stars topics</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span> can push you beyond the limits of the module, and help you get into a level above those who merely limit themselves to the topics of the module. They <mark>are not <span data-mb-component-type="popover" v-b-popover.hover.top.html="popoverInnerGenerator" class="trigger"><span data-mb-html-for="content"><em>examinable</em> here means <em>can affect the grade</em> during evaluation of various components, not necessarily limited to the final exam (if any)</span>examinable</span></mark>.</li></ul>
 <span tags="m--cs2103 m--tic2002 m--tic4001">
 <ul>
 <li>Topics marked with two <span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> icons e.g., <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>,<span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span>,<span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span> are relevant topics you are expected to have learned in prerequisite modules. They are given for reference, but <mark>are examinable</mark>. The number of stars indicates the progression of topics, similar to the star rating system above i.e., one-star prerequisite topics are the most basic and the most important. four-star pre-requisite topics can be ignored without affecting CAP.
@@ -415,21 +411,21 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li>The module uses a similar star rating system to indicate the importance of other info in this website. i.e., information rated as one-star are the most essential. <mark>Info rated four stars are non-essential and can be ignored</mark> without affecting your ability to follow the module.</li></ul></div></div></panel>
 <p></p></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type="info" class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Using this website [more info]</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="info" class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Using this website [more info]</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <div name="Conventions Used">
-<h3 id="conventions-used"><span id="conventions-used" class="anchor"></span>Conventions used<a class="fa fa-anchor" href="#conventions-used" onclick="event.stopPropagation()"></a></h3>
-<h4 id="shorthand-headings"><span id="shorthand-headings" class="anchor"></span>Shorthand headings<a class="fa fa-anchor" href="#shorthand-headings" onclick="event.stopPropagation()"></a></h4>
+<h3 id="conventions-used">Conventions used<span id="conventions-used" class="anchor"></span><a class="fa fa-anchor" href="#conventions-used" onclick="event.stopPropagation()"></a></h3>
+<h4 id="shorthand-headings">Shorthand headings<span id="shorthand-headings" class="anchor"></span><a class="fa fa-anchor" href="#shorthand-headings" onclick="event.stopPropagation()"></a></h4>
 <p>Meaning of some shortened headings:</p>
 <ul>
-<li><big><strong>What</strong></big> : the <strong>meaning</strong> of the concept in concern (<trigger trigger="click" for="modal:conventions-what">example</trigger>)</li></ul>
+<li><big><strong>What</strong></big> : the <strong>meaning</strong> of the concept in concern (<span trigger="click" for="modal:conventions-what" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conventions-what'].show()" class="trigger-click">example</span>)</li></ul>
 <b-modal id="modal:conventions-what" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-what" class="algolia-no-index"><template slot="modal-title">Example of a 'What' topic</template>
   <div>
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Refactoring →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="what"><span>What</span><span id="what" class="anchor"></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>The first version of the code you write may not be of production quality. It is OK to first concentrate on making the code work, rather than worry over the quality of the code, as long as you improve the quality later. This process of <strong>improving a program's internal structure in small steps without modifying its external behavior is called <em>refactoring</em>.</strong></p>
@@ -441,7 +437,7 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <ul>
 <li>hidden bugs become easier to spot</li>
 <li>improve performance (sometimes, simpler code runs faster than complex code because simpler code is easier for the compiler to optimize).</li></ul></box>
-<p>Given below are two common refactorings (<trigger trigger="click" for="modal:refactoring-catalog-what">more</trigger>).</p>
+<p>Given below are two common refactorings (<span trigger="click" for="modal:refactoring-catalog-what" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:refactoring-catalog-what'].show()" class="trigger-click">more</span>).</p>
 <b-modal id="modal:refactoring-catalog-what" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-what" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalogs</strong></template>
   <div>
 <ul>
@@ -457,45 +453,19 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <table> 
 <tr>
   <td valign="top">
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {
-</span><span>    total = price * <span class="hljs-number">0.95</span>;
-</span><span>    send();
-</span><span>} <span class="hljs-keyword">else</span> {
-</span><span>    total = price * <span class="hljs-number">0.98</span>;
-</span><span>    send();
-</span><span>}
-</span></code></pre></td>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {<br></span><span>    total = price * <span class="hljs-number">0.95</span>;<br></span><span>    send();<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    total = price * <span class="hljs-number">0.98</span>;<br></span><span>    send();<br></span><span>}<br></span></code></pre></td>
   <td valign="center">&nbsp;→&nbsp;</td>
   <td valign="top">
-<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {
-</span><span>    total = price * <span class="hljs-number">0.95</span>;
-</span><span>} <span class="hljs-keyword">else</span> {
-</span><span>    total = price * <span class="hljs-number">0.98</span>;
-</span><span>}
-</span><span>send();
-</span><span>
-</span></code></pre></td></tr></table></div></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-keyword">if</span> (isSpecialDeal()) {<br></span><span>    total = price * <span class="hljs-number">0.95</span>;<br></span><span>} <span class="hljs-keyword">else</span> {<br></span><span>    total = price * <span class="hljs-number">0.98</span>;<br></span><span>}<br></span><span>send();<br></span><span><br></span></code></pre></td></tr></table></div></div>
 <div class="alt-python">
 <div>
 <table> 
 <tr>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> is_special_deal:
-</span><span>    total = price * <span class="hljs-number">0.95</span>
-</span><span>    send()
-</span><span><span class="hljs-keyword">else</span>:
-</span><span>    total = price * <span class="hljs-number">0.98</span>
-</span><span>    send()
-</span></code></pre></td>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> is_special_deal:<br></span><span>    total = price * <span class="hljs-number">0.95</span><br></span><span>    send()<br></span><span><span class="hljs-keyword">else</span>:<br></span><span>    total = price * <span class="hljs-number">0.98</span><br></span><span>    send()<br></span></code></pre></td>
   <td valign="center">&nbsp;→&nbsp;</td>
   <td valign="top">
-<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> is_special_deal:
-</span><span>    total = price * <span class="hljs-number">0.95</span>
-</span><span><span class="hljs-keyword">else</span>:
-</span><span>    total = price * <span class="hljs-number">0.98</span>
-</span><span>    
-</span><span>send()
-</span></code></pre></td></tr></table></div></div></box>
+<pre><code class="hljs python" v-pre><span><span class="hljs-keyword">if</span> is_special_deal:<br></span><span>    total = price * <span class="hljs-number">0.95</span><br></span><span><span class="hljs-keyword">else</span>:<br></span><span>    total = price * <span class="hljs-number">0.98</span><br></span><span>    <br></span><span>send()<br></span></code></pre></td></tr></table></div></div></box>
 <box>
 <p>Refactoring Name:  <strong>Extract Method</strong></p>
 <p>Situation:  You have a code fragment that can be grouped together.</p>
@@ -503,48 +473,19 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:</p>
 <div class="alt-java">
   <div>
-<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
-</span><span>    printBanner();
-</span><span>
-</span><span>    <span class="hljs-comment">// print details</span>
-</span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);
-</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());
-</span><span>}
-</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{
-</span><span>    printBanner();
-</span><span>    printDetails(getOutstanding());
-</span><span>}
-</span><span>
-</span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span><span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{
-</span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);
-</span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);
-</span><span>}
-</span></code></pre></div></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{<br></span><span>    printBanner();<br></span><span><br></span><span>    <span class="hljs-comment">// print details</span><br></span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);<br></span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + getOutstanding());<br></span><span>}<br></span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printOwing</span><span class="hljs-params">()</span> </span>{<br></span><span>    printBanner();<br></span><span>    printDetails(getOutstanding());<br></span><span>}<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">printDetails</span><span class="hljs-params">(<span class="hljs-keyword">double</span> outstanding)</span> </span>{<br></span><span>    System.out.println(<span class="hljs-string">"name:	"</span> + name);<br></span><span>    System.out.println(<span class="hljs-string">"amount	"</span> + outstanding);<br></span><span>}<br></span></code></pre></div></div>
 <div class="alt-python">
   <div>
-<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
-</span><span>    print_banner()
-</span><span>
-</span><span>    <span class="hljs-comment"># print details</span>
-</span><span>    print(<span class="hljs-string">"name:	"</span> + name)
-</span><span>    print(<span class="hljs-string">"amount	"</span> + get_outstanding())
-</span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span>
-</span><span>    print_banner()
-</span><span>    print_details(get_outstanding())
-</span><span>
-</span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span>
-</span><span>    print(<span class="hljs-string">"name:	"</span> + name)
-</span><span>    print(<span class="hljs-string">"amount	"</span> + amount)
-</span></code></pre></div></div></box>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span><br></span><span>    print_banner()<br></span><span><br></span><span>    <span class="hljs-comment"># print details</span><br></span><span>    print(<span class="hljs-string">"name:	"</span> + name)<br></span><span>    print(<span class="hljs-string">"amount	"</span> + get_outstanding())<br></span></code></pre><p><span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs python" v-pre><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_owing</span><span class="hljs-params">()</span>:</span><br></span><span>    print_banner()<br></span><span>    print_details(get_outstanding())<br></span><span><br></span><span><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">print_details</span><span class="hljs-params">(amount)</span>:</span><br></span><span>    print(<span class="hljs-string">"name:	"</span> + name)<br></span><span>    print(<span class="hljs-string">"amount	"</span> + amount)<br></span></code></pre></div></div></box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Some IDEs have builtin support for basic refactorings such as automatically renaming a variable/method/class in all places it has been used.</p>
 <p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Refactoring, even if done with the aid of an IDE, may still result in regressions. Therefore, each small refactoring should be followed by regression testing.</p></div>
 <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Results of Refactoring</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Results of Refactoring</p></template>
 <question>
 <p>Choose the correct statements.</p>
 <ul class="contains-task-list">
@@ -559,10 +500,10 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li>(a, b, c) Although the primary aim of refactoring is to improve the internal code structure, there are other secondary benefits.</li>
 <li>(d) Some refactorings result in adding/removing methods/classes.</li></ul></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Do you agree with the following statement? Refactoring and regression testing</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Do you agree with the following statement? Refactoring and regression testing</p></template>
 <question has-input="true">
 <p>Do you agree with the following statement? Justify your answer.</p>
-<p>Statement: <code class="hljs inline no-lang" v-pre>Whenever you refactor code to fix bugs, you need not do regression testing if the bug fix was minor.</code></p>
+<p>Statement: <code v-pre>Whenever you refactor code to fix bugs, you need not do regression testing if the bug fix was minor.</code></p>
 <div slot="hint" class="algolia-no-index">
 <p>There are two flaws in the given statement.</p></div>
 <div slot="answer" class="algolia-no-index">
@@ -571,34 +512,34 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li>Even a minor change can have major repercussions on the system. You MUST do regression testing after each change, no matter how minor it is.</li>
 <li>Fixing bugs is technically not refactoring.</li></ol></div></question></panel></div>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Refactoring</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Refactoring</p></template>
 <question has-input>
 <p>Explain what refactoring is and why it is not the same as rewriting, bug fixing, or adding features.</p></question></panel></div></panel></div></div></div></div></div></b-modal>
 <ul>
-<li><big><strong>Why</strong></big> : the <strong>motivation</strong> behind the concept in concern (<trigger trigger="click" for="modal:conventions-why">example</trigger>)</li></ul>
+<li><big><strong>Why</strong></big> : the <strong>motivation</strong> behind the concept in concern (<span trigger="click" for="modal:conventions-why" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conventions-why'].show()" class="trigger-click">example</span>)</li></ul>
 <b-modal id="modal:conventions-why" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-why" class="algolia-no-index"><template slot="modal-title">Example of a 'Why' topic</template>
   <div>
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Documentation → Guidelines → Describe Top-Down →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="why"><span id="why" class="anchor"></span><span>Why</span><a class="fa fa-anchor" href="#why" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="why"><span>Why</span><span id="why" class="anchor"></span><a class="fa fa-anchor" href="#why" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>The main advantage of the top-down approach is that the document is structured like an upside down tree (root at the top) and <strong>the reader can travel down a path she is interested in until she reaches the component she is interested to learn in-depth</strong>, without having to read the entire document or understand the whole system.</p></div>
 <div></div></div></div></div></b-modal>
 <ul>
-<li><big><strong>How</strong></big> : the <strong>usage</strong> of the concept in concern (<trigger trigger="click" for="modal:conventions-how">example</trigger>)</li></ul>
+<li><big><strong>How</strong></big> : the <strong>usage</strong> of the concept in concern (<span trigger="click" for="modal:conventions-how" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conventions-how'].show()" class="trigger-click">example</span>)</li></ul>
 <b-modal id="modal:conventions-how" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-how" class="algolia-no-index"><template slot="modal-title">Example of a 'How' topic</template>
   <div>
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Refactoring →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="how"><span id="how" class="anchor"></span><span>How</span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="how"><span>How</span><span id="how" class="anchor"></span><a class="fa fa-anchor" href="#how" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
-<p>Given below are some more commonly used refactorings. A more comprehensive list is available at <trigger trigger="click" for="modal:refactoring-catalog-how">refactoring-catalog</trigger>.</p>
+<p>Given below are some more commonly used refactorings. A more comprehensive list is available at <span trigger="click" for="modal:refactoring-catalog-how" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:refactoring-catalog-how'].show()" class="trigger-click">refactoring-catalog</span>.</p>
 <b-modal id="modal:refactoring-catalog-how" hide-footer size modal-class="mb-zoom" ref="modal:refactoring-catalog-how" class="algolia-no-index"><template slot="modal-title"><strong>Refactoring Catalog</strong></template>
   <div>
 <ul>
@@ -618,22 +559,22 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <div>
   <div></div></div></div></div></div></b-modal>
 <ul>
-<li><big><strong>When</strong></big> : the <strong>pros and cons</strong> of the concept in concern, <strong>when to use</strong> the concept (<trigger trigger="click" for="modal:conventions-when">example</trigger>)</li></ul>
+<li><big><strong>When</strong></big> : the <strong>pros and cons</strong> of the concept in concern, <strong>when to use</strong> the concept (<span trigger="click" for="modal:conventions-when" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:conventions-when'].show()" class="trigger-click">example</span>)</li></ul>
 <b-modal id="modal:conventions-when" hide-footer size="lg" modal-class="mb-zoom" ref="modal:conventions-when" class="algolia-no-index"><template slot="modal-title">Example of a 'When' topic</template>
   <div>
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Implementation → Refactoring →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="when"><span id="when" class="anchor"></span><span>When</span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="when"><span>When</span><span id="when" class="anchor"></span><a class="fa fa-anchor" href="#when" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>You know that it is important to refactor frequently so as to avoid the accumulation of ‘messy’ code which might get out of control. But how much refactoring is too much refactoring? <strong>It is too much refactoring when the benefits no longer justify the cost.</strong> The costs and the benefits depend on the context. That is why some refactorings are ‘opposites’ of each other (e.g. <a href="https://refactoring.com/catalog/extractMethod.html"><em>extract method</em></a> vs <a href="https://refactoring.com/catalog/inlineMethod.html"><em>inline method</em></a>).</p></div>
 <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> ‘Extract method’ and ‘Inline method’ refactorings</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> ‘Extract method’ and ‘Inline method’ refactorings</p></template>
 <question>
 <p>‘Extract method’ and ‘Inline method’ refactorings</p>
 <ul radio-group="93b6b" class="radio-list">
@@ -641,7 +582,7 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li class="radio-list-item"><label><input class="radio-list-input" name="93b6b" type="radio"> b. sound like opposites but are not.</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>a</p></div></question></panel></div></panel></div></div></div></div></div></b-modal>
-<h4 id="meaning-of-icons"><span id="meaning-of-icons" class="anchor"></span>Meaning of icons<a class="fa fa-anchor" href="#meaning-of-icons" onclick="event.stopPropagation()"></a></h4>
+<h4 id="meaning-of-icons">Meaning of icons<span id="meaning-of-icons" class="anchor"></span><a class="fa fa-anchor" href="#meaning-of-icons" onclick="event.stopPropagation()"></a></h4>
 <div class="indented">
 <p><span class="text-info"><span aria-hidden="true" class="fas fa-info"></span></span> : additional info <br>
 <span class="text-warning"><span aria-hidden="true" class="fas fa-exclamation"></span></span> : warning <br>
@@ -651,7 +592,7 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <span class="text-success"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> or <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> : tip <br>
 <span class="text-primary"><span aria-hidden="true" class="fas fa-book"></span></span> : definition or topic <br>
 <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="fas fa-plus"></span> extra</span></span> : tangential info, can be ignored if not interested<br>
-<span><span aria-hidden="true" class="glyphicon glyphicon-new-window"></span></span> : <kbd>Ctrl</kbd>+<code class="hljs inline no-lang" v-pre>Click</code> to open the LO in new window/tab.<br>
+<span><span aria-hidden="true" class="glyphicon glyphicon-new-window"></span></span> : <kbd>Ctrl</kbd>+<code v-pre>Click</code> to open the LO in new window/tab.<br>
 <span><span aria-hidden="true" class="fas fa-trophy"></span></span> : learning outcomes<br>
 <span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : prerequisite learning outcome<br>
 <span><span aria-hidden="true" class="fas fa-cube"></span></span> : examples<br>
@@ -672,26 +613,26 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span> : tutorial<br>
 <span><span aria-hidden="true" class="fas fa-briefcase"></span></span> : evidence you can use to prove you have achieved a learning outcome<br>
 ⏰ : deadline<br></p></div>
-<h3 id="searching-for-keywords"><span id="searching-for-keywords" class="anchor"></span>Searching for keywords<a class="fa fa-anchor" href="#searching-for-keywords" onclick="event.stopPropagation()"></a></h3>
+<h3 id="searching-for-keywords">Searching for keywords<span id="searching-for-keywords" class="anchor"></span><a class="fa fa-anchor" href="#searching-for-keywords" onclick="event.stopPropagation()"></a></h3>
 <p>Use the search box in the top navigation bar to search for keywords in the website pages. If you cannot find the content related to a keyword, let us know by posting <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">in the forum</a> so that we can add the missing keyword to our search index.</p>
 <div>
-<h3 id="saving-as-pdf-files"><span id="saving-as-pdf-files" class="anchor"></span>Saving as PDF files<a class="fa fa-anchor" href="#saving-as-pdf-files" onclick="event.stopPropagation()"></a></h3>
+<h3 id="saving-as-pdf-files">Saving as PDF files<span id="saving-as-pdf-files" class="anchor"></span><a class="fa fa-anchor" href="#saving-as-pdf-files" onclick="event.stopPropagation()"></a></h3>
 <p>Follow <a href="https://se-education.org/guides/tutorials/savingPdf.html">this guide @SE-EDU/guides</a>.</p></div>
-<h3 id="printing-textbook-content"><span id="printing-textbook-content" class="anchor"></span>Printing Textbook Content<a class="fa fa-anchor" href="#printing-textbook-content" onclick="event.stopPropagation()"></a></h3>
+<h3 id="printing-textbook-content">Printing Textbook Content<span id="printing-textbook-content" class="anchor"></span><a class="fa fa-anchor" href="#printing-textbook-content" onclick="event.stopPropagation()"></a></h3>
 <p>Printer-friendly version <span class="dimmed">(indicated by <span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span> icon)</span> have been provided for each chapter and the whole book. You can use them for saving as pdf files or printing.</p>
-<h3 id="making-this-website-better"><span id="making-this-website-better" class="anchor"></span>Making this Website Better<a class="fa fa-anchor" href="#making-this-website-better" onclick="event.stopPropagation()"></a></h3>
+<h3 id="making-this-website-better">Making this Website Better<span id="making-this-website-better" class="anchor"></span><a class="fa fa-anchor" href="#making-this-website-better" onclick="event.stopPropagation()"></a></h3>
 <p>This website was generated using the <a href="https://markbind.org/">MarkBind</a> software developed at NUS. <strong>We welcome bug reports, suggestions, and contributions</strong>, to be submitted <a href="https://github.com/nus-cs2103-AY2021S1/website/issues">at the website issue tracker</a>.</p></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type="warning" class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Weekly schedule</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="warning" class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Weekly schedule</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type="success" class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module overview</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="success" class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module overview</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 
 <span tags="m--cs2103">
 <big><p class="lead text-secondary">A balanced, iterative, and brown-field introduction to Software Engineering...</p></big>
 <img src="/website/images/growingPlant.png" width="700">
-<p class="lead"><span>CS2103/T is an introductory Software Engineering module. It has <strong>a 50-50 balance of basic SE theory knowledge and practical skills</strong> that you need to gain before industry internships or <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., CS3203, CS3216/7, CS3281&amp;2, etc.</span>higher-level project modules</span>. The module follows an <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">going through SE topics several times while increasing depth, as opposed to going through topics sequentially</span><strong>iterative approach</strong></span> to covering topics. It is also one of the rare SE modules that includes a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., working in an existing project</span><strong>brown-field</strong> project</span>, in addition to a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., a project that is started from scratch</span><strong>green-field</strong> project</span>.</span></p>
+<p class="lead"><span>CS2103/T is an introductory Software Engineering module. It has <strong>a 50-50 balance of basic SE theory knowledge and practical skills</strong> that you need to gain before industry internships or <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., CS3203, CS3216/7, CS3281&amp;2, etc.</span>higher-level project modules</span>. The module follows an <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">going through SE topics several times while increasing depth, as opposed to going through topics sequentially</span><strong>iterative approach</strong></span> to covering topics. It is also one of the rare SE modules that includes a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., working in an existing project</span><strong>brown-field</strong> project</span>, in addition to a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., a project that is started from scratch</span><strong>green-field</strong> project</span>.</span></p>
 <ul>
 <li>
 <p><strong>On the theory side,</strong> this module is supported by a customized online textbook <a href="/website/se-book-adapted/index.html"><em>Software Engineering for Self-Directed Learners</em></a>, integrated into this module website.</p></li>
@@ -700,7 +641,7 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <div id="meaning-of-iterative-topics">
 <box>
 <p><strong><strong>What does mean to 'follow an iterative approach in covering topics'?</strong></strong></p>
-<p><strong>It means, we cover a little bit of <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., requirements, design, testing, project management, ...</span>all SE aspects</span> at first and then iteratively go deeper into them later</strong>, revisiting each aspect many time over the course of the semester. In contrast, a <em>sequential</em> approach would have covered one SE aspect before moving to the next (e.g., teach the <em>requirements</em> aspect completely before moving to the <em>design</em> aspect).</p>
+<p><strong>It means, we cover a little bit of <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., requirements, design, testing, project management, ...</span>all SE aspects</span> at first and then iteratively go deeper into them later</strong>, revisiting each aspect many time over the course of the semester. In contrast, a <em>sequential</em> approach would have covered one SE aspect before moving to the next (e.g., teach the <em>requirements</em> aspect completely before moving to the <em>design</em> aspect).</p>
 <p><strong>The choice of which topics are covered each week is driven by the project</strong> i.e., we give priority to topics that you'll need to apply soon in the project that you will be doing in parallel.</p>
 <p><strong>This way of 'jumping around' topics feels chaotic but consider the benefits</strong>:</p>
 <ul>
@@ -722,19 +663,19 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <td>syntax <span class="dimmed">(reason: expected prerequisite knowledge)</span></td></tr>
 <tr>
 <td>OOP</td>
-<td>Used in a non-trivial project, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., Single Responsibility Principle, Open-Closed Principle</span>intermediate OOP principles</span></td>
+<td>Used in a non-trivial project, <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., Single Responsibility Principle, Open-Closed Principle</span>intermediate OOP principles</span></td>
 <td>basics <span class="dimmed">(reason: expected prerequisite knowledge)</span></td></tr>
 <tr>
 <td>SE tools/practices</td>
-<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., revision control, continuous integration, practices, test automation, code reviews, pull requests</span>those typically used in a mature, high-rigor SE project</span></td>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., revision control, continuous integration, practices, test automation, code reviews, pull requests</span>those typically used in a mature, high-rigor SE project</span></td>
 <td>those specific to start-ups</td></tr>
 <tr>
 <td>Modeling</td>
-<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., class diagrams, sequence diagrams, activity diagrams</span>Some UML notations</span> (sufficient to be able to describe SE artifacts using models, such as seen in <a href="https://se-edu.github.io/addressbook-level3/DeveloperGuide.html#design">this Developer Guide of AB3</a>)</td>
-<td>intensive <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">creating detailed UML models before starting to code</span>upfront design modeling</span></td></tr>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., class diagrams, sequence diagrams, activity diagrams</span>Some UML notations</span> (sufficient to be able to describe SE artifacts using models, such as seen in <a href="https://se-edu.github.io/addressbook-level3/DeveloperGuide.html#design">this Developer Guide of AB3</a>)</td>
+<td>intensive <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">creating detailed UML models before starting to code</span>upfront design modeling</span></td></tr>
 <tr>
 <td>Requirements</td>
-<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., user stories, use cases</span>Some lightweight techniques</span> to gather and document project requirements</td>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., user stories, use cases</span>Some lightweight techniques</span> to gather and document project requirements</td>
 <td>rapid prototyping, heavy UI design, designing a product from scratch</td></tr>
 <tr>
 <td>Documentation</td>
@@ -746,24 +687,24 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <td>Setting up project infrastructure from scratch</td></tr>
 <tr>
 <td>Testing</td>
-<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., automated unit/integration/system testing</span>basic developer testing</span> and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., acceptance testing</span>user testing</span></td>
-<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., security testing, performance testing, usability testing</span>testing for non-functional aspects</span></td></tr>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., automated unit/integration/system testing</span>basic developer testing</span> and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., acceptance testing</span>user testing</span></td>
+<td><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., security testing, performance testing, usability testing</span>testing for non-functional aspects</span></td></tr>
 <tr>
 <td>Applications domains</td>
 <td>Cross-platform desktop applications</td>
 <td>Web programming, Mobile programming, Database programming</td></tr></tbody></table></div><br>
-<panel src="/website/admin/appendixC-faq._include_.html#admin-faq-tVsNonT" class="embedding algolia-no-index" minimized fragment="admin-faq-tVsNonT"><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>FAQ: What are the differences between CS2103 and CS2103T?</strong></p></template></panel></span>
+<panel src="/website/admin/appendixC-faq._include_.html#admin-faq-tVsNonT" class="embedding algolia-no-index" minimized fragment="admin-faq-tVsNonT"><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>FAQ: What are the differences between CS2103 and CS2103T?</strong></p></template></panel></span>
 
 <p></p>
 
 </div></panel></div><p></p></div>
 <p></p>
-<h4 id="5-attend-the-first-lecture"><span id="5-attend-the-first-lecture" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>5</big></big></span> <span>Attend the first lecture</span><a class="fa fa-anchor" href="#5-attend-the-first-lecture" onclick="event.stopPropagation()"></a></h4>
+<h4 id="5-attend-the-first-lecture"><span class="badge badge-pill badge-dark p-2"><big><big>5</big></big></span> <span>Attend the first lecture</span><span id="5-attend-the-first-lecture" class="anchor"></span><a class="fa fa-anchor" href="#5-attend-the-first-lecture" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li>Attend the first lecture on Fri, Aug 14th (<mark><strong>compulsory</strong></mark>).</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Lectures</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Lectures</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <img src="/website/admin/images/Lecture photo.png" width="100%">
 <p><strong><strong>Timing/venue</strong></strong>:</p>
@@ -796,21 +737,21 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li>Some topics come with pre-recorded lecture videos.</li></ul></div>
 <div id="tip-about-lecture-videos" class="indented">
 <box type="tip" seamless>
-<h5 id="tips-for-watching-lecture-videos"><span id="tips-for-watching-lecture-videos" class="anchor"></span>Tips for watching lecture videos<a class="fa fa-anchor" href="#tips-for-watching-lecture-videos" onclick="event.stopPropagation()"></a></h5>
+<h5 id="tips-for-watching-lecture-videos">Tips for watching lecture videos<span id="tips-for-watching-lecture-videos" class="anchor"></span><a class="fa fa-anchor" href="#tips-for-watching-lecture-videos" onclick="event.stopPropagation()"></a></h5>
 <ul>
-<li><mark>You can watch video lectures at faster speeds</mark> (<code class="hljs inline no-lang" v-pre>x1.25</code> or even <code class="hljs inline no-lang" v-pre>x1.5</code>) to save time.</li>
+<li><mark>You can watch video lectures at faster speeds</mark> (<code v-pre>x1.25</code> or even <code v-pre>x1.5</code>) to save time.</li>
 <li>Lecture videos require NUSNET login.
 </li></ul></box></div>
 <p><strong><strong>Attendance</strong></strong>: Attendance for the <mark>first lecture is compulsory</mark>.</p>
 <p><strong><strong>Handouts</strong></strong>: There are no handouts. All learning materials are organized around topics, are given in Web format, can be found in the <a href="/website/se-book-adapted/index.html">Textbook</a> section (organized by topics), and are also embedded in the <span><a href="/website/schedule/index.html">Schedule page</a></span> (organized by order of coverage).</p>
 <p><strong><strong>Slides</strong></strong>: Our lecture slides are not suited for printing or to be used as a reference during the lecture/exams. They are only an aid for lecture delivery. Slides will be uploaded to LumiNUS <em>after</em> the lecture.</p></div></panel></div><p></p></div>
 <p></p></div></div>
-<h4 id="other-info-relevant-to-this-week"><span id="other-info-relevant-to-this-week" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>+</big></big></span> Other info relevant to this week:<a class="fa fa-anchor" href="#other-info-relevant-to-this-week" onclick="event.stopPropagation()"></a></h4>
+<h4 id="other-info-relevant-to-this-week"><span class="badge badge-pill badge-dark p-2"><big><big>+</big></big></span> Other info relevant to this week:<span id="other-info-relevant-to-this-week" class="anchor"></span><a class="fa fa-anchor" href="#other-info-relevant-to-this-week" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-level2">
 <panel type minimized class="algolia-no-index">
 <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Apdx C (FAQs) → Where is everything? <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
 <div>
-<h3 id="where-is-everything"><span id="where-is-everything" class="anchor"></span>Where is everything? <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#where-is-everything" onclick="event.stopPropagation()"></a></h3>
+<h3 id="where-is-everything">Where is everything? <small><small><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="where-is-everything" class="anchor"></span><a class="fa fa-anchor" href="#where-is-everything" onclick="event.stopPropagation()"></a></h3>
 <div class="indented">
 <div>
 <p class="lead">The <span><a href="/website/schedule/index.html">Schedule page</a></span> presents all you need to know in chronological order while the other pages have some of the same content organized by topic.
@@ -822,14 +763,14 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <p><img src="/website/admin/images/team.png" width="300px"><br>
 <small><span class="dimmed">[Picture: The team that was at the top of early Google]</span></small></p>
 <p></p>
-<h4 id="when-to-form-teams"><span id="when-to-form-teams" class="anchor"></span>When to form teams<a class="fa fa-anchor" href="#when-to-form-teams" onclick="event.stopPropagation()"></a></h4>
+<h4 id="when-to-form-teams">When to form teams<span id="when-to-form-teams" class="anchor"></span><a class="fa fa-anchor" href="#when-to-form-teams" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>CS2103T: Your team will be formed by the CS2101 side.</li>
 <li>CS2103: Team forming will be done at the <em>start</em> of the week 3 tutorial. If you are not there at the team forming time and others in the class are unaware which team you wanted to be in, we'll have to put you into a team randomly.</li></ul>
-<h4 id="team-size"><span id="team-size" class="anchor"></span>Team size<a class="fa fa-anchor" href="#team-size" onclick="event.stopPropagation()"></a></h4>
+<h4 id="team-size">Team size<span id="team-size" class="anchor"></span><a class="fa fa-anchor" href="#team-size" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>The default <mark>team size is five</mark>.</li></ul>
-<h4 id="team-composition"><span id="team-composition" class="anchor"></span>Team composition<a class="fa fa-anchor" href="#team-composition" onclick="event.stopPropagation()"></a></h4>
+<h4 id="team-composition">Team composition<span id="team-composition" class="anchor"></span><a class="fa fa-anchor" href="#team-composition" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>
 <p><strong>We allow some freedom in choosing team members</strong>, subject to these constraints:</p>
@@ -846,15 +787,15 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Textbooks <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
 <div>
 <p>This module is supported by a customized online textbook <a href="/website/se-book-adapted/index.html"><strong><em>Software Engineering for Self-Directed Learners</em></strong> (CS2103 edition)</a>, integrated into this module website. While it is in a dynamic Web page format, there is a way to save the main text as pdf files. Printer-friendly versions have been provided too. In addition, <mark>a PDF version of the full textbook will be provided</mark> at the start of the semester, via LumiNUS.</p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Using this Website → Saving as PDF files <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Using this Website → Saving as PDF files <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h3 id="saving-as-pdf-files-2"><span id="saving-as-pdf-files-2" class="anchor"></span>Saving as PDF files<a class="fa fa-anchor" href="#saving-as-pdf-files-2" onclick="event.stopPropagation()"></a></h3>
+<h3 id="saving-as-pdf-files-2">Saving as PDF files<span id="saving-as-pdf-files-2" class="anchor"></span><a class="fa fa-anchor" href="#saving-as-pdf-files-2" onclick="event.stopPropagation()"></a></h3>
 <p>Follow <a href="https://se-education.org/guides/tutorials/savingPdf.html">this guide @SE-EDU/guides</a>.</p></div></panel></div></panel><p></p>
 <panel type minimized class="algolia-no-index">
 <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Grade Breakdown <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
 <div>
 <p><pic name="gradeBreakdown.png" src="/website/admin/gradeBreakdown.png"></pic></p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Participation Marks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Participation Marks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><strong>To receive full 5 marks allocated for participation, meet the criteria <span class="badge badge-pill badge-info p-2"><big><big>A</big></big></span>, <span class="badge badge-pill badge-info p-2"><big><big>B</big></big></span>, and <span class="badge badge-pill badge-info p-2"><big><big>C</big></big></span>.</strong></p>
 <p><strong><strong><span class="badge badge-pill badge-info p-2"><big><big>A</big></big></span> Earned more than half of weekly participation points in at least 10 weeks.</strong></strong></p>
@@ -886,14 +827,14 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <ul>
 <li>-1 for each <em>professional conduct</em> criterion in which you score below average (based on the average of ratings received).</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Conduct) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Conduct) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' conduct in the project and during tutorials,</strong></p>
 <ul>
-<li>Evaluated based on the following criteria, on a scale <code class="hljs inline no-lang" v-pre>Poor</code>/<code class="hljs inline no-lang" v-pre>Below Average</code>/<code class="hljs inline no-lang" v-pre>Average</code>/<code class="hljs inline no-lang" v-pre>Good</code>/<code class="hljs inline no-lang" v-pre>Excellent</code>:</li></ul>
+<li>Evaluated based on the following criteria, on a scale <code v-pre>Poor</code>/<code v-pre>Below Average</code>/<code v-pre>Average</code>/<code v-pre>Good</code>/<code v-pre>Excellent</code>:</li></ul>
 <div class="indented-level2">
 <box background-color="white" border-color="grey" border-left-color="#28a745">
-<h4 id="peer-evaluation-criteria-professional-conduct-2"><span id="peer-evaluation-criteria-professional-conduct-2" class="anchor"></span>Peer Evaluation Criteria: Professional Conduct<a class="fa fa-anchor" href="#peer-evaluation-criteria-professional-conduct-2" onclick="event.stopPropagation()"></a></h4>
+<h4 id="peer-evaluation-criteria-professional-conduct-2">Peer Evaluation Criteria: Professional Conduct<span id="peer-evaluation-criteria-professional-conduct-2" class="anchor"></span><a class="fa fa-anchor" href="#peer-evaluation-criteria-professional-conduct-2" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Professional Communication</strong> :
 <ul>
@@ -912,15 +853,15 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <ul>
 <li>No penalty for scoring low on <em>competency criteria</em>.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Competency) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Competency) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The competency of the team member demonstrated in the project and during the tutorials,</strong></p>
 <ul>
 <li>Considered only for bonus marks, A+ grades, and tutor recruitment</li>
-<li>Evaluated based on the following criteria, on a scale <code class="hljs inline no-lang" v-pre>Poor</code>/<code class="hljs inline no-lang" v-pre>Below Average</code>/<code class="hljs inline no-lang" v-pre>Average</code>/<code class="hljs inline no-lang" v-pre>Good</code>/<code class="hljs inline no-lang" v-pre>Excellent</code>:</li></ul>
+<li>Evaluated based on the following criteria, on a scale <code v-pre>Poor</code>/<code v-pre>Below Average</code>/<code v-pre>Average</code>/<code v-pre>Good</code>/<code v-pre>Excellent</code>:</li></ul>
 <div class="indented-level2">
 <box background-color="white" border-color="grey" border-left-color="#28a745">
-<h4 id="peer-evaluation-criteria-competency-2"><span id="peer-evaluation-criteria-competency-2" class="anchor"></span>Peer Evaluation Criteria: Competency<a class="fa fa-anchor" href="#peer-evaluation-criteria-competency-2" onclick="event.stopPropagation()"></a></h4>
+<h4 id="peer-evaluation-criteria-competency-2">Peer Evaluation Criteria: Competency<span id="peer-evaluation-criteria-competency-2" class="anchor"></span><a class="fa fa-anchor" href="#peer-evaluation-criteria-competency-2" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Technical Competency</strong>: Able to gain competency in all the required tools and techniques.</li>
 <li><strong>Mentoring skills</strong>: Helps others when possible. Able to mentor others well.</li>
@@ -933,7 +874,7 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <p><strong><strong><span class="badge badge-pill badge-info p-2"><big><big>C</big></big></span> Tutorial attendance/participation not too low</strong></strong></p>
 <div class="indented">
 <p>Low attendance/participation can affect participation marks directly (i.e., attended fewer than 7) or indirectly (i.e., it might result in low peer evaluation ratings).</p></div>
-<panel type="info" expanded no-close no-switch><template slot="header"><p><strong>+ Bonus Marks</strong></p></template>
+<panel type="info" expanded no-close no-switch><template slot="_header"><p><strong>+ Bonus Marks</strong></p></template>
 <p>In addition, you can receive bonus marks in the following ways. Bonus marks can be used to top up your participation marks <mark>but only if your marks from the above falls below 5</mark>.</p>
 <ul>
 <li>[For lecture participation] Participated in lecture activities (e.g., in lecture polls/quizzes) in at least 10 lectures: 1 mark</li>
@@ -945,21 +886,21 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li>Alicia earned 1/2, 3/5, <ins>2/5</ins>, 5/5, 5/5, 5/5, 5/5, 5/5, 5/5, 5/5, 4/5, 5/5 in the first 12 weeks. As she received at least half of the points in 11 of the weeks, she gets 5 participation marks. Bonus marks are not applicable as she has full marks already.</li>
 <li>Benjamin managed to get at least half of the participation points in 9 weeks only, which gives him 5-1 = 4 participation marks. But he participated in 10 lectures, and hence get a bonus mark to make it 5/5.</li>
 <li>Chun Ming met the participation points bar in 8 weeks only, giving him 5-2 = 3 marks. He lost 2 more marks because he received multiple negative ratings for two criteria, giving him 1/5 participation marks.</li></ul>
-<panel type="info" expanded no-close no-switch id="where-to-find-your-participation-marks-progress-2"><template slot="header"><h5 id="where-to-find-your-participation-marks-progress-2"><span id="where-to-find-your-participation-marks-progress-2" class="anchor"></span>Where to find your participation marks progress<a class="fa fa-anchor" href="#where-to-find-your-participation-marks-progress-2" onclick="event.stopPropagation()"></a></h5></template>
+<panel type="info" expanded no-close no-switch id="where-to-find-your-participation-marks-progress-2"><template slot="_header"><h5 id="where-to-find-your-participation-marks-progress-2">Where to find your participation marks progress<span id="where-to-find-your-participation-marks-progress-2" class="anchor"></span><a class="fa fa-anchor" href="#where-to-find-your-participation-marks-progress-2" onclick="event.stopPropagation()"></a></h5></template>
 <p><strong>Your participation progress can be tracked in <a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html">this page</a></strong> from week 3 onward.
 </p></panel><p></p></div></panel>
 <p></p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Individual Project (iP) Grading <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Individual Project (iP) Grading <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <div id="title"></div>
 <div id="body">
-<p><strong><strong>Total: <code class="hljs inline no-lang" v-pre>20</code> marks</strong></strong></p>
-<p><strong>Implementation [<code class="hljs inline no-lang" v-pre>10</code> marks]</strong>: Requirements to get full marks:</p>
+<p><strong><strong>Total: <code v-pre>20</code> marks</strong></strong></p>
+<p><strong>Implementation [<code v-pre>10</code> marks]</strong>: Requirements to get full marks:</p>
 <ul>
 <li>Achieve <strong>more than 90% of all deliverables</strong> by the end.
 <ul>
 <li>Requirements marked as <span class="badge badge-pill badge-secondary">optional</span> or <span class="badge badge-pill badge-secondary">if-applicable</span> are not counted when calculating the percentage of deliverables.</li>
-<li>When a requirement specifies a <code class="hljs inline no-lang" v-pre>minimal</code> version of it, simply reaching that minimal version of the requirement is enough for it to be counted for grading -- however, we recommend you to go beyond the minimal; the farther you go, the more practice you will get.</li></ul></li>
+<li>When a requirement specifies a <code v-pre>minimal</code> version of it, simply reaching that minimal version of the requirement is enough for it to be counted for grading -- however, we recommend you to go beyond the minimal; the farther you go, the more practice you will get.</li></ul></li>
 <li><strong>The code quality</strong> meets the following conditions:
 <ul>
 <li>Reasonable use of OOP e.g., at least some use of inheritance, code divided into classes in a sensible way</li>
@@ -969,18 +910,18 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li>The code is neat e.g., no chunks of commented out code</li>
 <li>Reasonable use of SLAP e.g., no very-long methods or deeply nested code</li>
 <li>Has some JUnit tests</li></ul></li></ul>
-<p><strong>Project Management [<code class="hljs inline no-lang" v-pre>5</code> marks]</strong>: To get full marks, you should achieve,</p>
+<p><strong>Project Management [<code v-pre>5</code> marks]</strong>: To get full marks, you should achieve,</p>
 <ul>
 <li>Submit <em>some</em> deliverables in at least 4 out of the 5 iP weeks (i.e., week 2 - week 6)</li>
 <li>Follow other requirements specified (e.g., how to use Git/Github for each increment, do peer reviews) in at least 4 weeks</li></ul>
-<p><strong>Documentation [<code class="hljs inline no-lang" v-pre>5</code> marks]</strong>: To get full marks, you should achieve,</p>
+<p><strong>Documentation [<code v-pre>5</code> marks]</strong>: To get full marks, you should achieve,</p>
 <ul>
 <li>The product web site and the user guide is <em>reasonable</em> (i.e., functional, not hard to read, covers all features, no major formatting errors in the published view).</li></ul>
 <box type="tip" seamless>
 <p>You can monitor your iP progress (as detected by our scripts) in the <a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/ip-progress.html">iP Progress Dashboard</a> page.
 </p></box><p></p></div></div></panel>
 <p></p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Team Project (tP) Grading <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Team Project (tP) Grading <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <div tags="m--cs2113 m--cs2103">
 <p>Note that project grading is <mark>not competitive (not bell curved)</mark>. CS2103T projects will be assessed separately from CS2103 projects. Given below is the marking scheme.</p></div>
@@ -988,14 +929,14 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <p>See the sections below for details of how we assess each aspect.</p>
 
 <div id="criteria-productDesign">
-<h4 id="1-project-grading-product-design-5-marks"><span id="1-project-grading-product-design-5-marks" class="anchor"></span><div class="bg-warning p-1">1. Project Grading: Product Design <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 5 marks]</span></div><a class="fa fa-anchor" href="#1-project-grading-product-design-5-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-project-grading-product-design-5-marks"><div class="bg-warning p-1">1. Project Grading: Product Design <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 5 marks]</span></div><span id="1-project-grading-product-design-5-marks" class="anchor"></span><a class="fa fa-anchor" href="#1-project-grading-product-design-5-marks" onclick="event.stopPropagation()"></a></h4>
 <p><strong>Evaluates:</strong> how well your features fit together to form a cohesive product (not how many features or how big the features are) and how well does it match the target user</p>
 <div tags="m--cs2113 m--cs2103">
 <p><strong>Evaluated by:</strong></p>
 <ul>
 <li>tutors (based on product demo and user guide)</li>
 <li>peers from other teams (based on peer testing and user guide)</li></ul>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Quality of the product design,</strong><br>
 Evaluate based on the User Guide and the actual product behavior.</p>
@@ -1008,25 +949,25 @@ Evaluate based on the User Guide and the actual product behavior.</p>
 <th>High</th></tr></thead>
 <tbody>
 <tr>
-<td><code class="hljs inline no-lang" v-pre>target user</code></td>
+<td><code v-pre>target user</code></td>
 <td>Not specified</td>
 <td></td>
 <td></td>
 <td>Clearly specified and narrowed down appropriately</td></tr>
 <tr>
-<td><code class="hljs inline no-lang" v-pre>value proposition</code></td>
+<td><code v-pre>value proposition</code></td>
 <td>Not specified</td>
 <td>The value to target user is low. App is not worth using</td>
 <td>Some small group of target users might find the app worth using</td>
 <td>Most of the target users are likely to find the app worth using</td></tr>
 <tr>
-<td><code class="hljs inline no-lang" v-pre>optimized for target user</code></td>
+<td><code v-pre>optimized for target user</code></td>
 <td></td>
 <td>Not enough focus for CLI users</td>
 <td>Mostly CLI-based, but cumbersome to use most of the time</td>
 <td>Feels like a fast typist can be more productive with the app, compared to an equivalent GUI app without a CLI</td></tr>
 <tr>
-<td><code class="hljs inline no-lang" v-pre>feature-fit</code></td>
+<td><code v-pre>feature-fit</code></td>
 <td></td>
 <td>Many of the features don't fit with others</td>
 <td>Most features fit together but a few may be possible misfits</td>
@@ -1042,7 +983,7 @@ Evaluate based on the User Guide and the actual product behavior.</p>
 <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p></div></box></div>
 </div>
 
-<h4 id="2-project-grading-implementation-10-marks"><span id="2-project-grading-implementation-10-marks" class="anchor"></span><div class="bg-warning p-1">2. Project Grading: Implementation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><a class="fa fa-anchor" href="#2-project-grading-implementation-10-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-project-grading-implementation-10-marks"><div class="bg-warning p-1">2. Project Grading: Implementation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><span id="2-project-grading-implementation-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#2-project-grading-implementation-10-marks" onclick="event.stopPropagation()"></a></h4>
 <p><strong><big>2A. Code quality</big></strong></p>
 <p><strong>Evaluates:</strong> the quality of the parts of the code you claim as written by you</p>
 <p><strong>Evaluation method:</strong> manual inspection by tutors + automated-analysis by a script</p>
@@ -1071,43 +1012,43 @@ Evaluate based on the User Guide and the actual product behavior.</p>
 <ul>
 <li>Step 1: Evaluate the effort for the entire project. This is evaluated by peers who tested your product, and tutors.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Questions used for Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Questions used for Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <div tags="m--cs2103">
-<p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>If the implementation effort required to create AB3 from scratch is 10, the estimated implementation effort of this team is,</strong> [<code class="hljs inline no-lang" v-pre>0</code>..<code class="hljs inline no-lang" v-pre>20</code>] e.g., if you give <code class="hljs inline no-lang" v-pre>8</code>, that means the team's effort is about 80% of that spent on creating AB3. We expect most typical teams to score near to <code class="hljs inline no-lang" v-pre>10</code>.</p>
+<p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>If the implementation effort required to create AB3 from scratch is 10, the estimated implementation effort of this team is,</strong> [<code v-pre>0</code>..<code v-pre>20</code>] e.g., if you give <code v-pre>8</code>, that means the team's effort is about 80% of that spent on creating AB3. We expect most typical teams to score near to <code v-pre>10</code>.</p>
 <ul>
-<li>Do read the DG appendix named <code class="hljs inline no-lang" v-pre>Effort</code>, if any.</li>
+<li>Do read the DG appendix named <code v-pre>Effort</code>, if any.</li>
 <li><mark>Consider implementation work only (i.e., exclude testing, documentation, project management etc.)</mark></li>
 <li>Do not give a high value just <em>to be nice</em>. <mark>Your responses will be used to evaluate your effort estimation skills.</mark></li></ul></div>
 </div></panel></div><p></p>
 <ul>
 <li>Step 2: Evaluate how much of that effort can be attributed to you. This is evaluated by team members, and tutors.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the product implementation (excluding UG, DG, and team-based tasks) is,</strong></p>
 <div>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p>Uses the <code class="hljs inline no-lang" v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
 <ul radio-group="2ef43" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> ...</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></div></div></panel></div><p></p>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></div></div></panel></div><p></p>
 <ul>
-<li>Baseline: If your team received a value higher than <code class="hljs inline no-lang" v-pre>10</code> in step 1 and the team agrees that you did roughly an equal share of implementation work, you should receive full marks for effort.</li></ul></div>
+<li>Baseline: If your team received a value higher than <code v-pre>10</code> in step 1 and the team agrees that you did roughly an equal share of implementation work, you should receive full marks for effort.</li></ul></div>
 
 
 
-<h4 id="3-project-grading-qa-10-marks"><span id="3-project-grading-qa-10-marks" class="anchor"></span><div class="bg-warning p-1">3. Project Grading: QA <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><a class="fa fa-anchor" href="#3-project-grading-qa-10-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-project-grading-qa-10-marks"><div class="bg-warning p-1">3. Project Grading: QA <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><span id="3-project-grading-qa-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#3-project-grading-qa-10-marks" onclick="event.stopPropagation()"></a></h4>
 <div tags="m--cs2113 m--cs2103">
 <p><big><strong>3A. Developer Testing:</strong></big></p>
 <p><strong>Evaluates:</strong> How well you tested your own feature</p>
 <p><strong>Based on:</strong></p>
 <ol>
 <li>functionality bugs in your work found by others during the <a href="/website/admin/tp-pe.html#tp-practical-exam">Practical Exam (PE)</a></li>
-<li>your test code <span class="dimmed">(note <trigger trigger="click" for="modal:projectGradingQA-testingExpectations">our expectations for automated testing</trigger>)</span></li></ol>
+<li>your test code <span class="dimmed">(note <span trigger="click" for="modal:projectGradingQA-testingExpectations" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:projectGradingQA-testingExpectations'].show()" class="trigger-click">our expectations for automated testing</span>)</span></li></ol>
 <b-modal id="modal:projectGradingQA-testingExpectations" hide-footer size="lg" modal-class="mb-zoom" ref="modal:projectGradingQA-testingExpectations" class="algolia-no-index"><template slot="modal-title">Our expectations for automated testing in the project</template>
   <div>
 <ul>
@@ -1127,33 +1068,33 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <p><strong>Based on:</strong> bugs you found in the PE. In addition to functionality bugs, you get credit for reporting documentation bugs and feature flaws.</p>
 <box>
 <div>
-<h5 id="grading-bugs-found-in-the-pe"><span id="grading-bugs-found-in-the-pe" class="anchor"></span>Grading bugs found in the PE<a class="fa fa-anchor" href="#grading-bugs-found-in-the-pe" onclick="event.stopPropagation()"></a></h5>
+<h5 id="grading-bugs-found-in-the-pe">Grading bugs found in the PE<span id="grading-bugs-found-in-the-pe" class="anchor"></span><a class="fa fa-anchor" href="#grading-bugs-found-in-the-pe" onclick="event.stopPropagation()"></a></h5>
 <ul>
-<li><mark>Of <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content"><em>Developer Testing</em> component, based on the bugs found in your code</span>3A</span> and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content"><em>System/Acceptance Testing</em> component, based on the bugs found in others' code</span>3B</span> above, the one you do better will be given a 70% weight and the other a 30% weight</mark> so that your total score is driven by your strengths rather than weaknesses.</li>
+<li><mark>Of <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>Developer Testing</em> component, based on the bugs found in your code</span>3A</span> and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>System/Acceptance Testing</em> component, based on the bugs found in others' code</span>3B</span> above, the one you do better will be given a 70% weight and the other a 30% weight</mark> so that your total score is driven by your strengths rather than weaknesses.</li>
 <li>Bugs rejected by the dev team, if the rejection is approved by the teaching team, will not affect marks of the tester or the developer.</li>
-<li>The penalty/credit for a bug varies based on the severity of the bug: <code class="hljs inline no-lang" v-pre>severity.High</code> &gt; <code class="hljs inline no-lang" v-pre>severity.Medium</code> &gt; <code class="hljs inline no-lang" v-pre>severity.Low</code> &gt; <code class="hljs inline no-lang" v-pre>severity.VeryLow</code></li>
-<li>The three types (i.e., <code class="hljs inline no-lang" v-pre>type.FunctionalityBug</code>, <code class="hljs inline no-lang" v-pre>type.DocumentationBug</code>, <code class="hljs inline no-lang" v-pre>type.FeatureFlaw</code>) are counted for three different grade components. The penalty/credit can vary based on the bug type. <span class="dimmed">Given that you are not told which type has a bigger impact on the grade, always choose the most suitable type for a bug rather than try to choose a type that benefits your grade.</span></li>
+<li>The penalty/credit for a bug varies based on the severity of the bug: <code v-pre>severity.High</code> &gt; <code v-pre>severity.Medium</code> &gt; <code v-pre>severity.Low</code> &gt; <code v-pre>severity.VeryLow</code></li>
+<li>The three types (i.e., <code v-pre>type.FunctionalityBug</code>, <code v-pre>type.DocumentationBug</code>, <code v-pre>type.FeatureFlaw</code>) are counted for three different grade components. The penalty/credit can vary based on the bug type. <span class="dimmed">Given that you are not told which type has a bigger impact on the grade, always choose the most suitable type for a bug rather than try to choose a type that benefits your grade.</span></li>
 <li>The penalty for a bug is divided equally among assignees.</li>
 <li>Developers are not penalized for duplicate bug reports they received but the testers earn credit for duplicate bug reports they submitted as long as the duplicates are not submitted by the same tester.</li>
-<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., the same bug reported by many testers</span><em>Obvious</em> bugs</span> earn less credit for the tester and slightly higher penalty for the developer.</li>
+<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., the same bug reported by many testers</span><em>Obvious</em> bugs</span> earn less credit for the tester and slightly higher penalty for the developer.</li>
 <li>If the team you tested has a low bug count i.e., total bugs found by all testers is low, we will fall back on other means <span class="dimmed">(e.g., performance in PE dry run)</span> to calculate your marks for system/acceptance testing.</li>
 <li>Your marks for developer testing depends on the <em>bug density</em> rather than total bug count. Here's an example:
 <ul>
-<li><code class="hljs inline no-lang" v-pre>n</code> bugs found in your feature; it is a big feature consisting of lot of code → 4/5 marks</li>
-<li><code class="hljs inline no-lang" v-pre>n</code> bugs found in your feature; it is a small feature with a small amount of code → 1/5 marks</li></ul></li>
+<li><code v-pre>n</code> bugs found in your feature; it is a big feature consisting of lot of code → 4/5 marks</li>
+<li><code v-pre>n</code> bugs found in your feature; it is a small feature with a small amount of code → 1/5 marks</li></ul></li>
 <li>You don't need to find <em>all</em> bugs in the product to get full marks. For example, finding half of the bugs of that product or 4 bugs, whichever the lower, could earn you full marks.</li>
-<li>Excessive incorrect downgrading/rejecting/<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">marking as duplicates</span>duplicate-flagging</span>, if deemed an attempt to <em>game the system</em>, will be penalized.</li></ul></div></box></div>
+<li>Excessive incorrect downgrading/rejecting/<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">marking as duplicates</span>duplicate-flagging</span>, if deemed an attempt to <em>game the system</em>, will be penalized.</li></ul></div></box></div>
 
 
 <div id="criteria-documentation">
-<h4 id="4-project-grading-documentation-10-marks"><span id="4-project-grading-documentation-10-marks" class="anchor"></span><div class="bg-warning p-1">4. Project Grading: Documentation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><a class="fa fa-anchor" href="#4-project-grading-documentation-10-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="4-project-grading-documentation-10-marks"><div class="bg-warning p-1">4. Project Grading: Documentation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><span id="4-project-grading-documentation-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#4-project-grading-documentation-10-marks" onclick="event.stopPropagation()"></a></h4>
 <div tags="m--cs2113 m--cs2103">
 <p><strong>Evaluates:</strong> your contribution to project documents</p>
 <p><strong>Method:</strong> Evaluated in two steps.</p>
 <ul>
 <li>Step 1: Evaluate the whole UG and DG. This is evaluated by peers who tested your product, and tutors.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for User Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for User Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Compared to AddressBoook-Level3 (AB3), the overall quality of the UG you evaluated is,</strong><br>
 Evaluate based on fit-for-purpose, from the perspective of a target user.
@@ -1164,7 +1105,7 @@ For reference, the AB3 UG is <a href="https://se-education.org/addressbook-level
 <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio">  Similar</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio">  Higher</label></li></ul></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Developer Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Developer Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Compared to AB3, the overall quality of the DG you evaluated is,</strong><br>
 Evaluate based on fit-for-purpose from the perspective of a new team member trying to understand the product's internal design by reading the DG.
@@ -1177,31 +1118,31 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <ul>
 <li>Step 2: Evaluate how much of that effort can be attributed to you. This is evaluated by team members, and tutors.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the UG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the UG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the User Guide is,</strong></p>
 <span id="equalShareScale">
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p>Uses the <code class="hljs inline no-lang" v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
 <ul radio-group="186a5" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> ...</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></span></div></panel></div><p></p>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></span></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the DG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the DG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the Developer Guide is,</strong></p>
 <div>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p>Uses the <code class="hljs inline no-lang" v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
 <ul radio-group="2ef43" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> ...</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></div></div></panel></div><p></p>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></div></div></panel></div><p></p>
 <ul>
 <li>In addition, UG and DG bugs you received in the PE will be considered for grading this component.</li></ul>
 <div class="indented-level2">
@@ -1241,7 +1182,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <box>
 <div>
 <p><strong>These are considered DG bugs (if they hinder the reader):</strong></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p>Those given as possible UG bugs ...</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>Those given as possible UG bugs ...</p></template>
 <div>
 <p><strong>These are considered UG bugs (if they hinder the reader):</strong><br></p>
 <div>
@@ -1279,7 +1220,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <ul>
 <li>Symbols used are not intuitive</li>
 <li>Indiscriminate use of double-headed arrows</li>
-<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
+<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
 <li>Description given are not sufficiently high-level
 </li></ul></span>
 <span id="umlDiagramBugs">
@@ -1334,7 +1275,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 </li></ul></span></div></box></div></div>
 </div>
 
-<h4 id="5-project-grading-project-management-5-5-10-marks"><span id="5-project-grading-project-management-5-5-10-marks" class="anchor"></span><div class="bg-warning p-1">5. Project Grading: Project Management <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-users"></span></span> 5 + <span><span aria-hidden="true" class="fas fa-user"></span></span> 5 = 10 marks]</span></div><a class="fa fa-anchor" href="#5-project-grading-project-management-5-5-10-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="5-project-grading-project-management-5-5-10-marks"><div class="bg-warning p-1">5. Project Grading: Project Management <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-users"></span></span> 5 + <span><span aria-hidden="true" class="fas fa-user"></span></span> 5 = 10 marks]</span></div><span id="5-project-grading-project-management-5-5-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#5-project-grading-project-management-5-5-10-marks" onclick="event.stopPropagation()"></a></h4>
 <div id="project-management-grading"> 
 <p><big><strong>5A. Process:</strong></big></p>
 <p><strong>Evaluates:</strong> How well you did in project management related aspects of the project, as an individual and as a team</p>
@@ -1355,7 +1296,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <p><big><strong>5B. Team-tasks:</strong></big></p>
 <p><strong>Evaluates:</strong> How much you contributed to team-tasks</p>
 <div class="indented-level1">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Expectations: Examples of team-tasks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Expectations: Examples of team-tasks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p>Here is a non-exhaustive list of team-tasks:</p>
 <ol>
@@ -1376,14 +1317,14 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <li>Do close to an equal share of the team tasks (you can earn bonus marks by doing more than an equal share).</li>
 <li>Merge code in at least four of weeks 7, 8, 9, 10, 11, 12</li></ul></div></div></panel>
 <p></p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Exams <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Exams <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p class="lead">There is no midterm exam. Information about the final exam is given below.</p>
 <ul>
 <li>The final exam will be as per the normal exam schedule, and will count for 30% of the final grade.</li>
 <li>The exam will be done online.</li>
 <li><mark><strong>We will be following the <a href="https://mysoc.nus.edu.sg/academic/e-exam-sop-for-students/">SoC's E-Exam SOP</a></strong></mark>, combined with the deviations/refinements given in the section below. Please read the SOP carefully and ensure you follow all instructions.</li></ul>
-<h2 id="sop-deviations-refinements"><span id="sop-deviations-refinements" class="anchor"></span>SOP deviations/refinements<a class="fa fa-anchor" href="#sop-deviations-refinements" onclick="event.stopPropagation()"></a></h2>
+<h2 id="sop-deviations-refinements">SOP deviations/refinements<span id="sop-deviations-refinements" class="anchor"></span><a class="fa fa-anchor" href="#sop-deviations-refinements" onclick="event.stopPropagation()"></a></h2>
 <ol>
 <li>
 <p><strong>Tools: LumiNUS, Zoom, Microsoft Teams (MST), PDF scanner</strong>, PDF reader.</p></li>
@@ -1417,10 +1358,10 @@ It turns out that the textbook PDF file plays better with browsers than PDF view
 <p><strong>If your computer crashed/restarted</strong> during the exam, try to get it up again and resume the exam. LumiNUS will allow you to resume from where you stopped earlier. However, note that there is a deadline to finish the quiz and you will overrun that deadline if you lose more than 5 minutes due to the computer outage.</p></li>
 <li>
 <p><strong>The zoom link and the invigilator info</strong> will be distributed via LumiNUS gradebook at least 24 hours before the exam.</p></li></ol>
-<h2 id="format"><span id="format" class="anchor"></span>Format<a class="fa fa-anchor" href="#format" onclick="event.stopPropagation()"></a></h2>
+<h2 id="format">Format<span id="format" class="anchor"></span><a class="fa fa-anchor" href="#format" onclick="event.stopPropagation()"></a></h2>
 <ul>
 <li>The exam will be divided into 3 parts.</li></ul>
-<h3 id="final-exam-part-1"><span id="final-exam-part-1" class="anchor"></span>Final exam - part 1<a class="fa fa-anchor" href="#final-exam-part-1" onclick="event.stopPropagation()"></a></h3>
+<h3 id="final-exam-part-1">Final exam - part 1<span id="final-exam-part-1" class="anchor"></span><a class="fa fa-anchor" href="#final-exam-part-1" onclick="event.stopPropagation()"></a></h3>
 <ul>
 <li>A LumiNUS quiz containing 16 MCQ questions. All questions are estimated to be equal size/difficulty.</li>
 <li>You only need to answer 15 questions correctly to get full marks. The extra question is there to cushion you against careless mistakes or misinterpreting a question.</li>
@@ -1431,7 +1372,7 @@ It turns out that the textbook PDF file plays better with browsers than PDF view
 2. not unreasonable for the materials tested and the proficiency level expected -- i.e., when using this knowledge in a real life SE project discussion, it will be rare for you to go back to revise what you said earlier in the discussion</span></li>
 <li>Duration: <strong>35 minutes</strong> <span tags="m--cs2103">(recommended: allocate 2 minutes per question, which gives you a 3 minutes buffer)</span></li>
 <li>You are required to give a justification for your answer. <mark>The question will specify what should be included in the justification. <strong>Answers without the correct justification may not earn full marks.</strong></mark> However, we'll give full marks up to two correct answers (per 16 questions) that do not have justifications <span class="dimmed">(to cater for cases where you accidentally proceeded to the next question before adding the justification)</span>.</li>
-<li>Here is an example question. The answer is <code class="hljs inline no-lang" v-pre>a</code> and the justification can be <code class="hljs inline no-lang" v-pre>OOP is only one of the choices for an SE project</code>.</li></ul>
+<li>Here is an example question. The answer is <code v-pre>a</code> and the justification can be <code v-pre>OOP is only one of the choices for an SE project</code>.</li></ul>
 <div class="indented-level2">
 <panel haader="A sample question" expanded>
 <p>Choose the incorrect statement.</p>
@@ -1447,7 +1388,7 @@ It turns out that the textbook PDF file plays better with browsers than PDF view
 <li>
 <p>There will be a 5-minutes toilet break after this part</p></li></ul>
 <div tags="m--cs2103">
-<h3 id="final-exam-part-2"><span id="final-exam-part-2" class="anchor"></span>Final exam - part 2<a class="fa fa-anchor" href="#final-exam-part-2" onclick="event.stopPropagation()"></a></h3>
+<h3 id="final-exam-part-2">Final exam - part 2<span id="final-exam-part-2" class="anchor"></span><a class="fa fa-anchor" href="#final-exam-part-2" onclick="event.stopPropagation()"></a></h3>
 <ul>
 <li>You will be asked to draw some UML diagrams, <strong>to be hand-drawn on paper</strong> (not on a tablet). You may use pencils if you wish.</li>
 <li>Duration: 20 minutes</li>
@@ -1455,7 +1396,7 @@ It turns out that the textbook PDF file plays better with browsers than PDF view
 <li>At the <em>end</em> of the exam (i.e., after all three parts are over), you will upload a scanned copy to LumiNUS. Do not do any scanning/uploading at this time.</li>
 <li>These diagrams will not be graded directly. Instead, you will use them when answering part 3 of the exam.<br>
 However, we may use the diagrams to give <em>some</em> consolation marks should you score very low in the corresponding MCQ questions.</li></ul></div>
-<h3 id="final-exam-part-3"><span id="final-exam-part-3" class="anchor"></span>Final exam - part 3<a class="fa fa-anchor" href="#final-exam-part-3" onclick="event.stopPropagation()"></a></h3>
+<h3 id="final-exam-part-3">Final exam - part 3<span id="final-exam-part-3" class="anchor"></span><a class="fa fa-anchor" href="#final-exam-part-3" onclick="event.stopPropagation()"></a></h3>
 <ul>
 <li>Similar to part 1 (e.g., 16 questions, same length).</li>
 <li>Some questions will refer to the UML diagrams that you drew in part 2.</li>
@@ -1465,21 +1406,21 @@ However, we may use the diagrams to give <em>some</em> consolation marks should 
 <li>Due to the above point, you will have to stay back in Zoom until the full exam is over (<mark>not allowed to leave early</mark>).</li>
 <li>Due to the above point, you may want to have something to read, in case you finish early. <mark>You are not allowed to use other gadgets or use the computer to do other things even if you have finished the exam</mark>.</li>
 <li>After the exam, scan and <strong>upload the diagrams you drew in part 2 onto LumiNUS</strong>, as a single PDF file, <strong>within an hour</strong>. The file name does not matter.</li></ul>
-<h2 id="exam-briefing-mock-exam-practice-exam-paper"><span id="exam-briefing-mock-exam-practice-exam-paper" class="anchor"></span>Exam briefing, mock exam, practice exam paper<a class="fa fa-anchor" href="#exam-briefing-mock-exam-practice-exam-paper" onclick="event.stopPropagation()"></a></h2>
+<h2 id="exam-briefing-mock-exam-practice-exam-paper">Exam briefing, mock exam, practice exam paper<span id="exam-briefing-mock-exam-practice-exam-paper" class="anchor"></span><a class="fa fa-anchor" href="#exam-briefing-mock-exam-practice-exam-paper" onclick="event.stopPropagation()"></a></h2>
 <ul>
 <li>There will be an exam briefing in the penultimate lecture. It will include a minimal mock exam, just to help you understand the structure.</li>
 <li>You will be given a practice exam paper (half the size of the full paper) to help you practice timing. That practice paper will be released at least one week before the exam.</li></ul></div></panel></div></panel><p></p>
 <panel type minimized class="algolia-no-index">
 <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Apdx C (FAQs) → What are the differences between CS2103T and CS2103? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></span>
 <div>
-<h3 id="what-are-the-differences-between-cs2103t-and-cs2103-optional"><span id="what-are-the-differences-between-cs2103t-and-cs2103-optional" class="anchor"></span>What are the differences between CS2103T and CS2103? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></small></small><a class="fa fa-anchor" href="#what-are-the-differences-between-cs2103t-and-cs2103-optional" onclick="event.stopPropagation()"></a></h3>
+<h3 id="what-are-the-differences-between-cs2103t-and-cs2103-optional">What are the differences between CS2103T and CS2103? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></small></small><span id="what-are-the-differences-between-cs2103t-and-cs2103-optional" class="anchor"></span><a class="fa fa-anchor" href="#what-are-the-differences-between-cs2103t-and-cs2103-optional" onclick="event.stopPropagation()"></a></h3>
 <div class="indented">
 <div>
 <p>Same lecture content (but possibly different lecture slots), same exam. Separate tutorials, separate project grading. Unless specified otherwise, whatever is stated for one module applies to the other.</p></div></div></div></panel><p></p>
 <panel type minimized class="algolia-no-index">
 <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Apdx C (FAQs) → Why the workload is so high? <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></span>
 <div>
-<h3 id="why-the-workload-is-so-high-optional"><span id="why-the-workload-is-so-high-optional" class="anchor"></span>Why the workload is so high? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></small></small><a class="fa fa-anchor" href="#why-the-workload-is-so-high-optional" onclick="event.stopPropagation()"></a></h3>
+<h3 id="why-the-workload-is-so-high-optional">Why the workload is so high? <small><small><span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></small></small><span id="why-the-workload-is-so-high-optional" class="anchor"></span><a class="fa fa-anchor" href="#why-the-workload-is-so-high-optional" onclick="event.stopPropagation()"></a></h3>
 <div class="indented">
 <div>
 <img src="/website/admin/images/Why workload heavy.png" width="250">
@@ -1490,7 +1431,7 @@ However, we may use the diagrams to give <em>some</em> consolation marks should 
 <panel type minimized class="algolia-no-index">
 <span slot="header" class="card-title"> Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Apdx C (FAQs) → What are the extra requirements to get an A+? <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span>
 <div>
-<h3 id="what-are-the-extra-requirements-to-get-an-a"><span id="what-are-the-extra-requirements-to-get-an-a" class="anchor"></span>What are the extra requirements to get an A+? <small><small><span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#what-are-the-extra-requirements-to-get-an-a" onclick="event.stopPropagation()"></a></h3>
+<h3 id="what-are-the-extra-requirements-to-get-an-a">What are the extra requirements to get an A+? <small><small><span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="what-are-the-extra-requirements-to-get-an-a" class="anchor"></span><a class="fa fa-anchor" href="#what-are-the-extra-requirements-to-get-an-a" onclick="event.stopPropagation()"></a></h3>
 <div class="indented">
 <div>
 <p>In CS2103/T, A+ is not given simply based on the final score. To get an A+ you should,</p>
@@ -1500,8 +1441,8 @@ However, we may use the diagrams to give <em>some</em> consolation marks should 
 <li>be considered helpful by peers (based on peer evaluations and tutor observations)
 <ul>
 <li>In particular, you are encouraged to be active on the <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a> and give your inputs to ongoing discussions so that other students can benefit from your relatively higher expertise that makes you deserve an A+.</li>
-<li>Whenever you can, go out of your way to review PRs created by other team members.</li></ul></li></ul></div></div></div></panel><p></p></div></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<li>Whenever you can, go out of your way to review PRs created by other team members.</li></ul></li></ul></div></div></div></panel><p></p></div></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -1523,13 +1464,18 @@ However, we may use the diagrams to give <em>some</em> consolation marks should 
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -1553,5 +1499,5 @@ However, we may use the diagrams to give <em>some</em> consolation marks should 
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

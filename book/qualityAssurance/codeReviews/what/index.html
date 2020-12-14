@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Quality Assurance: Code Reviews: What</title>
     <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../markbind/css/markbind.min.css"><script src="../../../../markbind/js/polyfill.min.js"></script>
-    <script src="../../../../markbind/js/vue.min.js"></script>
-    <script src="../../../../markbind/js/markbind.min.js"></script>
-    <script src="../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -30,7 +28,7 @@
 <p><span class="dimmed"><strong><span>Quality Assurance → Quality Assurance → Code Reviews →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>Code review is the systematic examination of code with the intention of finding where the code can be improved.</strong></p>
@@ -41,7 +39,7 @@
 <ul>
 <li>Project Management Platforms such as GitHub and BitBucket allow the new code to be proposed as <em>Pull Requests</em> and provide the ability for others to review the code in the PR.</li></ul></li>
 <li>
-<p><strong>In <trigger trigger="click" for="modal:codeReview-pairProgramming">pair programming</trigger></strong></p>
+<p><strong>In <span trigger="click" for="modal:codeReview-pairProgramming" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:codeReview-pairProgramming'].show()" class="trigger-click">pair programming</span></strong></p>
 <ul>
 <li>As pair programming involves two programmers working on the same code at the same time, there is an implicit review of the code by the other member of the pair.</li></ul></li></ul>
 <b-modal id="modal:codeReview-pairProgramming" hide-footer size="lg" modal-class="mb-zoom" ref="modal:codeReview-pairProgramming" class="algolia-no-index"><template slot="modal-title">Pair Programming</template>
@@ -75,18 +73,22 @@
 <li>It is a manual process and therefore, error prone.</li></ul></div>
 <div>
 <div>
-<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
+<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
 <ul>
-<li><a href="https://developers.redhat.com/blog/2019/07/08/10-tips-for-reviewing-code-you-dont-like/"><strong>10 tips for reviewing code you don’t like</strong></a> - a blog post by David Lloyd (a Red Hat developer).</li></ul></panel></div></div></div></div></div></div></div>
-<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+<li><a href="https://developers.redhat.com/blog/2019/07/08/10-tips-for-reviewing-code-you-dont-like/"><strong>10 tips for reviewing code you don’t like</strong></a> - a blog post by David Lloyd (a Red Hat developer).</li></ul></panel></div></div></div></div></div></div></div></div>
         </div>
     </div>
 </body>
+<script src="../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../markbind/js/components.min.js"></script>
 <script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -110,5 +112,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script>
 </html>

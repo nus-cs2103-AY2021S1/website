@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Admin: tP (team project): Expectations</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
-    <script src="../markbind/js/vue.min.js"></script>
-    <script src="../markbind/js/markbind.min.js"></script>
-    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
@@ -70,7 +68,7 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -136,17 +134,15 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/ip-grading.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Grading</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-timeline.html"><span>tP: Timeline <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
 <br>
-<h1 id="tp-team-project-expectations"><span id="tp-team-project-expectations" class="anchor"></span><span class="display-4">tP (team project): Expectations</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><a class="fa fa-anchor" href="#tp-team-project-expectations" onclick="event.stopPropagation()"></a></h1>
+<h1 id="tp-team-project-expectations"><span class="display-4">tP (team project): Expectations</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="tp-team-project-expectations" class="anchor"></span><a class="fa fa-anchor" href="#tp-team-project-expectations" onclick="event.stopPropagation()"></a></h1>
 <div id="main">
 <p><span class="keyword d-none">project expectations</span></p>
 
-<h2 id="outcomes"><span id="outcomes" class="anchor"></span>Outcomes<a class="fa fa-anchor" href="#outcomes" onclick="event.stopPropagation()"></a></h2>
+<h2 id="outcomes">Outcomes<span id="outcomes" class="anchor"></span><a class="fa fa-anchor" href="#outcomes" onclick="event.stopPropagation()"></a></h2>
 <p>The high-level learning outcome of the team project (tP):</p>
 <p><box> <span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can contribute production quality SE work to a small/medium software project </box></p>
 <div tags="m--cs2103">
@@ -165,35 +161,35 @@
 <li>quality assurance</li></ul>
 <span id="tp-direction">
 
-<h2 id="direction"><span id="direction" class="anchor"></span>Direction<a class="fa fa-anchor" href="#direction" onclick="event.stopPropagation()"></a></h2>
+<h2 id="direction">Direction<span id="direction" class="anchor"></span><a class="fa fa-anchor" href="#direction" onclick="event.stopPropagation()"></a></h2>
 <div tags="m--cs2103">
 <p>The tP uses a generic application called <a href="https://se-edu.github.io/addressbook-level3/">AddressBook-Level3 (AB3)</a> (from <a href="https://se-education.org">https://se-education.org</a>) as the starting point.</p>
 <img src="https://github.com/se-edu/addressbook-level3/raw/master/docs/images/Ui.png" width="600">
 <p></p></div>
 <p>You may develop any product provided it is meant for users who can type fast, and prefer typing over mouse/voice commands. Therefore, <mark>Command Line Interface (CLI) is the primary mode of input.</mark></p>
 <div class="indented-level1">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Constraint-Typing-Preferred <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Constraint-Typing-Preferred <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h4 id="constraint-typing-preferred"><span id="constraint-typing-preferred" class="anchor"></span><span class="badge badge-warning text-monospace"><span aria-hidden="true" class="fas fa-ban"></span> Constraint-Typing-Preferred</span><a class="fa fa-anchor" href="#constraint-typing-preferred" onclick="event.stopPropagation()"></a></h4>
+<h4 id="constraint-typing-preferred"><span class="badge badge-warning text-monospace"><span aria-hidden="true" class="fas fa-ban"></span> Constraint-Typing-Preferred</span><span id="constraint-typing-preferred" class="anchor"></span><a class="fa fa-anchor" href="#constraint-typing-preferred" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-level2">
 <p>The product should be targeting users who can type fast and prefer typing over other means of input.<br>
 <span class="dimmed"><strong>Reason</strong>: to increase comparability of products, and to make feature evaluation easier for peer evaluators.</span></p></div></div></panel></div><p></p>
 <div class="indented-level1">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Recommendation-CLI-First <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Recommendation-CLI-First <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h4 id="recommendation-cli-first"><span id="recommendation-cli-first" class="anchor"></span><span class="badge badge-info text-monospace"><span aria-hidden="true" class="far fa-thumbs-up"></span> Recommendation-CLI-First</span><a class="fa fa-anchor" href="#recommendation-cli-first" onclick="event.stopPropagation()"></a></h4>
+<h4 id="recommendation-cli-first"><span class="badge badge-info text-monospace"><span aria-hidden="true" class="far fa-thumbs-up"></span> Recommendation-CLI-First</span><span id="recommendation-cli-first" class="anchor"></span><a class="fa fa-anchor" href="#recommendation-cli-first" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-level2">
 <p>Following from the <em>Constraint-Typing-Preferred</em>, if the app is optimized for the target user (graded under the <em>product design</em> criterion), <mark>a user who can type fast should be able to accomplish most tasks faster via CLI, compared to a hypothetical GUI-only version of the app.</mark> <span class="dimmed">For example, adding a new entity via the CLI should be faster than entering the same data through a GUI form.</span><br>
 Therefore, the input to the app needs to be primarily CLI. <span tags="m--cs2103">The GUI is used primarily to give visual feedback to the user.</span> While we don't prohibit non-CLI inputs, note that such inputs will reduce the suitability of the product to target users. Therefore, give CLI alternatives to mouse/GUI inputs, if applicable.<br>
 Also keep in mind:</p>
 <ul>
 <li>Regular typing is usually faster than using key combinations.</li>
-<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">typing the full command and hitting ENTER will complete the task</span>One-shot commands</span> are faster over <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">prompting the user to input one parameter at a time</span>multi-step commands</span>. If you provide a multi-step command to help new users, you can also provide a one-shot equivalent for regular/expert users.<br></li></ul></div></div></panel></div><p></p>
+<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">typing the full command and hitting ENTER will complete the task</span>One-shot commands</span> are faster over <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">prompting the user to input one parameter at a time</span>multi-step commands</span>. If you provide a multi-step command to help new users, you can also provide a one-shot equivalent for regular/expert users.<br></li></ul></div></div></panel></div><p></p>
 <p></p>
 
 <div tags="m--cs2103">
 <ul>
-<li><strong>Direction 1: Evolve</strong> <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">AddressBook-Level3</span>AB3</span> into a more powerful or more optimized contact management app.
+<li><strong>Direction 1: Evolve</strong> <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">AddressBook-Level3</span>AB3</span> into a more powerful or more optimized contact management app.
 <ul>
 <li>Some examples:
 <ul>
@@ -227,19 +223,19 @@ Also keep in mind:</p>
 </span>
 
 
-<h2 id="target-user-and-amp-value-proposition"><span id="target-user-and-amp-value-proposition" class="anchor"></span>Target User &amp; Value Proposition<a class="fa fa-anchor" href="#target-user-and-amp-value-proposition" onclick="event.stopPropagation()"></a></h2>
+<h2 id="target-user-and-amp-value-proposition">Target User &amp; Value Proposition<span id="target-user-and-amp-value-proposition" class="anchor"></span><a class="fa fa-anchor" href="#target-user-and-amp-value-proposition" onclick="event.stopPropagation()"></a></h2>
 <p>You are expected to:</p>
 <ul>
 <li><strong>Define a very specific <em>target user profile</em>.</strong> <br> <mark>We require you to narrow down the target user profile</mark>  <span class="dimmed">as opposed to trying to make it as general as possible. Here is an example direction of narrowing down target user: anybody → teachers → university teachers → tech savvy university teachers → CS2103/T instructors.</span><br><br>
 <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Be careful not to contradict given <a href="/website/admin/tp-constraints.html">project constraints</a> when defining the user profile <span class="dimmed">e.g. the target user should still prefer typing over mouse actions</span>.</li></ul>
 <div class="indented-level2">
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Why the need to narrow down the user profile?</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Why the need to narrow down the user profile?</span></p></template>
 <ul>
 <li>It is an opportunity to exercise your product design skills because optimizing the product to a very specific target user requires good product design skills.</li>
 <li>It minimizes the overlap between features of different teams which can cause plagiarism issues. Furthermore, higher the number of other teams having the same features, less impressive your work becomes especially if others have done a better job of implementing that feature.
 </li></ul></panel>
 
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">How narrow can we make the target market?</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">How narrow can we make the target market?</span></p></template>
 <p>The size of the target market is not a grading criterion. You can make it as narrow as you want. Even a single user target market is fine as long as you can define that single user in a way others can understand (reason: project evaluators need to evaluate the project from the point of view of the target users).
 </p></panel><p></p></div>
 <ul>
@@ -258,7 +254,7 @@ You should also define the <em>scope</em> clearly i.e., boundary beyond which th
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Your project will be graded based on how well the features match the target user profile and how well the features fit-together.</p></li></ul></li></ul>
 <span id="functionalityExpectations">
 
-<h2 class="text-white bg-danger p-1" id="functionality-expectations"><span id="functionality-expectations" class="anchor"></span>Functionality Expectations<a class="fa fa-anchor" href="#functionality-expectations" onclick="event.stopPropagation()"></a></h2>
+<h2 class="text-white bg-danger p-1" id="functionality-expectations">Functionality Expectations<span id="functionality-expectations" class="anchor"></span><a class="fa fa-anchor" href="#functionality-expectations" onclick="event.stopPropagation()"></a></h2>
 <div tags="m--cs2103">
 <p><strong>The expected level of <em>functionality</em> to be added by a 5-person team is roughly the <mark>equivalent effort taken to create AB3 <em>functionality</em></mark></strong>. Furthermore, we expect a team to reach that level if each member puts in an effort equivalent to the effort they put into the iP. Some examples meeting that criterion:</p>
 <ul>
@@ -270,7 +266,7 @@ You should also define the <em>scope</em> clearly i.e., boundary beyond which th
 <li>Example 2: a FooBar app that keeps track of two different types of entities <em>Foo</em> entities and <em>Bar</em> entities.
 <ul>
 <li>Foo and Bar entities are tightly-connected e.g., a Foo entity can contain Bar entities. Each type is similar to AB3 Person objects in terms of complexity.</li>
-<li>In addition to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Creat Read Update Delete</span>CRUD</span> for Foo and Bar entities, there are a 4-5 FooBar-specific functionality, some of which involves both Foo and Bar entities e.g., link a Foo entity to a Bar entity.</li></ul></li></ul></div>
+<li>In addition to <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Creat Read Update Delete</span>CRUD</span> for Foo and Bar entities, there are a 4-5 FooBar-specific functionality, some of which involves both Foo and Bar entities e.g., link a Foo entity to a Bar entity.</li></ul></li></ul></div>
 
 <p><mark>You will get full marks for implementation effort</mark> if you meet the expectation stated above. There are no extra marks for exceeding that bar. You are better off spending that effort in improving other aspects of the project.</p>
 <box tags="m--cs2103">
@@ -285,7 +281,7 @@ You should also define the <em>scope</em> clearly i.e., boundary beyond which th
 </box></span>
 <span id="teamExpectations">
 
-<h2 class="text-white bg-success p-1" id="fas-users-team-expectations"><span id="fas-users-team-expectations" class="anchor"></span><span><span aria-hidden="true" class="fas fa-users"></span></span> Team Expectations<a class="fa fa-anchor" href="#fas-users-team-expectations" onclick="event.stopPropagation()"></a></h2>
+<h2 class="text-white bg-success p-1" id="fas-users-team-expectations"><span><span aria-hidden="true" class="fas fa-users"></span></span> Team Expectations<span id="fas-users-team-expectations" class="anchor"></span><a class="fa fa-anchor" href="#fas-users-team-expectations" onclick="event.stopPropagation()"></a></h2>
 <ul>
 <li><span class="badge badge-success">Expectation</span> <span class="text-success"><strong>Preserve <em>product integrity</em></strong></span> i.e. ensure,
 <ol>
@@ -298,8 +294,8 @@ You should also define the <em>scope</em> clearly i.e., boundary beyond which th
 
 <span id="individualExpectations">
 
-<h2 class="text-white bg-info p-1" id="fas-user-individual-expectations"><span id="fas-user-individual-expectations" class="anchor"></span><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual Expectations<a class="fa fa-anchor" href="#fas-user-individual-expectations" onclick="event.stopPropagation()"></a></h2>
-<h4 id="individual-expectations-on-implementation"><span id="individual-expectations-on-implementation" class="anchor"></span><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Implementation</span><a class="fa fa-anchor" href="#individual-expectations-on-implementation" onclick="event.stopPropagation()"></a></h4>
+<h2 class="text-white bg-info p-1" id="fas-user-individual-expectations"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual Expectations<span id="fas-user-individual-expectations" class="anchor"></span><a class="fa fa-anchor" href="#fas-user-individual-expectations" onclick="event.stopPropagation()"></a></h2>
+<h4 id="individual-expectations-on-implementation"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Implementation</span><span id="individual-expectations-on-implementation" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-implementation" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Contribute to the functional code of the product.</strong></span>
 <ul>
@@ -307,7 +303,7 @@ You should also define the <em>scope</em> clearly i.e., boundary beyond which th
 <li><strong>The enhancement(s) should fit with the rest of the software</strong> (and the target user profile) and should have the consent of the team members. <span class="dimmed">You will lose marks if you go 'rogue' and add things that don't fit with the product.</span></li></ul></li></ul>
 <div tags="m--cs2103" class="indented-level4">
 <p>Some examples:</p>
-<panel type="seamless" minimized class="algolia-no-index"><template slot="header"><p>Example enhancements</p></template>
+<panel type="seamless" minimized class="algolia-no-index"><template slot="_header"><p>Example enhancements</p></template>
 <ul>
 <li>Add a new feature <span class="dimmed">e.g. add the ability to view statistics</span></li>
 <li>Enhance an existing features in a major way <span class="dimmed">e.g. make the command syntax more user friendly and closer to natural language</span></li>
@@ -322,7 +318,7 @@ You should also define the <em>scope</em> clearly i.e., boundary beyond which th
 <div tags="m--cs2103">
 <ul>
 <li><strong>Tip: Divide the components of the product among team members</strong>. Notwithstanding the above, you are still recommended to divide the components of the product among team members so that each team member is <em>in charge</em> of one or more components. While others will be modifying those components to fit their features, your role as the <em>in charge</em> of a component is to guide others modifying that component <span class="dimmed">(reason: you are supposed to be the most knowledgeable about that component)</span> and protect that component from degrading <span class="dimmed">e.g., you can review others' changes to your component and suggest possible changes</span>.</li></ul></div>
-<h4 id="individual-expectations-on-documentation"><span id="individual-expectations-on-documentation" class="anchor"></span><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Documentation</span><a class="fa fa-anchor" href="#individual-expectations-on-documentation" onclick="event.stopPropagation()"></a></h4>
+<h4 id="individual-expectations-on-documentation"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Documentation</span><span id="individual-expectations-on-documentation" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-documentation" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Objective:</strong> showcase your ability to write both <em>user-facing documentation</em> and <em>developer-facing documentation</em>.</li>
 <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Update the User Guide (UG) and the Developer Guide (DG) parts</strong></span> that are related to the enhancements you added. The minimum requirement is given below. <span class="dimmed">(Reason: Evaluators will not be able to give you marks unless there is sufficient evidence of your documentation skills.)</span>
@@ -331,7 +327,7 @@ You should also define the <em>scope</em> clearly i.e., boundary beyond which th
 <li>DG: 3 or more pages</li></ul></li>
 <li><strong>Tip: If the UG/DG updates for your enhancements are not enough to reach the above requirements</strong>, you can make up the shortfall by documenting 'proposed' features and alternative designs/implementations.</li>
 <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Use at least 2 types of UML diagrams in your DG updates</strong></span> i.e., diagrams you added yourself or those you modified significantly.</li></ul>
-<h4 id="individual-expectations-on-testing"><span id="individual-expectations-on-testing" class="anchor"></span><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Testing</span><a class="fa fa-anchor" href="#individual-expectations-on-testing" onclick="event.stopPropagation()"></a></h4>
+<h4 id="individual-expectations-on-testing"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Testing</span><span id="individual-expectations-on-testing" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-testing" onclick="event.stopPropagation()"></a></h4>
 <div id="testing-expectations">
 <ul>
 <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Write <em>some</em> automated tests</strong></span> so that we can evaluate your ability to write tests.</li></ul>
@@ -339,13 +335,13 @@ You should also define the <em>scope</em> clearly i.e., boundary beyond which th
 <box>
 <p><strong>🤔 How much testings is enough?</strong> We expect you to decide. You learned different types of testing and what they try to achieve. Based on that, you should decide how much of each type is required. Similarly, you can decide to what extent you want to automate tests, depending on the benefits and the effort required.<br>
 There is no requirement for a minimum coverage level. Note that in a production environment you are often required to have at least 90% of the code covered by tests. In this project, it can be less. <mark>The weaker your tests are, the higher the risk of bugs, which will cost marks if not fixed before the final submission.</mark></p></box><p></p></div></div>
-<h4 id="individual-expectations-on-teamwork"><span id="individual-expectations-on-teamwork" class="anchor"></span><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Teamwork</span><a class="fa fa-anchor" href="#individual-expectations-on-teamwork" onclick="event.stopPropagation()"></a></h4>
+<h4 id="individual-expectations-on-teamwork"><span class="badge badge-info"><span><span aria-hidden="true" class="fas fa-user"></span></span> Individual</span> <span class="text-info">Expectations on Teamwork</span><span id="individual-expectations-on-teamwork" class="anchor"></span><a class="fa fa-anchor" href="#individual-expectations-on-teamwork" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Do an equal share of the <em>team-tasks</em></strong>.</span></li></ul>
 <div id="team-tasks" class="indented-level2">
 <box>
 <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p></template>
 <span id="example-team-tasks">
 <p>Here is a non-exhaustive list of team-tasks:</p>
 <ol>
@@ -366,7 +362,7 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <box>
 <span id="roles">
 <p><em>Roles</em> indicate aspects you are in charge of and responsible for. <span class="dimmed">E.g., if you are in charge of documentation, you are the person who should allocate which parts of the documentation is to be done by who, ensure the document is in right format, ensure consistency etc.</span></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Recommended roles and responsibilities</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Recommended roles and responsibilities</p></template>
 <p>This is a non-exhaustive list; you may define additional roles.</p>
 <ul>
 <li><em>Team lead</em>: Responsible for overall project coordination.</li>
@@ -379,15 +375,15 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <li><em>[Tool ABC] expert</em>: <span class="dimmed">e.g. Intellij expert, Git expert, etc.</span> Helps other team member with matters related to the specific tool.</li></ul>
 <div tags="m--cs2103">
 <ul>
-<li><em>In charge of[Component XYZ]</em>: <span class="dimmed">e.g. In charge of <code class="hljs inline no-lang" v-pre>Model</code>, <code class="hljs inline no-lang" v-pre>UI</code>, <code class="hljs inline no-lang" v-pre>Storage</code>, etc.</span> If you are in charge of a component, you are expected to know that component well, and review changes done to that component in v1.3-v1.4.</li></ul></div>
+<li><em>In charge of[Component XYZ]</em>: <span class="dimmed">e.g. In charge of <code v-pre>Model</code>, <code v-pre>UI</code>, <code v-pre>Storage</code>, etc.</span> If you are in charge of a component, you are expected to know that component well, and review changes done to that component in v1.3-v1.4.</li></ul></div>
 </panel><p></p>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> Ensure each of the important roles are assigned to one person in the team. It is OK to have a 'backup' for each role, but <strong>for each aspect there should be one person who is unequivocally the person responsible for it</strong>. <span class="dimmed">Reason: when <em>everyone is responsible for everything</em>, no one is.</span></p></span></box><p></p></div>
 <ul>
 <li><span class="badge badge-info">Expectation</span> <span class="text-info"><strong>Review each others work</strong>.</span> <span class="dimmed">Reason: reviewing skills is a learning outcome, and it is mutually beneficial.</span></li></ul></span>
 <p></p></div><p></p>
 <br>
-<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/ip-grading.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Grading</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-timeline.html"><span>tP: Timeline <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/ip-grading.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Grading</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-timeline.html"><span>tP: Timeline <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -415,13 +411,18 @@ There is no requirement for a minimum coverage level. Note that in a production 
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -445,5 +446,5 @@ There is no requirement for a minimum coverage level. Note that in a production 
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>

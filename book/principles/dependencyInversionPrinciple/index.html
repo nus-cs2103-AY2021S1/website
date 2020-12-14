@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Principles: Dependency Inversion Principle</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
-    <script src="../../../markbind/js/vue.min.js"></script>
-    <script src="../../../markbind/js/markbind.min.js"></script>
-    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -29,7 +27,7 @@
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Principles →</span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="dependency-inversion-principle"><span id="dependency-inversion-principle" class="anchor"></span><span>Dependency inversion principle</span><a class="fa fa-anchor" href="#dependency-inversion-principle" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="dependency-inversion-principle"><span>Dependency inversion principle</span><a class="fa fa-anchor" href="#dependency-inversion-principle" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <box type="definition" seamless>
@@ -42,13 +40,13 @@
 <p>Example:</p>
 <img src="/website/book/principles/dependencyInversionPrinciple/images/payrollEmployee.png" height="130">
 <p></p>
-<p>In design (a), the higher level class <code class="hljs inline no-lang" v-pre>Payroll</code> depends on the lower level class <code class="hljs inline no-lang" v-pre>Employee</code>, which is a violation of DIP. In design (b), both <code class="hljs inline no-lang" v-pre>Payroll</code> and <code class="hljs inline no-lang" v-pre>Employee</code> depend on the <code class="hljs inline no-lang" v-pre>Payee</code> interface (note that inheritance is a dependency).</p>
-<p>Design (b) is more flexible (and less coupled) because now the <code class="hljs inline no-lang" v-pre>Payroll</code> class need not change when the <code class="hljs inline no-lang" v-pre>Employee</code> class changes.</p></box></div>
+<p>In design (a), the higher level class <code v-pre>Payroll</code> depends on the lower level class <code v-pre>Employee</code>, which is a violation of DIP. In design (b), both <code v-pre>Payroll</code> and <code v-pre>Employee</code> depend on the <code v-pre>Payee</code> interface (note that inheritance is a dependency).</p>
+<p>Design (b) is more flexible (and less coupled) because now the <code v-pre>Payroll</code> class need not change when the <code v-pre>Employee</code> class changes.</p></box></div>
 <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these statements is true about the Dependency Inversion Principle?</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which of these statements is true about the Dependency Inversion Principle?</p></template>
 <question>
 <p>Which of these statements is true about the Dependency Inversion Principle?</p>
 <ul class="contains-task-list">
@@ -58,16 +56,20 @@
 <li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. It advocates making higher level classes depend on lower level classes.</li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>a</p>
-<p>Explanation: Replacing dependencies with mocks is Dependency Injection, not DIP. DIP does not reduce dependencies, rather, it changes the direction of dependencies. Yes, it can introduce extra abstractions but often the benefit can outweigh the extra complications.</p></div></question></panel></div></panel></div></div></div></div></div></div></div>
-<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+<p>Explanation: Replacing dependencies with mocks is Dependency Injection, not DIP. DIP does not reduce dependencies, rather, it changes the direction of dependencies. Yes, it can introduce extra abstractions but often the benefit can outweigh the extra complications.</p></div></question></panel></div></panel></div></div></div></div></div></div></div></div>
         </div>
     </div>
 </body>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -91,5 +93,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

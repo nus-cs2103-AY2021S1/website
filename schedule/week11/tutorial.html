@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Week 11 - Tutorial</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
-    <script src="../../markbind/js/vue.min.js"></script>
-    <script src="../../markbind/js/markbind.min.js"></script>
-    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
@@ -71,10 +69,8 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <nav>
@@ -87,21 +83,21 @@
 <li class="page-item active"><a class="page-link" href="/website/schedule/week11/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
 <li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week12"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
 <p></p>
-<h1 id="week-11-fri-oct-23rd-tutorial"><span id="week-11-fri-oct-23rd-tutorial" class="anchor"></span>Week 11 <small><small><span class="dimmed">[Fri, Oct 23rd]</span> - Tutorial</small></small><a class="fa fa-anchor" href="#week-11-fri-oct-23rd-tutorial" onclick="event.stopPropagation()"></a></h1>
+<h1 id="week-11-fri-oct-23rd-tutorial">Week 11 <small><small><span class="dimmed">[Fri, Oct 23rd]</span> - Tutorial</small></small><span id="week-11-fri-oct-23rd-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-11-fri-oct-23rd-tutorial" onclick="event.stopPropagation()"></a></h1>
 <div>
-<h4 id="0-demo-v1-3"><span id="0-demo-v1-3" class="anchor"></span><span class="badge badge-pill badge-secondary p-2"><big><big>0</big></big></span> <span class="dimmed">Demo v1.3</span><a class="fa fa-anchor" href="#0-demo-v1-3" onclick="event.stopPropagation()"></a></h4>
+<h4 id="0-demo-v1-3"><span class="badge badge-pill badge-secondary p-2"><big><big>0</big></big></span> <span class="dimmed">Demo v1.3</span><span id="0-demo-v1-3" class="anchor"></span><a class="fa fa-anchor" href="#0-demo-v1-3" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-level2">
 <p><span class="dimmed">The tutor to confirm the following has been done.</span></p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP v1.3: Demo <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP v1.3: Demo <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <div id="demo">
 <div tags="m--cs2103 m--cs2113">
 <ul>
-<li>[one member] As was done in <code class="hljs inline no-lang" v-pre>v1.2</code>,
+<li>[one member] As was done in <code v-pre>v1.2</code>,
 <ul>
-<li>Run your application using the <mark>JAR file</mark> that you released for <code class="hljs inline no-lang" v-pre>v1.3</code>.</li>
+<li>Run your application using the <mark>JAR file</mark> that you released for <code v-pre>v1.3</code>.</li>
 <li>Take screenshots of each available feature in action (or screen-record a demo -- need not be polished).</li>
-<li>Add those screenshots (or upload the demo video somewhere and give the link) to your <em>collaborative project notes</em> document with an appropriate heading e.g., <code class="hljs inline no-lang" v-pre>v1.3 features demo</code>.</li></ul></li></ul></div>
+<li>Add those screenshots (or upload the demo video somewhere and give the link) to your <em>collaborative project notes</em> document with an appropriate heading e.g., <code v-pre>v1.3 features demo</code>.</li></ul></li></ul></div>
 </div></div></panel></div>
 <p></p>
 <div class="indented-level2">
@@ -109,38 +105,32 @@
 <p>You may release a newer version to be used for the PE dry run, but make sure it is released <span class="text-danger">by Friday 10am</span>.
 </p></box><p></p></div>
 
-<h4 id="1-exercise-equivalence-partitions-boundary-values"><span id="1-exercise-equivalence-partitions-boundary-values" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Exercise: Equivalence partitions, boundary values<a class="fa fa-anchor" href="#1-exercise-equivalence-partitions-boundary-values" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-exercise-equivalence-partitions-boundary-values"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Exercise: Equivalence partitions, boundary values<span id="1-exercise-equivalence-partitions-boundary-values" class="anchor"></span><a class="fa fa-anchor" href="#1-exercise-equivalence-partitions-boundary-values" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>Do the following exercise as directed by the tutor.</li></ul>
 <div class="indented-level2">
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Design test cases for the <code class="hljs inline no-lang" v-pre>day</code> parameter</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Design test cases for the <code v-pre>day</code> parameter</p></template>
 <question>
 <ol>
 <li>
-<p>What are the <em>equivalence partitions</em> for the parameter <code class="hljs inline no-lang" v-pre>day</code> of this method?</p>
-<pre><code class="hljs java" v-pre><span><span class="hljs-comment">/**</span>
-</span><span><span class="hljs-comment"> * Returns true if the three values represent a valid day</span>
-</span><span><span class="hljs-comment"> */</span>
-</span><span><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isValidDay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> year, <span class="hljs-keyword">int</span> month, <span class="hljs-keyword">int</span> day)</span> </span>{
-</span><span>
-</span><span>} 
-</span></code></pre></li>
+<p>What are the <em>equivalence partitions</em> for the parameter <code v-pre>day</code> of this method?</p>
+<pre><code class="hljs java" v-pre><span><span class="hljs-comment">/**</span><br></span><span><span class="hljs-comment"> * Returns true if the three values represent a valid day</span><br></span><span><span class="hljs-comment"> */</span><br></span><span><span class="hljs-function"><span class="hljs-keyword">boolean</span> <span class="hljs-title">isValidDay</span><span class="hljs-params">(<span class="hljs-keyword">int</span> year, <span class="hljs-keyword">int</span> month, <span class="hljs-keyword">int</span> day)</span> </span>{<br></span><span><br></span><span>} <br></span></code></pre></li>
 <li>
-<p>What are the <em>boundary values</em> for the parameter <code class="hljs inline no-lang" v-pre>day</code> in the question above?</p></li>
+<p>What are the <em>boundary values</em> for the parameter <code v-pre>day</code> in the question above?</p></li>
 <li>
-<p>Give 10 test inputs you would use for the parameter <code class="hljs inline no-lang" v-pre>day</code> in the question above.</p></li></ol></question></panel></div></div>
+<p>Give 10 test inputs you would use for the parameter <code v-pre>day</code> in the question above.</p></li></ol></question></panel></div></div>
 <br>
-<h4 id="2-exercise-combining-multiple-test-inputs"><span id="2-exercise-combining-multiple-test-inputs" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Exercise: Combining multiple test inputs<a class="fa fa-anchor" href="#2-exercise-combining-multiple-test-inputs" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-exercise-combining-multiple-test-inputs"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Exercise: Combining multiple test inputs<span id="2-exercise-combining-multiple-test-inputs" class="anchor"></span><a class="fa fa-anchor" href="#2-exercise-combining-multiple-test-inputs" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>Do the following exercise similar to the previous one.</li></ul>
 <div class="indented-level2">
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code class="hljs inline no-lang" v-pre>consume</code> method</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Combine test inputs for the <code v-pre>consume</code> method</p></template>
 <question>
 <p>Apply heuristics for combining multiple test inputs to improve the E&amp;E of the following test cases, assuming all 6 values in the table need to be tested. <ins>Underlines</ins> indicate invalid values. Point out where the heuristics are contradicted and how to improve the test cases.</p>
    <box>
-<p>SUT: <code class="hljs inline no-lang" v-pre>consume(food, drink)</code></p>
+<p>SUT: <code v-pre>consume(food, drink)</code></p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>Test case</th>
@@ -160,25 +150,25 @@
 <td><ins>rock</ins></td>
 <td><ins>acid</ins></td></tr></tbody></table></div></box></question></panel></div></div>
 <br>
-<h4 id="3-exercise-apply-design-pattern"><span id="3-exercise-apply-design-pattern" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Exercise: Apply design pattern<a class="fa fa-anchor" href="#3-exercise-apply-design-pattern" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-exercise-apply-design-pattern"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Exercise: Apply design pattern<span id="3-exercise-apply-design-pattern" class="anchor"></span><a class="fa fa-anchor" href="#3-exercise-apply-design-pattern" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>Do the following exercise similar to the previous one.</li></ul>
 <div class="indented-level2">
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Apply the suitable pattern</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Apply the suitable pattern</p></template>
 <question has-input="true">
-<p>Suppose the <code class="hljs inline no-lang" v-pre>Processor</code> component of a software application is designed as follows:</p>
+<p>Suppose the <code v-pre>Processor</code> component of a software application is designed as follows:</p>
 <p><pic src="/website/book/designPatterns/more/combiningDesignPatterns/images/exercise-getNotified.png" width="600"></pic></p>
-<p>If you want to provide the ability for other components to get notified when a <code class="hljs inline no-lang" v-pre>Job</code> is finished running, without the <code class="hljs inline no-lang" v-pre>Processor</code> component becoming dependent on those other components,</p>
+<p>If you want to provide the ability for other components to get notified when a <code v-pre>Job</code> is finished running, without the <code v-pre>Processor</code> component becoming dependent on those other components,</p>
 <ol>
 <li>which design pattern would you use?</li>
 <li>modify the above design accordingly.</li></ol></question></panel></div></div>
 <br>
-<h4 id="4-exercise-patterns-in-the-tp"><span id="4-exercise-patterns-in-the-tp" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> Exercise: Patterns in the tP<a class="fa fa-anchor" href="#4-exercise-patterns-in-the-tp" onclick="event.stopPropagation()"></a></h4>
+<h4 id="4-exercise-patterns-in-the-tp"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> Exercise: Patterns in the tP<span id="4-exercise-patterns-in-the-tp" class="anchor"></span><a class="fa fa-anchor" href="#4-exercise-patterns-in-the-tp" onclick="event.stopPropagation()"></a></h4>
 <ol>
 <li>Does AB3 use the <em>MVC</em> pattern?</li>
-<li>Does AB3 use the <em>Observer</em> pattern?</li></ol></div></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<li>Does AB3 use the <em>Observer</em> pattern?</li></ol></div></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -199,13 +189,18 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -229,5 +224,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Admin: iP: Week 4</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
-    <script src="../markbind/js/vue.min.js"></script>
-    <script src="../markbind/js/markbind.min.js"></script>
-    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
@@ -70,7 +68,7 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -136,30 +134,28 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w3.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Week 3</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w5.html"><span>iP: Week 5 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
 <br>
-<h1 id="ip-week-4"><span id="ip-week-4" class="anchor"></span><span class="display-4">iP: Week 4</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><a class="fa fa-anchor" href="#ip-week-4" onclick="event.stopPropagation()"></a></h1>
+<h1 id="ip-week-4"><span class="display-4">iP: Week 4</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="ip-week-4" class="anchor"></span><a class="fa fa-anchor" href="#ip-week-4" onclick="event.stopPropagation()"></a></h1>
 <div id="main">
 <div id="summary" class="lead border-bottom border-left ml-3 mb-3" style="color: purple">
 <ol>
-<li><span>Review some peer PRs</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Review some peer PRs</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>Learn from others (optional)</span></li>
-<li>Add Increments as branches: <code class="hljs inline no-lang" v-pre>A-Gradle</code>, <code class="hljs inline no-lang" v-pre>A-CheckStyle</code>, <code class="hljs inline no-lang" v-pre>Level-10</code>, <code class="hljs inline no-lang" v-pre>A-Varargs</code></li></ol></div>
+<li>Add Increments as branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code></li></ol></div>
 <div id="body">
 <div></div>
 <p></p>
-<h4 id="1-review-some-peer-prs"><span id="1-review-some-peer-prs" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Review some peer PRs</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><a class="fa fa-anchor" href="#1-review-some-peer-prs" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-review-some-peer-prs"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span>Review some peer PRs</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span><span id="1-review-some-peer-prs" class="anchor"></span><a class="fa fa-anchor" href="#1-review-some-peer-prs" onclick="event.stopPropagation()"></a></h4>
 <div>
 <div tags="m--cs2103 m--tic4001">
 <box type="wrong" add-class="ml-4" icon-size="2x" seamless><template slot="icon"><span aria-hidden="true" class="fas fa-hand-paper"></span></template>
 <p><strong>Please wait till Mon, Aug 31st</strong> to start this task, to give others a few extra days to create the PR if they haven't done so yet.
 </p></box><p></p></div>
 <box type="info" add-class="ml-4">
-<p>This task is worth <code class="hljs inline no-lang" v-pre>2x2=4</code> participtaion points.
+<p>This task is worth <code v-pre>2x2=4</code> participtaion points.
 </p></box><p></p>
 <ul>
 <li><strong>Learn <em>how</em> you should review PRs in this task</strong>:</li></ul>
@@ -168,7 +164,7 @@
 <iframe src="https://mediaweb.ap.panopto.com/Panopto/Pages/Embed.aspx?id=c001244c-01b5-4471-ab9d-ac1b0098110a&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" style="width: 720px; height: 540px; border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe></panel>
 <p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Reviewing PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Textbook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Git &amp; GitHub → <strong>Reviewing PRs</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p>The <em>PR review</em> stage is a dialog between the PR author and members of the repo that received the PR, in order to refine and eventually merge the PR.</p>
 <p>Given below are some steps you can follow when reviewing a PR.</p>
@@ -193,20 +189,16 @@
    <p></p>
 <ol>
 <li>When there are no more comments to add, click on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Review changes <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></span> button (on the top right of the diff page).</li>
-<li>Type in an overall comment about the PR, if any. e.g.,<pre><code class="hljs" v-pre><span>Overall, I found your code easy to read for the most part except a few places
-</span><span>where the nesting was too deep. I noted a few minor coding standard violations
-</span><span>too. Some of the classes are getting quite long. Consider splitting into smaller
-</span><span>classes if that makes sense.
-</span></code></pre><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <code class="hljs inline no-lang" v-pre>LGTM</code> is often used in such overall comments, to indicate <code class="hljs inline no-lang" v-pre>Looks good to merge</code>.<br>
-<code class="hljs inline no-lang" v-pre>nit</code> is another such term, used to indicate minor flaws e.g., <code class="hljs inline no-lang" v-pre>LGTM, almost. Just a few nits to fix.</code>.</li>
-<li>Choose <code class="hljs inline no-lang" v-pre>Approve</code>, <code class="hljs inline no-lang" v-pre>Comment</code>, or <code class="hljs inline no-lang" v-pre>Request changes</code> option as appropriate and click on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Submit review</span> button.</li></ol></div></panel></div><p></p>
+<li>Type in an overall comment about the PR, if any. e.g.,<pre><code class="hljs" v-pre><span>Overall, I found your code easy to read for the most part except a few places<br></span><span>where the nesting was too deep. I noted a few minor coding standard violations<br></span><span>too. Some of the classes are getting quite long. Consider splitting into smaller<br></span><span>classes if that makes sense.<br></span></code></pre><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <code v-pre>LGTM</code> is often used in such overall comments, to indicate <code v-pre>Looks good to merge</code>.<br>
+<code v-pre>nit</code> is another such term, used to indicate minor flaws e.g., <code v-pre>LGTM, almost. Just a few nits to fix.</code>.</li>
+<li>Choose <code v-pre>Approve</code>, <code v-pre>Comment</code>, or <code v-pre>Request changes</code> option as appropriate and click on the <span class="btn btn-success pl-1 pr-1 pb-0 pt-0">Submit review</span> button.</li></ol></div></panel></div><p></p>
 <ul>
 <li>
 <p><span class="badge badge-dark">Step 1</span> <strong>Note these additional guidelines</strong>:</p>
 <ul>
 <li>Read the <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html"><em>Best practices for reviewing PRs</em> @SE-EDU/guides</a>. You are <mark>expected to follow all of them</mark>.</li>
 <li>If the PR has received some review comments already, feel free to confirm/complement/question those comments in your review. Also, look for things the previous reviewers may have missed.</li>
-<li>At the end of the review, choose <code class="hljs inline no-lang" v-pre>Comment</code> (i.e., not <code class="hljs inline no-lang" v-pre>Approve</code> or <code class="hljs inline no-lang" v-pre>Request changes</code>)</li></ul></li>
+<li>At the end of the review, choose <code v-pre>Comment</code> (i.e., not <code v-pre>Approve</code> or <code v-pre>Request changes</code>)</li></ul></li>
 <li>
 <p><span class="badge badge-dark">Step 2</span> <strong>Do the first PR review</strong> as follows.</p>
 <ul>
@@ -214,7 +206,7 @@
 <li>The review allocation is given in the panel below.</li></ul></li></ul>
 <div class="indented-level4">
 <div>
-<panel minimized class="algolia-no-index"><template slot="header"><p>iP PR review allocation</p></template>
+<panel minimized class="algolia-no-index"><template slot="_header"><p>iP PR review allocation</p></template>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>Tutorial</th>
@@ -2398,7 +2390,7 @@
 <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> If the student you have been allocated to review has not created a PR (or the PR has a trivial amount of code), you can review the <em>Backup PR to review</em> provided in the allocation table. Failing both, review another PR allocated to another student in your own tutorial <ins>but not in your team</ins>.</p>
 <p></p>
 <box type="tip" light>
-<p>Tip for future reference: GitHub allows you to filter PRs/Issues using various criteria such as <code class="hljs inline no-lang" v-pre>author:AuthorUsername</code> (<a href="https://github.com/reposense/RepoSense/pulls?utf8=%E2%9C%93&amp;q=is%3Apr+author%3Afzdy1914+">example</a> -- see the <code class="hljs inline no-lang" v-pre>filters</code> text box in the target page).</p>
+<p>Tip for future reference: GitHub allows you to filter PRs/Issues using various criteria such as <code v-pre>author:AuthorUsername</code> (<a href="https://github.com/reposense/RepoSense/pulls?utf8=%E2%9C%93&amp;q=is%3Apr+author%3Afzdy1914+">example</a> -- see the <code v-pre>filters</code> text box in the target page).</p>
 <p>Alternatively, you can use PR labels (if any) to filter PRs/Issues.<br>
 <img src="/website/admin/images/filterPrsUsingLabels.png"></p></box><p></p>
 <p><span aria-hidden="true" class="fas fa-question-circle"></span> FAQ: How many comments should I add? Answer: Depends on the code being reviewed but we expect most PRs would warrant at least 4-5 comments. If the PR is huge, you can stop when you think you've put in a fair amount of time on the job (~15 minutes) and added enough comments for the PR author to receive some value.</p></div></div></div>
@@ -2409,7 +2401,7 @@
 <li>The review allocation is given in the panel below.</li></ul></li></ul>
 <div class="indented-level4">
 <div>
-<panel minimized class="algolia-no-index"><template slot="header"><p>iP PR review allocation</p></template>
+<panel minimized class="algolia-no-index"><template slot="_header"><p>iP PR review allocation</p></template>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>Tutorial</th>
@@ -4593,14 +4585,14 @@
 <ul>
 <li><span class="badge badge-dark">Step 4</span> <strong>[When you receive reviews for your own PR] Respond to comments received</strong>. You are recommended to (but not obliged to) respond to comments received from peers, especially if the PR reviewer asked you for more info. As mentioned in <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html">these guidelines</a>, do not get into arguments with PR reviewers/authors.</li></ul></div>
 <p></p>
-<h4 id="2-learn-from-others-optional"><span id="2-learn-from-others-optional" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span>Learn from others (optional)</span><a class="fa fa-anchor" href="#2-learn-from-others-optional" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-learn-from-others-optional"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span>Learn from others (optional)</span><span id="2-learn-from-others-optional" class="anchor"></span><a class="fa fa-anchor" href="#2-learn-from-others-optional" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
-<li><strong>You can use the <a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&amp;groupSelect=groupByAuthors">iP Code Dashboard</a> to view others' iP code</strong>, using the <code class="hljs inline no-lang" v-pre>Links → iP Code Dashboard</code> item in the top navigation menu. Click on the <span class="badge badge-light"><span><span class="dimmed"><strong>&lt;/&gt;</strong></span></span></span> icon corresponding to a student name to see the code written by that person. We encourage you to read others’ code and learn from them. If you adopt solutions from others (also encouraged), please follow our reuse policy.</li></ul>
+<li><strong>You can use the <a href="https://nus-cs2103-ay2021s1.github.io/ip-dashboard/#sort=groupTitle&amp;groupSelect=groupByAuthors">iP Code Dashboard</a> to view others' iP code</strong>, using the <code v-pre>Links → iP Code Dashboard</code> item in the top navigation menu. Click on the <span class="badge badge-light"><span><span class="dimmed"><strong>&lt;/&gt;</strong></span></span></span> icon corresponding to a student name to see the code written by that person. We encourage you to read others’ code and learn from them. If you adopt solutions from others (also encouraged), please follow our reuse policy.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module Policies → Policy on Reuse</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> <strong>Module Policies → Policy on Reuse</strong> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h3 id="policy-on-reuse"><span id="policy-on-reuse" class="anchor"></span>Policy on reuse <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#policy-on-reuse" onclick="event.stopPropagation()"></a></h3>
+<h3 id="policy-on-reuse">Policy on reuse <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="policy-on-reuse" class="anchor"></span><a class="fa fa-anchor" href="#policy-on-reuse" onclick="event.stopPropagation()"></a></h3>
 <div class="indented">
 <div>
 <p><strong>Reuse is encouraged. However, note that reuse has its own costs</strong> (such as the learning curve, additional complexity, usage restrictions, and unknown bugs). Furthermore, you will not be given credit for work done by others. Rather, you will be given credit for <em>reusing</em> work done by others.</p>
@@ -4616,92 +4608,45 @@
 <li>You do not violate the license under which the work has been released. Please  <strong>do not use 3rd-party images/audio</strong> in your software unless they have been specifically released to be used freely. Just because you found it in the Internet does not mean it is free for reuse.</li>
 <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a>. That way, the whole class get to see what libraries are being used by others.</li></ul></li></ul>
 <box>
-<h4 id="giving-credit-for-reused-work"><span id="giving-credit-for-reused-work" class="anchor"></span>Giving credit for reused work<a class="fa fa-anchor" href="#giving-credit-for-reused-work" onclick="event.stopPropagation()"></a></h4>
+<h4 id="giving-credit-for-reused-work">Giving credit for reused work<span id="giving-credit-for-reused-work" class="anchor"></span><a class="fa fa-anchor" href="#giving-credit-for-reused-work" onclick="event.stopPropagation()"></a></h4>
 <p>Given below are how to give credit for things you reuse from elsewhere. These requirements are specific to this module <span class="dimmed">i.e., not applicable outside the module (outside the module you should follow the rules specified by your employer and the license of the reused work)</span></p>
 <p>If you <strong>used a third party library</strong>:</p>
 <ul>
-<li>iP/tP: Mention in the <code class="hljs inline no-lang" v-pre>README</code> file (under the <em>Acknowledgements</em> section)</li>
-<li>tP: Mention in the <trigger trigger="click" for="modal:reusePolicy-ppp">Project Portfolio Page</trigger> if the library has a significant relevance to the features you implemented</li></ul>
+<li>iP/tP: Mention in the <code v-pre>README</code> file (under the <em>Acknowledgements</em> section)</li>
+<li>tP: Mention in the <span trigger="click" for="modal:reusePolicy-ppp" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:reusePolicy-ppp'].show()" class="trigger-click">Project Portfolio Page</span> if the library has a significant relevance to the features you implemented</li></ul>
 <p>If you <strong>reused code snippets found on the Internet</strong> <span class="dimmed">e.g. from StackOverflow answers</span> or<br>
 <strong>referred code in another software</strong> or<br>
 <strong>referred project code by current/past student</strong>:</p>
 <ul>
 <li>If you read the code to understand the approach and implemented it yourself, mention it as a comment<br>
-<span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//Solution below adapted from https://stackoverflow.com/a/16252290</span>
-</span><span>{Your implmentation of the reused solution here ...}
-</span></code></pre></li>
-<li>If you copy-pasted a non-trivial code block (possibly with minor modifications <span class="dimmed">renaming, layout changes, changes to comments, etc.</span>), also mark the code block as reused code (using <trigger trigger="click" for="modal:reusePolicy-authorTags"><code class="hljs inline no-lang" v-pre>@@author</code> tags</trigger> with the <mark><code class="hljs inline no-lang" v-pre>-reused</code></mark> suffix)<br>
-Format:<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//@@author {yourGithubUsername}-reused</span>
-</span><span><span class="hljs-comment">//{Info about the source...}</span>
-</span><span>
-</span><span>{<span class="hljs-function">Reused <span class="hljs-title">code</span> <span class="hljs-params">(possibly with minor modifications)</span> here ...}</span>
-</span><span><span class="hljs-function"></span>
-</span><span><span class="hljs-function"><span class="hljs-comment">//@@author</span></span>
-</span></code></pre><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example of reusing a code snippet (with minor modifications):<pre><code class="hljs java" v-pre><span>persons = getList()
-</span><span><span class="hljs-comment">//@@author johndoe-reused</span>
-</span><span><span class="hljs-comment">//Reused from https://stackoverflow.com/a/34646172 with minor modifications</span>
-</span><span>Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;CustomData&gt;() {
-</span><span>    <span class="hljs-meta">@Override</span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(CustomData lhs, CustomData rhs)</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> lhs.customInt &gt; rhs.customInt ? -<span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
-</span><span>    }
-</span><span>});
-</span><span><span class="hljs-comment">//@@author</span>
-</span><span><span class="hljs-keyword">return</span> persons;
-</span></code></pre></li></ul>
+<span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//Solution below adapted from https://stackoverflow.com/a/16252290</span><br></span><span>{Your implmentation of the reused solution here ...}<br></span></code></pre></li>
+<li>If you copy-pasted a non-trivial code block (possibly with minor modifications <span class="dimmed">renaming, layout changes, changes to comments, etc.</span>), also mark the code block as reused code (using <span trigger="click" for="modal:reusePolicy-authorTags" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:reusePolicy-authorTags'].show()" class="trigger-click"><code v-pre>@@author</code> tags</span> with the <mark><code v-pre>-reused</code></mark> suffix)<br>
+Format:<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//@@author {yourGithubUsername}-reused</span><br></span><span><span class="hljs-comment">//{Info about the source...}</span><br></span><span><br></span><span>{<span class="hljs-function">Reused <span class="hljs-title">code</span> <span class="hljs-params">(possibly with minor modifications)</span> here ...}</span><br></span><span><span class="hljs-function"></span><br></span><span><span class="hljs-function"><span class="hljs-comment">//@@author</span></span><br></span></code></pre><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example of reusing a code snippet (with minor modifications):<pre><code class="hljs java" v-pre><span>persons = getList()<br></span><span><span class="hljs-comment">//@@author johndoe-reused</span><br></span><span><span class="hljs-comment">//Reused from https://stackoverflow.com/a/34646172 with minor modifications</span><br></span><span>Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;CustomData&gt;() {<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(CustomData lhs, CustomData rhs)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> lhs.customInt &gt; rhs.customInt ? -<span class="hljs-number">1</span> : <span class="hljs-number">0</span>;<br></span><span>    }<br></span><span>});<br></span><span><span class="hljs-comment">//@@author</span><br></span><span><span class="hljs-keyword">return</span> persons;<br></span></code></pre></li></ul>
 <div tags="m--cs2103">
 <p><strong>Giving credit to AB3 code</strong>: If your project started with the AB3 code and your new code follows a design similar to AB3, that doesn't mean you need to credit AB3 -- this is because new code is <em>expected</em> to follow existing code where possible, in the interest of consistency. However, don't take credit for existing AB3 code (i.e., ensure such code doesn't appear under your name in the tP code dashboard) unless you have modified them substantially.</p></div></box>
 <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
   <div>
-<h4 id="adding-author-tags-indicate-authorship"><span id="adding-author-tags-indicate-authorship" class="anchor"></span>Adding <code class="hljs inline no-lang" v-pre>@@author</code> tags indicate authorship<a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
+<h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>
-<p>Mark your code with a <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}</code>. Note the double <code class="hljs inline no-lang" v-pre>@</code>.<br>
-The <code class="hljs inline no-lang" v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code class="hljs inline no-lang" v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
+<p>Mark your code with a <code v-pre>//@@author {yourGithubUsername}</code>. Note the double <code v-pre>@</code>.<br>
+The <code v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
 Here is a sample code file:</p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span><span>//@@author sarahkhoo
-</span><span>method 3 ...
-</span><span>//@@author johndoe
-</span><span>method 4 ...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author sarahkhoo<br></span><span>method 3 ...<br></span><span>//@@author johndoe<br></span><span>method 4 ...<br></span></code></pre></li>
 <li>
-<p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code class="hljs inline no-lang" v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
-Here is a sample code with an empty <code class="hljs inline no-lang" v-pre>author</code> tag:</p>
-<pre><code class="hljs" v-pre><span>method 0 ...
-</span><span>//@@author johndoe
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span><span>//@@author
-</span><span>method 3 ...
-</span><span>method 4 ...
-</span></code></pre></li>
+<p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
+Here is a sample code with an empty <code v-pre>author</code> tag:</p>
+<pre><code class="hljs" v-pre><span>method 0 ...<br></span><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author<br></span><span>method 3 ...<br></span><span>method 4 ...<br></span></code></pre></li>
 <li>
 <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br>
 Here is an example code from an xml/fxml file.</p>
-<pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;
-</span><span>&lt;textbox&gt;
-</span><span>  &lt;label&gt;...&lt;/label&gt;
-</span><span>  &lt;input&gt;...&lt;/input&gt;
-</span><span>&lt;/textbox&gt;
-</span><span>...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;<br></span><span>&lt;textbox&gt;<br></span><span>  &lt;label&gt;...&lt;/label&gt;<br></span><span>  &lt;input&gt;...&lt;/input&gt;<br></span><span>&lt;/textbox&gt;<br></span><span>...<br></span></code></pre></li>
 <li>
-<p><strong>Do not put the <code class="hljs inline no-lang" v-pre>//@@author</code> inside java header comments</strong>.<br>
+<p><strong>Do not put the <code v-pre>//@@author</code> inside java header comments</strong>.<br>
 👎<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs" v-pre><span>/**
-</span><span>  * Returns true if ...
-</span><span>  * @@author johndoe
-</span><span>  */
-</span></code></pre><p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe
-</span><span>/**
-</span><span>  * Returns true if ...
-</span><span>  */
-</span></code></pre></li></ul>
-<h4 id="what-to-and-what-not-to-annotate"><span id="what-to-and-what-not-to-annotate" class="anchor"></span>What to and what not to annotate<a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
+<pre><code class="hljs" v-pre><span>/**<br></span><span>  * Returns true if ...<br></span><span>  * @@author johndoe<br></span><span>  */<br></span></code></pre><p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>/**<br></span><span>  * Returns true if ...<br></span><span>  */<br></span></code></pre></li></ul>
+<h4 id="what-to-and-what-not-to-annotate">What to and what not to annotate<span id="what-to-and-what-not-to-annotate" class="anchor"></span><a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>
 <p><strong>Annotate both functional and test code</strong> There is no need to annotate documentation files.</p></li>
@@ -4719,23 +4664,17 @@ If you notice a team member claiming credit for code that he/she did not write o
 <li>
 <p><strong>If you wrote a significant amount of code that was not used in the final product</strong>,</p>
 <ul>
-<li>Create a folder called <code class="hljs inline no-lang" v-pre>{project root}/unused</code></li>
+<li>Create a folder called <code v-pre>{project root}/unused</code></li>
 <li>Move unused files (or copies of files containing unused code) to that folder</li>
-<li>use <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code class="hljs inline no-lang" v-pre>unused</code>)
+<li>use <code v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code v-pre>unused</code>)
 e.g.</li></ul>
-<pre><code class="hljs" v-pre><span>//@@author johndoe-unused
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span></code></pre><p>Please put a comment in the code to explain why it was not used.</p></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe-unused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre><p>Please put a comment in the code to explain why it was not used.</p></li>
 <li>
-<p><strong>If you reused code from elsewhere,</strong> mark such code as <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code class="hljs inline no-lang" v-pre>reused</code>)
+<p><strong>If you reused code from elsewhere,</strong> mark such code as <code v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code v-pre>reused</code>)
 e.g.</p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe-reused
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe-reused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre></li>
 <li>
-<p><strong>You can use empty <code class="hljs inline no-lang" v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
+<p><strong>You can use empty <code v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
 <ul>
 <li>
 <p><strong>Code generated by the IDE/framework,</strong> should not be annotated as your own.</p></li>
@@ -4745,11 +4684,11 @@ e.g.</p>
   <div>
 <div>
 <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
-<h4 id="ppp-objectives"><span id="ppp-objectives" class="anchor"></span><span class="badge badge-info">PPP</span> <span class="text-info">Objectives</span><a class="fa fa-anchor" href="#ppp-objectives" onclick="event.stopPropagation()"></a></h4>
+<h4 id="ppp-objectives"><span class="badge badge-info">PPP</span> <span class="text-info">Objectives</span><span id="ppp-objectives" class="anchor"></span><a class="fa fa-anchor" href="#ppp-objectives" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>For you to use <span class="dimmed">(e.g. in your resume)</span> as a well-documented data point of your SE experience</li>
 <li>For evaluators to use as a data point for evaluating your project contributions</li></ul>
-<h4 id="ppp-sections-to-include"><span id="ppp-sections-to-include" class="anchor"></span><span class="badge badge-info">PPP</span> <span class="text-info">Sections to include</span><a class="fa fa-anchor" href="#ppp-sections-to-include" onclick="event.stopPropagation()"></a></h4>
+<h4 id="ppp-sections-to-include"><span class="badge badge-info">PPP</span> <span class="text-info">Sections to include</span><span id="ppp-sections-to-include" class="anchor"></span><a class="fa fa-anchor" href="#ppp-sections-to-include" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Overview</strong>: A short overview of your product to provide some context to the reader. The opening 1-2 sentences may be reused by all team members. If your product overview extends beyond 1-2 sentences, the remainder should be written by yourself.</li>
 <li><strong>Summary of Contributions</strong> --Suggested items to include:
@@ -4758,7 +4697,7 @@ e.g.</p>
 <li><strong>Enhancements implemented:</strong> A summary of the enhancements you implemented.</li>
 <li><strong>Contributions to documentation:</strong> Which sections did you contribute to the UG?</li>
 <li><strong>Contributions to the DG:</strong> Which sections did you contribute to the DG? Which UML diagrams did you add/updated?</li>
-<li><strong>Contributions to <trigger trigger="click" for="modal:deliverablesPPP-teamTasks">team-based tasks </trigger>:</strong></li>
+<li><strong>Contributions to <span trigger="click" for="modal:deliverablesPPP-teamTasks" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:deliverablesPPP-teamTasks'].show()" class="trigger-click">team-based tasks </span>:</strong></li>
 <li><strong>Review/mentoring contributions:</strong> Links to PRs reviewed, instances of helping team members in other ways</li>
 <li><strong>Contributions beyond the project team:</strong>
 <ul>
@@ -4768,7 +4707,7 @@ e.g.</p>
   <div>
 <box>
 <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p></template>
 <span id="example-team-tasks">
 <p>Here is a non-exhaustive list of team-tasks:</p>
 <ol>
@@ -4790,9 +4729,9 @@ e.g.</p>
 <ul>
 <li><strong>[Optional] Contributions to the Developer Guide (Extracts)</strong>: Reproduce the parts in the Developer Guide that you wrote. Alternatively, you can show the various diagrams you contributed.</li>
 <li><strong>[Optional] Contributions to the User Guide (Extracts)</strong>: Reproduce the parts in the User Guide that you wrote.</li></ul>
-<h4 id="ppp-format"><span id="ppp-format" class="anchor"></span><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
+<h4 id="ppp-format"><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><span id="ppp-format" class="anchor"></span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
 <ul>
-<li>File name (i.e., in the repo): <code class="hljs inline no-lang" v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code class="hljs inline no-lang" v-pre>docs/team/goodcoder123.md</code></li>
+<li>File name (i.e., in the repo): <code v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code v-pre>docs/team/goodcoder123.md</code></li>
 <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-cs2103-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li></ul>
 <div class="indented-level2">
 <div>
@@ -4803,7 +4742,7 @@ e.g.</p>
 <box type="info" seamless>
 <p><strong>The icon <span><span aria-hidden="true" class="fas fa-users"></span></span> indicates team submissions.</strong> Only one person need to submit on behalf of the team but we recommend that <mark>others help verify the submission is in order</mark> i.e., the responsibility for (and any penalty for problems in) team submissions are best shared by the whole team rather than burden one person with it.</p>
 <p>The icon <span><span aria-hidden="true" class="fas fa-user"></span></span> indicates individual submissions.</p></box></div></div>
-<h4 id="ppp-page-limit"><span id="ppp-page-limit" class="anchor"></span><span class="badge badge-info">PPP</span> <span class="text-info">Page Limit</span><a class="fa fa-anchor" href="#ppp-page-limit" onclick="event.stopPropagation()"></a></h4>
+<h4 id="ppp-page-limit"><span class="badge badge-info">PPP</span> <span class="text-info">Page Limit</span><span id="ppp-page-limit" class="anchor"></span><a class="fa fa-anchor" href="#ppp-page-limit" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-level2">
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -4826,10 +4765,10 @@ e.g.</p>
 <ul>
 <li>The <mark>page limits given above are <em>after</em> converting to PDF format</mark>. The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a lot of spacing around content.</li></ul></div></div></b-modal></div></div></div></panel></div><p></p></div>
 <p></p>
-<h4 id="3-add-increments-as-branches-a-gradle-a-checkstyle-level-10-a-varargs"><span id="3-add-increments-as-branches-a-gradle-a-checkstyle-level-10-a-varargs" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Add Increments as branches: <code class="hljs inline no-lang" v-pre>A-Gradle</code>, <code class="hljs inline no-lang" v-pre>A-CheckStyle</code>, <code class="hljs inline no-lang" v-pre>Level-10</code>, <code class="hljs inline no-lang" v-pre>A-Varargs</code><a class="fa fa-anchor" href="#3-add-increments-as-branches-a-gradle-a-checkstyle-level-10-a-varargs" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-add-increments-as-branches-a-gradle-a-checkstyle-level-10-a-varargs"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Add Increments as branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code><span id="3-add-increments-as-branches-a-gradle-a-checkstyle-level-10-a-varargs" class="anchor"></span><a class="fa fa-anchor" href="#3-add-increments-as-branches-a-gradle-a-checkstyle-level-10-a-varargs" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
-<li><strong>Do each enhancement in a separate branch and merge to the <code class="hljs inline no-lang" v-pre>master</code> branch only when ready</strong> (if you push incomplete features into the <code class="hljs inline no-lang" v-pre>master</code> branch, it can confuse others reviewing your PR). There is no need to do the increments as <em>parallel</em> branches though <span class="dimmed">i.e., you can do one increment and merge that branch before starting on the next one</span>.
+<li><strong>Do each enhancement in a separate branch and merge to the <code v-pre>master</code> branch only when ready</strong> (if you push incomplete features into the <code v-pre>master</code> branch, it can confuse others reviewing your PR). There is no need to do the increments as <em>parallel</em> branches though <span class="dimmed">i.e., you can do one increment and merge that branch before starting on the next one</span>.
 <br>
 <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> If you have completed any of them in previous weeks, just add the corresponding tag (no need to create a branch).</li></ul></div>
 <div></div>
@@ -4838,16 +4777,16 @@ e.g.</p>
 <div class="indented border">
 <panel type="seamless" no-close class="algolia-no-index">
 <div></div>
-<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code class="hljs inline no-lang" v-pre>A-Gradle</code>: Use Gradle</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-Gradle</code>: Use Gradle</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
 <div></div>
 <div>
 <div>
 <div></div>
-<h3 id="a-gradle"><span id="a-gradle" class="anchor"></span><span class="badge badge-pill badge-primary">A-Gradle</span><a class="fa fa-anchor" href="#a-gradle" onclick="event.stopPropagation()"></a></h3>
+<h3 id="a-gradle"><span class="badge badge-pill badge-primary">A-Gradle</span><span id="a-gradle" class="anchor"></span><a class="fa fa-anchor" href="#a-gradle" onclick="event.stopPropagation()"></a></h3>
 <p>     <big>↳</big> <strong>Automate project builds using Gradle</strong></p></div>
 <p>Use Gradle to automate some of the build tasks of the project.</p>
 <p>Refer to the <a href="https://se-education.org/guides/tutorials/gradle.html"><em>Gradle tutorial</em> @SE-EDU</a> to learn how to use Gradle.</p>
-<p>Gradle support is provided as a separate branch (named <code class="hljs inline no-lang" v-pre>add-gradle-support</code>) in the Duke repo. Therefore, you can follow the <em>scenario 2</em> in the above guide.</p>
+<p>Gradle support is provided as a separate branch (named <code v-pre>add-gradle-support</code>) in the Duke repo. Therefore, you can follow the <em>scenario 2</em> in the above guide.</p>
 <ul>
 <li><strong>Minimal</strong>: Set up gradle so that you can build and run Duke using gradle.</li>
 <li><strong>Recommended</strong>: Set up gradle to run unit tests.</li>
@@ -4859,12 +4798,12 @@ e.g.</p>
 <div class="indented border">
 <panel type="seamless" no-close class="algolia-no-index">
 <div></div>
-<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code class="hljs inline no-lang" v-pre>A-CheckStyle</code>: Use CheckStyle</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-CheckStyle</code>: Use CheckStyle</strong></span> <span class="badge badge-pill badge-secondary">optional</span></span></div>
 <div></div>
 <div>
 <div>
 <div></div>
-<h3 id="a-checkstyle"><span id="a-checkstyle" class="anchor"></span><span class="badge badge-pill badge-primary">A-CheckStyle</span><a class="fa fa-anchor" href="#a-checkstyle" onclick="event.stopPropagation()"></a></h3>
+<h3 id="a-checkstyle"><span class="badge badge-pill badge-primary">A-CheckStyle</span><span id="a-checkstyle" class="anchor"></span><a class="fa fa-anchor" href="#a-checkstyle" onclick="event.stopPropagation()"></a></h3>
 <p>     <big>↳</big> <strong>Use CheckStyle</strong></p></div>
 <p>Use checkStyle to detect coding style violations.</p>
 <p>Refer the tutorial <a href="https://se-education.org/guides/tutorials/checkstyle.html"><em>Using Checkstyle</em> @SE-EDU/guides</a> to learn how to use Checkstyle.</p>
@@ -4876,11 +4815,11 @@ e.g.</p>
 <div class="indented border">
 <panel type="seamless" no-close class="algolia-no-index">
 <div></div>
-<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code class="hljs inline no-lang" v-pre>Level-10</code>: GUI</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>Level-10</code>: GUI</strong></span> <span class="badge badge-pill badge-secondary"></span></span></div>
 <div></div>
 <div>
 <p><span><thumbnail font-color="white" add-class="float-left bg-dark mr-2 mt-2" size="80"><span aria-hidden="true" class="fas fa-window-maximize"></span></thumbnail></span></p>
-<h3 id="level-10-gui"><span id="level-10-gui" class="anchor"></span>Level 10. GUI<a class="fa fa-anchor" href="#level-10-gui" onclick="event.stopPropagation()"></a></h3>
+<h3 id="level-10-gui">Level 10. GUI<span id="level-10-gui" class="anchor"></span><a class="fa fa-anchor" href="#level-10-gui" onclick="event.stopPropagation()"></a></h3>
 <p>Add a GUI to Duke. Use the JavaFX technology to implement the GUI.</p>
 <br>
 <br>
@@ -4895,19 +4834,19 @@ e.g.</p>
 <div class="indented border">
 <panel type="seamless" no-close class="algolia-no-index">
 <div></div>
-<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code class="hljs inline no-lang" v-pre>A-Varargs</code>: Use Varargs</strong></span> <span class="badge badge-pill badge-secondary">if-applicable</span></span></div>
+<div slot="header"><span><strong>Duke</strong> <span class="dimmed"><strong><code v-pre>A-Varargs</code>: Use Varargs</strong></span> <span class="badge badge-pill badge-secondary">if-applicable</span></span></div>
 <div></div>
 <div>
 <div>
 <div></div>
-<h3 id="a-varargs"><span id="a-varargs" class="anchor"></span><span class="badge badge-pill badge-primary">A-Varargs</span><a class="fa fa-anchor" href="#a-varargs" onclick="event.stopPropagation()"></a></h3>
+<h3 id="a-varargs"><span class="badge badge-pill badge-primary">A-Varargs</span><span id="a-varargs" class="anchor"></span><a class="fa fa-anchor" href="#a-varargs" onclick="event.stopPropagation()"></a></h3>
 <p>     <big>↳</big> <strong>Use var-args</strong></p></div>
 <p>Use Java varargs feature, if applicable.</p></div></panel></div></div></div>
 <div></div>
 <p></p></div></div>
 <br>
-<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w3.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Week 3</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w5.html"><span>iP: Week 5 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w3.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> iP: Week 3</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/ip-w5.html"><span>iP: Week 5 <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -4926,13 +4865,18 @@ e.g.</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -4956,5 +4900,5 @@ e.g.</p>
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Timeline</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
-    <script src="../markbind/js/vue.min.js"></script>
-    <script src="../markbind/js/markbind.min.js"></script>
-    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
@@ -71,30 +69,28 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
-
-
 <div id="content-wrapper">
 <div class="website-content">
-<h1 id="summary-of-the-module-timeline"><span id="summary-of-the-module-timeline" class="anchor"></span>Summary of the Module Timeline<a class="fa fa-anchor" href="#summary-of-the-module-timeline" onclick="event.stopPropagation()"></a></h1>
+<h1 id="summary-of-the-module-timeline">Summary of the Module Timeline<span id="summary-of-the-module-timeline" class="anchor"></span><a class="fa fa-anchor" href="#summary-of-the-module-timeline" onclick="event.stopPropagation()"></a></h1>
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Weekly schedule → The CS2103/T week vs normal academic week <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Weekly schedule → The CS2103/T week vs normal academic week <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h3 id="cs2103-t-week-vs-normal-academic-week"><span id="cs2103-t-week-vs-normal-academic-week" class="anchor"></span>CS2103/T week vs normal academic week<a class="fa fa-anchor" href="#cs2103-t-week-vs-normal-academic-week" onclick="event.stopPropagation()"></a></h3>
+<h3 id="cs2103-t-week-vs-normal-academic-week">CS2103/T week vs normal academic week<span id="cs2103-t-week-vs-normal-academic-week" class="anchor"></span><a class="fa fa-anchor" href="#cs2103-t-week-vs-normal-academic-week" onclick="event.stopPropagation()"></a></h3>
 <p><strong>Each CS2103/T week starts with the lecture</strong> and ends just before the following week's lecture. The only exception is week 1, which starts on the Monday of the first week of the semester. <div tags="m--cs2103 m--cs2113 m--tic4001">As our lecture is on Friday, <mark>CS2103/T week starts a few days earlier than the normal NUS academic week</mark>. For example, CS2103/T week 2 starts on the Friday of NUS week 1. See the <a href="/website/schedule/timeline.html">full timeline</a> for exact dates.</div></p></div></panel>
 <p></p>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Weekly schedule → Deadline for weekly tasks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Weekly schedule → Deadline for weekly tasks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h3 id="deadline-for-weekly-tasks"><span id="deadline-for-weekly-tasks" class="anchor"></span>Deadline for weekly tasks<a class="fa fa-anchor" href="#deadline-for-weekly-tasks" onclick="event.stopPropagation()"></a></h3>
+<h3 id="deadline-for-weekly-tasks">Deadline for weekly tasks<span id="deadline-for-weekly-tasks" class="anchor"></span><a class="fa fa-anchor" href="#deadline-for-weekly-tasks" onclick="event.stopPropagation()"></a></h3>
 <div tags="m--cs2103 m--cs2113">
-<p><strong>The deadline to complete tasks allocated to the week</strong> is the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., if your tutorial is on Thursday, the deadline is Wednesday 23.59</span>midnight before your tutorial day</span>, unless stated otherwise. Our grading scripts that detect your work run at midnight and only the work that's done by midnight will be eligible for marks (for cases where the task is graded).</p></div>
+<p><strong>The deadline to complete tasks allocated to the week</strong> is the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., if your tutorial is on Thursday, the deadline is Wednesday 23.59</span>midnight before your tutorial day</span>, unless stated otherwise. Our grading scripts that detect your work run at midnight and only the work that's done by midnight will be eligible for marks (for cases where the task is graded).</p></div>
 </div></panel></div>
 
 <p></p>
 <hr>
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-1-mon-aug-10th"><span id="week-1-mon-aug-10th" class="anchor"></span><a href="/website/schedule/week1" class="badge badge-pill badge-dark"><small><strong>Week 1</strong> <small>- Mon, Aug 10th</small></small></a> <small><small><a href="/website/schedule/week1/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week1/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week1/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week1/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-1-mon-aug-10th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-1-mon-aug-10th"><a href="/website/schedule/week1" class="badge badge-pill badge-dark"><small><strong>Week 1</strong> <small>- Mon, Aug 10th</small></small></a> <small><small><a href="/website/schedule/week1/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week1/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week1/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week1/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-1-mon-aug-10th" class="anchor"></span><a class="fa fa-anchor" href="#week-1-mon-aug-10th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -117,7 +113,7 @@
 <li>
 <p>[<a href="/website/schedule/week1/topics.html#W1-5">W1.5</a>] <strong>Exception Handling</strong> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span></span></p></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week1/topics.html#W1-1">W1.1</a>] <strong>OOP: Classes &amp; Objects</strong> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span></span></li></ul>
@@ -224,10 +220,10 @@
 </span></span> <span>The collections framework</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week1/topics.html#W1-4b">W1.4b</a>] <span>C++ to Java → Collections →
-</span></span> <span>The <code class="hljs inline no-lang" v-pre>ArrayList</code> class</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span>The <code v-pre>ArrayList</code> class</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week1/topics.html#W1-4c">W1.4c</a>] <span>C++ to Java → Collections →
-</span></span> <span>The <code class="hljs inline no-lang" v-pre>HashMap</code> class</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+</span></span> <span>The <code v-pre>HashMap</code> class</span> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> : <span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
 <ul>
 <li>[<a href="/website/schedule/week1/topics.html#W1-5">W1.5</a>] <strong>Exception Handling</strong> <span class="badge badge-pill badge-secondary"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span></span></li></ul>
 <div class="indented-level2">
@@ -256,15 +252,15 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit pre-lecture quiz</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Mon, Aug 17th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit pre-lecture quiz</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Mon, Aug 17th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>Set up the tools</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the lecture</span></span></li>
-<li><span>Submit the pre-module survey</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Fri, Aug 14th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit the pre-module survey</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Fri, Aug 14th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>Learn about the module</span></li>
 <li><span>Attend the first lecture</span></li></ol></div>
 <div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-2-fri-aug-14th"><span id="week-2-fri-aug-14th" class="anchor"></span><a href="/website/schedule/week2" class="badge badge-pill badge-dark"><small><strong>Week 2</strong> <small>- Fri, Aug 14th</small></small></a> <small><small><a href="/website/schedule/week2/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week2/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week2/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week2/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-2-fri-aug-14th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-2-fri-aug-14th"><a href="/website/schedule/week2" class="badge badge-pill badge-dark"><small><strong>Week 2</strong> <small>- Fri, Aug 14th</small></small></a> <small><small><a href="/website/schedule/week2/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week2/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week2/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week2/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-2-fri-aug-14th" class="anchor"></span><a class="fa fa-anchor" href="#week-2-fri-aug-14th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -291,7 +287,7 @@
 <ul>
 <li>[<a href="/website/schedule/week2/topics.html#W2-6">W2.6</a>] <strong>Automated Testing of Text UIs</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week2/topics.html#W2-1">W2.1</a>] <strong>SE: Intro</strong> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -329,13 +325,13 @@
 </span></span> <span>Repositories</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-3c">W2.3c</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>init</code>: Getting started</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code v-pre>init</code>: Getting started</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-3d">W2.3d</a>] <span>Project Management → Revision Control →
 </span></span> <span>Saving history</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-3e">W2.3e</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>commit</code>: Saving changes to history</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code v-pre>commit</code>: Saving changes to history</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-3f">W2.3f</a>] <span>Tools → Git and GitHub →
 </span></span> <span>Omitting files from revision control</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
@@ -344,16 +340,16 @@
 </span></span> <span>Using history</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-3h">W2.3h</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>tag</code>: Naming commits</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code v-pre>tag</code>: Naming commits</span> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-3i">W2.3i</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>diff</code>: Comparing revisions</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code v-pre>diff</code>: Comparing revisions</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-3j">W2.3j</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>checkout</code>: Retrieving a specific revision</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code v-pre>checkout</code>: Retrieving a specific revision</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-3k">W2.3k</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>stash</code>: Shelving changes temporarily</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li></ul></small></div>
+</span></span> <span><code v-pre>stash</code>: Shelving changes temporarily</span> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></p></li></ul></small></div>
 <ul>
 <li>[<a href="/website/schedule/week2/topics.html#W2-4">W2.4</a>] <strong>RCS: Remote Repos</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
 <div class="indented-level2">
@@ -364,16 +360,16 @@
 </span></span> <span>Remote repositories</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-4b">W2.4b</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>clone</code>: Copying a repo</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code v-pre>clone</code>: Copying a repo</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-4c">W2.4c</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>pull</code>, <code class="hljs inline no-lang" v-pre>fetch</code>: Downloading data from other repos</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code v-pre>pull</code>, <code v-pre>fetch</code>: Downloading data from other repos</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-4d">W2.4d</a>] <span>Tools → Git and GitHub →
 </span></span> <span>Fork: Creating a remote copy</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week2/topics.html#W2-4e">W2.4e</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>push</code>: Uploading data to other repos</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
+</span></span> <span><code v-pre>push</code>: Uploading data to other repos</span> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
 <p></p>
 <ul>
 <li>[<a href="/website/schedule/week2/topics.html#W2-5">W2.5</a>] <strong>IDEs: Basic Features</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -409,7 +405,7 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Aug 20th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit post-lecture quiz</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Aug 20th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>Get connected to our communication channels</span></li></ol></div>
 <div>
 <p><strong>iP:</strong></p>
@@ -418,10 +414,10 @@
 <li><span>Learn about the project</span></li>
 <li><span>Set up prerequisites</span></li>
 <li><span>Set up the project in your computer</span></li>
-<li>Add Increments while committing frequently: <code class="hljs inline no-lang" v-pre>Level-1</code>, <code class="hljs inline no-lang" v-pre>Level-2</code>, <code class="hljs inline no-lang" v-pre>Level-3</code>, <code class="hljs inline no-lang" v-pre>Level-4</code>, <code class="hljs inline no-lang" v-pre>A-TextUiTesting</code>, <code class="hljs inline no-lang" v-pre>Level-5</code>, <code class="hljs inline no-lang" v-pre>Level-6</code>, <code class="hljs inline no-lang" v-pre>A-Enums</code> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Aug 20th 2359</span></span></li></ol></div></div></div></div></div></div></div>
+<li>Add Increments while committing frequently: <code v-pre>Level-1</code>, <code v-pre>Level-2</code>, <code v-pre>Level-3</code>, <code v-pre>Level-4</code>, <code v-pre>A-TextUiTesting</code>, <code v-pre>Level-5</code>, <code v-pre>Level-6</code>, <code v-pre>A-Enums</code> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Aug 20th 2359</span></span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-3-fri-aug-21st"><span id="week-3-fri-aug-21st" class="anchor"></span><a href="/website/schedule/week3" class="badge badge-pill badge-dark"><small><strong>Week 3</strong> <small>- Fri, Aug 21st</small></small></a> <small><small><a href="/website/schedule/week3/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week3/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week3/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week3/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-3-fri-aug-21st" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-3-fri-aug-21st"><a href="/website/schedule/week3" class="badge badge-pill badge-dark"><small><strong>Week 3</strong> <small>- Fri, Aug 21st</small></small></a> <small><small><a href="/website/schedule/week3/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week3/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week3/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week3/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-3-fri-aug-21st" class="anchor"></span><a class="fa fa-anchor" href="#week-3-fri-aug-21st" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -448,7 +444,7 @@
 <li>
 <p>[<a href="/website/schedule/week3/topics.html#W3-6">W3.6</a>] <strong>Unit Testing</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week3/topics.html#W3-1">W3.1</a>] <strong>RCS: Branching</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -460,7 +456,7 @@
 </span></span> <span>Branching</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week3/topics.html#W3-1b">W3.1b</a>] <span>Tools → Git and GitHub →
-</span></span> <span><code class="hljs inline no-lang" v-pre>branch</code>: Doing multiple parallel changes</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
+</span></span> <span><code v-pre>branch</code>: Doing multiple parallel changes</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li>
 <li>
 <p><span class="dimmed">[<a href="/website/schedule/week3/topics.html#W3-1c">W3.1c</a>] <span>Tools → Git and GitHub →
 </span></span> <span>Dealing with merge conflicts</span> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul></small></div>
@@ -543,7 +539,7 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>[CS2103 students only] Form teams during the tutorial</span></li></ol></div>
 <div>
 <p><strong>iP:</strong></p>
@@ -551,9 +547,9 @@
 <ol>
 <li><span>Do any leftover iP tasks from the previous week</span></li>
 <li><span>Create a PR to the upstream repo</span></li>
-<li>Add Increments as parallel branches: <code class="hljs inline no-lang" v-pre>Level-7</code>, <code class="hljs inline no-lang" v-pre>Level-8</code></li>
-<li>Add Increments: <code class="hljs inline no-lang" v-pre>A-MoreOOP</code>, <code class="hljs inline no-lang" v-pre>A-Packages</code>, <code class="hljs inline no-lang" v-pre>A-JUnit</code>, <code class="hljs inline no-lang" v-pre>A-Jar</code></li>
-<li>Add Increments as parallel branches: <code class="hljs inline no-lang" v-pre>A-JavaDoc</code>, <code class="hljs inline no-lang" v-pre>A-CodingStandard</code>, <code class="hljs inline no-lang" v-pre>Level-9</code></li></ol></div>
+<li>Add Increments as parallel branches: <code v-pre>Level-7</code>, <code v-pre>Level-8</code></li>
+<li>Add Increments: <code v-pre>A-MoreOOP</code>, <code v-pre>A-Packages</code>, <code v-pre>A-JUnit</code>, <code v-pre>A-Jar</code></li>
+<li>Add Increments as parallel branches: <code v-pre>A-JavaDoc</code>, <code v-pre>A-CodingStandard</code>, <code v-pre>Level-9</code></li></ol></div>
 <p><strong>tP:</strong></p>
 <div>
 <ol>
@@ -561,7 +557,7 @@
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Set up a project meeting time</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> by the end of the tutorial</span></span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-4-fri-aug-28th"><span id="week-4-fri-aug-28th" class="anchor"></span><a href="/website/schedule/week4" class="badge badge-pill badge-dark"><small><strong>Week 4</strong> <small>- Fri, Aug 28th</small></small></a> <small><small><a href="/website/schedule/week4/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week4/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week4/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week4/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-4-fri-aug-28th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-4-fri-aug-28th"><a href="/website/schedule/week4" class="badge badge-pill badge-dark"><small><strong>Week 4</strong> <small>- Fri, Aug 28th</small></small></a> <small><small><a href="/website/schedule/week4/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week4/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week4/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week4/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-4-fri-aug-28th" class="anchor"></span><a class="fa fa-anchor" href="#week-4-fri-aug-28th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -598,7 +594,7 @@
 <li>
 <p>[<a href="/website/schedule/week4/topics.html#W4-10">W4.10</a>] <strong>Automating the Build Process</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week4/topics.html#W4-1">W4.1</a>] <strong>Design: Models</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -731,15 +727,15 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Accept GitHub invitation from the module organization</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Accept GitHub invitation from the module organization</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <div>
 <p><strong>iP:</strong></p>
 <div>
 <ol>
-<li><span>Review some peer PRs</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Review some peer PRs</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>Learn from others (optional)</span></li>
-<li>Add Increments as branches: <code class="hljs inline no-lang" v-pre>A-Gradle</code>, <code class="hljs inline no-lang" v-pre>A-CheckStyle</code>, <code class="hljs inline no-lang" v-pre>Level-10</code>, <code class="hljs inline no-lang" v-pre>A-Varargs</code></li></ol></div>
+<li>Add Increments as branches: <code v-pre>A-Gradle</code>, <code v-pre>A-CheckStyle</code>, <code v-pre>Level-10</code>, <code v-pre>A-Varargs</code></li></ol></div>
 <p><strong>tP:</strong></p>
 <div>
 <ol>
@@ -748,7 +744,7 @@
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Decide on an overall project direction <span class="dimmed">(user profile, problem addressed)</span></span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-5-fri-sep-4th"><span id="week-5-fri-sep-4th" class="anchor"></span><a href="/website/schedule/week5" class="badge badge-pill badge-dark"><small><strong>Week 5</strong> <small>- Fri, Sep 4th</small></small></a> <small><small><a href="/website/schedule/week5/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week5/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week5/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week5/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-5-fri-sep-4th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-5-fri-sep-4th"><a href="/website/schedule/week5" class="badge badge-pill badge-dark"><small><strong>Week 5</strong> <small>- Fri, Sep 4th</small></small></a> <small><small><a href="/website/schedule/week5/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week5/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week5/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week5/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-5-fri-sep-4th" class="anchor"></span><a class="fa fa-anchor" href="#week-5-fri-sep-4th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -778,7 +774,7 @@
 <ul>
 <li>[<a href="/website/schedule/week5/topics.html#W5-8">W5.8</a>] <strong>RCS: Managing Pull Requests</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week5/topics.html#W5-1">W5.1</a>] <strong>Requirements: Intro</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -985,15 +981,15 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
-<li><span>Practice peer evaluation on TEAMMATES</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Sep 10th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Practice peer evaluation on TEAMMATES</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Sep 10th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <div>
 <p><strong>iP:</strong></p>
 <div>
 <ol>
 <li><span>Generate a new jar file</span></li>
-<li>Add Increments as PRs: <code class="hljs inline no-lang" v-pre>A-Assertions</code>, <code class="hljs inline no-lang" v-pre>A-CodeQuality</code>, <code class="hljs inline no-lang" v-pre>A-Lambdas</code>, <code class="hljs inline no-lang" v-pre>A-Streams</code></li>
-<li>Add Increment: <code class="hljs inline no-lang" v-pre>A-CI</code></li>
+<li>Add Increments as PRs: <code v-pre>A-Assertions</code>, <code v-pre>A-CodeQuality</code>, <code v-pre>A-Lambdas</code>, <code v-pre>A-Streams</code></li>
+<li>Add Increment: <code v-pre>A-CI</code></li>
 <li><span>Add an extension</span></li></ol></div>
 <p><strong>tP:</strong></p>
 <div>
@@ -1002,7 +998,7 @@
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Choose user stories for v1.2</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before/during the tutorial</span></span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-6-fri-sep-11th"><span id="week-6-fri-sep-11th" class="anchor"></span><a href="/website/schedule/week6" class="badge badge-pill badge-dark"><small><strong>Week 6</strong> <small>- Fri, Sep 11th</small></small></a> <small><small><a href="/website/schedule/week6/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week6/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week6/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week6/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-6-fri-sep-11th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-6-fri-sep-11th"><a href="/website/schedule/week6" class="badge badge-pill badge-dark"><small><strong>Week 6</strong> <small>- Fri, Sep 11th</small></small></a> <small><small><a href="/website/schedule/week6/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week6/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week6/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week6/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-6-fri-sep-11th" class="anchor"></span><a class="fa fa-anchor" href="#week-6-fri-sep-11th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -1023,7 +1019,7 @@
 <li>
 <p>[<a href="/website/schedule/week6/topics.html#W6-4">W6.4</a>] <strong>Logging</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week6/topics.html#W6-1">W6.1</a>] <strong>Modeling: Sequence Diagrams</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -1087,13 +1083,13 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span>[optional] Submit mid-term feedback for the module</span> <span class="badge badge-info font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Sep 17th 2359</span></span></li></ol></div>
 <div>
 <p><strong>iP:</strong></p>
 <div>
 <ol>
-<li>Add Increment: <code class="hljs inline no-lang" v-pre>A-BetterGui</code></li>
+<li>Add Increment: <code v-pre>A-BetterGui</code></li>
 <li><span>Finalize the features</span></li>
 <li><span>Set up a product website</span></li>
 <li><span>Submit the final version</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Fri, Sep 18th 2359</span></span></li></ol></div>
@@ -1107,7 +1103,7 @@
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Get familiar with the code base</span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-7-fri-sep-18th"><span id="week-7-fri-sep-18th" class="anchor"></span><a href="/website/schedule/week7" class="badge badge-pill badge-dark"><small><strong>Week 7</strong> <small>- Fri, Sep 18th</small></small></a> <small><small><a href="/website/schedule/week7/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week7/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week7/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week7/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-7-fri-sep-18th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-7-fri-sep-18th"><a href="/website/schedule/week7" class="badge badge-pill badge-dark"><small><strong>Week 7</strong> <small>- Fri, Sep 18th</small></small></a> <small><small><a href="/website/schedule/week7/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week7/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week7/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week7/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-7-fri-sep-18th" class="anchor"></span><a class="fa fa-anchor" href="#week-7-fri-sep-18th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -1137,7 +1133,7 @@
 <li>
 <p>[<a href="/website/schedule/week7/topics.html#W7-7">W7.7</a>] <strong>Project Mgt: Workflows</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week7/topics.html#W7-1">W7.1</a>] <strong>Requirements: Use Cases</strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -1274,7 +1270,7 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <div>
 <p><strong>iP:</strong></p>
 <div>
@@ -1284,14 +1280,14 @@
 <div>
 <ol>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Do a practice iteration</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> midnight before the tutorial</span></span></li>
-<li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Update project website: <code class="hljs inline no-lang" v-pre>AboutUs</code>, <code class="hljs inline no-lang" v-pre>README</code></span></li>
+<li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Update project website: <code v-pre>AboutUs</code>, <code v-pre>README</code></span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Update the UG</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Update the DG: user stories, glossary, NFRs, use cases</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Plan the next iteration</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Start implementing the next version</span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-8-fri-oct-2nd"><span id="week-8-fri-oct-2nd" class="anchor"></span><a href="/website/schedule/week8" class="badge badge-pill badge-dark"><small><strong>Week 8</strong> <small>- Fri, Oct 2nd</small></small></a> <small><small><a href="/website/schedule/week8/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week8/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week8/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week8/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-8-fri-oct-2nd" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-8-fri-oct-2nd"><a href="/website/schedule/week8" class="badge badge-pill badge-dark"><small><strong>Week 8</strong> <small>- Fri, Oct 2nd</small></small></a> <small><small><a href="/website/schedule/week8/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week8/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week8/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week8/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-8-fri-oct-2nd" class="anchor"></span><a class="fa fa-anchor" href="#week-8-fri-oct-2nd" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -1314,7 +1310,7 @@
 <li>
 <p>[<a href="/website/schedule/week8/topics.html#W8-5">W8.5</a>] <strong>Testing: Intermediate Concepts</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week8/topics.html#W8-1">W8.1</a>] <strong><span class="dimmed">[Revisiting] Drawing Class/Object Diagrams - Basics</span></strong> <span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -1441,13 +1437,13 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
-<li><span>Submit Midterm Peer Evaluations on TEAMMATES</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Sun, Oct 11th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span>Submit Midterm Peer Evaluations on TEAMMATES</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Sun, Oct 11th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <div>
 <p><strong>iP:</strong></p>
 <div>
 <ol>
-<li><span>Evaluate two peer iPs</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Sat, Oct 10th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Evaluate two peer iPs</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Sat, Oct 10th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <p><strong>tP:</strong></p>
 <div>
 <ol>
@@ -1456,7 +1452,7 @@
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Add the first functionality increment</span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-9-fri-oct-9th"><span id="week-9-fri-oct-9th" class="anchor"></span><a href="/website/schedule/week9" class="badge badge-pill badge-dark"><small><strong>Week 9</strong> <small>- Fri, Oct 9th</small></small></a> <small><small><a href="/website/schedule/week9/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week9/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week9/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week9/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-9-fri-oct-9th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-9-fri-oct-9th"><a href="/website/schedule/week9" class="badge badge-pill badge-dark"><small><strong>Week 9</strong> <small>- Fri, Oct 9th</small></small></a> <small><small><a href="/website/schedule/week9/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week9/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week9/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week9/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-9-fri-oct-9th" class="anchor"></span><a class="fa fa-anchor" href="#week-9-fri-oct-9th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -1487,7 +1483,7 @@
 <ul>
 <li>[<a href="/website/schedule/week9/topics.html#W9-8">W9.8</a>] <strong>Writing Developer Documents</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week9/topics.html#W9-1">W9.1</a>] <strong>OO Domain Models</strong> <span class="badge badge-pill badge-light text-primary"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -1635,7 +1631,7 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <div>
 <p><strong>tP:</strong> <span class="border rounded text-success border-success pr-1 pl-1"><span aria-hidden="true" class="fas fa-tag"></span> <strong>v1.2</strong></span></p>
 <div>
@@ -1645,7 +1641,7 @@
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Do an informal demo of v1.2</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-10-fri-oct-16th"><span id="week-10-fri-oct-16th" class="anchor"></span><a href="/website/schedule/week10" class="badge badge-pill badge-dark"><small><strong>Week 10</strong> <small>- Fri, Oct 16th</small></small></a> <small><small><a href="/website/schedule/week10/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week10/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week10/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week10/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-10-fri-oct-16th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-10-fri-oct-16th"><a href="/website/schedule/week10" class="badge badge-pill badge-dark"><small><strong>Week 10</strong> <small>- Fri, Oct 16th</small></small></a> <small><small><a href="/website/schedule/week10/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week10/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week10/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week10/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-10-fri-oct-16th" class="anchor"></span><a class="fa fa-anchor" href="#week-10-fri-oct-16th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -1668,7 +1664,7 @@
 <li>
 <p>[<a href="/website/schedule/week10/topics.html#W10-5">W10.5</a>] <strong>Test Cases: Boundary Value Analysis</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></p></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week10/topics.html#W10-1">W10.1</a>] <strong>Design Patterns</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -1777,7 +1773,7 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <div>
 <p><strong>tP:</strong></p>
 <div>
@@ -1786,11 +1782,11 @@
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Adjust process rigor if necessary</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Start the next iteration</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Update the DG with design details</span></li>
-<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Smoke-test CATcher</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> COMPULSORY</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Smoke-test CATcher</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> COMPULSORY</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Do a trial JAR release</span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-11-fri-oct-23rd"><span id="week-11-fri-oct-23rd" class="anchor"></span><a href="/website/schedule/week11" class="badge badge-pill badge-dark"><small><strong>Week 11</strong> <small>- Fri, Oct 23rd</small></small></a> <small><small><a href="/website/schedule/week11/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week11/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week11/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week11/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-11-fri-oct-23rd" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-11-fri-oct-23rd"><a href="/website/schedule/week11" class="badge badge-pill badge-dark"><small><strong>Week 11</strong> <small>- Fri, Oct 23rd</small></small></a> <small><small><a href="/website/schedule/week11/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week11/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week11/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week11/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-11-fri-oct-23rd" class="anchor"></span><a class="fa fa-anchor" href="#week-11-fri-oct-23rd" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -1820,7 +1816,7 @@
 <ul>
 <li>[<a href="/website/schedule/week11/topics.html#W11-7">W11.7</a>] <strong>Other UML Models</strong> <span class="badge badge-pill badge-success"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>: OPTIONAL</span></li></ul>
 <p></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Full ToC</span></p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Full ToC</span></p></template>
   <div>
 <ul>
 <li>[<a href="/website/schedule/week11/topics.html#W11-1">W11.1</a>] <strong>More Design Patterns</strong> <span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></li></ul>
@@ -1994,7 +1990,7 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Submit post-lecture quiz</span>  <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <div>
 <p><strong>tP:</strong> <span class="border rounded text-success border-success pr-1 pl-1"><span aria-hidden="true" class="fas fa-tag"></span> <strong>v1.3</strong></span></p>
 <div>
@@ -2007,7 +2003,7 @@
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Demo v1.3</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-12-fri-oct-30th"><span id="week-12-fri-oct-30th" class="anchor"></span><a href="/website/schedule/week12" class="badge badge-pill badge-dark"><small><strong>Week 12</strong> <small>- Fri, Oct 30th</small></small></a> <small><small><a href="/website/schedule/week12/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week12/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week12/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week12/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-12-fri-oct-30th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-12-fri-oct-30th"><a href="/website/schedule/week12" class="badge badge-pill badge-dark"><small><strong>Week 12</strong> <small>- Fri, Oct 30th</small></small></a> <small><small><a href="/website/schedule/week12/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week12/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week12/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week12/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-12-fri-oct-30th" class="anchor"></span><a class="fa fa-anchor" href="#week-12-fri-oct-30th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -2028,14 +2024,14 @@
 <p><strong>tP:</strong></p>
 <div>
 <ol>
-<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Attend the practical exam dry run</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> During the lecture</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
+<li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Attend the practical exam dry run</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> During the lecture</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Tweak the product as per peer-testing results</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Draft the PPP</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> <s>Prepare for the demo rehearsal</s></span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Double-check RepoSense compatibility</span></li></ol></div></div></div></div></div></div></div>
 <hr style="border-top: 3px double #c5c5c5;">
 <div tags="m--cs2103 m--cs2113 m--tic4001">
-<h3 id="week-13-fri-nov-6th"><span id="week-13-fri-nov-6th" class="anchor"></span><a href="/website/schedule/week13" class="badge badge-pill badge-dark"><small><strong>Week 13</strong> <small>- Fri, Nov 6th</small></small></a> <small><small><a href="/website/schedule/week13/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week13/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week13/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week13/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><a class="fa fa-anchor" href="#week-13-fri-nov-6th" onclick="event.stopPropagation()"></a></h3></div>
+<h3 id="week-13-fri-nov-6th"><a href="/website/schedule/week13" class="badge badge-pill badge-dark"><small><strong>Week 13</strong> <small>- Fri, Nov 6th</small></small></a> <small><small><a href="/website/schedule/week13/topics.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-book"></span></span></span></a></small></small><small><small><a href="/website/schedule/week13/project.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-drafting-compass"></span></span></span></a></small></small><small><small><a href="/website/schedule/week13/tutorial.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span></a></small></small><small><small><a href="/website/schedule/week13/admin.html" class="badge badge-light mr-1"><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span></span></a></small></small><span id="week-13-fri-nov-6th" class="anchor"></span><a class="fa fa-anchor" href="#week-13-fri-nov-6th" onclick="event.stopPropagation()"></a></h3></div>
 
 
 <div class="indented-level2">
@@ -2053,7 +2049,7 @@
 <p><strong>Admin:</strong></p>
 <div>
 <ol>
-<li><span>Submit Final Peer Evaluation on TEAMMATES</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Nov 12th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
+<li><span>Submit Final Peer Evaluation on TEAMMATES</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Thu, Nov 12th 2359</span></span> <span class="text-info"><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">counted for participation</span><span aria-hidden="true" class="fab fa-product-hunt"></span></span></span></li></ol></div>
 <div>
 <p><strong>tP:</strong> <span class="border rounded text-success border-success pr-1 pl-1"><span aria-hidden="true" class="fas fa-tag"></span> <strong>v1.4</strong></span></p>
 <div>
@@ -2064,8 +2060,8 @@
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Submit the demo video</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> Wed, Nov 11th 2359</span></span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Prepare for the practical exam</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Attend the practical exam</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> during lecture on Fri, Nov 13th 2359</span></span></li></ol></div></div></div></div></div></div></div>
-<hr style="border-top: 3px double #c5c5c5;"></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<hr style="border-top: 3px double #c5c5c5;"></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -2094,13 +2090,18 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -2124,5 +2125,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>

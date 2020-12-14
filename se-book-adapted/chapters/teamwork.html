@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Textbook Chapter : Teamwork</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
-    <script src="../../markbind/js/vue.min.js"></script>
-    <script src="../../markbind/js/markbind.min.js"></script>
-    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/site-nav.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
     <header fixed>
@@ -69,7 +67,7 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -138,18 +136,16 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/exercises.html">Combined Exercises</a></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/se-book-adapted/common/definitions.html">List of Definitions</a></div></li></ul></li></ul></div></nav>
 
-
-
 <div id="content-wrapper">
 <link rel="stylesheet" href="/website/book/css/textbook.css">
 <div class="website-content">
 <p><span class="dimmed"><strong><span></span></strong></span></p>
 <div id="title">
-<div><h1 id="teamwork"><span id="teamwork" class="anchor"></span><span>Teamwork</span><a class="fa fa-anchor" href="#teamwork" onclick="event.stopPropagation()"></a></h1></div></div>
-<panel type="seamless" expanded id="team-structures"><template slot="header"><h4 id="team-structures"><span id="team-structures" class="anchor"></span>Team Structures<a class="fa fa-anchor" href="#team-structures" onclick="event.stopPropagation()"></a></h4></template>
+<div><h1 id="teamwork"><span>Teamwork</span><span id="teamwork" class="anchor"></span><a class="fa fa-anchor" href="#teamwork" onclick="event.stopPropagation()"></a></h1></div></div>
+<panel type="seamless" expanded id="team-structures"><template slot="_header"><h4 id="team-structures">Team Structures<span id="team-structures" class="anchor"></span><a class="fa fa-anchor" href="#team-structures" onclick="event.stopPropagation()"></a></h4></template>
   <div class="indented">
   <span class="badge badge-light">
-  <span><span class="dimmed"><font color="DodgerBlue"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
+  <span><span class="dimmed"><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></span></span></span>
   <span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain common team structures</span></span></span></span><p></p>
   <div>
 <p>Given below are three commonly used team structures in software development. Irrespective of the team structure, it is a good practice to assign roles and responsibilities to different team members so that someone is clearly in charge of each aspect of the project. In comparison, the ‘everybody is responsible for everything’ approach can result in more chaos and hence slower progress.</p>
@@ -166,9 +162,9 @@
 <p>In a large, resource-intensive, complex project, this could be a good team structure to reduce communication overhead.</p></div>
   <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which team structure is the most suitable for a school project?</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which team structure is the most suitable for a school project?</p></template>
 <question>
 <p>Which team structure is the most suitable for a school project?</p>
 <ul radio-group="8ee7d" class="radio-list">
@@ -177,8 +173,8 @@
 <li class="radio-list-item"><label><input class="radio-list-input" name="8ee7d" type="radio"> c. Strict hierarchy</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(a)</p>
-<p>Explanation: Given that students are all peers and beginners, the egoless team structure seems most suitable for a school project. However, since school projects are low-stakes, short-lived, and small, even the other two team structures can be used for them.</p></div></question></panel></div></panel></div></div></div></panel></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p>Explanation: Given that students are all peers and beginners, the egoless team structure seems most suitable for a school project. However, since school projects are low-stakes, short-lived, and small, even the other two team structures can be used for them.</p></div></question></panel></div></panel></div></div></div></panel></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -195,13 +191,18 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -225,5 +226,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

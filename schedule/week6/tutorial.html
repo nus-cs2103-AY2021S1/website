@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Week 6 - Tutorial</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
-    <script src="../../markbind/js/vue.min.js"></script>
-    <script src="../../markbind/js/markbind.min.js"></script>
-    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
@@ -71,10 +69,8 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <nav>
@@ -87,35 +83,35 @@
 <li class="page-item active"><a class="page-link" href="/website/schedule/week6/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
 <li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week7"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
 <p></p>
-<h1 id="week-6-fri-sep-11th-tutorial"><span id="week-6-fri-sep-11th-tutorial" class="anchor"></span>Week 6 <small><small><span class="dimmed">[Fri, Sep 11th]</span> - Tutorial</small></small><a class="fa fa-anchor" href="#week-6-fri-sep-11th-tutorial" onclick="event.stopPropagation()"></a></h1>
+<h1 id="week-6-fri-sep-11th-tutorial">Week 6 <small><small><span class="dimmed">[Fri, Sep 11th]</span> - Tutorial</small></small><span id="week-6-fri-sep-11th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-6-fri-sep-11th-tutorial" onclick="event.stopPropagation()"></a></h1>
 <div>
-<h4 id="1-demo-your-debugging-skills"><span id="1-demo-your-debugging-skills" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <strong>Demo your debugging skills</strong><a class="fa fa-anchor" href="#1-demo-your-debugging-skills" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-demo-your-debugging-skills"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <strong>Demo your debugging skills</strong><span id="1-demo-your-debugging-skills" class="anchor"></span><a class="fa fa-anchor" href="#1-demo-your-debugging-skills" onclick="event.stopPropagation()"></a></h4>
 <ol>
 <li>Open your iP or tP code in your IDE.</li>
 <li>Set a breakpoint somewhere in the code.</li>
 <li>Run the code in debug mode.</li>
 <li>When the execution stops at the break point, use the debugger to execute 1-2 more statements.</li>
 <li>Take a screenshot of the IDE and paste in the <em>tutorial workspace</em> file.</li>
-<li>Optional: Set a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., the execution will stop only if the specified condition is met</span><em>conditional break-point</em></span>, take a screenshot of it, and paste it in the same file.</li></ol>
-<h4 id="2-sequence-diagrams-exercise"><span id="2-sequence-diagrams-exercise" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <strong>Sequence diagrams exercise</strong><a class="fa fa-anchor" href="#2-sequence-diagrams-exercise" onclick="event.stopPropagation()"></a></h4>
+<li>Optional: Set a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., the execution will stop only if the specified condition is met</span><em>conditional break-point</em></span>, take a screenshot of it, and paste it in the same file.</li></ol>
+<h4 id="2-sequence-diagrams-exercise"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <strong>Sequence diagrams exercise</strong><span id="2-sequence-diagrams-exercise" class="anchor"></span><a class="fa fa-anchor" href="#2-sequence-diagrams-exercise" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>Do the following two exercises, as guided by the tutor.</li></ul>
 <div class="indented-level2">
 <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram about Machine</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram about Machine</p></template>
 <question>
 <p>Explain in your own words the interactions illustrated by this Sequence Diagram:</p>
 <img src="/website/book/uml/sequenceDiagrams/introduction/images/Machine.png" width="500"></question></panel></div>
 <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram (<code class="hljs inline no-lang" v-pre>ParserFactory</code>)</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain Sequence Diagram (<code v-pre>ParserFactory</code>)</p></template>
 <question>
 <p>Explain the interactions depicted in this sequence diagram.</p>
 <img src="/website/book/modeling/modelingBehaviors/sequenceDiagramsIntermediate/images/parserFactory.png" height="300">
 <p></p>
 <div slot="hint" class="algolia-no-index">
-<p>First, the <code class="hljs inline no-lang" v-pre>createParser()</code> method of an existing <code class="hljs inline no-lang" v-pre>ParserFactory</code> object is called. Then, ...</p></div></question></panel></div>
-<p></p></div></div></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p>First, the <code v-pre>createParser()</code> method of an existing <code v-pre>ParserFactory</code> object is called. Then, ...</p></div></question></panel></div>
+<p></p></div></div></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -133,13 +129,18 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -163,5 +164,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

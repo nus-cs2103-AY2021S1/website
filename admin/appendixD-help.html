@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Admin: Apdx D: Getting Help</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
-    <script src="../markbind/js/vue.min.js"></script>
-    <script src="../markbind/js/markbind.min.js"></script>
-    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
@@ -70,7 +68,7 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -136,13 +134,11 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/appendixC-faq.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Apdx C: FAQ</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/appendixE-gitHub.html"><span>Apdx E: Using GitHub <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
 <br>
-<h1 id="apdx-d-getting-help"><span id="apdx-d-getting-help" class="anchor"></span><span class="display-4">Apdx D: Getting Help</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><a class="fa fa-anchor" href="#apdx-d-getting-help" onclick="event.stopPropagation()"></a></h1>
+<h1 id="apdx-d-getting-help"><span class="display-4">Apdx D: Getting Help</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="apdx-d-getting-help" class="anchor"></span><a class="fa fa-anchor" href="#apdx-d-getting-help" onclick="event.stopPropagation()"></a></h1>
 <div id="main">
 <p><span class="dimmed"><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> This guide is mostly about getting tech help, but it also applies to getting clarifications on module topics too. e.g. what is the difference between <em>refactoring</em> and <em>rewriting</em>?</span></p>
 <span class="float-right">
@@ -169,14 +165,14 @@ Pay attention to the error message you encounter. Sometimes it also contains hin
 <p><strong>Give full details of the problem</strong> Conversations via online forums take time. If you post everything that is relevant to your problem, your chances of getting an answer in the first try is higher. If others have to ask you more questions before they can help you, it will take longer. But this doesn't mean you dump too much information into the thread either.</p>
 <ul>
 <li>Give a meaningful title to the post. Be as specific as you can.<br>
-<font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <code class="hljs inline no-lang" v-pre>testing problem</code><br>
-<font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> <code class="hljs inline no-lang" v-pre>runtest.bat fails with ClassNotFound error</code></li>
+<font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> <code v-pre>testing problem</code><br>
+<font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> <code v-pre>runtest.bat fails with ClassNotFound error</code></li>
 <li>Include full error message, screenshots, code snippets, stack traces, etc.<br></li>
 <li>If the problem is code-related, share the code if possible (e.g., push the current state of the code to a branch in your fork and give the link to the branch). That gives a chance for someone to reproduce the state of your project in their computer.</li></ul></li>
 <li>
 <p><strong>Avoid addressing the question to one person</strong> (e.g., the prof), unless really necessary. Doing so will discourage others from answering that question.</p></li>
 <li>
-<p><strong>Isolate the problem.</strong> &quot;My code doesn't work&quot; isn't going to help even if you post the whole code. Others don't have time to go through all of your code. Isolate the part that doesn't work and strip it down to the bare minimum that is enough reproduce the error. Sometimes, this process actually helps you to figure out the problem yourself (have you heard about <trigger trigger="click" for="modal:appendixHelp-rubberDuckDebugging">Rubber Duck Debugging</trigger>?).</p>
+<p><strong>Isolate the problem.</strong> &quot;My code doesn't work&quot; isn't going to help even if you post the whole code. Others don't have time to go through all of your code. Isolate the part that doesn't work and strip it down to the bare minimum that is enough reproduce the error. Sometimes, this process actually helps you to figure out the problem yourself (have you heard about <span trigger="click" for="modal:appendixHelp-rubberDuckDebugging" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:appendixHelp-rubberDuckDebugging'].show()" class="trigger-click">Rubber Duck Debugging</span>?).</p>
 <box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> How to isolate problematic code? Delete code (one bit at a time) that is confirmed as not related to the problem. Do that until you can still reproduce the problem with the least amount of code remaining.
 </p></box><p></p></li>
@@ -185,9 +181,9 @@ Pay attention to the error message you encounter. Sometimes it also contains hin
 <li>
 <p><strong>Remember to thank those you try to help, and close the issue</strong> after the issue has been resolved.</p></li>
 <li>
-<p><strong>Share the solution</strong>. If you eventually managed to solve the problem on your own, share the solution in the thread for the benefit of others, and give closure to those who tried to help you. Don't leave the thread hanging or close it with something like <code class="hljs inline no-lang" v-pre>Never mind. I figured it out</code>.</p></li>
+<p><strong>Share the solution</strong>. If you eventually managed to solve the problem on your own, share the solution in the thread for the benefit of others, and give closure to those who tried to help you. Don't leave the thread hanging or close it with something like <code v-pre>Never mind. I figured it out</code>.</p></li>
 <li>
-<p><strong>Don't <em>hijack</em> other threads</strong>: It is OK to chime in if you have the same problem as the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Original Poster</span>OP</span> but don't ask a different (even if somewhat related) question in someone else's thread. That prevents the OP from closing the thread after the original question has been resolved. Instead, post your question as a separate thread.</p></li></ul></li></ul>
+<p><strong>Don't <em>hijack</em> other threads</strong>: It is OK to chime in if you have the same problem as the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Original Poster</span>OP</span> but don't ask a different (even if somewhat related) question in someone else's thread. That prevents the OP from closing the thread after the original question has been resolved. Instead, post your question as a separate thread.</p></li></ul></li></ul>
 <b-modal id="modal:appendixHelp-rubberDuckDebugging" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appendixHelp-rubberDuckDebugging" class="algolia-no-index"><template slot="modal-title">Rubber Duck Debugging</template>
 <p><img src="/website/admin/images/Rubber_duck_assisting_with_debugging.jpg" width="220"><br></p>
 <p><em>Rubber duck debugging</em> is an informal term used in software engineering to refer to a method of debugging code. The name is a reference to a story in the book <em>The Pragmatic Programmer</em> in which a programmer would carry around a rubber duck and debug his code by forcing himself to explain it, line-by-line, to the duck.</p>
@@ -219,8 +215,8 @@ What kind of questions are suitable to discuss with the tutor? Consider these tw
 <li>[Article] <a href="http://catb.org/esr/faqs/smart-questions.html">How To Ask Questions The Smart Way</a> by Eric Steven Raymond
 </li></ul></box></div>
 <br>
-<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/appendixC-faq.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Apdx C: FAQ</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/appendixE-gitHub.html"><span>Apdx E: Using GitHub <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/appendixC-faq.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Apdx C: FAQ</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/appendixE-gitHub.html"><span>Apdx E: Using GitHub <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -234,13 +230,18 @@ What kind of questions are suitable to discuss with the tutor? Consider these tw
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -264,5 +265,5 @@ What kind of questions are suitable to discuss with the tutor? Consider these tw
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>

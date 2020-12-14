@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Week 4 - Tutorial</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
-    <script src="../../markbind/js/vue.min.js"></script>
-    <script src="../../markbind/js/markbind.min.js"></script>
-    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
@@ -71,10 +69,8 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <nav>
@@ -87,12 +83,12 @@
 <li class="page-item active"><a class="page-link" href="/website/schedule/week4/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
 <li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week5"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
 <p></p>
-<h1 id="week-4-fri-aug-28th-tutorial"><span id="week-4-fri-aug-28th-tutorial" class="anchor"></span>Week 4 <small><small><span class="dimmed">[Fri, Aug 28th]</span> - Tutorial</small></small><a class="fa fa-anchor" href="#week-4-fri-aug-28th-tutorial" onclick="event.stopPropagation()"></a></h1>
+<h1 id="week-4-fri-aug-28th-tutorial">Week 4 <small><small><span class="dimmed">[Fri, Aug 28th]</span> - Tutorial</small></small><span id="week-4-fri-aug-28th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-4-fri-aug-28th-tutorial" onclick="event.stopPropagation()"></a></h1>
 <div>
-<h4 id="1-discuss-ip-progress"><span id="1-discuss-ip-progress" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <strong>Discuss iP progress</strong><a class="fa fa-anchor" href="#1-discuss-ip-progress" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-discuss-ip-progress"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <strong>Discuss iP progress</strong><span id="1-discuss-ip-progress" class="anchor"></span><a class="fa fa-anchor" href="#1-discuss-ip-progress" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>If you managed to add a GUI to your app, demo it to others.</li></ul>
-<h4 id="2-discuss-tp-progress"><span id="2-discuss-tp-progress" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <strong>Discuss tP progress</strong><a class="fa fa-anchor" href="#2-discuss-tp-progress" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-discuss-tp-progress"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <strong>Discuss tP progress</strong><span id="2-discuss-tp-progress" class="anchor"></span><a class="fa fa-anchor" href="#2-discuss-tp-progress" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li>Show your collaborative project doc to others.</li>
@@ -101,12 +97,12 @@
 <ul>
 <li>Suppose you belong to the proposed target user group; do you find the value proposition attractive?</li>
 <li>Do you foresee any potential violation of the project constraints?</li></ul></li></ul></div>
-<h4 id="3-interpret-class-object-diagrams"><span id="3-interpret-class-object-diagrams" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <strong>Interpret class/object diagrams</strong><a class="fa fa-anchor" href="#3-interpret-class-object-diagrams" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-interpret-class-object-diagrams"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <strong>Interpret class/object diagrams</strong><span id="3-interpret-class-object-diagrams" class="anchor"></span><a class="fa fa-anchor" href="#3-interpret-class-object-diagrams" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>Do the first of the two exercise given below, as directed by the tutor. If there is time left, do the second one as well.</li></ul>
 <div class="indented-level2">
 <div>
-<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Are you able to interpret CD/OD notations?</p></template>
+<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Are you able to interpret CD/OD notations?</p></template>
 <question>
 Study the following class and object diagrams. Are you able to interpret all notations?
 <p></p>
@@ -114,13 +110,13 @@ Study the following class and object diagrams. Are you able to interpret all not
 <p></p>
 <img src="/website/book/combined/images/objectDiagramsAllNotations.png" width="500"></question></panel></div>
 <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain notations in the class diagram</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span> Explain notations in the class diagram</p></template>
 <question>
 <p>Explain the meaning of various class diagram notations in the following class diagram:</p>
 <img src="/website/book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png" width="750"></question></panel></div>
 <p></p></div>
-</div></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+</div></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -139,13 +135,18 @@ Study the following class and object diagrams. Are you able to interpret all not
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -169,5 +170,5 @@ Study the following class and object diagrams. Are you able to interpret all not
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

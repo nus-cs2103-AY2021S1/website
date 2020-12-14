@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Week 11 - Project</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
-    <script src="../../markbind/js/vue.min.js"></script>
-    <script src="../../markbind/js/markbind.min.js"></script>
-    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
@@ -71,10 +69,8 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
-
-
 <div id="content-wrapper">
 <nav>
 <ul class="pagination mt-2"><li class="page-item"><a class="page-link" href="/website/schedule/week10"><span><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span> <strong>Previous Week</strong></span></a></li>
@@ -86,7 +82,7 @@
 <li class="page-item"><a class="page-link" href="/website/schedule/week11/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
 <li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week12"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
 <p></p>
-<h1 id="week-11-fri-oct-23rd-project"><span id="week-11-fri-oct-23rd-project" class="anchor"></span>Week 11 <small><small><span class="dimmed">[Fri, Oct 23rd]</span> - Project</small></small><a class="fa fa-anchor" href="#week-11-fri-oct-23rd-project" onclick="event.stopPropagation()"></a></h1>
+<h1 id="week-11-fri-oct-23rd-project">Week 11 <small><small><span class="dimmed">[Fri, Oct 23rd]</span> - Project</small></small><span id="week-11-fri-oct-23rd-project" class="anchor"></span><a class="fa fa-anchor" href="#week-11-fri-oct-23rd-project" onclick="event.stopPropagation()"></a></h1>
 <div id="summary" class="lead border-left ml-3 mb-3 pl-2" style="color: purple;">
 <p><strong>tP:</strong> <span class="border rounded text-success border-success pr-1 pl-1"><span aria-hidden="true" class="fas fa-tag"></span> <strong>v1.3</strong></span></p>
 <div>
@@ -97,30 +93,30 @@
 <li><span><span><span aria-hidden="true" class="fas fa-user"></span></span> Ensure the code RepoSense-compatible</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Wrap up v1.3</span></li>
 <li><span><span><span aria-hidden="true" class="fas fa-users"></span></span> Demo v1.3</span> <span class="badge badge-danger font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span></li></ol></div></div>
-<h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="tp-v1-3"><span id="tp-v1-3" class="anchor"></span>tP: v1.3<a class="fa fa-anchor" href="#tp-v1-3" onclick="event.stopPropagation()"></a></h2>
+<h2 class="d-block text-white bg-dark p-1 mb-4 mt-4" id="tp-v1-3">tP: v1.3<span id="tp-v1-3" class="anchor"></span><a class="fa fa-anchor" href="#tp-v1-3" onclick="event.stopPropagation()"></a></h2>
 <div>
 <div></div>
 <p></p>
-<h4 id="1-deliver-v1-3"><span id="1-deliver-v1-3" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Deliver v1.3</span><a class="fa fa-anchor" href="#1-deliver-v1-3" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-deliver-v1-3"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Deliver v1.3</span><span id="1-deliver-v1-3" class="anchor"></span><a class="fa fa-anchor" href="#1-deliver-v1-3" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li>Deliver the features that you planned for v1.3.</li></ul></div>
 <p></p>
-<h4 id="2-update-user-docs"><span id="2-update-user-docs" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Update user docs</span><a class="fa fa-anchor" href="#2-update-user-docs" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-update-user-docs"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Update user docs</span><span id="2-update-user-docs" class="anchor"></span><a class="fa fa-anchor" href="#2-update-user-docs" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Update the v1.3 user guide to match the current version of the product. <span class="dimmed">Reason: testers will need to refer to the UG during the practical exam dry run</span>.
 <ul>
-<li>Clearly indicate which features are not implemented yet <span class="dimmed">e.g. tag those features with a <code class="hljs inline no-lang" v-pre>Coming soon</code></span>.</li>
+<li>Clearly indicate which features are not implemented yet <span class="dimmed">e.g. tag those features with a <code v-pre>Coming soon</code></span>.</li>
 <li>For those features already implemented, ensure their descriptions match the exact behavior of the product <span class="dimmed">e.g. replace mockups with actual screenshots</span></li></ul></li></ul>
 <div tags="m--cs2103">
 <ul>
-<li><strong>Landing page (<code class="hljs inline no-lang" v-pre>docs/index.md</code>)</strong>: Update to look like a real product (rather than a project for learning SE) if you haven't done so already. In particular, <mark>update the <code class="hljs inline no-lang" v-pre>Ui.png</code> to match the current product (<trigger trigger="click" for="modal:v13-tipsForProductScreenshot"><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> tips</trigger>)</mark>.</li></ul>
+<li><strong>Landing page (<code v-pre>docs/index.md</code>)</strong>: Update to look like a real product (rather than a project for learning SE) if you haven't done so already. In particular, <mark>update the <code v-pre>Ui.png</code> to match the current product (<span trigger="click" for="modal:v13-tipsForProductScreenshot" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:v13-tipsForProductScreenshot'].show()" class="trigger-click"><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> tips</span>)</mark>.</li></ul>
 <b-modal id="modal:v13-tipsForProductScreenshot" hide-footer size="lg" modal-class="mb-zoom" ref="modal:v13-tipsForProductScreenshot" class="algolia-no-index"><template slot="modal-title">Admin → Project Deliverables → Website</template>
   <div>
 <box>
 <p><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Some common sense tips for a good product screenshot</strong></p>
-<p><code class="hljs inline no-lang" v-pre>Ui.png</code> represents your product in its full glory.</p>
+<p><code v-pre>Ui.png</code> represents your product in its full glory.</p>
 <ul>
 <li>Before taking the screenshot, populate the product with data that makes the product look good. For example, if the product is supposed to show profile photos, use real profile photos instead of dummy placeholders.</li>
 <li>If the product doesn't have nice line wrapping for long inputs/outputs, don't use such inputs/outputs for the screenshot.</li>
@@ -128,7 +124,7 @@
 <li>Choose a state that showcases the main features of the product <span class="dimmed">i.e., the login screen is not usually a good choice</span>.</li>
 <li>Take a <em>clean</em> screenshot with a decent resolution. Some screenshot tools can capture a specified window only. If your tool cannot do that, make sure you crop away the extraneous parts captured by the screenshot.</li>
 <li>Avoid annotations (arrows, callouts, explanatory text etc.); it should look like the product is in use for real.</li></ul>
-<panel tags="m--cs2103" type="seamless" expanded><template slot="header"><p>Examples</p></template>
+<panel tags="m--cs2103" type="seamless" expanded><template slot="_header"><p>Examples</p></template>
 <tabs>
   <tab><template slot="_header">👎 Not Good</template>
 <p>Reason: Distracting annotations.</p>
@@ -144,7 +140,7 @@
   <tab class="algolia-no-index"><template slot="_header">👍 Good</template>
 <img src="https://ay1920s2-cs2103-w15-2.github.io/main/images/Ui.png" width="600"></tab></tabs></panel></box></div></b-modal></div>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Deliverables → User Guide <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Deliverables → User Guide <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <div>
 <box>
@@ -155,15 +151,15 @@
 <p><strong>CS2103 does not require you to indicate author name of DG/UG sections</strong> (CS2101 requirements may differ). We recommend (but not require) you to ensure that the code dashboard reflect the authorship of doc files accurately.</p></div></box>
 
 <ul>
-<li>The main content you add should be in the <code class="hljs inline no-lang" v-pre>docs/UserGuide.md</code> file (for ease of tracking by grading scripts).</li>
+<li>The main content you add should be in the <code v-pre>docs/UserGuide.md</code> file (for ease of tracking by grading scripts).</li>
 <li><strong>Should cover all v1.4 features</strong>.<br>
 <strong>Ensure those descriptions match the product precisely</strong>, as it will be used by peer testers (<mark>inaccuracies will be considered bugs</mark>).</li>
-<li><strong>Optionally, can also cover future features</strong>. Mark those as <code class="hljs inline no-lang" v-pre>Coming soon</code>.</li>
+<li><strong>Optionally, can also cover future features</strong>. Mark those as <code v-pre>Coming soon</code>.</li>
 <li>Also note the following constraint:</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Constraint-File-Size <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Contstraints → Constraint-File-Size <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h4 id="constraint-file-size"><span id="constraint-file-size" class="anchor"></span><span class="badge badge-warning text-monospace"><span aria-hidden="true" class="fas fa-ban"></span> Constraint-File-Size</span><a class="fa fa-anchor" href="#constraint-file-size" onclick="event.stopPropagation()"></a></h4>
+<h4 id="constraint-file-size"><span class="badge badge-warning text-monospace"><span aria-hidden="true" class="fas fa-ban"></span> Constraint-File-Size</span><span id="constraint-file-size" class="anchor"></span><a class="fa fa-anchor" href="#constraint-file-size" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-level2">
 <p>The file sizes of the deliverables should not exceed the limits given below. <br></p>
 <div tags="m--cs2113 m--cs2103">
@@ -174,27 +170,27 @@
 <li>
 <p><span class="text-danger">PDF files: 15MB/file</span> (Not following <a href="https://se-education.org/guides/tutorials/savingPdf.html">the recommended method of converting to PDF format</a> can cause big PDF files. Another cause is using unnecessarily high resolution images for screenshots).</p></li></ul></div></div></panel></div><p></p></div></div></panel></div><p></p></div>
 <p></p>
-<h4 id="3-release-as-a-jar-file"><span id="3-release-as-a-jar-file" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Release as a jar file</span><a class="fa fa-anchor" href="#3-release-as-a-jar-file" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-release-as-a-jar-file"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Release as a jar file</span><span id="3-release-as-a-jar-file" class="anchor"></span><a class="fa fa-anchor" href="#3-release-as-a-jar-file" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
-<li><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Do a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">resulting in a jar file on GitHub that can be downloaded by potential users</span>proper product release</span></strong> <a href="https://nus-cs2103-ay2021s1.github.io/tp/DevOps.html#making-a-release">as described in the Developer Guide</a>. Do some manual tests to ensure the jar file works.</li></ul></div>
+<li><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Do a <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">resulting in a jar file on GitHub that can be downloaded by potential users</span>proper product release</span></strong> <a href="https://nus-cs2103-ay2021s1.github.io/tp/DevOps.html#making-a-release">as described in the Developer Guide</a>. Do some manual tests to ensure the jar file works.</li></ul></div>
 <p></p>
-<h4 id="4-ensure-the-code-reposense-compatible"><span id="4-ensure-the-code-reposense-compatible" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Ensure the code RepoSense-compatible</span><a class="fa fa-anchor" href="#4-ensure-the-code-reposense-compatible" onclick="event.stopPropagation()"></a></h4>
+<h4 id="4-ensure-the-code-reposense-compatible"><span class="badge badge-pill badge-dark p-2"><big><big>4</big></big></span> <span><span><span aria-hidden="true" class="fas fa-user"></span></span> Ensure the code RepoSense-compatible</span><span id="4-ensure-the-code-reposense-compatible" class="anchor"></span><a class="fa fa-anchor" href="#4-ensure-the-code-reposense-compatible" onclick="event.stopPropagation()"></a></h4>
 <div>
 <span id="midV13-repoSenseCompatible">
 <ul>
 <li>
-<p><strong>Ensure your code is <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., RepoSense can detect your code as yours</span>RepoSense-compatible</span></strong> and the <strong>code it attributes to you is indeed the code written by you</strong>, as explained below:</p>
+<p><strong>Ensure your code is <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., RepoSense can detect your code as yours</span>RepoSense-compatible</span></strong> and the <strong>code it attributes to you is indeed the code written by you</strong>, as explained below:</p>
 <ul>
-<li>Go to the <a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true">tp Code Dashboard</a>. Click on the <code class="hljs inline no-lang" v-pre>&lt;/&gt;</code> icon against your name and verify that the <mark>lines attributed to you (i.e., lines marked as green)</mark> reflects your code contribution correctly. This is important because some aspects of your project grade (e.g., code quality) will be graded based on those lines.<br>
+<li>Go to the <a href="https://nus-cs2103-ay2021s1.github.io/tp-dashboard/#breakdown=true">tp Code Dashboard</a>. Click on the <code v-pre>&lt;/&gt;</code> icon against your name and verify that the <mark>lines attributed to you (i.e., lines marked as green)</mark> reflects your code contribution correctly. This is important because some aspects of your project grade (e.g., code quality) will be graded based on those lines.<br>
     <img src="/website/admin/images/greenLines.png" width="600"></li></ul>
 <p></p>
 <ul>
 <li>More info on how to make the code RepoSense compatible:</li></ul></li></ul>
 <div class="indented-level4">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Tools → RepoSense <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Tools → RepoSense <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
-<h2 id="tool-reposense-for-authorship-tracking"><span id="tool-reposense-for-authorship-tracking" class="anchor"></span>Tool: RepoSense (for authorship tracking)<a class="fa fa-anchor" href="#tool-reposense-for-authorship-tracking" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tool-reposense-for-authorship-tracking">Tool: RepoSense (for authorship tracking)<span id="tool-reposense-for-authorship-tracking" class="anchor"></span><a class="fa fa-anchor" href="#tool-reposense-for-authorship-tracking" onclick="event.stopPropagation()"></a></h2>
 <div>
 <p><pic src="https://reposense.org/images/reposenseOverview.png"></pic></p>
 <p>We will be using a tool called <a href="http://reposense.org">RepoSense</a> to make it <strong>easier for you to see (and learn from) code written by others</strong>, and to help us see who wrote which part of the code.</p>
@@ -208,64 +204,36 @@
 <p><strong><strong>If the code does not match the actual authorship:</strong></strong> Given below are the possible reasons for the code shown to mismatch the code you wrote.</p>
 <ul>
 <li>
-<p><strong>Reason 1:</strong> the <code class="hljs inline no-lang" v-pre>Author name</code> of some of your commits is not known to RepoSense -- this is a result of not setting the <code class="hljs inline no-lang" v-pre>git.username</code> property as instructed <a href="/website/admin/tools.html#tool-git-for-revision-control">in our Git setup instructions</a>.<br>
-<strong>How to check:</strong> Find the <code class="hljs inline no-lang" v-pre>Author name</code> of your commits that are <em>missing</em> (you can use SourceTree or the <code class="hljs inline no-lang" v-pre>git log</code> command for that -- it's not possible to do that using the GitHub interface though).<br> Check if that author name is included in the <a href="https://github.com/nus-cs2103-AY2021S1/ip-dashboard/blob/master/configs/author-config.csv">RepoSense config for the iP</a> or the <a href="https://github.com/nus-cs2103-AY2021S1/tp-dashboard/blob/master/configs/author-config.csv">RepoSense config for the tP</a> (whichever the applicable one)<br>
+<p><strong>Reason 1:</strong> the <code v-pre>Author name</code> of some of your commits is not known to RepoSense -- this is a result of not setting the <code v-pre>git.username</code> property as instructed <a href="/website/admin/tools.html#tool-git-for-revision-control">in our Git setup instructions</a>.<br>
+<strong>How to check:</strong> Find the <code v-pre>Author name</code> of your commits that are <em>missing</em> (you can use SourceTree or the <code v-pre>git log</code> command for that -- it's not possible to do that using the GitHub interface though).<br> Check if that author name is included in the <a href="https://github.com/nus-cs2103-AY2021S1/ip-dashboard/blob/master/configs/author-config.csv">RepoSense config for the iP</a> or the <a href="https://github.com/nus-cs2103-AY2021S1/tp-dashboard/blob/master/configs/author-config.csv">RepoSense config for the tP</a> (whichever the applicable one)<br>
 <strong>Remedy:</strong> Send the missing author name(s) to the prof so that the RepoSense configuration can be updated accordingly.</p></li>
 <li>
 <p><strong>Reason 2:</strong> The actual authorship does not match the authorship determined by git blame/log e.g., another student touched your code after you wrote it, and Git log attributed the code to that student instead.<br>
-<strong>Remedy:</strong> You can add <code class="hljs inline no-lang" v-pre>@@author</code> annotations as explained in the panel below:</p></li></ul>
+<strong>Remedy:</strong> You can add <code v-pre>@@author</code> annotations as explained in the panel below:</p></li></ul>
 <div class="indented-level2">
-<panel class="algolia-no-index"><template slot="header"><p>Adding <code class="hljs inline no-lang" v-pre>@@author</code> tags to indicate authorship</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p>Adding <code v-pre>@@author</code> tags to indicate authorship</p></template>
   <div>
-<h4 id="adding-author-tags-indicate-authorship"><span id="adding-author-tags-indicate-authorship" class="anchor"></span>Adding <code class="hljs inline no-lang" v-pre>@@author</code> tags indicate authorship<a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
+<h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>
-<p>Mark your code with a <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}</code>. Note the double <code class="hljs inline no-lang" v-pre>@</code>.<br>
-The <code class="hljs inline no-lang" v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code class="hljs inline no-lang" v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
+<p>Mark your code with a <code v-pre>//@@author {yourGithubUsername}</code>. Note the double <code v-pre>@</code>.<br>
+The <code v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
 Here is a sample code file:</p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span><span>//@@author sarahkhoo
-</span><span>method 3 ...
-</span><span>//@@author johndoe
-</span><span>method 4 ...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author sarahkhoo<br></span><span>method 3 ...<br></span><span>//@@author johndoe<br></span><span>method 4 ...<br></span></code></pre></li>
 <li>
-<p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code class="hljs inline no-lang" v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
-Here is a sample code with an empty <code class="hljs inline no-lang" v-pre>author</code> tag:</p>
-<pre><code class="hljs" v-pre><span>method 0 ...
-</span><span>//@@author johndoe
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span><span>//@@author
-</span><span>method 3 ...
-</span><span>method 4 ...
-</span></code></pre></li>
+<p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
+Here is a sample code with an empty <code v-pre>author</code> tag:</p>
+<pre><code class="hljs" v-pre><span>method 0 ...<br></span><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author<br></span><span>method 3 ...<br></span><span>method 4 ...<br></span></code></pre></li>
 <li>
 <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br>
 Here is an example code from an xml/fxml file.</p>
-<pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;
-</span><span>&lt;textbox&gt;
-</span><span>  &lt;label&gt;...&lt;/label&gt;
-</span><span>  &lt;input&gt;...&lt;/input&gt;
-</span><span>&lt;/textbox&gt;
-</span><span>...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;<br></span><span>&lt;textbox&gt;<br></span><span>  &lt;label&gt;...&lt;/label&gt;<br></span><span>  &lt;input&gt;...&lt;/input&gt;<br></span><span>&lt;/textbox&gt;<br></span><span>...<br></span></code></pre></li>
 <li>
-<p><strong>Do not put the <code class="hljs inline no-lang" v-pre>//@@author</code> inside java header comments</strong>.<br>
+<p><strong>Do not put the <code v-pre>//@@author</code> inside java header comments</strong>.<br>
 👎<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs" v-pre><span>/**
-</span><span>  * Returns true if ...
-</span><span>  * @@author johndoe
-</span><span>  */
-</span></code></pre><p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe
-</span><span>/**
-</span><span>  * Returns true if ...
-</span><span>  */
-</span></code></pre></li></ul>
-<h4 id="what-to-and-what-not-to-annotate"><span id="what-to-and-what-not-to-annotate" class="anchor"></span>What to and what not to annotate<a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
+<pre><code class="hljs" v-pre><span>/**<br></span><span>  * Returns true if ...<br></span><span>  * @@author johndoe<br></span><span>  */<br></span></code></pre><p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>/**<br></span><span>  * Returns true if ...<br></span><span>  */<br></span></code></pre></li></ul>
+<h4 id="what-to-and-what-not-to-annotate">What to and what not to annotate<span id="what-to-and-what-not-to-annotate" class="anchor"></span><a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>
 <p><strong>Annotate both functional and test code</strong> There is no need to annotate documentation files.</p></li>
@@ -283,23 +251,17 @@ If you notice a team member claiming credit for code that he/she did not write o
 <li>
 <p><strong>If you wrote a significant amount of code that was not used in the final product</strong>,</p>
 <ul>
-<li>Create a folder called <code class="hljs inline no-lang" v-pre>{project root}/unused</code></li>
+<li>Create a folder called <code v-pre>{project root}/unused</code></li>
 <li>Move unused files (or copies of files containing unused code) to that folder</li>
-<li>use <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code class="hljs inline no-lang" v-pre>unused</code>)
+<li>use <code v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code v-pre>unused</code>)
 e.g.</li></ul>
-<pre><code class="hljs" v-pre><span>//@@author johndoe-unused
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span></code></pre><p>Please put a comment in the code to explain why it was not used.</p></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe-unused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre><p>Please put a comment in the code to explain why it was not used.</p></li>
 <li>
-<p><strong>If you reused code from elsewhere,</strong> mark such code as <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code class="hljs inline no-lang" v-pre>reused</code>)
+<p><strong>If you reused code from elsewhere,</strong> mark such code as <code v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code v-pre>reused</code>)
 e.g.</p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe-reused
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe-reused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre></li>
 <li>
-<p><strong>You can use empty <code class="hljs inline no-lang" v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
+<p><strong>You can use empty <code v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
 <ul>
 <li>
 <p><strong>Code generated by the IDE/framework,</strong> should not be annotated as your own.</p></li>
@@ -308,27 +270,27 @@ e.g.</p>
 <ul>
 <li><strong>Reason 3:</strong> Some commits should not be included in the authorship analysis <span class="dimmed">e.g., you committed the code of a third party library by mistake</span>.<br>
 <strong>Remedy:</strong> Let us know the hashes of the commits that need to be omitted from the analysis.</li></ul>
-<p>If none of the above works, please please post in the <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a> or contact us via <code class="hljs inline no-lang" v-pre>cs2103@comp.nus.edu.sg</code> so that we can advise you what to do.</p>
+<p>If none of the above works, please please post in the <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a> or contact us via <code v-pre>cs2103@comp.nus.edu.sg</code> so that we can advise you what to do.</p>
 <p><mark><strong>We recommend you ensure your code is RepoSense-compatible by v1.3</strong></mark></p></div></div></panel></div><p></p></span></div>
 <p></p>
-<h4 id="5-wrap-up-v1-3"><span id="5-wrap-up-v1-3" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>5</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Wrap up v1.3</span><a class="fa fa-anchor" href="#5-wrap-up-v1-3" onclick="event.stopPropagation()"></a></h4>
+<h4 id="5-wrap-up-v1-3"><span class="badge badge-pill badge-dark p-2"><big><big>5</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Wrap up v1.3</span><span id="5-wrap-up-v1-3" class="anchor"></span><a class="fa fa-anchor" href="#5-wrap-up-v1-3" onclick="event.stopPropagation()"></a></h4>
 <div>
 <ul>
 <li>as before</li></ul></div>
 <p></p>
-<h4 id="6-demo-v1-3-before-the-tutorial"><span id="6-demo-v1-3-before-the-tutorial" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>6</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Demo v1.3</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span><a class="fa fa-anchor" href="#6-demo-v1-3-before-the-tutorial" onclick="event.stopPropagation()"></a></h4>
+<h4 id="6-demo-v1-3-before-the-tutorial"><span class="badge badge-pill badge-dark p-2"><big><big>6</big></big></span> <span><span><span aria-hidden="true" class="fas fa-users"></span></span> Demo v1.3</span> <span class="badge badge-secondary font-weight-normal"><span><span aria-hidden="true" class="far fa-clock"></span> before the tutorial</span></span><span id="6-demo-v1-3-before-the-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#6-demo-v1-3-before-the-tutorial" onclick="event.stopPropagation()"></a></h4>
 <div>
 <div id="demo">
 <div tags="m--cs2103 m--cs2113">
 <ul>
-<li>[one member] As was done in <code class="hljs inline no-lang" v-pre>v1.2</code>,
+<li>[one member] As was done in <code v-pre>v1.2</code>,
 <ul>
-<li>Run your application using the <mark>JAR file</mark> that you released for <code class="hljs inline no-lang" v-pre>v1.3</code>.</li>
+<li>Run your application using the <mark>JAR file</mark> that you released for <code v-pre>v1.3</code>.</li>
 <li>Take screenshots of each available feature in action (or screen-record a demo -- need not be polished).</li>
-<li>Add those screenshots (or upload the demo video somewhere and give the link) to your <em>collaborative project notes</em> document with an appropriate heading e.g., <code class="hljs inline no-lang" v-pre>v1.3 features demo</code>.</li></ul></li></ul></div>
+<li>Add those screenshots (or upload the demo video somewhere and give the link) to your <em>collaborative project notes</em> document with an appropriate heading e.g., <code v-pre>v1.3 features demo</code>.</li></ul></li></ul></div>
 </div></div>
-<p></p></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p></p></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -353,13 +315,18 @@ e.g.</p>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -383,5 +350,5 @@ e.g.</p>
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

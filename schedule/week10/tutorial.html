@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Week 10 - Tutorial</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
-    <script src="../../markbind/js/vue.min.js"></script>
-    <script src="../../markbind/js/markbind.min.js"></script>
-    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/book/css/textbook.css">
     <link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/schedule.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
@@ -71,10 +69,8 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <nav>
@@ -87,9 +83,9 @@
 <li class="page-item active"><a class="page-link" href="/website/schedule/week10/tutorial.html"><span><span><span aria-hidden="true" class="fas fa-chalkboard-teacher"></span></span></span> Tutorial</a></li>
 <li class="page-item">&nbsp;&nbsp;&nbsp;</li><li class="page-item"><a class="page-link" href="/website/schedule/week11"><span><strong>Next Week</strong> <span aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></span></a></li></ul></nav>
 <p></p>
-<h1 id="week-10-fri-oct-16th-tutorial"><span id="week-10-fri-oct-16th-tutorial" class="anchor"></span>Week 10 <small><small><span class="dimmed">[Fri, Oct 16th]</span> - Tutorial</small></small><a class="fa fa-anchor" href="#week-10-fri-oct-16th-tutorial" onclick="event.stopPropagation()"></a></h1>
+<h1 id="week-10-fri-oct-16th-tutorial">Week 10 <small><small><span class="dimmed">[Fri, Oct 16th]</span> - Tutorial</small></small><span id="week-10-fri-oct-16th-tutorial" class="anchor"></span><a class="fa fa-anchor" href="#week-10-fri-oct-16th-tutorial" onclick="event.stopPropagation()"></a></h1>
 <div>
-<h4 id="1-demonstrate-an-assertion-failure"><span id="1-demonstrate-an-assertion-failure" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Demonstrate an assertion failure<a class="fa fa-anchor" href="#1-demonstrate-an-assertion-failure" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-demonstrate-an-assertion-failure"><span class="badge badge-pill badge-dark p-2"><big><big>1</big></big></span> Demonstrate an assertion failure<span id="1-demonstrate-an-assertion-failure" class="anchor"></span><a class="fa fa-anchor" href="#1-demonstrate-an-assertion-failure" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>Demonstrate an assertion failure using Intellij.</li></ul>
 <ol>
@@ -97,24 +93,24 @@
 e.g., add <code class="hljs inline java" v-pre><span class="hljs-keyword">assert</span> <span class="hljs-keyword">false</span>;</code> somewhere in your code.</li>
 <li>Run the code so that the application crashes with an assertion failure.</li>
 <li>Take a screenshot and paste in the tutorial workspace document.</li></ol>
-<h4 id="2-give-examples-of-defensive-programming"><span id="2-give-examples-of-defensive-programming" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Give examples of defensive programming<a class="fa fa-anchor" href="#2-give-examples-of-defensive-programming" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-give-examples-of-defensive-programming"><span class="badge badge-pill badge-dark p-2"><big><big>2</big></big></span> Give examples of defensive programming<span id="2-give-examples-of-defensive-programming" class="anchor"></span><a class="fa fa-anchor" href="#2-give-examples-of-defensive-programming" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>Give an example of defensive programming from AB3 or your tP.</li></ul>
-<h4 id="3-review-the-dg-of-a-peer-team"><span id="3-review-the-dg-of-a-peer-team" class="anchor"></span><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Review the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Developer Guide</span>DG</span> of a Peer Team<a class="fa fa-anchor" href="#3-review-the-dg-of-a-peer-team" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-review-the-dg-of-a-peer-team"><span class="badge badge-pill badge-dark p-2"><big><big>3</big></big></span> Review the <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Developer Guide</span>DG</span> of a Peer Team<span id="3-review-the-dg-of-a-peer-team" class="anchor"></span><a class="fa fa-anchor" href="#3-review-the-dg-of-a-peer-team" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>Evaluate the sample DG extracts (will be provided by the tutor), as guided by the tutor.</li>
 <li>In particular, detect the following DG bugs (they are the same bugs that will be used when evaluating your final DG).</li></ul>
 <div class="indented-level2">
-<panel type="danger" class="embedding" expanded><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → Architecture Section → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="danger" class="embedding" expanded><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → Architecture Section → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><span aria-hidden="true" class="fas fa-bug"></span> Architecture:</p>
 <ul>
 <li>Symbols used are not intuitive</li>
 <li>Indiscriminate use of double-headed arrows</li>
-<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
+<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
 <li>Description given are not sufficiently high-level</li></ul></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type="danger" class="embedding" expanded><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → UML Diagrams → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="danger" class="embedding" expanded><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → DG Bugs → UML Diagrams → Possible Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><span aria-hidden="true" class="fas fa-bug"></span> UML diagrams:</p>
 <ul>
@@ -123,7 +119,7 @@ e.g., add <code class="hljs inline java" v-pre><span class="hljs-keyword">assert
 <li>The diagram used is not suitable for the purpose it is used.</li>
 <li>The diagram is too complicated.</li></ul></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type="danger" class="embedding" expanded><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → General Documentation Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="danger" class="embedding" expanded><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP Grading → General Documentation Bugs <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <span id="visualsBugs">
 <p><span aria-hidden="true" class="fas fa-bug"></span> Use of visuals</p>
@@ -157,7 +153,7 @@ e.g., add <code class="hljs inline java" v-pre><span class="hljs-keyword">assert
 <ul>
 <li>Also, lookout for places where these tips can be applied.</li></ul>
 <div class="indented-level2">
-<panel type="success" class="embedding" expanded><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Deliverables → DG → Tips <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type="success" class="embedding" expanded><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP: Deliverables → DG → Tips <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <ul>
 <li><strong>Aim to showcase your documentation skills.</strong> The stated objective of the DG is to explain the implementation to a future developer, but a secondary objective is to serve as evidence of your ability to document deeply-technical content using prose, examples, diagrams, code snippets, etc. appropriately. To that end, you may also describe features that you plan to implement in the future, even beyond v1.4 (hypothetically).<br>
@@ -170,11 +166,11 @@ For an example, see <a href="https://nus-cs2103-ay2021s1.github.io/tp/DeveloperG
 <p>You may use any other tool too (e.g., PowerPoint). But if you do, note the following:<br>
 <mark>Choose a diagramming tool that has some 'source' format that can be version-controlled using git and updated incrementally</mark> <span class="dimmed">(reason: because diagrams need to evolve with the code that is already being version controlled using git)</span>. For example, if you use PowerPoint to draw diagrams, also commit the source PowerPoint files so that they can be reused when updating diagrams later.</p></li>
 <li>
-<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Can <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., automatically reverse engineered from the Java code</span>IDE-generated</span> UML diagrams be used in project submissions? Not a good idea. Given are three reasons each of which can be reported by evaluators as 'bugs' in your diagrams, costing you marks:</p>
+<p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> Can <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., automatically reverse engineered from the Java code</span>IDE-generated</span> UML diagrams be used in project submissions? Not a good idea. Given are three reasons each of which can be reported by evaluators as 'bugs' in your diagrams, costing you marks:</p>
 <ul>
 <li>They often don't follow the standard UML notation (e.g., they add extra icons).</li>
 <li>They tend to include <em>every</em> little detail whereas we want to limit UML diagrams to important details only, to improve readability.</li>
-<li>Diagrams reverse-engineered by an IDE might not represent the actual design as some design concepts cannot be deterministically identified from the code. e.g., differentiating between multiplicities <code class="hljs inline no-lang" v-pre>0..1</code> vs <code class="hljs inline no-lang" v-pre>1</code>, composition vs aggregation</li></ul></li></ul></li>
+<li>Diagrams reverse-engineered by an IDE might not represent the actual design as some design concepts cannot be deterministically identified from the code. e.g., differentiating between multiplicities <code v-pre>0..1</code> vs <code v-pre>1</code>, composition vs aggregation</li></ul></li></ul></li>
 <li><strong>Use multiple UML diagram types.</strong> Following from the point above, try to include UML diagrams of multiple types to showcase your ability to use different UML diagrams.</li>
 <li><strong>Keep diagrams simple.</strong> The aim is to make diagrams <mark><em>comprehensible</em>, not necessarily <em>comprehensive</em></mark>.<br>
 Ways to simplify diagrams:
@@ -183,18 +179,18 @@ Ways to simplify diagrams:
 <ul>
 <li>a class diagram can omit minor utility classes, private/unimportant members; some less-important associations can be shown as attributes instead.</li>
 <li>a sequence diagram can omit less important interactions, self-calls.</li></ul></li>
-<li><strong>Omit repetitive details</strong> e.g., a class diagram can show only a few representative ones in place of many similar classes (note how the <trigger trigger="click" for="modal:ipWeek10-logicClassDiagram">AB3 Logic class diagram</trigger> shows concrete <code class="hljs inline no-lang" v-pre>*Command</code> classes using a placeholder <code class="hljs inline no-lang" v-pre>XYZCommand</code>).</li>
-<li><strong>Limit the scope of a diagram.</strong> Decide the purpose of the diagram (i.e., what does it help to explain?) and omit details not related to it.<span tags="m--cs2103"> In particular, avoid showing lower-level details of multiple components in the same diagram unless strictly necessary e.g., note how the <trigger trigger="click" for="modal:ipWeek10-deleteSd">this sequence diagram</trigger> shows only the detailed interactions within the Logic component i.e., does not show detailed interactions within the model component.</span></li>
+<li><strong>Omit repetitive details</strong> e.g., a class diagram can show only a few representative ones in place of many similar classes (note how the <span trigger="click" for="modal:ipWeek10-logicClassDiagram" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-logicClassDiagram'].show()" class="trigger-click">AB3 Logic class diagram</span> shows concrete <code v-pre>*Command</code> classes using a placeholder <code v-pre>XYZCommand</code>).</li>
+<li><strong>Limit the scope of a diagram.</strong> Decide the purpose of the diagram (i.e., what does it help to explain?) and omit details not related to it.<span tags="m--cs2103"> In particular, avoid showing lower-level details of multiple components in the same diagram unless strictly necessary e.g., note how the <span trigger="click" for="modal:ipWeek10-deleteSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-deleteSd'].show()" class="trigger-click">this sequence diagram</span> shows only the detailed interactions within the Logic component i.e., does not show detailed interactions within the model component.</span></li>
 <li><strong>Break diagrams into smaller fragments</strong> when possible.
 <ul>
 <li>If a component has a lot of classes, consider further dividing into sub-components (e.g., a Parser sub-component inside the Logic component). After that, sub-components can be shown as black-boxes in the main diagram and their details can be shown as separate diagrams.</li>
-<li>You can use <code class="hljs inline no-lang" v-pre>ref</code> frames to break sequence diagrams to multiple diagrams. Similarly, <code class="hljs inline no-lang" v-pre>rake</code>s can be used to divide activity diagrams.</li></ul></li>
-<li><strong>Stay at the highest level of abstraction</strong> possible e.g., note how <trigger trigger="click" for="modal:ipWeek10-archiSd">this sequence diagram</trigger> shows only the interactions between architectural components, abstracting away the interactions that happen inside each component.</li>
+<li>You can use <code v-pre>ref</code> frames to break sequence diagrams to multiple diagrams. Similarly, <code v-pre>rake</code>s can be used to divide activity diagrams.</li></ul></li>
+<li><strong>Stay at the highest level of abstraction</strong> possible e.g., note how <span trigger="click" for="modal:ipWeek10-archiSd" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-archiSd'].show()" class="trigger-click">this sequence diagram</span> shows only the interactions between architectural components, abstracting away the interactions that happen inside each component.</li>
 <li><strong>Use visual representations</strong> as much as possible. E.g., show associations and navigabilities using lines and arrows connecting classes, rather than adding a variable in one of the classes.</li>
-<li>For some more examples of what NOT to do, see <trigger trigger="click" for="modal:ipWeek10-umlExamples">here</trigger>.</li></ul></li>
+<li>For some more examples of what NOT to do, see <span trigger="click" for="modal:ipWeek10-umlExamples" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-umlExamples'].show()" class="trigger-click">here</span>.</li></ul></li>
 <li><strong>Integrate diagrams into the description.</strong> Place the diagram close to where it is being described.</li>
 <li><strong>Use code snippets sparingly.</strong> The more you use code snippets in the DG, and longer the code snippet, the higher the risk of it getting outdated quickly. Instead, use code snippets only when necessary and cite only the strictly relevant parts only. You can also use pseudo code instead of actual programming code.</li>
-<li><strong>Resize diagrams</strong> so that the text size in the diagram matches the the text size of the main text of the diagram. See <trigger trigger="click" for="modal:ipWeek10-diagramSizeNegative">example</trigger>.</li></ul>
+<li><strong>Resize diagrams</strong> so that the text size in the diagram matches the the text size of the main text of the diagram. See <span trigger="click" for="modal:ipWeek10-diagramSizeNegative" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:ipWeek10-diagramSizeNegative'].show()" class="trigger-click">example</span>.</li></ul>
 <b-modal id="modal:ipWeek10-umlExamples" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-umlExamples" class="algolia-no-index"><template slot="modal-title">UML Diagrams: Negative Examples </template>
 <p>These class diagrams seem to have lot of member details, which can get outdated pretty quickly:<br>
 <img src="https://cs2103-ay1819s1-w10-3.github.io/main/images/PollClassDiagram.png" width="750"><br>
@@ -214,11 +210,11 @@ It will look more 'polished' if the two text sizes match.
 </p></b-modal><p></p>
 <b-modal id="modal:ipWeek10-logicClassDiagram" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-logicClassDiagram" class="algolia-no-index"><template slot="modal-title">AB3 - Class Diagram of the Logic Component</template>
   <img src="https://se-education.org/addressbook-level3/images/LogicClassDiagram.png" width="900"></b-modal>
-<b-modal id="modal:ipWeek10-deleteSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-deleteSd" class="algolia-no-index"><template slot="modal-title">AB3 - Sequence Diagram for the <code class="hljs inline no-lang" v-pre>delete</code> command</template>
+<b-modal id="modal:ipWeek10-deleteSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-deleteSd" class="algolia-no-index"><template slot="modal-title">AB3 - Sequence Diagram for the <code v-pre>delete</code> command</template>
   <img src="https://se-education.org/addressbook-level3/images/DeleteSequenceDiagram.png" width="900"></b-modal>
 <b-modal id="modal:ipWeek10-archiSd" hide-footer size="lg" modal-class="mb-zoom" ref="modal:ipWeek10-archiSd" class="algolia-no-index"><template slot="modal-title">AB3 - Architecture-Level Sequence Diagram</template>
-  <img src="https://se-education.org/addressbook-level3/images/ArchitectureSequenceDiagram.png"></b-modal></div></panel></div><p></p></div></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+  <img src="https://se-education.org/addressbook-level3/images/ArchitectureSequenceDiagram.png"></b-modal></div></panel></div><p></p></div></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -237,13 +233,18 @@ It will look more 'polished' if the two text sizes match.
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -267,5 +268,5 @@ It will look more 'polished' if the two text sizes match.
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

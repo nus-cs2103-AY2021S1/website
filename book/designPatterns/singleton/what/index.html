@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Software Design Patterns: Singleton: What</title>
     <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../markbind/css/markbind.min.css"><script src="../../../../markbind/js/polyfill.min.js"></script>
-    <script src="../../../../markbind/js/vue.min.js"></script>
-    <script src="../../../../markbind/js/markbind.min.js"></script>
-    <script src="../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -30,7 +28,7 @@
 <p><span class="dimmed"><strong><span>Design → Design Patterns → Singleton →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p><strong>Context</strong></p>
@@ -38,16 +36,16 @@
 <p><strong>Problem</strong></p>
 <p>A normal class can be instantiated multiple times by invoking the constructor.</p>
 <p><strong>Solution</strong></p>
-<p>Make the constructor of the singleton class <code class="hljs inline no-lang" v-pre>private</code>, <span class="dimmed">because a <code class="hljs inline no-lang" v-pre>public</code> constructor will allow others to instantiate the class at will</span>. Provide a <code class="hljs inline no-lang" v-pre>public</code> class-level method to access the <em>single instance</em>.</p>
+<p>Make the constructor of the singleton class <code v-pre>private</code>, <span class="dimmed">because a <code v-pre>public</code> constructor will allow others to instantiate the class at will</span>. Provide a <code v-pre>public</code> class-level method to access the <em>single instance</em>.</p>
 <box>
 <p>Example:</p>
 <p><pic src="/website/book/designPatterns/singleton/what/images/singleton.png"></pic></p>
 <p></p></box></div>
 <div>
 <div>
-<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about the Singleton pattern</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Statements about the Singleton pattern</p></template>
 <question>
 <p>You use the Singleton pattern when</p>
 <ul radio-group="651b5" class="radio-list">
@@ -56,16 +54,20 @@
 <li class="radio-list-item"><label><input class="radio-list-input" name="651b5" type="radio"> c. You want a class with no more than one instance.</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="651b5" type="radio"> d. You want to hide the internal structure of a component from its clients.</label></li></ul>
 <div slot="answer" class="algolia-no-index">
-<p>(c)</p></div></question></panel></div></panel></div></div></div></div></div></div></div>
-<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+<p>(c)</p></div></question></panel></div></panel></div></div></div></div></div></div></div></div>
         </div>
     </div>
 </body>
+<script src="../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../markbind/js/components.min.js"></script>
 <script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -89,5 +91,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script>
 </html>

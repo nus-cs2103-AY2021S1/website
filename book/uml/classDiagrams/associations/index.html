@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - UML: Class Diagrams: Associations</title>
     <link rel="stylesheet" href="../../../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../../markbind/css/markbind.min.css"><script src="../../../../markbind/js/polyfill.min.js"></script>
-    <script src="../../../../markbind/js/vue.min.js"></script>
-    <script src="../../../../markbind/js/markbind.min.js"></script>
-    <script src="../../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -26,12 +24,12 @@
 <p><span class="dimmed"><strong><span>Tools → UML → Class Diagrams →
 </span></strong></span></p>
 <div id="title">
-<h1 id="associations"><span id="associations" class="anchor"></span><span>Associations</span><a class="fa fa-anchor" href="#associations" onclick="event.stopPropagation()"></a></h1></div>
+<h1 id="associations"><span>Associations</span><a class="fa fa-anchor" href="#associations" onclick="event.stopPropagation()"></a></h1></div>
 <div id="main">
 <div>
 <div>
 <panel type="seamless" expanded id="what">
-  <span slot="header" class="card-title"><div><h4 id="what"><span id="what" class="anchor"></span><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="what"><span>What</span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret simple associations in a class diagram</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -40,66 +38,49 @@
 <img src="/website/book/uml/classDiagrams/associations/what/images/notation.png" width="300">
 <p></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example shows an association between the <code class="hljs inline no-lang" v-pre>Admin</code> class and the <code class="hljs inline no-lang" v-pre>Student</code> class:<br>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This example shows an association between the <code v-pre>Admin</code> class and the <code v-pre>Student</code> class:<br>
 <img src="/website/book/uml/classDiagrams/associations/what/images/example.png" width="300"></p></box></div>
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="navigability">
-  <span slot="header" class="card-title"><div><h4 id="navigability"><span id="navigability" class="anchor"></span><span>Navigability</span><a class="fa fa-anchor" href="#navigability" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="navigability"><span>Navigability</span><a class="fa fa-anchor" href="#navigability" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can interpret association navigabilities in class diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
   <div>
 <p><strong>You should use arrow heads to indicate the navigability of an association.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code class="hljs inline no-lang" v-pre>Logic</code> is aware of <code class="hljs inline no-lang" v-pre>Minefield</code>, but <code class="hljs inline no-lang" v-pre>Minefield</code> is not aware of <code class="hljs inline no-lang" v-pre>Logic</code>.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> <code v-pre>Logic</code> is aware of <code v-pre>Minefield</code>, but <code v-pre>Minefield</code> is not aware of <code v-pre>Logic</code>.</p>
 <img src="/website/book/uml/classDiagrams/associations/navigability/images/logicMinefield.png" height="40">
 <div>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{
-</span><span>    Minefield minefield;
-</span><span>}
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{
-</span><span>    ...
-</span><span>}
-</span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span> </span>{<br></span><span>    Minefield minefield;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span> </span>{<br></span><span>    ...<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
-<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span>
-</span><span>  
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span>
-</span><span>    self.minefield = minefield
-</span><span>    
-</span><span>  <span class="hljs-comment"># ...</span>
-</span><span>
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span>
-</span><span>  <span class="hljs-comment"># ...</span>
-</span></code></pre></div></div>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Logic</span>:</span><br></span><span>  <br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, minefield)</span>:</span><br></span><span>    self.minefield = minefield<br></span><span>    <br></span><span>  <span class="hljs-comment"># ...</span><br></span><span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Minefield</span>:</span><br></span><span>  <span class="hljs-comment"># ...</span><br></span></code></pre></div></div>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Here is an example of a bidirectional navigability; each class is aware of the other.</p><p></p>
 <img src="/website/book/uml/classDiagrams/associations/navigability/images/manDog.png" height="40"><p></p></box>
 <p><strong>Navigability can be shown in class diagrams as well as object diagrams</strong>.</p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> According to this object diagram, the given <code class="hljs inline no-lang" v-pre>Logic</code> object is associated with and aware of two <code class="hljs inline no-lang" v-pre>MineField</code> objects.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> According to this object diagram, the given <code v-pre>Logic</code> object is associated with and aware of two <code v-pre>MineField</code> objects.</p>
 <img src="/website/book/uml/classDiagrams/associations/navigability/images/logicMinefieldObjects.png" height="80"></box></div>
   <div>
   <div>
-<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What does the navigability given by this diagram mean?</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> What does the navigability given by this diagram mean?</p></template>
 <question>
 <img src="/website/book/uml/classDiagrams/associations/navigability/images/unitItem.png" height="100">
 <p></p>
 <ul radio-group="29fa9" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="29fa9" type="radio"> a. A <code class="hljs inline no-lang" v-pre>Unit</code> object knows about the <code class="hljs inline no-lang" v-pre>Item</code> object it is linked to</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="29fa9" type="radio"> b. An <code class="hljs inline no-lang" v-pre>Item</code> object knows about the <code class="hljs inline no-lang" v-pre>Unit</code> object it is linked to</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="29fa9" type="radio"> a. A <code v-pre>Unit</code> object knows about the <code v-pre>Item</code> object it is linked to</label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="29fa9" type="radio"> b. An <code v-pre>Item</code> object knows about the <code v-pre>Unit</code> object it is linked to</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="29fa9" type="radio"> c. Depends on the programming language</label></li></ul>
 <div slot="answer" class="algolia-no-index">
 <p>(a)</p>
-<p>Explanation: The diagram indicates that the <code class="hljs inline no-lang" v-pre>Unit</code> object should know about the <code class="hljs inline no-lang" v-pre>Item</code> object. In the implementation, the <code class="hljs inline no-lang" v-pre>Unit</code> object will hold an <code class="hljs inline no-lang" v-pre>Item</code> object in one of its variables.</p></div></question></panel></div></panel></div></div></div></panel></div>
+<p>Explanation: The diagram indicates that the <code v-pre>Unit</code> object should know about the <code v-pre>Item</code> object. In the implementation, the <code v-pre>Unit</code> object will hold an <code v-pre>Item</code> object in one of its variables.</p></div></question></panel></div></panel></div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="roles">
-  <span slot="header" class="card-title"><div><h4 id="roles"><span id="roles" class="anchor"></span><span>Roles</span><a class="fa fa-anchor" href="#roles" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="roles"><span>Roles</span><a class="fa fa-anchor" href="#roles" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/use association roles in class diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -107,46 +88,26 @@
 <p><strong><em>Association Role</em> labels are used to indicate the role played by the classes in the association.</strong></p>
 <img src="/website/book/uml/classDiagrams/associations/roles/images/notation.png" height="60">
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This association represents a marriage between a <code class="hljs inline no-lang" v-pre>Man</code> object and a <code class="hljs inline no-lang" v-pre>Woman</code> object. The respective roles played by objects of these two classes are <code class="hljs inline no-lang" v-pre>husband</code> and <code class="hljs inline no-lang" v-pre>wife</code>.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> This association represents a marriage between a <code v-pre>Man</code> object and a <code v-pre>Woman</code> object. The respective roles played by objects of these two classes are <code v-pre>husband</code> and <code v-pre>wife</code>.</p>
 <img src="/website/book/uml/classDiagrams/associations/roles/images/husbandWife.png" width="300">
 <p></p>
 <p>Note how the variable names match closely with the association roles.</p>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{
-</span><span>    Woman wife;
-</span><span>}
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{
-</span><span>    Man husband;
-</span><span>}
-</span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span> </span>{<br></span><span>    Woman wife;<br></span><span>}<br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span> </span>{<br></span><span>    Man husband;<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
-<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span>:</span>
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
-</span><span>    self.wife = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Woman object</span>
-</span><span>
-</span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span>:</span>
-</span><span>   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
-</span><span>     self.husband = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Man object</span>
-</span></code></pre></div></box>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Man</span>:</span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.wife = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Woman object</span><br></span><span><br></span><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Woman</span>:</span><br></span><span>   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>     self.husband = <span class="hljs-literal">None</span> <span class="hljs-comment"># a Man object</span><br></span></code></pre></div></box>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The role of <code class="hljs inline no-lang" v-pre>Student</code> objects in this association is <code class="hljs inline no-lang" v-pre>charges</code> <span class="dimmed">(i.e. Admin is in charge of students)</span></p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> The role of <code v-pre>Student</code> objects in this association is <code v-pre>charges</code> <span class="dimmed">(i.e. Admin is in charge of students)</span></p>
 <img src="/website/book/uml/classDiagrams/associations/roles/images/adminStudent.png" height="70">
 <p></p>
 <div class="alt-java">
-<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> </span>{
-</span><span>    List&lt;Student&gt; charges;
-</span><span>}
-</span></code></pre></div>
+<pre><code class="hljs java" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span> </span>{<br></span><span>    List&lt;Student&gt; charges;<br></span><span>}<br></span></code></pre></div>
 <div class="alt-python">
-<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span>:</span>
-</span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span>
-</span><span>    self.charges = [] <span class="hljs-comment"># list of Student objects</span>
-</span></code></pre></div></box></div>
+<pre><code class="hljs python" v-pre><span><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Admin</span>:</span><br></span><span>  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self)</span>:</span><br></span><span>    self.charges = [] <span class="hljs-comment"># list of Student objects</span><br></span></code></pre></div></box></div>
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="labels">
-  <span slot="header" class="card-title"><div><h4 id="labels"><span id="labels" class="anchor"></span><span>Labels</span><a class="fa fa-anchor" href="#labels" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="labels"><span>Labels</span><a class="fa fa-anchor" href="#labels" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain/use association labels in class diagrams</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -158,12 +119,12 @@
 <img src="/website/book/uml/classDiagrams/associations/labels/images/adminStudent.png" width="600">
 <p></p>
 <ul>
-<li>Diagram on the left:  <code class="hljs inline no-lang" v-pre>Admin</code> class is associated with <code class="hljs inline no-lang" v-pre>Student</code> class because an <code class="hljs inline no-lang" v-pre>Admin</code> object <em>uses</em> a <code class="hljs inline no-lang" v-pre>Student</code> object.</li>
-<li>Diagram on the right: <code class="hljs inline no-lang" v-pre>Admin</code> class is associated with <code class="hljs inline no-lang" v-pre>Student</code> class because a <code class="hljs inline no-lang" v-pre>Student</code> object is <em>used by</em> an <code class="hljs inline no-lang" v-pre>Admin</code> object.</li></ul></box></div>
+<li>Diagram on the left:  <code v-pre>Admin</code> class is associated with <code v-pre>Student</code> class because an <code v-pre>Admin</code> object <em>uses</em> a <code v-pre>Student</code> object.</li>
+<li>Diagram on the right: <code v-pre>Admin</code> class is associated with <code v-pre>Student</code> class because a <code v-pre>Student</code> object is <em>used by</em> an <code v-pre>Admin</code> object.</li></ul></box></div>
   <div></div></div></panel></div>
 <div>
 <panel type="seamless" expanded id="multiplicity">
-  <span slot="header" class="card-title"><div><h4 id="multiplicity"><span id="multiplicity" class="anchor"></span><span>Multiplicity</span><a class="fa fa-anchor" href="#multiplicity" onclick="event.stopPropagation()"></a></h4></div></span>
+  <span slot="header" class="card-title"><div><h4 id="multiplicity"><span>Multiplicity</span><a class="fa fa-anchor" href="#multiplicity" onclick="event.stopPropagation()"></a></h4></div></span>
   <div class="indented">
 <p><span class="badge badge-light"><span><span class="dimmed"><span><span><span aria-hidden="true" class="fas fa-trophy"></span></span> Can explain what is the multiplicity of an association</span></span></span></span></p><p></p><p></p>
 <p></p>
@@ -172,12 +133,12 @@
 <p></p>
 <p>Commonly used multiplicities:</p>
 <ul>
-<li><code class="hljs inline no-lang" v-pre>0..1</code> : <em>optional</em>, can be linked to 0 or 1 objects.</li>
-<li><code class="hljs inline no-lang" v-pre>1</code> : <em>compulsory</em>, must be linked to one object at all times.</li>
-<li><code class="hljs inline no-lang" v-pre>*</code> : can be linked to 0 or more objects.</li>
-<li><code class="hljs inline no-lang" v-pre>n..m</code> : the number of linked objects must be within <code class="hljs inline no-lang" v-pre>n</code> to <code class="hljs inline no-lang" v-pre>m</code> inclusive.</li></ul>
+<li><code v-pre>0..1</code> : <em>optional</em>, can be linked to 0 or 1 objects.</li>
+<li><code v-pre>1</code> : <em>compulsory</em>, must be linked to one object at all times.</li>
+<li><code v-pre>*</code> : can be linked to 0 or more objects.</li>
+<li><code v-pre>n..m</code> : the number of linked objects must be within <code v-pre>n</code> to <code v-pre>m</code> inclusive.</li></ul>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below, an <code class="hljs inline no-lang" v-pre>Admin</code> object administers (is in charge of) any number of students but a <code class="hljs inline no-lang" v-pre>Student</code> object must always be under the charge of exactly one <code class="hljs inline no-lang" v-pre>Admin</code> object.</p>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below, an <code v-pre>Admin</code> object administers (is in charge of) any number of students but a <code v-pre>Student</code> object must always be under the charge of exactly one <code v-pre>Admin</code> object.</p>
 <img src="/website/book/uml/classDiagrams/associations/multiplicity/images/adminStudent.png" width="300"></box>
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> In the diagram below,</p>
@@ -189,28 +150,32 @@
 <img src="/website/book/uml/classDiagrams/associations/multiplicity/images/adminProfessorStudent.png" height="70"></box></div>
   <div>
   <div>
-<panel expandable class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
+<panel expandable class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-dumbbell"></span></span> Exercises</p></template>
   <div>
-<panel class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statement agrees with the  multiplicity shown in this diagram?</p></template>
+<panel class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="glyphicon glyphicon-question-sign"></span></span><span aria-hidden="true" class="glyphicon glyphicon-ok-sign"></span> Which statement agrees with the  multiplicity shown in this diagram?</p></template>
 <question>
 <img src="/website/book/uml/classDiagrams/associations/multiplicity/images/unitItem.png" height="100">
 <p></p>
 <ul class="contains-task-list">
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. A <code class="hljs inline no-lang" v-pre>Unit</code> object can be linked to any number of <code class="hljs inline no-lang" v-pre>Item</code> objects.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. An <code class="hljs inline no-lang" v-pre>Item</code> object must be linked to 1, 2, 3 or 4 <code class="hljs inline no-lang" v-pre>Unit</code> objects.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A <code class="hljs inline no-lang" v-pre>Unit</code> object must be linked to 1, 2, 3, or 4 <code class="hljs inline no-lang" v-pre>Item</code> objects.</li>
-<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. A <code class="hljs inline no-lang" v-pre>Item</code> object can be linked to 0 or more <code class="hljs inline no-lang" v-pre>Unit</code> objects.</li></ul>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> a. A <code v-pre>Unit</code> object can be linked to any number of <code v-pre>Item</code> objects.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> b. An <code v-pre>Item</code> object must be linked to 1, 2, 3 or 4 <code v-pre>Unit</code> objects.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> c. A <code v-pre>Unit</code> object must be linked to 1, 2, 3, or 4 <code v-pre>Item</code> objects.</li>
+<li class="task-list-item enabled"><input class="task-list-item-checkbox" type="checkbox"> d. A <code v-pre>Item</code> object can be linked to 0 or more <code v-pre>Unit</code> objects.</li></ul>
 <div slot="answer" class="algolia-no-index">
-<p>(c)(d)</p></div></question></panel></div></panel></div></div></div></panel></div></div></div></div></div>
-<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+<p>(c)(d)</p></div></question></panel></div></panel></div></div></div></panel></div></div></div></div></div></div>
         </div>
     </div>
 </body>
+<script src="../../../../markbind/js/vue.min.js"></script>
+<script src="../../../../markbind/js/components.min.js"></script>
 <script src="../../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -234,5 +199,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../../../markbind/layouts/default/scripts.js"></script>
 </html>

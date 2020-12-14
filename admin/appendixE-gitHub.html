@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Admin: Apdx E: Using GitHub</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
-    <script src="../markbind/js/vue.min.js"></script>
-    <script src="../markbind/js/markbind.min.js"></script>
-    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
@@ -70,7 +68,7 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -136,15 +134,13 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html" class="current"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/appendixD-help.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Apdx D: Getting Help</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/appendixF-teamworkIssues.html"><span>Apdx F: Handling Team Issues <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
 <br>
-<h1 id="apdx-e-using-github"><span id="apdx-e-using-github" class="anchor"></span><span class="display-4">Apdx E: Using GitHub</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><a class="fa fa-anchor" href="#apdx-e-using-github" onclick="event.stopPropagation()"></a></h1>
+<h1 id="apdx-e-using-github"><span class="display-4">Apdx E: Using GitHub</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-danger"><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="apdx-e-using-github" class="anchor"></span><a class="fa fa-anchor" href="#apdx-e-using-github" onclick="event.stopPropagation()"></a></h1>
 <div id="main">
-<h2 id="creating-a-github-account"><span id="creating-a-github-account" class="anchor"></span>Creating a GitHub Account<a class="fa fa-anchor" href="#creating-a-github-account" onclick="event.stopPropagation()"></a></h2>
+<h2 id="creating-a-github-account">Creating a GitHub Account<span id="creating-a-github-account" class="anchor"></span><a class="fa fa-anchor" href="#creating-a-github-account" onclick="event.stopPropagation()"></a></h2>
 <div id="githubAccount">
 <p>Create a personal GitHub account if you don't have one yet.</p>
 <ol>
@@ -154,8 +150,8 @@
 <p>Strongly recommended: Complete your GitHub profile. In particular,</p>
 <ul>
 <li>Specify your full name.</li>
-<li>Upload a profile photo that matches <trigger trigger="click" for="modal:creatingGitHubAccount-photoCriteria">our requirements</trigger>.</li></ul>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span class="dimmed">Why am I being encouraged to complete my GitHub profile?</span></p></template>
+<li>Upload a profile photo that matches <span trigger="click" for="modal:creatingGitHubAccount-photoCriteria" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:creatingGitHubAccount-photoCriteria'].show()" class="trigger-click">our requirements</span>.</li></ul>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span class="dimmed">Why am I being encouraged to complete my GitHub profile?</span></p></template>
 <p>The GitHub profile is useful for the tutors and classmates to identify you. If you are reluctant to share your info in your long-term GitHub account, you can remove those details after the module is over or create a separate GitHub account just for the module.</p></panel></li>
 <li>
 <p><mark>You are discouraged from changing your GitHub username during the semester/exam/grading period</mark> as it can cause our auto-grading scripts to miss your GitHub activities. If you do change your GitHub username during that period, please let us know immediately.</p></li></ol>
@@ -165,12 +161,12 @@
 <img src="/website/admin/images/profilephotos.png" style="width: 365.33px"></p>
 <p>If you are uncomfortable posting your photo due to security reasons, you can post a lower resolution image so that it is hard for someone to misuse that image for fraudulent purposes. If you are concerned about privacy, you may use <a href="https://en.wikipedia.org/wiki/File:Portrait_placeholder.png">a placeholder image</a> in place of the photo in module-related documents that are publicly visible.</p></div></b-modal></div>
 
-<h2 id="guidelines-for-reviewing-prs"><span id="guidelines-for-reviewing-prs" class="anchor"></span>Guidelines for Reviewing PRs<a class="fa fa-anchor" href="#guidelines-for-reviewing-prs" onclick="event.stopPropagation()"></a></h2>
+<h2 id="guidelines-for-reviewing-prs">Guidelines for Reviewing PRs<span id="guidelines-for-reviewing-prs" class="anchor"></span><a class="fa fa-anchor" href="#guidelines-for-reviewing-prs" onclick="event.stopPropagation()"></a></h2>
 <div id="pr-review-guidelines">
 <p>Follow the <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html"><em>Best practices for reviewing PRs</em> @SE-EDU/guides</a>. You are <mark>expected to follow all of them</mark>.</p></div>
 
 <div id="organization-setup">
-<h2 id="tp-team-organization-setup"><span id="tp-team-organization-setup" class="anchor"></span>tP Team Organization Setup<a class="fa fa-anchor" href="#tp-team-organization-setup" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tp-team-organization-setup">tP Team Organization Setup<span id="tp-team-organization-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-team-organization-setup" onclick="event.stopPropagation()"></a></h2>
 <box type="important" seamless>
 <p>Please follow the organization/repo name format precisely or else our grading scripts will not be able to detect your work.</p></box>
 <p><strong><strong>(<span><span aria-hidden="true" class="fas fa-user"></span></span>/<span class="dimmed"><span><span aria-hidden="true" class="fas fa-users"></span></span></span>) Only one team member:</strong></strong></p>
@@ -178,16 +174,16 @@
 <ul>
 <li>Create a GitHub organization with the following details:
 <ul>
-<li><strong>Organization name</strong> <mark>(all UPPER CASE) : <code class="hljs inline no-lang" v-pre>AY2021S1-TEAM_ID</code></mark>. e.g.  <code class="hljs inline no-lang" v-pre>AY2021S1-CS2103T-W12-1</code>, <code class="hljs inline no-lang" v-pre>AY2021S1-CS2103-T09-2</code></li>
+<li><strong>Organization name</strong> <mark>(all UPPER CASE) : <code v-pre>AY2021S1-TEAM_ID</code></mark>. e.g.  <code v-pre>AY2021S1-CS2103T-W12-1</code>, <code v-pre>AY2021S1-CS2103-T09-2</code></li>
 <li>Plan:  Open Source ($0/month)</li>
 <li>This organization belongs to: My personal account</li></ul></li>
 <li>Add members to the organization:
 <ul>
-<li>Create a team called <code class="hljs inline no-lang" v-pre>developers</code> to your organization.</li>
+<li>Create a team called <code v-pre>developers</code> to your organization.</li>
 <li>Add your team members to the developers team.</li></ul></li></ul></div>
 
 <div id="tp-team-repo-setup">
-<h2 id="tp-team-repo-setup"><span id="tp-team-repo-setup" class="anchor"></span>tP Team Repo Setup<a class="fa fa-anchor" href="#tp-team-repo-setup" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tp-team-repo-setup">tP Team Repo Setup<span id="tp-team-repo-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-team-repo-setup" onclick="event.stopPropagation()"></a></h2>
 <p><strong><strong>(<span><span aria-hidden="true" class="fas fa-user"></span></span>/<span class="dimmed"><span><span aria-hidden="true" class="fas fa-users"></span></span></span>) Only one team member:</strong></strong></p>
 
 <ol>
@@ -202,19 +198,19 @@
 <p><strong>Enable GitHub Actions</strong>: Go to the <span class="border border-secondary border-bottom-0 pr-1 pl-1 mr-1 ml-1 rounded-top"><small><span aria-hidden="true" class="fas fa-play-circle"></span> Actions</small></span> tab and enable workflows by clicking the <button type="button" class="btn btn-success btn-sm ">I understand my workflows ...</button> button. That will enable the GitHub Actions that are already included in the repo you forked.</p></li>
 <li>
 <p><strong>Set up the project website</strong><br>
-Follow instructions in the <a href="https://nus-cs2103-ay2021s1.github.io/tp/Documentation.html"><em>Documentation guide</em> page</a> of AB3 developer guide. When set up correctly, your project website should be available via the URL  <code class="hljs inline no-lang" v-pre>https://ay2021s1-{team-id}.github.io/tp</code> e.g., <code class="hljs inline no-lang" v-pre>https://ay2021s1-cs2103-w13-1.github.io/tp</code>.</p></li>
+Follow instructions in the <a href="https://nus-cs2103-ay2021s1.github.io/tp/Documentation.html"><em>Documentation guide</em> page</a> of AB3 developer guide. When set up correctly, your project website should be available via the URL  <code v-pre>https://ay2021s1-{team-id}.github.io/tp</code> e.g., <code v-pre>https://ay2021s1-cs2103-w13-1.github.io/tp</code>.</p></li>
 <li>
 <p><strong>Add members</strong>. Ensure your team members have the desired level of access to your team repo.<br>
 Recommended: Give <em>admin access</em> to 1-2 members and <em>write access</em> to others.</p></li>
 <li>
-<p><strong>Create a <em>team PR</em></strong> for us to track your project progress: i.e., create a PR from your <mark>team repo <code class="hljs inline no-lang" v-pre>master</code> branch</mark> to [<a href="https://github.com/nus-cs2103-AY2021S1/tp">nus-cs2103-AY2021S1/tp</a>] <code class="hljs inline no-lang" v-pre>master</code> branch. PR name: <code class="hljs inline no-lang" v-pre>[Team ID] Product Name</code> e.g., <code class="hljs inline no-lang" v-pre>[CS2103-T09-2] Contact List Pro</code>. <span class="dimmed">As you merge code to your team repo's <code class="hljs inline no-lang" v-pre>master</code> branch, this PR will auto-update to reflect how much your team's product has progressed.</span><br>
+<p><strong>Create a <em>team PR</em></strong> for us to track your project progress: i.e., create a PR from your <mark>team repo <code v-pre>master</code> branch</mark> to [<a href="https://github.com/nus-cs2103-AY2021S1/tp">nus-cs2103-AY2021S1/tp</a>] <code v-pre>master</code> branch. PR name: <code v-pre>[Team ID] Product Name</code> e.g., <code v-pre>[CS2103-T09-2] Contact List Pro</code>. <span class="dimmed">As you merge code to your team repo's <code v-pre>master</code> branch, this PR will auto-update to reflect how much your team's product has progressed.</span><br>
 Please fill in these details as specified because they are used by our grading scripts.</p>
 <ul>
-<li><strong>PR subject: the name of your product</strong> e.g., <code class="hljs inline no-lang" v-pre>InsureList</code></li>
-<li><strong>Description: a 1-2 sentence overview</strong> (plain text only, no formatting or links) of your project indicating the target user and the value proposition e.g., <code class="hljs inline no-lang" v-pre>InsureList helps insurance agents manage detail of their clients. It is optimized for CLI users so that frequent tasks can be done faster by typing in commands.</code></li></ul></li></ol></div>
+<li><strong>PR subject: the name of your product</strong> e.g., <code v-pre>InsureList</code></li>
+<li><strong>Description: a 1-2 sentence overview</strong> (plain text only, no formatting or links) of your project indicating the target user and the value proposition e.g., <code v-pre>InsureList helps insurance agents manage detail of their clients. It is optimized for CLI users so that frequent tasks can be done faster by typing in commands.</code></li></ul></li></ol></div>
 
 <div id="issue-tracker-setup">
-<h2 id="tp-issue-tracker-setup"><span id="tp-issue-tracker-setup" class="anchor"></span>tP Issue Tracker Setup<a class="fa fa-anchor" href="#tp-issue-tracker-setup" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tp-issue-tracker-setup">tP Issue Tracker Setup<span id="tp-issue-tracker-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-issue-tracker-setup" onclick="event.stopPropagation()"></a></h2>
 <p>We recommend you configure the issue tracker of the tP team repo as follows:</p>
 <ul>
 <li>Delete existing labels and add the following labels.<br>
@@ -222,38 +218,38 @@ Please fill in these details as specified because they are used by our grading s
 <box>
 <p><strong>Issue type</strong> labels:</p>
 <ul>
-<li><code class="hljs inline no-lang" v-pre>type.Epic</code> : A big feature which can be broken down into smaller stories e.g. search</li>
-<li><code class="hljs inline no-lang" v-pre>type.Story</code> : A user story</li>
-<li><code class="hljs inline no-lang" v-pre>type.Enhancement</code>: An enhancement to an existing story</li>
-<li><code class="hljs inline no-lang" v-pre>type.Task</code> (or <code class="hljs inline no-lang" v-pre>type.Chore</code>) : Something that needs to be done, but not a story, bug, or an epic. e.g. Move testing code into a new folder)</li>
-<li><code class="hljs inline no-lang" v-pre>type.Bug</code> : A bug</li></ul></box>
+<li><code v-pre>type.Epic</code> : A big feature which can be broken down into smaller stories e.g. search</li>
+<li><code v-pre>type.Story</code> : A user story</li>
+<li><code v-pre>type.Enhancement</code>: An enhancement to an existing story</li>
+<li><code v-pre>type.Task</code> (or <code v-pre>type.Chore</code>) : Something that needs to be done, but not a story, bug, or an epic. e.g. Move testing code into a new folder)</li>
+<li><code v-pre>type.Bug</code> : A bug</li></ul></box>
 <box>
 <p><strong>Priority</strong> labels:</p>
 <ul>
-<li><code class="hljs inline no-lang" v-pre>priority.High</code> : Must do</li>
-<li><code class="hljs inline no-lang" v-pre>priority.Medium</code> : Nice to have</li>
-<li><code class="hljs inline no-lang" v-pre>priority.Low</code> : Unlikely to do</li></ul></box>
+<li><code v-pre>priority.High</code> : Must do</li>
+<li><code v-pre>priority.Medium</code> : Nice to have</li>
+<li><code v-pre>priority.Low</code> : Unlikely to do</li></ul></box>
 <span id="bug-severity">
 <box>
 <p><strong>Bug Severity</strong> labels:</p>
 <ul>
-<li><code class="hljs inline no-lang" v-pre>severity.VeryLow</code> : A flaw that is purely cosmetic and does not affect usage e.g., a typo/spacing/layout/color/font issues in the docs or the UI that doesn't affect usage.</li>
-<li><code class="hljs inline no-lang" v-pre>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
-<li><code class="hljs inline no-lang" v-pre>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
-<li><code class="hljs inline no-lang" v-pre>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li></ul>
+<li><code v-pre>severity.VeryLow</code> : A flaw that is purely cosmetic and does not affect usage e.g., a typo/spacing/layout/color/font issues in the docs or the UI that doesn't affect usage.</li>
+<li><code v-pre>severity.Low</code> : A flaw that is unlikely to affect normal operations of the product. Appears only in very rare situations and causes a minor inconvenience only.</li>
+<li><code v-pre>severity.Medium</code> : A flaw that causes occasional inconvenience to some users but they can continue to use the product.</li>
+<li><code v-pre>severity.High</code> : A flaw that affects most users and causes major problems for users. i.e., makes the product almost unusable for most users.</li></ul>
 <p><span><span aria-hidden="true" class="fas fa-info-circle"></span></span> When applying for documentation bugs, replace <em>user</em> with <em>reader</em>.</p></box></span>
 <ul>
 <li>
-<p>Create following milestones : <span tags="m--cs2103"><code class="hljs inline no-lang" v-pre>v1.1</code>, </span><code class="hljs inline no-lang" v-pre>v1.2</code>, <code class="hljs inline no-lang" v-pre>v1.3</code>, <code class="hljs inline no-lang" v-pre>v1.4</code></p></li>
+<p>Create following milestones : <span tags="m--cs2103"><code v-pre>v1.1</code>, </span><code v-pre>v1.2</code>, <code v-pre>v1.3</code>, <code v-pre>v1.4</code></p></li>
 <li>
 <p>You may configure other project settings as you wish. e.g. more labels, more milestones</p></li></ul></div>
 
 <div id="tp-individual-fork-setup">
-<h2 id="tp-individual-fork-setup"><span id="tp-individual-fork-setup" class="anchor"></span>tP Individual Fork Setup<a class="fa fa-anchor" href="#tp-individual-fork-setup" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tp-individual-fork-setup">tP Individual Fork Setup<span id="tp-individual-fork-setup" class="anchor"></span><a class="fa fa-anchor" href="#tp-individual-fork-setup" onclick="event.stopPropagation()"></a></h2>
 <p><strong><strong>(<span><span aria-hidden="true" class="fas fa-user"></span></span>, <span><span aria-hidden="true" class="fas fa-user"></span></span>, <span><span aria-hidden="true" class="fas fa-user"></span></span>, ...) Every team member:</strong></strong></p>
 <ol>
-<li><strong>Watch</strong> the <code class="hljs inline no-lang" v-pre>tP</code> repo (created above) i.e., go to the repo and click on the <button type="button" class="btn btn-light btn-sm border"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-eye" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg> Watch <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></button> button to subscribe to activities of the repo.</li>
-<li><strong>Fork</strong> the <code class="hljs inline no-lang" v-pre>tP</code> repo to your personal GitHub account.<br>
+<li><strong>Watch</strong> the <code v-pre>tP</code> repo (created above) i.e., go to the repo and click on the <button type="button" class="btn btn-light btn-sm border"><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-eye" aria-hidden="true"><path fill-rule="evenodd" d="M8.06 2C3 2 0 8 0 8s3 6 8.06 6C13 14 16 8 16 8s-3-6-7.94-6zM8 12c-2.2 0-4-1.78-4-4 0-2.2 1.8-4 4-4 2.22 0 4 1.8 4 4 0 2.22-1.78 4-4 4zm2-4c0 1.11-.89 2-2 2-1.11 0-2-.89-2-2 0-1.11.89-2 2-2 1.11 0 2 .89 2 2z"/></svg> Watch <svg version="1.1" width="12" height="16" viewBox="0 0 12 16" class="octicon octicon-triangle-down" aria-hidden="true"><path fill-rule="evenodd" d="M0 5l6 6 6-6H0z"/></svg></button> button to subscribe to activities of the repo.</li>
+<li><strong>Fork</strong> the <code v-pre>tP</code> repo to your personal GitHub account.<br>
 <span><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Please do not rename the fork <span class="dimmed">Reason: our grading scripts rely on the repo name.</span></span></li>
 <li><strong>Clone</strong> the fork to your computer.</li>
 <li><strong>Set up</strong> the developer environment in your computer by following the
@@ -261,26 +257,26 @@ Please fill in these details as specified because they are used by our grading s
 <box type="wrong" seamless>
 <p><strong>Do not alter these paths</strong> in your project as our grading scripts depend on them.</p>
 <ul>
-<li><code class="hljs inline no-lang" v-pre>src/main/java</code></li>
-<li><code class="hljs inline no-lang" v-pre>src/test/java</code></li>
-<li><code class="hljs inline no-lang" v-pre>docs</code></li></ul></box></div>
+<li><code v-pre>src/main/java</code></li>
+<li><code v-pre>src/test/java</code></li>
+<li><code v-pre>docs</code></li></ul></box></div>
 
 <div id="workflow">
-<h2 id="tp-workflow"><span id="tp-workflow" class="anchor"></span>tP Workflow<a class="fa fa-anchor" href="#tp-workflow" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tp-workflow">tP Workflow<span id="tp-workflow" class="anchor"></span><a class="fa fa-anchor" href="#tp-workflow" onclick="event.stopPropagation()"></a></h2>
 <div id="workflow-before-v11">
-<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Read <trigger trigger="click" for="modal:appE-reusePolicy">our reuse policy <span class="dimmed">(in Admin: Appendix B)</span></trigger></strong>, in particular, <mark>how to give credit when you reuse code from the Internet or classmates</mark>:</p>
+<p><font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> <strong>Read <span trigger="click" for="modal:appE-reusePolicy" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:appE-reusePolicy'].show()" class="trigger-click">our reuse policy <span class="dimmed">(in Admin: Appendix B)</span></span></strong>, in particular, <mark>how to give credit when you reuse code from the Internet or classmates</mark>:</p>
 <b-modal id="modal:appE-gitUsername" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appE-gitUsername" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix E → Setting Git Username to Match GitHub Username</template>
   <div>
-<p><strong>Set Git <code class="hljs inline no-lang" v-pre>user.name</code></strong>: We use various tools to analyze your code. For us to be able to identify your commits, we encourage you to <mark>set your Git <code class="hljs inline no-lang" v-pre>user.name</code> in all computers you use</mark> to a sensible string that uniquely identifies you. For example, <mark>you can set it to your GitHub username or your full name</mark>. If this user name is not set properly or if you use multiple usernames for Git, our grading scripts might miss some of your work.</p>
+<p><strong>Set Git <code v-pre>user.name</code></strong>: We use various tools to analyze your code. For us to be able to identify your commits, we encourage you to <mark>set your Git <code v-pre>user.name</code> in all computers you use</mark> to a sensible string that uniquely identifies you. For example, <mark>you can set it to your GitHub username or your full name</mark>. If this user name is not set properly or if you use multiple usernames for Git, our grading scripts might miss some of your work.</p>
 <p>After installing Git in a computer, you can set the Git username as follows:</p>
 <ol>
 <li>Open a command window that can run Git commands (e.g., Git bash window)</li>
-<li>Run the command <code class="hljs inline no-lang" v-pre>git config --global user.name YOUR_GITHUB_USERNAME</code> (omit the <code class="hljs inline no-lang" v-pre>--global</code> flag to limit the setting to the current repo only)<br>
-e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name JohnDoe</code></li></ol>
+<li>Run the command <code v-pre>git config --global user.name YOUR_GITHUB_USERNAME</code> (omit the <code v-pre>--global</code> flag to limit the setting to the current repo only)<br>
+e.g., <code v-pre>git config --global user.name JohnDoe</code></li></ol>
 <p>More info about setting Git username is <a href="https://help.github.com/articles/setting-your-username-in-git/">here</a>.</p></div></b-modal>
 <b-modal id="modal:appE-reusePolicy" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appE-reusePolicy" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix B: Policies → Policy on Reuse</template>
   <div>
-<h3 id="policy-on-reuse"><span id="policy-on-reuse" class="anchor"></span>Policy on reuse <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><a class="fa fa-anchor" href="#policy-on-reuse" onclick="event.stopPropagation()"></a></h3>
+<h3 id="policy-on-reuse">Policy on reuse <small><small><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></small></small><span id="policy-on-reuse" class="anchor"></span><a class="fa fa-anchor" href="#policy-on-reuse" onclick="event.stopPropagation()"></a></h3>
 <div class="indented">
 <div>
 <p><strong>Reuse is encouraged. However, note that reuse has its own costs</strong> (such as the learning curve, additional complexity, usage restrictions, and unknown bugs). Furthermore, you will not be given credit for work done by others. Rather, you will be given credit for <em>reusing</em> work done by others.</p>
@@ -296,92 +292,45 @@ e.g., <code class="hljs inline no-lang" v-pre>git config --global user.name John
 <li>You do not violate the license under which the work has been released. Please  <strong>do not use 3rd-party images/audio</strong> in your software unless they have been specifically released to be used freely. Just because you found it in the Internet does not mean it is free for reuse.</li>
 <li><mark>Always get permission from us before you reuse</mark> third-party libraries. Please post your 'request to use 3rd party library' in our <a href="https://github.com/nus-cs2103-AY2021S1/forum/issues">forum</a>. That way, the whole class get to see what libraries are being used by others.</li></ul></li></ul>
 <box>
-<h4 id="giving-credit-for-reused-work"><span id="giving-credit-for-reused-work" class="anchor"></span>Giving credit for reused work<a class="fa fa-anchor" href="#giving-credit-for-reused-work" onclick="event.stopPropagation()"></a></h4>
+<h4 id="giving-credit-for-reused-work">Giving credit for reused work<span id="giving-credit-for-reused-work" class="anchor"></span><a class="fa fa-anchor" href="#giving-credit-for-reused-work" onclick="event.stopPropagation()"></a></h4>
 <p>Given below are how to give credit for things you reuse from elsewhere. These requirements are specific to this module <span class="dimmed">i.e., not applicable outside the module (outside the module you should follow the rules specified by your employer and the license of the reused work)</span></p>
 <p>If you <strong>used a third party library</strong>:</p>
 <ul>
-<li>iP/tP: Mention in the <code class="hljs inline no-lang" v-pre>README</code> file (under the <em>Acknowledgements</em> section)</li>
-<li>tP: Mention in the <trigger trigger="click" for="modal:reusePolicy-ppp">Project Portfolio Page</trigger> if the library has a significant relevance to the features you implemented</li></ul>
+<li>iP/tP: Mention in the <code v-pre>README</code> file (under the <em>Acknowledgements</em> section)</li>
+<li>tP: Mention in the <span trigger="click" for="modal:reusePolicy-ppp" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:reusePolicy-ppp'].show()" class="trigger-click">Project Portfolio Page</span> if the library has a significant relevance to the features you implemented</li></ul>
 <p>If you <strong>reused code snippets found on the Internet</strong> <span class="dimmed">e.g. from StackOverflow answers</span> or<br>
 <strong>referred code in another software</strong> or<br>
 <strong>referred project code by current/past student</strong>:</p>
 <ul>
 <li>If you read the code to understand the approach and implemented it yourself, mention it as a comment<br>
-<span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//Solution below adapted from https://stackoverflow.com/a/16252290</span>
-</span><span>{Your implmentation of the reused solution here ...}
-</span></code></pre></li>
-<li>If you copy-pasted a non-trivial code block (possibly with minor modifications <span class="dimmed">renaming, layout changes, changes to comments, etc.</span>), also mark the code block as reused code (using <trigger trigger="click" for="modal:reusePolicy-authorTags"><code class="hljs inline no-lang" v-pre>@@author</code> tags</trigger> with the <mark><code class="hljs inline no-lang" v-pre>-reused</code></mark> suffix)<br>
-Format:<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//@@author {yourGithubUsername}-reused</span>
-</span><span><span class="hljs-comment">//{Info about the source...}</span>
-</span><span>
-</span><span>{<span class="hljs-function">Reused <span class="hljs-title">code</span> <span class="hljs-params">(possibly with minor modifications)</span> here ...}</span>
-</span><span><span class="hljs-function"></span>
-</span><span><span class="hljs-function"><span class="hljs-comment">//@@author</span></span>
-</span></code></pre><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example of reusing a code snippet (with minor modifications):<pre><code class="hljs java" v-pre><span>persons = getList()
-</span><span><span class="hljs-comment">//@@author johndoe-reused</span>
-</span><span><span class="hljs-comment">//Reused from https://stackoverflow.com/a/34646172 with minor modifications</span>
-</span><span>Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;CustomData&gt;() {
-</span><span>    <span class="hljs-meta">@Override</span>
-</span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(CustomData lhs, CustomData rhs)</span> </span>{
-</span><span>        <span class="hljs-keyword">return</span> lhs.customInt &gt; rhs.customInt ? -<span class="hljs-number">1</span> : <span class="hljs-number">0</span>;
-</span><span>    }
-</span><span>});
-</span><span><span class="hljs-comment">//@@author</span>
-</span><span><span class="hljs-keyword">return</span> persons;
-</span></code></pre></li></ul>
+<span><span aria-hidden="true" class="fas fa-cube"></span></span> Example:<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//Solution below adapted from https://stackoverflow.com/a/16252290</span><br></span><span>{Your implmentation of the reused solution here ...}<br></span></code></pre></li>
+<li>If you copy-pasted a non-trivial code block (possibly with minor modifications <span class="dimmed">renaming, layout changes, changes to comments, etc.</span>), also mark the code block as reused code (using <span trigger="click" for="modal:reusePolicy-authorTags" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:reusePolicy-authorTags'].show()" class="trigger-click"><code v-pre>@@author</code> tags</span> with the <mark><code v-pre>-reused</code></mark> suffix)<br>
+Format:<pre><code class="hljs java" v-pre><span><span class="hljs-comment">//@@author {yourGithubUsername}-reused</span><br></span><span><span class="hljs-comment">//{Info about the source...}</span><br></span><span><br></span><span>{<span class="hljs-function">Reused <span class="hljs-title">code</span> <span class="hljs-params">(possibly with minor modifications)</span> here ...}</span><br></span><span><span class="hljs-function"></span><br></span><span><span class="hljs-function"><span class="hljs-comment">//@@author</span></span><br></span></code></pre><span><span aria-hidden="true" class="fas fa-cube"></span></span> Example of reusing a code snippet (with minor modifications):<pre><code class="hljs java" v-pre><span>persons = getList()<br></span><span><span class="hljs-comment">//@@author johndoe-reused</span><br></span><span><span class="hljs-comment">//Reused from https://stackoverflow.com/a/34646172 with minor modifications</span><br></span><span>Collections.sort(persons, <span class="hljs-keyword">new</span> Comparator&lt;CustomData&gt;() {<br></span><span>    <span class="hljs-meta">@Override</span><br></span><span>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(CustomData lhs, CustomData rhs)</span> </span>{<br></span><span>        <span class="hljs-keyword">return</span> lhs.customInt &gt; rhs.customInt ? -<span class="hljs-number">1</span> : <span class="hljs-number">0</span>;<br></span><span>    }<br></span><span>});<br></span><span><span class="hljs-comment">//@@author</span><br></span><span><span class="hljs-keyword">return</span> persons;<br></span></code></pre></li></ul>
 <div tags="m--cs2103">
 <p><strong>Giving credit to AB3 code</strong>: If your project started with the AB3 code and your new code follows a design similar to AB3, that doesn't mean you need to credit AB3 -- this is because new code is <em>expected</em> to follow existing code where possible, in the interest of consistency. However, don't take credit for existing AB3 code (i.e., ensure such code doesn't appear under your name in the tP code dashboard) unless you have modified them substantially.</p></div></box>
 <b-modal id="modal:reusePolicy-authorTags" hide-footer size="lg" modal-class="mb-zoom" ref="modal:reusePolicy-authorTags" class="algolia-no-index"><template slot="modal-title">Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Project mid-v1.3 (extract) →</template>
   <div>
-<h4 id="adding-author-tags-indicate-authorship"><span id="adding-author-tags-indicate-authorship" class="anchor"></span>Adding <code class="hljs inline no-lang" v-pre>@@author</code> tags indicate authorship<a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
+<h4 id="adding-author-tags-indicate-authorship">Adding <code v-pre>@@author</code> tags indicate authorship<span id="adding-author-tags-indicate-authorship" class="anchor"></span><a class="fa fa-anchor" href="#adding-author-tags-indicate-authorship" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>
-<p>Mark your code with a <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}</code>. Note the double <code class="hljs inline no-lang" v-pre>@</code>.<br>
-The <code class="hljs inline no-lang" v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code class="hljs inline no-lang" v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
+<p>Mark your code with a <code v-pre>//@@author {yourGithubUsername}</code>. Note the double <code v-pre>@</code>.<br>
+The <code v-pre>//@@author</code> tag should indicates the beginning of the code you wrote. The code up to the next <code v-pre>//@@author</code> tag or the end of the file (whichever comes first) will be considered as was written by that author.
 Here is a sample code file:</p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span><span>//@@author sarahkhoo
-</span><span>method 3 ...
-</span><span>//@@author johndoe
-</span><span>method 4 ...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author sarahkhoo<br></span><span>method 3 ...<br></span><span>//@@author johndoe<br></span><span>method 4 ...<br></span></code></pre></li>
 <li>
-<p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code class="hljs inline no-lang" v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
-Here is a sample code with an empty <code class="hljs inline no-lang" v-pre>author</code> tag:</p>
-<pre><code class="hljs" v-pre><span>method 0 ...
-</span><span>//@@author johndoe
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span><span>//@@author
-</span><span>method 3 ...
-</span><span>method 4 ...
-</span></code></pre></li>
+<p><strong>If you don't know who wrote the code segment below yours</strong>, you may put an empty <code v-pre>//@@author</code> (i.e. no GitHub username) to indicate the end of the code segment you wrote. The author of code below yours can add the GitHub username to the empty tag later.
+Here is a sample code with an empty <code v-pre>author</code> tag:</p>
+<pre><code class="hljs" v-pre><span>method 0 ...<br></span><span>//@@author johndoe<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span><span>//@@author<br></span><span>method 3 ...<br></span><span>method 4 ...<br></span></code></pre></li>
 <li>
 <p><strong>The author tag syntax varies based on file type</strong> e.g. for java, css, fxml. Use the corresponding comment syntax for non-Java files.<br>
 Here is an example code from an xml/fxml file.</p>
-<pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;
-</span><span>&lt;textbox&gt;
-</span><span>  &lt;label&gt;...&lt;/label&gt;
-</span><span>  &lt;input&gt;...&lt;/input&gt;
-</span><span>&lt;/textbox&gt;
-</span><span>...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>&lt;!-- @@author sereneWong --&gt;<br></span><span>&lt;textbox&gt;<br></span><span>  &lt;label&gt;...&lt;/label&gt;<br></span><span>  &lt;input&gt;...&lt;/input&gt;<br></span><span>&lt;/textbox&gt;<br></span><span>...<br></span></code></pre></li>
 <li>
-<p><strong>Do not put the <code class="hljs inline no-lang" v-pre>//@@author</code> inside java header comments</strong>.<br>
+<p><strong>Do not put the <code v-pre>//@@author</code> inside java header comments</strong>.<br>
 👎<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs" v-pre><span>/**
-</span><span>  * Returns true if ...
-</span><span>  * @@author johndoe
-</span><span>  */
-</span></code></pre><p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe
-</span><span>/**
-</span><span>  * Returns true if ...
-</span><span>  */
-</span></code></pre></li></ul>
-<h4 id="what-to-and-what-not-to-annotate"><span id="what-to-and-what-not-to-annotate" class="anchor"></span>What to and what not to annotate<a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
+<pre><code class="hljs" v-pre><span>/**<br></span><span>  * Returns true if ...<br></span><span>  * @@author johndoe<br></span><span>  */<br></span></code></pre><p>👍<span><span aria-hidden="true" class="fas fa-arrow-down"></span></span></p>
+<pre><code class="hljs" v-pre><span>//@@author johndoe<br></span><span>/**<br></span><span>  * Returns true if ...<br></span><span>  */<br></span></code></pre></li></ul>
+<h4 id="what-to-and-what-not-to-annotate">What to and what not to annotate<span id="what-to-and-what-not-to-annotate" class="anchor"></span><a class="fa fa-anchor" href="#what-to-and-what-not-to-annotate" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>
 <p><strong>Annotate both functional and test code</strong> There is no need to annotate documentation files.</p></li>
@@ -399,23 +348,17 @@ If you notice a team member claiming credit for code that he/she did not write o
 <li>
 <p><strong>If you wrote a significant amount of code that was not used in the final product</strong>,</p>
 <ul>
-<li>Create a folder called <code class="hljs inline no-lang" v-pre>{project root}/unused</code></li>
+<li>Create a folder called <code v-pre>{project root}/unused</code></li>
 <li>Move unused files (or copies of files containing unused code) to that folder</li>
-<li>use <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code class="hljs inline no-lang" v-pre>unused</code>)
+<li>use <code v-pre>//@@author {yourGithubUsername}-unused</code> to mark unused code in those files (note the suffix <code v-pre>unused</code>)
 e.g.</li></ul>
-<pre><code class="hljs" v-pre><span>//@@author johndoe-unused
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span></code></pre><p>Please put a comment in the code to explain why it was not used.</p></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe-unused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre><p>Please put a comment in the code to explain why it was not used.</p></li>
 <li>
-<p><strong>If you reused code from elsewhere,</strong> mark such code as <code class="hljs inline no-lang" v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code class="hljs inline no-lang" v-pre>reused</code>)
+<p><strong>If you reused code from elsewhere,</strong> mark such code as <code v-pre>//@@author {yourGithubUsername}-reused</code> (note the suffix <code v-pre>reused</code>)
 e.g.</p>
-<pre><code class="hljs" v-pre><span>//@@author johndoe-reused
-</span><span>method 1 ...
-</span><span>method 2 ...
-</span></code></pre></li>
+<pre><code class="hljs" v-pre><span>//@@author johndoe-reused<br></span><span>method 1 ...<br></span><span>method 2 ...<br></span></code></pre></li>
 <li>
-<p><strong>You can use empty <code class="hljs inline no-lang" v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
+<p><strong>You can use empty <code v-pre>@@author</code> tags to mark code as not yours when RepoSense attribute the code to you incorrectly.</strong></p>
 <ul>
 <li>
 <p><strong>Code generated by the IDE/framework,</strong> should not be annotated as your own.</p></li>
@@ -425,11 +368,11 @@ e.g.</p>
   <div>
 <div>
 <p>At the end of the project each student is required to submit a <em>Project Portfolio Page</em>.</p>
-<h4 id="ppp-objectives"><span id="ppp-objectives" class="anchor"></span><span class="badge badge-info">PPP</span> <span class="text-info">Objectives</span><a class="fa fa-anchor" href="#ppp-objectives" onclick="event.stopPropagation()"></a></h4>
+<h4 id="ppp-objectives"><span class="badge badge-info">PPP</span> <span class="text-info">Objectives</span><span id="ppp-objectives" class="anchor"></span><a class="fa fa-anchor" href="#ppp-objectives" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li>For you to use <span class="dimmed">(e.g. in your resume)</span> as a well-documented data point of your SE experience</li>
 <li>For evaluators to use as a data point for evaluating your project contributions</li></ul>
-<h4 id="ppp-sections-to-include"><span id="ppp-sections-to-include" class="anchor"></span><span class="badge badge-info">PPP</span> <span class="text-info">Sections to include</span><a class="fa fa-anchor" href="#ppp-sections-to-include" onclick="event.stopPropagation()"></a></h4>
+<h4 id="ppp-sections-to-include"><span class="badge badge-info">PPP</span> <span class="text-info">Sections to include</span><span id="ppp-sections-to-include" class="anchor"></span><a class="fa fa-anchor" href="#ppp-sections-to-include" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Overview</strong>: A short overview of your product to provide some context to the reader. The opening 1-2 sentences may be reused by all team members. If your product overview extends beyond 1-2 sentences, the remainder should be written by yourself.</li>
 <li><strong>Summary of Contributions</strong> --Suggested items to include:
@@ -438,7 +381,7 @@ e.g.</p>
 <li><strong>Enhancements implemented:</strong> A summary of the enhancements you implemented.</li>
 <li><strong>Contributions to documentation:</strong> Which sections did you contribute to the UG?</li>
 <li><strong>Contributions to the DG:</strong> Which sections did you contribute to the DG? Which UML diagrams did you add/updated?</li>
-<li><strong>Contributions to <trigger trigger="click" for="modal:deliverablesPPP-teamTasks">team-based tasks </trigger>:</strong></li>
+<li><strong>Contributions to <span trigger="click" for="modal:deliverablesPPP-teamTasks" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:deliverablesPPP-teamTasks'].show()" class="trigger-click">team-based tasks </span>:</strong></li>
 <li><strong>Review/mentoring contributions:</strong> Links to PRs reviewed, instances of helping team members in other ways</li>
 <li><strong>Contributions beyond the project team:</strong>
 <ul>
@@ -448,7 +391,7 @@ e.g.</p>
   <div>
 <box>
 <p><em>Team-tasks</em> are the tasks that <em>someone</em> in the team has to do.</p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Examples of team-tasks</p></template>
 <span id="example-team-tasks">
 <p>Here is a non-exhaustive list of team-tasks:</p>
 <ol>
@@ -470,9 +413,9 @@ e.g.</p>
 <ul>
 <li><strong>[Optional] Contributions to the Developer Guide (Extracts)</strong>: Reproduce the parts in the Developer Guide that you wrote. Alternatively, you can show the various diagrams you contributed.</li>
 <li><strong>[Optional] Contributions to the User Guide (Extracts)</strong>: Reproduce the parts in the User Guide that you wrote.</li></ul>
-<h4 id="ppp-format"><span id="ppp-format" class="anchor"></span><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
+<h4 id="ppp-format"><span class="badge badge-info">PPP</span> <span class="text-info">Format</span><span id="ppp-format" class="anchor"></span><a class="fa fa-anchor" href="#ppp-format" onclick="event.stopPropagation()"></a></h4>
 <ul>
-<li>File name (i.e., in the repo): <code class="hljs inline no-lang" v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code class="hljs inline no-lang" v-pre>docs/team/goodcoder123.md</code></li>
+<li>File name (i.e., in the repo): <code v-pre>docs/team/githbub_username_in_lower_case.md</code> e.g., <code v-pre>docs/team/goodcoder123.md</code></li>
 <li><span><span aria-hidden="true" class="fas fa-cube"></span></span> Follow the <a href="https://nus-cs2103-ay2021s1.github.io/tp/team/johndoe.html">example in the AddressBook-Level3</a></li></ul>
 <div class="indented-level2">
 <div>
@@ -483,7 +426,7 @@ e.g.</p>
 <box type="info" seamless>
 <p><strong>The icon <span><span aria-hidden="true" class="fas fa-users"></span></span> indicates team submissions.</strong> Only one person need to submit on behalf of the team but we recommend that <mark>others help verify the submission is in order</mark> i.e., the responsibility for (and any penalty for problems in) team submissions are best shared by the whole team rather than burden one person with it.</p>
 <p>The icon <span><span aria-hidden="true" class="fas fa-user"></span></span> indicates individual submissions.</p></box></div></div>
-<h4 id="ppp-page-limit"><span id="ppp-page-limit" class="anchor"></span><span class="badge badge-info">PPP</span> <span class="text-info">Page Limit</span><a class="fa fa-anchor" href="#ppp-page-limit" onclick="event.stopPropagation()"></a></h4>
+<h4 id="ppp-page-limit"><span class="badge badge-info">PPP</span> <span class="text-info">Page Limit</span><span id="ppp-page-limit" class="anchor"></span><a class="fa fa-anchor" href="#ppp-page-limit" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-level2">
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
@@ -505,45 +448,45 @@ e.g.</p>
 <td></td></tr></tbody></table></div></div>
 <ul>
 <li>The <mark>page limits given above are <em>after</em> converting to PDF format</mark>. The actual amount of content you require is actually less than what these numbers suggest because the HTML → PDF conversion adds a lot of spacing around content.</li></ul></div></div></b-modal></div></div></div></b-modal>
-<p><strong>Follow the <trigger trigger="click" for="modal:appErecommendedWorkflow-forkingworkflow">forking workflow</trigger></strong> in your project at least until (and including) v1.2 <span class="dimmed">(you may tweak the workflow v1.3 onwards)</span>.</p>
+<p><strong>Follow the <span trigger="click" for="modal:appErecommendedWorkflow-forkingworkflow" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:appErecommendedWorkflow-forkingworkflow'].show()" class="trigger-click">forking workflow</span></strong> in your project at least until (and including) v1.2 <span class="dimmed">(you may tweak the workflow v1.3 onwards)</span>.</p>
 <ul>
-<li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Protect the <code class="hljs inline no-lang" v-pre>master</code> branch</strong>: You can use GitHub's <a href="https://help.github.com/articles/about-protected-branches/"><em>Protected Branches</em></a> feature to protect your <code class="hljs inline no-lang" v-pre>master</code> branch against rogue PRs. We suggest the following:
+<li><span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> <strong>Protect the <code v-pre>master</code> branch</strong>: You can use GitHub's <a href="https://help.github.com/articles/about-protected-branches/"><em>Protected Branches</em></a> feature to protect your <code v-pre>master</code> branch against rogue PRs. We suggest the following:
 <ul>
 <li>Go the the <span class="border border-secondary border-bottom-0 pr-1 pl-1 mr-1 ml-1 rounded-top"><small><svg version="1.1" width="14" height="16" viewBox="0 0 14 16" class="octicon octicon-gear" aria-hidden="true"><path fill-rule="evenodd" d="M14 8.77v-1.6l-1.94-.64-.45-1.09.88-1.84-1.13-1.13-1.81.91-1.09-.45-.69-1.92h-1.6l-.63 1.94-1.11.45-1.84-.88-1.13 1.13.91 1.81-.45 1.09L0 7.23v1.59l1.94.64.45 1.09-.88 1.84 1.13 1.13 1.81-.91 1.09.45.69 1.92h1.59l.63-1.94 1.11-.45 1.84.88 1.13-1.13-.92-1.81.47-1.09L14 8.75v.02zM7 11c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"/></svg> settings</small></span> of your team repo.</li>
-<li>Click on the <code class="hljs inline no-lang" v-pre>Branches</code> option on the navigation menu on the left.</li>
+<li>Click on the <code v-pre>Branches</code> option on the navigation menu on the left.</li>
 <li>Click the <button type="button" class="btn btn-light btn-sm border"><strong>Add rule</strong></button> button. In the <em>Branch protection rule</em> page,
 <ul>
-<li>Specify the <em>Branch name pattern</em> to be <code class="hljs inline no-lang" v-pre>master</code></li>
-<li>Tick the option <code class="hljs inline no-lang" v-pre>Require status checks to pass before merging</code> to ensure that a branch has to pass CI before it can be merged into the <code class="hljs inline no-lang" v-pre>master</code> branch</li>
-<li>If you think all PRs should be reviewed by someone other than the PR author before they are merged, also tick the <code class="hljs inline no-lang" v-pre>Require pull request reviews before merging</code> option.</li></ul></li></ul></li>
+<li>Specify the <em>Branch name pattern</em> to be <code v-pre>master</code></li>
+<li>Tick the option <code v-pre>Require status checks to pass before merging</code> to ensure that a branch has to pass CI before it can be merged into the <code v-pre>master</code> branch</li>
+<li>If you think all PRs should be reviewed by someone other than the PR author before they are merged, also tick the <code v-pre>Require pull request reviews before merging</code> option.</li></ul></li></ul></li>
 <li><strong>Create issues to represent project tasks</strong> so that they can be tracked using the issue tracker features.</li>
 <li><strong>Create a PR when you implement a project task</strong> that updates the code. Remember to use a separate branch for each PR.<br>
 <span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span></span> You can use GitHub's <a href="https://github.blog/2019-02-14-introducing-draft-pull-requests/"><em>draft PRs</em></a> feature to indicate that a PR is not yet ready for merging.<br></li>
 <li><strong>Get team members to review PRs.</strong> A workflow without PR reviews is a risky workflow.
 <ul>
 <li>Follow the <a href="https://se-education.org/guides/guidelines/PRs-reviewing.html"><em>Best practices for reviewing PRs</em> @SE-EDU/guides</a>.<br>
-<span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span> PRO TIP</span> <code class="hljs inline no-lang" v-pre>LGTM</code> is common abbreviation you can use in the review comments to mean <code class="hljs inline no-lang" v-pre>Looks Good To Merge</code>.</li></ul></li>
-<li><strong>Go breadth-first iterative:</strong> As you are expected to follow breadth-first iterative approach, almost <mark>all code additions to the <code class="hljs inline no-lang" v-pre>master</code> branch should take the product from a working version to a slightly better working version</mark>.
+<span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span> PRO TIP</span> <code v-pre>LGTM</code> is common abbreviation you can use in the review comments to mean <code v-pre>Looks Good To Merge</code>.</li></ul></li>
+<li><strong>Go breadth-first iterative:</strong> As you are expected to follow breadth-first iterative approach, almost <mark>all code additions to the <code v-pre>master</code> branch should take the product from a working version to a slightly better working version</mark>.
 <ul>
 <li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> Let's add all data classes first <span class="dimmed">reason: this is the depth-first approach</span></li>
 <li><font color="red"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad</strong></span></font> Let's finish the part of the code that saves and loads data first <span class="dimmed">reason: this is the depth-first approach</span></li>
 <li><font color="green"><span><strong><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good</strong></span></font> Let's add code to support simple todo tasks first (i.e., read, delete, save, load)</li></ul></li>
-<li><strong>Do not merge PRs failing <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">Continuous Integration e.g., GitHub Actions</span>CI</span>.</strong> The CI status of a PR is reported at the bottom of the <span class="border border-secondary border-bottom-0 pr-1 pl-1 mr-1 ml-1 rounded-top"><small><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-comment-discussion" aria-hidden="true"><path fill-rule="evenodd" d="M15 1H6c-.55 0-1 .45-1 1v2H1c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h1v3l3-3h4c.55 0 1-.45 1-1V9h1l3 3V9h1c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zM9 11H4.5L3 12.5V11H1V5h4v3c0 .55.45 1 1 1h3v2zm6-3h-2v1.5L11.5 8H6V2h9v6z"/></svg> conversation</small></span> tab of the PR page. Here's an example:<br>
+<li><strong>Do not merge PRs failing <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">Continuous Integration e.g., GitHub Actions</span>CI</span>.</strong> The CI status of a PR is reported at the bottom of the <span class="border border-secondary border-bottom-0 pr-1 pl-1 mr-1 ml-1 rounded-top"><small><svg version="1.1" width="16" height="16" viewBox="0 0 16 16" class="octicon octicon-comment-discussion" aria-hidden="true"><path fill-rule="evenodd" d="M15 1H6c-.55 0-1 .45-1 1v2H1c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h1v3l3-3h4c.55 0 1-.45 1-1V9h1l3 3V9h1c.55 0 1-.45 1-1V2c0-.55-.45-1-1-1zM9 11H4.5L3 12.5V11H1V5h4v3c0 .55.45 1 1 1h3v2zm6-3h-2v1.5L11.5 8H6V2h9v6z"/></svg> conversation</small></span> tab of the PR page. Here's an example:<br>
 <a href="/website/admin/images/gitHubPrStatus.png" target="_self"><img src="/website/admin/images/gitHubPrStatus.png" alt class="img-fluid"></a>
 <ul>
-<li><strong>If there is a failure</strong>, you can click on the <code class="hljs inline no-lang" v-pre>Details</code> link in corresponding line to find out more about the failure. Once you figure out the cause of the failure, push the a fix to the PR.</li></ul></li>
+<li><strong>If there is a failure</strong>, you can click on the <code v-pre>Details</code> link in corresponding line to find out more about the failure. Once you figure out the cause of the failure, push the a fix to the PR.</li></ul></li>
 <li><strong>After merging a PR</strong>,
 <ul>
 <li>close the corresponding issue.<br>
-<span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span> PRO TIP</span> You can use GitHub's <a href="https://help.github.com/en/articles/closing-issues-using-keywords"><code class="hljs inline no-lang" v-pre>Fixes #123</code> trick</a> to get the issue to close automatically when the PR is merged.</li>
-<li>sync your repos with the team rep by pulling the latest <code class="hljs inline no-lang" v-pre>master</code> from the team repo and pushing it to your own fork.</li></ul></li></ul>
+<span class="badge badge-pill badge-warning"><span aria-hidden="true" class="fas fa-lightbulb"></span> PRO TIP</span> You can use GitHub's <a href="https://help.github.com/en/articles/closing-issues-using-keywords"><code v-pre>Fixes #123</code> trick</a> to get the issue to close automatically when the PR is merged.</li>
+<li>sync your repos with the team rep by pulling the latest <code v-pre>master</code> from the team repo and pushing it to your own fork.</li></ul></li></ul>
 <b-modal id="modal:appErecommendedWorkflow-forkingworkflow" hide-footer size="lg" modal-class="mb-zoom" ref="modal:appErecommendedWorkflow-forkingworkflow" class="algolia-no-index"><template slot="modal-title">TextBook <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span></template>
   <div>
 <div></div><p></p>
 <p><span class="dimmed"><strong><span>Project Management → Revision Control →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="forking-flow"><span id="forking-flow" class="anchor"></span><span>Forking flow</span><a class="fa fa-anchor" href="#forking-flow" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="forking-flow"><span>Forking flow</span><span id="forking-flow" class="anchor"></span><a class="fa fa-anchor" href="#forking-flow" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <img src="/website/book/revisionControl/forkingWorkflow/images/diagram.png" height="330">
@@ -552,7 +495,7 @@ e.g.</p>
 <p>To illustrate how the workflow goes, let’s assume Jean wants to fix a bug in the code. Here are the steps:</p>
 <ol>
 <li>Jean creates a separate branch in her local repo and fixes the bug in that branch.<br>
-<font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Common mistake: Doing the proposed changes in the <code class="hljs inline no-lang" v-pre>master</code> branch -- if Jean does that, she will not be able to have more than one PR open at any time because any changes to the <code class="hljs inline no-lang" v-pre>master</code> branch will be reflected in all open PRs.</li>
+<font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Common mistake: Doing the proposed changes in the <code v-pre>master</code> branch -- if Jean does that, she will not be able to have more than one PR open at any time because any changes to the <code v-pre>master</code> branch will be reflected in all open PRs.</li>
 <li>Jean pushes the branch to her fork.</li>
 <li>Jean creates a pull request from that branch in her fork to the main repo.</li>
 <li>Other members review Jean’s pull request.</li>
@@ -562,16 +505,16 @@ e.g.</p>
 <font color="red"><big><span aria-hidden="true" class="glyphicon glyphicon-exclamation-sign"></span></big></font> Possible mistake: Creating another 'reverse' PR from the team repo to the team member's fork to sync the member's fork with the merged code. PRs are meant to go from downstream repos to upstream repos, not in the other direction.</li></ol></div>
 <div>
   <div>
-<panel expanded><template slot="header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
+<panel expanded><template slot="_header"><p><span><span aria-hidden="true" class="fas fa-paperclip"></span></span> Resources</p></template>
 <ul>
 <li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows#forking-workflow">A detailed explanation of the Forking Workflow</a> - From Atlassian</li></ul></panel></div></div></div></div></div>
   <div>
 <div>
-<p><panel src="/website/book/revisionControl/forkingWorkflow/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/revisionControl/forkingWorkflow" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Revision Control → Forking Workflow</span></p></template></panel></p></div><p></p>
+<p><panel src="/website/book/revisionControl/forkingWorkflow/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/revisionControl/forkingWorkflow" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Revision Control → Forking Workflow</span></p></template></panel></p></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="forking-workflow"><span id="forking-workflow" class="anchor"></span><span>Forking workflow</span><a class="fa fa-anchor" href="#forking-workflow" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="forking-workflow"><span>Forking workflow</span><span id="forking-workflow" class="anchor"></span><a class="fa fa-anchor" href="#forking-workflow" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>You can follow the steps in the simulation of a forking workflow given below to learn how to follow such a workflow.</p>
@@ -581,25 +524,25 @@ e.g.</p>
 <li>
 <p><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/"><strong>Create a GitHub organization</strong></a> for your team.  The org name is up to you. We'll refer to this organization as <em>team org</em> from now on.</p></li>
 <li>
-<p><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/"><strong>Add a team</strong></a> called <code class="hljs inline no-lang" v-pre>developers</code> to your team org.</p></li>
+<p><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/"><strong>Add a team</strong></a> called <code v-pre>developers</code> to your team org.</p></li>
 <li>
-<p><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/"><strong>Add team members</strong></a> to the <code class="hljs inline no-lang" v-pre>developers</code> team.</p></li>
+<p><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/"><strong>Add team members</strong></a> to the <code v-pre>developers</code> team.</p></li>
 <li>
 <p><strong>Fork</strong> <a href="https://github.com/se-edu/samplerepo-workflow-practice">se-edu/samplerepo-workflow-practice</a> to your team org. We'll refer to this as the <em>team repo</em>.</p></li>
 <li>
-<p><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code class="hljs inline no-lang" v-pre>developers</code> team.</strong> Give write access.</p></li></ol>
+<p><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code v-pre>developers</code> team.</strong> Give write access.</p></li></ol>
 <p><strong>Step 2. Each team member: create PRs via own fork.</strong></p>
 <ol>
 <li>
 <p><strong>Fork that repo</strong> from your team org to your own GitHub account.</p></li>
 <li>
-<p><strong>Create a branch</strong> named <code class="hljs inline no-lang" v-pre>add-{your name}-info</code> (e.g. <code class="hljs inline no-lang" v-pre>add-johnTan-info</code>) in the local repo.</p></li>
+<p><strong>Create a branch</strong> named <code v-pre>add-{your name}-info</code> (e.g. <code v-pre>add-johnTan-info</code>) in the local repo.</p></li>
 <li>
-<p><strong>Add a file</strong> <code class="hljs inline no-lang" v-pre>yourName.md</code> into the <code class="hljs inline no-lang" v-pre>members</code> directory (e.g., <code class="hljs inline no-lang" v-pre>members/jonhTan.md</code>) containing some info about you into that branch.</p></li>
+<p><strong>Add a file</strong> <code v-pre>yourName.md</code> into the <code v-pre>members</code> directory (e.g., <code v-pre>members/jonhTan.md</code>) containing some info about you into that branch.</p></li>
 <li>
 <p><strong>Push that branch to your fork</strong>.</p></li>
 <li>
-<p><strong>Create a PR</strong> from that branch to the <code class="hljs inline no-lang" v-pre>master</code> branch of the team repo.</p></li></ol>
+<p><strong>Create a PR</strong> from that branch to the <code v-pre>master</code> branch of the team repo.</p></li></ol>
 <p><strong>Step 3. For each PR: review, update, and merge.</strong></p>
 <ol>
 <li>
@@ -613,9 +556,9 @@ e.g.</p>
 <p><strong>Step 4. Create conflicting PRs.</strong></p>
 <ol>
 <li>
-<p><strong>[One member]: Update README:</strong> In the <code class="hljs inline no-lang" v-pre>master</code> branch, remove John Doe and Jane Doe from the <code class="hljs inline no-lang" v-pre>README.md</code>, commit, and push to the main repo.</p></li>
+<p><strong>[One member]: Update README:</strong> In the <code v-pre>master</code> branch, remove John Doe and Jane Doe from the <code v-pre>README.md</code>, commit, and push to the main repo.</p></li>
 <li>
-<p><strong>[Each team member] Create a PR</strong> to add yourself under the <code class="hljs inline no-lang" v-pre>Team Members</code> section in the <code class="hljs inline no-lang" v-pre>README.md</code>. Use a new branch for the PR e.g., <code class="hljs inline no-lang" v-pre>add-johnTan-name</code>.</p></li></ol>
+<p><strong>[Each team member] Create a PR</strong> to add yourself under the <code v-pre>Team Members</code> section in the <code v-pre>README.md</code>. Use a new branch for the PR e.g., <code v-pre>add-johnTan-name</code>.</p></li></ol>
 <p><strong>Step 5. Merge conflicting PRs</strong> one at a time. Before merging a PR, you’ll have to resolve conflicts.</p>
 <ol>
 <li>
@@ -623,20 +566,20 @@ e.g.</p>
 <li>
 <p><strong>[PR author] Resolve the conflict locally</strong>:</p>
 <ol>
-<li>Pull the <code class="hljs inline no-lang" v-pre>master</code> branch from the repo in your team org.</li>
-<li>Merge the pulled <code class="hljs inline no-lang" v-pre>master</code> branch to your PR branch.</li>
+<li>Pull the <code v-pre>master</code> branch from the repo in your team org.</li>
+<li>Merge the pulled <code v-pre>master</code> branch to your PR branch.</li>
 <li>Resolve the merge conflict that crops up during the merge.</li>
 <li>Push the updated PR branch to your fork.</li></ol></li>
 <li>
 <p><strong>[Another member or the PR author]: Merge the de-conflicted PR</strong>: When GitHub does not indicate a conflict anymore, you can go ahead and merge the PR.</p></li></ol></div>
 <div></div></div></div></div></b-modal></div>
 <div id="workflow-after-v11">
-<p><strong>After following the given workflow for at least <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., until the end of v1.2</span>one iteration</span>, optionally, you may adjust the process rigor</strong> to suit your team's pace. Here are some examples:</p>
+<p><strong>After following the given workflow for at least <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., until the end of v1.2</span>one iteration</span>, optionally, you may adjust the process rigor</strong> to suit your team's pace. Here are some examples:</p>
 <ul>
 <li>
 <p><strong>Reduce automated tests</strong>: Automated tests have benefits, but they can be a pain to write/maintain.<br>
 It is OK to get rid of some of the troublesome tests and rely more on manual testing instead. The less automated tests you have, the higher the risk of regressions; but it may be an acceptable trade-off under the circumstances if tests are slowing you down too much.<br>
-There is no direct penalty for removing tests. Also note <trigger trigger="click" for="modal:appEworkflow-testingExpectations">our expectation on test code</trigger>.</p></li>
+There is no direct penalty for removing tests. Also note <span trigger="click" for="modal:appEworkflow-testingExpectations" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:appEworkflow-testingExpectations'].show()" class="trigger-click">our expectation on test code</span>.</p></li>
 <li>
 <p><strong>Reduce automated checks</strong>: You can also reduce the rigor of checkstyle checks to expedite PR processing.</p></li>
 <li>
@@ -653,10 +596,10 @@ There is no direct penalty for removing tests. Also note <trigger trigger="click
 There is no requirement for a minimum coverage level. Note that in a production environment you are often required to have at least 90% of the code covered by tests. In this project, it can be less. <mark>The weaker your tests are, the higher the risk of bugs, which will cost marks if not fixed before the final submission.</mark></p></box><p></p></div></div></b-modal></div></div>
 
 <div id="tp-schedule-tracking">
-<h2 id="tp-project-schedule-tracking"><span id="tp-project-schedule-tracking" class="anchor"></span>tP Project Schedule Tracking<a class="fa fa-anchor" href="#tp-project-schedule-tracking" onclick="event.stopPropagation()"></a></h2>
+<h2 id="tp-project-schedule-tracking">tP Project Schedule Tracking<span id="tp-project-schedule-tracking" class="anchor"></span><a class="fa fa-anchor" href="#tp-project-schedule-tracking" onclick="event.stopPropagation()"></a></h2>
 <p>In general, use the issue tracker (Milestones, Issues, PRs, Tags, Releases, and Labels) for assigning, scheduling, and tracking <em>all</em> noteworthy project tasks, including user stories. Update the issue tracker regularly to reflect the current status of the project. You can also use GitHub's <a href="https://www.youtube.com/watch?v=C6MGKHkNtxU">Projects feature</a> to manage the project, but keep it linked to the issue tracker as much as you can.</p>
 
-<h4 id="using-issues"><span id="using-issues" class="anchor"></span>Using Issues:<a class="fa fa-anchor" href="#using-issues" onclick="event.stopPropagation()"></a></h4>
+<h4 id="using-issues">Using Issues:<span id="using-issues" class="anchor"></span><a class="fa fa-anchor" href="#using-issues" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Record each of the user stories you plan to deliver as an issue in the issue tracker.</strong> e.g.,</li></ul>
 <div class="indented-level2">
@@ -665,23 +608,23 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>title</th>
-<th><code class="hljs inline no-lang" v-pre>As a user I can add a deadline</code></th></tr></thead>
+<th><code v-pre>As a user I can add a deadline</code></th></tr></thead>
 <tbody>
 <tr>
 <td>Description</td>
-<td><code class="hljs inline no-lang" v-pre>... so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800"></p><p></p><p></p>
+<td><code v-pre>... so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p><img src="/website/book/specifyingRequirements/userStories/usage/images/userStoryAsGitHubIssue.png" width="800"></p><p></p><p></p>
 <p>Alternatively, you can put the entire user story in the description.</p>
 <div class="table-responsive"><table class="markbind-table table table-bordered table-striped"><thead>
 <tr>
 <th>title</th>
-<th><code class="hljs inline no-lang" v-pre>Add deadline</code></th></tr></thead>
+<th><code v-pre>Add deadline</code></th></tr></thead>
 <tbody>
 <tr>
 <td>Description</td>
-<td><code class="hljs inline no-lang" v-pre>As a user I can so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p>In both cases, apply the <span class="badge badge-pill badge-info">type.Story</span> label.</p></div></div>
+<td><code v-pre>As a user I can so that I can keep track of my deadlines</code></td></tr></tbody></table></div><p>In both cases, apply the <span class="badge badge-pill badge-info">type.Story</span> label.</p></div></div>
 <ul>
 <li>
-<p><strong>Assign the <code class="hljs inline no-lang" v-pre>type.*</code> and <code class="hljs inline no-lang" v-pre>priority.*</code> labels to those issues.</strong></p></li>
+<p><strong>Assign the <code v-pre>type.*</code> and <code v-pre>priority.*</code> labels to those issues.</strong></p></li>
 <li>
 <p><strong>Formalize the project plan</strong> by assigning relevant issues to the corresponding milestone.</p></li>
 <li>
@@ -690,24 +633,24 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <li>
 <p>A typical task should be small enough for one person to do in a few hours. <span class="dimmed">eg.,</span></p>
 <ul>
-<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad (reasons: not a one-person task, not small enough): <code class="hljs inline no-lang" v-pre>Write the Developer Guide</code></span></li>
-<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good: <code class="hljs inline no-lang" v-pre>Update class diagram in the Developer Guide for v1.4</code></span></li></ul></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad (reasons: not a one-person task, not small enough): <code v-pre>Write the Developer Guide</code></span></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good: <code v-pre>Update class diagram in the Developer Guide for v1.4</code></span></li></ul></li>
 <li>
 <p>There is no need to break things into VERY small tasks. Keep them as big as possible, but they should be no bigger than what you are going to assign a single person to do within a week. <span class="dimmed">eg.,</span></p>
 <ul>
-<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad:<code class="hljs inline no-lang" v-pre>Implementing parser </code> (reason: too big).</span></li>
-<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good:<code class="hljs inline no-lang" v-pre>Implementing parser support for adding of floating tasks</code></span></li></ul></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-down"></span></span> Bad:<code v-pre>Implementing parser </code> (reason: too big).</span></li>
+<li><span class="dimmed"><span><span aria-hidden="true" class="fas fa-thumbs-up"></span></span> Good:<code v-pre>Implementing parser support for adding of floating tasks</code></span></li></ul></li>
 <li>
-<p>Do not track things taken for granted. <span class="dimmed">e.g., <code class="hljs inline no-lang" v-pre>push code to repo</code> should not be a task to track. In the example given under the previous point, it is taken for granted that the owner will also (a) test the code and (b) push to the repo when it is ready. Those two need not be tracked as separate tasks.</span></p></li>
+<p>Do not track things taken for granted. <span class="dimmed">e.g., <code v-pre>push code to repo</code> should not be a task to track. In the example given under the previous point, it is taken for granted that the owner will also (a) test the code and (b) push to the repo when it is ready. Those two need not be tracked as separate tasks.</span></p></li>
 <li>
-<p>Write a descriptive title for the issue. <span class="dimmed">e.g. <code class="hljs inline no-lang" v-pre>Add support for the 'undo' command to the parser</code></span></p>
+<p>Write a descriptive title for the issue. <span class="dimmed">e.g. <code v-pre>Add support for the 'undo' command to the parser</code></span></p>
 <ul>
-<li>Omit redundant details. In some cases, the issue title is enough to describe the task. In that case, no need to repeat it in the issue description. There is no need for well-crafted and detailed descriptions for tasks. A minimal description is enough. Similarly, labels such as <code class="hljs inline no-lang" v-pre>priority</code> can be omitted if you think they don't help you.<br><br></li></ul></li></ul></li>
+<li>Omit redundant details. In some cases, the issue title is enough to describe the task. In that case, no need to repeat it in the issue description. There is no need for well-crafted and detailed descriptions for tasks. A minimal description is enough. Similarly, labels such as <code v-pre>priority</code> can be omitted if you think they don't help you.<br><br></li></ul></li></ul></li>
 <li>
-<p><strong>Assign tasks (i.e., issues) to the corresponding team members using the <code class="hljs inline no-lang" v-pre>assignees</code> field.</strong> <mark>Normally, there should be some ongoing tasks and some pending tasks against each team member at any point</mark>.</p></li></ul>
+<p><strong>Assign tasks (i.e., issues) to the corresponding team members using the <code v-pre>assignees</code> field.</strong> <mark>Normally, there should be some ongoing tasks and some pending tasks against each team member at any point</mark>.</p></li></ul>
 
 <div id="using-milestones">
-<h4 id="using-milestones"><span id="using-milestones" class="anchor"></span>Using Milestones:<a class="fa fa-anchor" href="#using-milestones" onclick="event.stopPropagation()"></a></h4>
+<h4 id="using-milestones">Using Milestones:<span id="using-milestones" class="anchor"></span><a class="fa fa-anchor" href="#using-milestones" onclick="event.stopPropagation()"></a></h4>
 <p><mark>Given below are the conditions to satisfy for a milestone to be considered <em>properly managed</em></mark>:</p>
 <p><strong>Planning a Milestone</strong> (to do within the first week of the iteration):<br></p>
 <ul>
@@ -718,7 +661,7 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <p><strong>Wrapping up a Milestone</strong>:<br></p>
 <ul>
 <li>
-<p><strong>A working product tagged</strong> with the correct tag (e.g. <code class="hljs inline no-lang" v-pre>v1.3</code>) and is pushed to the main repo or a <strong>product <em>release</em> done on GitHub</strong> (<a href="https://github.com/se-edu/addressbook-level3/releases/">example</a>).</p></li>
+<p><strong>A working product tagged</strong> with the correct tag (e.g. <code v-pre>v1.3</code>) and is pushed to the main repo or a <strong>product <em>release</em> done on GitHub</strong> (<a href="https://github.com/se-edu/addressbook-level3/releases/">example</a>).</p></li>
 <li>
 <p><strong>CI passing</strong> for the version tagged/released.</p></li>
 <li>
@@ -728,8 +671,8 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <p><strong>Milestone closed.</strong><br>
 <img src="/website/admin/images/closingMilestones.png" width="700"></p></li></ul></div></div></div>
 <br>
-<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/appendixD-help.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Apdx D: Getting Help</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/appendixF-teamworkIssues.html"><span>Apdx F: Handling Team Issues <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/appendixD-help.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Apdx D: Getting Help</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/appendixF-teamworkIssues.html"><span>Apdx F: Handling Team Issues <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -757,13 +700,18 @@ There is no requirement for a minimum coverage level. Note that in a production 
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -787,5 +735,5 @@ There is no requirement for a minimum coverage level. Note that in a production 
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>

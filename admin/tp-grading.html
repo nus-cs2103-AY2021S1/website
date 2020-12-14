@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Admin: tP: Grading</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
-    <script src="../markbind/js/vue.min.js"></script>
-    <script src="../markbind/js/markbind.min.js"></script>
-    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
@@ -70,7 +68,7 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -136,13 +134,11 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/tp-pe.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> tP: Practical Exam</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-supervision.html"><span>tP: Supervision <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
 <br>
-<h1 id="tp-grading"><span id="tp-grading" class="anchor"></span><span class="display-4">tP: Grading</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><a class="fa fa-anchor" href="#tp-grading" onclick="event.stopPropagation()"></a></h1>
+<h1 id="tp-grading"><span class="display-4">tP: Grading</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="tp-grading" class="anchor"></span><a class="fa fa-anchor" href="#tp-grading" onclick="event.stopPropagation()"></a></h1>
 <div id="main">
 <div tags="m--cs2113 m--cs2103">
 <p>Note that project grading is <mark>not competitive (not bell curved)</mark>. CS2103T projects will be assessed separately from CS2103 projects. Given below is the marking scheme.</p></div>
@@ -150,14 +146,14 @@
 <p>See the sections below for details of how we assess each aspect.</p>
 
 <div id="criteria-productDesign">
-<h4 id="1-project-grading-product-design-5-marks"><span id="1-project-grading-product-design-5-marks" class="anchor"></span><div class="bg-warning p-1">1. Project Grading: Product Design <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 5 marks]</span></div><a class="fa fa-anchor" href="#1-project-grading-product-design-5-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="1-project-grading-product-design-5-marks"><div class="bg-warning p-1">1. Project Grading: Product Design <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 5 marks]</span></div><span id="1-project-grading-product-design-5-marks" class="anchor"></span><a class="fa fa-anchor" href="#1-project-grading-product-design-5-marks" onclick="event.stopPropagation()"></a></h4>
 <p><strong>Evaluates:</strong> how well your features fit together to form a cohesive product (not how many features or how big the features are) and how well does it match the target user</p>
 <div tags="m--cs2113 m--cs2103">
 <p><strong>Evaluated by:</strong></p>
 <ul>
 <li>tutors (based on product demo and user guide)</li>
 <li>peers from other teams (based on peer testing and user guide)</li></ul>
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Product Design</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Quality of the product design,</strong><br>
 Evaluate based on the User Guide and the actual product behavior.</p>
@@ -170,25 +166,25 @@ Evaluate based on the User Guide and the actual product behavior.</p>
 <th>High</th></tr></thead>
 <tbody>
 <tr>
-<td><code class="hljs inline no-lang" v-pre>target user</code></td>
+<td><code v-pre>target user</code></td>
 <td>Not specified</td>
 <td></td>
 <td></td>
 <td>Clearly specified and narrowed down appropriately</td></tr>
 <tr>
-<td><code class="hljs inline no-lang" v-pre>value proposition</code></td>
+<td><code v-pre>value proposition</code></td>
 <td>Not specified</td>
 <td>The value to target user is low. App is not worth using</td>
 <td>Some small group of target users might find the app worth using</td>
 <td>Most of the target users are likely to find the app worth using</td></tr>
 <tr>
-<td><code class="hljs inline no-lang" v-pre>optimized for target user</code></td>
+<td><code v-pre>optimized for target user</code></td>
 <td></td>
 <td>Not enough focus for CLI users</td>
 <td>Mostly CLI-based, but cumbersome to use most of the time</td>
 <td>Feels like a fast typist can be more productive with the app, compared to an equivalent GUI app without a CLI</td></tr>
 <tr>
-<td><code class="hljs inline no-lang" v-pre>feature-fit</code></td>
+<td><code v-pre>feature-fit</code></td>
 <td></td>
 <td>Many of the features don't fit with others</td>
 <td>Most features fit together but a few may be possible misfits</td>
@@ -204,7 +200,7 @@ Evaluate based on the User Guide and the actual product behavior.</p>
 <span aria-hidden="true" class="fas fa-bug"></span> Features that are not optimized enough for fast-typists or target users</p></div></box></div>
 </div>
 
-<h4 id="2-project-grading-implementation-10-marks"><span id="2-project-grading-implementation-10-marks" class="anchor"></span><div class="bg-warning p-1">2. Project Grading: Implementation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><a class="fa fa-anchor" href="#2-project-grading-implementation-10-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="2-project-grading-implementation-10-marks"><div class="bg-warning p-1">2. Project Grading: Implementation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><span id="2-project-grading-implementation-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#2-project-grading-implementation-10-marks" onclick="event.stopPropagation()"></a></h4>
 <p><strong><big>2A. Code quality</big></strong></p>
 <p><strong>Evaluates:</strong> the quality of the parts of the code you claim as written by you</p>
 <p><strong>Evaluation method:</strong> manual inspection by tutors + automated-analysis by a script</p>
@@ -233,43 +229,43 @@ Evaluate based on the User Guide and the actual product behavior.</p>
 <ul>
 <li>Step 1: Evaluate the effort for the entire project. This is evaluated by peers who tested your product, and tutors.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Questions used for Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Questions used for Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <div tags="m--cs2103">
-<p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>If the implementation effort required to create AB3 from scratch is 10, the estimated implementation effort of this team is,</strong> [<code class="hljs inline no-lang" v-pre>0</code>..<code class="hljs inline no-lang" v-pre>20</code>] e.g., if you give <code class="hljs inline no-lang" v-pre>8</code>, that means the team's effort is about 80% of that spent on creating AB3. We expect most typical teams to score near to <code class="hljs inline no-lang" v-pre>10</code>.</p>
+<p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>If the implementation effort required to create AB3 from scratch is 10, the estimated implementation effort of this team is,</strong> [<code v-pre>0</code>..<code v-pre>20</code>] e.g., if you give <code v-pre>8</code>, that means the team's effort is about 80% of that spent on creating AB3. We expect most typical teams to score near to <code v-pre>10</code>.</p>
 <ul>
-<li>Do read the DG appendix named <code class="hljs inline no-lang" v-pre>Effort</code>, if any.</li>
+<li>Do read the DG appendix named <code v-pre>Effort</code>, if any.</li>
 <li><mark>Consider implementation work only (i.e., exclude testing, documentation, project management etc.)</mark></li>
 <li>Do not give a high value just <em>to be nice</em>. <mark>Your responses will be used to evaluate your effort estimation skills.</mark></li></ul></div>
 </div></panel></div><p></p>
 <ul>
 <li>Step 2: Evaluate how much of that effort can be attributed to you. This is evaluated by team members, and tutors.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating Implementation Effort</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the product implementation (excluding UG, DG, and team-based tasks) is,</strong></p>
 <div>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p>Uses the <code class="hljs inline no-lang" v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
 <ul radio-group="2ef43" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> ...</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></div></div></panel></div><p></p>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></div></div></panel></div><p></p>
 <ul>
-<li>Baseline: If your team received a value higher than <code class="hljs inline no-lang" v-pre>10</code> in step 1 and the team agrees that you did roughly an equal share of implementation work, you should receive full marks for effort.</li></ul></div>
+<li>Baseline: If your team received a value higher than <code v-pre>10</code> in step 1 and the team agrees that you did roughly an equal share of implementation work, you should receive full marks for effort.</li></ul></div>
 
 
 
-<h4 id="3-project-grading-qa-10-marks"><span id="3-project-grading-qa-10-marks" class="anchor"></span><div class="bg-warning p-1">3. Project Grading: QA <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><a class="fa fa-anchor" href="#3-project-grading-qa-10-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="3-project-grading-qa-10-marks"><div class="bg-warning p-1">3. Project Grading: QA <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><span id="3-project-grading-qa-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#3-project-grading-qa-10-marks" onclick="event.stopPropagation()"></a></h4>
 <div tags="m--cs2113 m--cs2103">
 <p><big><strong>3A. Developer Testing:</strong></big></p>
 <p><strong>Evaluates:</strong> How well you tested your own feature</p>
 <p><strong>Based on:</strong></p>
 <ol>
 <li>functionality bugs in your work found by others during the <a href="/website/admin/tp-pe.html#tp-practical-exam">Practical Exam (PE)</a></li>
-<li>your test code <span class="dimmed">(note <trigger trigger="click" for="modal:projectGradingQA-testingExpectations">our expectations for automated testing</trigger>)</span></li></ol>
+<li>your test code <span class="dimmed">(note <span trigger="click" for="modal:projectGradingQA-testingExpectations" v-b-popover.click.top.html="popoverGenerator" v-b-tooltip.click.top.html="tooltipContentGetter" v-on:click="$refs['modal:projectGradingQA-testingExpectations'].show()" class="trigger-click">our expectations for automated testing</span>)</span></li></ol>
 <b-modal id="modal:projectGradingQA-testingExpectations" hide-footer size="lg" modal-class="mb-zoom" ref="modal:projectGradingQA-testingExpectations" class="algolia-no-index"><template slot="modal-title">Our expectations for automated testing in the project</template>
   <div>
 <ul>
@@ -289,33 +285,33 @@ There is no requirement for a minimum coverage level. Note that in a production 
 <p><strong>Based on:</strong> bugs you found in the PE. In addition to functionality bugs, you get credit for reporting documentation bugs and feature flaws.</p>
 <box>
 <div>
-<h5 id="grading-bugs-found-in-the-pe"><span id="grading-bugs-found-in-the-pe" class="anchor"></span>Grading bugs found in the PE<a class="fa fa-anchor" href="#grading-bugs-found-in-the-pe" onclick="event.stopPropagation()"></a></h5>
+<h5 id="grading-bugs-found-in-the-pe">Grading bugs found in the PE<span id="grading-bugs-found-in-the-pe" class="anchor"></span><a class="fa fa-anchor" href="#grading-bugs-found-in-the-pe" onclick="event.stopPropagation()"></a></h5>
 <ul>
-<li><mark>Of <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content"><em>Developer Testing</em> component, based on the bugs found in your code</span>3A</span> and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content"><em>System/Acceptance Testing</em> component, based on the bugs found in others' code</span>3B</span> above, the one you do better will be given a 70% weight and the other a 30% weight</mark> so that your total score is driven by your strengths rather than weaknesses.</li>
+<li><mark>Of <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>Developer Testing</em> component, based on the bugs found in your code</span>3A</span> and <span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content"><em>System/Acceptance Testing</em> component, based on the bugs found in others' code</span>3B</span> above, the one you do better will be given a 70% weight and the other a 30% weight</mark> so that your total score is driven by your strengths rather than weaknesses.</li>
 <li>Bugs rejected by the dev team, if the rejection is approved by the teaching team, will not affect marks of the tester or the developer.</li>
-<li>The penalty/credit for a bug varies based on the severity of the bug: <code class="hljs inline no-lang" v-pre>severity.High</code> &gt; <code class="hljs inline no-lang" v-pre>severity.Medium</code> &gt; <code class="hljs inline no-lang" v-pre>severity.Low</code> &gt; <code class="hljs inline no-lang" v-pre>severity.VeryLow</code></li>
-<li>The three types (i.e., <code class="hljs inline no-lang" v-pre>type.FunctionalityBug</code>, <code class="hljs inline no-lang" v-pre>type.DocumentationBug</code>, <code class="hljs inline no-lang" v-pre>type.FeatureFlaw</code>) are counted for three different grade components. The penalty/credit can vary based on the bug type. <span class="dimmed">Given that you are not told which type has a bigger impact on the grade, always choose the most suitable type for a bug rather than try to choose a type that benefits your grade.</span></li>
+<li>The penalty/credit for a bug varies based on the severity of the bug: <code v-pre>severity.High</code> &gt; <code v-pre>severity.Medium</code> &gt; <code v-pre>severity.Low</code> &gt; <code v-pre>severity.VeryLow</code></li>
+<li>The three types (i.e., <code v-pre>type.FunctionalityBug</code>, <code v-pre>type.DocumentationBug</code>, <code v-pre>type.FeatureFlaw</code>) are counted for three different grade components. The penalty/credit can vary based on the bug type. <span class="dimmed">Given that you are not told which type has a bigger impact on the grade, always choose the most suitable type for a bug rather than try to choose a type that benefits your grade.</span></li>
 <li>The penalty for a bug is divided equally among assignees.</li>
 <li>Developers are not penalized for duplicate bug reports they received but the testers earn credit for duplicate bug reports they submitted as long as the duplicates are not submitted by the same tester.</li>
-<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">i.e., the same bug reported by many testers</span><em>Obvious</em> bugs</span> earn less credit for the tester and slightly higher penalty for the developer.</li>
+<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">i.e., the same bug reported by many testers</span><em>Obvious</em> bugs</span> earn less credit for the tester and slightly higher penalty for the developer.</li>
 <li>If the team you tested has a low bug count i.e., total bugs found by all testers is low, we will fall back on other means <span class="dimmed">(e.g., performance in PE dry run)</span> to calculate your marks for system/acceptance testing.</li>
 <li>Your marks for developer testing depends on the <em>bug density</em> rather than total bug count. Here's an example:
 <ul>
-<li><code class="hljs inline no-lang" v-pre>n</code> bugs found in your feature; it is a big feature consisting of lot of code → 4/5 marks</li>
-<li><code class="hljs inline no-lang" v-pre>n</code> bugs found in your feature; it is a small feature with a small amount of code → 1/5 marks</li></ul></li>
+<li><code v-pre>n</code> bugs found in your feature; it is a big feature consisting of lot of code → 4/5 marks</li>
+<li><code v-pre>n</code> bugs found in your feature; it is a small feature with a small amount of code → 1/5 marks</li></ul></li>
 <li>You don't need to find <em>all</em> bugs in the product to get full marks. For example, finding half of the bugs of that product or 4 bugs, whichever the lower, could earn you full marks.</li>
-<li>Excessive incorrect downgrading/rejecting/<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">marking as duplicates</span>duplicate-flagging</span>, if deemed an attempt to <em>game the system</em>, will be penalized.</li></ul></div></box></div>
+<li>Excessive incorrect downgrading/rejecting/<span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">marking as duplicates</span>duplicate-flagging</span>, if deemed an attempt to <em>game the system</em>, will be penalized.</li></ul></div></box></div>
 
 
 <div id="criteria-documentation">
-<h4 id="4-project-grading-documentation-10-marks"><span id="4-project-grading-documentation-10-marks" class="anchor"></span><div class="bg-warning p-1">4. Project Grading: Documentation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><a class="fa fa-anchor" href="#4-project-grading-documentation-10-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="4-project-grading-documentation-10-marks"><div class="bg-warning p-1">4. Project Grading: Documentation <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-user"></span></span> 10 marks]</span></div><span id="4-project-grading-documentation-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#4-project-grading-documentation-10-marks" onclick="event.stopPropagation()"></a></h4>
 <div tags="m--cs2113 m--cs2103">
 <p><strong>Evaluates:</strong> your contribution to project documents</p>
 <p><strong>Method:</strong> Evaluated in two steps.</p>
 <ul>
 <li>Step 1: Evaluate the whole UG and DG. This is evaluated by peers who tested your product, and tutors.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for User Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for User Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Compared to AddressBoook-Level3 (AB3), the overall quality of the UG you evaluated is,</strong><br>
 Evaluate based on fit-for-purpose, from the perspective of a target user.
@@ -326,7 +322,7 @@ For reference, the AB3 UG is <a href="https://se-education.org/addressbook-level
 <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio">  Similar</label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="7acba" type="radio">  Higher</label></li></ul></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Developer Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → PE → <mark>Grading Instructions for Developer Guide</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>Compared to AB3, the overall quality of the DG you evaluated is,</strong><br>
 Evaluate based on fit-for-purpose from the perspective of a new team member trying to understand the product's internal design by reading the DG.
@@ -339,31 +335,31 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <ul>
 <li>Step 2: Evaluate how much of that effort can be attributed to you. This is evaluated by team members, and tutors.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the UG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the UG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the User Guide is,</strong></p>
 <span id="equalShareScale">
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p>Uses the <code class="hljs inline no-lang" v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
 <ul radio-group="186a5" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> ...</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></span></div></panel></div><p></p>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="186a5" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></span></div></panel></div><p></p>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the DG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → <mark>Questions used for Evaluating the Contribution to the DG</mark> <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' contribution to the Developer Guide is,</strong></p>
 <div>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p>Uses the <code class="hljs inline no-lang" v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>Uses the <code v-pre>Equal Share +/- N%</code> scale for the answer</p></template>
 <ul radio-group="2ef43" class="radio-list">
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share</code> <span class="dimmed">i.e., if the team has 4 members, this person did 1/4 of the work</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 10%</code> <span class="dimmed">i.e., this person did about 10% more than an equal share (equal share x 1.10)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share + 20%</code> <span class="dimmed">i.e., this person did about 20% more than an equal share (equal share x 1.20)</span></label></li>
 <li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> ...</label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
-<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code class="hljs inline no-lang" v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></div></div></panel></div><p></p>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 10%</code> <span class="dimmed">i.e., this person did about 10% less than an equal share (equal share x 0.90)</span></label></li>
+<li class="radio-list-item"><label><input class="radio-list-input" name="2ef43" type="radio"> <code v-pre>Equal share - 20%</code> <span class="dimmed">i.e., this person did about 20% less than an equal share (equal share x 0.80)</span></label></li></ul></panel></div></div></panel></div><p></p>
 <ul>
 <li>In addition, UG and DG bugs you received in the PE will be considered for grading this component.</li></ul>
 <div class="indented-level2">
@@ -403,7 +399,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <box>
 <div>
 <p><strong>These are considered DG bugs (if they hinder the reader):</strong></p>
-<panel type="seamless" class="algolia-no-index"><template slot="header"><p>Those given as possible UG bugs ...</p></template>
+<panel type="seamless" class="algolia-no-index"><template slot="_header"><p>Those given as possible UG bugs ...</p></template>
 <div>
 <p><strong>These are considered UG bugs (if they hinder the reader):</strong><br></p>
 <div>
@@ -441,7 +437,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <ul>
 <li>Symbols used are not intuitive</li>
 <li>Indiscriminate use of double-headed arrows</li>
-<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
+<li><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">e.g., the sequence diagram showing interactions between main components</span><em>architecture-level</em></span> diagrams contain lower-level details</li>
 <li>Description given are not sufficiently high-level
 </li></ul></span>
 <span id="umlDiagramBugs">
@@ -496,7 +492,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 </li></ul></span></div></box></div></div>
 </div>
 
-<h4 id="5-project-grading-project-management-5-5-10-marks"><span id="5-project-grading-project-management-5-5-10-marks" class="anchor"></span><div class="bg-warning p-1">5. Project Grading: Project Management <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-users"></span></span> 5 + <span><span aria-hidden="true" class="fas fa-user"></span></span> 5 = 10 marks]</span></div><a class="fa fa-anchor" href="#5-project-grading-project-management-5-5-10-marks" onclick="event.stopPropagation()"></a></h4>
+<h4 id="5-project-grading-project-management-5-5-10-marks"><div class="bg-warning p-1">5. Project Grading: Project Management <span class="dimmed">[<span><span aria-hidden="true" class="fas fa-users"></span></span> 5 + <span><span aria-hidden="true" class="fas fa-user"></span></span> 5 = 10 marks]</span></div><span id="5-project-grading-project-management-5-5-10-marks" class="anchor"></span><a class="fa fa-anchor" href="#5-project-grading-project-management-5-5-10-marks" onclick="event.stopPropagation()"></a></h4>
 <div id="project-management-grading"> 
 <p><big><strong>5A. Process:</strong></big></p>
 <p><strong>Evaluates:</strong> How well you did in project management related aspects of the project, as an individual and as a team</p>
@@ -517,7 +513,7 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <p><big><strong>5B. Team-tasks:</strong></big></p>
 <p><strong>Evaluates:</strong> How much you contributed to team-tasks</p>
 <div class="indented-level1">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Expectations: Examples of team-tasks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> tP → Expectations: Examples of team-tasks <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p>Here is a non-exhaustive list of team-tasks:</p>
 <ol>
@@ -538,8 +534,8 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
 <li>Do close to an equal share of the team tasks (you can earn bonus marks by doing more than an equal share).</li>
 <li>Merge code in at least four of weeks 7, 8, 9, 10, 11, 12</li></ul></div></div>
 <br>
-<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/tp-pe.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> tP: Practical Exam</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-supervision.html"><span>tP: Supervision <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/tp-pe.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> tP: Practical Exam</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/tp-supervision.html"><span>tP: Supervision <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -560,13 +556,18 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -590,5 +591,5 @@ For reference, the AB3 DG is <a href="https://se-education.org/addressbook-level
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>

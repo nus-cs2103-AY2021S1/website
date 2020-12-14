@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Git and GitHub: Forking Workflow</title>
     <link rel="stylesheet" href="../../../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../../markbind/css/markbind.min.css"><script src="../../../markbind/js/polyfill.min.js"></script>
-    <script src="../../../markbind/js/vue.min.js"></script>
-    <script src="../../../markbind/js/markbind.min.js"></script>
-    <script src="../../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
@@ -27,11 +25,11 @@
 <p></p>
 <div>
 <div>
-<p><panel src="/website/book/revisionControl/forkingWorkflow/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/revisionControl/forkingWorkflow" class="algolia-no-index"><template slot="header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Revision Control → Forking Workflow</span></p></template></panel></p></div><p></p>
+<p><panel src="/website/book/revisionControl/forkingWorkflow/unit-inElsewhere-asFlat._include_.html" popup-url="/website/book/revisionControl/forkingWorkflow" class="algolia-no-index"><template slot="_header"><p><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-education"></span></span> Revision Control → Forking Workflow</span></p></template></panel></p></div><p></p>
 <p><span class="dimmed"><strong><span>Tools → Git and GitHub →
 </span></strong></span></p>
 <div id="title-and-body">
-<div><h4 id="forking-workflow"><span id="forking-workflow" class="anchor"></span><span>Forking workflow</span><a class="fa fa-anchor" href="#forking-workflow" onclick="event.stopPropagation()"></a></h4></div>
+<div><h4 id="forking-workflow"><span>Forking workflow</span><a class="fa fa-anchor" href="#forking-workflow" onclick="event.stopPropagation()"></a></h4></div>
 <div id="main">
 <div>
 <p>You can follow the steps in the simulation of a forking workflow given below to learn how to follow such a workflow.</p>
@@ -41,25 +39,25 @@
 <li>
 <p><a href="https://help.github.com/articles/creating-a-new-organization-from-scratch/"><strong>Create a GitHub organization</strong></a> for your team.  The org name is up to you. We'll refer to this organization as <em>team org</em> from now on.</p></li>
 <li>
-<p><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/"><strong>Add a team</strong></a> called <code class="hljs inline no-lang" v-pre>developers</code> to your team org.</p></li>
+<p><a href="https://help.github.com/enterprise/2.10/admin/guides/user-management/creating-teams/"><strong>Add a team</strong></a> called <code v-pre>developers</code> to your team org.</p></li>
 <li>
-<p><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/"><strong>Add team members</strong></a> to the <code class="hljs inline no-lang" v-pre>developers</code> team.</p></li>
+<p><a href="https://help.github.com/enterprise/2.0/admin/guides/user-management/adding-or-inviting-people-to-teams/"><strong>Add team members</strong></a> to the <code v-pre>developers</code> team.</p></li>
 <li>
 <p><strong>Fork</strong> <a href="https://github.com/se-edu/samplerepo-workflow-practice">se-edu/samplerepo-workflow-practice</a> to your team org. We'll refer to this as the <em>team repo</em>.</p></li>
 <li>
-<p><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code class="hljs inline no-lang" v-pre>developers</code> team.</strong> Give write access.</p></li></ol>
+<p><strong><a href="https://help.github.com/articles/managing-team-access-to-an-organization-repository/">Add the forked repo</a> to the <code v-pre>developers</code> team.</strong> Give write access.</p></li></ol>
 <p><strong>Step 2. Each team member: create PRs via own fork.</strong></p>
 <ol>
 <li>
 <p><strong>Fork that repo</strong> from your team org to your own GitHub account.</p></li>
 <li>
-<p><strong>Create a branch</strong> named <code class="hljs inline no-lang" v-pre>add-{your name}-info</code> (e.g. <code class="hljs inline no-lang" v-pre>add-johnTan-info</code>) in the local repo.</p></li>
+<p><strong>Create a branch</strong> named <code v-pre>add-{your name}-info</code> (e.g. <code v-pre>add-johnTan-info</code>) in the local repo.</p></li>
 <li>
-<p><strong>Add a file</strong> <code class="hljs inline no-lang" v-pre>yourName.md</code> into the <code class="hljs inline no-lang" v-pre>members</code> directory (e.g., <code class="hljs inline no-lang" v-pre>members/jonhTan.md</code>) containing some info about you into that branch.</p></li>
+<p><strong>Add a file</strong> <code v-pre>yourName.md</code> into the <code v-pre>members</code> directory (e.g., <code v-pre>members/jonhTan.md</code>) containing some info about you into that branch.</p></li>
 <li>
 <p><strong>Push that branch to your fork</strong>.</p></li>
 <li>
-<p><strong>Create a PR</strong> from that branch to the <code class="hljs inline no-lang" v-pre>master</code> branch of the team repo.</p></li></ol>
+<p><strong>Create a PR</strong> from that branch to the <code v-pre>master</code> branch of the team repo.</p></li></ol>
 <p><strong>Step 3. For each PR: review, update, and merge.</strong></p>
 <ol>
 <li>
@@ -73,9 +71,9 @@
 <p><strong>Step 4. Create conflicting PRs.</strong></p>
 <ol>
 <li>
-<p><strong>[One member]: Update README:</strong> In the <code class="hljs inline no-lang" v-pre>master</code> branch, remove John Doe and Jane Doe from the <code class="hljs inline no-lang" v-pre>README.md</code>, commit, and push to the main repo.</p></li>
+<p><strong>[One member]: Update README:</strong> In the <code v-pre>master</code> branch, remove John Doe and Jane Doe from the <code v-pre>README.md</code>, commit, and push to the main repo.</p></li>
 <li>
-<p><strong>[Each team member] Create a PR</strong> to add yourself under the <code class="hljs inline no-lang" v-pre>Team Members</code> section in the <code class="hljs inline no-lang" v-pre>README.md</code>. Use a new branch for the PR e.g., <code class="hljs inline no-lang" v-pre>add-johnTan-name</code>.</p></li></ol>
+<p><strong>[Each team member] Create a PR</strong> to add yourself under the <code v-pre>Team Members</code> section in the <code v-pre>README.md</code>. Use a new branch for the PR e.g., <code v-pre>add-johnTan-name</code>.</p></li></ol>
 <p><strong>Step 5. Merge conflicting PRs</strong> one at a time. Before merging a PR, you’ll have to resolve conflicts.</p>
 <ol>
 <li>
@@ -83,22 +81,26 @@
 <li>
 <p><strong>[PR author] Resolve the conflict locally</strong>:</p>
 <ol>
-<li>Pull the <code class="hljs inline no-lang" v-pre>master</code> branch from the repo in your team org.</li>
-<li>Merge the pulled <code class="hljs inline no-lang" v-pre>master</code> branch to your PR branch.</li>
+<li>Pull the <code v-pre>master</code> branch from the repo in your team org.</li>
+<li>Merge the pulled <code v-pre>master</code> branch to your PR branch.</li>
 <li>Resolve the merge conflict that crops up during the merge.</li>
 <li>Push the updated PR branch to your fork.</li></ol></li>
 <li>
 <p><strong>[Another member or the PR author]: Merge the de-conflicted PR</strong>: When GitHub does not indicate a conflict anymore, you can go ahead and merge the PR.</p></li></ol></div>
-<div></div></div></div></div></div></div>
-<i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></div>
+<div></div></div></div></div></div></div></div>
         </div>
     </div>
 </body>
+<script src="../../../markbind/js/vue.min.js"></script>
+<script src="../../../markbind/js/components.min.js"></script>
 <script src="../../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../../markbind/js/polyfill.min.js"></script>
+<script src="../../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -122,5 +124,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../../markbind/layouts/default/scripts.js"></script>
 </html>

@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Textbook Chapter [Printable] : Integration</title>
     <link rel="stylesheet" href="../../markbind/css/bootstrap.min.css">
@@ -12,33 +12,30 @@
     <link rel="stylesheet" href="../../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../../markbind/css/markbind.min.css"><script src="../../markbind/js/polyfill.min.js"></script>
-    <script src="../../markbind/js/vue.min.js"></script>
-    <script src="../../markbind/js/markbind.min.js"></script>
-    <script src="../../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
+    <link rel="stylesheet" href="../../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../../markbind/layouts/default/styles.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body >
 <div id="app">
     <div id="flex-body">
-        
-<div id="content-wrapper">
+        <div id="content-wrapper">
 <link rel="stylesheet" href="/website/book/css/textbook.css">
 <link rel="stylesheet" href="/website/book/css/print.css">
 <div class="website-content">
 <div id="title">
-<div><h1 id="integration"><span id="integration" class="anchor"></span><span>Integration</span><a class="fa fa-anchor" href="#integration" onclick="event.stopPropagation()"></a></h1></div></div>
+<div><h1 id="integration"><span>Integration</span><a class="fa fa-anchor" href="#integration" onclick="event.stopPropagation()"></a></h1></div></div>
 <div>
 <p><small><span class="dimmed"><span><span aria-hidden="true" class="glyphicon glyphicon-print"></span></span> This is a <strong>printer-friendly</strong> version. It omits exercises, optional topics (i.e., four-star topics), and other extra content such as learning outcomes.</span></small></p></div>
-<p><div><h2 id="introduction"><span id="introduction" class="anchor"></span><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h2></div></p>
+<p><div><h2 id="introduction"><span>Introduction</span><a class="fa fa-anchor" href="#introduction" onclick="event.stopPropagation()"></a></h2></div></p>
 <div class="indented-less">
 <div class="indented-less">
-<h4 id="what"><span id="what" class="anchor"></span>What <span class="badge badge-light"><small><small><font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
+<h4 id="what">What <span class="badge badge-light"><small><small><font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
 <p><strong>Combining parts of a software product to form a whole is called <em>integration</em></strong>. It is also one of the most troublesome tasks and it rarely goes smoothly.</p></div></div></div></div>
-<p><div><h2 id="approaches"><span id="approaches" class="anchor"></span><span>Approaches</span><a class="fa fa-anchor" href="#approaches" onclick="event.stopPropagation()"></a></h2></div></p>
+<p><div><h2 id="approaches"><span>Approaches</span><a class="fa fa-anchor" href="#approaches" onclick="event.stopPropagation()"></a></h2></div></p>
 <div class="indented-less">
 <div class="indented-less">
-<h4 id="late-and-one-time-vs-early-and-frequent"><span id="late-and-one-time-vs-early-and-frequent" class="anchor"></span>'Late and One Time' vs 'Early and Frequent' <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#late-and-one-time-vs-early-and-frequent" onclick="event.stopPropagation()"></a></h4>
+<h4 id="late-and-one-time-vs-early-and-frequent">'Late and One Time' vs 'Early and Frequent' <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#late-and-one-time-vs-early-and-frequent" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
 <p><strong>In terms of timing and frequency, there are two general approaches to integration: <em>late and one-time</em>, <em>early and frequent</em>.</strong></p>
@@ -47,12 +44,12 @@
 <p>This approach is not recommended because integration often causes many component incompatibilities (due to previous miscommunications and misunderstandings) to surface which can lead to delivery delays <span class="dimmed">i.e. Late integration → incompatibilities found → major rework required → cannot meet the delivery date</span>.</p></box>
 <p><strong><em>Early and frequent</em>: integrate early and evolve each part in parallel, in small steps, re-integrating frequently.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-slot-name="_content">it has all the high-level components needed for the first version in their minimal form, compiles, and runs but may not produce any useful output yet</span>walking skeleton</span></em> can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code into the main system.</p></box>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> A <em><span data-mb-component-type="tooltip" v-b-tooltip.hover.top.html="tooltipInnerContentGetter" class="trigger"><span data-mb-html-for="_content">it has all the high-level components needed for the first version in their minimal form, compiles, and runs but may not produce any useful output yet</span>walking skeleton</span></em> can be written first. This can be done by one developer, possibly the one in charge of integration. After that, all developers can flesh out the skeleton in parallel, adding one feature at a time. After each feature is done, simply integrate the new code into the main system.</p></box>
 <div v-closeable alt="slideshow: comparison" class="non-printable">
 <p>Here is an animation that compares the two approaches:</p>
 <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212312&authkey=AHtrsZMwQmNcyAE&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div></div></div>
 <div class="indented-less">
-<h4 id="big-bang-vs-incremental-integration"><span id="big-bang-vs-incremental-integration" class="anchor"></span>Big-Bang vs Incremental Integration <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#big-bang-vs-incremental-integration" onclick="event.stopPropagation()"></a></h4>
+<h4 id="big-bang-vs-incremental-integration">Big-Bang vs Incremental Integration <span class="badge badge-light"><small><small><font color="DodgerBlue"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#big-bang-vs-incremental-integration" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
 <p><strong><em>Big-bang integration</em>: integrate all components at the same time.</strong></p>
@@ -62,10 +59,10 @@
 <div v-closeable alt="slideshow: comparison" class="non-printable">
 <p>Here is an animation that compares the two approaches:</p>
 <div class="block-embed block-embed-service-powerpoint"><iframe type="text/html" src="https://onedrive.live.com/embed?cid=A5AF047C4CAD67AB&resid=A5AF047C4CAD67AB%212315&authkey=AG4cur5IrM7vr7M&em=2&action=embedview&wdAr=1.3333333333333333" frameborder="0" width="610" height="481" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div></div></div></div>
-<p><div><h2 id="build-automation"><span id="build-automation" class="anchor"></span><span>Build Automation</span><a class="fa fa-anchor" href="#build-automation" onclick="event.stopPropagation()"></a></h2></div></p>
+<p><div><h2 id="build-automation"><span>Build Automation</span><a class="fa fa-anchor" href="#build-automation" onclick="event.stopPropagation()"></a></h2></div></p>
 <div class="indented-less">
 <div class="indented-less">
-<h4 id="what-2"><span id="what-2" class="anchor"></span>What <span class="badge badge-light"><small><small><font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4>
+<h4 id="what-2">What <span class="badge badge-light"><small><small><font color="Crimson"><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#what-2" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
 <p><strong>Build automation tools automate the steps of the build process, usually by means of build scripts.</strong></p>
@@ -79,25 +76,30 @@
 <box>
 <p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Maven and Gradle, in addition to managing the build process, can play the role of dependency management tools too.</p></box></div></div></div>
 <div class="indented-less">
-<h4 id="continuous-integration-and-continuous-deployment"><span id="continuous-integration-and-continuous-deployment" class="anchor"></span>Continuous Integration and Continuous Deployment <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#continuous-integration-and-continuous-deployment" onclick="event.stopPropagation()"></a></h4>
+<h4 id="continuous-integration-and-continuous-deployment">Continuous Integration and Continuous Deployment <span class="badge badge-light"><small><small><font color="DarkOrange"><span aria-hidden="true" class="glyphicon glyphicon-star"></span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></font><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span><span aria-hidden="true" class="glyphicon glyphicon-star-empty"></span></small></small></span><a class="fa fa-anchor" href="#continuous-integration-and-continuous-deployment" onclick="event.stopPropagation()"></a></h4>
 <div class="indented-less">
 <div>
 <p><strong>An extreme application of build automation is called <em>continuous integration (CI)</em> in which integration, building, and testing happens automatically after each code change.</strong></p>
 <p><strong>A natural extension of CI is <em>Continuous Deployment (CD)</em> where the changes are not only integrated continuously, but also deployed to end-users at the same time.</strong></p>
 <box>
-<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of CI/CD tools: <a href="https://travis-ci.org/">Travis</a>, <a href="http://jenkins-ci.org">Jenkins</a>, <a href="https://www.appveyor.com">Appveyor</a>, <a href="https://circleci.com">CircleCI</a>, <a href="https://github.com/features/actions">GitHub Actions</a></p></box></div></div></div></div></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p><span><span aria-hidden="true" class="fas fa-cube"></span></span> Some examples of CI/CD tools: <a href="https://travis-ci.org/">Travis</a>, <a href="http://jenkins-ci.org">Jenkins</a>, <a href="https://www.appveyor.com">Appveyor</a>, <a href="https://circleci.com">CircleCI</a>, <a href="https://github.com/features/actions">GitHub Actions</a></p></box></div></div></div></div></div></div>
+
         </div>
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../../markbind/js/vue.min.js"></script>
+<script src="../../markbind/js/components.min.js"></script>
 <script src="../../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../../markbind/js/polyfill.min.js"></script>
+<script src="../../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -121,5 +123,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../../markbind/layouts/default/scripts.js"></script>
 </html>

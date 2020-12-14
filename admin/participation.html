@@ -4,7 +4,7 @@
     
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="generator" content="MarkBind 2.17.0">
+    <meta name="generator" content="MarkBind 2.15.2">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CS2103/T - Admin: Participation Marks</title>
     <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
@@ -12,10 +12,8 @@
     <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
     <link rel="stylesheet" href="../markbind/css/octicons.css">
-    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
-    <script src="../markbind/js/vue.min.js"></script>
-    <script src="../markbind/js/markbind.min.js"></script>
-    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="/website/css/main.css">
+    <link rel="stylesheet" href="../markbind/css/github.min.css">
+    <link rel="stylesheet" href="../markbind/css/markbind.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css"><link rel="stylesheet" href="/website/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css"><link rel="stylesheet" href="../markbind/layouts/default/styles.css"><link rel="stylesheet" href="../markbind/css/site-nav.css"><link rel="stylesheet" href="../markbind/css/page-nav.css"><link rel="stylesheet" href="/website/css/main.css">
     <link rel="stylesheet" href="/website/css/admin.css"><link rel="icon" href="/website/favicon.ico"></head>
 <body  data-spy="scroll" data-target="#page-nav" data-offset="100" >
 <div id="app">
@@ -70,7 +68,7 @@
     <li><a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html" target="_blank" class="dropdown-item text-success"><span><span aria-hidden="true" class="fas fa-trophy"></span> Participation Dashboard</span></a></li></dropdown>
   <li slot="right" class="nav-link">
     <form class="navbar-form">
-      <searchbar placeholder="Search" algolia menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
+      <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar></form></li></navbar></header><div id="flex-body">
         <nav id="site-nav" class="navbar navbar-light bg-transparent">
 <div class="border-right-grey nav-inner position-sticky slim-scroll">
 <ul class="site-nav-list site-nav-list-root">
@@ -136,13 +134,11 @@
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixE-gitHub.html"><small>Apdx E: Using GitHub</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-danger">1<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li>
 <li><div class="site-nav-default-list-item site-nav-list-item-1" onclick="handleSiteNavClick(this)"><a href="/website/admin/appendixF-teamworkIssues.html"><small>Apdx F: Handling Team Issues</small></a> <span class="badge badge-pill badge-light"><span class="font-weight-bold text-success">4<span aria-hidden="true" class="fas fa-star"></span></span></span></div></li></ul></li></ul></div></nav>
 
-
-
 <div id="content-wrapper">
 <div class="website-content">
 <p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/exams.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Exams</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/gradeBreakdown.html"><span>Grade Breakdown <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p>
 <br>
-<h1 id="participation-marks"><span id="participation-marks" class="anchor"></span><span class="display-4">Participation Marks</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><a class="fa fa-anchor" href="#participation-marks" onclick="event.stopPropagation()"></a></h1>
+<h1 id="participation-marks"><span class="display-4">Participation Marks</span> <span style="font-size:15px" class="text-muted text-light"><span class="badge badge-pill badge-light text-warning"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span></span></span><span id="participation-marks" class="anchor"></span><a class="fa fa-anchor" href="#participation-marks" onclick="event.stopPropagation()"></a></h1>
 <div id="main">
 <p><strong>To receive full 5 marks allocated for participation, meet the criteria <span class="badge badge-pill badge-info p-2"><big><big>A</big></big></span>, <span class="badge badge-pill badge-info p-2"><big><big>B</big></big></span>, and <span class="badge badge-pill badge-info p-2"><big><big>C</big></big></span>.</strong></p>
 <p><strong><strong><span class="badge badge-pill badge-info p-2"><big><big>A</big></big></span> Earned more than half of weekly participation points in at least 10 weeks.</strong></strong></p>
@@ -174,14 +170,14 @@
 <ul>
 <li>-1 for each <em>professional conduct</em> criterion in which you score below average (based on the average of ratings received).</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Conduct) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Conduct) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The team members' conduct in the project and during tutorials,</strong></p>
 <ul>
-<li>Evaluated based on the following criteria, on a scale <code class="hljs inline no-lang" v-pre>Poor</code>/<code class="hljs inline no-lang" v-pre>Below Average</code>/<code class="hljs inline no-lang" v-pre>Average</code>/<code class="hljs inline no-lang" v-pre>Good</code>/<code class="hljs inline no-lang" v-pre>Excellent</code>:</li></ul>
+<li>Evaluated based on the following criteria, on a scale <code v-pre>Poor</code>/<code v-pre>Below Average</code>/<code v-pre>Average</code>/<code v-pre>Good</code>/<code v-pre>Excellent</code>:</li></ul>
 <div class="indented-level2">
 <box background-color="white" border-color="grey" border-left-color="#28a745">
-<h4 id="peer-evaluation-criteria-professional-conduct"><span id="peer-evaluation-criteria-professional-conduct" class="anchor"></span>Peer Evaluation Criteria: Professional Conduct<a class="fa fa-anchor" href="#peer-evaluation-criteria-professional-conduct" onclick="event.stopPropagation()"></a></h4>
+<h4 id="peer-evaluation-criteria-professional-conduct">Peer Evaluation Criteria: Professional Conduct<span id="peer-evaluation-criteria-professional-conduct" class="anchor"></span><a class="fa fa-anchor" href="#peer-evaluation-criteria-professional-conduct" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Professional Communication</strong> :
 <ul>
@@ -200,15 +196,15 @@
 <ul>
 <li>No penalty for scoring low on <em>competency criteria</em>.</li></ul>
 <div class="indented-level2">
-<panel type class="embedding algolia-no-index" minimized><template slot="header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Competency) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
+<panel type class="embedding algolia-no-index" minimized><template slot="_header"><p>Admin <span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Peer Evaluations → Criteria (Competency) <span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span><span><span aria-hidden="true" class="glyphicon glyphicon-star"></span></span></p></template>
 <div>
 <p><thumbnail circle background="#28a745" font-color="white" size="25"><strong>Q</strong></thumbnail> <strong>The competency of the team member demonstrated in the project and during the tutorials,</strong></p>
 <ul>
 <li>Considered only for bonus marks, A+ grades, and tutor recruitment</li>
-<li>Evaluated based on the following criteria, on a scale <code class="hljs inline no-lang" v-pre>Poor</code>/<code class="hljs inline no-lang" v-pre>Below Average</code>/<code class="hljs inline no-lang" v-pre>Average</code>/<code class="hljs inline no-lang" v-pre>Good</code>/<code class="hljs inline no-lang" v-pre>Excellent</code>:</li></ul>
+<li>Evaluated based on the following criteria, on a scale <code v-pre>Poor</code>/<code v-pre>Below Average</code>/<code v-pre>Average</code>/<code v-pre>Good</code>/<code v-pre>Excellent</code>:</li></ul>
 <div class="indented-level2">
 <box background-color="white" border-color="grey" border-left-color="#28a745">
-<h4 id="peer-evaluation-criteria-competency"><span id="peer-evaluation-criteria-competency" class="anchor"></span>Peer Evaluation Criteria: Competency<a class="fa fa-anchor" href="#peer-evaluation-criteria-competency" onclick="event.stopPropagation()"></a></h4>
+<h4 id="peer-evaluation-criteria-competency">Peer Evaluation Criteria: Competency<span id="peer-evaluation-criteria-competency" class="anchor"></span><a class="fa fa-anchor" href="#peer-evaluation-criteria-competency" onclick="event.stopPropagation()"></a></h4>
 <ul>
 <li><strong>Technical Competency</strong>: Able to gain competency in all the required tools and techniques.</li>
 <li><strong>Mentoring skills</strong>: Helps others when possible. Able to mentor others well.</li>
@@ -221,7 +217,7 @@
 <p><strong><strong><span class="badge badge-pill badge-info p-2"><big><big>C</big></big></span> Tutorial attendance/participation not too low</strong></strong></p>
 <div class="indented">
 <p>Low attendance/participation can affect participation marks directly (i.e., attended fewer than 7) or indirectly (i.e., it might result in low peer evaluation ratings).</p></div>
-<panel type="info" expanded no-close no-switch><template slot="header"><p><strong>+ Bonus Marks</strong></p></template>
+<panel type="info" expanded no-close no-switch><template slot="_header"><p><strong>+ Bonus Marks</strong></p></template>
 <p>In addition, you can receive bonus marks in the following ways. Bonus marks can be used to top up your participation marks <mark>but only if your marks from the above falls below 5</mark>.</p>
 <ul>
 <li>[For lecture participation] Participated in lecture activities (e.g., in lecture polls/quizzes) in at least 10 lectures: 1 mark</li>
@@ -233,12 +229,12 @@
 <li>Alicia earned 1/2, 3/5, <ins>2/5</ins>, 5/5, 5/5, 5/5, 5/5, 5/5, 5/5, 5/5, 4/5, 5/5 in the first 12 weeks. As she received at least half of the points in 11 of the weeks, she gets 5 participation marks. Bonus marks are not applicable as she has full marks already.</li>
 <li>Benjamin managed to get at least half of the participation points in 9 weeks only, which gives him 5-1 = 4 participation marks. But he participated in 10 lectures, and hence get a bonus mark to make it 5/5.</li>
 <li>Chun Ming met the participation points bar in 8 weeks only, giving him 5-2 = 3 marks. He lost 2 more marks because he received multiple negative ratings for two criteria, giving him 1/5 participation marks.</li></ul>
-<panel type="info" expanded no-close no-switch id="where-to-find-your-participation-marks-progress"><template slot="header"><h5 id="where-to-find-your-participation-marks-progress"><span id="where-to-find-your-participation-marks-progress" class="anchor"></span>Where to find your participation marks progress<a class="fa fa-anchor" href="#where-to-find-your-participation-marks-progress" onclick="event.stopPropagation()"></a></h5></template>
+<panel type="info" expanded no-close no-switch id="where-to-find-your-participation-marks-progress"><template slot="_header"><h5 id="where-to-find-your-participation-marks-progress">Where to find your participation marks progress<span id="where-to-find-your-participation-marks-progress" class="anchor"></span><a class="fa fa-anchor" href="#where-to-find-your-participation-marks-progress" onclick="event.stopPropagation()"></a></h5></template>
 <p><strong>Your participation progress can be tracked in <a href="https://nus-cs2103-ay2021s1.github.io/dashboards/contents/participation.html">this page</a></strong> from week 3 onward.
 </p></panel><p></p></div>
 <br>
-<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/exams.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Exams</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/gradeBreakdown.html"><span>Grade Breakdown <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div>
-<p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p></div>
+<p><span class="float-left algolia-no-index"><b-btn variant="light" href="/website/admin/exams.html"><span><span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span> Exams</span></b-btn></span><span class="float-right algolia-no-index"><b-btn variant="light" href="/website/admin/gradeBreakdown.html"><span>Grade Breakdown <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></span></b-btn></span></p></div></div>
+
         <nav id="page-nav" class="navbar navbar-light bg-transparent">
 <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -252,13 +248,18 @@
     <footer>
   
   <div class="text-center">
-    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.17.0</a>, generated on Fri, 11 Dec 2020, 23:19:56 GMT+8]</small></div></footer></div>
+    <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.15.2</a>, generated on Mon, 14 Dec 2020, 23:23:37 GMT+8]</small></div></footer></div>
 </body>
+<script src="../markbind/js/vue.min.js"></script>
+<script src="../markbind/js/components.min.js"></script>
 <script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script src="../markbind/js/polyfill.min.js"></script>
+<script src="../markbind/js/bootstrap-vue.min.js"></script>
 <script>
   const baseUrl = '/website'
-  MarkBind.setupWithSearch()
+  const enableSearch = true
 </script>
+<script src="../markbind/js/setup.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script>
     <script>
     function initAlgolia() {
@@ -282,5 +283,5 @@
     
       gtag('config', 'UA-122519234-1');
     </script>
-<script src="../markbind/layouts/default/scripts.js"></script><script>if (MarkBind.AfterSetup) MarkBind.AfterSetup()</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
 </html>
